@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "origin": "https://paloframework.org",
+  "references": 35,
+  "added": 15,
+  "schema_citations": 15,
+  "csv_records": 35,
+  "widths": [
+    375,
+    768,
+    1440
+  ],
+  "no_direct_markdown_links": true,
+  "js_errors": []
+}

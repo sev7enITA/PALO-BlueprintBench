@@ -1,0 +1,43 @@
+{
+  "scope": "Exact HTTPS byte verification of changed ranked-leaderboard payload",
+  "at": "2026-11-11T16:46:54Z",
+  "files": [
+    {
+      "path": "PALO_BlueprintBench.html",
+      "http_status": 200,
+      "sha256": "36936cb3029c2efd9e3e806e2595e79abc3d2481f84a1eff2818fe32e8304f55",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/benchmark-references.json",
+      "http_status": 200,
+      "sha256": "3ea8914783d7b52b19bfbbe3aed758810f68848ff5eed071c6ebfdf63d4e2d79",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/reference-visibility-signals.json",
+      "http_status": 200,
+      "sha256": "17fb89875666ef78b277652ad9145aaa6e455ecab3fe30fdd3c9cc17f4ea9ded",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/benchmark-references.csv",
+      "http_status": 200,
+      "sha256": "97751a1cd9921e07c11f6ea98d75b4b87b6ae48b60f1cf540e3b281c0a2027ba",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "http_status": 200,
+      "sha256": "2aecf656190ad81cf785b18bef5b64498b0c0e705aa7d0b5c084654166b45783",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/blueprintbench.css",
+      "http_status": 200,
+      "sha256": "fcc9bde3af29942893f9bcb96d511c323980045b2480fbb240b722e09199040a",
+      "matches_published_bytes": true
+    }
+  ],
+  "all_passed": true
+}

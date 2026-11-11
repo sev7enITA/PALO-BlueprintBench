@@ -1,0 +1,8 @@
+{
+  "source": "https://schema.org/version/latest/schemaorg-current-https.jsonld",
+  "source_sha256": "0a4b8c4c910fc831ec8695196510973390906a5ee34dc6b862dfec4d21a12f74",
+  "date": "2026-11-11",
+  "property_domain_checks": 689,
+  "errors": [],
+  "scope": "Property existence and inherited domain validation against Schema.org vocabulary; not independent benchmark validation or Google search eligibility."
+}

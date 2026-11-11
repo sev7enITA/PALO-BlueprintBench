@@ -1,0 +1,13 @@
+{
+  "status": "ftps_published",
+  "at": "2026-11-11T16:46:33.323388+00:00",
+  "files": {
+    "PALO_BlueprintBench.html": "36936cb3029c2efd9e3e806e2595e79abc3d2481f84a1eff2818fe32e8304f55",
+    "downloads/blueprintbench/benchmark-references.json": "3ea8914783d7b52b19bfbbe3aed758810f68848ff5eed071c6ebfdf63d4e2d79",
+    "downloads/blueprintbench/reference-visibility-signals.json": "17fb89875666ef78b277652ad9145aaa6e455ecab3fe30fdd3c9cc17f4ea9ded",
+    "downloads/blueprintbench/benchmark-references.csv": "97751a1cd9921e07c11f6ea98d75b4b87b6ae48b60f1cf540e3b281c0a2027ba",
+    "downloads/blueprintbench/release-manifest.json": "2aecf656190ad81cf785b18bef5b64498b0c0e705aa7d0b5c084654166b45783",
+    "assets/blueprintbench/blueprintbench.css": "fcc9bde3af29942893f9bcb96d511c323980045b2480fbb240b722e09199040a"
+  },
+  "remote_readback_verified": true
+}
