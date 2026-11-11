@@ -1,0 +1,28 @@
+{
+  "campaign_id": "internal-legacy-extension-2026-11-11",
+  "qualified": false,
+  "status": "internal_tests",
+  "created_at": "2026-11-11T06:42:13.048278+00:00",
+  "assigned_calls": 54,
+  "repetitions": 3,
+  "source_families": 1,
+  "overall_authorised_limit_usd": 40,
+  "new_campaign_ceiling_usd": 5,
+  "prior_unknown_reserved_usd": 0.3821642,
+  "files": {
+    "README.md": "556937f57bec03e15b6d034dd67f517d3ed5bd59c7059ccb1ec83da1af3c802d",
+    "catalogue/inference-net__schematron-v2-small.json": "57b72daca519bce3f52865dcdc2f654d2790a64536e2b6cd4ada18ccf35c8de0",
+    "catalogue/prism-ml__ternary-bonsai-2-9b.json": "1bb2cedc807092ad53bbffc5866cd54a50b30a62b81be4b8e71b556b89c32b56",
+    "catalogue/sakana__fugu-max.json": "48eee620fcad90a068e6935ffd2e8c1a85042b737328f9c042f665ca8c1de499",
+    "corpus.json": "3e123360b5504942e84051c27434ec8ad1e41c7e2e91075123329818f5b10e47",
+    "models.json": "d5412e44fb7b170b021f82b26a7544cfae358b6650ecb204e4450266ccf7ebea",
+    "prompts/translation-invoice-matching.json": "a34cef130e31cd42d8fe1a72073ca8c64e441aa36c2e1816b08de89d6644e55b",
+    "prompts/translation-purchase-approval.json": "7a52de3497689383c7b07ee914b02d9dcb36ac4797d493c04b4f015585ccecd5",
+    "prompts/translation-supplier-onboarding.json": "dcdf6e07a7b2eed2ecde9e5867e31bd7be88d4e1a1a36f972dbee07a6085ae8d",
+    "prompts/verification-invoice-matching.json": "7288d6462ced3f0959013702a5854e33c5adedd84c5fa0eb33d813de415d1d03",
+    "prompts/verification-purchase-approval.json": "535d1d0941c3d744620e85f4ade65495ead5a6aa6911d7c2ce5de4341d32a32f",
+    "prompts/verification-supplier-onboarding.json": "167320160f1574f167ac75ac364ad2640c5609848cc05ee1d707bc8978e096ac",
+    "runner.py": "0f8755dbe52cdb0773e61cd8ba60245e5b876225ab0a4b302ef35792bea25762",
+    "verification.schema.json": "85092a26de80cac17558d1a423a0d2661f6d1891f17076f073a108505896bd19"
+  }
+}
