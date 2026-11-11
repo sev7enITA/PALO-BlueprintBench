@@ -1,0 +1,772 @@
+{
+  "at": "2026-11-11T08:01:12.824744+00:00",
+  "status": "verified_original_uploads_and_https_delivery",
+  "files": [
+    {
+      "path": "CHANGELOG.html",
+      "byte_match": true,
+      "expected_sha256": "5234d792684582cf2c427a6beaeef5e8f84a9ae8c8a66529c5bce0f58166e9cf",
+      "expected_bytes": 88522,
+      "status": 200,
+      "sha256": "5234d792684582cf2c427a6beaeef5e8f84a9ae8c8a66529c5bce0f58166e9cf",
+      "bytes": 88522,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:28 GMT",
+        "etag": "W/\"159ca-6af42024-d03d10f19ce1c50a;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "CHANGELOG.md",
+      "byte_match": true,
+      "expected_sha256": "aa1c93066a60bcb7673072697ed1d28dc50311f90c1fd40e77907a6b3bd7ef33",
+      "expected_bytes": 53125,
+      "status": 200,
+      "sha256": "aa1c93066a60bcb7673072697ed1d28dc50311f90c1fd40e77907a6b3bd7ef33",
+      "bytes": 53125,
+      "headers": {
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:29 GMT",
+        "etag": "W/\"cf85-6af42025-504881a5fb2aeaa8;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "PALO_BlueprintBench.html",
+      "byte_match": true,
+      "expected_sha256": "e8fa4466b8244fc6a2e53b7a9133d5e2cb8294b8c48e5c82399ddc7e5e642aa0",
+      "expected_bytes": 54948,
+      "status": 200,
+      "sha256": "e8fa4466b8244fc6a2e53b7a9133d5e2cb8294b8c48e5c82399ddc7e5e642aa0",
+      "bytes": 54948,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:27 GMT",
+        "etag": "W/\"d6a4-6af42023-6ddcc36b1bbdc884;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "PALO_BlueprintBench_Leaderboard.html",
+      "byte_match": true,
+      "expected_sha256": "cf57aa94362b00a5fa02592d90dbf8f2a74eef9291efce4dcee60302773b5170",
+      "expected_bytes": 24044,
+      "status": 200,
+      "sha256": "cf57aa94362b00a5fa02592d90dbf8f2a74eef9291efce4dcee60302773b5170",
+      "bytes": 24044,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:29 GMT",
+        "etag": "W/\"5dec-6af42025-4907c794ef78ffc1;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "assets/blueprintbench/blueprintbench.css",
+      "byte_match": true,
+      "expected_sha256": "5b1cedaa37fd1cca594c453398221469ac27d2f10c8d331b111aaed209f764d1",
+      "expected_bytes": 38179,
+      "status": 200,
+      "sha256": "5b1cedaa37fd1cca594c453398221469ac27d2f10c8d331b111aaed209f764d1",
+      "bytes": 38179,
+      "headers": {
+        "Content-Type": "text/css",
+        "Cache-Control": "public, max-age=2592000",
+        "last-modified": "Wed, 11 Nov 2026 07:58:57 GMT",
+        "etag": "W/\"9523-6af42041-8a4b807fdac6e209;gz\""
+      }
+    },
+    {
+      "path": "assets/blueprintbench/brand/blueprintbench-logo.jpg",
+      "byte_match": false,
+      "expected_sha256": "c915c51af31374c2e73925119a7792d10653ef4aa0946941f58957289c54b578",
+      "expected_bytes": 177706,
+      "status": 200,
+      "sha256": "0f7e84d3dce367d717138d0c3b4ffc2a78d47a1c9113c78c84745677253138ec",
+      "bytes": 50005,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          2172,
+          724
+        ],
+        "served_dimensions": [
+          1600,
+          533
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.792172,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "assets/blueprintbench/brand/blueprintbench-logo.png",
+      "byte_match": false,
+      "expected_sha256": "15cb603555e2f43c288c3229b7f1840be34b2c48ae5b312e25a709c488ee9cd9",
+      "expected_bytes": 1223183,
+      "status": 200,
+      "sha256": "5b0379bb1aeb406819a11fd048af6498929bf976690e498cb873f6c2a23344f2",
+      "bytes": 607377,
+      "headers": {
+        "Content-Type": "image/png",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "PNG",
+        "served_format": "PNG",
+        "original_dimensions": [
+          2172,
+          724
+        ],
+        "served_dimensions": [
+          1600,
+          533
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.119886,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "assets/blueprintbench/brand/internal-testing-badge.jpg",
+      "byte_match": false,
+      "expected_sha256": "2a83d47c549e981af8ad208f846b6aa911adc44a7f5d0cf878005194f6ada203",
+      "expected_bytes": 210966,
+      "status": 200,
+      "sha256": "02c1815518886ca1b169986a19d855c26b029ec2f89b8a4baab2c7f7196c6ed1",
+      "bytes": 103831,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1254,
+          1254
+        ],
+        "served_dimensions": [
+          1254,
+          1254
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.667579,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "assets/blueprintbench/brand/internal-testing-badge.png",
+      "byte_match": false,
+      "expected_sha256": "22d21e7602c8b175d93f11a28fc9efc33e881221e0f52a73267384004f13640a",
+      "expected_bytes": 1317466,
+      "status": 200,
+      "sha256": "24c0694aad58c3b7e733f4c77b15a27400c78685fea70bd2124e30f50eb646db",
+      "bytes": 1082119,
+      "headers": {
+        "Content-Type": "image/png",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "PNG",
+        "served_format": "PNG",
+        "original_dimensions": [
+          1254,
+          1254
+        ],
+        "served_dimensions": [
+          1254,
+          1254
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.0,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "assets/blueprintbench/brand/palo-framework-logo.png",
+      "byte_match": false,
+      "expected_sha256": "f970475d2e0b58f917b0de044ba5ddb9430d7cb256eeb56ab1c3eaa02f545364",
+      "expected_bytes": 141479,
+      "status": 200,
+      "sha256": "1ccc982329a7535f6964681765332aff04263c72c50e32286bfcb66cbede4f49",
+      "bytes": 127142,
+      "headers": {
+        "Content-Type": "image/png",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "PNG",
+        "served_format": "PNG",
+        "original_dimensions": [
+          400,
+          400
+        ],
+        "served_dimensions": [
+          400,
+          400
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.0,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.css",
+      "byte_match": true,
+      "expected_sha256": "97fe57212e90c7e44bb0e4619ec9b6bfcd51794e1ee80cfde1d2a5637cc790f6",
+      "expected_bytes": 36462,
+      "status": 200,
+      "sha256": "97fe57212e90c7e44bb0e4619ec9b6bfcd51794e1ee80cfde1d2a5637cc790f6",
+      "bytes": 36462,
+      "headers": {
+        "Content-Type": "text/css",
+        "Cache-Control": "public, max-age=2592000",
+        "last-modified": "Wed, 11 Nov 2026 07:58:56 GMT",
+        "etag": "W/\"8e6e-6af42040-73b9840753111a72;gz\""
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/brand-kit.zip",
+      "byte_match": true,
+      "expected_sha256": "e82fcb7da57c3818f052496106d9965fdea730872a22739c6d3d50e898b23673",
+      "expected_bytes": 2616634,
+      "status": 200,
+      "sha256": "e82fcb7da57c3818f052496106d9965fdea730872a22739c6d3d50e898b23673",
+      "bytes": 2616634,
+      "headers": {
+        "Content-Type": "application/zip",
+        "last-modified": "Wed, 11 Nov 2026 07:58:32 GMT",
+        "etag": "\"27ed3a-6af42028-a75c84cb0651c721;;;\""
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/brand-usage.md",
+      "byte_match": true,
+      "expected_sha256": "ea986daa908e8050b10c83214a22c2c3b9b469cbbb5383c99774c452da7bbd6e",
+      "expected_bytes": 2062,
+      "status": 200,
+      "sha256": "ea986daa908e8050b10c83214a22c2c3b9b469cbbb5383c99774c452da7bbd6e",
+      "bytes": 2062,
+      "headers": {
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:34 GMT",
+        "etag": "W/\"80e-6af4202a-c568b5327997ef09;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/index.html",
+      "byte_match": true,
+      "expected_sha256": "6e32528c9bdbb88b77662fc65b0cdb7b989a6c3fc66529068806500712e4875c",
+      "expected_bytes": 14364,
+      "status": 200,
+      "sha256": "6e32528c9bdbb88b77662fc65b0cdb7b989a6c3fc66529068806500712e4875c",
+      "bytes": 14364,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:38 GMT",
+        "etag": "W/\"381c-6af4202e-909d71ae5733caa2;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-1.jpg",
+      "byte_match": false,
+      "expected_sha256": "7fd8747e45592ecf4168816f7b605b9baab8129df704efeefcd623772bcb0f9f",
+      "expected_bytes": 97128,
+      "status": 200,
+      "sha256": "a6cf0883d3a1e77b175f3e82faf1773c7c052d59e4a72bd827b60314f752d783",
+      "bytes": 57366,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.488686,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-10.jpg",
+      "byte_match": false,
+      "expected_sha256": "375541d12437f89e6a2821004cff4285d4335ec82c7c6b5de166a8a1496e6b3a",
+      "expected_bytes": 167183,
+      "status": 200,
+      "sha256": "c5f0ed01892841fb789f64196dbf70a43e4f61654c759e7432c29209668d6521",
+      "bytes": 104994,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.868623,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-11.jpg",
+      "byte_match": false,
+      "expected_sha256": "66e671a56516389e3a083607c6955d3f39281cd1a25725014864859104c2a0de",
+      "expected_bytes": 128051,
+      "status": 200,
+      "sha256": "b98909b3cfb9a7c26fb68173ecac261245176a1556f61f26de71e447e8e0a7e0",
+      "bytes": 79325,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.690345,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-12.jpg",
+      "byte_match": false,
+      "expected_sha256": "026c3fd47f9970b6574fd28d12b10b11fd73ce300e2e9caf67f3bdba8648a4e7",
+      "expected_bytes": 150252,
+      "status": 200,
+      "sha256": "09d1e17f3437afccf8b114628d4bcf7e4f6017302d6155c00d2ce28852152f66",
+      "bytes": 90138,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.887975,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-13.jpg",
+      "byte_match": false,
+      "expected_sha256": "50dfbc333b0192d42999d96763f9246b066535262faa7444cbfe0df41ec5f100",
+      "expected_bytes": 148146,
+      "status": 200,
+      "sha256": "5fd9415949c891d6d451cab5289482938656bfd2f15276c85bec4ad784a7430e",
+      "bytes": 90118,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.834421,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-14.jpg",
+      "byte_match": false,
+      "expected_sha256": "5caa3e17d8f551b57965693349ae2290df15b62e283fb91be073a4bad2a4dc50",
+      "expected_bytes": 130948,
+      "status": 200,
+      "sha256": "4b2225c65800400c9a393061a1e0e425939a2a662f0a57f657e46666d8f8a888",
+      "bytes": 80581,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.729764,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-15.jpg",
+      "byte_match": false,
+      "expected_sha256": "82fd8fafe97ceaeb92574410b7514ec36e36d42e085abfdc8f796af028714d09",
+      "expected_bytes": 135409,
+      "status": 200,
+      "sha256": "f1fe14a529441f9e4d53f316f281fe0dd0f4502ed91fc9fb8fb8afcd9015897d",
+      "bytes": 82316,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.713888,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-2.jpg",
+      "byte_match": false,
+      "expected_sha256": "adb099717ba8a30240db1cd94162a1b4ad11e6d5ee9fec3cbbacd408d0fdf810",
+      "expected_bytes": 128817,
+      "status": 200,
+      "sha256": "e189f40718a8e340ff8c25139d8fcdaf774e42eed83727ca52cbd791080ca348",
+      "bytes": 79569,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.687369,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-3.jpg",
+      "byte_match": false,
+      "expected_sha256": "a31a7d39e29f0b678fab8701e690ba066523e24c9f95b2e888a0c8a52a4a4dbf",
+      "expected_bytes": 115459,
+      "status": 200,
+      "sha256": "e0b93802fe28eb3da88e5c13fbb8e4d80560d535ff5bc27f2dcabc9916e2a52e",
+      "bytes": 69121,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.624658,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-4.jpg",
+      "byte_match": false,
+      "expected_sha256": "479cf49783316800987657afe27865f67a4f9064d9ffa2b556df8fc5d1ca93c6",
+      "expected_bytes": 134440,
+      "status": 200,
+      "sha256": "506a191cf9eeeba308d159b5baa33ad3ab395c640ca545e52204d13926932fc3",
+      "bytes": 84185,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.717934,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-5.jpg",
+      "byte_match": false,
+      "expected_sha256": "856e6c23aa87016f8f273877f468af1a7f30967727a468812e59f3443b4e87b0",
+      "expected_bytes": 151105,
+      "status": 200,
+      "sha256": "8bf3ab6e5dd8b2e1a579b5cc3665140e4536c5e1b7a30c376fecd487cdbfb813",
+      "bytes": 93986,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.818318,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-6.jpg",
+      "byte_match": false,
+      "expected_sha256": "d3e366d046dedfbf11820d82af8bc716758016a310c8734c454466320e86a942",
+      "expected_bytes": 157509,
+      "status": 200,
+      "sha256": "773af207eda2c03a145fb2f3af133468c7d28e0dc519c98d5d1756cf55ec7854",
+      "bytes": 99068,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.800028,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-7.jpg",
+      "byte_match": false,
+      "expected_sha256": "726937ac1cbb70614b31bba107df9bfa5c7cec633085910f311e3c18860240eb",
+      "expected_bytes": 145489,
+      "status": 200,
+      "sha256": "320245e2f24f8e828065fde591697452c4784772cd5af49554678a88a5861bdb",
+      "bytes": 90915,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.763439,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-8.jpg",
+      "byte_match": false,
+      "expected_sha256": "b5fc9854e1964d20e3441f5f2f846cca68c15d84c87aeeb431a37cae6128d465",
+      "expected_bytes": 138108,
+      "status": 200,
+      "sha256": "763648495a91f9871e023b987c902b73714cebe351f49ac7d150fc60717a191a",
+      "bytes": 85696,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.698193,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slide-9.jpg",
+      "byte_match": false,
+      "expected_sha256": "9e2b70ed8e53d409eb2bd50cc3a674a866b77da29285962541b89c660f9f3758",
+      "expected_bytes": 164948,
+      "status": 200,
+      "sha256": "5c7b37dea16a6361c26a5d297f187125b312cca448862cc5b32052650ee78751",
+      "bytes": 103126,
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Cache-Control": "public, max-age=2592000"
+      },
+      "image_delivery": {
+        "original_format": "JPEG",
+        "served_format": "JPEG",
+        "original_dimensions": [
+          1280,
+          720
+        ],
+        "served_dimensions": [
+          1280,
+          720
+        ],
+        "mean_absolute_rgb_difference_0_to_255": 0.882486,
+        "scope": "Pixel comparison after same-size resampling when needed. Original bytes verified via FTPS and preserved in ZIP/Git."
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slides.json",
+      "byte_match": true,
+      "expected_sha256": "b7cf1a7317e7c98b480f016c8112157e4bb85193b8bf747e775d7d7d03b46f77",
+      "expected_bytes": 2911,
+      "status": 200,
+      "sha256": "b7cf1a7317e7c98b480f016c8112157e4bb85193b8bf747e775d7d7d03b46f77",
+      "bytes": 2911,
+      "headers": {
+        "Content-Type": "application/json",
+        "last-modified": "Wed, 11 Nov 2026 07:58:39 GMT",
+        "etag": "W/\"b5f-6af4202f-8eded927e7a33a9e;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "byte_match": true,
+      "expected_sha256": "bd8200af90a7e173e28fe710551a5f005e11f28bf8e5e5ce198cca929234a227",
+      "expected_bytes": 23496,
+      "status": 200,
+      "sha256": "bd8200af90a7e173e28fe710551a5f005e11f28bf8e5e5ce198cca929234a227",
+      "bytes": 23496,
+      "headers": {
+        "Content-Type": "application/json",
+        "last-modified": "Wed, 11 Nov 2026 07:58:33 GMT",
+        "etag": "W/\"5bc8-6af42029-ba583e2e03c8cd7a;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "downloads/blueprintbench/structured-data-audit-2026-11-11.md",
+      "byte_match": true,
+      "expected_sha256": "75e892d4df95dd9f91aca94e98886f0785654ecc6071f431fe2f4154f389718d",
+      "expected_bytes": 3608,
+      "status": 200,
+      "sha256": "75e892d4df95dd9f91aca94e98886f0785654ecc6071f431fe2f4154f389718d",
+      "bytes": 3608,
+      "headers": {
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:35 GMT",
+        "etag": "W/\"e18-6af4202b-5c7a3171e39532ba;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "index.html",
+      "byte_match": true,
+      "expected_sha256": "1757ac9d3bf1cd45327f368ad658fb2011cbaca03490d0e3594f3a4ba02aa3a3",
+      "expected_bytes": 115604,
+      "status": 200,
+      "sha256": "1757ac9d3bf1cd45327f368ad658fb2011cbaca03490d0e3594f3a4ba02aa3a3",
+      "bytes": 115604,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 07:58:26 GMT",
+        "etag": "W/\"1c394-6af42022-2ce9e1a47d57f4c3;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "path": "sitemap.xml",
+      "byte_match": true,
+      "expected_sha256": "8643e27897fc6042622fe0a3aae15f487c21e0bbda51293018ab5a36ff62b650",
+      "expected_bytes": 17170,
+      "status": 200,
+      "sha256": "8643e27897fc6042622fe0a3aae15f487c21e0bbda51293018ab5a36ff62b650",
+      "bytes": 17170,
+      "headers": {
+        "Content-Type": "application/xml",
+        "last-modified": "Wed, 11 Nov 2026 07:58:30 GMT",
+        "etag": "W/\"4312-6af42026-fb22b175dd59b4c7;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    }
+  ],
+  "presentation": {
+    "page_id": "page_4a816fc3283c8191ba4609dafd42d79f",
+    "saved_state_version": 16,
+    "slides": 15,
+    "original_palo_logo_on_all_slides": true
+  },
+  "checks": {
+    "python_tests": 95,
+    "schema_property_domain_checks": 211,
+    "schema_errors": 0,
+    "internal_test_data_changed": false,
+    "new_openrouter_calls": 0,
+    "original_ftps_files_verified": 34,
+    "https_exact_files": 14,
+    "https_image_transcodes": 20,
+    "maximum_mean_pixel_difference": 0.887974537037037
+  }
+}

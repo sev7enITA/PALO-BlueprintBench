@@ -9,3 +9,5 @@ Updated 11 November 2026. The same saved 15-slide Spaces presentation now includ
 18 model IDs, 324 assigned internal slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses, 18 pre-call blocks. Three short synthetic procurement cases, one authored family, three repetitions and assistant-draft labels. Historical adapter tests and earlier large-repository runs retain their separate scope. No independent qualification or PBI is assigned.
 
 The captured Workbench case is synthetic, unreviewed and blocked from export. The local runtime screenshot shows configuration only. No API secret is shown.
+
+The website image service may resize or re-encode delivered images. The public slide manifest identifies checksums of original files and links to their pinned Git revision. The brand ZIP preserves original image bytes.
