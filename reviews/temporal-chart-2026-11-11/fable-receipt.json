@@ -1,0 +1,36 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "id": "gen-1794401243-Emue1zWfM41fLzVPHcWp",
+  "http_status": 200,
+  "elapsed_seconds": 88.88373175000015,
+  "usage": {
+    "prompt_tokens": 5587,
+    "completion_tokens": 7796,
+    "total_tokens": 13383,
+    "cost": 0.356536,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.356536,
+      "upstream_inference_prompt_cost": 0.044696,
+      "upstream_inference_completions_cost": 0.31184
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6515,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "advisory_only": true,
+  "incremental_budget_reserved_max_usd": 0.75,
+  "review_classification": "internal_advisory_design_review",
+  "independent_benchmark_validation": false,
+  "human_adjudication": false
+}

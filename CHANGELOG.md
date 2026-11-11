@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: temporal model results
+
+Added an interactive timestamp scatter chart with case, metric, provider and model controls. The chart uses recorded verification-request times and fixed assigned denominators. It shows 17 dispatched models and separately identifies the blocked configuration. CSV and SVG exports preserve the selected view. These are collection timestamps from one day, not release dates or longitudinal model improvement. Original scores and qualification are unchanged.
+
 ## 2026-11-11: internal adversarial review
 
 Published GLM, Gemini and local Qwen countertests on a frozen 36-item sample: 96 of 108 assigned judgments, 12 missing due to GLM capacity, three items with observed disagreement. Qwen format projection, source references, response receipts and fixed-denominator replay are inspectable and exportable. Added a source-generated Dataset node. Replaced editorial headings and removed visible em/en dashes; original evidence is preserved. Primary scores remain unchanged. This is internal testing, not independent validation.

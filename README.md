@@ -54,6 +54,8 @@ The shared catalogue contains **18 distinct model IDs and 28 configuration/cohor
 
 [Internal adversarial review](internal_tests/2026-11-11-adversarial/README.md): 96 of 108 assigned reviewer judgments retained; three items with observed disagreement, including two partially reviewed panels. GLM capacity failure and Qwen format projection remain visible. Primary scores are unchanged.
 
+[Model results over time](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#temporal-model-results) plots recorded verification-request timestamps with case, metric and model filters, plus CSV/SVG export. Collection times from 11 November are not model release dates or a longitudinal progress study.
+
 [Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Brand assets and testing badge](docs/brand-usage.md)
 
 <img src="web/assets/blueprintbench/brand/internal-testing-badge.png" width="180" alt="BlueprintBench Internal testing badge, evidence linked; not certification">

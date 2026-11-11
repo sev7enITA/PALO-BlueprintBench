@@ -97,7 +97,7 @@ def dataset_graph(data,url):
             'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'temporalCoverage':data['as_of'],
             'isAccessibleForFree':True,'creativeWorkStatus':'Internal tests; assistant-draft labels; not independently validated',
             'measurementTechnique':'Source-indexed translation and seeded-statement verification, three repetitions; fixed assigned denominators. Frozen primary labels and separate post-hoc sensitivity analysis. No confidence interval or model quality ordering.',
-            'variableMeasured':['Agreement with assistant-draft labels over assigned statements','Missing and conflicting classifications','Request completion over assigned requests','Provider-reported inference charges, with unknown charges separate','Observed request latency in seconds; not a throughput comparison','Source-indexed draft translation coverage and verbatim-copy counts'],
+            'variableMeasured':['Agreement with assistant-draft labels over assigned statements','Missing and conflicting classifications','Request completion over assigned requests','Provider-reported inference charges, with unknown charges separate','Observed request latency in seconds; not a throughput comparison','Source-indexed draft translation coverage and verbatim-copy counts','Recorded verification-request start times in UTC; collection order, not model release or longitudinal progress'],
             'about':[{'@type':'Thing','name':'Specification fidelity in synthetic procurement'}]+[{'@type':'Thing','name':m['name'],'identifier':m['id']} for m in internal['models']],
             'isBasedOn':[c['evidence_base']+'/manifest.json' for c in internal['campaigns']],
             'usageInfo':EVIDENCE+'/README.md',
