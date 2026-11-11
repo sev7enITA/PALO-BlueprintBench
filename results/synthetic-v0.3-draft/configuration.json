@@ -1,0 +1,29 @@
+{
+  "model": {
+    "id": "synthetic-fixture-not-a-model",
+    "revision": "fixture-2",
+    "quantisation": "not_applicable"
+  },
+  "provider_runtime": {
+    "id": "none",
+    "revision": "not_applicable"
+  },
+  "settings": {
+    "reasoning": "not_applicable",
+    "temperature": null,
+    "seed": null,
+    "max_output_tokens": null,
+    "unavailable_reason": "Synthetic fixture; no model call"
+  },
+  "pipeline": {
+    "version": "fixture-2",
+    "adapter_revision": "fixture-2",
+    "prompt_sha256": "unavailable",
+    "schema_sha256": "unavailable",
+    "unavailable_reason": "Synthetic fixture; no inference prompt or generation schema"
+  },
+  "environment": {
+    "id": "synthetic",
+    "runtime_version": "fixture-2"
+  }
+}

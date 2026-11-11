@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""BlueprintBench 0.2: evidence registration and bounded, adjudicated scoring.
+"""BlueprintBench 0.3 draft: evidence registration and bounded, adjudicated scoring.
 
 No model calls, automatic human certification, or inferred gold answers.
 Python 3.10+, jsonschema dependency pinned in requirements.txt.
@@ -9,13 +9,14 @@ import datetime as dt
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 CONTRACT = json.loads(Path(__file__).with_name("evidence.schema.json").read_text(encoding="utf-8"))
 Draft202012Validator.check_schema(CONTRACT)
 
-VERSION = "0.2.0"
+VERSION = "0.3.0-dev.1"
 STATES = {"pass", "fail", "abstain", "not_run"}
 
 
@@ -25,7 +26,7 @@ class Invalid(ValueError):
 
 def validate_record(kind, value):
     schema = {"$ref": "#/$defs/" + kind, "$defs": CONTRACT["$defs"]}
-    error = next(Draft202012Validator(schema).iter_errors(value), None)
+    error = next(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(value), None)
     if error is not None:
         raise Invalid(f"{kind} schema: {list(error.absolute_path)}: {error.message}")
 
@@ -43,6 +44,7 @@ def number(value, label):
 
 def instant(value):
     try:
+        require(isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})", value), "timestamp requires RFC 3339 date-time with timezone")
         parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
         require(parsed.tzinfo is not None, "timestamps require timezone")
         return parsed
@@ -107,6 +109,10 @@ def validate_campaign(campaign, root):
         require(set(gold["meaning"]) == required_ids, "gold meaning must define every required proposition")
         require(set(gold["critical_rule_ids"]) <= required_ids, "unknown critical gold rule")
         require(set(gold["allowed_alternatives"]) <= required_ids, "unknown alternative gold rule")
+        unique([x["id"] for x in gold["forbidden_inferences"]], "forbidden inference IDs")
+        unique([x["id"] for values in gold["allowed_alternatives"].values() for x in values], "alternative IDs")
+        for forbidden in gold["forbidden_inferences"]:
+            require(set(forbidden["violated_gold"]) <= set(gold["critical_rule_ids"]), "unknown forbidden critical rule")
         require(all(set(group) <= required_ids for group in gold["allowed_match_groups"]), "unknown allowed matching group")
         require(bool(required_ids) == gold["answerable"], "answerability and required scope disagree")
         require(isinstance(gold["required_propositions"], list), "gold propositions must be a list")
@@ -125,6 +131,15 @@ def validate_campaign(campaign, root):
         for group in ("model", "provider_runtime", "settings", "pipeline", "environment"):
             require(isinstance(configuration.get(group), dict) and configuration[group],
                     f"configuration missing {group}")
+            for field, value in configuration[group].items():
+                if isinstance(value, str) and field != "unavailable_reason":
+                    require(bool(value.strip()), f"{group}.{field}: blank value")
+                if value is None or value == "unavailable":
+                    require(bool(configuration[group].get("unavailable_reason")), f"{group}.{field}: unavailable value needs reason")
+            if group == "pipeline":
+                for field in ("prompt_sha256", "schema_sha256"):
+                    value = configuration[group][field]
+                    require(value == "unavailable" or (len(value) == 64 and all(c in "0123456789abcdef" for c in value)), f"invalid {field}")
     return campaign
 
 
@@ -144,6 +159,11 @@ def evaluate(lock, run, root):
     require(instant(run["started_at"]) >= instant(lock["payload"]["registered_at"]),
             "run predates registration; import as historical diagnostic instead")
     require(instant(run["finished_at"]) >= instant(run["started_at"]), "negative run duration")
+    now = dt.datetime.now(dt.timezone.utc)
+    require(instant(run["finished_at"]) <= now + dt.timedelta(seconds=5), "run timestamp is in the future")
+    duration = (instant(run["finished_at"]) - instant(run["started_at"])).total_seconds()
+    execution = run["execution"]
+    require(execution["mode"] != "serial" or execution["max_concurrency"] == 1, "serial execution requires concurrency one")
     subjects = {s["id"]: s for s in campaign["subjects"]}
     require(run["subject_id"] in subjects, "subject not registered")
     subject = subjects[run["subject_id"]]
@@ -156,13 +176,19 @@ def evaluate(lock, run, root):
     rows = []
     all_human = True
     all_cost_known = True
+    proposition_bank = {}
+    request_ids = set()
+    output_hashes = {}
+    warnings = []
+    elapsed_total = 0
     for attempt in run["attempts"]:
         key = (attempt["task_id"], attempt["repetition"])
         require(type(key[1]) is int and key in expected, "unexpected task or repetition")
         require(key not in observed, "duplicate task/repetition; retries belong inside its receipt")
         observed.add(key)
         require(attempt["state"] in STATES, "invalid state; mandatory tasks cannot be N/A")
-        number(attempt["elapsed_seconds"], "elapsed_seconds")
+        elapsed_total += number(attempt["elapsed_seconds"], "elapsed_seconds")
+        require(attempt["elapsed_seconds"] <= duration + 1, "attempt elapsed time exceeds run window")
         cost = attempt["cost"]
         require(cost["status"] in {"reported", "reconciled", "unknown", "not_incurred"}, "invalid cost state")
         if cost["status"] == "unknown":
@@ -170,6 +196,8 @@ def evaluate(lock, run, root):
             all_cost_known = False
         else:
             number(cost["usd"], "cost.usd")
+            if cost["usd"] == 0:
+                require(bool(cost.get("reason", "").strip()), "zero cost needs an explanation")
             if cost["status"] == "not_incurred":
                 require(cost["usd"] == 0 and cost.get("reason"), "zero cost needs an explanation")
         if "reserved_usd" in cost:
@@ -189,7 +217,21 @@ def evaluate(lock, run, root):
         emitted = read_json(artifact(receipt["claims_artifact"], root))
         validate_record("emitted", emitted)
         unique([c["id"] for c in emitted], "emitted claim IDs")
-        raw = artifact(receipt["raw_output"], root).read_text(encoding="utf-8")
+        raw = artifact(receipt["raw_output"], root).read_bytes().decode("utf-8")
+        # Offsets refer to exact decoded code points: no newline or Unicode normalisation.
+        require(not raw.startswith("\ufeff"), "UTF-8 BOM is unsupported; preserve original and record an explicit conversion")
+        identity = receipt["request_identity"]
+        if identity["provider_request_id"] is None or identity["request_sha256"] is None:
+            require(bool(identity["unavailable_reason"].strip()), "missing request identity requires reason")
+            warnings.append({"code": "request_identity_unavailable", "task_id": key[0], "repetition": key[1]})
+        if identity["provider_request_id"] is not None:
+            require(bool(identity["provider_request_id"].strip()), "empty provider request ID")
+            require(identity["provider_request_id"] not in request_ids, "provider request ID reused across attempts")
+            request_ids.add(identity["provider_request_id"])
+        output_key = (key[0], receipt["raw_output"]["sha256"])
+        if raw and output_key in output_hashes:
+            warnings.append({"code": "identical_output_across_repetitions", "task_id": key[0], "repetition": key[1], "first_repetition": output_hashes[output_key]})
+        output_hashes.setdefault(output_key, key[1])
         spans = []
         for claim in emitted:
             begin, end = claim["span"]
@@ -199,11 +241,19 @@ def evaluate(lock, run, root):
             begin, end = segment["span"]
             require(0 <= begin < end <= len(raw), "invalid non-claim span")
             spans.append((begin, end))
+        # Check coverage first, then restrict exclusions to ASCII whitespace only.
+        # Preambles, punctuation, JSON keys and substantive text need claim coverage.
         cursor = 0
         for begin, end in sorted(spans):
             require(begin == cursor, "raw output coverage gap or overlapping spans")
             cursor = end
         require(cursor == len(raw), "raw output coverage gap")
+        for segment in receipt["non_claim_spans"]:
+            begin, end = segment["span"]
+            require(all(c in " \t\r\n" for c in raw[begin:end]), "non-claim spans may contain only ASCII whitespace")
+        excluded = sum(end - begin for begin, end in [x["span"] for x in receipt["non_claim_spans"]])
+        if raw and excluded / len(raw) > .5:
+            warnings.append({"code": "high_non_claim_fraction", "task_id": key[0], "repetition": key[1]})
         termination = receipt["termination_reason"]
         require((attempt["state"] == "not_run") == (termination == "precall_blocked"), "not_run requires precall_blocked")
         if attempt["state"] in {"pass", "abstain"}:
@@ -227,6 +277,10 @@ def evaluate(lock, run, root):
                 require(len(set(annotation.get("reviewer_ids", []))) >= 2 and annotation.get("adjudicator_id")
                         and annotation["adjudicator_id"] not in annotation["reviewer_ids"],
                         "human assessment needs two reviewers and adjudicator")
+                gold_panel = set(gold.get("annotator_ids", [])) | {gold.get("adjudicator_id")}
+                output_panel = set(annotation["reviewer_ids"]) | {annotation["adjudicator_id"]}
+                require(not (gold_panel & output_panel), "gold and output review panels overlap")
+                require(run["submitter_id"] not in gold_panel | output_panel, "submitter cannot be an independent reviewer")
             claims = annotation["claims"]
         all_human = all_human and human and gold["annotation_status"] == "independent_adjudicated"
         unique([c["id"] for c in claims], "claim IDs")
@@ -237,7 +291,21 @@ def evaluate(lock, run, root):
         critical_occurrences = 0
         inverted_rules = set()
         propositions = {}
-        for claim in claims:
+        forbidden_by_id = {item["id"]: item for item in gold["forbidden_inferences"]}
+        alternatives_by_id = {item["id"]: gold_id for gold_id, values in gold["allowed_alternatives"].items() for item in values}
+        for original_claim in claims:
+            claim = dict(original_claim)
+            forbidden_matches = set(claim["matches_forbidden"])
+            require(forbidden_matches <= forbidden_by_id.keys(), "unknown forbidden inference ID")
+            alternative_matches = set(claim["matches_alternatives"])
+            require(alternative_matches <= alternatives_by_id.keys(), "unknown alternative ID")
+            require({alternatives_by_id[x] for x in alternative_matches} <= set(claim["matches_gold"]), "alternative must map to its registered gold rule")
+            if forbidden_matches:
+                require(claim["verdict"] == "unsupported", "forbidden inference cannot be supported")
+                claim["critical"] = True
+                claim["violated_gold"] = sorted(set(claim["violated_gold"]) | {g for x in forbidden_matches for g in forbidden_by_id[x]["violated_gold"]})
+                claim["critical_rationale"] = "Matched preregistered forbidden inference: " + ", ".join(sorted(forbidden_matches))
+                claim["error_category"] = "source_rule_inversion" if claim["violated_gold"] else "unsupported_addition"
             require(claim["verdict"] in {"supported", "unsupported"}, "unassessed claim in complete scope")
             require(type(claim["critical"]) is bool, "critical must be boolean")
             require(claim["text_sha256"] == text_hashes[claim["id"]], "annotation text hash differs from emitted claim")
@@ -247,6 +315,12 @@ def evaluate(lock, run, root):
             require(not violations or claim["critical"], "violated critical rule requires critical error flag")
             if claim["critical"]:
                 require(bool(claim.get("critical_rationale")), "critical error needs rationale")
+            if claim["critical"]:
+                require((bool(violations) and claim["error_category"] == "source_rule_inversion") or
+                        (not violations and claim["error_category"] == "unsupported_addition"),
+                        "critical error requires violated_gold or unsupported_addition category")
+            else:
+                require(claim["error_category"] == ("none" if claim["verdict"] == "supported" else "other_noncritical"), "inconsistent error category")
             critical_occurrences += int(claim["critical"])
             inverted_rules |= violations
             hits = set(claim["matches_gold"])
@@ -259,6 +333,10 @@ def evaluate(lock, run, root):
             signature = (claim["verdict"], tuple(sorted(hits)), claim["critical"], tuple(sorted(violations)))
             require(equivalence not in propositions or propositions[equivalence] == signature,
                     "inconsistent equivalent proposition annotations")
+            bank_key = (key[0], equivalence)
+            require(bank_key not in proposition_bank or proposition_bank[bank_key] == signature,
+                    "inconsistent equivalent proposition across repetitions")
+            proposition_bank[bank_key] = signature
             propositions[equivalence] = signature
             if claim["verdict"] == "supported":
                 supported += 1
@@ -280,24 +358,31 @@ def evaluate(lock, run, root):
                      "emitted": len(claims), "supported": supported, "gold": len(required),
                      "recovered": len(matched), "critical_errors": critical,
                      "critical_error_occurrences": critical_occurrences,
+                     "critical_unsupported_additions": sum(v[2] and not v[3] for v in propositions.values()),
                      "critical_source_rule_inversions": len(inverted_rules),
                      "critical_source_rules": len(gold["critical_rule_ids"]),
-                     "critical_inversions_per_100_rules": 100 * len(inverted_rules) / len(gold["critical_rule_ids"]) if gold["critical_rule_ids"] else None,
+                     "critical_inversions_per_100_rules": 100 * len(inverted_rules) / len(gold["critical_rule_ids"]) if gold["critical_rule_ids"] and propositions else None,
                      "accepted_task": accepted, "termination_reason": termination,
                      "unique_propositions": len(propositions),
                      "precision": precision, "recall": recall,
                      "elapsed_seconds": attempt["elapsed_seconds"], "cost": cost})
+    require(elapsed_total <= duration * execution["max_concurrency"] + 1, "aggregate elapsed time exceeds declared concurrency window")
     missing = sorted(expected - observed)
     success = sum(r["state"] == "pass" for r in rows)
     accepted = sum(r["accepted_task"] for r in rows)
     critical = sum(r["critical_errors"] for r in rows)
     known_cost = sum(r["cost"]["usd"] or 0 for r in rows)
-    reasons = ["external_preregistration_not_verified"]
+    reasons = ["external_preregistration_not_verified", "independent_human_gold_or_assessment_missing", "identity_and_independence_not_verified"]
+    policy_is_trivial = not campaign["success_policy"]["minimum_precision"] or not campaign["success_policy"]["minimum_recall"]
+    if policy_is_trivial:
+        reasons.append("trivial_success_policy")
+    if any(w["code"] == "request_identity_unavailable" for w in warnings):
+        reasons.append("request_identity_incomplete")
     if campaign["split"] != "heldout_candidate": reasons.append("development_or_synthetic_data")
     if missing: reasons.append("missing_assigned_attempts")
     if any(r["state"] == "not_run" for r in rows): reasons.append("assigned_tasks_not_run")
     if campaign["repetitions"] < 3: reasons.append("fewer_than_three_repetitions")
-    if not all_human: reasons.append("independent_human_gold_or_assessment_missing")
+
     # No automatic qualification: identities, independence and real evidence need
     # maintainer review. A hash establishes byte integrity, not semantic truth.
     return {"tool_version": VERSION, "run_id": run["run_id"], "campaign_sha256": lock["sha256"],
@@ -314,9 +399,39 @@ def evaluate(lock, run, root):
             "cost_complete": all_cost_known and not missing,
             "cost_per_accepted_task_usd": known_cost / accepted if accepted and all_cost_known and not missing else None,
             "cost_per_reported_completion_usd": known_cost / success if success and all_cost_known and not missing else None,
-            "record_comparable_candidate": not reasons, "comparability_blocks": reasons,
+            "record_comparable_candidate": False, "comparability_blocks": reasons,
+            "comparability_status": "external_verification_not_implemented",
+            "human_review_declared_complete": all_human, "policy_is_trivial": bool(policy_is_trivial),
+            "warnings": warnings, "aggregates": aggregate_rows(rows, tasks, campaign["repetitions"]),
             "qualified": False, "qualification_reason": "Independent evidence review is not automated by this tool.",
             "rows": rows, "note": "Scoped annotation scores; not full-corpus precision/recall, human usability, or a model ranking."}
+
+
+def aggregate_rows(rows, tasks, repetitions):
+    """Descriptive totals only. Missing assessments never become zero inversions."""
+    def summary(selected_tasks, selected_rows, repeat_count):
+        assigned = len(selected_tasks) * repeat_count
+        numerator = sum(r["critical_source_rule_inversions"] for r in selected_rows)
+        denominator = sum(r["critical_source_rules"] for r in selected_rows if r["unique_propositions"] > 0)
+        assessed = sum(r["unique_propositions"] > 0 for r in selected_rows)
+        return {"assigned_attempts": assigned, "recorded_attempts": len(selected_rows),
+                "assessed_nonempty_attempts": assessed,
+                "accepted_tasks": sum(r["accepted_task"] for r in selected_rows),
+                "critical_unique_errors_summed_over_attempts": sum(r["critical_errors"] for r in selected_rows),
+                "critical_occurrences": sum(r["critical_error_occurrences"] for r in selected_rows),
+                "observed_inverted_source_rules": numerator,
+                "assessed_critical_rule_opportunities": denominator,
+                "inversions_per_100_rules": 100 * numerator / denominator if denominator and assessed == assigned else None,
+                "uncertainty": "not_estimated; descriptive audit totals only"}
+    result = {"run": summary(tasks, rows, repetitions)}
+    for dimension in ("family", "domain"):
+        result[dimension] = {}
+        for value in sorted({t[dimension] for t in tasks.values()}):
+            selected = {k: t for k, t in tasks.items() if t[dimension] == value}
+            result[dimension][value] = summary(selected, [r for r in rows if r[dimension] == value], repetitions)
+    result["repetitions"] = {str(r): summary(tasks, [row for row in rows if row["repetition"] == r], 1)
+                             for r in range(1, repetitions + 1)}
+    return result
 
 
 def write_new(path, data):

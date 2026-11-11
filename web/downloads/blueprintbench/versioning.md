@@ -2,7 +2,7 @@
 
 BlueprintBench has a dedicated repository because its protocol, evaluator, corpus registry and result submissions need their own release cadence and outside contributions. It is not a fork of an inference engine or of the PALO application.
 
-PALO Workbench remains in `sev7enITA/PALOframework`. Website integration changes use a scoped `codex/blueprintbench-publication` branch there. This repository owns the benchmark method and evaluator; copied public artifacts retain provenance to the initial PALO development work.
+PALO Workbench remains in `sev7enITA/PALOframework`. Website integration is maintained separately from the benchmark scoring contract. This repository owns the benchmark method and evaluator; copied public artifacts retain provenance to the initial PALO development work.
 
 Version separately:
 

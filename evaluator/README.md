@@ -1,4 +1,6 @@
-# PALO BlueprintBench evaluator 0.2.0
+# PALO BlueprintBench evaluator 0.3 draft
+
+> This branch contains evaluator `0.3.0-dev.1`, an incompatible review candidate. Read [the migration and trust boundaries](../docs/evaluator-0.3-draft.md). The 0.2 warning below applies to the immutable historical release.
 
 > **Audit warning, 11 November 2026:** Version 0.2 accepts substantive content hidden in non-claim spans. Do not use its acceptance outputs for submission qualification. This version is retained for audit reproduction; independent human review and scoring repairs remain required.
 
@@ -30,7 +32,7 @@ This creates a local integrity lock, not trusted external preregistration. `exte
 
 Reported completion, calculated task acceptance and independent qualification are separate outputs. Failed, unattempted and missing tasks remain visible. Budget censoring and pre-call blocks have explicit termination reasons. Empty non-execution needs no semantic double annotation. Unknown charges remain unknown, and cost per accepted task includes failures but remains null when accounting is incomplete.
 
-See `evaluator-contract.md` in the toolkit, or `docs/evaluator-contract.md` in the repository, for exact denominators, fields and migration rules. Historical v0.1 records require an explicitly labelled conversion; existing locks must not be rewritten. Structural validity, hashes and review declarations cannot verify semantic truth or reviewer independence.
+See `evaluator-0.3-draft.md` in the toolkit, or `docs/evaluator-0.3-draft.md` in the repository, for the draft contract and migration limits. Historical v0.1 records require an explicitly labelled conversion; existing locks must not be rewritten. Structural validity, hashes and review declarations cannot verify semantic truth or reviewer independence.
 
 ## Scope and participation
 

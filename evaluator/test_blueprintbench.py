@@ -70,7 +70,7 @@ class EvidenceTests(unittest.TestCase):
             bb.artifact({"path": "../secret", "sha256": "0" * 64}, self.root)
 
     def test_symlink_escape(self):
-        (self.root / "outside").symlink_to(self.root.parent)
+        (self.root / "outside").symlink_to(self.root.parent, target_is_directory=True)
         with self.assertRaisesRegex(bb.Invalid, "escapes"):
             bb.artifact({"path": "outside/secret", "sha256": "0" * 64}, self.root)
 
@@ -181,14 +181,14 @@ class EvidenceTests(unittest.TestCase):
     def test_equivalent_critical_labels_must_agree(self):
         def change(a,r,n,e):
             e.append({**e[1], "id":"duplicate"})
-            n["claims"].append({**n["claims"][1], "id":"duplicate", "critical":False, "violated_gold":[]})
+            n["claims"].append({**n["claims"][1], "id":"duplicate", "critical":False, "violated_gold":[], "matches_forbidden":[], "error_category":"other_noncritical"})
         self.rewrite_attempt(1, change)
         with self.assertRaisesRegex(bb.Invalid, "inconsistent equivalent"): self.evaluate()
 
     def test_reported_pass_with_zero_quality_is_not_accepted(self):
         def change(a,r,n,e):
             a["state"] = r["state"] = "pass"
-            for c in n["claims"]: c.update(verdict="unsupported", matches_gold=[])
+            for c in n["claims"]: c.update(verdict="unsupported", matches_gold=[], error_category="source_rule_inversion" if c["critical"] else "other_noncritical")
         self.rewrite_attempt(1, change)
         result = self.evaluate()
         self.assertEqual(result["reported_completion_rate"], 2/3)
@@ -299,7 +299,7 @@ class EvidenceTests(unittest.TestCase):
         with self.assertRaisesRegex(bb.Invalid,"reservation"):self.evaluate()
 
     def test_answerable_false_accepts_completed_empty_abstention(self):
-        self.alter_gold(2, lambda g:g.update(required_propositions=[],meaning={},critical_rule_ids=[],answerable=False))
+        self.alter_gold(2, lambda g:g.update(required_propositions=[],meaning={},critical_rule_ids=[],forbidden_inferences=[],answerable=False))
         r=self.evaluate();self.assertTrue(r["rows"][2]["accepted_task"])
         self.assertIsNone(r["rows"][2]["recall"])
         self.assertFalse(r["qualified"])
