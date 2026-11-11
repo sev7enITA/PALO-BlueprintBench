@@ -1,0 +1,11 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "id": "gen-1794376555-GBa4NGkdQDzXtYFQ7jcF",
+  "cost_usd": 0.23984,
+  "elapsed_seconds": 66.69135666699731,
+  "finish_reason": "stop",
+  "request_sha256": "47a382d32dbd309adad314ce09f7ae9402ee6902e9593a789e9797bb35279e04",
+  "response_sha256": "ad07f6b8effeeef93a3d7ce2c36a6846f8ce7204d44e12953f5f8d5500b83ad8",
+  "status": "advisory_design_review_not_benchmark_validation"
+}

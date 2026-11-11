@@ -15,7 +15,8 @@
 <h3 align="center">Preserving business meaning when AI turns documents into software specifications.</h3>
 
 <p align="center">
-  <a href="https://paloframework.org/PALO_BlueprintBench.html"><b>Explore the evidence</b></a> |
+  <a href="https://paloframework.org/PALO_BlueprintBench_Leaderboard.html"><b>Open the leaderboard</b></a> |
+  <a href="https://paloframework.org/PALO_BlueprintBench.html"><b>Research overview</b></a> |
   <a href="https://github.com/sev7enITA/PALO-BlueprintBench/wiki"><b>Read the wiki</b></a> |
   <a href="#quick-start"><b>Run the evaluator</b></a> |
   <a href="CONTRIBUTING.md"><b>Contribute</b></a>

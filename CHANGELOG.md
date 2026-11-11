@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: leaderboard and source-bound structured data
+
+Published a dedicated evidence workspace with separate internal, historical and qualified-result views. Added fixed-denominator matrices, primary/post-hoc lens, configuration comparisons, source/output translation inspection and recorded-call accounting. Qualified results remain empty. Replaced model-list metadata with two explicit Dataset nodes generated from evidence, with schema regression checks. Fable 5.2 provided advisory design insights; it was not added to the tested cohort or represented as independent validation.
+
 ## 2026-11-11: audit disclosure and diagnostic corrections
 
 Published the evaluator 0.2 non-claim flaw warning; replaced model rankings and scatter plots with pooled adapter diagnostics; corrected the assigned denominator to three for every configuration; withdrew unreconciled cost comparison and unsupported metadata. Preserved immutable releases and the historical evidence archive. Independent qualification remains unavailable.
