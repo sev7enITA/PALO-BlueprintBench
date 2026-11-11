@@ -1,0 +1,51 @@
+{
+  "id": "028-workflow-currency-approval-openai__gpt-6.1-sol",
+  "task_id": "workflow-currency-approval",
+  "model": "openai/gpt-6.1-sol",
+  "repetition": 1,
+  "pinned_provider": "openai",
+  "started_at": "2026-11-11T19:28:22.688976+00:00",
+  "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "894edc9b7e3ea58c5d5ea16423a99c3c8266dc584eb0a32adece1e9b50250210",
+  "reserved_usd": 0.3896227500000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.032411,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "8c375f5536a672f4df354aa314e303e784327aff7f7d1b98c2a4cf659132dc15",
+  "provider_request_id": "gen-1794425302-T7quBG7h0SHLSv8ST4Ps",
+  "returned_model": "openai/gpt-6.1-sol",
+  "returned_provider": "OpenAI",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 1165,
+    "completion_tokens": 2950,
+    "total_tokens": 4115,
+    "cost": 0.032411,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1162,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.032411,
+      "upstream_inference_prompt_cost": 0.002911,
+      "upstream_inference_completions_cost": 0.0295
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1034,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "b120a3761e454daf85b0b10937150a14e609ced248e3b6d461143ed8177492a5",
+  "elapsed_seconds": 46.806965915995534,
+  "finished_at": "2026-11-11T19:29:09.496960+00:00"
+}

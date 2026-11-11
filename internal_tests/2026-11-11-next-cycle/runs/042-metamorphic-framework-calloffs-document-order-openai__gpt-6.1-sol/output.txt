@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "framework-calloffs-P01",
+      "label": "supported",
+      "source_units": ["F04", "F05"],
+      "rationale": "Within the supplied current-quarter ledger, the pre-Q uncancelled amounts are EUR 30,000 and EUR 40,000. Q adds EUR 10,000 net without cancellation, giving EUR 80,000."
+    },
+    {
+      "id": "framework-calloffs-P02",
+      "label": "contradicted",
+      "source_units": ["F04", "F05"],
+      "rationale": "Using the supplied current-quarter ledger amounts, the total including Q is EUR 30,000 + EUR 40,000 + EUR 10,000 = EUR 80,000, not EUR 90,000."
+    },
+    {
+      "id": "framework-calloffs-P03",
+      "label": "contradicted",
+      "source_units": ["F01", "F02"],
+      "rationale": "The threshold is strictly greater than EUR 80,000. F02 expressly states that reaching exactly EUR 80,000 does not trigger a new competition."
+    },
+    {
+      "id": "framework-calloffs-P04",
+      "label": "contradicted",
+      "source_units": ["F03"],
+      "rationale": "F03 expressly states that cancelled call-offs count as zero, so a fully cancelled call-off's net value does not remain in the total."
+    },
+    {
+      "id": "framework-calloffs-P05",
+      "label": "contradicted",
+      "source_units": ["F01", "F06"],
+      "rationale": "F01 defines the cumulative value by framework, specifically FW-A. F06 assigns Z to FW-B, placing it outside that framework-specific total."
+    },
+    {
+      "id": "framework-calloffs-P06",
+      "label": "not_established",
+      "source_units": ["F06"],
+      "rationale": "F06 expressly leaves merging call-offs into a single order unspecified. Automatic merging is neither established nor prohibited."
+    },
+    {
+      "id": "framework-calloffs-P07",
+      "label": "supported",
+      "source_units": ["F03"],
+      "rationale": "F03 explicitly states that a partial cancellation removes only the cancelled net amount."
+    },
+    {
+      "id": "framework-calloffs-P08",
+      "label": "contradicted",
+      "source_units": ["F01"],
+      "rationale": "F01 limits the cumulative value to the current calendar quarter. That stated temporal boundary excludes call-offs from the previous calendar quarter."
+    }
+  ]
+}

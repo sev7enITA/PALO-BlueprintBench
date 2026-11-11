@@ -1,0 +1,398 @@
+{
+  "artifact_type": "source_linked_model_draft",
+  "id": "022-workflow-policy-transition-anthropic__claude-opus-5.5",
+  "model": "anthropic/claude-opus-5.5",
+  "case_id": "policy-transition",
+  "qualified": false,
+  "business_approval_required": true,
+  "business_approved": false,
+  "export_status": "structurally_valid_model_draft",
+  "semantic_status": "unreviewed_model_output",
+  "structural_issues": [],
+  "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+  "raw_output_sha256": "edf6b04008d0636185187dcdb91ed6823a378f21958908e5d3e56daf605f6caf",
+  "raw_output_path": "runs/022-workflow-policy-transition-anthropic__claude-opus-5.5/output.txt",
+  "content": {
+    "typed_entities_and_identifiers": [
+      {
+        "name": "Requisition",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "creation_date",
+            "type": "date",
+            "source_units": [
+              "T01",
+              "T02",
+              "T03",
+              "T04"
+            ]
+          },
+          {
+            "name": "amount_eur",
+            "type": "decimal (EUR)",
+            "source_units": [
+              "T01",
+              "T03",
+              "T04"
+            ]
+          },
+          {
+            "name": "unit",
+            "type": "string (e.g. 'North')",
+            "source_units": [
+              "T05",
+              "T06"
+            ]
+          }
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03",
+          "T04"
+        ]
+      },
+      {
+        "name": "PolicyVersion",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "version_id",
+            "type": "enum {policy-v1, policy-v2}",
+            "source_units": [
+              "T01",
+              "T03"
+            ]
+          },
+          {
+            "name": "applies_to_creation_date_range",
+            "type": "date range (v1: before 2026-10-01; v2: on or after 2026-10-01)",
+            "source_units": [
+              "T01",
+              "T02",
+              "T03",
+              "T04"
+            ]
+          },
+          {
+            "name": "finance_approval_threshold_eur",
+            "type": "decimal (v1: 20000; v2: 15000), strict greater-than",
+            "source_units": [
+              "T01",
+              "T03",
+              "T04"
+            ]
+          }
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03",
+          "T04"
+        ]
+      },
+      {
+        "name": "ReceiptRetentionInstruction",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "instruction_id",
+            "type": "enum {local-instruction-a, local-instruction-b}",
+            "source_units": [
+              "T05",
+              "T06"
+            ]
+          },
+          {
+            "name": "unit",
+            "type": "string ('North')",
+            "source_units": [
+              "T05",
+              "T06"
+            ]
+          },
+          {
+            "name": "retention_period_calendar_days",
+            "type": "integer (60 per T05; 90 per T06)",
+            "source_units": [
+              "T05",
+              "T06"
+            ]
+          }
+        ],
+        "source_units": [
+          "T05",
+          "T06"
+        ]
+      },
+      {
+        "name": "RequisitionRecordKey (proposed)",
+        "identifier_status": "proposed_design",
+        "fields": [
+          {
+            "name": "requisition_id",
+            "type": "string (proposed surrogate key; uniqueness not established by sources)",
+            "source_units": [
+              "T02"
+            ]
+          },
+          {
+            "name": "order_issuance_date",
+            "type": "date (optional; irrelevant to version selection)",
+            "source_units": [
+              "T02"
+            ]
+          }
+        ],
+        "source_units": [
+          "T02"
+        ]
+      },
+      {
+        "name": "FinanceApprovalDecisionRecord (proposed)",
+        "identifier_status": "proposed_design",
+        "fields": [
+          {
+            "name": "applicable_version",
+            "type": "enum {policy-v1, policy-v2}",
+            "source_units": [
+              "T02"
+            ]
+          },
+          {
+            "name": "amount_threshold_disposition",
+            "type": "enum {required, not_required, not_established}",
+            "source_units": [
+              "T01",
+              "T03",
+              "T04"
+            ]
+          }
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03",
+          "T04"
+        ]
+      }
+    ],
+    "decision_predicates": [
+      {
+        "id": "P_V1_ABOVE",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance (approver)",
+        "scope": "Requisitions with creation_date before 2026-10-01 (version chosen by creation date, not order issuance date)",
+        "condition": "creation_date < 2026-10-01 AND amount_eur > 20000 => Finance approval required",
+        "units": "EUR; calendar date",
+        "comparison": "strict greater-than 20000",
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      },
+      {
+        "id": "P_V1_AT_OR_BELOW",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance (approver)",
+        "scope": "Requisitions with creation_date before 2026-10-01; T01 states the rule is complete",
+        "condition": "creation_date < 2026-10-01 AND amount_eur <= 20000 => Finance approval not required under amount-triggered rule",
+        "units": "EUR; calendar date",
+        "comparison": "less-than-or-equal 20000",
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      },
+      {
+        "id": "P_V2_ABOVE",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance (approver)",
+        "scope": "Requisitions with creation_date on or after 2026-10-01",
+        "condition": "creation_date >= 2026-10-01 AND amount_eur > 15000 => Finance approval required",
+        "units": "EUR; calendar date",
+        "comparison": "strict greater-than 15000",
+        "source_units": [
+          "T02",
+          "T03"
+        ]
+      },
+      {
+        "id": "P_V2_EXACT",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance (approver)",
+        "scope": "Requisitions with creation_date on or after 2026-10-01",
+        "condition": "creation_date >= 2026-10-01 AND amount_eur == 15000 => Finance approval not required under this threshold",
+        "units": "EUR; calendar date",
+        "comparison": "equal to 15000",
+        "source_units": [
+          "T02",
+          "T04"
+        ]
+      },
+      {
+        "id": "P_RET_A",
+        "decision": "receipt_retention_period",
+        "actor": "not specified",
+        "scope": "North unit, per local-instruction-a",
+        "condition": "unit == 'North' => retention period 60 calendar days",
+        "units": "calendar days",
+        "comparison": "not applicable",
+        "source_units": [
+          "T05"
+        ]
+      },
+      {
+        "id": "P_RET_B",
+        "decision": "receipt_retention_period",
+        "actor": "not specified",
+        "scope": "North unit, per local-instruction-b; no priority, supersession, issue date or authority information",
+        "condition": "unit == 'North' => retention period 90 calendar days",
+        "units": "calendar days",
+        "comparison": "not applicable",
+        "source_units": [
+          "T06"
+        ]
+      }
+    ],
+    "process_transitions": [
+      {
+        "from_state": "RequisitionCreated (proposed state name)",
+        "to_state": "FinanceApprovalRequired (proposed state name)",
+        "event": "amount_threshold_evaluated",
+        "guard": "creation_date < 2026-10-01 AND amount_eur > 20000",
+        "predicate_ids": [
+          "P_V1_ABOVE"
+        ],
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      },
+      {
+        "from_state": "RequisitionCreated (proposed state name)",
+        "to_state": "FinanceApprovalNotRequiredByAmountThreshold (proposed state name)",
+        "event": "amount_threshold_evaluated",
+        "guard": "creation_date < 2026-10-01 AND amount_eur <= 20000",
+        "predicate_ids": [
+          "P_V1_AT_OR_BELOW"
+        ],
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      },
+      {
+        "from_state": "RequisitionCreated (proposed state name)",
+        "to_state": "FinanceApprovalRequired (proposed state name)",
+        "event": "amount_threshold_evaluated",
+        "guard": "creation_date >= 2026-10-01 AND amount_eur > 15000",
+        "predicate_ids": [
+          "P_V2_ABOVE"
+        ],
+        "source_units": [
+          "T02",
+          "T03"
+        ]
+      },
+      {
+        "from_state": "RequisitionCreated (proposed state name)",
+        "to_state": "FinanceApprovalNotRequiredByAmountThreshold (proposed state name)",
+        "event": "amount_threshold_evaluated",
+        "guard": "creation_date >= 2026-10-01 AND amount_eur == 15000",
+        "predicate_ids": [
+          "P_V2_EXACT"
+        ],
+        "source_units": [
+          "T02",
+          "T04"
+        ]
+      },
+      {
+        "from_state": "ReceiptRetained (proposed state name)",
+        "to_state": "RetentionPeriodUndetermined_ConflictEscalation (proposed state name)",
+        "event": "retention_period_lookup for unit North",
+        "guard": "unit == 'North' AND P_RET_A and P_RET_B both apply with differing periods (60 vs 90 days) and no priority rule",
+        "predicate_ids": [
+          "P_RET_A",
+          "P_RET_B"
+        ],
+        "source_units": [
+          "T05",
+          "T06"
+        ]
+      }
+    ],
+    "scenario_decisions": [
+      {
+        "decision": "finance_approval_from_amount_threshold",
+        "disposition": "required",
+        "predicate_ids": [
+          "P_V2_ABOVE"
+        ],
+        "source_units": [
+          "T02",
+          "T03"
+        ],
+        "rationale": "Creation date 2026-10-01 is 'on or after 1 October 2026', so per T02 policy-v2 applies regardless of later order issuance. Amount EUR 18,000 is strictly above EUR 15,000, so T03 requires Finance approval. This establishes only that approval is required under the amount threshold; no approval is assumed granted and no other prerequisite is inferred satisfied. The v1 EUR 20,000 rule does not apply because the requisition was not created before 1 October 2026."
+      },
+      {
+        "decision": "receipt_retention_period",
+        "disposition": "unresolved_conflict",
+        "predicate_ids": [
+          "P_RET_A",
+          "P_RET_B"
+        ],
+        "source_units": [
+          "T05",
+          "T06"
+        ],
+        "rationale": "For the North unit, T05 states 60 calendar days and T06 states 90 calendar days. T06 states neither instruction provides priority, supersession, issue date or authority information, so no source-based basis exists to select one. Not assuming longer-period-wins or any other closure rule."
+      }
+    ],
+    "unresolved_questions": [
+      "Which local instruction (60 or 90 calendar days) governs receipt retention for the North unit, and who has authority to resolve the conflict?",
+      "What event starts the receipt retention period (e.g., receipt date, order date)? Sources do not say.",
+      "Under policy-v2, is Finance approval required for amounts below EUR 15,000? T03/T04 do not state a complete rule for amounts under 15,000.",
+      "Do any non-amount prerequisites or other approvals apply to the requisition? None are named and none may be inferred satisfied.",
+      "What timezone or date-of-record convention determines the requisition creation date at the 1 October 2026 boundary?",
+      "Who within Finance holds approval authority and what constitutes a valid approval record? Not specified.",
+      "Retention periods for units other than North are not specified."
+    ]
+  },
+  "draft_decision_comparison": [
+    {
+      "id": "finance_approval_from_amount_threshold",
+      "predicted": "required",
+      "draft_expected": "required",
+      "scored": true,
+      "matches_draft": true,
+      "source_units": [
+        "T02",
+        "T03"
+      ],
+      "rationale": "Creation date 2026-10-01 is 'on or after 1 October 2026', so per T02 policy-v2 applies regardless of later order issuance. Amount EUR 18,000 is strictly above EUR 15,000, so T03 requires Finance approval. This establishes only that approval is required under the amount threshold; no approval is assumed granted and no other prerequisite is inferred satisfied. The v1 EUR 20,000 rule does not apply because the requisition was not created before 1 October 2026.",
+      "predicate_ids": [
+        "P_V2_ABOVE"
+      ]
+    },
+    {
+      "id": "receipt_retention_period",
+      "predicted": "unresolved_conflict",
+      "draft_expected": "unresolved_conflict",
+      "scored": true,
+      "matches_draft": true,
+      "source_units": [
+        "T05",
+        "T06"
+      ],
+      "rationale": "For the North unit, T05 states 60 calendar days and T06 states 90 calendar days. T06 states neither instruction provides priority, supersession, issue date or authority information, so no source-based basis exists to select one. Not assuming longer-period-wins or any other closure rule.",
+      "predicate_ids": [
+        "P_RET_A",
+        "P_RET_B"
+      ]
+    }
+  ],
+  "limitations": "Structural validity and matches to assistant-draft decisions do not establish semantic correctness, executability or independent validation."
+}

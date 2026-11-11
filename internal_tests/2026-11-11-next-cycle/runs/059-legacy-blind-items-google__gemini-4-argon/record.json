@@ -1,0 +1,51 @@
+{
+  "id": "059-legacy-blind-items-google__gemini-4-argon",
+  "task_id": "legacy-blind-items",
+  "model": "google/gemini-4-argon",
+  "repetition": 1,
+  "pinned_provider": "google-vertex/us",
+  "started_at": "2026-11-11T19:45:26.699615+00:00",
+  "source_packet_sha256": "031a0ec7dcee7105af5fb9895022dee4c23965fc73010c021ad5cedacee4329c",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "e79eb079218fdb33f8672ad3cdec5115a8ebafad2aa1650e7b87aa23e9d7bbce",
+  "reserved_usd": 0.42492054000000007,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0332002,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "3114b6b542627e3952847c0172ea3a38c5a1aaada21270266a766ca5d42243d8",
+  "provider_request_id": "gen-1794426326-50tNqhBQqRjvftzJgqAY",
+  "returned_model": "google/gemini-4-argon",
+  "returned_provider": "Google",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 2221,
+    "completion_tokens": 2574,
+    "total_tokens": 4795,
+    "cost": 0.0332002,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0332002,
+      "upstream_inference_prompt_cost": 0.0048862,
+      "upstream_inference_completions_cost": 0.028314
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2262,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "c751cdf14a0f0657ddd67c3e28cb1deeab259f757641bd0ba0ff9460cb540dcb",
+  "elapsed_seconds": 46.1208415000001,
+  "finished_at": "2026-11-11T19:46:12.821286+00:00"
+}

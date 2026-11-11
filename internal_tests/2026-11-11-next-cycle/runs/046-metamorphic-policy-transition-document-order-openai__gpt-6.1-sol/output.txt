@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "policy-transition-P01",
+      "label": "contradicted",
+      "source_units": ["T01", "T02"],
+      "rationale": "The creation date selects the pre-1 October rule. Its complete amount-triggered rule expressly excludes approval at or below EUR 20,000, including EUR 18,000. This conclusion concerns only the amount threshold."
+    },
+    {
+      "id": "policy-transition-P02",
+      "label": "supported",
+      "source_units": ["T02", "T03"],
+      "rationale": "A requisition created on 1 October 2026 falls within the new rule, and EUR 18,000 is strictly above its EUR 15,000 approval threshold."
+    },
+    {
+      "id": "policy-transition-P03",
+      "label": "contradicted",
+      "source_units": ["T04"],
+      "rationale": "For requisitions created on or after 1 October 2026, exactly EUR 15,000 expressly does not require Finance approval under this threshold."
+    },
+    {
+      "id": "policy-transition-P04",
+      "label": "contradicted",
+      "source_units": ["T02"],
+      "rationale": "The source expressly assigns version selection to the requisition creation date, even when order issuance occurs later."
+    },
+    {
+      "id": "policy-transition-P05",
+      "label": "unresolved_conflict",
+      "source_units": ["T05", "T06"],
+      "rationale": "The instructions prescribe conflicting North-unit retention periods of 60 and 90 calendar days. No priority, supersession, issue-date or authority information resolves which applies."
+    },
+    {
+      "id": "policy-transition-P06",
+      "label": "not_established",
+      "source_units": ["T05", "T06"],
+      "rationale": "No alphabetical precedence rule is stated, and the instructions provide no priority or supersession information. Their identifiers therefore do not establish that B overrides A; this absence also does not establish the opposite precedence."
+    },
+    {
+      "id": "policy-transition-P07",
+      "label": "supported",
+      "source_units": ["T05", "T06"],
+      "rationale": "The same North-unit receipt-retention period is stated as both 60 and 90 calendar days, with no supplied rule resolving the incompatibility."
+    },
+    {
+      "id": "policy-transition-P08",
+      "label": "contradicted",
+      "source_units": ["T05", "T06"],
+      "rationale": "The instructions specify different periods: 60 versus 90 calendar days. Their disagreement is explicit even though the applicable period remains unresolved."
+    }
+  ]
+}

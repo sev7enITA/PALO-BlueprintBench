@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "policy-transition-P01",
+      "label": "contradicted",
+      "source_units": ["T01", "T02"],
+      "rationale": "The creation date selects the pre-1 October rule. That complete amount-triggered rule explicitly does not require Finance approval at or below EUR 20,000, so EUR 18,000 does not trigger it."
+    },
+    {
+      "id": "policy-transition-P02",
+      "label": "supported",
+      "source_units": ["T02", "T03"],
+      "rationale": "A creation date of 1 October 2026 selects the new rule, which requires Finance approval above EUR 15,000. EUR 18,000 exceeds that threshold."
+    },
+    {
+      "id": "policy-transition-P03",
+      "label": "contradicted",
+      "source_units": ["T04"],
+      "rationale": "For requisitions created on or after 1 October 2026, exactly EUR 15,000 explicitly does not require Finance approval under this threshold."
+    },
+    {
+      "id": "policy-transition-P04",
+      "label": "contradicted",
+      "source_units": ["T02"],
+      "rationale": "The source explicitly makes requisition creation date, not order-issuance date, determinative of the applicable version."
+    },
+    {
+      "id": "policy-transition-P05",
+      "label": "unresolved_conflict",
+      "source_units": ["T05", "T06"],
+      "rationale": "The instructions specify incompatible periods of 60 and 90 calendar days for the same North-unit scope. No priority or supersession information resolves which applies."
+    },
+    {
+      "id": "policy-transition-P06",
+      "label": "not_established",
+      "source_units": ["T05", "T06"],
+      "rationale": "No source establishes alphabetical identifier order as an override rule. The absence of priority information does not establish either instruction's precedence."
+    },
+    {
+      "id": "policy-transition-P07",
+      "label": "supported",
+      "source_units": ["T05", "T06"],
+      "rationale": "The same North-unit retention period is stated as both 60 and 90 calendar days, and no priority, supersession, issue-date or authority information supplies a resolution."
+    },
+    {
+      "id": "policy-transition-P08",
+      "label": "contradicted",
+      "source_units": ["T05", "T06"],
+      "rationale": "The instructions explicitly state different retention periods: 60 calendar days and 90 calendar days. Their disagreement is established even though the applicable period remains unresolved."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "service-acceptance-P01",
+      "label": "supported",
+      "source_units": ["S04", "S06"],
+      "rationale": "The clock resumes from its prior elapsed value after resolution. M2 had accrued 7 payment days and its dispute has resolved, so it resumes with 7 accrued days."
+    },
+    {
+      "id": "service-acceptance-P02",
+      "label": "contradicted",
+      "source_units": ["S04", "S06"],
+      "rationale": "The explicit resumption rule preserves M2's prior 7 accrued payment days rather than resetting the clock to zero."
+    },
+    {
+      "id": "service-acceptance-P03",
+      "label": "contradicted",
+      "source_units": ["S01", "S02", "S06"],
+      "rationale": "Payment requires a purchase order, and signed service acceptance does not replace that requirement. M2 has no purchase order, so dispute resolution and signed acceptance do not make it eligible for payment."
+    },
+    {
+      "id": "service-acceptance-P04",
+      "label": "contradicted",
+      "source_units": ["S03"],
+      "rationale": "Accounts Payable is explicitly prohibited from signing acceptance; it may only register it."
+    },
+    {
+      "id": "service-acceptance-P05",
+      "label": "contradicted",
+      "source_units": ["S05"],
+      "rationale": "The source explicitly states that a dispute on M2 does not pause M1."
+    },
+    {
+      "id": "service-acceptance-P06",
+      "label": "contradicted",
+      "source_units": ["S05"],
+      "rationale": "The source explicitly states that acceptance of M1 does not accept M2."
+    },
+    {
+      "id": "service-acceptance-P07",
+      "label": "not_established",
+      "source_units": ["S06"],
+      "rationale": "No payment due-day total is specified. The source therefore establishes neither a 30-day total nor its negation."
+    },
+    {
+      "id": "service-acceptance-P08",
+      "label": "not_established",
+      "source_units": ["S06"],
+      "rationale": "No automatic reminder channel is specified. This leaves an email requirement unestablished without establishing that email is prohibited."
+    }
+  ]
+}

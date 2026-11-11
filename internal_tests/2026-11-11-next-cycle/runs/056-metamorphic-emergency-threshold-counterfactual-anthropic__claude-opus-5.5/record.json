@@ -1,0 +1,51 @@
+{
+  "id": "056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5",
+  "task_id": "metamorphic-emergency-threshold-counterfactual",
+  "model": "anthropic/claude-opus-5.5",
+  "repetition": 1,
+  "pinned_provider": "anthropic",
+  "started_at": "2026-11-11T19:43:57.154015+00:00",
+  "source_packet_sha256": "24f326a802035485536c3dde65aa49d7c1e8c634f438405305060cefb091c587",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "3ed25626bca58873ec8fb855d5c5941c3f38a021c0ec9a31f54b87d49f923c57",
+  "reserved_usd": 0.7916744000000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.025216,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "eea706ed0719e384b47fbaa4f20416cad290391fcbbfbac1c232a5d8a9d3c24f",
+  "provider_request_id": "gen-1794426237-BdTVwdluj9iJRgY0vZfn",
+  "returned_model": "anthropic/claude-opus-5.5",
+  "returned_provider": "Anthropic",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 972,
+    "total_tokens": 2416,
+    "cost": 0.025216,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025216,
+      "upstream_inference_prompt_cost": 0.005776,
+      "upstream_inference_completions_cost": 0.01944
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 325,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "69732297f3f6ca6d5bf301cc20799f0e83bf37fed9e4c652f0e79d016c6b2186",
+  "elapsed_seconds": 13.151148000004468,
+  "finished_at": "2026-11-11T19:44:10.305706+00:00"
+}

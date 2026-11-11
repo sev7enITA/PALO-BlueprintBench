@@ -1,0 +1,226 @@
+{
+  "typed_entities_and_identifiers": [
+    {
+      "name": "Milestone",
+      "identifier_status": "source_supported",
+      "fields": [
+        {
+          "name": "milestone_label",
+          "type": "string; source-supported labels M1 and M2; global uniqueness not established",
+          "source_units": ["S05", "S06"]
+        }
+      ],
+      "source_units": ["S05", "S06"]
+    },
+    {
+      "name": "MilestonePaymentRecord",
+      "identifier_status": "proposed_design",
+      "fields": [
+        {
+          "name": "milestone_label",
+          "type": "string; association to the particular billed milestone",
+          "source_units": ["S01", "S05", "S06"]
+        },
+        {
+          "name": "purchase_order_present",
+          "type": "boolean; false for M2; no purchase-order identifier specified",
+          "source_units": ["S01", "S02", "S06"]
+        },
+        {
+          "name": "dispute_status",
+          "type": "enum(disputed, resolved, unknown); resolved for M2",
+          "source_units": ["S04", "S06"]
+        },
+        {
+          "name": "elapsed_payment_days",
+          "type": "number measured in payment days; 7 for M2 upon resumption",
+          "source_units": ["S04", "S06"]
+        },
+        {
+          "name": "payment_due_day_total",
+          "type": "number or unknown; unknown for M2",
+          "source_units": ["S06"]
+        },
+        {
+          "name": "workflow_state",
+          "type": "proposed partial tracking labels used in transitions; not source-mandated states or a complete process",
+          "source_units": ["S01", "S03", "S04"]
+        }
+      ],
+      "source_units": ["S01", "S02", "S03", "S04", "S05", "S06"]
+    },
+    {
+      "name": "AcceptanceRecord",
+      "identifier_status": "proposed_design",
+      "fields": [
+        {
+          "name": "accepted_milestone_label",
+          "type": "string; acceptance is milestone-specific",
+          "source_units": ["S01", "S05", "S06"]
+        },
+        {
+          "name": "signed",
+          "type": "boolean; true for M2",
+          "source_units": ["S06"]
+        },
+        {
+          "name": "signer_role",
+          "type": "string or unknown; only the named service owner is authorized; actual M2 signer not specified",
+          "source_units": ["S03", "S06"]
+        },
+        {
+          "name": "registered_by",
+          "type": "string or unknown; Accounts Payable may register acceptance, but actual registration is not established",
+          "source_units": ["S03"]
+        }
+      ],
+      "source_units": ["S01", "S03", "S05", "S06"]
+    }
+  ],
+  "decision_predicates": [
+    {
+      "id": "P01",
+      "decision": "payment_eligible",
+      "actor": "not specified",
+      "scope": "Payment for the particular billed milestone, including M2",
+      "condition": "Payment requires both a purchase order and signed acceptance of that milestone. A missing purchase order blocks payment independently of acceptance status. These are necessary conditions, not an asserted exhaustive sufficiency rule.",
+      "units": "not applicable",
+      "comparison": "purchase_order_present = true AND signed_acceptance_for_billed_milestone = true are necessary",
+      "source_units": ["S01", "S02"]
+    },
+    {
+      "id": "P02",
+      "decision": "payment_eligible",
+      "actor": "Named service owner; Accounts Payable",
+      "scope": "Authority to sign or register service acceptance",
+      "condition": "Only the named service owner may sign acceptance. Accounts Payable may register acceptance but may not sign it; registration does not establish an authorized signature.",
+      "units": "not applicable",
+      "comparison": "authorized signer must be the named service owner",
+      "source_units": ["S03"]
+    },
+    {
+      "id": "P03",
+      "decision": "payment_eligible",
+      "actor": "not specified",
+      "scope": "Acceptance of the billed milestone",
+      "condition": "Acceptance must relate to the billed milestone; acceptance of M1 does not establish acceptance of M2.",
+      "units": "not applicable",
+      "comparison": "accepted milestone = billed milestone",
+      "source_units": ["S01", "S05"]
+    },
+    {
+      "id": "P04",
+      "decision": "payment_eligible",
+      "actor": "not specified",
+      "scope": "Services",
+      "condition": "Signed milestone acceptance replaces only the goods-receipt requirement. It does not replace the purchase order.",
+      "units": "not applicable",
+      "comparison": "not applicable",
+      "source_units": ["S02"]
+    },
+    {
+      "id": "P05",
+      "decision": "clock_restart_from_zero",
+      "actor": "not specified",
+      "scope": "Payment clock of the disputed milestone",
+      "condition": "A milestone dispute pauses that milestone's payment clock rather than resetting its accrued value.",
+      "units": "payment days",
+      "comparison": "elapsed value is retained while paused",
+      "source_units": ["S04"]
+    },
+    {
+      "id": "P06",
+      "decision": "clock_restart_from_zero",
+      "actor": "not specified",
+      "scope": "A milestone whose dispute resolves; concretely M2",
+      "condition": "On dispute resolution, the clock resumes from its prior elapsed value. M2's prior elapsed value is 7 payment days.",
+      "units": "payment days",
+      "comparison": "elapsed value at resumption = prior elapsed value; for M2, 7, not 0",
+      "source_units": ["S04", "S06"]
+    },
+    {
+      "id": "P07",
+      "decision": "clock_restart_from_zero",
+      "actor": "not specified",
+      "scope": "Effect of an M2 dispute on M1",
+      "condition": "A dispute on M2 does not pause M1. This does not establish M1's overall clock status under other circumstances.",
+      "units": "payment days",
+      "comparison": "not applicable",
+      "source_units": ["S05"]
+    },
+    {
+      "id": "P08",
+      "decision": "thirty_day_payment_deadline",
+      "actor": "not specified",
+      "scope": "Payment deadline for M2",
+      "condition": "No payment due-day total is specified. Seven accrued payment days and clock resumption do not establish a thirty-day deadline.",
+      "units": "payment days for elapsed time; deadline units and counting convention not specified",
+      "comparison": "not specified; no total of 30 is established",
+      "source_units": ["S04", "S06"]
+    }
+  ],
+  "process_transitions": [
+    {
+      "from_state": "proposed: payment eligibility unevaluated",
+      "to_state": "proposed: payment blocked by missing purchase order",
+      "event": "Evaluate payment eligibility for M2",
+      "guard": "M2 has no purchase order. Its signed acceptance does not substitute for one.",
+      "predicate_ids": ["P01", "P04"],
+      "source_units": ["S01", "S02", "S06"]
+    },
+    {
+      "from_state": "proposed: acceptance awaiting signature",
+      "to_state": "proposed: acceptance signed for the identified milestone",
+      "event": "The named service owner signs acceptance",
+      "guard": "The signer is the named service owner and the signature concerns the identified milestone. This is a generic guarded transition, not a finding that M2's signer has been verified.",
+      "predicate_ids": ["P02", "P03"],
+      "source_units": ["S01", "S03", "S05"]
+    },
+    {
+      "from_state": "proposed: milestone payment clock accruing",
+      "to_state": "proposed: same milestone payment clock paused",
+      "event": "That milestone becomes disputed",
+      "guard": "The dispute concerns the clock's milestone. An M2 dispute does not trigger this transition for M1.",
+      "predicate_ids": ["P05", "P07"],
+      "source_units": ["S04", "S05"]
+    },
+    {
+      "from_state": "proposed: milestone payment clock paused",
+      "to_state": "proposed: milestone payment clock resumed at prior elapsed value",
+      "event": "That milestone's dispute resolves",
+      "guard": "The dispute has resolved. For M2, resume at 7 accrued payment days; the missing purchase order still independently blocks payment.",
+      "predicate_ids": ["P01", "P06"],
+      "source_units": ["S01", "S04", "S06"]
+    }
+  ],
+  "scenario_decisions": [
+    {
+      "decision": "payment_eligible",
+      "disposition": "prohibited",
+      "predicate_ids": ["P01", "P02", "P03", "P04"],
+      "source_units": ["S01", "S02", "S03", "S05", "S06"],
+      "rationale": "M2 has signed acceptance but no purchase order. The explicit purchase-order prerequisite therefore blocks payment; service acceptance replaces only goods receipt. The actual signer's authority is not established, but resolving it cannot cure the known missing purchase order. No unmentioned prerequisite is inferred satisfied, and the named prerequisites are not treated as an exhaustive sufficient rule."
+    },
+    {
+      "decision": "clock_restart_from_zero",
+      "disposition": "prohibited",
+      "predicate_ids": ["P05", "P06"],
+      "source_units": ["S04", "S06"],
+      "rationale": "M2's dispute has resolved, so its clock must resume from the prior 7 payment days, not restart at zero. This clock rule does not establish payment eligibility or a due date."
+    },
+    {
+      "decision": "thirty_day_payment_deadline",
+      "disposition": "not_established",
+      "predicate_ids": ["P08"],
+      "source_units": ["S04", "S06"],
+      "rationale": "No payment due-day total is specified. Neither the 7 accrued payment days nor the resumption rule establishes a thirty-day deadline or 23 remaining days. The absence of a specified deadline is not a prohibition on such a deadline being established elsewhere. This is a source-linked internal draft, not business-approved or qualified output."
+    }
+  ],
+  "unresolved_questions": [
+    "Who is M2's named service owner, and did that person sign its acceptance? Signed acceptance is stated, but the signer's identity and authority are not established.",
+    "What payment due-day total, deadline units, and day-counting convention apply? The supplied sources do not specify them.",
+    "Is any automatic reminder required, and through which channel? No automatic reminder channel is specified, and no reminder obligation is established.",
+    "What identifiers and operational states should an implementation adopt? The proposed record structures and transition labels are partial design choices; the sources establish neither record-identifier uniqueness nor a complete workflow.",
+    "Are there additional payment prerequisites outside the named rules? None is inferred satisfied or imposed in this limited-scope draft."
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "artifact_type": "source_linked_model_draft",
+  "id": "018-workflow-bank-change-anthropic__claude-opus-5.5",
+  "model": "anthropic/claude-opus-5.5",
+  "case_id": "bank-change",
+  "qualified": false,
+  "business_approval_required": true,
+  "business_approved": false,
+  "export_status": "structurally_valid_model_draft",
+  "semantic_status": "unreviewed_model_output",
+  "structural_issues": [],
+  "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+  "raw_output_sha256": "fda072b59703010e00e26767e7c5d802af4a364e99aab00751461224d728d31f",
+  "raw_output_path": "runs/018-workflow-bank-change-anthropic__claude-opus-5.5/output.txt",
+  "content": {
+    "typed_entities_and_identifiers": [
+      {
+        "name": "SupplierBankChange",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "operator_id",
+            "type": "identifier (format not specified)",
+            "source_units": [
+              "B06",
+              "B02"
+            ]
+          },
+          {
+            "name": "approver_id",
+            "type": "identifier (format not specified)",
+            "source_units": [
+              "B06",
+              "B01"
+            ]
+          },
+          {
+            "name": "treasury_verification",
+            "type": "boolean (email confirmation alone insufficient)",
+            "source_units": [
+              "B01",
+              "B03"
+            ]
+          },
+          {
+            "name": "independent_approval",
+            "type": "boolean (approver must not be the entering operator)",
+            "source_units": [
+              "B01",
+              "B02"
+            ]
+          }
+        ],
+        "source_units": [
+          "B01",
+          "B02",
+          "B03",
+          "B06"
+        ]
+      },
+      {
+        "name": "DeclaredPaymentSystemOutage",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "declared",
+            "type": "boolean",
+            "source_units": [
+              "B04",
+              "B05"
+            ]
+          }
+        ],
+        "source_units": [
+          "B04",
+          "B05"
+        ]
+      },
+      {
+        "name": "OutagePaymentAuthorisation",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "authorising_role",
+            "type": "role (treasury lead)",
+            "source_units": [
+              "B04"
+            ]
+          },
+          {
+            "name": "destination",
+            "type": "enum {previously_verified_account, new_bank_details}",
+            "source_units": [
+              "B04",
+              "B05"
+            ]
+          }
+        ],
+        "source_units": [
+          "B04",
+          "B05"
+        ]
+      },
+      {
+        "name": "BankChangeRecordKeys (proposed)",
+        "identifier_status": "proposed_design",
+        "fields": [
+          {
+            "name": "change_id",
+            "type": "string (proposed; uniqueness not established by sources)",
+            "source_units": [
+              "B06"
+            ]
+          },
+          {
+            "name": "change_state",
+            "type": "enum {entered, verified, approved, usable, blocked} (proposed)",
+            "source_units": [
+              "B01"
+            ]
+          }
+        ],
+        "source_units": [
+          "B01",
+          "B06"
+        ]
+      },
+      {
+        "name": "DepartmentTenureRequirement",
+        "identifier_status": "not_established",
+        "fields": [
+          {
+            "name": "tenure_requirement",
+            "type": "not defined by sources",
+            "source_units": [
+              "B06"
+            ]
+          }
+        ],
+        "source_units": [
+          "B06"
+        ]
+      }
+    ],
+    "decision_predicates": [
+      {
+        "id": "P1",
+        "decision": "use_new_destination",
+        "actor": "Treasury",
+        "scope": "supplier bank change",
+        "condition": "Treasury verification completed (email confirmation alone does not count)",
+        "units": "not applicable",
+        "comparison": "treasury_verification == true",
+        "source_units": [
+          "B01",
+          "B03"
+        ]
+      },
+      {
+        "id": "P2",
+        "decision": "use_new_destination",
+        "actor": "approver (independent of operator)",
+        "scope": "supplier bank change",
+        "condition": "Independent approval by a person who did not enter the change",
+        "units": "not applicable",
+        "comparison": "independent_approval == true AND approver_id != operator_id",
+        "source_units": [
+          "B01",
+          "B02",
+          "B06"
+        ]
+      },
+      {
+        "id": "P3",
+        "decision": "use_new_destination",
+        "actor": "not specified",
+        "scope": "declared outage",
+        "condition": "Outage procedure does not authorise new unverified bank details nor waive entry/approval separation",
+        "units": "not applicable",
+        "comparison": "outage does not substitute for P1 or P2",
+        "source_units": [
+          "B05"
+        ]
+      },
+      {
+        "id": "P4",
+        "decision": "payment_to_previously_verified_account_by_treasury_lead",
+        "actor": "treasury lead",
+        "scope": "declared payment-system outage",
+        "condition": "Outage declared and payment destination is the previously verified bank account",
+        "units": "not applicable",
+        "comparison": "declared_outage == true AND destination == previously_verified_account AND actor_role == treasury_lead",
+        "source_units": [
+          "B04",
+          "B05"
+        ]
+      },
+      {
+        "id": "P5",
+        "decision": "mandatory_emergency_payment",
+        "actor": "treasury lead",
+        "scope": "declared payment-system outage",
+        "condition": "Named rules grant discretionary permission ('may'); no named rule imposes an obligation to pay",
+        "units": "not applicable",
+        "comparison": "obligation exists == false within named rules",
+        "source_units": [
+          "B04"
+        ]
+      }
+    ],
+    "process_transitions": [
+      {
+        "from_state": "entered",
+        "to_state": "verified",
+        "event": "Treasury verification recorded",
+        "guard": "P1 true (not email-only)",
+        "predicate_ids": [
+          "P1"
+        ],
+        "source_units": [
+          "B01",
+          "B03"
+        ]
+      },
+      {
+        "from_state": "verified",
+        "to_state": "usable",
+        "event": "independent approval recorded",
+        "guard": "P1 true AND P2 true",
+        "predicate_ids": [
+          "P1",
+          "P2"
+        ],
+        "source_units": [
+          "B01",
+          "B02"
+        ]
+      },
+      {
+        "from_state": "entered",
+        "to_state": "blocked",
+        "event": "use requested without Treasury verification (including during outage)",
+        "guard": "P1 false; P3 confirms outage does not override",
+        "predicate_ids": [
+          "P1",
+          "P3"
+        ],
+        "source_units": [
+          "B01",
+          "B05"
+        ]
+      },
+      {
+        "from_state": "outage_payment_pending",
+        "to_state": "authorised_to_previous_account",
+        "event": "treasury lead authorises payment",
+        "guard": "P4 true",
+        "predicate_ids": [
+          "P4"
+        ],
+        "source_units": [
+          "B04"
+        ]
+      }
+    ],
+    "scenario_decisions": [
+      {
+        "decision": "use_new_destination",
+        "disposition": "prohibited",
+        "predicate_ids": [
+          "P1",
+          "P2",
+          "P3"
+        ],
+        "source_units": [
+          "B01",
+          "B03",
+          "B05"
+        ],
+        "rationale": "B01 states a bank change becomes usable only after Treasury verification and independent approval; input treasury_verification is false, so P1 fails regardless of independent_approval being true. B05 states the outage procedure does not authorise use of new unverified details, so the declared outage does not override. Treated as prohibited because the 'only after' rule is a stated necessary condition."
+      },
+      {
+        "decision": "payment_to_previously_verified_account_by_treasury_lead",
+        "disposition": "permitted",
+        "predicate_ids": [
+          "P4"
+        ],
+        "source_units": [
+          "B04",
+          "B05"
+        ],
+        "rationale": "B04 grants the treasury lead discretionary authority to authorise payment to the previously verified account during a declared outage; declared_outage is true. This is a permission, not an obligation. Assumption caveat: the input does not establish that a previously verified account exists or that the authorising actor is the treasury lead; these are not inferred satisfied and the permission applies only if they hold."
+      },
+      {
+        "decision": "mandatory_emergency_payment",
+        "disposition": "not_required",
+        "predicate_ids": [
+          "P5"
+        ],
+        "source_units": [
+          "B04"
+        ],
+        "rationale": "B04 uses 'may', granting permission only. Under the scope note limiting decisions to named rules (closure assumption over the supplied rules), no rule imposes a mandatory emergency payment. Outside the named rules an obligation is not established either way."
+      }
+    ],
+    "unresolved_questions": [
+      "Does a previously verified bank account exist for this supplier?",
+      "Who is the treasury lead, and is the authorising actor in this scenario that person?",
+      "What evidence beyond email constitutes valid Treasury verification?",
+      "Does the input flag independent_approval=true reflect a recorded approver_id different from operator_id?",
+      "Must Treasury verification precede independent approval, or may they occur in any order?",
+      "No department-tenure requirement is defined for operator or approver roles (B06); is one intended?",
+      "Are there authorities or obligations for emergency payment outside the supplied documents?"
+    ]
+  },
+  "draft_decision_comparison": [
+    {
+      "id": "use_new_destination",
+      "predicted": "prohibited",
+      "draft_expected": "prohibited",
+      "scored": true,
+      "matches_draft": true,
+      "source_units": [
+        "B01",
+        "B03",
+        "B05"
+      ],
+      "rationale": "B01 states a bank change becomes usable only after Treasury verification and independent approval; input treasury_verification is false, so P1 fails regardless of independent_approval being true. B05 states the outage procedure does not authorise use of new unverified details, so the declared outage does not override. Treated as prohibited because the 'only after' rule is a stated necessary condition.",
+      "predicate_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "payment_to_previously_verified_account_by_treasury_lead",
+      "predicted": "permitted",
+      "draft_expected": "permitted",
+      "scored": true,
+      "matches_draft": true,
+      "source_units": [
+        "B04",
+        "B05"
+      ],
+      "rationale": "B04 grants the treasury lead discretionary authority to authorise payment to the previously verified account during a declared outage; declared_outage is true. This is a permission, not an obligation. Assumption caveat: the input does not establish that a previously verified account exists or that the authorising actor is the treasury lead; these are not inferred satisfied and the permission applies only if they hold.",
+      "predicate_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "mandatory_emergency_payment",
+      "predicted": "not_required",
+      "draft_expected": "not_established",
+      "scored": true,
+      "matches_draft": false,
+      "source_units": [
+        "B04"
+      ],
+      "rationale": "B04 uses 'may', granting permission only. Under the scope note limiting decisions to named rules (closure assumption over the supplied rules), no rule imposes a mandatory emergency payment. Outside the named rules an obligation is not established either way.",
+      "predicate_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "limitations": "Structural validity and matches to assistant-draft decisions do not establish semantic correctness, executability or independent validation."
+}

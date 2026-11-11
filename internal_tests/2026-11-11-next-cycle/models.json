@@ -1,0 +1,207 @@
+[
+  {
+    "id": "openai/gpt-6.1-sol",
+    "name": "OpenAI: GPT-6.1 Sol",
+    "provider": "openai",
+    "endpoint": {
+      "name": "OpenAI | openai/gpt-6.1-sol-20260929",
+      "model_id": "openai/gpt-6.1-sol",
+      "model_name": "OpenAI: GPT-6.1 Sol",
+      "context_length": 1050000,
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "discount": 0,
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000002",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "provider_name": "OpenAI",
+      "tag": "openai",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": 922000,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "seed",
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search"
+        },
+        "openrouter:apply_patch": {
+          "type": "apply_patch"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null
+    }
+  },
+  {
+    "id": "anthropic/claude-opus-5.5",
+    "name": "Anthropic: Claude Opus 5.5",
+    "provider": "anthropic",
+    "endpoint": {
+      "name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "0.000004",
+        "completion": "0.00002",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.000005",
+        "input_cache_write_1h": "0.000008",
+        "discount": 0
+      },
+      "provider_name": "Anthropic",
+      "tag": "anthropic",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search_20260209"
+        },
+        "openrouter:web_fetch": {
+          "type": "web_fetch_20260209"
+        },
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        },
+        "openrouter:advisor": {
+          "type": "advisor_20260301"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null
+    }
+  },
+  {
+    "id": "google/gemini-4-argon",
+    "name": "Google: Gemini 4 Argon",
+    "provider": "google-vertex/us",
+    "endpoint": {
+      "name": "Google | google/gemini-4-argon-20261013",
+      "model_id": "google/gemini-4-argon",
+      "model_name": "Google: Gemini 4 Argon",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "0.0000022",
+        "completion": "0.000011",
+        "image": "0.0000022",
+        "audio": "0.0000022",
+        "input_audio_cache": "0.00000011",
+        "web_search": "0.014",
+        "internal_reasoning": "0.000011",
+        "input_cache_read": "0.00000011",
+        "input_cache_write": "0.0000001875",
+        "discount": 0.5
+      },
+      "provider_name": "Google",
+      "tag": "google-vertex/us",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 65536,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "seed",
+        "response_format",
+        "tools",
+        "tool_choice",
+        "stop",
+        "structured_outputs",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 96.7849223946785,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "google_search"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null
+    }
+  }
+]

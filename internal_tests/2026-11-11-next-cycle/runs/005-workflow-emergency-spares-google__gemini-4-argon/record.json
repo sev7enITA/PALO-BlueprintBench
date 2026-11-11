@@ -1,0 +1,51 @@
+{
+  "id": "005-workflow-emergency-spares-google__gemini-4-argon",
+  "task_id": "workflow-emergency-spares",
+  "model": "google/gemini-4-argon",
+  "repetition": 1,
+  "pinned_provider": "google-vertex/us",
+  "started_at": "2026-11-11T19:07:28.836889+00:00",
+  "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "72550f5edf11d48e024872d85bd088d2b6d7e6388e6857ff4eaa7515a7fd3e06",
+  "reserved_usd": 0.4224715,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0972268,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "d5439841f432a158a3e1e9e33ef4b51f157bee59b748e2e6cabaf4479828ecd6",
+  "provider_request_id": "gen-1794424048-2en9sk8m7dhUwJzsfPM8",
+  "returned_model": "google/gemini-4-argon",
+  "returned_provider": "Google",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 2404,
+    "completion_tokens": 8358,
+    "total_tokens": 10762,
+    "cost": 0.0972268,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0972268,
+      "upstream_inference_prompt_cost": 0.0052888,
+      "upstream_inference_completions_cost": 0.091938
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5763,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "80c4d913b31665bf8fd55ca2eaa93bf940360bd89c27387333a48e5918aaf509",
+  "elapsed_seconds": 112.34611679200316,
+  "finished_at": "2026-11-11T19:09:21.183947+00:00"
+}

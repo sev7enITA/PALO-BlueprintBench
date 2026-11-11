@@ -1,0 +1,51 @@
+{
+  "id": "031-verification-service-acceptance-anthropic__claude-opus-5.5",
+  "task_id": "verification-service-acceptance",
+  "model": "anthropic/claude-opus-5.5",
+  "repetition": 1,
+  "pinned_provider": "anthropic",
+  "started_at": "2026-11-11T19:30:48.759209+00:00",
+  "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "4af6855d9045ba1664b96628b76883ab25f679a9ddb2ebdb7e03e76d44192854",
+  "reserved_usd": 0.7927568,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.019928,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "272f1e9f62a07276e38198deac23f5fa3297e9067495b287a9eab66b46d55771",
+  "provider_request_id": "gen-1794425448-j4hcV2Tux5SkAWsIOT0p",
+  "returned_model": "anthropic/claude-opus-5.5",
+  "returned_provider": "Anthropic",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 684,
+    "total_tokens": 2246,
+    "cost": 0.019928,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019928,
+      "upstream_inference_prompt_cost": 0.006248,
+      "upstream_inference_completions_cost": 0.01368
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "0d4ee8d3f5b9016406b53c756f0d1d14768014b1da3e0be1e8da7a4e42e5bc2a",
+  "elapsed_seconds": 9.10903020799742,
+  "finished_at": "2026-11-11T19:30:57.868807+00:00"
+}

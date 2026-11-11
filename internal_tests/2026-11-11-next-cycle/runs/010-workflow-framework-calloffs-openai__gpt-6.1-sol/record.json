@@ -1,0 +1,51 @@
+{
+  "id": "010-workflow-framework-calloffs-openai__gpt-6.1-sol",
+  "task_id": "workflow-framework-calloffs",
+  "model": "openai/gpt-6.1-sol",
+  "repetition": 1,
+  "pinned_provider": "openai",
+  "started_at": "2026-11-11T19:11:58.469436+00:00",
+  "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "2785baa11f7eb05b90263bf6702b9db176979db7a302ee6c41e41e277c4047b0",
+  "reserved_usd": 0.3895237500000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.037356,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "6386b77cfd604eeb27c5e4a1a8c745b0e5303811ded79b7910af989d30bd96e8",
+  "provider_request_id": "gen-1794424318-168e3nvrvDvFV9bsXe7A",
+  "returned_model": "openai/gpt-6.1-sol",
+  "returned_provider": "OpenAI",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 1151,
+    "completion_tokens": 3448,
+    "total_tokens": 4599,
+    "cost": 0.037356,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1148,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037356,
+      "upstream_inference_prompt_cost": 0.002876,
+      "upstream_inference_completions_cost": 0.03448
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1538,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "b8d971426f85731071a4168c94a7079873752e25fbe81f690202c31c5bb81386",
+  "elapsed_seconds": 59.07925179200538,
+  "finished_at": "2026-11-11T19:12:57.549528+00:00"
+}

@@ -1,0 +1,654 @@
+{
+  "review_id": "counterfactual-advisory-review-2026-11-11",
+  "created_at": "2026-11-11T19:49:48.131081+00:00",
+  "status": "automated_postrun_advisory_review",
+  "qualified": false,
+  "independent_human_review": false,
+  "reviewer": "Codex sub-agent next_cycle_semantic_review",
+  "reviewer_model_id": "unavailable_not_inferred",
+  "review_blinding": "Written after seeing all paired outputs; this is an automated advisory interpretation, not a blinded adjudication.",
+  "source_evidence": [
+    {
+      "path": "study/next-cycle/metamorphic-checks.json",
+      "sha256": "a4655e339a65df52ae85c1b21972d78705667b79c6d0b883855e43b489199c36"
+    },
+    {
+      "path": "internal_tests/2026-11-11-next-cycle/tasks.json",
+      "sha256": "70e4fc50175fa26310fc419f3eab41e8bb0e6e1416ee26dfdb1d334be2d9ec19"
+    },
+    {
+      "path": "study/next-cycle/case-bank.json",
+      "sha256": "e0641ef6062ee0baa16ae2a01f739ab1698439c50ec7cd57ea63662fbbdbc3e0"
+    }
+  ],
+  "source_perturbation": {
+    "parameter": "amount threshold",
+    "old": "EUR 12,000",
+    "new": "EUR 15,000",
+    "source_units_changed": [
+      "E01",
+      "E05"
+    ],
+    "description": "One threshold parameter replaced consistently in both source units, including the two threshold occurrences in E01.",
+    "other_input_changes": {
+      "baseline_propositions": 8,
+      "variant_propositions": 6,
+      "removed_propositions": [
+        "emergency-spares-P06",
+        "emergency-spares-P08"
+      ]
+    },
+    "is_full_request_single_variable_change": false,
+    "causal_limit": "The source perturbation changes one parameter, but the variant also removes two propositions from the request. It is not a strict single-variable full-prompt experiment."
+  },
+  "summary": {
+    "paired_models": 3,
+    "assigned_pairs": 18,
+    "proposed_relations_satisfied": 15,
+    "proposed_relations_violated": 3,
+    "scope_sensitive_P01_deviations": 2,
+    "observed_P07_invariance_deviations": 1,
+    "all_models_P02_label": "supported",
+    "human_adjudications_completed": 0,
+    "paid_calls_for_this_review": 0
+  },
+  "observations": [
+    {
+      "probe_id": "emergency-spares-P01",
+      "proposed_relation": "counterfactual_disposition",
+      "frozen_expected_variant": "contradicted",
+      "observed_models": [
+        {
+          "model": "anthropic/claude-opus-5.5",
+          "baseline_label": "supported",
+          "variant_label": "not_established",
+          "baseline_rationale": "EUR 12,001 exceeds EUR 12,000, so E01 requires director approval before order issuance. E05 states that the outage exception does not waive this requirement.",
+          "variant_rationale": "EUR 12,001 is at or below EUR 15,000, so the complete amount-triggered rule does not require director approval. E05 preserves director approval only above EUR 15,000. That rule's completeness covers amount-based triggers only. The sources do not state that no other approval requirement exists, so a general requirement is neither established nor excluded.",
+          "proposed_relation_satisfied": false,
+          "baseline_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/002-verification-emergency-spares-anthropic__claude-opus-5.5/output.txt",
+            "sha256": "3c59f174623d83fd8e0f1075f569633c2125811b6242e76f63b6eb5bc72af0e9"
+          },
+          "variant_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5/output.txt",
+            "sha256": "69732297f3f6ca6d5bf301cc20799f0e83bf37fed9e4c652f0e79d016c6b2186"
+          }
+        },
+        {
+          "model": "google/gemini-4-argon",
+          "baseline_label": "supported",
+          "variant_label": "contradicted",
+          "baseline_rationale": "E01 establishes a complete amount-triggered rule requiring procurement director approval before order issuance when a purchase exceeds EUR 12,000. EUR 12,001 exceeds EUR 12,000, and E05 explicitly states that the plant-outage quotation exception does not waive director approval above EUR 12,000.",
+          "variant_rationale": "E01 states the complete amount-triggered approval rule, under which procurement director approval is required only when a purchase exceeds EUR 15,000, and explicitly states that at or below EUR 15,000 the amount rule does not require director approval. E05 adds no lower threshold for outage orders. Since EUR 12,001 does not exceed EUR 15,000, requiring director approval is contradicted under the stated complete amount rule.",
+          "proposed_relation_satisfied": true,
+          "baseline_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/003-verification-emergency-spares-google__gemini-4-argon/output.txt",
+            "sha256": "507b9291c131e93d316049033bea92b80c42c0162d5ab88f006907381e83c8cf"
+          },
+          "variant_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon/output.txt",
+            "sha256": "6ea37585cd42f414893836afc6e1c0c2d164b516223eca0fbf5a4a2cc533f66a"
+          }
+        },
+        {
+          "model": "openai/gpt-6.1-sol",
+          "baseline_label": "supported",
+          "variant_label": "not_established",
+          "baseline_rationale": "EUR 12,001 exceeds the strict EUR 12,000 threshold, requiring procurement director approval before issuance. The outage exception does not waive that requirement.",
+          "variant_rationale": "EUR 12,001 does not trigger director approval under the amount rule. However, only that rule is stated to be complete; the sources do not establish whether another approval ground applies. The unqualified requirement is therefore left open.",
+          "proposed_relation_satisfied": false,
+          "baseline_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/001-verification-emergency-spares-openai__gpt-6.1-sol/output.txt",
+            "sha256": "e24d682374ef7ad1dc108747abaa5bdc2c750787bcbea9c4cffdde2971e7cb2e"
+          },
+          "variant_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol/output.txt",
+            "sha256": "eb469e4866e6fc901bfe805c1b8fb2cdb8a4de9958d3e634e9f622f0f8f2fdbe"
+          }
+        }
+      ],
+      "advisory_status": "scope_sensitive_expected_relation",
+      "analysis": "P01 asserts a general approval requirement, while E01 expressly closes only the amount-triggered rule. Raising the threshold removes one sufficient ground for requiring approval; it does not establish that no other ground could apply. OpenAI and Anthropic return not_established on that distinction. Google treats the proposition as implicitly scoped to the stated amount rule and returns contradicted. P02 explicitly says under the amount rule and all three return supported. This asymmetry makes the expected P01 flip rubric-sensitive; it is not evidence of arithmetic failure.",
+      "recommendation": "Retain both observed deviations and the frozen expected label. Ask humans whether P01 is implicitly amount-scoped; for a future version add under E01 amount rule explicitly or define exhaustive approval grounds before freezing.",
+      "human_adjudication": "pending"
+    },
+    {
+      "probe_id": "emergency-spares-P07",
+      "proposed_relation": "invariant",
+      "frozen_expected_variant": "not_established",
+      "observed_models": [
+        {
+          "model": "anthropic/claude-opus-5.5",
+          "baseline_label": "not_established",
+          "variant_label": "not_established",
+          "baseline_rationale": "E06 states that the policy does not prescribe the record storage system. No Oracle portal requirement is stated, and the absence of a requirement is not a prohibition, so the matter is left open.",
+          "variant_rationale": "E06 explicitly states the policy does not prescribe the record storage system. No source requires the Oracle portal, and the sources do not prohibit it either.",
+          "proposed_relation_satisfied": true,
+          "baseline_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/002-verification-emergency-spares-anthropic__claude-opus-5.5/output.txt",
+            "sha256": "3c59f174623d83fd8e0f1075f569633c2125811b6242e76f63b6eb5bc72af0e9"
+          },
+          "variant_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5/output.txt",
+            "sha256": "69732297f3f6ca6d5bf301cc20799f0e83bf37fed9e4c652f0e79d016c6b2186"
+          }
+        },
+        {
+          "model": "google/gemini-4-argon",
+          "baseline_label": "not_established",
+          "variant_label": "not_established",
+          "baseline_rationale": "E06 states that the policy does not prescribe the record storage system, leaving the specific implementation detail of whether the Oracle portal must be used open and unestablished by the source documents.",
+          "variant_rationale": "E06 explicitly states that the policy does not prescribe the record storage system, and no source unit mentions the Oracle portal. Whether the buyer must use the Oracle portal is therefore left open and not established by the source documents.",
+          "proposed_relation_satisfied": true,
+          "baseline_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/003-verification-emergency-spares-google__gemini-4-argon/output.txt",
+            "sha256": "507b9291c131e93d316049033bea92b80c42c0162d5ab88f006907381e83c8cf"
+          },
+          "variant_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon/output.txt",
+            "sha256": "6ea37585cd42f414893836afc6e1c0c2d164b516223eca0fbf5a4a2cc533f66a"
+          }
+        },
+        {
+          "model": "openai/gpt-6.1-sol",
+          "baseline_label": "not_established",
+          "variant_label": "contradicted",
+          "baseline_rationale": "E06 establishes the recording duty but says the policy does not prescribe a storage system. An Oracle-specific implementation requirement is not established; no broader, complete set of storage requirements is supplied.",
+          "variant_rationale": "Within the supplied policy's scope, E06 expressly states that no record storage system is prescribed, contradicting an Oracle-specific storage obligation. This does not prohibit using Oracle.",
+          "proposed_relation_satisfied": false,
+          "baseline_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/001-verification-emergency-spares-openai__gpt-6.1-sol/output.txt",
+            "sha256": "e24d682374ef7ad1dc108747abaa5bdc2c750787bcbea9c4cffdde2971e7cb2e"
+          },
+          "variant_output": {
+            "path": "internal_tests/2026-11-11-next-cycle/runs/055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol/output.txt",
+            "sha256": "eb469e4866e6fc901bfe805c1b8fb2cdb8a4de9958d3e634e9f622f0f8f2fdbe"
+          }
+        }
+      ],
+      "advisory_status": "observed_label_instability_with_scope_ambiguity",
+      "analysis": "E06 is unchanged and says the policy does not prescribe the storage system. OpenAI initially leaves possible implementation requirements open, then treats the same sentence as denying an Oracle obligation within the supplied policy scope. Both rationales distinguish using Oracle from being obliged to use it, but their scope conventions differ. This is an observed failure of label invariance under the proposed check, not proof that one label is semantically wrong or that the threshold edit alone caused the change.",
+      "recommendation": "Retain the observed invariant violation. Freeze the scope of must in a future rubric and keep the proposition set identical when testing threshold-only perturbations. Do not claim causal sensitivity to an unrelated number from this single paired observation.",
+      "human_adjudication": "pending"
+    }
+  ],
+  "run_evidence": [
+    {
+      "assignment_id": "002-verification-emergency-spares-anthropic__claude-opus-5.5",
+      "model": "anthropic/claude-opus-5.5",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/002-verification-emergency-spares-anthropic__claude-opus-5.5/output.txt",
+        "sha256": "3c59f174623d83fd8e0f1075f569633c2125811b6242e76f63b6eb5bc72af0e9"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/002-verification-emergency-spares-anthropic__claude-opus-5.5/response.json",
+        "sha256": "72c4421188b1691ca5b289d5fd24ae9c985b0ff64014b348a4ecb04a3146c66f"
+      },
+      "request": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/002-verification-emergency-spares-anthropic__claude-opus-5.5/request.json",
+        "sha256": "4d48d121c2aa3e336460e6282be6ed100d4e2ee86aaf761526a7fd5eeef5df28"
+      },
+      "judgments": [
+        {
+          "id": "emergency-spares-P01",
+          "label": "supported",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "EUR 12,001 exceeds EUR 12,000, so E01 requires director approval before order issuance. E05 states that the outage exception does not waive this requirement."
+        },
+        {
+          "id": "emergency-spares-P02",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "Under the amount rule, a purchase above EUR 12,000 requires director approval. E05 confirms that the outage exception does not waive it."
+        },
+        {
+          "id": "emergency-spares-P03",
+          "label": "contradicted",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "rationale": "E03's three-quotation requirement applies to ordinary purchases. For a declared outage, E04 permits ordering with one quotation and makes further quotations optional, so there is no obligation to obtain three."
+        },
+        {
+          "id": "emergency-spares-P04",
+          "label": "contradicted",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "rationale": "E02 explicitly prohibits requesters from approving their own requests, including emergency requests. E05 confirms that the outage exception does not waive this prohibition."
+        },
+        {
+          "id": "emergency-spares-P05",
+          "label": "supported",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 obliges the buyer, for a declared outage, to record the justification within two calendar days after order issuance. That is equivalent to no later than two calendar days after issuance."
+        },
+        {
+          "id": "emergency-spares-P06",
+          "label": "contradicted",
+          "source_units": [
+            "E01"
+          ],
+          "rationale": "E01 is a strict 'exceeds' threshold. It states that at or below EUR 12,000 the amount rule does not require director approval, so exactly EUR 12,000 does not trigger it."
+        },
+        {
+          "id": "emergency-spares-P07",
+          "label": "not_established",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 states that the policy does not prescribe the record storage system. No Oracle portal requirement is stated, and the absence of a requirement is not a prohibition, so the matter is left open."
+        },
+        {
+          "id": "emergency-spares-P08",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "E01 requires approval by the procurement director above EUR 12,000. E05 says the outage exception does not waive this. No source grants the buyer authority to substitute their own approval, and doing so would leave the stated director-approval obligation unmet. This assumes the buyer is not the procurement director."
+        }
+      ]
+    },
+    {
+      "assignment_id": "003-verification-emergency-spares-google__gemini-4-argon",
+      "model": "google/gemini-4-argon",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/003-verification-emergency-spares-google__gemini-4-argon/output.txt",
+        "sha256": "507b9291c131e93d316049033bea92b80c42c0162d5ab88f006907381e83c8cf"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/003-verification-emergency-spares-google__gemini-4-argon/response.json",
+        "sha256": "8d4a32407eae589fd2025ba31b45df4e4720210746133d489e2b5412495db71c"
+      },
+      "request": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/003-verification-emergency-spares-google__gemini-4-argon/request.json",
+        "sha256": "527bcc38a63fb411b46a4a67b10ad3625b181514ca5b732f238d57eaf29ffdf7"
+      },
+      "judgments": [
+        {
+          "id": "emergency-spares-P01",
+          "label": "supported",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "E01 establishes a complete amount-triggered rule requiring procurement director approval before order issuance when a purchase exceeds EUR 12,000. EUR 12,001 exceeds EUR 12,000, and E05 explicitly states that the plant-outage quotation exception does not waive director approval above EUR 12,000."
+        },
+        {
+          "id": "emergency-spares-P02",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "Under the complete amount rule in E01, any purchase exceeding EUR 12,000 (such as EUR 12,001) requires director approval before issuance, and E05 confirms that the plant-outage exception does not waive director approval above EUR 12,000."
+        },
+        {
+          "id": "emergency-spares-P03",
+          "label": "contradicted",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "rationale": "While E03 requires three quotations for ordinary purchases, E04 creates an explicit exception for a declared plant outage allowing the buyer to order with one quotation and making further quotations optional rather than obligatory."
+        },
+        {
+          "id": "emergency-spares-P04",
+          "label": "contradicted",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "rationale": "E02 explicitly prohibits a requester from approving their own request, including emergency requests, and E05 confirms that the plant-outage exception does not waive the requester self-approval prohibition."
+        },
+        {
+          "id": "emergency-spares-P05",
+          "label": "supported",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 explicitly requires the buyer to record the justification for a declared outage within two calendar days after order issuance, which entails recording it no later than two calendar days after issuance."
+        },
+        {
+          "id": "emergency-spares-P06",
+          "label": "contradicted",
+          "source_units": [
+            "E01"
+          ],
+          "rationale": "E01 states the complete amount-triggered approval rule: director approval is triggered only when a purchase strictly exceeds EUR 12,000, and at or below EUR 12,000 the amount rule does not require director approval."
+        },
+        {
+          "id": "emergency-spares-P07",
+          "label": "not_established",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 states that the policy does not prescribe the record storage system, leaving the specific implementation detail of whether the Oracle portal must be used open and unestablished by the source documents."
+        },
+        {
+          "id": "emergency-spares-P08",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "E01 requires the procurement director to approve purchases exceeding EUR 12,000 before issuance as a complete amount rule, and E05 explicitly states that the plant-outage exception does not waive director approval above EUR 12,000, precluding substitution of the buyer's approval for the director's required approval."
+        }
+      ]
+    },
+    {
+      "assignment_id": "056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5",
+      "model": "anthropic/claude-opus-5.5",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5/output.txt",
+        "sha256": "69732297f3f6ca6d5bf301cc20799f0e83bf37fed9e4c652f0e79d016c6b2186"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5/response.json",
+        "sha256": "eea706ed0719e384b47fbaa4f20416cad290391fcbbfbac1c232a5d8a9d3c24f"
+      },
+      "request": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5/request.json",
+        "sha256": "3ed25626bca58873ec8fb855d5c5941c3f38a021c0ec9a31f54b87d49f923c57"
+      },
+      "judgments": [
+        {
+          "id": "emergency-spares-P01",
+          "label": "not_established",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "EUR 12,001 is at or below EUR 15,000, so the complete amount-triggered rule does not require director approval. E05 preserves director approval only above EUR 15,000. That rule's completeness covers amount-based triggers only. The sources do not state that no other approval requirement exists, so a general requirement is neither established nor excluded."
+        },
+        {
+          "id": "emergency-spares-P02",
+          "label": "supported",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "E01 is stated to be the complete amount-triggered rule, and it does not require director approval at or below EUR 15,000. EUR 12,001 falls in that range, and the outage exception in E05 does not alter this."
+        },
+        {
+          "id": "emergency-spares-P03",
+          "label": "contradicted",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "rationale": "E04 allows the buyer to order with one quotation for a declared plant outage and says further quotations are optional. This explicitly negates an obligation to obtain three quotations, which E03 applies only to ordinary purchases."
+        },
+        {
+          "id": "emergency-spares-P04",
+          "label": "contradicted",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "rationale": "E02 prohibits requesters from approving their own requests, explicitly including emergency requests. E05 confirms the outage exception does not waive this prohibition."
+        },
+        {
+          "id": "emergency-spares-P05",
+          "label": "supported",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 obliges the buyer to record the justification for a declared outage within two calendar days after order issuance. This matches 'no later than two calendar days after issuance'."
+        },
+        {
+          "id": "emergency-spares-P07",
+          "label": "not_established",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 explicitly states the policy does not prescribe the record storage system. No source requires the Oracle portal, and the sources do not prohibit it either."
+        }
+      ]
+    },
+    {
+      "assignment_id": "055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol",
+      "model": "openai/gpt-6.1-sol",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol/output.txt",
+        "sha256": "eb469e4866e6fc901bfe805c1b8fb2cdb8a4de9958d3e634e9f622f0f8f2fdbe"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol/response.json",
+        "sha256": "c31015a77e545f77d2e755cc015a94fe5155479b2010fb3ad510c669d4f43e00"
+      },
+      "request": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol/request.json",
+        "sha256": "3f59319c94c872607d63c41465eb9a358741c90e2e74d1637992c6dcbccd508a"
+      },
+      "judgments": [
+        {
+          "id": "emergency-spares-P01",
+          "label": "not_established",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "EUR 12,001 does not trigger director approval under the amount rule. However, only that rule is stated to be complete; the sources do not establish whether another approval ground applies. The unqualified requirement is therefore left open."
+        },
+        {
+          "id": "emergency-spares-P02",
+          "label": "supported",
+          "source_units": [
+            "E01"
+          ],
+          "rationale": "E01 explicitly states that the amount rule does not require director approval at or below EUR 15,000. EUR 12,001 falls within that scope."
+        },
+        {
+          "id": "emergency-spares-P03",
+          "label": "contradicted",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "rationale": "The declared-outage exception permits ordering with one quotation and explicitly makes further quotations optional, rather than obligatory."
+        },
+        {
+          "id": "emergency-spares-P04",
+          "label": "contradicted",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "rationale": "Requester self-approval is expressly prohibited, including for emergency requests, and the outage exception does not waive that prohibition."
+        },
+        {
+          "id": "emergency-spares-P05",
+          "label": "supported",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "For a declared outage, E06 requires recording the justification within two calendar days after order issuance, establishing the stated deadline."
+        },
+        {
+          "id": "emergency-spares-P07",
+          "label": "contradicted",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "Within the supplied policy's scope, E06 expressly states that no record storage system is prescribed, contradicting an Oracle-specific storage obligation. This does not prohibit using Oracle."
+        }
+      ]
+    },
+    {
+      "assignment_id": "001-verification-emergency-spares-openai__gpt-6.1-sol",
+      "model": "openai/gpt-6.1-sol",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/001-verification-emergency-spares-openai__gpt-6.1-sol/output.txt",
+        "sha256": "e24d682374ef7ad1dc108747abaa5bdc2c750787bcbea9c4cffdde2971e7cb2e"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/001-verification-emergency-spares-openai__gpt-6.1-sol/response.json",
+        "sha256": "71212e3dc3ea369152c0f5eecd694e88da27ca69d323eea3a684df0c33a27283"
+      },
+      "request": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/001-verification-emergency-spares-openai__gpt-6.1-sol/request.json",
+        "sha256": "33558aa397cf5547ae81b01876bc3cc7f9456b08fd9de3def19fd22a1816302e"
+      },
+      "judgments": [
+        {
+          "id": "emergency-spares-P01",
+          "label": "supported",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "EUR 12,001 exceeds the strict EUR 12,000 threshold, requiring procurement director approval before issuance. The outage exception does not waive that requirement."
+        },
+        {
+          "id": "emergency-spares-P02",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "The amount rule expressly requires director approval above EUR 12,000, and the outage exception preserves that requirement."
+        },
+        {
+          "id": "emergency-spares-P03",
+          "label": "contradicted",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "rationale": "Although ordinary purchases require three quotations, the declared-outage exception permits ordering with one and explicitly makes further quotations optional."
+        },
+        {
+          "id": "emergency-spares-P04",
+          "label": "contradicted",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "rationale": "Requester self-approval is expressly prohibited, including for emergency requests, and the outage exception does not waive the prohibition."
+        },
+        {
+          "id": "emergency-spares-P05",
+          "label": "supported",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "For a declared outage, E06 requires the buyer to record the justification within two calendar days after order issuance, establishing the stated deadline."
+        },
+        {
+          "id": "emergency-spares-P06",
+          "label": "contradicted",
+          "source_units": [
+            "E01"
+          ],
+          "rationale": "E01 expressly provides a complete amount-triggered rule: approval is triggered only above EUR 12,000, not at exactly EUR 12,000. This conclusion concerns E01's amount trigger, not possible approval requirements on other grounds."
+        },
+        {
+          "id": "emergency-spares-P07",
+          "label": "not_established",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 establishes the recording duty but says the policy does not prescribe a storage system. An Oracle-specific implementation requirement is not established; no broader, complete set of storage requirements is supplied."
+        },
+        {
+          "id": "emergency-spares-P08",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "Above EUR 12,000, procurement director approval is required and remains required for outage orders. Substituting the buyer's approval would eliminate that expressly required approval; this does not address any additional buyer approval."
+        }
+      ]
+    },
+    {
+      "assignment_id": "057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon",
+      "model": "google/gemini-4-argon",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon/output.txt",
+        "sha256": "6ea37585cd42f414893836afc6e1c0c2d164b516223eca0fbf5a4a2cc533f66a"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon/response.json",
+        "sha256": "6ff25204473fbfd46536404bc8e5a868820685bb47fee4e69fea4245c0968176"
+      },
+      "request": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon/request.json",
+        "sha256": "e05772a4d662e0168d10522d22e4415a42666c7eee72db6b0e1c65c23f04eea2"
+      },
+      "judgments": [
+        {
+          "id": "emergency-spares-P01",
+          "label": "contradicted",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "E01 states the complete amount-triggered approval rule, under which procurement director approval is required only when a purchase exceeds EUR 15,000, and explicitly states that at or below EUR 15,000 the amount rule does not require director approval. E05 adds no lower threshold for outage orders. Since EUR 12,001 does not exceed EUR 15,000, requiring director approval is contradicted under the stated complete amount rule."
+        },
+        {
+          "id": "emergency-spares-P02",
+          "label": "supported",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "rationale": "E01 explicitly states that at or below EUR 15,000, the amount-triggered approval rule does not require procurement director approval, and E05 only preserves director approval above EUR 15,000 for outage orders. Because EUR 12,001 is below EUR 15,000, the statement is entailed."
+        },
+        {
+          "id": "emergency-spares-P03",
+          "label": "contradicted",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "rationale": "Although E03 requires three quotations for ordinary purchases, E04 explicitly establishes an exception for a declared plant outage where the buyer may order with one quotation and obtaining further quotations is optional, contradicting an obligation to obtain three quotations."
+        },
+        {
+          "id": "emergency-spares-P04",
+          "label": "contradicted",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "rationale": "E02 explicitly prohibits a requester from approving their own request, including emergency requests, and E05 confirms that the plant-outage exception does not waive the requester self-approval prohibition."
+        },
+        {
+          "id": "emergency-spares-P05",
+          "label": "supported",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 explicitly states that for a declared outage, the buyer must record the justification within two calendar days after order issuance, which entails recording it no later than two calendar days after issuance."
+        },
+        {
+          "id": "emergency-spares-P07",
+          "label": "not_established",
+          "source_units": [
+            "E06"
+          ],
+          "rationale": "E06 explicitly states that the policy does not prescribe the record storage system, and no source unit mentions the Oracle portal. Whether the buyer must use the Oracle portal is therefore left open and not established by the source documents."
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "frozen_keys_changed": false,
+    "counts_changed": false,
+    "retroactive_exclusions_added": false,
+    "majority_vote_used_as_gold": false
+  },
+  "interpretation_limit": "Agreement or disagreement with proposed metamorphic relations is an internal consistency observation, not independently validated correctness or a model ranking."
+}

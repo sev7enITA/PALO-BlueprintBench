@@ -1,0 +1,51 @@
+{
+  "id": "016-workflow-bank-change-google__gemini-4-argon",
+  "task_id": "workflow-bank-change",
+  "model": "google/gemini-4-argon",
+  "repetition": 1,
+  "pinned_provider": "google-vertex/us",
+  "started_at": "2026-11-11T19:17:35.026282+00:00",
+  "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "c94193e54492de13d43fe71c7a5300c008d3510eabf286a35151ddd5c54916f7",
+  "reserved_usd": 0.42248118000000007,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0881606,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "2ec5dc4a132995a7ac93a326a135a628a4d8c4bafd41265b0ac6ea45fc6ccb85",
+  "provider_request_id": "gen-1794424655-KzIAnWwkowVLCRGOF8rE",
+  "returned_model": "google/gemini-4-argon",
+  "returned_provider": "Google",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 2398,
+    "completion_tokens": 7535,
+    "total_tokens": 9933,
+    "cost": 0.0881606,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0881606,
+      "upstream_inference_prompt_cost": 0.0052756,
+      "upstream_inference_completions_cost": 0.082885
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5729,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "2bcaaac70310dc8278ce4e24e6103d248b06e43550012374bdc37605c10c4bed",
+  "elapsed_seconds": 109.32855054100219,
+  "finished_at": "2026-11-11T19:19:24.355946+00:00"
+}

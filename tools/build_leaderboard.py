@@ -90,7 +90,7 @@ def dataset_graph(data,url):
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
             'hasPart':[{'@id':internal_id},{'@id':historical_id}],
-            'version':publication()['content_revision'],'relatedLink':DIAGNOSTICS,'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
+            'version':publication()['content_revision'],'relatedLink':[DIAGNOSTICS,SITE+'PALO_BlueprintBench_NextCycle.html'],'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
            {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([
@@ -163,7 +163,7 @@ def dataset_graph(data,url):
     if url == BOARD:
         graph[2]['hasPart'].append({'@id':workspace_id})
     else:
-        graph[2]['relatedLink'] = [BOARD+'#workspace', DIAGNOSTICS]
+        graph[2]['relatedLink'] = [BOARD+'#workspace', DIAGNOSTICS,SITE+'PALO_BlueprintBench_NextCycle.html']
     if url == OVERVIEW:
         references = read(ROOT/'docs/benchmark-references.json')
         selected = [r for r in references['entries'] if r.get('review_group') == 'visibility-expansion-20261111']

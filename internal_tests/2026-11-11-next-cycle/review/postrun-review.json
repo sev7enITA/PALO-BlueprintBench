@@ -1,0 +1,1446 @@
+{
+  "status": "completed_internal_automated_review",
+  "observed_at": "2026-11-11T19:49:15.002777+00:00",
+  "reviewer_role": "separate coding-agent task within PALO development; not an external human or independent validator",
+  "qualified": false,
+  "paid_review_calls": 0,
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "analysis_sha256": "2bdd2d7921aae74601bf4717abb8dfecfb635072ca107aa7671adc1cee03d035",
+  "budget_sha256": "363ea412f972b89ef5f91320d603f6d83159d401316dc2e917897c6c1b7ce0c7",
+  "integrity_scope": {
+    "assigned_requests": 60,
+    "completed_receipts_checked": 60,
+    "orphan_requests": 0,
+    "source_and_request_hashes_verified": true,
+    "original_response_and_extracted_output_hashes_verified": true,
+    "frozen_exact_request_replay_verified": true,
+    "provider_pin_and_identity_verified": true,
+    "assessment_key_leakage_absent": true,
+    "costs_replayed_from_usage": true,
+    "fixed_denominators_and_p05_exclusion_verified": true,
+    "all_analysis_rows_and_aggregates_replayed": true,
+    "all_metamorphic_pairs_replayed": true,
+    "all_workflow_approval_boundaries_verified": true
+  },
+  "semantic_review_scope": {
+    "blueprint_component_summaries_inspected": 18,
+    "one_transition_spot_checked_per_blueprint": 18,
+    "all_reported_draft_disagreements_inspected": true,
+    "full_semantic_adjudication": false,
+    "executable_process_verification": false,
+    "independent_human_review": false
+  },
+  "results": {
+    "transport_completed": 60,
+    "structurally_valid_responses": 59,
+    "workflow_exports": 18,
+    "structurally_valid_workflow_drafts": 17,
+    "unusable_workflow_drafts": 1,
+    "paired_metamorphic_groups": 21,
+    "assigned_metamorphic_pairs": 162,
+    "unscored_metamorphic_pairs": 3,
+    "satisfied_metamorphic_relations": 156,
+    "violated_metamorphic_relations": 3
+  },
+  "budget": {
+    "status": "completed",
+    "blocker": null,
+    "assigned_calls": 60,
+    "recorded_calls": 60,
+    "not_run": 0,
+    "known_campaign_cost_usd": 2.5539187,
+    "provider_reported_cost_usd": 2.5539187,
+    "unknown_costs": 0,
+    "unknown_cost_reserve_usd": 0,
+    "previous_unknown_cost_reserve_usd": 0.481264729,
+    "account_usage_before_usd": 18.546102922,
+    "account_usage_after_usd": 21.044910422,
+    "conservative_cumulative_committed_usd": 21.581286351,
+    "cumulative_ceiling_usd": 40,
+    "campaign_ceiling_usd": 12,
+    "authorised_total_usd": 40,
+    "account_usage_usd": 21.044910422,
+    "previous_unresolved_reserve_usd": 0.481264729,
+    "current_unknown_reserve_usd": 0,
+    "campaign_known_usd": 2.5539187,
+    "conservative_cumulative_bound_usd": 21.581286351,
+    "remaining_authorised_headroom_usd": 18.418713649,
+    "budget_compliant": true,
+    "qualified": false,
+    "label": "internal_engineering_feasibility",
+    "updated_at": "2026-11-11T19:46:51.644476+00:00"
+  },
+  "budget_lag_check": {
+    "baseline_plus_received_usage": 21.100021622,
+    "provider_account_snapshot": 21.044910422,
+    "snapshot_lag_usd": 0.05511119999999892,
+    "accounting_rule": "max(provider account snapshot, baseline plus observed campaign costs), plus previous unknown-cost reserve",
+    "safe_conservative_bound_usd": 21.581286351
+  },
+  "tests": {
+    "final_archive_and_boundary_suite": 4,
+    "passed": 4,
+    "command": "python -m unittest discover -s tools -p test_next_cycle_evidence.py -v"
+  },
+  "findings": [
+    {
+      "id": "workflow-dangling-predicate-001",
+      "assignment_id": "004-workflow-emergency-spares-anthropic__claude-opus-5.5",
+      "classification": "model_output_contract_defect",
+      "details": "scenario_decisions[1] references P2_three_quotations_ordinary_ref_none, absent from declared predicates; the declared name P2_three_quotes_ordinary differs. The validator correctly rejects the entire response without repair. Three workflow decisions remain assigned and unassessed.",
+      "action": "Preserved raw response and unusable_model_draft export; no repair, relabeling or retry."
+    },
+    {
+      "id": "draft-scope-disagreements-001",
+      "classification": "requires_adjudication_not_established_model_error",
+      "details": "OpenAI and Anthropic counterfactual P01 rationales distinguish a complete amount-triggered approval rule from unknown approval grounds. Anthropic bank-change P07 distinguishes descriptive records from normative must. These are observed draft-label/scope disagreements requiring adjudication, not independently established semantic errors.",
+      "action": "Keep frozen keys and observable disagreements; adjudicate in a future revision without changing this campaign."
+    },
+    {
+      "id": "workflow-coverage-boundary-001",
+      "classification": "scope_limit",
+      "details": "All 18 exports contain entities, fields, predicates, transitions and concrete decisions, but guards remain declarative text. No executable graph traversal or Workbench application end-to-end execution was performed. The emergency task does not establish full issuance eligibility.",
+      "action": "All exports remain business_approval_required true, business_approved false, qualified false."
+    }
+  ],
+  "receipts": [
+    {
+      "id": "001-verification-emergency-spares-openai__gpt-6.1-sol",
+      "record_sha256": "9fce5ddda55d3f9bcd4fd70d86c97d2b06e37bb15bf760e1cf4315e0a8324bbb",
+      "request_sha256": "33558aa397cf5547ae81b01876bc3cc7f9456b08fd9de3def19fd22a1816302e",
+      "response_sha256": "71212e3dc3ea369152c0f5eecd694e88da27ca69d323eea3a684df0c33a27283",
+      "output_sha256": "e24d682374ef7ad1dc108747abaa5bdc2c750787bcbea9c4cffdde2971e7cb2e",
+      "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.027046,
+      "reserved_usd": 0.3834627500000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "002-verification-emergency-spares-anthropic__claude-opus-5.5",
+      "record_sha256": "cbbfb22a7d2d4957211ec53fdfaf0c6b02dc053e1f73027d7926452b1aae375f",
+      "request_sha256": "4d48d121c2aa3e336460e6282be6ed100d4e2ee86aaf761526a7fd5eeef5df28",
+      "response_sha256": "72c4421188b1691ca5b289d5fd24ae9c985b0ff64014b348a4ecb04a3146c66f",
+      "output_sha256": "3c59f174623d83fd8e0f1075f569633c2125811b6242e76f63b6eb5bc72af0e9",
+      "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.030264,
+      "reserved_usd": 0.7946312000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "003-verification-emergency-spares-google__gemini-4-argon",
+      "record_sha256": "c2f21f4afff5caa16b661c1e8f63779bd016817eca2040133b975112bc272c07",
+      "request_sha256": "527bcc38a63fb411b46a4a67b10ad3625b181514ca5b732f238d57eaf29ffdf7",
+      "response_sha256": "8d4a32407eae589fd2025ba31b45df4e4720210746133d489e2b5412495db71c",
+      "output_sha256": "507b9291c131e93d316049033bea92b80c42c0162d5ab88f006907381e83c8cf",
+      "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0505934,
+      "reserved_usd": 0.41677724000000005,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "004-workflow-emergency-spares-anthropic__claude-opus-5.5",
+      "record_sha256": "87cc900658b4f49e0d12d4e927783f39ed1f6dafbc862136236b323e91f0f487",
+      "request_sha256": "6dc3c9ec37cfe9f0a050ae537fa1e3ac68069c276656b906e93b92f8bfba0821",
+      "response_sha256": "05ee14df09f9dcf76fcae3f08fe720366940a7539e9d582b0f79a98d292c8788",
+      "output_sha256": "636fdeded0a8eb193948f9cca0edaa59485a39daf0d338f0d8ee886f439e1e86",
+      "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.077516,
+      "reserved_usd": 0.8153376000000002,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "005-workflow-emergency-spares-google__gemini-4-argon",
+      "record_sha256": "2e7a355f45df5f8d549bec3e7a6b8fa441b5af24bbcbb5ab6539c02e14741281",
+      "request_sha256": "72550f5edf11d48e024872d85bd088d2b6d7e6388e6857ff4eaa7515a7fd3e06",
+      "response_sha256": "d5439841f432a158a3e1e9e33ef4b51f157bee59b748e2e6cabaf4479828ecd6",
+      "output_sha256": "80c4d913b31665bf8fd55ca2eaa93bf940360bd89c27387333a48e5918aaf509",
+      "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0972268,
+      "reserved_usd": 0.4224715,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "006-workflow-emergency-spares-openai__gpt-6.1-sol",
+      "record_sha256": "2270d85ccfbe33020ac53bf935d0e96e54f07e1fa4629484ca4b40fb37e95dbb",
+      "request_sha256": "29e5585a5866bb8ce24fc246b103ddc367c3f18b30ac3b329298f28c5fb7a412",
+      "response_sha256": "6ed120817d81d7a7aff0fe64bb397720f134caca3c6552e9e47dbed1ad2be19a",
+      "output_sha256": "ee8d847b34b43dd43f862af008f55686c938b2325e854525ea86dd169b822f77",
+      "source_packet_sha256": "f0bcf257be46db6c672f39381dcf4110d2bcc7cfc6591c1a157ab4189c679a8e",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0471885,
+      "reserved_usd": 0.3899335000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "007-verification-framework-calloffs-google__gemini-4-argon",
+      "record_sha256": "2fd2cbec7f7dbd1b1efadaff5edd8f2ad43b1a090e39dcbf644662b979eb55da",
+      "request_sha256": "578e97c16a92b948f0c1d5cee599ecc085db323949ae66fb5dd9638de264ed8f",
+      "response_sha256": "3562210459a9045bd416092778d2fbc9d9fb8dfe3bc316a5aaa275e26ef2c155",
+      "output_sha256": "8b6d9d57fbc905320545e17b2a8065ff11eb481eb35386124374ec7884ba5044",
+      "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0254254,
+      "reserved_usd": 0.41633438,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "008-verification-framework-calloffs-openai__gpt-6.1-sol",
+      "record_sha256": "70b8e74d20647610934d9f8bd79eeaee9a778d2b7f2bc125aba1490a9592d02f",
+      "request_sha256": "42da5bea228d3e9a8766d1be315f9dd37769124ae4380081d437b4256d055198",
+      "response_sha256": "918eda34dacfcad46cbc5fd1f9146ec51c4068439b29bfe6804246ee1784da32",
+      "output_sha256": "7c69f38fb09c1efe4665d86284c79b678532dec2781e2510cfddbc33df1c2018",
+      "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.012054,
+      "reserved_usd": 0.38295950000000006,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "009-verification-framework-calloffs-anthropic__claude-opus-5.5",
+      "record_sha256": "073ab6cc57fc0c4e6f4d256f7623169d5a807911068296c004cadb05ef228245",
+      "request_sha256": "e6c01c5a3d941bfb62846f9dca42b3a6ddc995a80719cfd027c7db8e2b814d00",
+      "response_sha256": "8db9bb9e519e7a1978b6b183a23bc84d44b772f3fe336186c4da6251239327a7",
+      "output_sha256": "392b11ae3bd54e9a10fde0237a40cb71d05df99ca740ad04e7dbed6340551857",
+      "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.03092,
+      "reserved_usd": 0.7930208000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "010-workflow-framework-calloffs-openai__gpt-6.1-sol",
+      "record_sha256": "c0f1032fc042ca4f64230d44d40fececd3b9117c69dcf7b1c3e3cda548391d7c",
+      "request_sha256": "2785baa11f7eb05b90263bf6702b9db176979db7a302ee6c41e41e277c4047b0",
+      "response_sha256": "6386b77cfd604eeb27c5e4a1a8c745b0e5303811ded79b7910af989d30bd96e8",
+      "output_sha256": "b8d971426f85731071a4168c94a7079873752e25fbe81f690202c31c5bb81386",
+      "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.037356,
+      "reserved_usd": 0.3895237500000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "011-workflow-framework-calloffs-anthropic__claude-opus-5.5",
+      "record_sha256": "89ecddad82d34bbe3d14a5516d3da7cf2e831934eaddf18b9573413fca38b478",
+      "request_sha256": "915f989b6336aaf67ab0971fa552ddb07e7d442dc377b29d2c5b60711d6ebe96",
+      "response_sha256": "24582c14af9774885e8a9303598134a320c0e0e8e2162e751c2cad163eab2562",
+      "output_sha256": "5f4cb7471acb7dab980d5e92ead891a77d8106c7fa9b873d992539a84e646f48",
+      "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.070508,
+      "reserved_usd": 0.8140264,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "012-workflow-framework-calloffs-google__gemini-4-argon",
+      "record_sha256": "cf10971aacbc8f1ea22c19763b90c0e45c723497708816821508c904f9751f30",
+      "request_sha256": "a94ae75f39ba3f61b4e00a478e842fb19b89275a6b55b92b3cff83104a9f318e",
+      "response_sha256": "86c231a7516e35052856a576751cb91276a2e1ddecfae321db3273ef565badff",
+      "output_sha256": "22970493bf508fdf1691418d422486ab7b0cee287986b25825098ddcb6397f20",
+      "source_packet_sha256": "751ea07a2ac36c3216d4c7580a58b15b73e74121adc4fd9bcd7e33ee12a7e552",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0623304,
+      "reserved_usd": 0.42211092000000006,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "013-verification-bank-change-anthropic__claude-opus-5.5",
+      "record_sha256": "31704d370874a874eb31d62f31cabb24ff061ded7acf85a40cb9db83747f5297",
+      "request_sha256": "8a9240977fc5b0c43fe6bb13df2486ac26019a470be8fc7a43bfc78f291b5c48",
+      "response_sha256": "717866531929700cc57b0c39bb6cf912cf3f791bc945a4f851be114fcbd004e8",
+      "output_sha256": "4022815c02bfba81d544f1384daadfec87e43172ea86dc29276ca6adcdc34703",
+      "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.030216,
+      "reserved_usd": 0.7922552000000002,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "014-verification-bank-change-google__gemini-4-argon",
+      "record_sha256": "f610b524799062a8d9d14cac8c0b6f8e6e262c699befcf93b5c85d290c496579",
+      "request_sha256": "aca928cd1d973c4b0cd7135173a0688f4851be57710cf16b8577f73d51220d0c",
+      "response_sha256": "ac8fa8acdf7b0b580ae1fcffcc7665c3e63c14d38426eccffb66132cf58edc1c",
+      "output_sha256": "8a1793d6d570b1fe2da4abd02d1e60e7d3d3201e6070cf9e961eaf9ce0a7f410",
+      "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.1328558,
+      "reserved_usd": 0.41612384,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "015-verification-bank-change-openai__gpt-6.1-sol",
+      "record_sha256": "017ecc4c696a680a274c62c81754fb90b32a4c79d7c80a854000b1d0f1f65b24",
+      "request_sha256": "6b77b25260d68981945dc01e5a87c37bea60d836c86072f0a3a27b7062a9c50d",
+      "response_sha256": "b07a9459232d48a8427150cf8f0ae6989293a22e015f9d11b816dc4670992e1a",
+      "output_sha256": "1574e5b710b2211b130e6ba11e1c3c2c3a4dd6aad1345223bb87e5c9bcfd3cef",
+      "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.014428,
+      "reserved_usd": 0.3827202500000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "016-workflow-bank-change-google__gemini-4-argon",
+      "record_sha256": "fd2b033496daa5039310a2b41d7ad9bfef9d5321ef3b0f74017c71bd1a9d72f2",
+      "request_sha256": "c94193e54492de13d43fe71c7a5300c008d3510eabf286a35151ddd5c54916f7",
+      "response_sha256": "2ec5dc4a132995a7ac93a326a135a628a4d8c4bafd41265b0ac6ea45fc6ccb85",
+      "output_sha256": "2bcaaac70310dc8278ce4e24e6103d248b06e43550012374bdc37605c10c4bed",
+      "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0881606,
+      "reserved_usd": 0.42248118000000007,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "017-workflow-bank-change-openai__gpt-6.1-sol",
+      "record_sha256": "e56450485f3345616a813a656bf7ce877bfc1e1cd10f4104da13ad4ed3d16e5a",
+      "request_sha256": "8da99577e8d4684da3e480368d862c05827dd9fdd8cf1f34a7317cb635e6f653",
+      "response_sha256": "b2f137063a2da36bcf18995a19d11f2dd17f62b62e1e6b8718fdc1e165aa18ba",
+      "output_sha256": "67889d494ff824cfe22234f138a0ad1e4b2720a49b95a612f8491207f64fe86c",
+      "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.050061,
+      "reserved_usd": 0.3899445,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "018-workflow-bank-change-anthropic__claude-opus-5.5",
+      "record_sha256": "c6ae69596595e0ec9b7524100d93b1ef94658972ef1bf5469d7a77bddd0ade2f",
+      "request_sha256": "f6d2b1cde414275347f5007b2c68b558ca926dce0a969414f5192c23a883c840",
+      "response_sha256": "78fdd42fb1f26dfd14614d9fd7910e05ef0d33b9c0a6fb9375987befe95ed55b",
+      "output_sha256": "fda072b59703010e00e26767e7c5d802af4a364e99aab00751461224d728d31f",
+      "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.079628,
+      "reserved_usd": 0.8153728000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "019-verification-policy-transition-openai__gpt-6.1-sol",
+      "record_sha256": "2695c005700a16b185090b72c0bbb18c618c4b39f2a0efc89a1f40c5135c0ed7",
+      "request_sha256": "af33943738c3db83f8dba95af58411095795c66d73d08b6b8a5f326ada4666eb",
+      "response_sha256": "705cb1a1f97ea3ddada41ddbd6d0808f097ff9ffe5d3690f2eb49308895af81f",
+      "output_sha256": "2303f99ef9f4d17cbe81705bab56eae5089e4e81af60ec6460e96fda275443ea",
+      "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0105,
+      "reserved_usd": 0.38385875,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "020-verification-policy-transition-anthropic__claude-opus-5.5",
+      "record_sha256": "e2a7d388dba6a978930e3cd26f5a13339b777c78ebc7da99bc8c212a9e1193b2",
+      "request_sha256": "c2c586d3d1ad631a0989a287ab41dd9f2ab236d2f2ae76614274643fff5104ec",
+      "response_sha256": "9c0f6b4070c553fd468500d1dc98a1a43a76ac181bba7d5dc1564d8eafa33431",
+      "output_sha256": "9fbfee59e970dcd6836b2a531bd5b6dbba123e72ebb2722a51e3bf594c49450f",
+      "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.036156,
+      "reserved_usd": 0.7958984000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "021-verification-policy-transition-google__gemini-4-argon",
+      "record_sha256": "4e9f049f3612c873a99d811c4be444aaedefd14e38e4f14029c959076096ea38",
+      "request_sha256": "ca9c95bbc98ab0403498061dac7dacb3a08491ee7720c4e7e83c4bfb00be7f15",
+      "response_sha256": "04f89713056eaee09d276959ac235845d51d327e9c8cdba89c4fdb6b19ffd540",
+      "output_sha256": "094477a4eab44c31b229ec8121f1c1799a137c6ad37202708cd116f5ec64aba2",
+      "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.1240602,
+      "reserved_usd": 0.41712572000000003,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "022-workflow-policy-transition-anthropic__claude-opus-5.5",
+      "record_sha256": "9616f76cea63c3f0b9abb65bf79d4dee0fb4d3c1c00acb232a9657a320ee2500",
+      "request_sha256": "002542a79cd24517d33a1fec90b9059cfe2c4a4025eab0afa1d7b3e7735fbe23",
+      "response_sha256": "11decfbb9e6887b05ac18d47134ba5934257ed6ba766681caa5fd162c640289e",
+      "output_sha256": "edf6b04008d0636185187dcdb91ed6823a378f21958908e5d3e56daf605f6caf",
+      "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.087056,
+      "reserved_usd": 0.8154960000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "023-workflow-policy-transition-google__gemini-4-argon",
+      "record_sha256": "0a278599d2fabb84cb6728e50e2539ee345296d622bc612769365383d0be6671",
+      "request_sha256": "6964e4ed17eb4098d9dfe34bb85dce0143a39ac06bffce3a11e9568753cdd3a7",
+      "response_sha256": "3180635a811ac1e650ebdbd8a43a03ce361871306efc2ddee743178222bb3b4f",
+      "output_sha256": "0d7574fa66cd49ea24363c050b2a135d0f9ebff0013a516cff87c6a7f8efd21f",
+      "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0811954,
+      "reserved_usd": 0.42251506000000005,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "024-workflow-policy-transition-openai__gpt-6.1-sol",
+      "record_sha256": "040265de0ef4a9da5435724b984478abcd48bb2cefe134340479f8fb0a33fa81",
+      "request_sha256": "fd1eba4eff1c6c5466e5c9b92c94b587ef13e354e0c0f98cec8c95d84dc485eb",
+      "response_sha256": "c56fa4687e3e242dfc8f85a595ff600815f6d74add19a8c09ef2f7a677efe328",
+      "output_sha256": "e4808775a58070f4ebfa5fc1c22bd524f79e9e6a58770085eac36e24b40c0f63",
+      "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.036271,
+      "reserved_usd": 0.389983,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "025-verification-currency-approval-google__gemini-4-argon",
+      "record_sha256": "37ad4e243b37433fa21db528dfc9d8f8a1025bd188c4f03d9b0a889ba88e50a7",
+      "request_sha256": "a00817a4e773060a051c61ea3d4999c6a1427416007140e6d097627b5586522d",
+      "response_sha256": "cf69e033caa453d7a96799d3a271a433bdb4f3c84afdbd89c49447b0ac2fe572",
+      "output_sha256": "8aa76b6a98db0ed7d2b4b02b2024fc1029664b70ef540d9041a9aeb56d8fa085",
+      "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0207548,
+      "reserved_usd": 0.41601736,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "026-verification-currency-approval-openai__gpt-6.1-sol",
+      "record_sha256": "80c0ccdea38ca0dd6c2d33e58cf2a2c5145c507e6e9e2454344fae8cf25d9891",
+      "request_sha256": "cc8758b7635a8e219b376a1517d1e2a8b66a0f2fb4457f792ea334642e9eb92f",
+      "response_sha256": "15376a47fd4f96b9d9abee03c2cb0c2ba6e01ca9d8b4a068722266f6bf31c02a",
+      "output_sha256": "cfc52224f49cd43abad674b9e12710e0e4c058dd625658822aefd3512b8e2196",
+      "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.009154,
+      "reserved_usd": 0.38259925000000006,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "027-verification-currency-approval-anthropic__claude-opus-5.5",
+      "record_sha256": "15f5f23251221f60e2241f1677b3bf52c14e9e33e4d75d13af3fb60c1c036c9e",
+      "request_sha256": "874c785d8aa6077517ffa289ab8817718e28daf1d42668af4a8592ee15e8dac9",
+      "response_sha256": "d8828b5c50381929db7d3e389d08b24e0c923fa8024c2959edfc13da6684f63b",
+      "output_sha256": "e04fe1c9eaea49dc4109bce271d6c8a50bbdbc97accd7010ecc553617dbaed21",
+      "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.023916,
+      "reserved_usd": 0.7918680000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "028-workflow-currency-approval-openai__gpt-6.1-sol",
+      "record_sha256": "112636924bb8bec65d92857e375f2c435c77e3300ca2893a9a7b4aaa047b5220",
+      "request_sha256": "894edc9b7e3ea58c5d5ea16423a99c3c8266dc584eb0a32adece1e9b50250210",
+      "response_sha256": "8c375f5536a672f4df354aa314e303e784327aff7f7d1b98c2a4cf659132dc15",
+      "output_sha256": "b120a3761e454daf85b0b10937150a14e609ced248e3b6d461143ed8177492a5",
+      "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.032411,
+      "reserved_usd": 0.3896227500000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "029-workflow-currency-approval-anthropic__claude-opus-5.5",
+      "record_sha256": "405f9ab069ba618d0925b390a294522e52faaa4e9fa7fabecd7c2af65e51ee68",
+      "request_sha256": "b6cc76ee7ebc108cedb5f4ae6d7a26087f6fa7f14c6839b106a3bd9a48ef8085",
+      "response_sha256": "ab2178bc67edb20238675cb992cc583b4465061f303f2459545b1c752bded40a",
+      "output_sha256": "c1f0589a6922a05417b1407e2871d8c19a550f2f0decef4495f751ec6085d884",
+      "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.069848,
+      "reserved_usd": 0.8143432000000002,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "030-workflow-currency-approval-google__gemini-4-argon",
+      "record_sha256": "78b7d7367631816891368a3565d160987d21a5371d41920340a7263a44b3e308",
+      "request_sha256": "d295398f2eae0a1e444a369e64913da8310d0cee0c76ba232a497ef1c470353c",
+      "response_sha256": "3f46c11841310f2576b3f95c691ff0eefa17c746a431a670b26dbeda921b3f5a",
+      "output_sha256": "701598f926d29a4daaa2e708bccdf77ea6186dc4f0cde4ee3d7365546e901fa2",
+      "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0616484,
+      "reserved_usd": 0.42219804000000005,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "031-verification-service-acceptance-anthropic__claude-opus-5.5",
+      "record_sha256": "0dd737586f79daf40bb176fe57e4bd513afd9b96c58854913909f79f1ae37969",
+      "request_sha256": "4af6855d9045ba1664b96628b76883ab25f679a9ddb2ebdb7e03e76d44192854",
+      "response_sha256": "272f1e9f62a07276e38198deac23f5fa3297e9067495b287a9eab66b46d55771",
+      "output_sha256": "0d4ee8d3f5b9016406b53c756f0d1d14768014b1da3e0be1e8da7a4e42e5bc2a",
+      "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.019928,
+      "reserved_usd": 0.7927568,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "032-verification-service-acceptance-google__gemini-4-argon",
+      "record_sha256": "d92cf5d28022e2b595e86539a3ec3bfcae3965fc363b8018c2347df53ffb9d73",
+      "request_sha256": "78cf87347df66a357d33eb5cbd9d3ef8459523efbd0458749f495126a1a8b66b",
+      "response_sha256": "60e84a44b7138d9dda5bbae17470922411351981ea11b216613fd3bd2cc67cf5",
+      "output_sha256": "8e005ad00c654df8a2248a64fc8e23c4af4067c0cf6a82fe412c74e8fc66c20f",
+      "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0170566,
+      "reserved_usd": 0.41626178,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "033-verification-service-acceptance-openai__gpt-6.1-sol",
+      "record_sha256": "da1981bb0db46c0217e474ca805eefa00e5b143ccecbcc302bfb39eacb967fcc",
+      "request_sha256": "e70914eb01c118112be3c7d9d990dc2f50a5611b84d562d8694ba9f085a037c8",
+      "response_sha256": "ebfe87c19fc1979491e1ec79b8eb5656830d0d54b0c043680e998e90a3b221ab",
+      "output_sha256": "61a2aea8968dd2e1e04f6a8d19bf7dbc8cc7af5e997f379859db39fecf7426d1",
+      "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.008006,
+      "reserved_usd": 0.3828770000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "034-workflow-service-acceptance-google__gemini-4-argon",
+      "record_sha256": "87ee2108c783987cb72462818abe0340bec3653da68908855db86ba9b8e89e26",
+      "request_sha256": "1078d748a048ead6abf1f9cba3ffb60aa597c50de24bd3dc0b1f1c9f24111aee",
+      "response_sha256": "adbbd0cca5e99ec9cf1747b24cda5e5e063dce966e4525149928416bbc31842b",
+      "output_sha256": "4742e49c675b7ae3f4ef9056da49254378f57aacdb812ed72fd8dcaed16e2558",
+      "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0792242,
+      "reserved_usd": 0.42244004,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "035-workflow-service-acceptance-openai__gpt-6.1-sol",
+      "record_sha256": "c44c7620c1429e81d52153be4ed8bc0d4f1ababcd09d6ac75e3032f24d09b51a",
+      "request_sha256": "93a3696dec3ea4ae4602ae6d5da70126e0b2da8d49a27aa40b795c045b9775b4",
+      "response_sha256": "0b6e8ac4670ef38ce65da9853c15124141ffe99b88541f45e18d8afa73bbf953",
+      "output_sha256": "7fdd8f4e36c3e6926c6c2ef1811876d86c6d6520ab067543f83d5f9512a3f700",
+      "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.043276,
+      "reserved_usd": 0.38989775000000004,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "036-workflow-service-acceptance-anthropic__claude-opus-5.5",
+      "record_sha256": "c45baccd445f1737d84225ce2b1607183b32727c3d816789d3d2981425b1efef",
+      "request_sha256": "ebd0472b2e1cbc7a3e76f655502eb94f665c4b514d5a8edbd141c6c5351a3250",
+      "response_sha256": "73c6869c4e74588bb3352ce3982ec95101a0aba979d1ef74ef6db1a75338dcff",
+      "output_sha256": "bdbdba8b5da8b66b9ff3ae87e27f7bcc97eb538728a55370d65d8fc8bd906e2a",
+      "source_packet_sha256": "75fb2c7d4046d8bbac8127134d7a02852b82755c415cf48d919ed78001eb8ac8",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.09644,
+      "reserved_usd": 0.8152232,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "037-metamorphic-emergency-spares-document-order-openai__gpt-6.1-sol",
+      "record_sha256": "8acaf082e3a729124b71c2b00024737b1aa04cbc9ff3e5c7ae97998ac02f09af",
+      "request_sha256": "35092ac0b12a4afb9df368904cc50165f2c609f8861c1c3c4bddc55d2194715a",
+      "response_sha256": "d45c4e465ed8c5d706d152579f39945650b4e6d1277160531cb71eda1fbccb6f",
+      "output_sha256": "8da41983b3e68c831c6950495f182e8492e4dcaf590e01f36061a787c870f352",
+      "source_packet_sha256": "c9e261e58cd7c55537985d21b47f0d055383c3ef0209a128bd88ef9c82bca35c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.010218,
+      "reserved_usd": 0.3834600000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "038-metamorphic-emergency-spares-document-order-anthropic__claude-opus-5.5",
+      "record_sha256": "05aed741742476c6105871433b585f36e4683ce0cff3c2968bf938ca3daf5877",
+      "request_sha256": "be87ca0e351430a81977a445df7f8cb865d8ac5b1518bd21e7002cf5ae7bd6ce",
+      "response_sha256": "9c7ba4fa66c096fa9784030aa758e081b982cc33af87bbf476b8a835508b621a",
+      "output_sha256": "4a7df4fcd0c1742cb05a034c4596346b66c5c1904ac5e7f08bea523a0127793d",
+      "source_packet_sha256": "c9e261e58cd7c55537985d21b47f0d055383c3ef0209a128bd88ef9c82bca35c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.027204,
+      "reserved_usd": 0.7946224000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "039-metamorphic-emergency-spares-document-order-google__gemini-4-argon",
+      "record_sha256": "1ed2b55c8fc9849818cc8a4e241afc4a14c50796f5af973c8950e30ceace3ea9",
+      "request_sha256": "b4afe040e02e6b85c2eb9a43af23b5b41e3728ad686cf7ed79cde1aed77e13d8",
+      "response_sha256": "c67f3abbdef2021f5ceed76308638b9c19d83341359892cbdd0d1c078b5ee0ac",
+      "output_sha256": "1157de35b2413d5aba98b15c22f44a215ce8b81bc1fd2edfe96055e0b2760645",
+      "source_packet_sha256": "c9e261e58cd7c55537985d21b47f0d055383c3ef0209a128bd88ef9c82bca35c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0436964,
+      "reserved_usd": 0.41677482000000005,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "040-metamorphic-framework-calloffs-document-order-anthropic__claude-opus-5.5",
+      "record_sha256": "b2d5ae73e8a6d09df95b5243bea21019265822349b3bfa08774265033bae1c56",
+      "request_sha256": "080ebd527ec4bccd3d140dbaccd21eb0adf73cd1a4a98e9d45caf6741c729163",
+      "response_sha256": "a6e6b9106ea174001fd74df5a08f1a6a579a75a4cf3978f8eddea1a67605da0d",
+      "output_sha256": "10d1d6efa35627ad349be6cb22d4e48dfbea004716dadf262acaf8be1f20c5ac",
+      "source_packet_sha256": "e7958d85d8959f3b5a8592e05e998bf64f8a4448fc9b6ebd1179309df45ef84c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.02892,
+      "reserved_usd": 0.793012,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "041-metamorphic-framework-calloffs-document-order-google__gemini-4-argon",
+      "record_sha256": "3d6cb8e4099162c31cf0b37a8ad39a4c8b57ae98d7e9e858d2523d4a90d05079",
+      "request_sha256": "18d7a5b3602aa67b7f85b392cb10f453985a6fe6541650c12a42d5e5a2695a31",
+      "response_sha256": "8df17f114efe10d78ec842be22a17a8524ae6f1cc91a0b3f060764154dd346a5",
+      "output_sha256": "c3373d6773bd71055d29b9b78de2011ae2f66b8aeba03c99118ee12bbabb7932",
+      "source_packet_sha256": "e7958d85d8959f3b5a8592e05e998bf64f8a4448fc9b6ebd1179309df45ef84c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0232254,
+      "reserved_usd": 0.41633196,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "042-metamorphic-framework-calloffs-document-order-openai__gpt-6.1-sol",
+      "record_sha256": "999037726f1aed6fdccd989d07094eb8b7d5994c390ef89d1aab355c12ae6808",
+      "request_sha256": "16e457e9515f296599675150371e6f6c48201aa264e1f9bbaf7b43aee6393aae",
+      "response_sha256": "761b85ebc1637e00c3b81edadf7acbe7937e35c8eba31682e1314714e5fa2478",
+      "output_sha256": "4db18a869cbb7485f2e0623523cd8f0d20937d1ee8ffb7e49febc56cd02e5840",
+      "source_packet_sha256": "e7958d85d8959f3b5a8592e05e998bf64f8a4448fc9b6ebd1179309df45ef84c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.011586,
+      "reserved_usd": 0.38295675000000007,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "043-metamorphic-bank-change-document-order-google__gemini-4-argon",
+      "record_sha256": "d0b7cc7102cd8566a8fac60c5d141f7040699d5c54be769417eeb942272cae6a",
+      "request_sha256": "04e9d43f6bc4d0e3da9ab7a990f5a29e668ddbc1ad724a325a781cd86acc2f19",
+      "response_sha256": "5832daca8802723a862d30a624015ab636645e5fb1c89962540c84887c63cc26",
+      "output_sha256": "83ea1f8cf1047cbf7cbefb73b958da69da147474e347e05d917a933ad7e533a4",
+      "source_packet_sha256": "77552239b5b2f1c7b66c750847e36fcc1a0d86de3ae7ee21ab01062e8c11f490",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.1354078,
+      "reserved_usd": 0.41612142,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "044-metamorphic-bank-change-document-order-openai__gpt-6.1-sol",
+      "record_sha256": "1c328ae482d621cf2f686996247674b56e575a83859bdbb3dae1e9da49521357",
+      "request_sha256": "ac800243cc52d5de90a40abff176e2ac3741ea4a45063af8b6d2545857df2249",
+      "response_sha256": "600352ec1a84a45960fec962483116248bc782cf1d5bb61c425191ef05030db7",
+      "output_sha256": "dc9f15ece7efdb1cbdda81325a8cfe982aa7befc88c3ea013a138b53fe4203ac",
+      "source_packet_sha256": "77552239b5b2f1c7b66c750847e36fcc1a0d86de3ae7ee21ab01062e8c11f490",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.01222,
+      "reserved_usd": 0.3827175000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "045-metamorphic-bank-change-document-order-anthropic__claude-opus-5.5",
+      "record_sha256": "9dd3eb36e2cf62400217157ada778806f82a72d908e1ab073ae1cffb5e35b9d1",
+      "request_sha256": "17b6022522058e80205f09820540b405cf94044eb56df150b0633a5d83b098c1",
+      "response_sha256": "8aeb7ae3f57be3cfd9af8fdbc42fd5456552cedd3c347efd6f5ca1d0d591405f",
+      "output_sha256": "347d2bc1640f807434800bf011c434890fa113b71efe8d18d50dabb904ed70c5",
+      "source_packet_sha256": "77552239b5b2f1c7b66c750847e36fcc1a0d86de3ae7ee21ab01062e8c11f490",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.029896,
+      "reserved_usd": 0.7922464000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "046-metamorphic-policy-transition-document-order-openai__gpt-6.1-sol",
+      "record_sha256": "bd5dc99fd113a0f4573e1f0585dfd0975532bd61605fbb63bda9aff4b577d7d2",
+      "request_sha256": "c99f400bebed48a5b840495a466e979cd34a9d7d2559730c09c6afeb10ab4f7b",
+      "response_sha256": "6441bd3104a159014a6a5bc6d4d07ce440a82b86a0eb8109fdb9d885daecb215",
+      "output_sha256": "4fd063635a41b8aa256198fdb4c46dc97b260bd001c59baef682d0f0f426c073",
+      "source_packet_sha256": "a9cc7637d404676f05a8068ecc5b46205408fb56be36c1be8be8a2a2e1a061dd",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.010602,
+      "reserved_usd": 0.3838560000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "047-metamorphic-policy-transition-document-order-anthropic__claude-opus-5.5",
+      "record_sha256": "f044cbc6672ae308748f48ff34c6e017ff92b6039b492e3e392238476c549f0f",
+      "request_sha256": "c3e5d05142e3d21911271a16a8fa3f11d73eeb6e042ef24b36f508d15b07bde3",
+      "response_sha256": "22414f16f5129d6a37a51e451a6c9620d5e4bcf5b7b9bc8a486dc03ce27eac31",
+      "output_sha256": "d65f83c21f306514c049306a85aa8ed7ddb48642d8d991e83036d010d28e3058",
+      "source_packet_sha256": "a9cc7637d404676f05a8068ecc5b46205408fb56be36c1be8be8a2a2e1a061dd",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.033016,
+      "reserved_usd": 0.7958896000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "048-metamorphic-policy-transition-document-order-google__gemini-4-argon",
+      "record_sha256": "2d901bfa07dc3fb56598cea6d5918efa3d5358d4582ea43709d2cf7fd36a14f6",
+      "request_sha256": "e123dbbf95640c37f34fe93fd894e899ab4cffddb764fbd88525572140a18709",
+      "response_sha256": "f32b52c84462ee2e761cb3ff3188441166c5e64dc04924a455a0226391ef8da1",
+      "output_sha256": "d2b02b2c58313351ca8476bef7fc095d65d87579d143e1a0d9b18ca7d335c721",
+      "source_packet_sha256": "a9cc7637d404676f05a8068ecc5b46205408fb56be36c1be8be8a2a2e1a061dd",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0910382,
+      "reserved_usd": 0.41712330000000003,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "049-metamorphic-currency-approval-document-order-anthropic__claude-opus-5.5",
+      "record_sha256": "94027067d51654292bb84e2791df7c8f66ce1e419d9b433c4fdb4a774b13a011",
+      "request_sha256": "d213f25dc5a1adb72ca9c2e62e2d3e8c819d8ef0793f2160f609c65b75fb5a24",
+      "response_sha256": "ad5f8a316179620a682389a7c4ffa2bcdfa9855dd6f9354d0487f62f30c472be",
+      "output_sha256": "62cd2052cf09a9234591e092a875558f6ce4e058fabdf0a9828832f8237ea830",
+      "source_packet_sha256": "da0e238daeff7cdf9be87e19c19219987745d4bbbadc3bfe90af0fd18e50ce01",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.020176,
+      "reserved_usd": 0.7918592000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "050-metamorphic-currency-approval-document-order-google__gemini-4-argon",
+      "record_sha256": "624cc63be697caf67746f4b00f6545307560c6f6604cf92529bdfe67800dae74",
+      "request_sha256": "85906b0f72601acc1112262fc0488b367fce9b7a42d73b43bc9f9538fd5a3bfc",
+      "response_sha256": "2f8460de462fe4bf9a21e56b71fbf181ee1fe004a87e5e90cdda509635db0224",
+      "output_sha256": "94643b198894cab90bf43efb01202facf82a1130063e64ff5544709b24dd3470",
+      "source_packet_sha256": "da0e238daeff7cdf9be87e19c19219987745d4bbbadc3bfe90af0fd18e50ce01",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0229768,
+      "reserved_usd": 0.41601494000000006,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "051-metamorphic-currency-approval-document-order-openai__gpt-6.1-sol",
+      "record_sha256": "29720b1d53c399a12336c0eef7221360b043039f3f0ea0f11867718e4afa565e",
+      "request_sha256": "519503a15b703335667e7714f12ae4e938f33299b27e2fe1a96056a9945540f6",
+      "response_sha256": "41c54b712fac53b3f96241871c0005036c9588ebf71dab0c057e2f69706728a3",
+      "output_sha256": "c54d85a3a0d7e48b6c05caf82cb20c7a13bf2bb73b64b8a39486077ba32937b2",
+      "source_packet_sha256": "da0e238daeff7cdf9be87e19c19219987745d4bbbadc3bfe90af0fd18e50ce01",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.009006,
+      "reserved_usd": 0.38259650000000006,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "052-metamorphic-service-acceptance-document-order-google__gemini-4-argon",
+      "record_sha256": "6175ca411c9e13e7587f3b8fd4ab4b6a0736dfe76b1a5ed3bad394b5e716f4b8",
+      "request_sha256": "4bb12e3c4f5780df2ec14c7e1c027607d0256f2e1d01e2f8370ca87d56ffe28a",
+      "response_sha256": "61e7eb9f031f831d6fa3bf60cbc02174623aa4a552b76501c5de04b309bd1fc3",
+      "output_sha256": "d3b7c12f9e8ef7bd5cd54b7387ee5075cacef2a8a8886879a685824c1bfc6551",
+      "source_packet_sha256": "51a8b9b36813d98f03f05c324bd85b9e580cdd91e6ec293b45bf0559b9606a95",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0164076,
+      "reserved_usd": 0.4162593600000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "053-metamorphic-service-acceptance-document-order-openai__gpt-6.1-sol",
+      "record_sha256": "a3a2f28260c731471c32f08298eece0456a7ac11c139b1a63f25017b15232f1d",
+      "request_sha256": "f073cd5a76736cc01067ef306a84b31ea04fa96caa9a5e82ab30907c1b0a0b44",
+      "response_sha256": "1f78c0468e1172e1e1aacf6e0735a17887bec9c4f0fea5901e205b0ac02b4894",
+      "output_sha256": "0cf14d3a84d6c7578d16f5510b7dc15cdbbf2ad6a0bc83dc36c4fc41d4d91892",
+      "source_packet_sha256": "51a8b9b36813d98f03f05c324bd85b9e580cdd91e6ec293b45bf0559b9606a95",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.007738,
+      "reserved_usd": 0.3828742500000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "054-metamorphic-service-acceptance-document-order-anthropic__claude-opus-5.5",
+      "record_sha256": "1085e37b87f9bca08dbd7d3a0941af88942bee5e6a0588be5cabcac2d9e033b1",
+      "request_sha256": "8982d14cc22102dc0184808f01c059da55cd42071bc7ef33afe11f807040a3bd",
+      "response_sha256": "6f0245208e4847e341ff7fc41bd6377b586a05750b3c67929a80d1661d14e9cb",
+      "output_sha256": "dcbdbe5339f85a997ff8444cc0a136ecdc8aedc911d77dc2eda337b01b101135",
+      "source_packet_sha256": "51a8b9b36813d98f03f05c324bd85b9e580cdd91e6ec293b45bf0559b9606a95",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.020528,
+      "reserved_usd": 0.7927480000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol",
+      "record_sha256": "d0aca1ccfc7da151625985ee450a0c6c76a997e8b27300607fb960f12b3bc241",
+      "request_sha256": "3f59319c94c872607d63c41465eb9a358741c90e2e74d1637992c6dcbccd508a",
+      "response_sha256": "c31015a77e545f77d2e755cc015a94fe5155479b2010fb3ad510c669d4f43e00",
+      "output_sha256": "eb469e4866e6fc901bfe805c1b8fb2cdb8a4de9958d3e634e9f622f0f8f2fdbe",
+      "source_packet_sha256": "24f326a802035485536c3dde65aa49d7c1e8c634f438405305060cefb091c587",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.015932,
+      "reserved_usd": 0.38253875000000004,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5",
+      "record_sha256": "7c462147dd6ef8e306c3d1282e44c9a6a4e0204df578309f693e3d4708d2e4d1",
+      "request_sha256": "3ed25626bca58873ec8fb855d5c5941c3f38a021c0ec9a31f54b87d49f923c57",
+      "response_sha256": "eea706ed0719e384b47fbaa4f20416cad290391fcbbfbac1c232a5d8a9d3c24f",
+      "output_sha256": "69732297f3f6ca6d5bf301cc20799f0e83bf37fed9e4c652f0e79d016c6b2186",
+      "source_packet_sha256": "24f326a802035485536c3dde65aa49d7c1e8c634f438405305060cefb091c587",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.025216,
+      "reserved_usd": 0.7916744000000001,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon",
+      "record_sha256": "1e368eaa00e1502a8a5df81992c79eaea24babd9bb3cdd0513001304be8aee92",
+      "request_sha256": "e05772a4d662e0168d10522d22e4415a42666c7eee72db6b0e1c65c23f04eea2",
+      "response_sha256": "6ff25204473fbfd46536404bc8e5a868820685bb47fee4e69fea4245c0968176",
+      "output_sha256": "6ea37585cd42f414893836afc6e1c0c2d164b516223eca0fbf5a4a2cc533f66a",
+      "source_packet_sha256": "24f326a802035485536c3dde65aa49d7c1e8c634f438405305060cefb091c587",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0451418,
+      "reserved_usd": 0.41596412,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "058-legacy-blind-items-anthropic__claude-opus-5.5",
+      "record_sha256": "ca645693e1737f8ac0c6544eaaf78f1f8d5844e2ccf48ded6139b11d0948eb2e",
+      "request_sha256": "0431958f1a38409a038de6377e3664211e59c3e89c19ba32c4b8da94e4037ec2",
+      "response_sha256": "385157ca02d1737330cb613d03af1cd534a75e9373e856c2875fdf9d44c85fdf",
+      "output_sha256": "621585635c59a9180f47384512a10c0e9b4986798085bd87eedb95359a626d21",
+      "source_packet_sha256": "031a0ec7dcee7105af5fb9895022dee4c23965fc73010c021ad5cedacee4329c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.037976,
+      "reserved_usd": 0.8242432000000002,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "059-legacy-blind-items-google__gemini-4-argon",
+      "record_sha256": "a8deb140caceca1c5c871d49fe342f353d340372b72745d2c6164b89e82aeca9",
+      "request_sha256": "e79eb079218fdb33f8672ad3cdec5115a8ebafad2aa1650e7b87aa23e9d7bbce",
+      "response_sha256": "3114b6b542627e3952847c0172ea3a38c5a1aaada21270266a766ca5d42243d8",
+      "output_sha256": "c751cdf14a0f0657ddd67c3e28cb1deeab259f757641bd0ba0ff9460cb540dcb",
+      "source_packet_sha256": "031a0ec7dcee7105af5fb9895022dee4c23965fc73010c021ad5cedacee4329c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.0332002,
+      "reserved_usd": 0.42492054000000007,
+      "returned_identity_matches_pin": true
+    },
+    {
+      "id": "060-legacy-blind-items-openai__gpt-6.1-sol",
+      "record_sha256": "a6e3623b5ed4b8a2640503df8d97f62e6943c12c75dec19e7fbb68a802046de7",
+      "request_sha256": "ba2d7c7737760b81eca77d63b4ca071ee318bd7e51e036c77b2604f0bfd62282",
+      "response_sha256": "63a0a7621999c45383bbe0c40a0af046959d68b84fe80427ad67b233aedd6d43",
+      "output_sha256": "5d824d5c460f61fd90f352d19d76f48e644b67db8e080893b48c7100b8db9e95",
+      "source_packet_sha256": "031a0ec7dcee7105af5fb9895022dee4c23965fc73010c021ad5cedacee4329c",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "cost_usd": 0.021911,
+      "reserved_usd": 0.3927165000000001,
+      "returned_identity_matches_pin": true
+    }
+  ],
+  "blueprints": [
+    {
+      "id": "004-workflow-emergency-spares-anthropic__claude-opus-5.5",
+      "artifact_sha256": "da397a0411bb512f348cee55518bfe2e693ab2aa5213b9c886020888569b4b7f",
+      "export_status": "unusable_model_draft",
+      "structural_issues": [
+        "predicates: unknown/duplicate predicate references"
+      ],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 4,
+        "process_transitions": 5,
+        "scenario_decisions": 3,
+        "unresolved_questions": 7
+      },
+      "sampled_transition": {
+        "from_state": "Draft",
+        "to_state": "QuotationRequirementMet",
+        "event": "quotations recorded",
+        "guard": "(declared_outage = false AND ordinary AND quotation_count >= 3) OR (declared_outage = true AND quotation_count >= 1)",
+        "predicate_ids": [
+          "P2_three_quotes_ordinary",
+          "P3_outage_quote_exception"
+        ],
+        "source_units": [
+          "E03",
+          "E04"
+        ]
+      }
+    },
+    {
+      "id": "005-workflow-emergency-spares-google__gemini-4-argon",
+      "artifact_sha256": "ec20934ad234909f3b5368c20a7d661e29fffb0d76c2654cb7670d4e481cc620",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 5,
+        "process_transitions": 6,
+        "scenario_decisions": 3,
+        "unresolved_questions": 5
+      },
+      "sampled_transition": {
+        "from_state": "request_submitted",
+        "to_state": "approved_or_cleared",
+        "event": "record_director_approval",
+        "guard": "amount_eur > 12000 AND director_approval == true AND approver_is_requester == false",
+        "predicate_ids": [
+          "P_DIR_GT_12000",
+          "P_NO_SELF_APPROVAL"
+        ],
+        "source_units": [
+          "E01",
+          "E02",
+          "E05"
+        ]
+      }
+    },
+    {
+      "id": "006-workflow-emergency-spares-openai__gpt-6.1-sol",
+      "artifact_sha256": "34a02f9f7a72d9ffc229466ef473f220b4ba21d68297e6beb1fcff0f3125401b",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 5,
+        "process_transitions": 3,
+        "scenario_decisions": 3,
+        "unresolved_questions": 8
+      },
+      "sampled_transition": {
+        "from_state": "draft_pre_issue",
+        "to_state": "draft_pre_issue",
+        "event": "Procurement director actually approves the purchase",
+        "guard": "P01 applies and the procurement director actually gives approval before issuance. This transition changes the modeled approval fact to true; it is not presumed to have occurred in the scenario.",
+        "predicate_ids": [
+          "P01"
+        ],
+        "source_units": [
+          "E01",
+          "E05"
+        ]
+      }
+    },
+    {
+      "id": "010-workflow-framework-calloffs-openai__gpt-6.1-sol",
+      "artifact_sha256": "ea612bf09ffcbf0b7a5d3ec41003747e3e875435884d4defc5bba3808ba0b1ca",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 3,
+        "process_transitions": 3,
+        "scenario_decisions": 2,
+        "unresolved_questions": 2
+      },
+      "sampled_transition": {
+        "from_state": "Amount-threshold assessment pending (proposed analytical state)",
+        "to_state": "New competition required by amount threshold (proposed analytical state)",
+        "event": "Evaluate the cancellation-adjusted FW-A current-quarter cumulative net amount including the request.",
+        "guard": "P01 is true. This branch is not taken for the supplied scenario; it identifies a requirement without asserting that a competition has occurred.",
+        "predicate_ids": [
+          "P01"
+        ],
+        "source_units": [
+          "F01",
+          "F03",
+          "F04",
+          "F05",
+          "F06"
+        ]
+      }
+    },
+    {
+      "id": "011-workflow-framework-calloffs-anthropic__claude-opus-5.5",
+      "artifact_sha256": "86748bc58d75fd2f86c84d6e7cb01001d88c17a2245deb3ff7d06e45c0400f2b",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 3,
+        "process_transitions": 3,
+        "scenario_decisions": 2,
+        "unresolved_questions": 6
+      },
+      "sampled_transition": {
+        "from_state": "call_off_request_recorded",
+        "to_state": "new_competition_required",
+        "event": "threshold_evaluation",
+        "guard": "P_THRESHOLD_EXCEEDED is true (cumulative FW-A current-quarter net value computed per P_NET_CONTRIBUTION is > EUR 80,000)",
+        "predicate_ids": [
+          "P_NET_CONTRIBUTION",
+          "P_THRESHOLD_EXCEEDED"
+        ],
+        "source_units": [
+          "F01",
+          "F03"
+        ]
+      }
+    },
+    {
+      "id": "012-workflow-framework-calloffs-google__gemini-4-argon",
+      "artifact_sha256": "76ffbe38840f0828e6da08e618ab9dedc50420313799876e9eb0c994582af67e",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 3,
+        "process_transitions": 3,
+        "scenario_decisions": 2,
+        "unresolved_questions": 3
+      },
+      "sampled_transition": {
+        "from_state": "call_off_request_received",
+        "to_state": "new_competition_triggered_by_threshold",
+        "event": "evaluate_fw_a_quarterly_cumulative_threshold",
+        "guard": "framework_id == 'FW-A' and quarter == 'current' and cumulative_net_value_eur > 80000",
+        "predicate_ids": [
+          "P01"
+        ],
+        "source_units": [
+          "F01",
+          "F03"
+        ]
+      }
+    },
+    {
+      "id": "016-workflow-bank-change-google__gemini-4-argon",
+      "artifact_sha256": "76050128df8232218f1ecb9a0c31bf90375972b9a771cc3ca7e949461a1e6a9a",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 5,
+        "process_transitions": 4,
+        "scenario_decisions": 3,
+        "unresolved_questions": 5
+      },
+      "sampled_transition": {
+        "from_state": "ChangeEntered",
+        "to_state": "TreasuryVerified",
+        "event": "verify_bank_change",
+        "guard": "Treasury verification is completed using evidence beyond email confirmation alone",
+        "predicate_ids": [
+          "P1"
+        ],
+        "source_units": [
+          "B01",
+          "B03"
+        ]
+      }
+    },
+    {
+      "id": "017-workflow-bank-change-openai__gpt-6.1-sol",
+      "artifact_sha256": "90d182f96d031f80ab32957137a8e63240732926070b4f6676f48ce7aa6f9077",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 6,
+        "process_transitions": 4,
+        "scenario_decisions": 3,
+        "unresolved_questions": 7
+      },
+      "sampled_transition": {
+        "from_state": "proposed:new_details_under_control_review",
+        "to_state": "proposed:new_destination_use_blocked",
+        "event": "Evaluate attempted use of new bank details",
+        "guard": "Treasury verification is false OR independent approval by a non-entering person is false. A declared outage does not remove either requirement.",
+        "predicate_ids": [
+          "P01",
+          "P04"
+        ],
+        "source_units": [
+          "B01",
+          "B02",
+          "B05"
+        ]
+      }
+    },
+    {
+      "id": "018-workflow-bank-change-anthropic__claude-opus-5.5",
+      "artifact_sha256": "e565f150b0d265b05213cc743ed25d076998fd79136d952dfdb88a2bb17065d4",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 5,
+        "decision_predicates": 5,
+        "process_transitions": 4,
+        "scenario_decisions": 3,
+        "unresolved_questions": 7
+      },
+      "sampled_transition": {
+        "from_state": "entered",
+        "to_state": "verified",
+        "event": "Treasury verification recorded",
+        "guard": "P1 true (not email-only)",
+        "predicate_ids": [
+          "P1"
+        ],
+        "source_units": [
+          "B01",
+          "B03"
+        ]
+      }
+    },
+    {
+      "id": "022-workflow-policy-transition-anthropic__claude-opus-5.5",
+      "artifact_sha256": "50d4915a33e01b3a5896786114d22d02808951c4228cf55897c4fbd7945af109",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 5,
+        "decision_predicates": 6,
+        "process_transitions": 5,
+        "scenario_decisions": 2,
+        "unresolved_questions": 7
+      },
+      "sampled_transition": {
+        "from_state": "RequisitionCreated (proposed state name)",
+        "to_state": "FinanceApprovalRequired (proposed state name)",
+        "event": "amount_threshold_evaluated",
+        "guard": "creation_date < 2026-10-01 AND amount_eur > 20000",
+        "predicate_ids": [
+          "P_V1_ABOVE"
+        ],
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      }
+    },
+    {
+      "id": "023-workflow-policy-transition-google__gemini-4-argon",
+      "artifact_sha256": "f802b58d3924eb87236fa9eebe7e643135303ce3882956e943948e47e1642175",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 6,
+        "process_transitions": 3,
+        "scenario_decisions": 2,
+        "unresolved_questions": 4
+      },
+      "sampled_transition": {
+        "from_state": "ProposedState_Requisition_Created",
+        "to_state": "ProposedState_Finance_Approval_Required_Under_Amount_Threshold",
+        "event": "evaluate_finance_approval_from_amount_threshold",
+        "guard": "P1 holds (requisition_created < 2026-10-01 AND amount_eur > 20000) OR P3 holds (requisition_created >= 2026-10-01 AND amount_eur > 15000) ",
+        "predicate_ids": [
+          "P1",
+          "P3"
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03"
+        ]
+      }
+    },
+    {
+      "id": "024-workflow-policy-transition-openai__gpt-6.1-sol",
+      "artifact_sha256": "9a3dd3ec5e31a19d1274ca0fdeeb197eb2cba3737ae9d1f79af1120ad1bcb0e8",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 2,
+        "decision_predicates": 6,
+        "process_transitions": 3,
+        "scenario_decisions": 2,
+        "unresolved_questions": 5
+      },
+      "sampled_transition": {
+        "from_state": "proposed_amount_rule_unevaluated",
+        "to_state": "proposed_finance_approval_required_by_amount",
+        "event": "Evaluate creation-date applicability and amount; this does not record an approval",
+        "guard": "The applicability and amount conditions of P_FIN_V1_ABOVE OR P_FIN_V2_ABOVE hold",
+        "predicate_ids": [
+          "P_FIN_V1_ABOVE",
+          "P_FIN_V2_ABOVE"
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03"
+        ]
+      }
+    },
+    {
+      "id": "028-workflow-currency-approval-openai__gpt-6.1-sol",
+      "artifact_sha256": "8656ae6371ded9f6c189aba1ab031fa89f47a7a159d4791e1853e59d62409dde",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 5,
+        "process_transitions": 3,
+        "scenario_decisions": 3,
+        "unresolved_questions": 4
+      },
+      "sampled_transition": {
+        "from_state": "request_available",
+        "to_state": "approval_amount_calculated",
+        "event": "An authorized conversion basis is applied to the request",
+        "guard": "The request is in USD; apply the printed batch rate of 0.80 EUR per USD, include shipping, exclude VAT, and do not substitute a live rate. The requester may prepare this calculation. For B, the resulting amount is exactly EUR 10000.80.",
+        "predicate_ids": [
+          "P01",
+          "P05"
+        ],
+        "source_units": [
+          "C01",
+          "C03",
+          "C04",
+          "C05",
+          "C06"
+        ]
+      }
+    },
+    {
+      "id": "029-workflow-currency-approval-anthropic__claude-opus-5.5",
+      "artifact_sha256": "dd08b15bd1ad19757df69f474d521b82fe65ac07016179b8d68577b9e49bc719",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 4,
+        "decision_predicates": 3,
+        "process_transitions": 4,
+        "scenario_decisions": 3,
+        "unresolved_questions": 6
+      },
+      "sampled_transition": {
+        "from_state": "Submitted",
+        "to_state": "Converted",
+        "event": "conversion prepared (may be by requester)",
+        "guard": "rate used equals approval workbook rate (0.80); no live rate",
+        "predicate_ids": [
+          "P3_workbook_rate_only"
+        ],
+        "source_units": [
+          "C01",
+          "C03",
+          "C04"
+        ]
+      }
+    },
+    {
+      "id": "030-workflow-currency-approval-google__gemini-4-argon",
+      "artifact_sha256": "131b7549055ea5a9fccbdda594d962e1e958ec9cc12d9f626535e38c42726a5b",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 3,
+        "process_transitions": 4,
+        "scenario_decisions": 3,
+        "unresolved_questions": 4
+      },
+      "sampled_transition": {
+        "from_state": "usd_request_received",
+        "to_state": "eur_conversion_prepared",
+        "event": "prepare_conversion",
+        "guard": "Request is converted from USD to EUR using the workbook printed rate of 0.80 EUR per USD without substituting a live exchange rate, including shipping and excluding VAT",
+        "predicate_ids": [
+          "P03"
+        ],
+        "source_units": [
+          "C01",
+          "C03",
+          "C04",
+          "C06"
+        ]
+      }
+    },
+    {
+      "id": "034-workflow-service-acceptance-google__gemini-4-argon",
+      "artifact_sha256": "91c505796e7fab13dd079734c3e33703523dea2614da8e6d95092f5530d3d5c2",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 4,
+        "process_transitions": 5,
+        "scenario_decisions": 3,
+        "unresolved_questions": 4
+      },
+      "sampled_transition": {
+        "from_state": "Milestone_Billed_Pending_Prerequisites",
+        "to_state": "Milestone_Accepted_Missing_Purchase_Order",
+        "event": "Signed acceptance is recorded for milestone M2 without a purchase order",
+        "guard": "P02 signed_acceptance == true (assuming valid signature by named service owner) AND P01 purchase_order == false",
+        "predicate_ids": [
+          "P01",
+          "P02"
+        ],
+        "source_units": [
+          "S01",
+          "S02",
+          "S03",
+          "S05",
+          "S06"
+        ]
+      }
+    },
+    {
+      "id": "035-workflow-service-acceptance-openai__gpt-6.1-sol",
+      "artifact_sha256": "3192f92ab0f3281f91b55adc9b23d1c141da358672984f905eda06dba043eafc",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 3,
+        "decision_predicates": 8,
+        "process_transitions": 4,
+        "scenario_decisions": 3,
+        "unresolved_questions": 5
+      },
+      "sampled_transition": {
+        "from_state": "proposed: payment eligibility unevaluated",
+        "to_state": "proposed: payment blocked by missing purchase order",
+        "event": "Evaluate payment eligibility for M2",
+        "guard": "M2 has no purchase order. Its signed acceptance does not substitute for one.",
+        "predicate_ids": [
+          "P01",
+          "P04"
+        ],
+        "source_units": [
+          "S01",
+          "S02",
+          "S06"
+        ]
+      }
+    },
+    {
+      "id": "036-workflow-service-acceptance-anthropic__claude-opus-5.5",
+      "artifact_sha256": "1f602aa2c42bb6b0fb3844fbfb6847a11d74d8226ce1b630f0c78db2065db3d6",
+      "export_status": "structurally_valid_model_draft",
+      "structural_issues": [],
+      "business_approval_required": true,
+      "business_approved": false,
+      "qualified": false,
+      "component_counts": {
+        "typed_entities_and_identifiers": 6,
+        "decision_predicates": 6,
+        "process_transitions": 5,
+        "scenario_decisions": 3,
+        "unresolved_questions": 7
+      },
+      "sampled_transition": {
+        "from_state": "PaymentClock.running",
+        "to_state": "PaymentClock.paused",
+        "event": "dispute raised on milestone",
+        "guard": "dispute.disputed_milestone_id == clock.milestone_id",
+        "predicate_ids": [
+          "P5"
+        ],
+        "source_units": [
+          "S04",
+          "S05"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "All cases share one automated authoring provenance group and remain development-exposed.",
+    "Draft-label agreement and metamorphic consistency do not establish semantic accuracy or a quality ranking.",
+    "One repetition per assignment, with no independent human gold or adjudication.",
+    "Publication clearance is for honest internal feasibility evidence, not independent benchmark validation."
+  ]
+}

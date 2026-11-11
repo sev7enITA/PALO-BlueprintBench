@@ -1,0 +1,206 @@
+{
+  "typed_entities_and_identifiers": [
+    {
+      "name": "Source-named actor roles; role labels do not establish unique person identifiers",
+      "identifier_status": "source_supported",
+      "fields": [
+        {
+          "name": "requester",
+          "type": "role label",
+          "source_units": ["E02", "E05"]
+        },
+        {
+          "name": "procurement_director",
+          "type": "role label",
+          "source_units": ["E01", "E05"]
+        },
+        {
+          "name": "buyer",
+          "type": "role label",
+          "source_units": ["E04", "E06"]
+        }
+      ],
+      "source_units": ["E01", "E02", "E04", "E05", "E06"]
+    },
+    {
+      "name": "PurchaseWorkflowDraft; field names, types, predicate IDs and state labels are proposed modeling choices, not business-approved or qualified",
+      "identifier_status": "proposed_design",
+      "fields": [
+        {
+          "name": "amount_eur",
+          "type": "decimal monetary amount in EUR",
+          "source_units": ["E01", "E05"]
+        },
+        {
+          "name": "declared_outage",
+          "type": "boolean",
+          "source_units": ["E04", "E06"]
+        },
+        {
+          "name": "ordinary_purchase",
+          "type": "optional boolean; not automatically the negation of declared_outage",
+          "source_units": ["E03"]
+        },
+        {
+          "name": "quotation_count",
+          "type": "nonnegative integer",
+          "source_units": ["E03", "E04"]
+        },
+        {
+          "name": "director_approval",
+          "type": "optional boolean; approval must precede issuance when required",
+          "source_units": ["E01", "E05"]
+        },
+        {
+          "name": "requester_self_approval_occurred",
+          "type": "optional boolean; unknown unless established",
+          "source_units": ["E02", "E05"]
+        },
+        {
+          "name": "order_issuance_time",
+          "type": "optional temporal value; precision and time zone unspecified",
+          "source_units": ["E01", "E03", "E06"]
+        },
+        {
+          "name": "outage_justification",
+          "type": "optional recorded text; storage system unspecified",
+          "source_units": ["E06"]
+        },
+        {
+          "name": "justification_recorded_time",
+          "type": "optional temporal value; evaluated against two calendar days after issuance",
+          "source_units": ["E06"]
+        },
+        {
+          "name": "workflow_state",
+          "type": "proposed enum: draft_pre_issue | draft_order_issued | draft_outage_justification_recorded",
+          "source_units": ["E01", "E03", "E04", "E06"]
+        }
+      ],
+      "source_units": ["E01", "E02", "E03", "E04", "E05", "E06"]
+    },
+    {
+      "name": "Unique request, order, actor and justification identifiers",
+      "identifier_status": "not_established",
+      "fields": [
+        {
+          "name": "identifier_scheme",
+          "type": "unspecified; no uniqueness or identifier format established",
+          "source_units": ["E01", "E02", "E03", "E04", "E05", "E06"]
+        }
+      ],
+      "source_units": ["E01", "E02", "E03", "E04", "E05", "E06"]
+    }
+  ],
+  "decision_predicates": [
+    {
+      "id": "P01",
+      "decision": "director_approval_before_issue",
+      "actor": "procurement director",
+      "scope": "Purchases exceeding EUR 12,000, including declared plant-outage purchases",
+      "condition": "If amount_eur > 12000, procurement director approval is required before order issuance. The outage quotation exception does not waive this requirement.",
+      "units": "EUR",
+      "comparison": "amount_eur > 12000; strict threshold",
+      "source_units": ["E01", "E05"]
+    },
+    {
+      "id": "P02",
+      "decision": "director_approval_before_issue",
+      "actor": "procurement director",
+      "scope": "The complete amount-triggered approval rule only",
+      "condition": "If amount_eur <= 12000, this amount rule does not require director approval. This does not establish that every other possible approval requirement is absent.",
+      "units": "EUR",
+      "comparison": "amount_eur <= 12000",
+      "source_units": ["E01"]
+    },
+    {
+      "id": "P03",
+      "decision": "three_quotations",
+      "actor": "not specified",
+      "scope": "Ordinary purchases, subject to the declared plant-outage quotation exception",
+      "condition": "An ordinary purchase requires three quotations before order issuance unless the declared plant-outage exception applies.",
+      "units": "quotations",
+      "comparison": "quotation_count >= 3 to meet the three-quotation requirement",
+      "source_units": ["E03", "E04"]
+    },
+    {
+      "id": "P04",
+      "decision": "three_quotations",
+      "actor": "buyer",
+      "scope": "Declared plant outages",
+      "condition": "When declared_outage is true, the buyer may order with one quotation and obtaining further quotations is optional. This is a quotation exception, not unconditional authority to issue the order.",
+      "units": "quotations",
+      "comparison": "quotation_count = 1 is permitted; additional quotations are optional",
+      "source_units": ["E04", "E05"]
+    },
+    {
+      "id": "P05",
+      "decision": "requester_self_approval",
+      "actor": "requester",
+      "scope": "The requester's own request, including emergency requests",
+      "condition": "The requester must not approve their own request. A declared plant outage does not waive this prohibition.",
+      "units": "not applicable",
+      "comparison": "request approver is the requester",
+      "source_units": ["E02", "E05"]
+    }
+  ],
+  "process_transitions": [
+    {
+      "from_state": "draft_pre_issue",
+      "to_state": "draft_pre_issue",
+      "event": "Procurement director actually approves the purchase",
+      "guard": "P01 applies and the procurement director actually gives approval before issuance. This transition changes the modeled approval fact to true; it is not presumed to have occurred in the scenario.",
+      "predicate_ids": ["P01"],
+      "source_units": ["E01", "E05"]
+    },
+    {
+      "from_state": "draft_pre_issue",
+      "to_state": "draft_order_issued",
+      "event": "Order issuance",
+      "guard": "For the named rules only: where P01 applies, director approval must actually have occurred before issuance; P02 removes only the amount-triggered requirement at or below EUR 12,000. The quotation condition must be met through P03 or the applicable P04 exception. P05 remains binding: this transition neither performs nor authorizes requester self-approval, and it does not invent a separate request-approval prerequisite. Passing these checks is not a claim of complete authorization under unmentioned rules. On the concrete input, this transition is blocked because amount_eur is 12001 and director_approval is false.",
+      "predicate_ids": ["P01", "P02", "P03", "P04", "P05"],
+      "source_units": ["E01", "E02", "E03", "E04", "E05"]
+    },
+    {
+      "from_state": "draft_order_issued",
+      "to_state": "draft_outage_justification_recorded",
+      "event": "Buyer records the outage justification",
+      "guard": "The declared-outage scope used by P04 applies, and order issuance has actually occurred. Under E06, the buyer must record the justification within two calendar days after issuance. This transition models timely recording only; it does not presume issuance, a recorded justification, a storage system or a late-recording procedure.",
+      "predicate_ids": ["P04"],
+      "source_units": ["E04", "E06"]
+    }
+  ],
+  "scenario_decisions": [
+    {
+      "decision": "director_approval_before_issue",
+      "disposition": "required",
+      "predicate_ids": ["P01"],
+      "source_units": ["E01", "E05"],
+      "rationale": "EUR 12,001 strictly exceeds EUR 12,000. Director approval is therefore required before issuance despite the declared outage. The supplied director_approval=false means the requirement is not satisfied; no approval or issuance is inferred."
+    },
+    {
+      "decision": "three_quotations",
+      "disposition": "not_required",
+      "predicate_ids": ["P03", "P04"],
+      "source_units": ["E03", "E04", "E05"],
+      "rationale": "The declared outage activates the explicit quotation exception: one quotation is permitted and further quotations are optional. Thus quotation_count=1 is sufficient for this quotation rule. This exception displaces the ordinary three-quotation requirement in this scope, but does not waive director approval or establish that all issuance prerequisites are satisfied."
+    },
+    {
+      "decision": "requester_self_approval",
+      "disposition": "prohibited",
+      "predicate_ids": ["P05"],
+      "source_units": ["E02", "E05"],
+      "rationale": "The source expressly prohibits requester self-approval, including emergencies, and preserves that prohibition during a declared outage. The input does not identify a requester or establish whether self-approval occurred; prohibited describes the rule, not an inferred violation."
+    }
+  ],
+  "unresolved_questions": [
+    "Who is the requester, and has any requester self-approval occurred? The scenario does not establish either fact.",
+    "Will the procurement director actually approve before issuance? The current input establishes no such approval.",
+    "Has an order actually been issued, and if so when? No issuance fact or date is supplied, so no concrete justification deadline can be calculated.",
+    "Has the buyer recorded the outage justification, and when? E06 requires recording within two calendar days after issuance, but fulfillment is not established.",
+    "How are calendar-day boundaries and time zones operationalized? E06 specifies calendar days but supplies no more precise calculation convention.",
+    "Which system will store the justification? E06 explicitly leaves the storage system unprescribed.",
+    "What unique identifiers and record relationships should implementation use? The supplied sources establish no identifier scheme.",
+    "What procedures address late justification recording or other unmodeled conditions? The sources do not establish a complete workflow, and this draft does not infer one."
+  ]
+}

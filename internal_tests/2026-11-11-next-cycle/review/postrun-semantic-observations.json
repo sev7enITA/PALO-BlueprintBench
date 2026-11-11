@@ -1,0 +1,60 @@
+{
+  "review_id": "next-cycle-postrun-semantic-observations-2026-11-11",
+  "created_at": "2026-11-11T19:19:09.479812+00:00",
+  "review_type": "automated_advisory_after_observing_model_response",
+  "reviewer": "Codex sub-agent next_cycle_semantic_review",
+  "reviewer_model_id": "unavailable_not_inferred",
+  "independent_human_review": false,
+  "qualified": false,
+  "paid_inference_calls": 0,
+  "original_labels_changed": false,
+  "retroactive_exclusions_added": false,
+  "observations": [
+    {
+      "id": "POSTRUN-B07-01",
+      "probe_id": "bank-change-P07",
+      "source_unit": {
+        "id": "B06",
+        "text": "The bank-change log records operator ID and approver ID. The documents do not define a department-tenure requirement for either role."
+      },
+      "statement": "The log must contain the operator ID and approver ID.",
+      "frozen_draft_label": "supported",
+      "observed_model": "anthropic/claude-opus-5.5",
+      "observed_label": "not_established",
+      "observed_rationale": "B06 describes the log as recording the operator ID and approver ID, but it does not frame this as an obligation. The 'must' in the proposition is therefore not established.",
+      "response_path": "internal_tests/2026-11-11-next-cycle/runs/013-verification-bank-change-anthropic__claude-opus-5.5/output.txt",
+      "response_sha256": "4022815c02bfba81d544f1384daadfec87e43172ea86dc29276ca6adcdc34703",
+      "case_bank_sha256": "e0641ef6062ee0baa16ae2a01f739ab1698439c50ec7cd57ea63662fbbdbc3e0",
+      "interpretations": [
+        {
+          "label": "supported",
+          "reading": "The procedure specifies the contents of the bank-change log. A declarative statement of a required system invariant can be written in the present tense; on that reading, a conforming log necessarily includes both identifiers.",
+          "additional_assumption": "The source sentence is a prescriptive specification, and must means a conformance necessity rather than an independently stated human duty.",
+          "limitation": "The source does not expressly state that all declarative procedure sentences impose obligations. The field dimension ownership does not resolve this modal ambiguity."
+        },
+        {
+          "label": "not_established",
+          "reading": "B06 describes what the log records. A factual description alone does not establish a duty to record those values, and the proposition introduces must.",
+          "additional_assumption": "Must is interpreted as deontic obligation, and B06 has descriptive rather than prescriptive force unless that force is explicitly supplied.",
+          "limitation": "Operational procedures commonly use declarative present-tense language to specify required behaviour, so this is not the only reasonable reading."
+        }
+      ],
+      "advisory_conclusion": "Genuine rubric/source ambiguity. The model response is defensible under a strict modality-preservation interpretation; disagreement with the draft key alone does not establish model error. Refer for human adjudication rather than force a unique gold label.",
+      "preflight_revision_note": "The prior preflight accepted supported under a normative-control reading. Observing this response made the competing descriptive reading explicit. This postrun note is not blind and does not amend the frozen preflight.",
+      "current_campaign_treatment": "Retain the original supported draft key and its disagreement count. Add a visible rubric-sensitive postrun annotation. Do not relabel, add accepted labels, or exclude this probe from the current denominator.",
+      "future_adjudication_questions": [
+        "Does the rubric treat unmarked present-tense procedure statements as normative specifications?",
+        "Does must here mean a logical conformance requirement or an actor obligation?",
+        "Which source-language changes would make each disposition unambiguous?"
+      ],
+      "future_case_revision_proposal": [
+        "Keep a descriptive version: The log records operator ID and approver ID; probe repeats that factual claim.",
+        "Create an explicitly normative version: Every bank-change log entry must contain operator ID and approver ID.",
+        "Create a descriptive-only version explicitly stating that the sentence reports observed behaviour and establishes no recording requirement.",
+        "Freeze a modality-interpretation rule and updated cases before another run, retaining this version as development evidence."
+      ],
+      "human_adjudication": "pending",
+      "scoring_change_authorized": false
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "ITEM-A",
+      "label": "contradicted",
+      "source_units": ["ITEM-A:R02", "ITEM-A:R03"],
+      "rationale": "The stated invoice-variance cutoff includes exactly EUR 10 but blocks automatic payment above EUR 10. This unqualified rule covers overseas invoices too; increasing their applicable tolerance by 5 percent would conflict with that cutoff."
+    },
+    {
+      "id": "ITEM-B",
+      "label": "not_established",
+      "source_units": ["ITEM-B:R10"],
+      "rationale": "The threshold applies separately to each request, but this does not establish whether related requests are merged beforehand. No complete request-processing rule establishes or prohibits automatic merging."
+    },
+    {
+      "id": "ITEM-C",
+      "label": "contradicted",
+      "source_units": ["ITEM-C:R04"],
+      "rationale": "In the blocked-invoice context, an Accounts Payable analyst is expressly not obliged to request a corrected invoice. The proposition imposes that obligation, contradicting the stated optionality. The supplier-portal channel is separately unspecified."
+    }
+  ]
+}

@@ -1,0 +1,1206 @@
+{
+  "review_id": "next-cycle-semantic-preflight-2026-11-11",
+  "status": "advisory_automated_preflight",
+  "reviewer": "Codex sub-agent next_cycle_semantic_review",
+  "model_id": "unavailable_not_inferred",
+  "independent_human_review": false,
+  "blinding": "Not a blinded review: source and draft disposition are co-located in the published case file and were accessible. Reasons were derived from source clauses; concordance is advisory only.",
+  "qualification": false,
+  "paid_inference_calls": 0,
+  "review_scope": {
+    "cases": 6,
+    "probes": 48,
+    "workflow_tasks": 6,
+    "workflow_decisions": 16,
+    "metamorphic_checks": 7,
+    "legacy_items": 3
+  },
+  "source_hashes": {
+    "case-bank.json": "e0641ef6062ee0baa16ae2a01f739ab1698439c50ec7cd57ea63662fbbdbc3e0",
+    "workflow-tasks.json": "5971e490bf3c7666a47e933251d5f3cd77a38f3a393da865996e1cd6390ca055",
+    "metamorphic-checks.json": "a4655e339a65df52ae85c1b21972d78705667b79c6d0b883855e43b489199c36",
+    "rubric.md": "cbc9320d0e6c010b2abc97a9a0d3561e4f96bdbfa8529e2ef9e7951b056bd02e",
+    "adjudication/reviewer-packet.json": "4d057930ae7c9cfca11fed3c99a78730487cb28eb1ba64c3bda992aea675ae64"
+  },
+  "summary": {
+    "clear_draft_concordances": 47,
+    "rubric_sensitive_probes": 1,
+    "workflow_decisions_concordant": 16,
+    "fatal_source_or_arithmetic_errors_found": 0,
+    "human_adjudications_completed": 0
+  },
+  "findings": [
+    {
+      "id": "NC-PREFLIGHT-01",
+      "severity": "material_rubric_ambiguity",
+      "item": "policy-transition-P05",
+      "finding": "A metaclaim of unambiguous60-day retention is not identical to asking which retention period applies. Source conflict supports unresolved_conflict for the value, and contradicted for the unambiguity metaclaim.",
+      "recommended_before_freeze": "Exclude this item from unique-label match scoring while retaining its response, or predeclare both accepted diagnostic dispositions in a separate campaign overlay. Preserve the published bank and original draft label."
+    },
+    {
+      "id": "NC-PREFLIGHT-02",
+      "severity": "measurement_limit",
+      "item": "workflow-tasks.json",
+      "finding": "The16 proposed decisions cover named-rule implications, not a complete executable process. The emergency input director_approval=false should also make issuance unavailable, but issue eligibility is not among the expected decision IDs.",
+      "recommended_before_freeze": "Treat these as scoped decision traces and structural blueprint tests. If claiming executable business decisions, separately preregister guard evaluation and an issue-eligibility control before inference; do not infer completeness from a schema-valid output."
+    },
+    {
+      "id": "NC-PREFLIGHT-03",
+      "severity": "measurement_limit",
+      "item": "case-bank.json",
+      "finding": "Six short synthetic scenarios share one authoring provenance group and remain mostly explicit-rule tests. Passing them cannot establish new independent families, real-document throughput or statistical discrimination.",
+      "recommended_before_freeze": "Label the campaign internal engineering feasibility with no ranks and no qualified semantic score; report ceiling and disagreements rather than superiority."
+    }
+  ],
+  "probe_reviews": [
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P01",
+      "statement": "An outage order of EUR 12,001 requires director approval before issuance.",
+      "source_units": [
+        "E01",
+        "E05"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "EUR 12,001 is strictly above the E01 threshold; E05 preserves approval in outages.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P02",
+      "statement": "An outage order of EUR 12,001 does not require director approval under the amount rule.",
+      "source_units": [
+        "E01",
+        "E05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "The denial conflicts with the complete amount rule and retained outage approval.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P03",
+      "statement": "For a declared outage the buyer is obliged to obtain three quotations.",
+      "source_units": [
+        "E03",
+        "E04"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "E04 explicitly makes further quotations optional and permits one.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P04",
+      "statement": "An emergency requester may approve their own request.",
+      "source_units": [
+        "E02",
+        "E05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "E02 and E05 explicitly prohibit requester self-approval.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P05",
+      "statement": "The buyer must record the outage justification no later than two calendar days after issuance.",
+      "source_units": [
+        "E06"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "E06 specifies two calendar days after issuance.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P06",
+      "statement": "Director approval under E01 is triggered by an amount of exactly EUR 12,000.",
+      "source_units": [
+        "E01"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "E01 explicitly excludes amounts at or below EUR 12,000.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P07",
+      "statement": "The buyer must store outage justification in the Oracle portal.",
+      "source_units": [
+        "E06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "E06 leaves the storage mechanism unspecified; no Oracle duty follows.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "emergency-spares",
+      "probe_id": "emergency-spares-P08",
+      "statement": "The buyer may substitute their own approval for the procurement director approval above EUR 12,000.",
+      "source_units": [
+        "E01",
+        "E05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "E01 assigns approval to the director; E05 retains it, so buyer substitution is incompatible.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P01",
+      "statement": "Including Q, the FW-A value is EUR 80,000.",
+      "source_units": [
+        "F04",
+        "F05"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "30,000 + 40,000 + 10,000 = 80,000 under F04/F05.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P02",
+      "statement": "Including Q, the FW-A value is EUR 90,000.",
+      "source_units": [
+        "F04",
+        "F05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "The supplied uncancelled ledger totals 80,000, not 90,000.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P03",
+      "statement": "Request Q triggers a new competition solely because the cumulative value reaches EUR 80,000.",
+      "source_units": [
+        "F01",
+        "F02",
+        "F04",
+        "F05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "F02 explicitly excludes equality from the new-competition trigger.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P04",
+      "statement": "The net value of a fully cancelled call-off remains in the total.",
+      "source_units": [
+        "F03"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "F03 assigns zero to fully cancelled call-offs.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P05",
+      "statement": "Request Z contributes to the FW-A cumulative value.",
+      "source_units": [
+        "F01",
+        "F06"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "F01 scopes aggregation to FW-A; F06 assigns Z to FW-B.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P06",
+      "statement": "All FW-A call-offs are automatically merged into one purchase order.",
+      "source_units": [
+        "F06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "F06 does not supply a merge mechanism; amount aggregation does not imply order merging.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P07",
+      "statement": "For a partially cancelled call-off, only the cancelled net amount is removed.",
+      "source_units": [
+        "F03"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "F03 explicitly removes only the cancelled part.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "framework-calloffs",
+      "probe_id": "framework-calloffs-P08",
+      "statement": "A call-off from the previous calendar quarter counts in the current-quarter FW-A total.",
+      "source_units": [
+        "F01"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "F01 scopes the sum to the current calendar quarter.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P01",
+      "statement": "An outage permits the treasury lead to authorise payment to the previously verified account.",
+      "source_units": [
+        "B04"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B04 permits the treasury lead to authorise the previous verified account in an outage.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P02",
+      "statement": "An outage permits the treasury lead to authorise payment to new unverified details.",
+      "source_units": [
+        "B04",
+        "B05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B05 explicitly denies an outage exception for new unverified details.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P03",
+      "statement": "The change-entry operator may also approve that same bank change.",
+      "source_units": [
+        "B01",
+        "B02",
+        "B05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B01/B02 require approval by a different person; B05 preserves separation.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P04",
+      "statement": "Email confirmation alone makes a change usable.",
+      "source_units": [
+        "B01",
+        "B03"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B03 makes email alone insufficient for verification, while B01 also requires independent approval.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P05",
+      "statement": "A usable change needs Treasury verification as well as independent approval.",
+      "source_units": [
+        "B01"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B01 states both prerequisites as necessary for usability.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P06",
+      "statement": "The bank-change approver must have three years of Treasury tenure.",
+      "source_units": [
+        "B06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B06 does not state a tenure condition.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P07",
+      "statement": "The log must contain the operator ID and approver ID.",
+      "source_units": [
+        "B06"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "B06 defines the log contents as operator ID and approver ID; reading this fictional control as normative supports the required fields.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "bank-change",
+      "probe_id": "bank-change-P08",
+      "statement": "Outage payment to the previously verified account is mandatory.",
+      "source_units": [
+        "B04"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "Bare may in B04 establishes permission but does not, by itself, negate every possible duty; the supplied rubric calls the mandatory inference not established.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P01",
+      "statement": "A requisition created on 30 September 2026 for EUR 18,000 triggers Finance approval under the amount threshold.",
+      "source_units": [
+        "T01",
+        "T02"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "T01 excludes EUR18,000 for the pre-October policy.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P02",
+      "statement": "A requisition created on 1 October 2026 for EUR 18,000 triggers Finance approval under the amount threshold.",
+      "source_units": [
+        "T02",
+        "T03"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "T02 selects the creation-date policy; T03 requires approval above EUR15,000 from October1.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P03",
+      "statement": "A requisition created on 1 October 2026 for exactly EUR 15,000 triggers threshold approval.",
+      "source_units": [
+        "T04"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "T04 explicitly excludes equality.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P04",
+      "statement": "The order-issuance date selects the policy version.",
+      "source_units": [
+        "T02"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "T02 explicitly uses creation rather than issuance date.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P05",
+      "statement": "The applicable North-unit retention period is unambiguously 60 days.",
+      "source_units": [
+        "T05",
+        "T06"
+      ],
+      "source_grounded_disposition": "unresolved_conflict",
+      "original_draft_disposition": "unresolved_conflict",
+      "review_status": "rubric_sensitive",
+      "alternative_dispositions": [
+        "contradicted"
+      ],
+      "reason": "T05/T06 conflict. unresolved_conflict describes the unresolved retention value; contradicted can instead describe the proposition that it is unambiguous. A frozen aggregation rule is required.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": false
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P06",
+      "statement": "Instruction B overrides instruction A because its identifier is later alphabetically.",
+      "source_units": [
+        "T05",
+        "T06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "No source gives alphabetical order precedence; T06 explicitly withholds priority metadata.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P07",
+      "statement": "The documents contain incompatible North-unit retention periods without a stated resolution rule.",
+      "source_units": [
+        "T05",
+        "T06"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "T05 and T06 give incompatible same-scope values without precedence.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "policy-transition",
+      "probe_id": "policy-transition-P08",
+      "statement": "The two North-unit instructions agree on the retention period.",
+      "source_units": [
+        "T05",
+        "T06"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "60 days and 90 days are unequal; the instructions do not agree.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P01",
+      "statement": "Request A is EUR 10,000 and does not trigger project-director approval under C02.",
+      "source_units": [
+        "C01",
+        "C02",
+        "C04",
+        "C05"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "12,500 USD times 0.80 EUR/USD equals10,000 EUR; C02 excludes equality.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P02",
+      "statement": "Request A exceeds the EUR 10,000 approval threshold.",
+      "source_units": [
+        "C02",
+        "C04",
+        "C05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "The calculated amount equals rather than exceeds10,000.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P03",
+      "statement": "Request B converts to EUR 10,000.80 and triggers project-director approval.",
+      "source_units": [
+        "C02",
+        "C04",
+        "C05"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "12,501 times 0.80 equals10,000.80; it strictly exceeds the threshold.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P04",
+      "statement": "The requester may give the project-director approval.",
+      "source_units": [
+        "C03"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "C03 explicitly prohibits the requester from providing director approval.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P05",
+      "statement": "A live market rate must replace the workbook rate.",
+      "source_units": [
+        "C01",
+        "C04"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "C01 requires the printed rate and prohibits the live rate.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P06",
+      "statement": "Shipping is excluded from the approval amount.",
+      "source_units": [
+        "C06"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "C06 explicitly includes shipping.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P07",
+      "statement": "Fractional euro cents must be rounded upward.",
+      "source_units": [
+        "C06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "C06 leaves fractional-cent rounding unspecified; neither upward nor another rounding duty follows.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "currency-approval",
+      "probe_id": "currency-approval-P08",
+      "statement": "VAT is excluded from the approval amount.",
+      "source_units": [
+        "C06"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "C06 explicitly excludes VAT.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P01",
+      "statement": "After dispute resolution, M2 resumes with 7 accrued payment days.",
+      "source_units": [
+        "S04",
+        "S06"
+      ],
+      "source_grounded_disposition": "supported",
+      "original_draft_disposition": "supported",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S04 resumes prior elapsed time and S06 supplies7 accrued days.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P02",
+      "statement": "After dispute resolution, M2 restarts with zero accrued payment days.",
+      "source_units": [
+        "S04",
+        "S06"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "Restarting at0 contradicts resuming7 elapsed days.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P03",
+      "statement": "M2 is now eligible for payment because its dispute is resolved and its acceptance is signed.",
+      "source_units": [
+        "S01",
+        "S02",
+        "S04",
+        "S06"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S01/S02 retain the purchase-order prerequisite; S06 states it is absent.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P04",
+      "statement": "Accounts Payable may sign milestone acceptance.",
+      "source_units": [
+        "S03"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S03 reserves signing to the named service owner.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P05",
+      "statement": "A dispute on M2 pauses M1.",
+      "source_units": [
+        "S05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S05 explicitly says an M2 dispute does not pause M1.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P06",
+      "statement": "M1 acceptance establishes M2 acceptance.",
+      "source_units": [
+        "S05"
+      ],
+      "source_grounded_disposition": "contradicted",
+      "original_draft_disposition": "contradicted",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S05 explicitly separates milestone acceptances.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P07",
+      "statement": "The total allowed payment time is 30 days.",
+      "source_units": [
+        "S06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S06 supplies no due-day total.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    },
+    {
+      "case_id": "service-acceptance",
+      "probe_id": "service-acceptance-P08",
+      "statement": "Automatic reminders must use email.",
+      "source_units": [
+        "S06"
+      ],
+      "source_grounded_disposition": "not_established",
+      "original_draft_disposition": "not_established",
+      "review_status": "advisory_concordance",
+      "alternative_dispositions": [],
+      "reason": "S06 supplies no automatic reminder channel.",
+      "human_adjudication": "pending",
+      "eligible_for_internal_observation": true,
+      "eligible_for_unique_label_scoring": true
+    }
+  ],
+  "workflow_reviews": [
+    {
+      "case_id": "emergency-spares",
+      "input": {
+        "declared_outage": true,
+        "amount_eur": 12001,
+        "quotation_count": 1,
+        "director_approval": false
+      },
+      "decision_reviews": [
+        {
+          "decision": "director_approval_before_issue",
+          "advisory_disposition": "required",
+          "original_draft_disposition": "required",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "three_quotations",
+          "advisory_disposition": "not_required",
+          "original_draft_disposition": "not_required",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "requester_self_approval",
+          "advisory_disposition": "prohibited",
+          "original_draft_disposition": "prohibited",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "status": "advisory_concordance"
+        }
+      ],
+      "human_adjudication": "pending",
+      "scope": "Necessary named-rule decisions only; no assertion that full process completeness or executable guards have been validated."
+    },
+    {
+      "case_id": "framework-calloffs",
+      "input": {
+        "framework": "FW-A",
+        "quarter": "current",
+        "existing_net_values_eur": [
+          30000,
+          40000
+        ],
+        "request_net_eur": 10000
+      },
+      "decision_reviews": [
+        {
+          "decision": "new_competition_from_amount_threshold",
+          "advisory_disposition": "not_required",
+          "original_draft_disposition": "not_required",
+          "source_units": [
+            "F01",
+            "F02",
+            "F04",
+            "F05"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "automatic_order_merge",
+          "advisory_disposition": "not_established",
+          "original_draft_disposition": "not_established",
+          "source_units": [
+            "F06"
+          ],
+          "status": "advisory_concordance"
+        }
+      ],
+      "human_adjudication": "pending",
+      "scope": "Necessary named-rule decisions only; no assertion that full process completeness or executable guards have been validated."
+    },
+    {
+      "case_id": "bank-change",
+      "input": {
+        "declared_outage": true,
+        "destination": "new_bank_details",
+        "treasury_verification": false,
+        "independent_approval": true
+      },
+      "decision_reviews": [
+        {
+          "decision": "use_new_destination",
+          "advisory_disposition": "prohibited",
+          "original_draft_disposition": "prohibited",
+          "source_units": [
+            "B01",
+            "B05"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "payment_to_previously_verified_account_by_treasury_lead",
+          "advisory_disposition": "permitted",
+          "original_draft_disposition": "permitted",
+          "source_units": [
+            "B04"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "mandatory_emergency_payment",
+          "advisory_disposition": "not_established",
+          "original_draft_disposition": "not_established",
+          "source_units": [
+            "B04"
+          ],
+          "status": "advisory_concordance"
+        }
+      ],
+      "human_adjudication": "pending",
+      "scope": "Necessary named-rule decisions only; no assertion that full process completeness or executable guards have been validated."
+    },
+    {
+      "case_id": "policy-transition",
+      "input": {
+        "requisition_created": "2026-10-01",
+        "amount_eur": 18000,
+        "unit": "North"
+      },
+      "decision_reviews": [
+        {
+          "decision": "finance_approval_from_amount_threshold",
+          "advisory_disposition": "required",
+          "original_draft_disposition": "required",
+          "source_units": [
+            "T02",
+            "T03"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "receipt_retention_period",
+          "advisory_disposition": "unresolved_conflict",
+          "original_draft_disposition": "unresolved_conflict",
+          "source_units": [
+            "T05",
+            "T06"
+          ],
+          "status": "advisory_concordance"
+        }
+      ],
+      "human_adjudication": "pending",
+      "scope": "Necessary named-rule decisions only; no assertion that full process completeness or executable guards have been validated."
+    },
+    {
+      "case_id": "currency-approval",
+      "input": {
+        "request": "B",
+        "amount_usd": 12501,
+        "shipping_eur": 0,
+        "vat_eur": 0
+      },
+      "decision_reviews": [
+        {
+          "decision": "project_director_approval",
+          "advisory_disposition": "required",
+          "original_draft_disposition": "required",
+          "source_units": [
+            "C01",
+            "C02",
+            "C04",
+            "C05"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "requester_provides_director_approval",
+          "advisory_disposition": "prohibited",
+          "original_draft_disposition": "prohibited",
+          "source_units": [
+            "C03"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "live_exchange_rate_substitution",
+          "advisory_disposition": "prohibited",
+          "original_draft_disposition": "prohibited",
+          "source_units": [
+            "C01"
+          ],
+          "status": "advisory_concordance"
+        }
+      ],
+      "human_adjudication": "pending",
+      "scope": "Necessary named-rule decisions only; no assertion that full process completeness or executable guards have been validated."
+    },
+    {
+      "case_id": "service-acceptance",
+      "input": {
+        "milestone": "M2",
+        "dispute": "resolved",
+        "signed_acceptance": true,
+        "purchase_order": false,
+        "previously_elapsed_payment_days": 7
+      },
+      "decision_reviews": [
+        {
+          "decision": "payment_eligible",
+          "advisory_disposition": "prohibited",
+          "original_draft_disposition": "prohibited",
+          "source_units": [
+            "S01",
+            "S02",
+            "S06"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "clock_restart_from_zero",
+          "advisory_disposition": "prohibited",
+          "original_draft_disposition": "prohibited",
+          "source_units": [
+            "S04",
+            "S06"
+          ],
+          "status": "advisory_concordance"
+        },
+        {
+          "decision": "thirty_day_payment_deadline",
+          "advisory_disposition": "not_established",
+          "original_draft_disposition": "not_established",
+          "source_units": [
+            "S06"
+          ],
+          "status": "advisory_concordance"
+        }
+      ],
+      "human_adjudication": "pending",
+      "scope": "Necessary named-rule decisions only; no assertion that full process completeness or executable guards have been validated."
+    }
+  ],
+  "metamorphic_reviews": [
+    {
+      "id": "emergency-spares-document-order",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Document order is not an authority rule; retain the identical source IDs and text.",
+      "human_review": "pending",
+      "executed": false
+    },
+    {
+      "id": "framework-calloffs-document-order",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Document order is not an authority rule; retain the identical source IDs and text.",
+      "human_review": "pending",
+      "executed": false
+    },
+    {
+      "id": "bank-change-document-order",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Document order is not an authority rule; retain the identical source IDs and text.",
+      "human_review": "pending",
+      "executed": false
+    },
+    {
+      "id": "policy-transition-document-order",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Document order is not an authority rule; retain the identical source IDs and text.",
+      "human_review": "pending",
+      "executed": false
+    },
+    {
+      "id": "currency-approval-document-order",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Document order is not an authority rule; retain the identical source IDs and text.",
+      "human_review": "pending",
+      "executed": false
+    },
+    {
+      "id": "service-acceptance-document-order",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Document order is not an authority rule; retain the identical source IDs and text.",
+      "human_review": "pending",
+      "executed": false
+    },
+    {
+      "id": "emergency-threshold-counterfactual",
+      "advisory_status": "coherent_as_proposed",
+      "reason": "Replacing all EUR12,000 threshold occurrences in E01 and E05 with EUR15,000 makes12,001 fall below the explicit amount trigger. P01/P02 invert as declared; the four listed unrelated controls remain unchanged. P06/P08 are not asserted invariant.",
+      "human_review": "pending",
+      "executed": false
+    }
+  ],
+  "legacy_recommendations": [
+    {
+      "review_item": "ITEM-A",
+      "legacy_item": "invoice-matching-P002",
+      "advisory_disposition": "contradicted",
+      "source_units": [
+        "R02",
+        "R03"
+      ],
+      "reason": "An increase of the tolerance from EUR  10 toEUR 10.50 would permit some variances above EUR 10, incompatible with the unqualified rule that such variances block automatic payment.",
+      "alternative": "not_established is defensible only if tolerance increase does not concern the automatic-payment tolerance or a distinct scope is intended; that premise is absent.",
+      "human_adjudication": "pending",
+      "original_label_changed": false
+    },
+    {
+      "review_item": "ITEM-B",
+      "legacy_item": "purchase-approval-P013",
+      "advisory_disposition": "not_established",
+      "source_units": [
+        "R10"
+      ],
+      "reason": "Per-request threshold assessment can coexist with a later administrative merge. The source neither requires merging nor expressly forbids it.",
+      "alternative": "contradicted would require an additional assumption that merging changes the threshold assessment unit before approval.",
+      "human_adjudication": "pending",
+      "original_label_changed": false
+    },
+    {
+      "review_item": "ITEM-C",
+      "legacy_item": "invoice-matching-P036",
+      "advisory_disposition": "split_required",
+      "source_units": [
+        "R04"
+      ],
+      "atomic_parts": [
+        {
+          "statement": "An analyst is obliged to request corrections for a blocked invoice.",
+          "disposition": "contradicted",
+          "reason": "R04 explicitly says asking is optional."
+        },
+        {
+          "statement": "A correction request uses a supplier portal.",
+          "disposition": "not_established",
+          "reason": "No supplied source specifies the channel."
+        }
+      ],
+      "whole_statement_if_contradiction_dominates": "contradicted",
+      "reason": "The unsupported portal detail must not conceal the inverted obligation. Whole-item aggregation must be frozen before responses are scored.",
+      "human_adjudication": "pending",
+      "original_label_changed": false
+    }
+  ],
+  "recommendation": "Proceed only as internal engineering feasibility after explicitly freezing treatment of P05 and workflow completeness boundaries. Keep human annotation templates blank and existing labels unchanged."
+}

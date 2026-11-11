@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "framework-calloffs-P01",
+      "label": "supported",
+      "source_units": ["F04", "F05"],
+      "rationale": "Using the stated current-quarter FW-A ledger, the pre-Q call-offs total EUR 70,000 and Q adds EUR 10,000, giving EUR 80,000. This calculation treats F04's stated list as the recorded pre-Q total."
+    },
+    {
+      "id": "framework-calloffs-P02",
+      "label": "contradicted",
+      "source_units": ["F04", "F05"],
+      "rationale": "The stated ledger gives EUR 30,000 + EUR 40,000 + EUR 10,000 = EUR 80,000, not EUR 90,000."
+    },
+    {
+      "id": "framework-calloffs-P03",
+      "label": "contradicted",
+      "source_units": ["F01", "F02", "F04", "F05"],
+      "rationale": "Including Q brings the stated total to exactly EUR 80,000. F02 explicitly says equality does not trigger a new competition; F01 requires the total to exceed that amount."
+    },
+    {
+      "id": "framework-calloffs-P04",
+      "label": "contradicted",
+      "source_units": ["F03"],
+      "rationale": "F03 explicitly states that cancelled call-offs count as zero, so a fully cancelled call-off does not retain its net value in the total."
+    },
+    {
+      "id": "framework-calloffs-P05",
+      "label": "contradicted",
+      "source_units": ["F01", "F06"],
+      "rationale": "F01 scopes the cumulative value to FW-A itself. F06 assigns Z to FW-B, placing it outside the FW-A total."
+    },
+    {
+      "id": "framework-calloffs-P06",
+      "label": "not_established",
+      "source_units": ["F06"],
+      "rationale": "F06 expressly says the records do not specify a merging rule. Automatic merging is therefore unestablished, but the absence of a rule does not establish that merging is prohibited."
+    },
+    {
+      "id": "framework-calloffs-P07",
+      "label": "supported",
+      "source_units": ["F03"],
+      "rationale": "F03 explicitly states that a partial cancellation removes only the cancelled net amount."
+    },
+    {
+      "id": "framework-calloffs-P08",
+      "label": "contradicted",
+      "source_units": ["F01"],
+      "rationale": "F01 limits the cumulative value to the current calendar quarter. A previous-quarter call-off falls outside that expressly stated temporal scope."
+    }
+  ]
+}

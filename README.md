@@ -251,3 +251,7 @@ New source-indexed translations are unreviewed drafts linked to raw outputs. The
 [Inspect the model roster](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#model-roster) for configuration scope, serving settings and observed input-token ranges. These are distinct from catalogue context ceilings. The ten historical configurations remain unranked, and the 35 external benchmark references were not executed.
 
 [Separate internal reviewer diagnostics](https://paloframework.org/PALO_BlueprintBench_Diagnostics.html) separates response structure from draft-label comparisons on 18 elementary pairs. [Review decisions](docs/calibration-review-decisions.md) explain adopted controls and unresolved limits. This does not qualify a PALO Blueprint Index or modify the 18-model cohort.
+
+### Six-scenario engineering feasibility
+
+The separate [next-cycle view](https://paloframework.org/PALO_BlueprintBench_NextCycle.html) reports internal execution on six fictional procurement scenarios, 48 propositions, workflow drafts and metamorphic checks. It preserves the original cohort unchanged. See [execution method](docs/next-cycle-execution.md) and [source records](internal_tests/2026-11-11-next-cycle). Human adjudication remains pending; no numerical model ranks or independent validation are assigned.

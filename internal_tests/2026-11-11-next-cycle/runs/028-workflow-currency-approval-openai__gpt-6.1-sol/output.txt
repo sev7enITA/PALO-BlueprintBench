@@ -1,0 +1,172 @@
+{
+  "typed_entities_and_identifiers": [
+    {
+      "name": "ApprovalRequest",
+      "identifier_status": "source_supported",
+      "fields": [
+        {
+          "name": "request_label",
+          "type": "string; source labels A and B, with no technical uniqueness guarantee",
+          "source_units": ["C05"]
+        },
+        {
+          "name": "amount_usd",
+          "type": "decimal in USD",
+          "source_units": ["C05"]
+        },
+        {
+          "name": "shipping_eur",
+          "type": "decimal in EUR; included in the approval amount; zero for A and B",
+          "source_units": ["C06"]
+        },
+        {
+          "name": "vat_eur",
+          "type": "decimal in EUR; excluded from the approval amount; zero for A and B",
+          "source_units": ["C06"]
+        }
+      ],
+      "source_units": ["C05", "C06"]
+    },
+    {
+      "name": "ApprovalWorkbookBatch",
+      "identifier_status": "not_established",
+      "fields": [
+        {
+          "name": "printed_eur_per_usd",
+          "type": "decimal in EUR per USD; 0.80 for this batch",
+          "source_units": ["C01", "C04"]
+        }
+      ],
+      "source_units": ["C01", "C04"]
+    },
+    {
+      "name": "DraftWorkflowEvaluation",
+      "identifier_status": "proposed_design",
+      "fields": [
+        {
+          "name": "approval_amount_eur",
+          "type": "derived exact decimal in EUR; includes shipping and excludes VAT",
+          "source_units": ["C01", "C04", "C06"]
+        },
+        {
+          "name": "director_approval_threshold_eur",
+          "type": "decimal in EUR; 10000",
+          "source_units": ["C02"]
+        },
+        {
+          "name": "workflow_state",
+          "type": "proposed enum: request_available, approval_amount_calculated, project_director_approval_required, no_named_director_approval_trigger; these labels do not establish approval or process completion",
+          "source_units": ["C01", "C02", "C03", "C06"]
+        }
+      ],
+      "source_units": ["C01", "C02", "C03", "C04", "C06"]
+    }
+  ],
+  "decision_predicates": [
+    {
+      "id": "P01",
+      "decision": "project_director_approval",
+      "actor": "Conversion preparer; the requester is permitted, but not required, to prepare the conversion",
+      "scope": "USD requests in this fictional approval batch",
+      "condition": "Determine the approval amount using the workbook rate of 0.80 EUR per USD, including shipping and excluding VAT. For B, with zero shipping and VAT, the exact amount is 12501 × 0.80 = EUR 10000.80.",
+      "units": "USD, EUR, and EUR per USD",
+      "comparison": "not applicable",
+      "source_units": ["C01", "C03", "C04", "C05", "C06"]
+    },
+    {
+      "id": "P02",
+      "decision": "project_director_approval",
+      "actor": "Project director",
+      "scope": "The named converted-amount approval trigger",
+      "condition": "Project-director approval is required when the approval amount exceeds EUR 10000.",
+      "units": "EUR",
+      "comparison": "approval_amount_eur > 10000",
+      "source_units": ["C02"]
+    },
+    {
+      "id": "P03",
+      "decision": "project_director_approval",
+      "actor": "Project director",
+      "scope": "Only the named converted-amount approval trigger, not other possible prerequisites",
+      "condition": "An approval amount at or below EUR 10000 does not activate this trigger. Exactly EUR 10000 is explicitly below the trigger.",
+      "units": "EUR",
+      "comparison": "approval_amount_eur <= 10000",
+      "source_units": ["C02"]
+    },
+    {
+      "id": "P04",
+      "decision": "requester_provides_director_approval",
+      "actor": "Requester",
+      "scope": "Giving project-director approval, distinct from preparing the conversion",
+      "condition": "The requester cannot give the project-director approval, although the requester may prepare the conversion.",
+      "units": "not applicable",
+      "comparison": "not applicable",
+      "source_units": ["C03"]
+    },
+    {
+      "id": "P05",
+      "decision": "live_exchange_rate_substitution",
+      "actor": "Whoever performs the conversion; no exclusive actor is specified",
+      "scope": "Conversion of USD requests to EUR",
+      "condition": "Use the rate printed in the approval workbook; substituting a live exchange rate is prohibited.",
+      "units": "EUR per USD",
+      "comparison": "not applicable",
+      "source_units": ["C01", "C04"]
+    }
+  ],
+  "process_transitions": [
+    {
+      "from_state": "request_available",
+      "to_state": "approval_amount_calculated",
+      "event": "An authorized conversion basis is applied to the request",
+      "guard": "The request is in USD; apply the printed batch rate of 0.80 EUR per USD, include shipping, exclude VAT, and do not substitute a live rate. The requester may prepare this calculation. For B, the resulting amount is exactly EUR 10000.80.",
+      "predicate_ids": ["P01", "P05"],
+      "source_units": ["C01", "C03", "C04", "C05", "C06"]
+    },
+    {
+      "from_state": "approval_amount_calculated",
+      "to_state": "project_director_approval_required",
+      "event": "The named approval threshold is evaluated",
+      "guard": "The approval amount is strictly greater than EUR 10000. Entering this proposed state records an obligation, not an approval having occurred.",
+      "predicate_ids": ["P02"],
+      "source_units": ["C02"]
+    },
+    {
+      "from_state": "approval_amount_calculated",
+      "to_state": "no_named_director_approval_trigger",
+      "event": "The named approval threshold is evaluated",
+      "guard": "The approval amount is at or below EUR 10000. This branch closes only the named threshold test; it does not establish that other prerequisites are satisfied or that the request is approved.",
+      "predicate_ids": ["P03"],
+      "source_units": ["C02"]
+    }
+  ],
+  "scenario_decisions": [
+    {
+      "decision": "project_director_approval",
+      "disposition": "required",
+      "predicate_ids": ["P01", "P02"],
+      "source_units": ["C01", "C02", "C04", "C05", "C06"],
+      "rationale": "For Request B, USD 12501 × 0.80 EUR/USD = EUR 10000.80. Shipping and VAT are both zero, so they do not change this amount. EUR 10000.80 strictly exceeds EUR 10000, activating the project-director approval obligation. The calculation produces whole euro cents, so the missing fractional-cent rounding rule does not affect this decision. No actual approval or satisfaction of other prerequisites is established."
+    },
+    {
+      "decision": "requester_provides_director_approval",
+      "disposition": "prohibited",
+      "predicate_ids": ["P04"],
+      "source_units": ["C03"],
+      "rationale": "The requester is explicitly barred from giving project-director approval. Permission to prepare the conversion does not confer approval authority, including for Request B."
+    },
+    {
+      "decision": "live_exchange_rate_substitution",
+      "disposition": "prohibited",
+      "predicate_ids": ["P05"],
+      "source_units": ["C01", "C04"],
+      "rationale": "Request B is a USD request, so the explicit prohibition on using a live exchange rate applies. The workbook's printed batch rate of 0.80 EUR per USD must be used instead."
+    }
+  ],
+  "unresolved_questions": [
+    "What rounding rule applies when a conversion produces fractional euro cents? C06 leaves this unanswered; it is not material to Request B's exact EUR 10000.80 result.",
+    "Has the project director actually approved Request B? The sources establish the obligation, not its fulfillment.",
+    "Do any prerequisites outside the named rules apply? Their existence and satisfaction are not established; the proposed transitions are not a complete approval process.",
+    "What technical identifiers or uniqueness constraints should be used for requests, workbook batches, and evaluation records? The sources provide request labels but no such implementation guarantees."
+  ]
+}
