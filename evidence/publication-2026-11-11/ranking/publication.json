@@ -1,0 +1,15 @@
+{
+  "status": "ftps_published",
+  "at": "2026-11-11T15:46:06.471981+00:00",
+  "files": {
+    "PALO_BlueprintBench.html": "e1e806b8d89bb20fed06d4d673f9bdfe822eb217f2ffdd1f9c2acb856e009e31",
+    "CHANGELOG.html": "760fe960429fdfdaf23dc0224927bc1a6f12344b52e1d92a515d655ac9b3fccf",
+    "CHANGELOG.md": "af73987493e94323586f5ba0c9b1b574fd944f5eb1d671cf97ac736e31e7dac0",
+    "PALO_BlueprintBench_Leaderboard.html": "c3a49f4975d09167ba8bc0369f436397713026b9977e6aa5bd6a21adfd1abc49",
+    "downloads/blueprintbench/release-manifest.json": "4f39f59d9198adf92ab96fb0a7c5e7cde38d5524d87970018778e07b6837b316",
+    "downloads/blueprintbench/model-origins.json": "61992c8b3919e42772d451cfe6f1bb37e5891ddd998ffc3cd6c498987d54c9ac",
+    "assets/blueprintbench/leaderboard.css": "0dbab4c6644e87380af1ea402e40a64a9169e45e2b5becb7a31d161d9c34ff16",
+    "assets/blueprintbench/leaderboard.js": "a9e44b31067f98952c03e6bc8460919ab62196d2f858b3613ed62985afde8b69"
+  },
+  "remote_readback_verified": true
+}

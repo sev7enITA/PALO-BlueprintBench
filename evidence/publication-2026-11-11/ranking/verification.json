@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-11",
+  "change": "Metric ranks, sourced developer country filters, KPI columns and CSV/JSON exports",
+  "python_tests": 23,
+  "python_tests_passed": 23,
+  "generated_artifacts_verified": 25,
+  "schema_property_domain_checks": 273,
+  "browser_regressions": [
+    "rank calculations and ties",
+    "filters preserve ranks",
+    "CSV/JSON provenance and order",
+    "country attribution outage",
+    "320/375/768/1440 layouts",
+    "temporal chart",
+    "adversarial dashboard",
+    "Pareto and case analytics"
+  ],
+  "frozen_campaign_data_changed": false,
+  "independently_qualified": false,
+  "verification_environment": "Private snapshot from Git objects plus reviewed changed files, avoiding dataless iCloud evidence placeholders; generated pages copied back after checks.",
+  "budget_review_receipt": "../../../reviews/ranked-leaderboard-2026-11-11/budget-after.json"
+}
