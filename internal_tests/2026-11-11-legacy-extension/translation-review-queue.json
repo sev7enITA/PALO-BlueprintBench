@@ -1,0 +1,1239 @@
+{
+  "invoice-matching:021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "{",
+    "text_sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small",
+      "2-invoice-matching-translation-inference-net__schematron-v2-small",
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:2271b06e6dfff3c7ddee5611ef4935cbd04ad3d7dc2f97a922bbeec207bfccc5": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R01\": \"An invoice requires both an existing purchase order and a receipt record before automatic payment.\",",
+    "text_sha256": "2271b06e6dfff3c7ddee5611ef4935cbd04ad3d7dc2f97a922bbeec207bfccc5",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:d2d53aae65d6566a2afcbcf4f5eaf0549a84fbb382c5457b6beac406b2a644e9": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R02\": \"An invoice variance of exactly EUR 10 is within tolerance.\",",
+    "text_sha256": "d2d53aae65d6566a2afcbcf4f5eaf0549a84fbb382c5457b6beac406b2a644e9",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:36ed46abf4a211ffe7a7bf1517695920238d0594f837b69164ac536ac8e0555a": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R03\": \"An invoice variance above EUR 10 blocks automatic payment.\",",
+    "text_sha256": "36ed46abf4a211ffe7a7bf1517695920238d0594f837b69164ac536ac8e0555a",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:6acb478858d4be444e4139159a2522be1d69a0b479cadf6e3d869bc9385e1b52": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R04\": \"For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.\",",
+    "text_sha256": "6acb478858d4be444e4139159a2522be1d69a0b479cadf6e3d869bc9385e1b52",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:f126385b82a9cd25b39daea36619a6fe52564cbbc8c8fbfe86d364216724e4eb": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R05\": \"Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.\",",
+    "text_sha256": "f126385b82a9cd25b39daea36619a6fe52564cbbc8c8fbfe86d364216724e4eb",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:06db42fe89c2149ec670b69aa0c71862c921a9bf60ba51772148c14aeee7a0e6": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R06\": \"The person who changed supplier bank details must not approve payment to those details.\",",
+    "text_sha256": "06db42fe89c2149ec670b69aa0c71862c921a9bf60ba51772148c14aeee7a0e6",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:41c63c245196b422115f2fb29bff4c3a653acc222b4b3c1ed31cfa8ce837704d": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R07\": \"For a service invoice, an authorised service acceptance replaces the goods receipt record.\",",
+    "text_sha256": "41c63c245196b422115f2fb29bff4c3a653acc222b4b3c1ed31cfa8ce837704d",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:cf2473a7aa7fe96b2b3b79cf0eb79210e0319f011201512b34acea5e775f352b": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R08\": \"Service acceptance does not replace the purchase-order requirement.\",",
+    "text_sha256": "cf2473a7aa7fe96b2b3b79cf0eb79210e0319f011201512b34acea5e775f352b",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:bf661766237c1ef6c53cacf9791053cc64c17927937ae60a08daf7dcf06d0700": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R09\": \"A dispute freezes the payment clock until the dispute is resolved.\",",
+    "text_sha256": "bf661766237c1ef6c53cacf9791053cc64c17927937ae60a08daf7dcf06d0700",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:322a084040f0ac5fdf70a23e9932a524f0c1c7f2fea7de71c206266018ba3c98": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R10\": \"After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.\",",
+    "text_sha256": "322a084040f0ac5fdf70a23e9932a524f0c1c7f2fea7de71c206266018ba3c98",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:147738328e66ba34d03e32892e06c1de1c3a7257c83525c1cb456f7c1b7568fe": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R11\": \"An invoice number is unique only within a supplier; different suppliers may reuse the same number.\",",
+    "text_sha256": "147738328e66ba34d03e32892e06c1de1c3a7257c83525c1cb456f7c1b7568fe",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:7fe4e36486e55f3f3f11a9de2206a763d87c17172ea0329a55431e0f4b211525": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"R12\": \"The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.\"",
+    "text_sha256": "7fe4e36486e55f3f3f11a9de2206a763d87c17172ea0329a55431e0f4b211525",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "}",
+    "text_sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+    "occurrences": [
+      "1-invoice-matching-translation-inference-net__schematron-v2-small",
+      "2-invoice-matching-translation-inference-net__schematron-v2-small",
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:d6909485ada9aa8babfb765c9451d2b874af2ae917ab88f80c320b49464c5f0b": {
+    "case": "invoice-matching",
+    "source_id": "R01",
+    "text": "R01 :: An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+    "text_sha256": "d6909485ada9aa8babfb765c9451d2b874af2ae917ab88f80c320b49464c5f0b",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:7e7500243648f884e151cc908810631a95a969c3d9825c7f56ed43e90a1417e4": {
+    "case": "invoice-matching",
+    "source_id": "R02",
+    "text": "R02 :: An invoice variance of exactly EUR 10 is within tolerance.",
+    "text_sha256": "7e7500243648f884e151cc908810631a95a969c3d9825c7f56ed43e90a1417e4",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:2d48c9c418dadb7e274719ccd483e5b6abf90623ea20fea6dac03bce93b812ca": {
+    "case": "invoice-matching",
+    "source_id": "R03",
+    "text": "R03 :: An invoice variance above EUR 10 blocks automatic payment.",
+    "text_sha256": "2d48c9c418dadb7e274719ccd483e5b6abf90623ea20fea6dac03bce93b812ca",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:fd5ba794e0dc7bcf88e45b9b7f5516c9fb5fbdad3e3f5be1ade52a5733f2e37e": {
+    "case": "invoice-matching",
+    "source_id": "R04",
+    "text": "R04 :: For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.",
+    "text_sha256": "fd5ba794e0dc7bcf88e45b9b7f5516c9fb5fbdad3e3f5be1ade52a5733f2e37e",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:415fd8faef159cebbe577db4db7e649c34ffce7db366b98a3b98494588b8cab5": {
+    "case": "invoice-matching",
+    "source_id": "R05",
+    "text": "R05 :: Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.",
+    "text_sha256": "415fd8faef159cebbe577db4db7e649c34ffce7db366b98a3b98494588b8cab5",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:c25f8e0c11f46955d6d20b1236aa878aa47ddcd373d3f389031fc6895f4a901e": {
+    "case": "invoice-matching",
+    "source_id": "R06",
+    "text": "R06 :: The person who changed supplier bank details must not approve payment to those details.",
+    "text_sha256": "c25f8e0c11f46955d6d20b1236aa878aa47ddcd373d3f389031fc6895f4a901e",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:82b561f3ea5ba823bfa6fbcfb812e5d4b92dfe701fa32fe655be4a8c64db4151": {
+    "case": "invoice-matching",
+    "source_id": "R07",
+    "text": "R07 :: For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+    "text_sha256": "82b561f3ea5ba823bfa6fbcfb812e5d4b92dfe701fa32fe655be4a8c64db4151",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:e8d8dbd600a63f596a23652cf8ba4d92b5b6afab8b3d158aaeda0c7d15701515": {
+    "case": "invoice-matching",
+    "source_id": "R08",
+    "text": "R08 :: Service acceptance does not replace the purchase-order requirement.",
+    "text_sha256": "e8d8dbd600a63f596a23652cf8ba4d92b5b6afab8b3d158aaeda0c7d15701515",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:db74f6282efe450856cd75626aa920f479ec68813138fefb40a17430df5b7c8f": {
+    "case": "invoice-matching",
+    "source_id": "R09",
+    "text": "R09 :: A dispute freezes the payment clock until the dispute is resolved.",
+    "text_sha256": "db74f6282efe450856cd75626aa920f479ec68813138fefb40a17430df5b7c8f",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:0364f60f447875d95e48568769e268f45177b8e76b2728786bc6eaaf09c1e13c": {
+    "case": "invoice-matching",
+    "source_id": "R10",
+    "text": "R10 :: After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.",
+    "text_sha256": "0364f60f447875d95e48568769e268f45177b8e76b2728786bc6eaaf09c1e13c",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:56945622b4402bcbb265fecd9b94a3239d0a2c859c991a499656eedd2e5097fd": {
+    "case": "invoice-matching",
+    "source_id": "R11",
+    "text": "R11 :: An invoice number is unique only within a supplier; different suppliers may reuse the same number.",
+    "text_sha256": "56945622b4402bcbb265fecd9b94a3239d0a2c859c991a499656eedd2e5097fd",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:a09b21dbe9a0080fa72bed2bc3d7abdc115de3f506913cd3055d774178ab04d9": {
+    "case": "invoice-matching",
+    "source_id": "R12",
+    "text": "R12 :: The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.",
+    "text_sha256": "a09b21dbe9a0080fa72bed2bc3d7abdc115de3f506913cd3055d774178ab04d9",
+    "occurrences": [
+      "1-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-invoice-matching-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "{",
+    "text_sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+    "occurrences": [
+      "1-purchase-approval-translation-inference-net__schematron-v2-small",
+      "2-purchase-approval-translation-inference-net__schematron-v2-small",
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:094d05cb889e4b8ef10250dd97b50fe23ac8eeb6c65eaff323183db94256a998": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "  \"R01\": \"R01 A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.\"",
+    "text_sha256": "094d05cb889e4b8ef10250dd97b50fe23ac8eeb6c65eaff323183db94256a998",
+    "occurrences": [
+      "1-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "}",
+    "text_sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+    "occurrences": [
+      "1-purchase-approval-translation-inference-net__schematron-v2-small",
+      "2-purchase-approval-translation-inference-net__schematron-v2-small",
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:c449ecc41a677bb8b44f3d5b19ec281c8899eec93c37749b63f9dfecd202dacb": {
+    "case": "purchase-approval",
+    "source_id": "R01",
+    "text": "R01 :: For a purchase amount above EUR 5,000, Finance approval must be received before the purchase order is issued.",
+    "text_sha256": "c449ecc41a677bb8b44f3d5b19ec281c8899eec93c37749b63f9dfecd202dacb",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:3d4385df886d403eb9c37cfd58af669c04ac05693caacf2cb8d2afc242cfa2ae": {
+    "case": "purchase-approval",
+    "source_id": "R02",
+    "text": "R02 :: Finance approval is not required for a purchase of exactly EUR 5,000.",
+    "text_sha256": "3d4385df886d403eb9c37cfd58af669c04ac05693caacf2cb8d2afc242cfa2ae",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:9792bb68931adcb16e94b9051d4aa8b77817a1c29934191a2c92bf02a761bf94": {
+    "case": "purchase-approval",
+    "source_id": "R03",
+    "text": "R03 :: For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "text_sha256": "9792bb68931adcb16e94b9051d4aa8b77817a1c29934191a2c92bf02a761bf94",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:90ddda6404013247118d97e485208ec93254df2d6ee97719e0477e92ee9d5caa": {
+    "case": "purchase-approval",
+    "source_id": "R04",
+    "text": "R04 :: A requester must never approve their own purchase request.",
+    "text_sha256": "90ddda6404013247118d97e485208ec93254df2d6ee97719e0477e92ee9d5caa",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:d0e11c1dfe29b94671cc435abd78f909946e68a97df5d55cae4f2f89ef65af1f": {
+    "case": "purchase-approval",
+    "source_id": "R05",
+    "text": "R05 :: An emergency purchase is exempt from obtaining competitive quotations.",
+    "text_sha256": "d0e11c1dfe29b94671cc435abd78f909946e68a97df5d55cae4f2f89ef65af1f",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:1b71dd34e6d7a47a3190d50311a3203cbbc145328e898346a7423b76157fde1c": {
+    "case": "purchase-approval",
+    "source_id": "R06",
+    "text": "R06 :: The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.",
+    "text_sha256": "1b71dd34e6d7a47a3190d50311a3203cbbc145328e898346a7423b76157fde1c",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:01919d3ff24e34b3802905eb3b15bc16ba8d9a790a6c12483127ad784a75c05a": {
+    "case": "purchase-approval",
+    "source_id": "R07",
+    "text": "R07 :: Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+    "text_sha256": "01919d3ff24e34b3802905eb3b15bc16ba8d9a790a6c12483127ad784a75c05a",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:b1ffa6fedeeec18fba0074665da10564e902e3bc943737fcde03b9ffca375506": {
+    "case": "purchase-approval",
+    "source_id": "R08",
+    "text": "R08 :: If a requester cancels a request before approval, that requester must record the cancellation reason.",
+    "text_sha256": "b1ffa6fedeeec18fba0074665da10564e902e3bc943737fcde03b9ffca375506",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:fe6bb4610f3fa5a6cbdc6949dd185c17d767f244c127e52ff555cce40a4bf946": {
+    "case": "purchase-approval",
+    "source_id": "R09",
+    "text": "R09 :: Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+    "text_sha256": "fe6bb4610f3fa5a6cbdc6949dd185c17d767f244c127e52ff555cce40a4bf946",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:0ec9223f17b29a05ac282fc19edbfcafa17b9c74973fdb6e1f80c0a24d042ba2": {
+    "case": "purchase-approval",
+    "source_id": "R10",
+    "text": "R10 :: The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+    "text_sha256": "0ec9223f17b29a05ac282fc19edbfcafa17b9c74973fdb6e1f80c0a24d042ba2",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:2c31b8970ceb18710e629ed0127fe0b58e310f78ca02214b439a65dc95c00480": {
+    "case": "purchase-approval",
+    "source_id": "R11",
+    "text": "R11 :: Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+    "text_sha256": "2c31b8970ceb18710e629ed0127fe0b58e310f78ca02214b439a65dc95c00480",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:65a097b3588972e179b0ed27e64a2932925fcf6555c18484468b746f07990c7e": {
+    "case": "purchase-approval",
+    "source_id": "R12",
+    "text": "R12 :: The retention period begins on the approval date, not the purchase-order date.",
+    "text_sha256": "65a097b3588972e179b0ed27e64a2932925fcf6555c18484468b746f07990c7e",
+    "occurrences": [
+      "1-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "{",
+    "text_sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:f02b58cabd6cef113b7a5ec5b10883aaac5e819785be3a704896fc80ba6b98a6": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R01\": \"A new supplier must complete identity verification before its first purchase order.\",",
+    "text_sha256": "f02b58cabd6cef113b7a5ec5b10883aaac5e819785be3a704896fc80ba6b98a6",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:4aa1ca02b3c541d2d7f8663b1cb43214b604ad2e79e0f3250a4bea91a52afe3a": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R02\": \"The Compliance officer performs identity verification; the buyer does not perform it.\",",
+    "text_sha256": "4aa1ca02b3c541d2d7f8663b1cb43214b604ad2e79e0f3250a4bea91a52afe3a",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:9cdaf405865a2031638da079773631ef95bee5dcf975f007dc06f91e6b1b9812": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R03\": \"For a low-risk supplier, Compliance may request a site visit but is not obliged to request one.\",",
+    "text_sha256": "9cdaf405865a2031638da079773631ef95bee5dcf975f007dc06f91e6b1b9812",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:371d2941ec2a0f0775bd4dc1d046c93154776d8c0fa5650e8793da326447f0f9": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R04\": \"A high-risk supplier must undergo an enhanced review.\",",
+    "text_sha256": "371d2941ec2a0f0775bd4dc1d046c93154776d8c0fa5650e8793da326447f0f9",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:a409695a98ab0e0ede03d56022ed3b806807a38f9bbd9f2e90cfe71f0e63eb10": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R05\": \"A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.\",",
+    "text_sha256": "a409695a98ab0e0ede03d56022ed3b806807a38f9bbd9f2e90cfe71f0e63eb10",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:aaa8a54518d0b6a845d97832c1dd6689a70abc5316af3d5eb70ea0d63b9f26f9": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R06\": \"The renewal exemption does not apply when the supplier changes its legal name.\",",
+    "text_sha256": "aaa8a54518d0b6a845d97832c1dd6689a70abc5316af3d5eb70ea0d63b9f26f9",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:f10899844232f8d7be331553f4a1aa8b3c586f7e154c47aa2e3b9b16413ad44b": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R07\": \"A buyer must not activate a supplier flagged as blocked.\",",
+    "text_sha256": "f10899844232f8d7be331553f4a1aa8b3c586f7e154c47aa2e3b9b16413ad44b",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:27ad938970a1f7f5837ce5cb5411214eee944024a0ad6af070e9fbec4f1c4e97": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R08\": \"A risk score of 70 or more is classified as high risk.\",",
+    "text_sha256": "27ad938970a1f7f5837ce5cb5411214eee944024a0ad6af070e9fbec4f1c4e97",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:b29d4e997d55b6e7de66d467f55b7d141fc6c736606d1c8ab4e3ee01be3c5383": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R09\": \"Risk scores below 70 are classified as low risk.\",",
+    "text_sha256": "b29d4e997d55b6e7de66d467f55b7d141fc6c736606d1c8ab4e3ee01be3c5383",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:07071619d7efb896fa82be50886f5e27c730fa63d12e9849de83b29d4c0c548f": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R10\": \"Approval expires 365 calendar days after its approval date.\",",
+    "text_sha256": "07071619d7efb896fa82be50886f5e27c730fa63d12e9849de83b29d4c0c548f",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:d3c33febf9dbb7fe6c4bec7ff35c867be02e4d4d9c0aef61cda123a1ea400dc9": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R11\": \"Changing a supplier bank account requires a new independent bank-account check before the next payment.\",",
+    "text_sha256": "d3c33febf9dbb7fe6c4bec7ff35c867be02e4d4d9c0aef61cda123a1ea400dc9",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:9616369e0838fd329371170bd90dcbc616f176c3c5d4f6053edfccc7c09675f9": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R12\": \"Two supplier records may share a contact email address; the email address is not unique.\"",
+    "text_sha256": "9616369e0838fd329371170bd90dcbc616f176c3c5d4f6053edfccc7c09675f9",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "}",
+    "text_sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+    "occurrences": [
+      "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:fadd55a6673f6cfcef307c14c2199420c8fbb8135add5e63912047e8b8f9592a": {
+    "case": "supplier-onboarding",
+    "source_id": "R01",
+    "text": "R01 :: A new supplier must complete identity verification before its first purchase order.",
+    "text_sha256": "fadd55a6673f6cfcef307c14c2199420c8fbb8135add5e63912047e8b8f9592a",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:e85417855ef5c14bae7514dbd6328bd66b6cf5106a0f1885a8cb8736959f6678": {
+    "case": "supplier-onboarding",
+    "source_id": "R02",
+    "text": "R02 :: The Compliance officer performs identity verification; the buyer does not perform it.",
+    "text_sha256": "e85417855ef5c14bae7514dbd6328bd66b6cf5106a0f1885a8cb8736959f6678",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:bcc0ceebc1581cd99d2958456602b48a2db9c24dc1399b167a7b5efdf5901859": {
+    "case": "supplier-onboarding",
+    "source_id": "R03",
+    "text": "R03 :: For a low-risk supplier, Compliance may request a site visit but is not obliged to request one.",
+    "text_sha256": "bcc0ceebc1581cd99d2958456602b48a2db9c24dc1399b167a7b5efdf5901859",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:5b190c849a55ec23474e98a29401ce4c52880de37f09328706068dabb61d01ab": {
+    "case": "supplier-onboarding",
+    "source_id": "R04",
+    "text": "R04 :: A high-risk supplier must undergo an enhanced review.",
+    "text_sha256": "5b190c849a55ec23474e98a29401ce4c52880de37f09328706068dabb61d01ab",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:2af3ffb4c4951406284574f2b0150c85c27cf4e2b301a75e01c457540ed9c5a2": {
+    "case": "supplier-onboarding",
+    "source_id": "R05",
+    "text": "R05 :: A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "text_sha256": "2af3ffb4c4951406284574f2b0150c85c27cf4e2b301a75e01c457540ed9c5a2",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:93b8db521007379dd0d2721f988c43cb3e30bf825ff8fbb7a65e6a6032b20842": {
+    "case": "supplier-onboarding",
+    "source_id": "R06",
+    "text": "R06 :: The renewal exemption does not apply when the supplier changes its legal name.",
+    "text_sha256": "93b8db521007379dd0d2721f988c43cb3e30bf825ff8fbb7a65e6a6032b20842",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:9cde2201e9c5a2c1a441e54eb6caf319caba939fff844f1efb655e742362bc91": {
+    "case": "supplier-onboarding",
+    "source_id": "R07",
+    "text": "R07 :: A buyer must not activate a supplier flagged as blocked.",
+    "text_sha256": "9cde2201e9c5a2c1a441e54eb6caf319caba939fff844f1efb655e742362bc91",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:fe23f574c6cacaa18a2dc5f07fb3d63701fff201cd87e04f745736da618f6f51": {
+    "case": "supplier-onboarding",
+    "source_id": "R08",
+    "text": "R08 :: A risk score of 70 or more is classified as high risk.",
+    "text_sha256": "fe23f574c6cacaa18a2dc5f07fb3d63701fff201cd87e04f745736da618f6f51",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:df2c853f1d7997934f2035715885ccc7dc097113a597a5818ce38343b7b21b9e": {
+    "case": "supplier-onboarding",
+    "source_id": "R09",
+    "text": "R09 :: Risk scores below 70 are classified as low risk.",
+    "text_sha256": "df2c853f1d7997934f2035715885ccc7dc097113a597a5818ce38343b7b21b9e",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:e10e24dcd21c4955baf893dcb093ebafe748f626e249430b4a4821c9ce7926fc": {
+    "case": "supplier-onboarding",
+    "source_id": "R10",
+    "text": "R10 :: Approval expires 365 calendar days after its approval date.",
+    "text_sha256": "e10e24dcd21c4955baf893dcb093ebafe748f626e249430b4a4821c9ce7926fc",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:417888e93fcc175badce50a03ec4dd6fc4b6bccdd1a5144a1ed2ec085b2214b4": {
+    "case": "supplier-onboarding",
+    "source_id": "R11",
+    "text": "R11 :: Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+    "text_sha256": "417888e93fcc175badce50a03ec4dd6fc4b6bccdd1a5144a1ed2ec085b2214b4",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:efe8df4e4f249d6e5b7ec7e5ac1bae9c4fc99414a7ed68efad300a7f12575667": {
+    "case": "supplier-onboarding",
+    "source_id": "R12",
+    "text": "R12 :: Two supplier records may share a contact email address; the email address is not unique.",
+    "text_sha256": "efe8df4e4f249d6e5b7ec7e5ac1bae9c4fc99414a7ed68efad300a7f12575667",
+    "occurrences": [
+      "1-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "2-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-supplier-onboarding-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "invoice-matching:2b84f74fd4040ee782de412275f93a220ac10f4ad9b62b0d205415544f4a3ec4": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv1\": \"The source order and receipt record are required before automatic payment (R01).\",",
+    "text_sha256": "2b84f74fd4040ee782de412275f93a220ac10f4ad9b62b0d205415544f4a3ec4",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:26ed8777b9f32e5773ff424e6edb7e04d0dc88af772e384267d1ec32b7255a8a": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv2\": \"An invoice variance of EUR\u202f10 is considered acceptable (R02).\",",
+    "text_sha256": "26ed8777b9f32e5773ff424e6edb7e04d0dc88af772e384267d1ec32b7255a8a",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:8d80e877a355503b420a55bd525c6a03c28af920808a377faed3648396cf1385": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv3\": \"Any invoice variance above EUR\u202f10 blocks automatic payment (R03).\",",
+    "text_sha256": "8d80e877a355503b420a55bd525c6a03c28af920808a377faed3648396cf1385",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:a5b03b2e69768b54bc7b0fc04c6c4b4bd1db39a2f56d0004c98cd8da35b205c5": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv4\": \"For a blocked invoice, an Accounts Payable analyst may request a correction but is not required to (R04).\",",
+    "text_sha256": "a5b03b2e69768b54bc7b0fc04c6c4b4bd1db39a2f56d0004c98cd8da35b205c5",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:111273dc38177ccce77ed0e83e665edd54c79b3b036a677d05323c54714b7013": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv5\": \"The receiving team records the goods receipt; Accounts Payable does not (R05).\",",
+    "text_sha256": "111273dc38177ccce77ed0e83e665edd54c79b3b036a677d05323c54714b7013",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:420d39e952dfc3a0dcf1a72561c72c063598d3a5d59d24a9e9c037ac4fd26824": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv6\": \"The person who changed supplier bank details must not be asked to approve payment to those new details (R06).\",",
+    "text_sha256": "420d39e952dfc3a0dcf1a72561c72c063598d3a5d59d24a9e9c037ac4fd26824",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:9e4ff4ec3b927a6e769168a331ec675390ad8bf2dd3c566a3262c8403aebf942": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv7\": \"An authorised service acceptance replaces the goods receipt record for service invoices (R07).\",",
+    "text_sha256": "9e4ff4ec3b927a6e769168a331ec675390ad8bf2dd3c566a3262c8403aebf942",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:65c9ae477ab2be68bf729c6444a7dd70b30b36b097ed4e0641f3acbfcd85d94b": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv8\": \"Service acceptance does not replace the purchase\u2011order requirement (R08).\",",
+    "text_sha256": "65c9ae477ab2be68bf729c6444a7dd70b30b36b097ed4e0641f3acbfcd85d94b",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:5be2af82bc4ddb5a3d37b2be5b21e3fd47a6ddcd92b18548eff015ca2abf707d": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv9\": \"A dispute freezes the payment clock until the dispute is resolved (R09).\",",
+    "text_sha256": "5be2af82bc4ddb5a3d37b2be5b21e3fd47a6ddcd92b18548eff015ca2abf707d",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:c849ba63c52191e862355f230f948f6ab7f1beaf508ff65559b3fb6de68112d5": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv10\": \"After dispute resolution, the payment clock resumes from its paused value rather than resetting to zero (R10).\",",
+    "text_sha256": "c849ba63c52191e862355f230f948f6ab7f1beaf508ff65559b3fb6de68112d5",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:464f0531256a0a131ef3e8fb787c1dadbbc611e254c3e88501a7b9497cc69c7b": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv11\": \"An invoice number is unique only within a supplier; different suppliers may reuse the same number (R11).\",",
+    "text_sha256": "464f0531256a0a131ef3e8fb787c1dadbbc611e254c3e88501a7b9497cc69c7b",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:2dd7746c3988f928b2ede05bf5eb44f56cb638719f0f563b246bf8d1f03e5acb": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"uv12\": \"The tolerance is applied to each invoice separately, not against any cumulative supplier invoice (R12).\"",
+    "text_sha256": "2dd7746c3988f928b2ede05bf5eb44f56cb638719f0f563b246bf8d1f03e5acb",
+    "occurrences": [
+      "2-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:0a80fb0bcf3d46ec72cd8ee13f3045d9f7f041f56c8076a657ef44594de600e7": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "  \"specifications\": [",
+    "text_sha256": "0a80fb0bcf3d46ec72cd8ee13f3045d9f7f041f56c8076a657ef44594de600e7",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:66d5dc635f1c2209b22add67e1ccab97c641221562779945b0ac56e39d45ddf9": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R01 A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.\",",
+    "text_sha256": "66d5dc635f1c2209b22add67e1ccab97c641221562779945b0ac56e39d45ddf9",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:012377229f5db28baf049066d0db3f45e1d5917bde784f237d432fbf7fe42843": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R02 For a purchase of exactly EUR 5,000, Finance approval is not required.\",",
+    "text_sha256": "012377229f5db28baf049066d0db3f45e1d5917bde784f237d432fbf7fe42843",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:c619e0062b10528a221e108988fd71f091127f83e7be42407ce9525b3b0ec6d5": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R03 For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.\",",
+    "text_sha256": "c619e0062b10528a221e108988fd71f091127f83e7be42407ce9525b3b0ec6d5",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:cc09cc3114179b0316022b3e665c4c9dfc7cb14f666fb70e50924ed9a097560b": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R04 A requester must never approve their own purchase request.\",",
+    "text_sha256": "cc09cc3114179b0316022b3e665c4c9dfc7cb14f666fb70e50924ed9a097560b",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:735f713324c9960732cf60862f8f2a3d599ee6771313bddb9c1e5e8329126e3c": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R05 An emergency purchase is exempt from obtaining competitive quotations.\",",
+    "text_sha256": "735f713324c9960732cf60862f8f2a3d599ee6771313bddb9c1e5e8329126e3c",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:1669f6a3b7f942068491a7a3b00e17f15e942301380344a0b1956c5391b25d8f": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R06 The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.\",",
+    "text_sha256": "1669f6a3b7f942068491a7a3b00e17f15e942301380344a0b1956c5391b25d8f",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:45bfa00866d6608482b1e8535dfb9c65bbfb3a390d33ccc33c6ef48f40d60b51": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R07 Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.\",",
+    "text_sha256": "45bfa00866d6608482b1e8535dfb9c65bbfb3a390d33ccc33c6ef48f40d60b51",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:42155b81f0496c858818aaf345c9fae23903531683546afae562672b65d394dd": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R08 If a requester cancels a request before approval, that requester must record the cancellation reason.\",",
+    "text_sha256": "42155b81f0496c858818aaf345c9fae23903531683546afae562672b65d394dd",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:939c9e270fcddd4e169f040ec6adf017d53acd5923023578c0b12140e0ef9add": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R09 Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.\",",
+    "text_sha256": "939c9e270fcddd4e169f040ec6adf017d53acd5923023578c0b12140e0ef9add",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:37a4dfbd8ee7c2c0457609b4a7ad8e648ed9a5aeefa4deee33045dfe5dac3d66": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R10 The purchase threshold applies separately to each request, not to the monthly total for a supplier.\",",
+    "text_sha256": "37a4dfbd8ee7c2c0457609b4a7ad8e648ed9a5aeefa4deee33045dfe5dac3d66",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:de63f7e2f9d9d6ebb9413bd3c29098a187499619ceb559c7e2af1d346d9a0066": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R11 Different suppliers may have the same supplier name; supplier name is not a unique identifier.\",",
+    "text_sha256": "de63f7e2f9d9d6ebb9413bd3c29098a187499619ceb559c7e2af1d346d9a0066",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:5269612b67c4dffb9d090934a1ebc5c9e763f571dad1a16683b9ec63c92a5e3c": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"R12 The retention period begins on the approval date, not the purchase-order date.\"",
+    "text_sha256": "5269612b67c4dffb9d090934a1ebc5c9e763f571dad1a16683b9ec63c92a5e3c",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:67e900f6f98cd8f94266f4c85cc341bd2c9410de0f658f7b06de3d6210ec23df": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "  ]",
+    "text_sha256": "67e900f6f98cd8f94266f4c85cc341bd2c9410de0f658f7b06de3d6210ec23df",
+    "occurrences": [
+      "2-purchase-approval-translation-inference-net__schematron-v2-small",
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:a59ad3a960654d8a8b39b6bd29372d41ce5de6620dce6c7c413aa8fb0e280660": {
+    "case": "purchase-approval",
+    "source_id": "R01",
+    "text": "R01 :: A purchase above EUR 5,000 requires Finance approval prior to the issuance of the purchase order.",
+    "text_sha256": "a59ad3a960654d8a8b39b6bd29372d41ce5de6620dce6c7c413aa8fb0e280660",
+    "occurrences": [
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "purchase-approval:18d00162a95ed950db2499049a05db1445a7e9656d3790f0ba127af9e7446f2f": {
+    "case": "purchase-approval",
+    "source_id": "R02",
+    "text": "R02 :: For a purchase of exactly EUR 5,000, Finance approval is not required.",
+    "text_sha256": "18d00162a95ed950db2499049a05db1445a7e9656d3790f0ba127af9e7446f2f",
+    "occurrences": [
+      "2-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b",
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  },
+  "supplier-onboarding:a6b86753907046589bc4b51851406738413029611a587e2adfd5028b062d357e": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R03\": \"For a low\u2011risk supplier, Compliance may request a site visit but is not obliged to request one.\",",
+    "text_sha256": "a6b86753907046589bc4b51851406738413029611a587e2adfd5028b062d357e",
+    "occurrences": [
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:a5395670e1e0d9f44f640e42696f3c9e9979f220ac54775ff4c168063a187284": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R04\": \"A high\u2011risk supplier must undergo an enhanced review.\",",
+    "text_sha256": "a5395670e1e0d9f44f640e42696f3c9e9979f220ac54775ff4c168063a187284",
+    "occurrences": [
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "supplier-onboarding:cf105afb313de41e67f5551583d1b7bdb9d7c37ce2994ed2f579bee97c44bc5d": {
+    "case": "supplier-onboarding",
+    "source_id": null,
+    "text": "  \"R11\": \"Changing a supplier bank account requires a new independent bank\u2011account check before the next payment.\",",
+    "text_sha256": "cf105afb313de41e67f5551583d1b7bdb9d7c37ce2994ed2f579bee97c44bc5d",
+    "occurrences": [
+      "2-supplier-onboarding-translation-inference-net__schematron-v2-small",
+      "3-supplier-onboarding-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:0a80fb0bcf3d46ec72cd8ee13f3045d9f7f041f56c8076a657ef44594de600e7": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  \"specifications\": [",
+    "text_sha256": "0a80fb0bcf3d46ec72cd8ee13f3045d9f7f041f56c8076a657ef44594de600e7",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:0bcdc03e674ea50d024cc1ad78ad24fdeca12f47878792f4892a2852e996ad88": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"An invoice requires both an existing purchase order and a receipt record before automatic payment.\",",
+    "text_sha256": "0bcdc03e674ea50d024cc1ad78ad24fdeca12f47878792f4892a2852e996ad88",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:5a7e6105c44db8857b3893bd29bf0f46799bc9c1f2b39ec3e0a39059e56535da": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"An invoice variance of exactly EUR 10 is within tolerance.\",",
+    "text_sha256": "5a7e6105c44db8857b3893bd29bf0f46799bc9c1f2b39ec3e0a39059e56535da",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:eda24b991671fc4d9d6cf31eab9f17ee5f5f65adac1d9ea52f9bb0982ed33b28": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"An invoice variance above EUR 10 blocks automatic payment.\",",
+    "text_sha256": "eda24b991671fc4d9d6cf31eab9f17ee5f5f65adac1d9ea52f9bb0982ed33b28",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:22a727dc6192ae49d2b61378798f576c2922074641f66476557f89a70cc6727f": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.\",",
+    "text_sha256": "22a727dc6192ae49d2b61378798f576c2922074641f66476557f89a70cc6727f",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:a0ae17b0e695e34887359c2b3c06028f08db5aefe6e60e3ca0e4d90a8f3477ff": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.\",",
+    "text_sha256": "a0ae17b0e695e34887359c2b3c06028f08db5aefe6e60e3ca0e4d90a8f3477ff",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:4fb1c1461d12785198498f221a81338c06f6cc70cff577383ec8708bbb9daba5": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"The person who changed supplier bank details must not approve payment to those details.\",",
+    "text_sha256": "4fb1c1461d12785198498f221a81338c06f6cc70cff577383ec8708bbb9daba5",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:a8c0b819d5679e3a0a79c80a886a064d79c4e7c6c442f7c0e1cf4507048c7818": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"For a service invoice, an authorised service acceptance replaces the goods receipt record.\",",
+    "text_sha256": "a8c0b819d5679e3a0a79c80a886a064d79c4e7c6c442f7c0e1cf4507048c7818",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:20cad37db71e45efbe7d6b81334e488f17df9d2cd3babde95efe9303e441396c": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"Service acceptance does not replace the purchase-order requirement.\",",
+    "text_sha256": "20cad37db71e45efbe7d6b81334e488f17df9d2cd3babde95efe9303e441396c",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:e7d4c3323d1268da6fba828b6dce6701f7669a57d01ec5d4e4ac8ffdc85ecf9d": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"A dispute freezes the payment clock until the dispute is resolved.\",",
+    "text_sha256": "e7d4c3323d1268da6fba828b6dce6701f7669a57d01ec5d4e4ac8ffdc85ecf9d",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:0f3e2fa5a58ca1cb27c2014916b9c264c29cbe40473abbc26332ab2723639289": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.\",",
+    "text_sha256": "0f3e2fa5a58ca1cb27c2014916b9c264c29cbe40473abbc26332ab2723639289",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:2f9570df0fac2883c39fc15de8d1be0f6f6b05ec67b5f91c4fad0feba38fa17b": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"An invoice number is unique only within a supplier; different suppliers may reuse the same number.\",",
+    "text_sha256": "2f9570df0fac2883c39fc15de8d1be0f6f6b05ec67b5f91c4fad0feba38fa17b",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:329af16f6037cd533160bd729a29e53277ad08d1eaceb02f93ac3c70fec295af": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "    \"The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.\"",
+    "text_sha256": "329af16f6037cd533160bd729a29e53277ad08d1eaceb02f93ac3c70fec295af",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "invoice-matching:67e900f6f98cd8f94266f4c85cc341bd2c9410de0f658f7b06de3d6210ec23df": {
+    "case": "invoice-matching",
+    "source_id": null,
+    "text": "  ]",
+    "text_sha256": "67e900f6f98cd8f94266f4c85cc341bd2c9410de0f658f7b06de3d6210ec23df",
+    "occurrences": [
+      "3-invoice-matching-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:ea11aeb10cb573f5ec519f51fa72c99375549ae4723c104c52457422d5565a96": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "  \"specs\": [",
+    "text_sha256": "ea11aeb10cb573f5ec519f51fa72c99375549ae4723c104c52457422d5565a96",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:697c6e959eb6b92c1dfa4e6bd745bccbc6ea9ff8ce7c936aedf5ae4aa8c1d7fd": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.\",",
+    "text_sha256": "697c6e959eb6b92c1dfa4e6bd745bccbc6ea9ff8ce7c936aedf5ae4aa8c1d7fd",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:6353f436447143b16c00d9a1e0ca5b92f50b176481629ead0a21d7d2478b6041": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"For a purchase of exactly EUR 5,000, Finance approval is not required.\",",
+    "text_sha256": "6353f436447143b16c00d9a1e0ca5b92f50b176481629ead0a21d7d2478b6041",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:4dfa5445d87dbae1df04023c3849e63c93148f571b4ddd5c7894fe06cb2672db": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.\",",
+    "text_sha256": "4dfa5445d87dbae1df04023c3849e63c93148f571b4ddd5c7894fe06cb2672db",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:34d3c984399b60a6ab3a957c06efaacbb832a2447a8f4ad54bf304b6c5349b87": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"A requester must never approve their own purchase request.\",",
+    "text_sha256": "34d3c984399b60a6ab3a957c06efaacbb832a2447a8f4ad54bf304b6c5349b87",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:f978cddec131ae18109e29d1ef26798f2b54769eaaaca6411af7d3b2f87c37c9": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"An emergency purchase is exempt from obtaining competitive quotations.\",",
+    "text_sha256": "f978cddec131ae18109e29d1ef26798f2b54769eaaaca6411af7d3b2f87c37c9",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:577d34462a0a4496a46c794ca8804b33ec6a2565ffe55ebe9d53b018cf85e7c8": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"The emergency quotation exemption does not remove the finance approval requirement above EUR 5,000.\",",
+    "text_sha256": "577d34462a0a4496a46c794ca8804b33ec6a2565ffe55ebe9d53b018cf85e7c8",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:1110a1cca51c0ff7feaf2af1eb497b7ed47518a96e5eca157db911306c549f57": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.\",",
+    "text_sha256": "1110a1cca51c0ff7feaf2af1eb497b7ed47518a96e5eca157db911306c549f57",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:8cffb48a53f7a3cb3752cf00a691182ee6ebb7dac8e6aafaeaf301db3244a51a": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"If a requester cancels a request before approval, that requester must record the cancellation reason.\",",
+    "text_sha256": "8cffb48a53f7a3cb3752cf00a691182ee6ebb7dac8e6aafaeaf301db3244a51a",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:5fbdc2fc67d9f9a7c8ea54c84b1040dd9887c16756ea6e4338ae843297835e04": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.\",",
+    "text_sha256": "5fbdc2fc67d9f9a7c8ea54c84b1040dd9887c16756ea6e4338ae843297835e04",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:4d0dfd803bf5ee28b9b40272e2cf29d0a7ffdf06187ff829ed27ee77f4022f16": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"The purchase threshold applies separately to each request, not to the monthly total for a supplier.\",",
+    "text_sha256": "4d0dfd803bf5ee28b9b40272e2cf29d0a7ffdf06187ff829ed27ee77f4022f16",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:719dba09ae37425bbaef504ca41bd7fa9768d6f5c5f69fc746d5ee8d87ba01fa": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"Different suppliers may have the same supplier name; supplier name is not a unique identifier.\",",
+    "text_sha256": "719dba09ae37425bbaef504ca41bd7fa9768d6f5c5f69fc746d5ee8d87ba01fa",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:0af42d633d0139749d88999c462e29ee0922a739d35d3e3784bd5a24924887c2": {
+    "case": "purchase-approval",
+    "source_id": null,
+    "text": "    \"The retention period begins on the approval date, not the purchase-order date.\"",
+    "text_sha256": "0af42d633d0139749d88999c462e29ee0922a739d35d3e3784bd5a24924887c2",
+    "occurrences": [
+      "3-purchase-approval-translation-inference-net__schematron-v2-small"
+    ]
+  },
+  "purchase-approval:3e77be9883c1d1b9d632cd79ce650e4c9b26aed225adf53cc9cd8ddfda120aec": {
+    "case": "purchase-approval",
+    "source_id": "R01",
+    "text": "R01 :: A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+    "text_sha256": "3e77be9883c1d1b9d632cd79ce650e4c9b26aed225adf53cc9cd8ddfda120aec",
+    "occurrences": [
+      "3-purchase-approval-translation-prism-ml__ternary-bonsai-2-9b"
+    ]
+  }
+}

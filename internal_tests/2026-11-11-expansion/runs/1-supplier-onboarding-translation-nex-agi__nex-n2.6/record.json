@@ -1,0 +1,48 @@
+{
+  "id": "1-supplier-onboarding-translation-nex-agi__nex-n2.6",
+  "model": "nex-agi/nex-n2.6",
+  "pinned_provider": "nex-agi/fp8",
+  "case": "supplier-onboarding",
+  "track": "translation",
+  "repetition": 1,
+  "started_at": "2026-11-11T06:40:56.486010+00:00",
+  "request_sha256": "3bc5878b8b88c674f32d0c3ef6d5c801e279125237eea089bfd8d27bf5c7da2e",
+  "reserved_usd": 0.015205168,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.00052092,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "5685573324af1b6bc415351c97f9b758b307eb07f86aadd0fe728ce793357441",
+  "provider_request_id": "gen-1794379256-V7ACpgVAxi3WUBd9JXnB",
+  "returned_model": "nex-agi/nex-n2.6",
+  "returned_provider": "Nex AGI",
+  "usage": {
+    "prompt_tokens": 321,
+    "completion_tokens": 1206,
+    "total_tokens": 1527,
+    "cost": 0.00052092,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00052092,
+      "upstream_inference_prompt_cost": 3.852e-05,
+      "upstream_inference_completions_cost": 0.0004824
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 968,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "921075a0919656a99f11de3863531f08316146e4b3b4f4cf19f7b5f2feb1aec9",
+  "elapsed_seconds": 11.485557291991427,
+  "finished_at": "2026-11-11T06:41:07.971912+00:00"
+}

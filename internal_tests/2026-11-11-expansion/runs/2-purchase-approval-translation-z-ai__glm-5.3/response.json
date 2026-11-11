@@ -1,0 +1,13 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794379790-ra8ySpsFldDb64xNmSeG","object":"chat.completion","created":1794379790,"model":"z-ai/glm-5.3","provider":"Wafer","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"R01 :: If a purchase exceeds EUR 5,000, then it is obligatory that Finance approval is received before the purchase order is issued.\nR02 :: If a purchase is exactly EUR 5,000, then Finance approval is not required.\nR03 :: If a purchase is below EUR 5,000, then the department manager is permitted to approve it and is not obligated to approve it.\nR04 :: It is forbidden for a requester to approve that requester's own purchase request.\nR05 :: If a purchase is an emergency purchase, then it is exempt from the requirement to obtain competitive quotations.\nR06 :: The emergency quotation exemption does not exempt a purchase above EUR 5,000 from the Finance approval requirement.\nR07 :: Finance approval may be provided only by the Head of Finance, and the buyer is not permitted to provide Finance approval.\nR08 :: If a requester cancels a request before it is approved, then that requester is obligated to record the cancellation reason.\nR09 :: Approval records must be retained for at least 30 calendar days and it is forbidden to delete an approval record earlier than that.\nR10 :: The purchase threshold applies separately to each individual request, not to the monthly total for a supplier.\nR11 :: Different suppliers may have the same supplier name; supplier name is not a unique identifier of a supplier.\nR12 :: The retention period begins on the approval date, not on the purchase-order date.","refusal":null}}],"usage":{"prompt_tokens":352,"completion_tokens":1021,"total_tokens":1373,"cost":0.0014540048,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.0014540048,"upstream_inference_prompt_cost":0.0000246048,"upstream_inference_completions_cost":0.0014294},"completion_tokens_details":{"reasoning_tokens":671,"image_tokens":0,"audio_tokens":0}}}

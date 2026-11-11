@@ -1,0 +1,14 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "generation_id": "gen-1794379770-qTwV7sf1rEleZMTjt0DU",
+  "cost_usd": 0.270424,
+  "elapsed_seconds": 54.06807991700771,
+  "finish_reason": "stop",
+  "request_sha256": "af54a3f6b9251fd1e047e17fe3acb4548d36c3cb40dd223b3d37f1fa7ca118e1",
+  "response_sha256": "648cca769d3cb787a999874d543c3368a3c31ad4f72829e64327c618d997ab53",
+  "purpose": "Advisory visual design evaluation, not benchmark validation",
+  "evaluation_budget_usd": 1.2,
+  "key_limit": 40,
+  "total_evaluation_cost_usd": 0.696224
+}

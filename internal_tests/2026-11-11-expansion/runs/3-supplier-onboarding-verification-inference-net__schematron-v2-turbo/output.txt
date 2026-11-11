@@ -1,0 +1,32 @@
+{
+  "judgments": [
+    {
+      "id": "P005",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P009",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P016",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P022",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P025",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P029",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P036",
+      "verdict": "contradicted"
+    }
+  ]
+}

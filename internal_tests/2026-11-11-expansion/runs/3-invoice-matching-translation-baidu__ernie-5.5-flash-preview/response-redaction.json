@@ -1,0 +1,7 @@
+{
+  "removed_json_pointers": [
+    "/user_id"
+  ],
+  "original_sha256": "b69ff4c1852fbc33c1ca35768a4f4bb5631f038b01654c2622963577762dfa4c",
+  "public_sha256": "f6fa922dfab6f6ee54636afed19b6708c9f3dbbd83ce99207217b7a818e61c09"
+}

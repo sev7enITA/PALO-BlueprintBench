@@ -1,0 +1,25 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794379659-X6pbneiDw8nMDhYMOk3R","object":"chat.completion","created":1794379659,"model":"qwen/qwen3.8-max-prime","provider":"Alibaba","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"judgments\": [\n    {\n      \"id\": \"P001\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P002\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P003\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P004\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P005\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P006\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P007\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P008\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P009\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P010\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P011\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P012\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P013\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P014\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P015\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P016\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P017\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P018\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P019\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P020\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P021\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P022\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P023\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P024\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P025\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P026\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P027\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P028\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P029\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P030\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P031\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P032\",\n      \"verdict\": \"not_established\"\n    },\n    {\n      \"id\": \"P033\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P034\",\n      \"verdict\": \"contradicted\"\n    },\n    {\n      \"id\": \"P035\",\n      \"verdict\": \"supported\"\n    },\n    {\n      \"id\": \"P036\",\n      \"verdict\": \"contradicted\"\n    }\n  ]\n}","refusal":null}}],"usage":{"prompt_tokens":1272,"completion_tokens":3345,"total_tokens":4617,"cost":0.045228,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.045228,"upstream_inference_prompt_cost":0.005088,"upstream_inference_completions_cost":0.04014},"completion_tokens_details":{"reasoning_tokens":2334,"image_tokens":0,"audio_tokens":0}}}

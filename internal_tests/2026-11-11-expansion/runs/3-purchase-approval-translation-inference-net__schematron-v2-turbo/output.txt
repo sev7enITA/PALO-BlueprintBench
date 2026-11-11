@@ -1,0 +1,52 @@
+{
+  "rules": [
+    {
+      "source": "R01 A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+      "expression": "P001 > 5000\nAFP_required_and>1"
+    },
+    {
+      "source": "R02 For a purchase of exactly EUR 5,000, Finance approval is not required.",
+      "expression": "P002 == 5000\nAFP58100\nOR XF01"
+    },
+    {
+      "source": "R03 For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+      "expression": "P003 < 5000\nDM_approval_optional"
+    },
+    {
+      "source": "R04 A requester must never approve their own purchase request.",
+      "expression": "A000 <> A01"
+    },
+    {
+      "source": "R05 An emergency purchase is exempt from obtaining competitive quotations.",
+      "expression": "A005 == 1\n<PF04>\n NOT XF05"
+    },
+    {
+      "source": "R06 The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.",
+      "expression": "P001 > 5000\nXF05\nAPT01 > PF001\n<PF04>"
+    },
+    {
+      "source": "R07 Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+      "expression": "APNIN > PF001\n<PF04>"
+    },
+    {
+      "source": "R08 If a requester cancels a request before approval, that requester must record the cancellation reason.",
+      "expression": "A000 < 0\nA000 ` instead\n                 
+ Cancellable_reason(c)`"
+    },
+    {
+      "source": "R09 Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+      "expression": "EFFPT01 > 30\nnotify_finance\nW>Appl exc"
+    },
+    {
+      "source": "R10 The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+      "expression": "SUP1 = ID\nAR001\nIF NFED '\N Subscribe\n    {
+      "message": "Monthly threshold X1 > Y1\n... trigger X2"
+    },
+    {
+      "source": "R11 Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+      "expression": "SUM INT(S1 := SUPN1 '\RLROUP)\n**************************\n\n 'unique_identifiers' loop\n    IF (SUPN1 = SUPN2)\n      DONE\n    n\n GlobalSupplier table inserted with SUPN1, SUBS, AFF, etc."
+    },
+    {
+      "source": "R12 The retention period begins on the approval date, not the purchase-order date.",
+      "expression": "APPTIK + 'status' = 'APPROVED'\nkeep(approval_date)\nRETAIN 30\ndelete`
+

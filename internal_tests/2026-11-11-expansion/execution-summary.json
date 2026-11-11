@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "stop_reason": null,
+  "assigned_calls": 216,
+  "recorded_calls": 216,
+  "not_run": 0,
+  "completed_calls": 211,
+  "known_cost_usd": 1.4782494908,
+  "unknown_cost_calls": 4,
+  "unknown_reserved_usd": 0.099100529,
+  "qualified": false
+}

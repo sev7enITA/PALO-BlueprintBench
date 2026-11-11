@@ -1,0 +1,48 @@
+{
+  "id": "1-invoice-matching-verification-z-ai__glm-5.3",
+  "model": "z-ai/glm-5.3",
+  "pinned_provider": "wafer/us",
+  "case": "invoice-matching",
+  "track": "verification",
+  "repetition": 1,
+  "started_at": "2026-11-11T06:47:42.198642+00:00",
+  "request_sha256": "e058e0fccc05969dc767d2b453da0734fcbd733a6b84515806416d0482279935",
+  "reserved_usd": 0.051220778509999995,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0094422529,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "84cd1af132dd72bdf95c15dc51b28aa14663ac55aecd917066c4e148c6d089a9",
+  "provider_request_id": "gen-1794379662-lxtZ9IgliCioxeGctlLa",
+  "returned_model": "z-ai/glm-5.3",
+  "returned_provider": "Wafer",
+  "usage": {
+    "prompt_tokens": 1171,
+    "completion_tokens": 6686,
+    "total_tokens": 7857,
+    "cost": 0.0094422529,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0094422529,
+      "upstream_inference_prompt_cost": 8.18529e-05,
+      "upstream_inference_completions_cost": 0.0093604
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6331,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "7a01ea34a0e2c140cce27a375f42b57fbff96ada0b47377030255d20f2f94e2b",
+  "elapsed_seconds": 127.58254554199812,
+  "finished_at": "2026-11-11T06:49:49.781970+00:00"
+}

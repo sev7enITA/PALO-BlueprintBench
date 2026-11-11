@@ -1,0 +1,15 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794380532-FYO4G1PGgCXJjXXnY0YV","object":"chat.completion","created":1794380532,"model":"mistralai/mistral-large-4-0","provider":"Mistral","system_fingerprint":null,"service_tier":"default","choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"R01 :: A new supplier must complete identity verification before its first purchase order.\nR02 :: The Compliance officer performs identity verification and the buyer does not perform identity verification.\nR03 :: For a low-risk supplier, Compliance may request a site visit and is not obliged to request a site visit.\nR04 :: A high-risk supplier must undergo an enhanced review.\nR05 :: A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.\nR06 :: The renewal exemption does not apply when the supplier changes its legal name.\nR07 :: A buyer must not activate a supplier flagged as blocked.\nR08 :: A risk score of 70 or more is classified as high risk.\nR09 :: Risk scores below 70 are classified as low risk.\nR10 :: Approval expires 365 calendar days after its approval date.\nR11 :: Changing a supplier bank account requires a new independent bank-account check before the next payment.\nR12 :: Two supplier records may share a contact email address and the email address is not unique.","refusal":null}}],"usage":{"prompt_tokens":329,"completion_tokens":3696,"total_tokens":4025,"cost":0.0079919,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.0079919,"upstream_inference_prompt_cost":0.0002303,"upstream_inference_completions_cost":0.0077616},"completion_tokens_details":{"reasoning_tokens":3482,"image_tokens":0,"audio_tokens":0}}}

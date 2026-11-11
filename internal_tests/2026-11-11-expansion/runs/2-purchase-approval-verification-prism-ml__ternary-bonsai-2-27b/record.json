@@ -1,0 +1,48 @@
+{
+  "id": "2-purchase-approval-verification-prism-ml__ternary-bonsai-2-27b",
+  "model": "prism-ml/ternary-bonsai-2-27b",
+  "pinned_provider": "darkbloom/int4",
+  "case": "purchase-approval",
+  "track": "verification",
+  "repetition": 2,
+  "started_at": "2026-11-11T06:50:30.815458+00:00",
+  "request_sha256": "e0d77b83e53549de0f60b082dcf61f39df79ff291b997d4ddd1e341cb28510fd",
+  "reserved_usd": 0.018837335000000004,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.001692625,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "6e0d9b80d7cc25ebb6b05bb00ae0121f159ccf61baa7e21f5b18078e471e23d7",
+  "provider_request_id": "gen-1794379830-8b2jluiVVuTppztzajtb",
+  "returned_model": "prism-ml/ternary-bonsai-2-27b",
+  "returned_provider": "Darkbloom",
+  "usage": {
+    "prompt_tokens": 1455,
+    "completion_tokens": 3167,
+    "total_tokens": 4622,
+    "cost": 0.001692625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001692625,
+      "upstream_inference_prompt_cost": 0.000109125,
+      "upstream_inference_completions_cost": 0.0015835
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2155,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "69e7fb0675b61e1b0540a7e0e052252d277b7ebcae8c4929002e144d7b3ac3c4",
+  "elapsed_seconds": 81.65129104100924,
+  "finished_at": "2026-11-11T06:51:52.467391+00:00"
+}

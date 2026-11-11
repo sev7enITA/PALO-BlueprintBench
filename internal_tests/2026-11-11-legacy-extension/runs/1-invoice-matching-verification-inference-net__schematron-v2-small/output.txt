@@ -1,0 +1,92 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "supported"
+    },
+    {
+      "id": "P002",
+      "verdict": "supported"
+    },
+    {
+      "id": "P003",
+      "verdict": "supported"
+    },
+    {
+      "id": "P004",
+      "verdict": "supported"
+    },
+    {
+      "id": "P005",
+      "verdict": "supported"
+    },
+    {
+      "id": "P006",
+      "verdict": "supported"
+    },
+    {
+      "id": "P007",
+      "verdict": "supported"
+    },
+    {
+      "id": "P008",
+      "verdict": "supported"
+    },
+    {
+      "id": "P009",
+      "verdict": "supported"
+    },
+    {
+      "id": "P010",
+      "verdict": "supported"
+    },
+    {
+      "id": "P011",
+      "verdict": "supported"
+    },
+    {
+      "id": "P012",
+      "verdict": "supported"
+    },
+    {
+      "id": "P015",
+      "verdict": "supported"
+    },
+    {
+      "id": "P019",
+      "verdict": "supported"
+    },
+    {
+      "id": "P024",
+      "verdict": "supported"
+    },
+    {
+      "id": "P025",
+      "verdict": "supported"
+    },
+    {
+      "id": "P028",
+      "verdict": "supported"
+    },
+    {
+      "id": "P032",
+      "verdict": "supported"
+    },
+    {
+      "id": "P033",
+      "verdict": "supported"
+    },
+    {
+      "id": "P036",
+      "verdict": "supported"
+    },
+    {
+      "id": "P016",
+      "verdict": "supported"
+    },
+    {
+      "id": "P040",
+      "verdict": "supported"
+    }
+  ]
+}

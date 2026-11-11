@@ -1,0 +1,23 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794380433-Mq5gAAPKChyPfT4NAZd3","object":"chat.completion","created":1794380433,"model":"upstage/solar-mini4","provider":"Upstage","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"judgments\": [\n    {\"id\": \"P001\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P002\", \"verdict\": \"not_established\"},\n    {\"id\": \"P003\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P004\", \"verdict\": \"supported\"},\n    {\"id\": \"P005\", \"verdict\": \"supported\"},\n    {\"id\": \"P006\", \"verdict\": \"not_established\"},\n    {\"id\": \"P007\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P008\", \"verdict\": \"supported\"},\n    {\"id\": \"P009\", \"verdict\": \"supported\"},\n    {\"id\": \"P010\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P011\", \"verdict\": \"supported\"},\n    {\"id\": \"P012\", \"verdict\": \"not_established\"},\n    {\"id\": \"P013\", \"verdict\": \"not_established\"},\n    {\"id\": \"P014\", \"verdict\": \"not_established\"},\n    {\"id\": \"P015\", \"verdict\": \"supported\"},\n    {\"id\": \"P016\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P017\", \"verdict\": \"supported\"},\n    {\"id\": \"P018\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P019\", \"verdict\": \"not_established\"},\n    {\"id\": \"P020\", \"verdict\": \"not_established\"},\n    {\"id\": \"P021\", \"verdict\": \"supported\"},\n    {\"id\": \"P022\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P023\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P024\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P025\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P026\", \"verdict\": \"supported\"},\n    {\"id\": \"P027\", \"verdict\": \"supported\"},\n    {\"id\": \"P028\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P029\", \"verdict\": \"not_established\"},\n    {\"id\": \"P030\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P031\", \"verdict\": \"not_established\"},\n    {\"id\": \"P032\", \"verdict\": \"supported\"},\n    {\"id\": \"P033\", \"verdict\": \"not_established\"},\n    {\"id\": \"P034\", \"verdict\": \"not_established\"},\n    {\"id\": \"P035\", \"verdict\": \"supported\"},\n    {\"id\": \"P036\", \"verdict\": \"not_established\"}\n  ]\n}","refusal":null}}],"usage":{"prompt_tokens":1320,"completion_tokens":2625,"total_tokens":3945,"cost":0.000591,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.000591,"upstream_inference_prompt_cost":0.000066,"upstream_inference_completions_cost":0.000525},"completion_tokens_details":{"reasoning_tokens":1952,"image_tokens":0,"audio_tokens":0}}}

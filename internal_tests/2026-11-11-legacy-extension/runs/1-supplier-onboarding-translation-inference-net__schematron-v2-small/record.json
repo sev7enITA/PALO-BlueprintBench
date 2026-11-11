@@ -1,0 +1,48 @@
+{
+  "id": "1-supplier-onboarding-translation-inference-net__schematron-v2-small",
+  "model": "inference-net/schematron-v2-small",
+  "pinned_provider": "inference-net/us",
+  "case": "supplier-onboarding",
+  "track": "translation",
+  "repetition": 1,
+  "started_at": "2026-11-11T07:12:28.784036+00:00",
+  "request_sha256": "26e9cf8f63ae49052ac6559295203789945d260077b8cd4b58ae67e11e7b65bb",
+  "reserved_usd": 0.0023992760000000005,
+  "cost_status": "provider_reported",
+  "cost_usd": 7.442e-05,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "67e6e1beddf0a18d3e86d89a5fa4d387984ad8d98d9e0d4388688e3dcd50ef06",
+  "provider_request_id": "gen-1794381148-f1YB9LKHQYfR3fbjuaPY",
+  "returned_model": "inference-net/schematron-v2-small",
+  "returned_provider": "InferenceNet",
+  "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 249,
+    "total_tokens": 592,
+    "cost": 7.442e-05,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 7.442e-05,
+      "upstream_inference_prompt_cost": 1.715e-05,
+      "upstream_inference_completions_cost": 5.727e-05
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "5408aec5f1564bd5031b70045a011d0f7af2ae1313ae03a2259bac9a007a7e2c",
+  "elapsed_seconds": 1.0083058749878546,
+  "finished_at": "2026-11-11T07:12:29.793039+00:00"
+}

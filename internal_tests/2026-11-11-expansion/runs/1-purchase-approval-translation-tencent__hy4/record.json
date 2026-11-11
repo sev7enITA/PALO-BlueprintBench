@@ -1,0 +1,48 @@
+{
+  "id": "1-purchase-approval-translation-tencent__hy4",
+  "model": "tencent/hy4",
+  "pinned_provider": "tencent/fp4",
+  "case": "purchase-approval",
+  "track": "translation",
+  "repetition": 1,
+  "started_at": "2026-11-11T06:38:48.749534+00:00",
+  "request_sha256": "b163887a43cbe907b7508e7e8cd4853213f447c7af1cef7d0ebc7f63471e4630",
+  "reserved_usd": 0.0478656706,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0108864965,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "923adf391048ae17723fb2c3edc2eb02000054f770ec760e9cb56c98e8a0c7bc",
+  "provider_request_id": "gen-1794379128-DncqaTPFXCA32z1nMW0w",
+  "returned_model": "tencent/hy4",
+  "returned_provider": "Tencent",
+  "usage": {
+    "prompt_tokens": 362,
+    "completion_tokens": 8585,
+    "total_tokens": 8947,
+    "cost": 0.0108864965,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0108864965,
+      "upstream_inference_prompt_cost": 0.000150954,
+      "upstream_inference_completions_cost": 0.0107355425
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8334,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "98897a7ffea5d99bf9ee6eec031942bf493fb7b3d40f57ef8d9d92771ca47610",
+  "elapsed_seconds": 77.42404462500417,
+  "finished_at": "2026-11-11T06:40:06.173914+00:00"
+}

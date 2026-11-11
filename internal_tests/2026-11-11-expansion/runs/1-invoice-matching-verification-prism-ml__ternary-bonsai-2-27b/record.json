@@ -1,0 +1,41 @@
+{
+  "id": "1-invoice-matching-verification-prism-ml__ternary-bonsai-2-27b",
+  "model": "prism-ml/ternary-bonsai-2-27b",
+  "pinned_provider": "darkbloom/int4",
+  "case": "invoice-matching",
+  "track": "verification",
+  "repetition": 1,
+  "started_at": "2026-11-11T06:47:25.286117+00:00",
+  "request_sha256": "c8b587b4a356b9ad81844fdb0531aebd5a88054b38a123a929e39ac9f8362728",
+  "reserved_usd": 0.0188377475,
+  "cost_status": "unknown",
+  "cost_usd": null,
+  "state": "fail",
+  "qualification": "internal_tests",
+  "response_bytes_original": false,
+  "http_status": 429,
+  "response_sha256": "a940ba15dd8d5c8a7a35cab12f2debce24da8f2d5ead03a9baa00250f3215ffd",
+  "provider_request_id": null,
+  "returned_model": null,
+  "returned_provider": null,
+  "usage": {},
+  "error": {
+    "message": "Provider returned error",
+    "code": 429,
+    "metadata": {
+      "raw": "prism-ml/ternary-bonsai-2-27b is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use your own limits: https://openrouter.ai/workspaces/default/byok",
+      "provider_name": "Darkbloom",
+      "is_byok": false,
+      "provider_error_code": "rate_limit_exceeded",
+      "limit_source": "upstream_provider_shared_pool",
+      "remedy_hint": "Retry shortly, add your own provider key to use your own limits (https://openrouter.ai/workspaces/default/byok), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing.",
+      "retry_after_seconds": 2,
+      "retry_after_seconds_raw": 2,
+      "headers": {
+        "Retry-After": "2"
+      }
+    }
+  },
+  "elapsed_seconds": 16.62378691699996,
+  "finished_at": "2026-11-11T06:47:41.910655+00:00"
+}

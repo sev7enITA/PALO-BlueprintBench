@@ -1,0 +1,48 @@
+{
+  "id": "3-supplier-onboarding-verification-reflection__beam-1.0-501b-a23b",
+  "model": "reflection/beam-1.0-501b-a23b",
+  "pinned_provider": "nebius/fp4",
+  "case": "supplier-onboarding",
+  "track": "verification",
+  "repetition": 3,
+  "started_at": "2026-11-11T07:04:45.289717+00:00",
+  "request_sha256": "e9406b35aa5d9519267dd9f1311d00c0ca39301964f9425c88a7369d6f931f2b",
+  "reserved_usd": 0.0387145,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0027344,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "67c273be6fe783bbab2fbdbeed1f5e7406875dce2264f49ab4311d16e8264662",
+  "provider_request_id": "gen-1794380685-QOLqmjk5MMek1r3Zt6mp",
+  "returned_model": "reflection/beam-1.0-501b-a23b",
+  "returned_provider": "Nebius",
+  "usage": {
+    "prompt_tokens": 1272,
+    "completion_tokens": 2442,
+    "total_tokens": 3714,
+    "cost": 0.0027344,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 128,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0027344,
+      "upstream_inference_prompt_cost": 0.0002924,
+      "upstream_inference_completions_cost": 0.002442
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1864,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "33a44737e333217cb3884e05d76cc7149b4d892f78840dc35dc4a5c44eb3bd1a",
+  "elapsed_seconds": 3.830618374995538,
+  "finished_at": "2026-11-11T07:04:49.120715+00:00"
+}

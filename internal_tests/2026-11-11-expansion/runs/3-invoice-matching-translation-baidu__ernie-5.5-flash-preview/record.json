@@ -1,0 +1,36 @@
+{
+  "id": "3-invoice-matching-translation-baidu__ernie-5.5-flash-preview",
+  "model": "baidu/ernie-5.5-flash-preview",
+  "pinned_provider": "baidu",
+  "case": "invoice-matching",
+  "track": "translation",
+  "repetition": 3,
+  "started_at": "2026-11-11T07:04:58.386620+00:00",
+  "request_sha256": "31adf68fbd3a407489759404ea022136ef5d109b6e52e203b0fcbb813e635c02",
+  "reserved_usd": 0.042601724,
+  "cost_status": "unknown",
+  "cost_usd": null,
+  "state": "fail",
+  "qualification": "internal_tests",
+  "response_bytes_original": false,
+  "http_status": 429,
+  "response_sha256": "b69ff4c1852fbc33c1ca35768a4f4bb5631f038b01654c2622963577762dfa4c",
+  "provider_request_id": null,
+  "returned_model": null,
+  "returned_provider": null,
+  "usage": {},
+  "error": {
+    "message": "Provider returned error",
+    "code": 429,
+    "metadata": {
+      "raw": "baidu/ernie-5.5-flash-preview is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use your own limits: https://openrouter.ai/workspaces/default/byok",
+      "provider_name": "Baidu",
+      "is_byok": false,
+      "provider_error_code": "tpm_rate_limit_exceeded",
+      "limit_source": "upstream_provider_shared_pool",
+      "remedy_hint": "Retry shortly, add your own provider key to use your own limits (https://openrouter.ai/workspaces/default/byok), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing."
+    }
+  },
+  "elapsed_seconds": 0.4442382080014795,
+  "finished_at": "2026-11-11T07:04:58.831835+00:00"
+}

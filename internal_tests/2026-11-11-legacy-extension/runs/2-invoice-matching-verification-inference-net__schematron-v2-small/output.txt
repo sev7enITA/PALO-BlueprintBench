@@ -1,0 +1,628 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "supported"
+    },
+    {
+      "id": "P002",
+      "verdict": "supported"
+    },
+    {
+      "id": "P003",
+      "verdict": "supported"
+    },
+    {
+      "id": "P004",
+      "verdict": "supported"
+    },
+    {
+      "id": "P005",
+      "verdict": "supported"
+    },
+    {
+      "id": "P006",
+      "verdict": "supported"
+    },
+    {
+      "id": "P007",
+      "verdict": "supported"
+    },
+    {
+      "id": "P008",
+      "verdict": "supported"
+    },
+    {
+      "id": "P009",
+      "verdict": "supported"
+    },
+    {
+      "id": "P010",
+      "verdict": "supported"
+    },
+    {
+      "id": "P011",
+      "verdict": "supported"
+    },
+    {
+      "id": "P012",
+      "verdict": "supported"
+    },
+    {
+      "id": "P013",
+      "verdict": "supported"
+    },
+    {
+      "id": "P014",
+      "verdict": "supported"
+    },
+    {
+      "id": "P015",
+      "verdict": "supported"
+    },
+    {
+      "id": "P016",
+      "verdict": "supported"
+    },
+    {
+      "id": "P017",
+      "verdict": "supported"
+    },
+    {
+      "id": "P018",
+      "verdict": "supported"
+    },
+    {
+      "id": "P019",
+      "verdict": "supported"
+    },
+    {
+      "id": "P020",
+      "verdict": "supported"
+    },
+    {
+      "id": "P021",
+      "verdict": "supported"
+    },
+    {
+      "id": "P022",
+      "verdict": "supported"
+    },
+    {
+      "id": "P023",
+      "verdict": "supported"
+    },
+    {
+      "id": "P024",
+      "verdict": "supported"
+    },
+    {
+      "id": "P025",
+      "verdict": "supported"
+    },
+    {
+      "id": "P026",
+      "verdict": "supported"
+    },
+    {
+      "id": "P027",
+      "verdict": "supported"
+    },
+    {
+      "id": "P028",
+      "verdict": "supported"
+    },
+    {
+      "id": "P029",
+      "verdict": "supported"
+    },
+    {
+      "id": "P030",
+      "verdict": "supported"
+    },
+    {
+      "id": "P031",
+      "verdict": "supported"
+    },
+    {
+      "id": "P032",
+      "verdict": "supported"
+    },
+    {
+      "id": "P033",
+      "verdict": "supported"
+    },
+    {
+      "id": "P034",
+      "verdict": "supported"
+    },
+    {
+      "id": "P035",
+      "verdict": "supported"
+    },
+    {
+      "id": "P036",
+      "verdict": "supported"
+    },
+    {
+      "id": "P037",
+      "verdict": "supported"
+    },
+    {
+      "id": "P038",
+      "verdict": "supported"
+    },
+    {
+      "id": "P039",
+      "verdict": "supported"
+    },
+    {
+      "id": "P040",
+      "verdict": "supported"
+    },
+    {
+      "id": "P041",
+      "verdict": "supported"
+    },
+    {
+      "id": "P042",
+      "verdict": "supported"
+    },
+    {
+      "id": "P043",
+      "verdict": "supported"
+    },
+    {
+      "id": "P044",
+      "verdict": "supported"
+    },
+    {
+      "id": "P045",
+      "verdict": "supported"
+    },
+    {
+      "id": "P046",
+      "verdict": "supported"
+    },
+    {
+      "id": "P047",
+      "verdict": "supported"
+    },
+    {
+      "id": "P048",
+      "verdict": "supported"
+    },
+    {
+      "id": "P049",
+      "verdict": "supported"
+    },
+    {
+      "id": "P050",
+      "verdict": "supported"
+    },
+    {
+      "id": "P051",
+      "verdict": "supported"
+    },
+    {
+      "id": "P052",
+      "verdict": "supported"
+    },
+    {
+      "id": "P053",
+      "verdict": "supported"
+    },
+    {
+      "id": "P054",
+      "verdict": "supported"
+    },
+    {
+      "id": "P055",
+      "verdict": "supported"
+    },
+    {
+      "id": "P056",
+      "verdict": "supported"
+    },
+    {
+      "id": "P057",
+      "verdict": "supported"
+    },
+    {
+      "id": "P058",
+      "verdict": "supported"
+    },
+    {
+      "id": "P059",
+      "verdict": "supported"
+    },
+    {
+      "id": "P060",
+      "verdict": "supported"
+    },
+    {
+      "id": "P061",
+      "verdict": "supported"
+    },
+    {
+      "id": "P062",
+      "verdict": "supported"
+    },
+    {
+      "id": "P063",
+      "verdict": "supported"
+    },
+    {
+      "id": "P064",
+      "verdict": "supported"
+    },
+    {
+      "id": "P065",
+      "verdict": "supported"
+    },
+    {
+      "id": "P066",
+      "verdict": "supported"
+    },
+    {
+      "id": "P067",
+      "verdict": "supported"
+    },
+    {
+      "id": "P068",
+      "verdict": "supported"
+    },
+    {
+      "id": "P069",
+      "verdict": "supported"
+    },
+    {
+      "id": "P070",
+      "verdict": "supported"
+    },
+    {
+      "id": "P071",
+      "verdict": "supported"
+    },
+    {
+      "id": "P072",
+      "verdict": "supported"
+    },
+    {
+      "id": "P073",
+      "verdict": "supported"
+    },
+    {
+      "id": "P074",
+      "verdict": "supported"
+    },
+    {
+      "id": "P075",
+      "verdict": "supported"
+    },
+    {
+      "id": "P076",
+      "verdict": "supported"
+    },
+    {
+      "id": "P077",
+      "verdict": "supported"
+    },
+    {
+      "id": "P078",
+      "verdict": "supported"
+    },
+    {
+      "id": "P079",
+      "verdict": "supported"
+    },
+    {
+      "id": "P080",
+      "verdict": "supported"
+    },
+    {
+      "id": "P081",
+      "verdict": "supported"
+    },
+    {
+      "id": "P082",
+      "verdict": "supported"
+    },
+    {
+      "id": "P083",
+      "verdict": "supported"
+    },
+    {
+      "id": "P084",
+      "verdict": "supported"
+    },
+    {
+      "id": "P085",
+      "verdict": "supported"
+    },
+    {
+      "id": "P086",
+      "verdict": "supported"
+    },
+    {
+      "id": "P087",
+      "verdict": "supported"
+    },
+    {
+      "id": "P088",
+      "verdict": "supported"
+    },
+    {
+      "id": "P089",
+      "verdict": "supported"
+    },
+    {
+      "id": "P090",
+      "verdict": "supported"
+    },
+    {
+      "id": "P091",
+      "verdict": "supported"
+    },
+    {
+      "id": "P092",
+      "verdict": "supported"
+    },
+    {
+      "id": "P093",
+      "verdict": "supported"
+    },
+    {
+      "id": "P094",
+      "verdict": "supported"
+    },
+    {
+      "id": "P095",
+      "verdict": "supported"
+    },
+    {
+      "id": "P096",
+      "verdict": "supported"
+    },
+    {
+      "id": "P097",
+      "verdict": "supported"
+    },
+    {
+      "id": "P098",
+      "verdict": "supported"
+    },
+    {
+      "id": "P099",
+      "verdict": "supported"
+    },
+    {
+      "id": "P100",
+      "verdict": "supported"
+    },
+    {
+      "id": "P101",
+      "verdict": "supported"
+    },
+    {
+      "id": "P102",
+      "verdict": "supported"
+    },
+    {
+      "id": "P103",
+      "verdict": "supported"
+    },
+    {
+      "id": "P104",
+      "verdict": "supported"
+    },
+    {
+      "id": "P105",
+      "verdict": "supported"
+    },
+    {
+      "id": "P106",
+      "verdict": "supported"
+    },
+    {
+      "id": "P107",
+      "verdict": "supported"
+    },
+    {
+      "id": "P108",
+      "verdict": "supported"
+    },
+    {
+      "id": "P109",
+      "verdict": "supported"
+    },
+    {
+      "id": "P110",
+      "verdict": "supported"
+    },
+    {
+      "id": "P111",
+      "verdict": "supported"
+    },
+    {
+      "id": "P112",
+      "verdict": "supported"
+    },
+    {
+      "id": "P113",
+      "verdict": "supported"
+    },
+    {
+      "id": "P114",
+      "verdict": "supported"
+    },
+    {
+      "id": "P115",
+      "verdict": "supported"
+    },
+    {
+      "id": "P116",
+      "verdict": "supported"
+    },
+    {
+      "id": "P117",
+      "verdict": "supported"
+    },
+    {
+      "id": "P118",
+      "verdict": "supported"
+    },
+    {
+      "id": "P119",
+      "verdict": "supported"
+    },
+    {
+      "id": "P120",
+      "verdict": "supported"
+    },
+    {
+      "id": "P121",
+      "verdict": "supported"
+    },
+    {
+      "id": "P122",
+      "verdict": "supported"
+    },
+    {
+      "id": "P123",
+      "verdict": "supported"
+    },
+    {
+      "id": "P124",
+      "verdict": "supported"
+    },
+    {
+      "id": "P125",
+      "verdict": "supported"
+    },
+    {
+      "id": "P126",
+      "verdict": "supported"
+    },
+    {
+      "id": "P127",
+      "verdict": "supported"
+    },
+    {
+      "id": "P128",
+      "verdict": "supported"
+    },
+    {
+      "id": "P129",
+      "verdict": "supported"
+    },
+    {
+      "id": "P130",
+      "verdict": "supported"
+    },
+    {
+      "id": "P131",
+      "verdict": "supported"
+    },
+    {
+      "id": "P132",
+      "verdict": "supported"
+    },
+    {
+      "id": "P133",
+      "verdict": "supported"
+    },
+    {
+      "id": "P134",
+      "verdict": "supported"
+    },
+    {
+      "id": "P135",
+      "verdict": "supported"
+    },
+    {
+      "id": "P136",
+      "verdict": "supported"
+    },
+    {
+      "id": "P137",
+      "verdict": "supported"
+    },
+    {
+      "id": "P138",
+      "verdict": "supported"
+    },
+    {
+      "id": "P139",
+      "verdict": "supported"
+    },
+    {
+      "id": "P140",
+      "verdict": "supported"
+    },
+    {
+      "id": "P141",
+      "verdict": "supported"
+    },
+    {
+      "id": "P142",
+      "verdict": "supported"
+    },
+    {
+      "id": "P143",
+      "verdict": "supported"
+    },
+    {
+      "id": "P144",
+      "verdict": "supported"
+    },
+    {
+      "id": "P145",
+      "verdict": "supported"
+    },
+    {
+      "id": "P146",
+      "verdict": "supported"
+    },
+    {
+      "id": "P147",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    },
+    {
+      "id": "P148",
+      "verdict": "supported"
+    }
+  ]
+}

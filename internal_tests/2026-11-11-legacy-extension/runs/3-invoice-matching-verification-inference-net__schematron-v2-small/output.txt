@@ -1,0 +1,40 @@
+{
+  "judgments": [
+    {
+      "id": "P011",
+      "verdict": "supported"
+    },
+    {
+      "id": "P018",
+      "verdict": "supported"
+    },
+    {
+      "id": "P024",
+      "verdict": "supported"
+    },
+    {
+      "id": "P018",
+      "verdict": "supported"
+    },
+    {
+      "id": "P025",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P025",
+      "verdict": "supported"
+    },
+    {
+      "id": "P026",
+      "verdict": "supported"
+    },
+    {
+      "id": "P024",
+      "verdict": "supported"
+    },
+    {
+      "id": "P025",
+      "verdict": "supported"
+    }
+  ]
+}

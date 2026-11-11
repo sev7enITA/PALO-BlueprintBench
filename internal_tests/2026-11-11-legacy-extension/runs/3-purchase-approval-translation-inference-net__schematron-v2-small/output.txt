@@ -1,0 +1,16 @@
+{
+  "specs": [
+    "A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+    "For a purchase of exactly EUR 5,000, Finance approval is not required.",
+    "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "A requester must never approve their own purchase request.",
+    "An emergency purchase is exempt from obtaining competitive quotations.",
+    "The emergency quotation exemption does not remove the finance approval requirement above EUR 5,000.",
+    "Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+    "If a requester cancels a request before approval, that requester must record the cancellation reason.",
+    "Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+    "The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+    "Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+    "The retention period begins on the approval date, not the purchase-order date."
+  ]
+}

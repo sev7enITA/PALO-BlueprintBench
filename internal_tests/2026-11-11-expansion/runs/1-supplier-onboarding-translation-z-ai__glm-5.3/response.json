@@ -1,0 +1,11 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794379374-o67qwMmWkFca80pU6Jvv","object":"chat.completion","created":1794379374,"model":"z-ai/glm-5.3","provider":"Wafer","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"R01 :: For any new supplier, the supplier is obliged to complete identity verification before the supplier's first purchase order.\nR02 :: Identity verification is performed by the Compliance officer, and the buyer is not permitted to perform identity verification.\nR03 :: If a supplier is classified as low risk, the Compliance officer is permitted but not obliged to request a site visit for that supplier.\nR04 :: If a supplier is classified as high risk, the supplier is obliged to undergo an enhanced review.\nR05 :: A renewal is exempt from repeating identity verification if the renewal is for an existing supplier and no identity data for that supplier has changed.\nR06 :: The renewal exemption from repeating identity verification does not apply when the supplier changes its legal name.\nR07 :: The buyer is forbidden from activating a supplier that is flagged as blocked.\nR08 :: A supplier with a risk score of 70 or more is classified as high risk.\nR09 :: A supplier with a risk score below 70 is classified as low risk.\nR10 :: An approval expires 365 calendar days after its approval date.\nR11 :: If a supplier's bank account is changed, a new independent bank-account check is required before the next payment to that supplier.\nR12 :: A contact email address is not unique across supplier records, and two supplier records are permitted to share the same contact email address.","refusal":null}}],"usage":{"prompt_tokens":321,"completion_tokens":767,"total_tokens":1088,"cost":0.0010962379,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.0010962379,"upstream_inference_prompt_cost":0.0000224379,"upstream_inference_completions_cost":0.0010738},"completion_tokens_details":{"reasoning_tokens":420,"image_tokens":0,"audio_tokens":0}}}

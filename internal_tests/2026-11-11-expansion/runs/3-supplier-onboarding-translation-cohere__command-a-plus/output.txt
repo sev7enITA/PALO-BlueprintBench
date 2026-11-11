@@ -1,0 +1,12 @@
+R01 :: If a supplier is new, identity verification must be completed before the first purchase order is issued.
+R02 :: Identity verification is performed by the Compliance officer and must not be performed by the buyer.
+R03 :: For a low‑risk supplier, Compliance may request a site visit but is not obligated to request one.
+R04 :: If a supplier is classified as high‑risk, an enhanced review must be performed.
+R05 :: If a renewal is for an existing supplier and the supplier’s identity data has not changed, the requirement to repeat identity verification is waived.
+R06 :: If a supplier changes its legal name, the renewal exemption from identity verification does not apply.
+R07 :: A buyer is prohibited from activating a supplier that is flagged as blocked.
+R08 :: If a supplier’s risk score is greater than or equal to 70, the supplier is classified as high‑risk.
+R09 :: If a supplier’s risk score is less than 70, the supplier is classified as low‑risk.
+R10 :: An approval expires 365 calendar days after its approval date.
+R11 :: If a supplier’s bank account is changed, a new independent bank‑account check must be performed before the next payment.
+R12 :: Supplier records may share a contact email address; uniqueness of the email address across supplier records is not required.

@@ -1,0 +1,48 @@
+{
+  "id": "2-purchase-approval-verification-mistralai__mistral-large-4-0",
+  "model": "mistralai/mistral-large-4-0",
+  "pinned_provider": "mistral/zdr",
+  "case": "purchase-approval",
+  "track": "verification",
+  "repetition": 2,
+  "started_at": "2026-11-11T06:50:11.940148+00:00",
+  "request_sha256": "9d918788818fff820bfdf1d608b0fa9fb6207e383e02957cc6d9f1c1a2a17958",
+  "reserved_usd": 0.08329552,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.00468496,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "d4c89b39cc6e8c193ae6b91c0dfcef12d0ca6858ad133059fee69a1a68e1d9ca",
+  "provider_request_id": "gen-1794379812-QNW4HmU1H6R36pvKMe68",
+  "returned_model": "mistralai/mistral-large-4-0",
+  "returned_provider": "Mistral",
+  "usage": {
+    "prompt_tokens": 1303,
+    "completion_tokens": 2027,
+    "total_tokens": 3330,
+    "cost": 0.00468496,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 768,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00468496,
+      "upstream_inference_prompt_cost": 0.00042826,
+      "upstream_inference_completions_cost": 0.0042567
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1466,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "c9924fd5c9c1d824c51933fd7d91da917c6d3e1c5975e7ef93947b9a203f5a58",
+  "elapsed_seconds": 17.124409333991935,
+  "finished_at": "2026-11-11T06:50:29.065093+00:00"
+}

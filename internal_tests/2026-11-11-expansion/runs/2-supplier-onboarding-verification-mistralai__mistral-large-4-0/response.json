@@ -1,0 +1,17 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794379973-qq5839mEMvWFhtoiXZm7","object":"chat.completion","created":1794379973,"model":"mistralai/mistral-large-4-0","provider":"Mistral","system_fingerprint":null,"service_tier":"default","choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"{\n  \"judgments\": [\n    {\"id\": \"P001\", \"verdict\": \"not_established\"},\n    {\"id\": \"P002\", \"verdict\": \"supported\"},\n    {\"id\": \"P003\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P004\", \"verdict\": \"supported\"},\n    {\"id\": \"P005\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P006\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P007\", \"verdict\": \"not_established\"},\n    {\"id\": \"P008\", \"verdict\": \"supported\"},\n    {\"id\": \"P009\", \"verdict\": \"not_established\"},\n    {\"id\": \"P010\", \"verdict\": \"supported\"},\n    {\"id\": \"P011\", \"verdict\": \"supported\"},\n    {\"id\": \"P012\", \"verdict\": \"not_established\"},\n    {\"id\": \"P013\", \"verdict\": \"not_established\"},\n    {\"id\": \"P014\", \"verdict\": \"supported\"},\n    {\"id\": \"P015\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P016\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P017\", \"verdict\": \"supported\"},\n    {\"id\": \"P018\", \"verdict\": \"supported\"},\n    {\"id\": \"P019\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P020\", \"verdict\": \"not_established\"},\n    {\"id\": \"P021\", \"verdict\": \"supported\"},\n    {\"id\": \"P022\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P023\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P024\", \"verdict\": \"supported\"},\n    {\"id\": \"P025\", \"verdict\": \"not_established\"},\n    {\"id\": \"P026\", \"verdict\": \"not_established\"},\n    {\"id\": \"P027\", \"verdict\": \"not_established\"},\n    {\"id\": \"P028\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P029\", \"verdict\": \"supported\"},\n    {\"id\": \"P030\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P031\", \"verdict\": \"not_established\"},\n    {\"id\": \"P032\", \"verdict\": \"supported\"},\n    {\"id\": \"P033\", \"verdict\": \"contradicted\"},\n    {\"id\": \"P034\", \"verdict\": \"not_established\"},\n    {\"id\": \"P035\", \"verdict\": \"not_established\"},\n    {\"id\": \"P036\", \"verdict\": \"contradicted\"}\n  ]\n}","refusal":null}}],"usage":{"prompt_tokens":1242,"completion_tokens":3227,"total_tokens":4469,"cost":0.00732354,"is_byok":false,"prompt_tokens_details":{"cached_tokens":512,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00732354,"upstream_inference_prompt_cost":0.00054684,"upstream_inference_completions_cost":0.0067767},"completion_tokens_details":{"reasoning_tokens":2625,"image_tokens":0,"audio_tokens":0}}}
