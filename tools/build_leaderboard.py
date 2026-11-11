@@ -174,6 +174,16 @@ def dataset_graph(data,url):
         graph[2]['hasPart'].append({'@id':workspace_id})
     else:
         graph[2]['relatedLink'] = BOARD+'#workspace'
+    if url == OVERVIEW:
+        references = read(ROOT/'docs/benchmark-references.json')
+        selected = [r for r in references['entries'] if r.get('review_group') == 'visibility-expansion-20261111']
+        reference_id = OVERVIEW+'#benchmark-reference-review'
+        graph.append({'@type':'WebPageElement','@id':reference_id,'url':OVERVIEW+'#references',
+                      'name':'BlueprintBench benchmark reference comparison',
+                      'description':f"{len(references['entries'])} methodological references, including {len(selected)} added high-visibility benchmark families. Selection uses sourced launch references, leaderboards, competitions and dated repository signals. Visibility is not benchmark validity. PALO transfer priorities are maintainer assessments; external suites were not executed and do not validate PALO.",
+                      'dateModified':references['checked_on'],
+                      'citation':[r['source_url'] for r in selected]})
+        graph[2]['hasPart'].append({'@id':reference_id})
     graph.extend([
         {'@type':'ImageObject','@id':OVERVIEW+'#benchmark-logo','name':'PALO BlueprintBench identity',
          'contentUrl':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png','encodingFormat':'image/png',

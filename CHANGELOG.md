@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-11: reference catalogue expanded to 35
+
+Added 15 benchmark families selected for source-backed visibility: HLE, ARC-AGI, GPQA, MMLU-Pro, AIME, FrontierMath, LiveCodeBench, Terminal-Bench, SWE-Bench Pro, BrowseComp, DeepResearch Bench, OSWorld, tau2-bench, BFCL and GDPval. Each includes version boundaries, visibility sources, limitations and a PALO transfer assessment. Repository attention snapshots are dated and kept separate from validity; no external suite was run and no score or independent qualification was added. The website, GitHub comparison and CSV/JSON exports share one catalogue.
+
+
 ## 2026-11-11: leaderboard structured-data alignment
 
 Aligned both public pages on explicit KPI definitions, exploratory rank scope and tie/eligibility rules, a separate sourced developer-country metadata dataset, and browser-generated CSV/JSON export capabilities. The source register is no longer described as a distribution of measured test results. No static filtered-export URL, independent validation, qualified score or country-of-hosting claim is introduced. Frozen test evidence is unchanged.
