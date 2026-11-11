@@ -1,0 +1,18 @@
+{
+  "repository": "sev7enITA/PALOframework",
+  "branch": "codex/blueprintbench-publication",
+  "commit": "fbd128af2d53c97a2b058837f547012f7ccf4841",
+  "files": [
+    "PALO_BlueprintBench.html",
+    "CHANGELOG.html",
+    "CHANGELOG.md",
+    "PALO_BlueprintBench_Leaderboard.html",
+    "downloads/blueprintbench/adversarial-tests.json",
+    "downloads/blueprintbench/release-manifest.json",
+    "assets/blueprintbench/leaderboard.css",
+    "assets/blueprintbench/leaderboard.js",
+    "assets/blueprintbench/blueprintbench.css",
+    "assets/blueprintbench/blueprintbench.js",
+    "scripts/public-files.mjs"
+  ]
+}
