@@ -1,0 +1,496 @@
+{
+  "version": "real-procurement-design-v1",
+  "status": "pre_output_assistant_draft",
+  "qualified": false,
+  "created_at": "2026-11-11T22:02:37.352793+00:00",
+  "task_type": "scoped_whole_document_blueprint_generation",
+  "dsl": {
+    "rule_order": "first matching rule wins; use default only when no rule matches",
+    "value_domain": [
+      true,
+      false,
+      "unknown"
+    ],
+    "condition_operators": [
+      "all",
+      "any",
+      "not",
+      "eq",
+      "ne",
+      "gt",
+      "gte",
+      "lt",
+      "lte"
+    ],
+    "no_executable_code": true,
+    "right_operand": "typed literal or {field: other_input_name}, with matching operand types"
+  },
+  "tasks": [
+    {
+      "id": "far15",
+      "source_document": "far15.pdf",
+      "source_pages_file": "source-pages.json",
+      "source_page_numbers": [
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484
+      ],
+      "input_fields": {
+        "received_late": {
+          "type": "boolean",
+          "description": "True if received after the effective solicitation deadline, already adjusted for any applicable emergency extension; false if on time."
+        },
+        "received_before_award": {
+          "type": "boolean",
+          "description": "Receipt occurred before contract award."
+        },
+        "acceptance_would_unduly_delay": {
+          "type": "boolean",
+          "description": "Contracting officer determines that accepting this late item would unduly delay the acquisition."
+        },
+        "electronic_method_authorised": {
+          "type": "boolean",
+          "description": "Submission used an electronic commerce method authorised by the solicitation."
+        },
+        "gateway_workdays_before_due_date": {
+          "type": "number",
+          "description": "Number of working days before due date on which the initial government gateway received the submission: 0 is due date, 1 is preceding working day.",
+          "minimum": 0
+        },
+        "gateway_minute_of_day": {
+          "type": "number",
+          "description": "Gateway receipt local minute after midnight; 1020 means 17:00.",
+          "minimum": 0,
+          "maximum": 1439
+        },
+        "acceptable_receipt_evidence": {
+          "type": "boolean",
+          "description": "Evidence of government installation receipt is acceptable under the source."
+        },
+        "designated_installation_received_before_deadline": {
+          "type": "boolean",
+          "description": "The installation designated for receipt received the submission before the effective deadline."
+        },
+        "government_control_before_deadline": {
+          "type": "boolean",
+          "description": "Submission was under government control before the effective deadline."
+        },
+        "only_proposal_received": {
+          "type": "boolean",
+          "description": "It was the only proposal received."
+        },
+        "item_kind": {
+          "type": "string",
+          "description": "Type of submitted item.",
+          "enum": [
+            "proposal",
+            "modification",
+            "revision"
+          ]
+        },
+        "otherwise_successful_proposal": {
+          "type": "boolean",
+          "description": "The modification relates to an otherwise successful proposal."
+        },
+        "modified_terms_more_favourable": {
+          "type": "boolean",
+          "description": "The modification makes the proposal terms more favourable to the Government."
+        },
+        "process_interrupted": {
+          "type": "boolean",
+          "description": "An emergency or unanticipated event interrupted normal Government processes."
+        },
+        "interruption_prevents_timely_receipt": {
+          "type": "boolean",
+          "description": "That interruption prevents receipt at the designated office by the specified deadline."
+        },
+        "urgent_needs_preclude_amendment": {
+          "type": "boolean",
+          "description": "Urgent Government requirements preclude amendment of the solicitation closing date."
+        },
+        "contract_award_imminent": {
+          "type": "boolean",
+          "description": "Contract award is imminent at the time of considering the late-receipt notice."
+        },
+        "award_notice_would_suffice": {
+          "type": "boolean",
+          "description": "The notice prescribed in 15.503(b) would suffice; treat this externally determined procedural fact as supplied."
+        }
+      },
+      "required_outputs": [
+        "late_submission_considerable",
+        "late_notice_required",
+        "emergency_deadline_extension"
+      ],
+      "output_definitions": {
+        "late_submission_considerable": {
+          "question": "Can this late item be considered under the exceptions in FAR 15.208(b), including the special successful-proposal modification rule?",
+          "scope": "Consideration only, not award or acceptance. For on-time items return unknown because this output concerns late-item exceptions. Facts received_late already incorporate any adjusted deadline."
+        },
+        "late_notice_required": {
+          "question": "Does FAR 15.208(f) require the contracting officer to send the prompt late-receipt notice for this item?",
+          "scope": "Only the notice duty in (f), including its imminent-award/sufficient-notice exception; no claim about other notices."
+        },
+        "emergency_deadline_extension": {
+          "question": "Do the supplied circumstances trigger the deemed deadline extension in FAR 15.208(d)?",
+          "scope": "Whether the extension rule triggers. The workflow must preserve that the new deadline is the same specified time of day on the first workday normal processes resume, without inventing a date."
+        }
+      },
+      "instructions": "Read the entire supplied source package before generating a blueprint. Generate source-grounded atomic requirements, a dependency-aware workflow, and executable declarative decision rules for every named output using the typed inputs. Do not classify supplied candidate propositions: none are provided. Return only the agreed strict JSON blueprint. Quote source text and cite original physical PDF page numbers. Distinguish obligation, permission, prohibition, condition and description; preserve exceptions and source dates. Inputs are supplied case facts, not conclusions to infer. Outputs are bounded to their stated source section/scope; false means that named condition is not met, not that the opposite is universally lawful. Retain unknown when necessary. No access to hidden scenarios or expected outputs is provided. No arbitrary code. Do not use current law or external documents to repair this fixed historical source snapshot.",
+      "business_scope": "Federal negotiated procurement, archived FAR Part 15 only."
+    },
+    {
+      "id": "fta",
+      "source_document": "fta.pdf",
+      "source_pages_file": "source-pages.json",
+      "source_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97
+      ],
+      "input_fields": {
+        "aggregate_amount_usd": {
+          "type": "number",
+          "description": "Aggregate amount of the transaction, in dollars.",
+          "minimum": 0
+        },
+        "effective_micro_threshold_usd": {
+          "type": "number",
+          "description": "Lawfully established and applicable micro-purchase threshold for this recipient/date, supplied as an authoritative case input; do not infer it from current law.",
+          "minimum": 0
+        },
+        "effective_simplified_threshold_usd": {
+          "type": "number",
+          "description": "Lawfully applicable simplified acquisition threshold, supplied for this recipient/date; do not substitute a later statutory value.",
+          "minimum": 0
+        },
+        "state_local_law_permits_micro": {
+          "type": "boolean",
+          "description": "State and local law permit use of the micro-purchase procedure for this transaction."
+        },
+        "price_considered_reasonable": {
+          "type": "boolean",
+          "description": "Recipient considers the price reasonable on the grounds allowed by the source."
+        },
+        "price_reasonableness_documented": {
+          "type": "boolean",
+          "description": "Recipient maintains documents supporting its price-reasonableness conclusion."
+        },
+        "proposed_micro_threshold_usd": {
+          "type": "number",
+          "description": "Micro-purchase threshold the recipient proposes to establish, separate from its already effective threshold.",
+          "minimum": 0
+        },
+        "procurement_divided_or_reduced": {
+          "type": "boolean",
+          "description": "Recipient divides or reduces the procurement size."
+        },
+        "purpose_avoid_larger_requirements": {
+          "type": "boolean",
+          "description": "Purpose of that division/reduction is merely entering the micro-purchase limit or avoiding requirements applicable to larger acquisitions."
+        }
+      },
+      "required_outputs": [
+        "micro_without_quotes_allowed",
+        "cognizant_approval_required",
+        "simplified_amount_band_eligible",
+        "artificial_split_prohibited"
+      ],
+      "output_definitions": {
+        "micro_without_quotes_allowed": {
+          "question": "Do the supplied facts satisfy the VI.3.a route to a micro-purchase without competitive quotations?",
+          "scope": "This specific route only; effective thresholds are valid supplied inputs. A false answer does not forbid procurement through another route."
+        },
+        "cognizant_approval_required": {
+          "question": "Does the proposed micro-purchase threshold require cognizant-agency approval under VI.3.a(2)?",
+          "scope": "The over-50000 trigger only. A false result does not establish that self-certification documentation has been completed or that the proposed threshold is effective."
+        },
+        "simplified_amount_band_eligible": {
+          "question": "Is the transaction amount in the simplified-acquisition band stated by VI.3.b(1)?",
+          "scope": "Amount-band condition only, using supplied effective thresholds; not full procurement authorization."
+        },
+        "artificial_split_prohibited": {
+          "question": "Does the stated division/reduction and purpose meet the anti-avoidance prohibition in VI.3.a(3)(b) or VI.3.b(2)(b)?",
+          "scope": "This prohibition only; false does not certify every other reason for splitting as lawful."
+        }
+      },
+      "instructions": "Read the entire supplied source package before generating a blueprint. Generate source-grounded atomic requirements, a dependency-aware workflow, and executable declarative decision rules for every named output using the typed inputs. Do not classify supplied candidate propositions: none are provided. Return only the agreed strict JSON blueprint. Quote source text and cite original physical PDF page numbers. Distinguish obligation, permission, prohibition, condition and description; preserve exceptions and source dates. Inputs are supplied case facts, not conclusions to infer. Outputs are bounded to their stated source section/scope; false means that named condition is not met, not that the opposite is universally lawful. Retain unknown when necessary. No access to hidden scenarios or expected outputs is provided. No arbitrary code. Do not use current law or external documents to repair this fixed historical source snapshot. Effective recipient thresholds are supplied input values and may vary across cases. Compare the transaction amount to those fields using the supported field-reference operand; do not hardcode a general threshold.",
+      "business_scope": "FTA recipient procurement methods under Circular 4220.1G."
+    },
+    {
+      "id": "fema",
+      "source_document": "fema.pdf",
+      "source_pages_file": "source-pages.json",
+      "source_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "input_fields": {
+        "contract_amount_usd": {
+          "type": "number",
+          "description": "Contract or purchase-order amount in USD.",
+          "minimum": 0
+        },
+        "contract_category": {
+          "type": "string",
+          "description": "Procurement category. construction means prime construction; other may contain uncharacterised work.",
+          "enum": [
+            "prime_construction",
+            "open_market_supplies",
+            "transportation",
+            "intelligence_transmission",
+            "other"
+          ]
+        },
+        "fema_program": {
+          "type": "string",
+          "description": "FEMA financial-assistance program category; HMA includes the Hazard Mitigation Assistance programs.",
+          "enum": [
+            "PA",
+            "HMA",
+            "other"
+          ]
+        },
+        "program_legislation_requires_davis_bacon": {
+          "type": "string",
+          "description": "Known applicability under the other federal program legislation; unknown when absent from the supplied facts.",
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "involves_mechanics_or_laborers": {
+          "type": "boolean",
+          "description": "Procurement involves employment of mechanics or laborers. All true construction cases are expressly construction work with such employment."
+        }
+      },
+      "required_outputs": [
+        "termination_clause_required",
+        "davis_bacon_clause_required",
+        "work_hours_clause_required",
+        "clean_air_water_clause_required"
+      ],
+      "output_definitions": {
+        "termination_clause_required": {
+          "question": "Is the termination-for-cause-and-convenience contract provision required under section 2.1?",
+          "scope": "This guide edition and provision only. Distinguish requirement from suggestion at/below the threshold."
+        },
+        "davis_bacon_clause_required": {
+          "question": "Is the Davis-Bacon contract provision federally required under section 4.1 on the supplied program/contract facts?",
+          "scope": "Apply PA/HMA exclusion and program-legislation applicability. Unknown applicability must remain unknown when it matters. No opinion on state-law duties."
+        },
+        "work_hours_clause_required": {
+          "question": "Is the section 6.1 work-hours/safety provision required for the supplied procurement?",
+          "scope": "Classify expressly covered prime construction with mechanics/laborers, and the listed excluded categories. For other work that the facts/source cannot classify, preserve unknown rather than resolve external-law applicability."
+        },
+        "clean_air_water_clause_required": {
+          "question": "Is the section 8.1 Clean Air/Water contract provision required?",
+          "scope": "The guide's amount applicability condition only, at its stated edition."
+        }
+      },
+      "instructions": "Read the entire supplied source package before generating a blueprint. Generate source-grounded atomic requirements, a dependency-aware workflow, and executable declarative decision rules for every named output using the typed inputs. Do not classify supplied candidate propositions: none are provided. Return only the agreed strict JSON blueprint. Quote source text and cite original physical PDF page numbers. Distinguish obligation, permission, prohibition, condition and description; preserve exceptions and source dates. Inputs are supplied case facts, not conclusions to infer. Outputs are bounded to their stated source section/scope; false means that named condition is not met, not that the opposite is universally lawful. Retain unknown when necessary. No access to hidden scenarios or expected outputs is provided. No arbitrary code. Do not use current law or external documents to repair this fixed historical source snapshot.",
+      "business_scope": "FEMA-funded contract provision applicability under Contract Provisions Guide v2."
+    }
+  ],
+  "coverage_limits": [
+    "Three public document packages, not held-out or independent source families. FTA and FEMA share federal Uniform Guidance dependencies.",
+    "Selected outputs cover narrow decision slices; reading the whole source does not establish whole-document semantic recall.",
+    "The test designer is automated and knows these sources. Expectations are assistant drafts, not independently adjudicated human gold.",
+    "No provider output had been observed when these designs and expectations were prepared.",
+    "Current-law validity is outside scope: compare interpretation of exact archived editions, including dated thresholds.",
+    "Output predicates consume supplied procedural facts; no independent classification of evidence quality or legal facts is tested."
+  ]
+}

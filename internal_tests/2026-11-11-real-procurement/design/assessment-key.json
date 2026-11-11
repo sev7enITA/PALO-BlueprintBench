@@ -1,0 +1,1836 @@
+{
+  "version": "real-procurement-assessment-v1",
+  "label_status": "assistant_draft",
+  "status": "pre_output_frozen_candidate",
+  "qualified": false,
+  "human_adjudication": "pending",
+  "created_at": "2026-11-11T22:02:37.353774+00:00",
+  "tasks": [
+    {
+      "task_id": "far15",
+      "cases": [
+        {
+          "id": "FAR-01",
+          "name": "only-proposal",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": true,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": true,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "It was the only proposal received.",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce True. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-02",
+          "name": "electronic-exact-five",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": true,
+            "gateway_workdays_before_due_date": 1,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": false,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": true,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "not later than 5:00 p.m. one working day prior",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce True. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-03",
+          "name": "electronic-one-minute-late",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": true,
+            "gateway_workdays_before_due_date": 1,
+            "gateway_minute_of_day": 1021,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": false,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": false,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "not later than 5:00 p.m. one working day prior",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce False. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-04",
+          "name": "electronic-due-date",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": true,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 600,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": false,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": false,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "not later than 5:00 p.m. one working day prior",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce False. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-05",
+          "name": "electronic-earlier-day",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": true,
+            "gateway_workdays_before_due_date": 2,
+            "gateway_minute_of_day": 1200,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": false,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": true,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "not later than 5:00 p.m. one working day prior",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce True. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-06",
+          "name": "government-custody",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": true,
+            "designated_installation_received_before_deadline": true,
+            "government_control_before_deadline": true,
+            "only_proposal_received": false,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": true,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "not later than 5:00 p.m. one working day prior",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce True. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-07",
+          "name": "missing-custody",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": true,
+            "designated_installation_received_before_deadline": true,
+            "government_control_before_deadline": false,
+            "only_proposal_received": false,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": false,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "not later than 5:00 p.m. one working day prior",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce False. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-08",
+          "name": "after-award",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": false,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": true,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": false,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "It was the only proposal received.",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce False. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-09",
+          "name": "favourable-modification-overrides",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": false,
+            "acceptance_would_unduly_delay": true,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": true,
+            "item_kind": "modification",
+            "otherwise_successful_proposal": true,
+            "modified_terms_more_favourable": true,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": true,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "may be accepted.",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce True. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-10",
+          "name": "revision-not-modification",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": false,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": true,
+            "item_kind": "revision",
+            "otherwise_successful_proposal": true,
+            "modified_terms_more_favourable": true,
+            "process_interrupted": false,
+            "interruption_prevents_timely_receipt": false,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": false,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": false,
+            "late_notice_required": true,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "It was the only proposal received.",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce False. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected True."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-11",
+          "name": "notice-exception-extension",
+          "inputs": {
+            "received_late": true,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": true,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": true,
+            "interruption_prevents_timely_receipt": true,
+            "urgent_needs_preclude_amendment": true,
+            "contract_award_imminent": true,
+            "award_notice_would_suffice": true
+          },
+          "expected": {
+            "late_submission_considerable": true,
+            "late_notice_required": false,
+            "emergency_deadline_extension": true
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "It was the only proposal received.",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce True. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected False."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected True; the workflow retains same time of day and first restored workday."
+            }
+          }
+        },
+        {
+          "id": "FAR-12",
+          "name": "on-time-no-late-duty",
+          "inputs": {
+            "received_late": false,
+            "received_before_award": true,
+            "acceptance_would_unduly_delay": false,
+            "electronic_method_authorised": false,
+            "gateway_workdays_before_due_date": 0,
+            "gateway_minute_of_day": 1020,
+            "acceptable_receipt_evidence": false,
+            "designated_installation_received_before_deadline": false,
+            "government_control_before_deadline": false,
+            "only_proposal_received": true,
+            "item_kind": "proposal",
+            "otherwise_successful_proposal": false,
+            "modified_terms_more_favourable": false,
+            "process_interrupted": true,
+            "interruption_prevents_timely_receipt": true,
+            "urgent_needs_preclude_amendment": false,
+            "contract_award_imminent": true,
+            "award_notice_would_suffice": false
+          },
+          "expected": {
+            "late_submission_considerable": "unknown",
+            "late_notice_required": false,
+            "emergency_deadline_extension": false
+          },
+          "evidence": {
+            "late_submission_considerable": {
+              "source_pages": [
+                440
+              ],
+              "quote": "It was the only proposal received.",
+              "rationale": "Apply 15.208(b)(2) first for qualifying favourable modifications; otherwise before-award/no-undue-delay plus one (b)(1) route. On-time items are out of this output scope. Facts produce unknown. Sources must be read as a full subsection, not the short locator quote alone."
+            },
+            "late_notice_required": {
+              "source_pages": [
+                440
+              ],
+              "quote": "unless contract award is imminent",
+              "rationale": "The late duty in (f) is exempt only when both imminent award and sufficient 15.503(b) notice are supplied; on-time items have no duty under (f). Expected False."
+            },
+            "emergency_deadline_extension": {
+              "source_pages": [
+                440
+              ],
+              "quote": "the first work day on which normal",
+              "rationale": "Subsection (d) requires interruption preventing timely receipt and urgent requirements precluding amendment. Expected False; the workflow retains same time of day and first restored workday."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "fta",
+      "cases": [
+        {
+          "id": "FTA-01",
+          "name": "below-micro",
+          "inputs": {
+            "aggregate_amount_usd": 4999,
+            "effective_micro_threshold_usd": 5000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": true,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 4999 to supplied effective micro threshold 5000, plus state/local permission, reasonable documented price and no prohibited division. Expected True for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 5000 < 4999 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-02",
+          "name": "exact-micro",
+          "inputs": {
+            "aggregate_amount_usd": 50000,
+            "effective_micro_threshold_usd": 50000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": true,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 50000 to supplied effective micro threshold 50000, plus state/local permission, reasonable documented price and no prohibited division. Expected True for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 50000 < 50000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-03",
+          "name": "above-micro",
+          "inputs": {
+            "aggregate_amount_usd": 10000.01,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": true,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 10000.01 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 10000.01 <= 250000. Expected True for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-04",
+          "name": "exact-simplified",
+          "inputs": {
+            "aggregate_amount_usd": 200000,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 200000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": true,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 200000 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 200000 <= 200000. Expected True for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-05",
+          "name": "above-simplified",
+          "inputs": {
+            "aggregate_amount_usd": 200000.01,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 200000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 200000.01 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 200000.01 <= 200000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-06",
+          "name": "price-not-reasonable",
+          "inputs": {
+            "aggregate_amount_usd": 5000,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": false,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 5000 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 5000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-07",
+          "name": "documentation-absent",
+          "inputs": {
+            "aggregate_amount_usd": 5000,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": false,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 5000 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 5000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-08",
+          "name": "state-law-disallows",
+          "inputs": {
+            "aggregate_amount_usd": 5000,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": false,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 5000 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 5000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-09",
+          "name": "exact-self-cert-ceiling",
+          "inputs": {
+            "aggregate_amount_usd": 20000,
+            "effective_micro_threshold_usd": 50000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": true,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 20000 to supplied effective micro threshold 50000, plus state/local permission, reasonable documented price and no prohibited division. Expected True for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 50000 < 20000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-10",
+          "name": "over-self-cert-ceiling",
+          "inputs": {
+            "aggregate_amount_usd": 50000.01,
+            "effective_micro_threshold_usd": 50000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000.01,
+            "procurement_divided_or_reduced": false,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": true,
+            "simplified_amount_band_eligible": true,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 50000.01 to supplied effective micro threshold 50000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected True; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 50000 < 50000.01 <= 250000. Expected True for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FTA-11",
+          "name": "artificial-division",
+          "inputs": {
+            "aggregate_amount_usd": 5000,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": true,
+            "purpose_avoid_larger_requirements": true
+          },
+          "expected": {
+            "micro_without_quotes_allowed": false,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": true
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 5000 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected False for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 5000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected True."
+            }
+          }
+        },
+        {
+          "id": "FTA-12",
+          "name": "other-division-purpose",
+          "inputs": {
+            "aggregate_amount_usd": 5000,
+            "effective_micro_threshold_usd": 10000,
+            "effective_simplified_threshold_usd": 250000,
+            "state_local_law_permits_micro": true,
+            "price_considered_reasonable": true,
+            "price_reasonableness_documented": true,
+            "proposed_micro_threshold_usd": 50000,
+            "procurement_divided_or_reduced": true,
+            "purpose_avoid_larger_requirements": false
+          },
+          "expected": {
+            "micro_without_quotes_allowed": true,
+            "cognizant_approval_required": false,
+            "simplified_amount_band_eligible": false,
+            "artificial_split_prohibited": false
+          },
+          "evidence": {
+            "micro_without_quotes_allowed": {
+              "source_pages": [
+                73
+              ],
+              "quote": "without obtaining competitive quotations",
+              "rationale": "Compare amount 5000 to supplied effective micro threshold 10000, plus state/local permission, reasonable documented price and no prohibited division. Expected True for this route only."
+            },
+            "cognizant_approval_required": {
+              "source_pages": [
+                73
+              ],
+              "quote": "A micro-purchase threshold higher than $50,000 must be approved",
+              "rationale": "Strictly higher than USD50000 triggers cognizant-agency approval. Expected False; equality does not."
+            },
+            "simplified_amount_band_eligible": {
+              "source_pages": [
+                74
+              ],
+              "quote": "higher than the micro-purchase threshold but does not exceed",
+              "rationale": "Compare supplied fields: 10000 < 5000 <= 250000. Expected False for the amount band, not full authorization."
+            },
+            "artificial_split_prohibited": {
+              "source_pages": [
+                73
+              ],
+              "quote": "recipient may not divide or reduce the size",
+              "rationale": "Prohibition targets division/reduction for threshold avoidance, not every division. Expected False."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": "fema",
+      "cases": [
+        {
+          "id": "FEMA-01",
+          "name": "exact-termination",
+          "inputs": {
+            "contract_amount_usd": 10000,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": false
+          },
+          "expected": {
+            "termination_clause_required": false,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected False."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-02",
+          "name": "above-termination",
+          "inputs": {
+            "contract_amount_usd": 10000.01,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": false
+          },
+          "expected": {
+            "termination_clause_required": true,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected True."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-03",
+          "name": "exact-davis-bacon",
+          "inputs": {
+            "contract_amount_usd": 2000,
+            "contract_category": "prime_construction",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "yes",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": false,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected False."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-04",
+          "name": "above-davis-bacon",
+          "inputs": {
+            "contract_amount_usd": 2000.01,
+            "contract_category": "prime_construction",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "yes",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": false,
+            "davis_bacon_clause_required": true,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected False."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected True."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-05",
+          "name": "public-assistance-exclusion",
+          "inputs": {
+            "contract_amount_usd": 2000.01,
+            "contract_category": "prime_construction",
+            "fema_program": "PA",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": false,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected False."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-06",
+          "name": "hma-exclusion",
+          "inputs": {
+            "contract_amount_usd": 2000.01,
+            "contract_category": "prime_construction",
+            "fema_program": "HMA",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": false,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected False."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-07",
+          "name": "unknown-program-applicability",
+          "inputs": {
+            "contract_amount_usd": 2000.01,
+            "contract_category": "prime_construction",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": false,
+            "davis_bacon_clause_required": "unknown",
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected False."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected unknown."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-08",
+          "name": "exact-work-hours",
+          "inputs": {
+            "contract_amount_usd": 100000,
+            "contract_category": "prime_construction",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "yes",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": true,
+            "davis_bacon_clause_required": true,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected True."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected True."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-09",
+          "name": "above-work-hours",
+          "inputs": {
+            "contract_amount_usd": 100000.01,
+            "contract_category": "prime_construction",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "yes",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": true,
+            "davis_bacon_clause_required": true,
+            "work_hours_clause_required": true,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected True."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected True."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected True."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-10",
+          "name": "exact-air-water",
+          "inputs": {
+            "contract_amount_usd": 150000,
+            "contract_category": "prime_construction",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "no",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": true,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": true,
+            "clean_air_water_clause_required": false
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected True."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected True."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected False."
+            }
+          }
+        },
+        {
+          "id": "FEMA-11",
+          "name": "open-market-exclusion",
+          "inputs": {
+            "contract_amount_usd": 150000.01,
+            "contract_category": "open_market_supplies",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": true,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": false,
+            "clean_air_water_clause_required": true
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected True."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected False."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected True."
+            }
+          }
+        },
+        {
+          "id": "FEMA-12",
+          "name": "unclassified-work",
+          "inputs": {
+            "contract_amount_usd": 150000.01,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "expected": {
+            "termination_clause_required": true,
+            "davis_bacon_clause_required": false,
+            "work_hours_clause_required": "unknown",
+            "clean_air_water_clause_required": true
+          },
+          "evidence": {
+            "termination_clause_required": {
+              "source_pages": [
+                9
+              ],
+              "quote": "contracts and purchase orders exceeding $10,000",
+              "rationale": "Section2.1 uses strict >10000, and expressly says not required at/below. Expected True."
+            },
+            "davis_bacon_clause_required": {
+              "source_pages": [
+                12
+              ],
+              "quote": "When required by the federal program legislation",
+              "rationale": "Section4.1: prime construction >2000, applicable program legislation; PA/HMA excluded federally. Unknown legislation must not become false when other conditions hold. Expected False."
+            },
+            "work_hours_clause_required": {
+              "source_pages": [
+                15
+              ],
+              "quote": "These requirements do not apply to",
+              "rationale": "Section6.1: strict >100000; clear construction/mechanics-laborers case covered, listed open-market/transport/intelligence exclusions apply. Other uncharacterised work stays unknown. Expected unknown."
+            },
+            "clean_air_water_clause_required": {
+              "source_pages": [
+                19
+              ],
+              "quote": "required for all procurements over $150,000",
+              "rationale": "Section8.1 uses strict >150000. Expected True."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Three public document packages, not held-out or independent source families. FTA and FEMA share federal Uniform Guidance dependencies.",
+    "Selected outputs cover narrow decision slices; reading the whole source does not establish whole-document semantic recall.",
+    "The test designer is automated and knows these sources. Expectations are assistant drafts, not independently adjudicated human gold.",
+    "No provider output had been observed when these designs and expectations were prepared.",
+    "Current-law validity is outside scope: compare interpretation of exact archived editions, including dated thresholds.",
+    "Output predicates consume supplied procedural facts; no independent classification of evidence quality or legal facts is tested.",
+    "Twelve scenarios per task are a deliberately bounded diagnostic set, not exhaustive branch or semantic coverage.",
+    "FEMA other-work classification remains unknown rather than importing external-law interpretation of the labor/construction wording.",
+    "FTA effective thresholds are supplied case facts that vary across cases. Their legal establishment is outside the generation task; the model must compare fields without treating them as fixed general-law constants."
+  ]
+}

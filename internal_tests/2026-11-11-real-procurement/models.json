@@ -1,0 +1,288 @@
+[
+  {
+    "id": "openai/gpt-6.1-sol",
+    "name": "OpenAI: GPT-6.1 Sol",
+    "provider": "openai",
+    "endpoint": {
+      "name": "OpenAI | openai/gpt-6.1-sol-20260929",
+      "model_id": "openai/gpt-6.1-sol",
+      "model_name": "OpenAI: GPT-6.1 Sol",
+      "context_length": 1050000,
+      "pricing": {
+        "prompt": "$2/M tokens",
+        "completion": "$10/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.1/M tokens",
+        "input_cache_write": "$2.5/M tokens",
+        "discount": 0,
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "$4/M tokens",
+            "completion": "$15/M tokens",
+            "input_cache_read": "$0.2/M tokens",
+            "input_cache_write": "$5/M tokens"
+          }
+        ]
+      },
+      "provider_name": "OpenAI",
+      "tag": "openai",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": 922000,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "seed",
+        "max_tokens",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search"
+        },
+        "openrouter:apply_patch": {
+          "type": "apply_patch"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 4582,
+        "p75": 9747.25,
+        "p90": 20690.20000000002,
+        "p99": 64161.0800000001
+      },
+      "throughput_last_30m": {
+        "p50": 33,
+        "p75": 25,
+        "p90": 18,
+        "p99": 9
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 4582,
+            "p75": 9747.25,
+            "p90": 20690.20000000002,
+            "p99": 64161.0800000001
+          },
+          "throughput": {
+            "p50": 33,
+            "p75": 25,
+            "p90": 18,
+            "p99": 9
+          },
+          "request_count": 234620
+        }
+      }
+    }
+  },
+  {
+    "id": "anthropic/claude-opus-5.5",
+    "name": "Anthropic: Claude Opus 5.5",
+    "provider": "anthropic",
+    "endpoint": {
+      "name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4/M tokens",
+        "completion": "$20/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.2/M tokens",
+        "input_cache_write": "$5/M tokens",
+        "input_cache_write_1h": "$8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Anthropic",
+      "tag": "anthropic",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search_20260209"
+        },
+        "openrouter:web_fetch": {
+          "type": "web_fetch_20260209"
+        },
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        },
+        "openrouter:advisor": {
+          "type": "advisor_20260301"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 2630,
+        "p75": 3657.25,
+        "p90": 5261.300000000004,
+        "p99": 13866.280000000013
+      },
+      "throughput_last_30m": {
+        "p50": 86,
+        "p75": 64,
+        "p90": 45,
+        "p99": 20
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 2630,
+            "p75": 3657.25,
+            "p90": 5261.300000000004,
+            "p99": 13866.280000000013
+          },
+          "throughput": {
+            "p50": 86,
+            "p75": 64,
+            "p90": 45,
+            "p99": 20
+          },
+          "request_count": 47984
+        }
+      }
+    }
+  },
+  {
+    "id": "google/gemini-4-argon",
+    "name": "Google: Gemini 4 Argon",
+    "provider": "google-vertex/us",
+    "endpoint": {
+      "name": "Google | google/gemini-4-argon-20261013",
+      "model_id": "google/gemini-4-argon",
+      "model_name": "Google: Gemini 4 Argon",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "$2.2/M tokens",
+        "completion": "$11/M tokens",
+        "image": "$0.0000022/image",
+        "audio": "$2.2/M tokens",
+        "input_audio_cache": "$0.11/M tokens",
+        "web_search": "$0.014/web search",
+        "internal_reasoning": "$11/M tokens",
+        "input_cache_read": "$0.11/M tokens",
+        "input_cache_write": "$0.1875/M tokens",
+        "discount": 0.5
+      },
+      "provider_name": "Google",
+      "tag": "google-vertex/us",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 65536,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "seed",
+        "response_format",
+        "tools",
+        "tool_choice",
+        "stop",
+        "structured_outputs",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 97.35812133072407,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "google_search"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 7764,
+        "p75": 16807,
+        "p90": 28476.199999999997,
+        "p99": 57296.84000000001
+      },
+      "throughput_last_30m": {
+        "p50": 43,
+        "p75": 14,
+        "p90": 8,
+        "p99": 2
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 7764,
+            "p75": 16807,
+            "p90": 28476.199999999997,
+            "p99": 57296.84000000001
+          },
+          "throughput": {
+            "p50": 43,
+            "p75": 14,
+            "p90": 8,
+            "p99": 2
+          },
+          "request_count": 1933
+        }
+      }
+    }
+  }
+]
