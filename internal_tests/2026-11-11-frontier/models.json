@@ -1,0 +1,163 @@
+[
+  {
+    "id": "openai/gpt-6.1-sol",
+    "provider": "openai",
+    "catalogue_name": "OpenAI: GPT-6.1 Sol",
+    "endpoint_name": "OpenAI | openai/gpt-6.1-sol-20260929",
+    "catalogue_context": 1050000,
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    },
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000025",
+      "discount": 0,
+      "overrides": [
+        {
+          "min_prompt_tokens": 272000,
+          "prompt": "0.000004",
+          "completion": "0.000015",
+          "input_cache_read": "0.0000002",
+          "input_cache_write": "0.000005"
+        }
+      ]
+    },
+    "supported_parameters": [
+      "include_reasoning",
+      "max_completion_tokens",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "response_format",
+      "seed",
+      "structured_outputs",
+      "tool_choice",
+      "tools",
+      "verbosity"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted for all models",
+      "seed": "unavailable across all three; omitted"
+    },
+    "revision_status": "Endpoint advertises dated revision; exact weights/runtime cannot be independently verified."
+  },
+  {
+    "id": "anthropic/claude-opus-5.5",
+    "provider": "anthropic",
+    "catalogue_name": "Anthropic: Claude Opus 5.5",
+    "endpoint_name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+    "catalogue_context": 1000000,
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "high"
+    },
+    "pricing": {
+      "prompt": "0.000004",
+      "completion": "0.00002",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000002",
+      "input_cache_write": "0.000005",
+      "input_cache_write_1h": "0.000008",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "include_reasoning",
+      "max_completion_tokens",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "response_format",
+      "stop",
+      "structured_outputs",
+      "tool_choice",
+      "tools",
+      "verbosity"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted for all models",
+      "seed": "unavailable across all three; omitted"
+    },
+    "revision_status": "Endpoint advertises dated revision; exact weights/runtime cannot be independently verified."
+  },
+  {
+    "id": "google/gemini-4-argon",
+    "provider": "google-ai-studio",
+    "catalogue_name": "Google: Gemini 4 Argon",
+    "endpoint_name": "Google AI Studio | google/gemini-4-argon-20261013",
+    "catalogue_context": 1048576,
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "medium"
+    },
+    "pricing": {
+      "prompt": "0.000002",
+      "completion": "0.00001",
+      "image": "0.000002",
+      "audio": "0.000002",
+      "input_audio_cache": "0.0000001",
+      "web_search": "0.014",
+      "internal_reasoning": "0.00001",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.0000001875",
+      "discount": 0.5
+    },
+    "supported_parameters": [
+      "include_reasoning",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "response_format",
+      "seed",
+      "stop",
+      "structured_outputs",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_p"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted for all models",
+      "seed": "unavailable across all three; omitted"
+    },
+    "revision_status": "Endpoint advertises dated revision; exact weights/runtime cannot be independently verified."
+  }
+]
