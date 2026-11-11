@@ -1,0 +1,25 @@
+{
+  "scope": "Exact HTTPS byte verification of changed ranked-leaderboard payload",
+  "at": "2026-11-11T16:31:07Z",
+  "files": [
+    {
+      "path": "PALO_BlueprintBench.html",
+      "http_status": 200,
+      "sha256": "1865a9ee06ffcdd0f77f58d88ef1517202c4bb51ab61e6d442ba8b4be8b07d88",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "PALO_BlueprintBench_Leaderboard.html",
+      "http_status": 200,
+      "sha256": "a9d7d98331b031cb18bfe93b899d2a2ddc9dd7858aadfbdf6a703c68ebb8530c",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "http_status": 200,
+      "sha256": "4fd6c3049d7288a817173ef227a6e0832f6661109e12281049e4a1018c9e2b96",
+      "matches_published_bytes": true
+    }
+  ],
+  "all_passed": true
+}

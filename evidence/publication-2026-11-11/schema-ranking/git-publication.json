@@ -1,0 +1,11 @@
+{
+  "repository": "sev7enITA/PALOframework",
+  "branch": "codex/blueprintbench-publication",
+  "commit": "42c436e337c05323922570495838495d8fa5bdc6",
+  "files": [
+    "PALO_BlueprintBench.html",
+    "PALO_BlueprintBench_Leaderboard.html",
+    "downloads/blueprintbench/release-manifest.json",
+    "scripts/public-files.mjs"
+  ]
+}
