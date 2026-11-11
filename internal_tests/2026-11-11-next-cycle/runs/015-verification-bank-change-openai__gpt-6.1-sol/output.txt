@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "bank-change-P01",
+      "label": "supported",
+      "source_units": ["B04"],
+      "rationale": "Within the stated scope of a declared payment-system outage, B04 expressly permits the treasury lead to authorise payment to the previously verified account. This does not establish permission for outages generally."
+    },
+    {
+      "id": "bank-change-P02",
+      "label": "contradicted",
+      "source_units": ["B01", "B05"],
+      "rationale": "B05 explicitly states that the outage procedure does not authorise use of new unverified details. B01 also makes Treasury verification necessary before a bank change becomes usable."
+    },
+    {
+      "id": "bank-change-P03",
+      "label": "contradicted",
+      "source_units": ["B01", "B02"],
+      "rationale": "B02 expressly prohibits the entry operator from approving the same change, and B01 requires approval by someone who did not enter it."
+    },
+    {
+      "id": "bank-change-P04",
+      "label": "contradicted",
+      "source_units": ["B01", "B03"],
+      "rationale": "B03 states that email confirmation alone is insufficient for Treasury verification. B01 requires that verification and independent approval before usability, so email confirmation alone cannot suffice."
+    },
+    {
+      "id": "bank-change-P05",
+      "label": "supported",
+      "source_units": ["B01"],
+      "rationale": "B01 expressly makes both Treasury verification and independent approval necessary for a change to become usable."
+    },
+    {
+      "id": "bank-change-P06",
+      "label": "not_established",
+      "source_units": ["B06"],
+      "rationale": "B06 explicitly says the documents do not define a department-tenure requirement. A three-year Treasury-tenure obligation is therefore unestablished, rather than expressly prohibited."
+    },
+    {
+      "id": "bank-change-P07",
+      "label": "supported",
+      "source_units": ["B06"],
+      "rationale": "Reading B06 as the specification of the bank-change log's content, it requires recording both operator ID and approver ID. This does not imply that these are the log's only fields."
+    },
+    {
+      "id": "bank-change-P08",
+      "label": "not_established",
+      "source_units": ["B04"],
+      "rationale": "B04 grants permission to authorise payment to the previously verified account; it does not impose an obligation to authorise or make that payment. Permission alone establishes neither mandatory payment nor an explicit absence of such an obligation."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "currency-approval-P01",
+      "label": "supported",
+      "source_units": ["C01", "C02", "C04", "C05", "C06"],
+      "rationale": "Using the required workbook rate, USD 12,500 × 0.80 equals EUR 10,000. No shipping or VAT adjustments apply. C02 explicitly places exactly EUR 10,000 below its approval trigger; this does not establish exemption from any other approval requirement."
+    },
+    {
+      "id": "currency-approval-P02",
+      "label": "contradicted",
+      "source_units": ["C01", "C02", "C04", "C05", "C06"],
+      "rationale": "Request A converts to exactly EUR 10,000, with no shipping or VAT adjustments. C02 explicitly states that this amount is below the trigger, rather than exceeding it."
+    },
+    {
+      "id": "currency-approval-P03",
+      "label": "supported",
+      "source_units": ["C01", "C02", "C04", "C05", "C06"],
+      "rationale": "Using the required workbook rate, USD 12,501 × 0.80 equals EUR 10,000.80. No shipping or VAT adjustments apply. This exceeds EUR 10,000, so C02 requires project-director approval. The calculation produces no fractional euro cents requiring a rounding rule."
+    },
+    {
+      "id": "currency-approval-P04",
+      "label": "contradicted",
+      "source_units": ["C03"],
+      "rationale": "C03 expressly states that the requester cannot give the project-director approval, although the requester may prepare the conversion."
+    },
+    {
+      "id": "currency-approval-P05",
+      "label": "contradicted",
+      "source_units": ["C01"],
+      "rationale": "C01 requires the workbook rate and explicitly prohibits using a live exchange rate."
+    },
+    {
+      "id": "currency-approval-P06",
+      "label": "contradicted",
+      "source_units": ["C06"],
+      "rationale": "C06 expressly states that approval amounts include shipping. The absence of shipping charges for these requests does not change that inclusion rule."
+    },
+    {
+      "id": "currency-approval-P07",
+      "label": "not_established",
+      "source_units": ["C06"],
+      "rationale": "C06 explicitly says the documents do not state a rounding rule for fractional euro cents. Upward rounding is therefore neither required nor prohibited by the supplied sources."
+    },
+    {
+      "id": "currency-approval-P08",
+      "label": "supported",
+      "source_units": ["C06"],
+      "rationale": "C06 expressly states that approval amounts exclude VAT."
+    }
+  ]
+}

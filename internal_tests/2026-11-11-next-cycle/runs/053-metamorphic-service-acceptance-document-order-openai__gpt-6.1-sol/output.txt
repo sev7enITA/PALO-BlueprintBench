@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "service-acceptance-P01",
+      "label": "supported",
+      "source_units": ["S04", "S06"],
+      "rationale": "The clock resumes at its prior elapsed value after resolution, and M2 had accrued 7 payment days before its now-resolved dispute."
+    },
+    {
+      "id": "service-acceptance-P02",
+      "label": "contradicted",
+      "source_units": ["S04", "S06"],
+      "rationale": "M2 resumes with its prior 7 accrued payment days, not zero."
+    },
+    {
+      "id": "service-acceptance-P03",
+      "label": "contradicted",
+      "source_units": ["S01", "S02", "S06"],
+      "rationale": "A purchase order is a necessary payment requirement, and signed acceptance does not replace it. M2 has no purchase order, so dispute resolution and signed acceptance do not make it eligible for payment."
+    },
+    {
+      "id": "service-acceptance-P04",
+      "label": "contradicted",
+      "source_units": ["S03"],
+      "rationale": "Accounts Payable is explicitly prohibited from signing acceptance; it may only register it."
+    },
+    {
+      "id": "service-acceptance-P05",
+      "label": "contradicted",
+      "source_units": ["S05"],
+      "rationale": "The source explicitly states that a dispute on M2 does not pause M1."
+    },
+    {
+      "id": "service-acceptance-P06",
+      "label": "contradicted",
+      "source_units": ["S05"],
+      "rationale": "The source explicitly states that acceptance of M1 does not accept M2."
+    },
+    {
+      "id": "service-acceptance-P07",
+      "label": "not_established",
+      "source_units": ["S06"],
+      "rationale": "No payment due-day total is specified. The source neither establishes nor rules out a 30-day total."
+    },
+    {
+      "id": "service-acceptance-P08",
+      "label": "not_established",
+      "source_units": ["S06"],
+      "rationale": "No automatic reminder channel is specified. This leaves an email requirement unestablished rather than prohibited."
+    }
+  ]
+}

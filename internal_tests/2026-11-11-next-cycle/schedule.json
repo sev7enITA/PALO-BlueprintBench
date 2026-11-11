@@ -1,0 +1,362 @@
+[
+  {
+    "id": "001-verification-emergency-spares-openai__gpt-6.1-sol",
+    "task_id": "verification-emergency-spares",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "002-verification-emergency-spares-anthropic__claude-opus-5.5",
+    "task_id": "verification-emergency-spares",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "003-verification-emergency-spares-google__gemini-4-argon",
+    "task_id": "verification-emergency-spares",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "004-workflow-emergency-spares-anthropic__claude-opus-5.5",
+    "task_id": "workflow-emergency-spares",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "005-workflow-emergency-spares-google__gemini-4-argon",
+    "task_id": "workflow-emergency-spares",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "006-workflow-emergency-spares-openai__gpt-6.1-sol",
+    "task_id": "workflow-emergency-spares",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "007-verification-framework-calloffs-google__gemini-4-argon",
+    "task_id": "verification-framework-calloffs",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "008-verification-framework-calloffs-openai__gpt-6.1-sol",
+    "task_id": "verification-framework-calloffs",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "009-verification-framework-calloffs-anthropic__claude-opus-5.5",
+    "task_id": "verification-framework-calloffs",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "010-workflow-framework-calloffs-openai__gpt-6.1-sol",
+    "task_id": "workflow-framework-calloffs",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "011-workflow-framework-calloffs-anthropic__claude-opus-5.5",
+    "task_id": "workflow-framework-calloffs",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "012-workflow-framework-calloffs-google__gemini-4-argon",
+    "task_id": "workflow-framework-calloffs",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "013-verification-bank-change-anthropic__claude-opus-5.5",
+    "task_id": "verification-bank-change",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "014-verification-bank-change-google__gemini-4-argon",
+    "task_id": "verification-bank-change",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "015-verification-bank-change-openai__gpt-6.1-sol",
+    "task_id": "verification-bank-change",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "016-workflow-bank-change-google__gemini-4-argon",
+    "task_id": "workflow-bank-change",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "017-workflow-bank-change-openai__gpt-6.1-sol",
+    "task_id": "workflow-bank-change",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "018-workflow-bank-change-anthropic__claude-opus-5.5",
+    "task_id": "workflow-bank-change",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "019-verification-policy-transition-openai__gpt-6.1-sol",
+    "task_id": "verification-policy-transition",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "020-verification-policy-transition-anthropic__claude-opus-5.5",
+    "task_id": "verification-policy-transition",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "021-verification-policy-transition-google__gemini-4-argon",
+    "task_id": "verification-policy-transition",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "022-workflow-policy-transition-anthropic__claude-opus-5.5",
+    "task_id": "workflow-policy-transition",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "023-workflow-policy-transition-google__gemini-4-argon",
+    "task_id": "workflow-policy-transition",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "024-workflow-policy-transition-openai__gpt-6.1-sol",
+    "task_id": "workflow-policy-transition",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "025-verification-currency-approval-google__gemini-4-argon",
+    "task_id": "verification-currency-approval",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "026-verification-currency-approval-openai__gpt-6.1-sol",
+    "task_id": "verification-currency-approval",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "027-verification-currency-approval-anthropic__claude-opus-5.5",
+    "task_id": "verification-currency-approval",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "028-workflow-currency-approval-openai__gpt-6.1-sol",
+    "task_id": "workflow-currency-approval",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "029-workflow-currency-approval-anthropic__claude-opus-5.5",
+    "task_id": "workflow-currency-approval",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "030-workflow-currency-approval-google__gemini-4-argon",
+    "task_id": "workflow-currency-approval",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "031-verification-service-acceptance-anthropic__claude-opus-5.5",
+    "task_id": "verification-service-acceptance",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "032-verification-service-acceptance-google__gemini-4-argon",
+    "task_id": "verification-service-acceptance",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "033-verification-service-acceptance-openai__gpt-6.1-sol",
+    "task_id": "verification-service-acceptance",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "034-workflow-service-acceptance-google__gemini-4-argon",
+    "task_id": "workflow-service-acceptance",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "035-workflow-service-acceptance-openai__gpt-6.1-sol",
+    "task_id": "workflow-service-acceptance",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "036-workflow-service-acceptance-anthropic__claude-opus-5.5",
+    "task_id": "workflow-service-acceptance",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "037-metamorphic-emergency-spares-document-order-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-emergency-spares-document-order",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "038-metamorphic-emergency-spares-document-order-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-emergency-spares-document-order",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "039-metamorphic-emergency-spares-document-order-google__gemini-4-argon",
+    "task_id": "metamorphic-emergency-spares-document-order",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "040-metamorphic-framework-calloffs-document-order-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-framework-calloffs-document-order",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "041-metamorphic-framework-calloffs-document-order-google__gemini-4-argon",
+    "task_id": "metamorphic-framework-calloffs-document-order",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "042-metamorphic-framework-calloffs-document-order-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-framework-calloffs-document-order",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "043-metamorphic-bank-change-document-order-google__gemini-4-argon",
+    "task_id": "metamorphic-bank-change-document-order",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "044-metamorphic-bank-change-document-order-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-bank-change-document-order",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "045-metamorphic-bank-change-document-order-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-bank-change-document-order",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "046-metamorphic-policy-transition-document-order-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-policy-transition-document-order",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "047-metamorphic-policy-transition-document-order-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-policy-transition-document-order",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "048-metamorphic-policy-transition-document-order-google__gemini-4-argon",
+    "task_id": "metamorphic-policy-transition-document-order",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "049-metamorphic-currency-approval-document-order-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-currency-approval-document-order",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "050-metamorphic-currency-approval-document-order-google__gemini-4-argon",
+    "task_id": "metamorphic-currency-approval-document-order",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "051-metamorphic-currency-approval-document-order-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-currency-approval-document-order",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "052-metamorphic-service-acceptance-document-order-google__gemini-4-argon",
+    "task_id": "metamorphic-service-acceptance-document-order",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "053-metamorphic-service-acceptance-document-order-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-service-acceptance-document-order",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "054-metamorphic-service-acceptance-document-order-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-service-acceptance-document-order",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "055-metamorphic-emergency-threshold-counterfactual-openai__gpt-6.1-sol",
+    "task_id": "metamorphic-emergency-threshold-counterfactual",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  },
+  {
+    "id": "056-metamorphic-emergency-threshold-counterfactual-anthropic__claude-opus-5.5",
+    "task_id": "metamorphic-emergency-threshold-counterfactual",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "057-metamorphic-emergency-threshold-counterfactual-google__gemini-4-argon",
+    "task_id": "metamorphic-emergency-threshold-counterfactual",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "058-legacy-blind-items-anthropic__claude-opus-5.5",
+    "task_id": "legacy-blind-items",
+    "model": "anthropic/claude-opus-5.5",
+    "repetition": 1
+  },
+  {
+    "id": "059-legacy-blind-items-google__gemini-4-argon",
+    "task_id": "legacy-blind-items",
+    "model": "google/gemini-4-argon",
+    "repetition": 1
+  },
+  {
+    "id": "060-legacy-blind-items-openai__gpt-6.1-sol",
+    "task_id": "legacy-blind-items",
+    "model": "openai/gpt-6.1-sol",
+    "repetition": 1
+  }
+]

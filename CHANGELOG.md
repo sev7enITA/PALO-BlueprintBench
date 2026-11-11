@@ -97,3 +97,7 @@ No independently qualified held-out entries or newly qualified Workbench release
 - Recorded Fable, Gemini and GLM advisory review evidence separately from the model-ranking cohort.
 - Added a default-scope 18-model roster with four metric positions, observed input tokens, configuration exports and explicit separation of ten historical diagnostics and 35 unexecuted benchmark references.
 - Preserved primary measurement bytes and independent-qualification gates.
+
+## 2026-11-11: six-scenario engineering feasibility
+
+Separate publication revision 2026-11-11.4 adds source-bound internal execution on six fictional scenarios and 48 draft propositions, workflow exports, metamorphic checks and advisory review of P002/P013/P036. The original 18-model cohort and evaluator v0.3.0-internal.1 package remain unchanged. One rubric-sensitive item is retained but excluded from draft-agreement scoring before calls. No ranks or independent validation are assigned.

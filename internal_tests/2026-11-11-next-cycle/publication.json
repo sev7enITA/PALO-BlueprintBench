@@ -1,0 +1,8 @@
+{
+  "revision": "2026-11-11.4",
+  "source_reference": "codex/blueprintbench-six-scenario-feasibility-20261111",
+  "evaluator_release_unchanged": "v0.3.0-internal.1",
+  "original_cohort_unchanged": true,
+  "qualification": "internal_engineering_feasibility",
+  "execution_scope": "API workflow drafts and deterministic checks; not Workbench application end-to-end qualification"
+}

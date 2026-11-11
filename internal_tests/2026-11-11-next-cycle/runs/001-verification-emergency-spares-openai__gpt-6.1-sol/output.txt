@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "emergency-spares-P01",
+      "label": "supported",
+      "source_units": ["E01", "E05"],
+      "rationale": "EUR 12,001 exceeds the strict EUR 12,000 threshold, requiring procurement director approval before issuance. The outage exception does not waive that requirement."
+    },
+    {
+      "id": "emergency-spares-P02",
+      "label": "contradicted",
+      "source_units": ["E01", "E05"],
+      "rationale": "The amount rule expressly requires director approval above EUR 12,000, and the outage exception preserves that requirement."
+    },
+    {
+      "id": "emergency-spares-P03",
+      "label": "contradicted",
+      "source_units": ["E03", "E04"],
+      "rationale": "Although ordinary purchases require three quotations, the declared-outage exception permits ordering with one and explicitly makes further quotations optional."
+    },
+    {
+      "id": "emergency-spares-P04",
+      "label": "contradicted",
+      "source_units": ["E02", "E05"],
+      "rationale": "Requester self-approval is expressly prohibited, including for emergency requests, and the outage exception does not waive the prohibition."
+    },
+    {
+      "id": "emergency-spares-P05",
+      "label": "supported",
+      "source_units": ["E06"],
+      "rationale": "For a declared outage, E06 requires the buyer to record the justification within two calendar days after order issuance, establishing the stated deadline."
+    },
+    {
+      "id": "emergency-spares-P06",
+      "label": "contradicted",
+      "source_units": ["E01"],
+      "rationale": "E01 expressly provides a complete amount-triggered rule: approval is triggered only above EUR 12,000, not at exactly EUR 12,000. This conclusion concerns E01's amount trigger, not possible approval requirements on other grounds."
+    },
+    {
+      "id": "emergency-spares-P07",
+      "label": "not_established",
+      "source_units": ["E06"],
+      "rationale": "E06 establishes the recording duty but says the policy does not prescribe a storage system. An Oracle-specific implementation requirement is not established; no broader, complete set of storage requirements is supplied."
+    },
+    {
+      "id": "emergency-spares-P08",
+      "label": "contradicted",
+      "source_units": ["E01", "E05"],
+      "rationale": "Above EUR 12,000, procurement director approval is required and remains required for outage orders. Substituting the buyer's approval would eliminate that expressly required approval; this does not address any additional buyer approval."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "bank-change-P01",
+      "label": "supported",
+      "source_units": ["B04"],
+      "rationale": "Reading 'an outage' within the procedure's stated scope—a declared payment-system outage—B04 expressly permits this authorisation."
+    },
+    {
+      "id": "bank-change-P02",
+      "label": "contradicted",
+      "source_units": ["B05", "B01"],
+      "rationale": "B05 explicitly excludes authorisation to use new unverified details under the outage procedure. B01 also requires Treasury verification before a change becomes usable."
+    },
+    {
+      "id": "bank-change-P03",
+      "label": "contradicted",
+      "source_units": ["B02", "B05"],
+      "rationale": "B02 expressly prohibits the entry operator from approving that same change, and B05 preserves this separation during an outage."
+    },
+    {
+      "id": "bank-change-P04",
+      "label": "contradicted",
+      "source_units": ["B03", "B01"],
+      "rationale": "Email confirmation alone is explicitly insufficient for Treasury verification, which B01 makes necessary for usability. Independent approval is also required."
+    },
+    {
+      "id": "bank-change-P05",
+      "label": "supported",
+      "source_units": ["B01"],
+      "rationale": "B01 makes both Treasury verification and independent approval by someone other than the entry operator necessary for usability."
+    },
+    {
+      "id": "bank-change-P06",
+      "label": "not_established",
+      "source_units": ["B06"],
+      "rationale": "B06 states that the documents define no department-tenure requirement. A three-year requirement is therefore not established; its absence does not establish that such a requirement is prohibited."
+    },
+    {
+      "id": "bank-change-P07",
+      "label": "supported",
+      "source_units": ["B06"],
+      "rationale": "B06 specifies both operator ID and approver ID as log content. Reading this as the log's content requirement supports inclusion of both, without implying they are the only fields."
+    },
+    {
+      "id": "bank-change-P08",
+      "label": "not_established",
+      "source_units": ["B04"],
+      "rationale": "B04 grants permission to authorise payment during a declared payment-system outage. It neither imposes mandatory payment nor explicitly establishes that payment cannot be mandatory."
+    }
+  ]
+}

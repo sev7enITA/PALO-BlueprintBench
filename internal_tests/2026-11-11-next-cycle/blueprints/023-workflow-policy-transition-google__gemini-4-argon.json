@@ -1,0 +1,294 @@
+{
+  "artifact_type": "source_linked_model_draft",
+  "id": "023-workflow-policy-transition-google__gemini-4-argon",
+  "model": "google/gemini-4-argon",
+  "case_id": "policy-transition",
+  "qualified": false,
+  "business_approval_required": true,
+  "business_approved": false,
+  "export_status": "structurally_valid_model_draft",
+  "semantic_status": "unreviewed_model_output",
+  "structural_issues": [],
+  "source_packet_sha256": "a8f568b4d7ddb1b11e2a322b2bef72e6d02b0baa365887830ef52e912c900822",
+  "raw_output_sha256": "0d7574fa66cd49ea24363c050b2a135d0f9ebff0013a516cff87c6a7f8efd21f",
+  "raw_output_path": "runs/023-workflow-policy-transition-google__gemini-4-argon/output.txt",
+  "content": {
+    "typed_entities_and_identifiers": [
+      {
+        "name": "Requisition",
+        "identifier_status": "not_established",
+        "fields": [
+          {
+            "name": "requisition_created",
+            "type": "date",
+            "source_units": [
+              "T01",
+              "T02",
+              "T03",
+              "T04"
+            ]
+          },
+          {
+            "name": "amount_eur",
+            "type": "number (EUR) ",
+            "source_units": [
+              "T01",
+              "T03",
+              "T04"
+            ]
+          },
+          {
+            "name": "order_issuance_date",
+            "type": "date (optional, not specified in scenario) ",
+            "source_units": [
+              "T02"
+            ]
+          }
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03",
+          "T04"
+        ]
+      },
+      {
+        "name": "OrganizationalUnit",
+        "identifier_status": "source_supported",
+        "fields": [
+          {
+            "name": "unit",
+            "type": "string",
+            "source_units": [
+              "T05",
+              "T06"
+            ]
+          }
+        ],
+        "source_units": [
+          "T05",
+          "T06"
+        ]
+      },
+      {
+        "name": "ProposedProcessTrackingRecord",
+        "identifier_status": "proposed_design",
+        "fields": [
+          {
+            "name": "proposed_requisition_id",
+            "type": "string (proposed design identifier; not in source) ",
+            "source_units": [
+              "T01",
+              "T02"
+            ]
+          },
+          {
+            "name": "proposed_retention_rule_id",
+            "type": "string (proposed design identifier; not in source) ",
+            "source_units": [
+              "T05",
+              "T06"
+            ]
+          }
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T05",
+          "T06"
+        ]
+      }
+    ],
+    "decision_predicates": [
+      {
+        "id": "P1",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance",
+        "scope": "Requisitions created before 1 October 2026 (applicable version determined by requisition creation date regardless of later order issuance) ",
+        "condition": "Requisition creation date is before 2026-10-01 and amount is strictly above EUR 20,000",
+        "units": "EUR",
+        "comparison": "requisition_created < 2026-10-01 AND amount_eur > 20000",
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      },
+      {
+        "id": "P2",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance",
+        "scope": "Requisitions created before 1 October 2026 (applicable version determined by requisition creation date regardless of later order issuance) ",
+        "condition": "Requisition creation date is before 2026-10-01 and amount is at or below EUR 20,000",
+        "units": "EUR",
+        "comparison": "requisition_created < 2026-10-01 AND amount_eur <= 20000",
+        "source_units": [
+          "T01",
+          "T02"
+        ]
+      },
+      {
+        "id": "P3",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance",
+        "scope": "Requisitions created on or after 1 October 2026 (applicable version determined by requisition creation date regardless of later order issuance) ",
+        "condition": "Requisition creation date is on or after 2026-10-01 and purchase amount is strictly above EUR 15,000",
+        "units": "EUR",
+        "comparison": "requisition_created >= 2026-10-01 AND amount_eur > 15000",
+        "source_units": [
+          "T02",
+          "T03"
+        ]
+      },
+      {
+        "id": "P4",
+        "decision": "finance_approval_from_amount_threshold",
+        "actor": "Finance",
+        "scope": "Requisitions created on or after 1 October 2026 (applicable version determined by requisition creation date regardless of later order issuance) ",
+        "condition": "Requisition creation date is on or after 2026-10-01 and amount is exactly EUR 15,000",
+        "units": "EUR",
+        "comparison": "requisition_created >= 2026-10-01 AND amount_eur == 15000",
+        "source_units": [
+          "T02",
+          "T04"
+        ]
+      },
+      {
+        "id": "P5",
+        "decision": "receipt_retention_period",
+        "actor": "not specified",
+        "scope": "North unit under local-instruction-a",
+        "condition": "Unit is North and receipt retention period is set to 60 calendar days",
+        "units": "calendar days",
+        "comparison": "unit == 'North' AND retention_days == 60",
+        "source_units": [
+          "T05"
+        ]
+      },
+      {
+        "id": "P6",
+        "decision": "receipt_retention_period",
+        "actor": "not specified",
+        "scope": "North unit under local-instruction-b",
+        "condition": "Unit is North and receipt retention period is set to 90 calendar days, with no priority, supersession, issue date, or authority information provided",
+        "units": "calendar days",
+        "comparison": "unit == 'North' AND retention_days == 90",
+        "source_units": [
+          "T06"
+        ]
+      }
+    ],
+    "process_transitions": [
+      {
+        "from_state": "ProposedState_Requisition_Created",
+        "to_state": "ProposedState_Finance_Approval_Required_Under_Amount_Threshold",
+        "event": "evaluate_finance_approval_from_amount_threshold",
+        "guard": "P1 holds (requisition_created < 2026-10-01 AND amount_eur > 20000) OR P3 holds (requisition_created >= 2026-10-01 AND amount_eur > 15000) ",
+        "predicate_ids": [
+          "P1",
+          "P3"
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T03"
+        ]
+      },
+      {
+        "from_state": "ProposedState_Requisition_Created",
+        "to_state": "ProposedState_Finance_Approval_Not_Required_Under_Amount_Threshold",
+        "event": "evaluate_finance_approval_from_amount_threshold",
+        "guard": "P2 holds (requisition_created < 2026-10-01 AND amount_eur <= 20000) OR P4 holds (requisition_created >= 2026-10-01 AND amount_eur == 15000) ",
+        "predicate_ids": [
+          "P2",
+          "P4"
+        ],
+        "source_units": [
+          "T01",
+          "T02",
+          "T04"
+        ]
+      },
+      {
+        "from_state": "ProposedState_Receipt_Retention_Check_Pending",
+        "to_state": "ProposedState_Receipt_Retention_Unresolved_Conflict",
+        "event": "evaluate_receipt_retention_period",
+        "guard": "P5 and P6 both apply to unit == 'North' with conflicting periods (60 vs 90 calendar days) and no priority, supersession, issue date, or authority rule",
+        "predicate_ids": [
+          "P5",
+          "P6"
+        ],
+        "source_units": [
+          "T05",
+          "T06"
+        ]
+      }
+    ],
+    "scenario_decisions": [
+      {
+        "decision": "finance_approval_from_amount_threshold",
+        "disposition": "required",
+        "predicate_ids": [
+          "P3"
+        ],
+        "source_units": [
+          "T02",
+          "T03"
+        ],
+        "rationale": "Under T02, the requisition creation date (2026-10-01) determines the applicable policy version regardless of when order issuance occurs. Because 2026-10-01 is on or after 1 October 2026, policy-v2 applies. Under T03 (predicate P3), purchases above EUR 15,000 require Finance approval, and the scenario amount of EUR 18,000 is strictly above EUR 15,000. Scope assumption: this decision evaluates only the named amount-threshold trigger assuming the requisition represents a purchase under T03, and does not infer that approval has been granted or that any unmentioned prerequisites are satisfied. Draft blueprint output is not business-approved or qualified."
+      },
+      {
+        "decision": "receipt_retention_period",
+        "disposition": "unresolved_conflict",
+        "predicate_ids": [
+          "P5",
+          "P6"
+        ],
+        "source_units": [
+          "T05",
+          "T06"
+        ],
+        "rationale": "For the North unit, local-instruction-a (T05, predicate P5) specifies a receipt retention period of 60 calendar days, whereas local-instruction-b (T06, predicate P6) specifies 90 calendar days. T06 explicitly states that neither local instruction provides priority, supersession, issue date, or authority information. Because both instructions apply to the North unit and directly conflict without any resolution rule in the supplied sources, no single retention period can be established. Draft blueprint output is not business-approved or qualified."
+      }
+    ],
+    "unresolved_questions": [
+      "For requisitions created on or after 1 October 2026 (policy-v2), what is the Finance approval disposition for amounts strictly below EUR 15,000, given that T03 covers amounts above EUR 15,000 and T04 covers only an amount of exactly EUR 15,000?",
+      "Which local instruction (local-instruction-a at 60 calendar days in T05 or local-instruction-b at 90 calendar days in T06) takes precedence for the North unit?",
+      "Which actor or role is obligated to retain receipts under T05 and T06, and what event starts the calendar-day retention clock?",
+      "What unique identifiers, approval workflows, and complete lifecycle states govern requisitions, orders, and receipts in the operational process?"
+    ]
+  },
+  "draft_decision_comparison": [
+    {
+      "id": "finance_approval_from_amount_threshold",
+      "predicted": "required",
+      "draft_expected": "required",
+      "scored": true,
+      "matches_draft": true,
+      "source_units": [
+        "T02",
+        "T03"
+      ],
+      "rationale": "Under T02, the requisition creation date (2026-10-01) determines the applicable policy version regardless of when order issuance occurs. Because 2026-10-01 is on or after 1 October 2026, policy-v2 applies. Under T03 (predicate P3), purchases above EUR 15,000 require Finance approval, and the scenario amount of EUR 18,000 is strictly above EUR 15,000. Scope assumption: this decision evaluates only the named amount-threshold trigger assuming the requisition represents a purchase under T03, and does not infer that approval has been granted or that any unmentioned prerequisites are satisfied. Draft blueprint output is not business-approved or qualified.",
+      "predicate_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "receipt_retention_period",
+      "predicted": "unresolved_conflict",
+      "draft_expected": "unresolved_conflict",
+      "scored": true,
+      "matches_draft": true,
+      "source_units": [
+        "T05",
+        "T06"
+      ],
+      "rationale": "For the North unit, local-instruction-a (T05, predicate P5) specifies a receipt retention period of 60 calendar days, whereas local-instruction-b (T06, predicate P6) specifies 90 calendar days. T06 explicitly states that neither local instruction provides priority, supersession, issue date, or authority information. Because both instructions apply to the North unit and directly conflict without any resolution rule in the supplied sources, no single retention period can be established. Draft blueprint output is not business-approved or qualified.",
+      "predicate_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "limitations": "Structural validity and matches to assistant-draft decisions do not establish semantic correctness, executability or independent validation."
+}

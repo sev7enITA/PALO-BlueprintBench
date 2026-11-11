@@ -1,0 +1,321 @@
+{
+  "review_id": "legacy-advisory-review-2026-11-11",
+  "created_at": "2026-11-11T19:48:47.367479+00:00",
+  "status": "automated_postrun_advisory_review",
+  "qualified": false,
+  "independent_human_review": false,
+  "reviewer": "Codex sub-agent next_cycle_semantic_review",
+  "reviewer_model_id": "unavailable_not_inferred",
+  "review_blinding": "This synthesis was written after reading all three model outputs. Model prompts withheld prior labels and competing interpretations, but this does not establish independent or contamination-free review.",
+  "source_packet": {
+    "path": "study/next-cycle/adjudication/reviewer-packet.json",
+    "sha256": "4d057930ae7c9cfca11fed3c99a78730487cb28eb1ba64c3bda992aea675ae64"
+  },
+  "legacy_mapping": {
+    "path": "study/next-cycle/adjudication/custodian-provenance.json",
+    "sha256": "f92596d5ac639fe03a4de3e7f5282ab087a871cc2fd2d2603301e0be1e47be5a"
+  },
+  "observed_outputs": [
+    {
+      "assignment_id": "058-legacy-blind-items-anthropic__claude-opus-5.5",
+      "model": "anthropic/claude-opus-5.5",
+      "pinned_provider": "anthropic",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/058-legacy-blind-items-anthropic__claude-opus-5.5/output.txt",
+        "sha256": "621585635c59a9180f47384512a10c0e9b4986798085bd87eedb95359a626d21"
+      },
+      "record": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/058-legacy-blind-items-anthropic__claude-opus-5.5/record.json",
+        "sha256": "ca645693e1737f8ac0c6544eaaf78f1f8d5844e2ccf48ded6139b11d0948eb2e"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/058-legacy-blind-items-anthropic__claude-opus-5.5/response.json",
+        "sha256": "385157ca02d1737330cb613d03af1cd534a75e9373e856c2875fdf9d44c85fdf"
+      },
+      "judgments": [
+        {
+          "id": "ITEM-A",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-A:R02",
+            "ITEM-A:R03",
+            "ITEM-A:R12"
+          ],
+          "rationale": "The source sets a fixed EUR 10 per-invoice tolerance: exactly EUR 10 is within tolerance and above EUR 10 blocks automatic payment. It says nothing about overseas suppliers or any percentage adjustment. One could argue that R03's unqualified wording rules out an increase, but the source does not state that the threshold is complete or free of exceptions. Treating that silence as a prohibition would be a closure assumption, so the claim is left open rather than contradicted."
+        },
+        {
+          "id": "ITEM-B",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-B:R10"
+          ],
+          "rationale": "R10 says the purchase threshold applies separately to each request rather than to a supplier's monthly total. That governs how the threshold is assessed. It does not say whether related requests are merged. No unit mentions automatic merging, so the source leaves the claim open."
+        },
+        {
+          "id": "ITEM-C",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-C:R04"
+          ],
+          "rationale": "R04 lets an Accounts Payable analyst ask for a corrected invoice on a blocked invoice but does not oblige them to ask. Read as a claim about the channel, the proposition is not addressed: no unit mentions a supplier portal or any required method. Read as a general duty to request corrections, it would conflict with R04's 'not obliged'. The channel reading is the more natural one, so the label is not_established."
+        }
+      ]
+    },
+    {
+      "assignment_id": "059-legacy-blind-items-google__gemini-4-argon",
+      "model": "google/gemini-4-argon",
+      "pinned_provider": "google-vertex/us",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/059-legacy-blind-items-google__gemini-4-argon/output.txt",
+        "sha256": "c751cdf14a0f0657ddd67c3e28cb1deeab259f757641bd0ba0ff9460cb540dcb"
+      },
+      "record": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/059-legacy-blind-items-google__gemini-4-argon/record.json",
+        "sha256": "a8deb140caceca1c5c871d49fe342f353d340372b72745d2c6164b89e82aeca9"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/059-legacy-blind-items-google__gemini-4-argon/response.json",
+        "sha256": "3114b6b542627e3952847c0172ea3a38c5a1aaada21270266a766ca5d42243d8"
+      },
+      "judgments": [
+        {
+          "id": "ITEM-A",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-A:R02",
+            "ITEM-A:R03",
+            "ITEM-A:R12"
+          ],
+          "rationale": "The source defines a per-invoice tolerance threshold of EUR 10 (ITEM-A:R02, ITEM-A:R03, ITEM-A:R12) and makes no mention of overseas suppliers or any 5 percent tolerance increase. Without assuming unstated rules or completeness regarding supplier location, this proposition is not established."
+        },
+        {
+          "id": "ITEM-B",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-B:R10"
+          ],
+          "rationale": "ITEM-B:R10 states that the purchase threshold applies separately to each request rather than to a monthly supplier total, but the source does not state whether multiple related requests are automatically merged into a single request. Because process completeness and implementation details cannot be invented from silence, the claim is not established."
+        },
+        {
+          "id": "ITEM-C",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-C:R04"
+          ],
+          "rationale": "ITEM-C:R04 states that an Accounts Payable analyst may ask for a corrected invoice for a blocked invoice without being obliged to do so, but the source never mentions a supplier portal or any required channel for requesting corrections. Because unstated implementation details cannot be assumed, this proposition is not established."
+        }
+      ]
+    },
+    {
+      "assignment_id": "060-legacy-blind-items-openai__gpt-6.1-sol",
+      "model": "openai/gpt-6.1-sol",
+      "pinned_provider": "openai",
+      "output": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/060-legacy-blind-items-openai__gpt-6.1-sol/output.txt",
+        "sha256": "5d824d5c460f61fd90f352d19d76f48e644b67db8e080893b48c7100b8db9e95"
+      },
+      "record": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/060-legacy-blind-items-openai__gpt-6.1-sol/record.json",
+        "sha256": "a6e3623b5ed4b8a2640503df8d97f62e6943c12c75dec19e7fbb68a802046de7"
+      },
+      "response_bytes": {
+        "path": "internal_tests/2026-11-11-next-cycle/runs/060-legacy-blind-items-openai__gpt-6.1-sol/response.json",
+        "sha256": "63a0a7621999c45383bbe0c40a0af046959d68b84fe80427ad67b233aedd6d43"
+      },
+      "judgments": [
+        {
+          "id": "ITEM-A",
+          "label": "contradicted",
+          "source_units": [
+            "ITEM-A:R02",
+            "ITEM-A:R03"
+          ],
+          "rationale": "The stated invoice-variance cutoff includes exactly EUR 10 but blocks automatic payment above EUR 10. This unqualified rule covers overseas invoices too; increasing their applicable tolerance by 5 percent would conflict with that cutoff."
+        },
+        {
+          "id": "ITEM-B",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-B:R10"
+          ],
+          "rationale": "The threshold applies separately to each request, but this does not establish whether related requests are merged beforehand. No complete request-processing rule establishes or prohibits automatic merging."
+        },
+        {
+          "id": "ITEM-C",
+          "label": "contradicted",
+          "source_units": [
+            "ITEM-C:R04"
+          ],
+          "rationale": "In the blocked-invoice context, an Accounts Payable analyst is expressly not obliged to request a corrected invoice. The proposition imposes that obligation, contradicting the stated optionality. The supplier-portal channel is separately unspecified."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "review_item": "ITEM-A",
+      "legacy_probe_id": "P002",
+      "analysis": "The split concerns closure, not arithmetic. OpenAI treats the unqualified above-EUR-10 blocking rule as applicable to overseas invoices. Anthropic and Google decline to infer that the source rules out unstated supplier-location exceptions. No source explicitly defines a closed exception set. The draft corpus and prompt must consistently define how unqualified rules interact with hypothetical omitted exceptions.",
+      "human_questions": [
+        "Does the stated above-EUR-10 blocking rule govern every invoice in this scope unless an exception is supplied?",
+        "Would the proposed five-percent change alter the automatic-payment cutoff or refer to another tolerance?",
+        "What explicit completeness convention should apply across all probes, rather than to this result alone?"
+      ],
+      "recommendation": "Retain as a closure-assumption dispute. Do not treat a two-to-one vote as adjudication or relabel the historical item.",
+      "judgments": [
+        {
+          "model": "anthropic/claude-opus-5.5",
+          "id": "ITEM-A",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-A:R02",
+            "ITEM-A:R03",
+            "ITEM-A:R12"
+          ],
+          "rationale": "The source sets a fixed EUR 10 per-invoice tolerance: exactly EUR 10 is within tolerance and above EUR 10 blocks automatic payment. It says nothing about overseas suppliers or any percentage adjustment. One could argue that R03's unqualified wording rules out an increase, but the source does not state that the threshold is complete or free of exceptions. Treating that silence as a prohibition would be a closure assumption, so the claim is left open rather than contradicted."
+        },
+        {
+          "model": "google/gemini-4-argon",
+          "id": "ITEM-A",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-A:R02",
+            "ITEM-A:R03",
+            "ITEM-A:R12"
+          ],
+          "rationale": "The source defines a per-invoice tolerance threshold of EUR 10 (ITEM-A:R02, ITEM-A:R03, ITEM-A:R12) and makes no mention of overseas suppliers or any 5 percent tolerance increase. Without assuming unstated rules or completeness regarding supplier location, this proposition is not established."
+        },
+        {
+          "model": "openai/gpt-6.1-sol",
+          "id": "ITEM-A",
+          "label": "contradicted",
+          "source_units": [
+            "ITEM-A:R02",
+            "ITEM-A:R03"
+          ],
+          "rationale": "The stated invoice-variance cutoff includes exactly EUR 10 but blocks automatic payment above EUR 10. This unqualified rule covers overseas invoices too; increasing their applicable tolerance by 5 percent would conflict with that cutoff."
+        }
+      ],
+      "label_counts": {
+        "contradicted": 1,
+        "not_established": 2
+      },
+      "unanimous": false,
+      "human_adjudication": "pending"
+    },
+    {
+      "review_item": "ITEM-B",
+      "legacy_probe_id": "P013",
+      "analysis": "All three models label the merge statement not_established. Their shared reason is that per-request threshold assessment does not state whether or when requests are automatically merged. Separate assessment can coexist with a later administrative merge; a contradiction requires extra assumptions about timing or replacement of the assessment unit.",
+      "human_questions": [
+        "Does merging mean administrative grouping, or replacing the requests before threshold assessment?",
+        "Is any source statement actually incompatible with every possible merge implementation?"
+      ],
+      "recommendation": "Record unanimous automated agreement only. Human review remains pending; no gold label is created.",
+      "judgments": [
+        {
+          "model": "anthropic/claude-opus-5.5",
+          "id": "ITEM-B",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-B:R10"
+          ],
+          "rationale": "R10 says the purchase threshold applies separately to each request rather than to a supplier's monthly total. That governs how the threshold is assessed. It does not say whether related requests are merged. No unit mentions automatic merging, so the source leaves the claim open."
+        },
+        {
+          "model": "google/gemini-4-argon",
+          "id": "ITEM-B",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-B:R10"
+          ],
+          "rationale": "ITEM-B:R10 states that the purchase threshold applies separately to each request rather than to a monthly supplier total, but the source does not state whether multiple related requests are automatically merged into a single request. Because process completeness and implementation details cannot be invented from silence, the claim is not established."
+        },
+        {
+          "model": "openai/gpt-6.1-sol",
+          "id": "ITEM-B",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-B:R10"
+          ],
+          "rationale": "The threshold applies separately to each request, but this does not establish whether related requests are merged beforehand. No complete request-processing rule establishes or prohibits automatic merging."
+        }
+      ],
+      "label_counts": {
+        "not_established": 3
+      },
+      "unanimous": true,
+      "human_adjudication": "pending"
+    },
+    {
+      "review_item": "ITEM-C",
+      "legacy_probe_id": "P036",
+      "analysis": "The statement combines a duty to request corrections with a portal-channel constraint. OpenAI reads it as an obligation and returns contradicted because R04 explicitly denies that duty; it separately notes that the portal is unspecified. Anthropic explicitly prefers the channel reading, returning not_established while acknowledging that the general-duty reading conflicts with R04. Google also returns not_established and stresses the missing portal detail after acknowledging optional requesting. The disagreement therefore includes scope and whole-statement aggregation, not merely failure to notice the source.",
+      "human_questions": [
+        "Does must scope over making a request, or only over the channel conditional on choosing to request?",
+        "Can the item be split into an obligation claim and a portal claim?",
+        "What frozen aggregation rule applies when one component is contradicted and another is unspecified?"
+      ],
+      "recommendation": "Split-first human adjudication is recommended. Preserve the current compound item and all opinions; do not retroactively replace its disposition or impose a voting result.",
+      "judgments": [
+        {
+          "model": "anthropic/claude-opus-5.5",
+          "id": "ITEM-C",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-C:R04"
+          ],
+          "rationale": "R04 lets an Accounts Payable analyst ask for a corrected invoice on a blocked invoice but does not oblige them to ask. Read as a claim about the channel, the proposition is not addressed: no unit mentions a supplier portal or any required method. Read as a general duty to request corrections, it would conflict with R04's 'not obliged'. The channel reading is the more natural one, so the label is not_established."
+        },
+        {
+          "model": "google/gemini-4-argon",
+          "id": "ITEM-C",
+          "label": "not_established",
+          "source_units": [
+            "ITEM-C:R04"
+          ],
+          "rationale": "ITEM-C:R04 states that an Accounts Payable analyst may ask for a corrected invoice for a blocked invoice without being obliged to do so, but the source never mentions a supplier portal or any required channel for requesting corrections. Because unstated implementation details cannot be assumed, this proposition is not established."
+        },
+        {
+          "model": "openai/gpt-6.1-sol",
+          "id": "ITEM-C",
+          "label": "contradicted",
+          "source_units": [
+            "ITEM-C:R04"
+          ],
+          "rationale": "In the blocked-invoice context, an Accounts Payable analyst is expressly not obliged to request a corrected invoice. The proposition imposes that obligation, contradicting the stated optionality. The supplier-portal channel is separately unspecified."
+        }
+      ],
+      "label_counts": {
+        "contradicted": 1,
+        "not_established": 2
+      },
+      "unanimous": false,
+      "human_adjudication": "pending"
+    }
+  ],
+  "summary": {
+    "assigned_model_responses": 3,
+    "observed_model_responses": 3,
+    "items_per_response": 3,
+    "observed_judgments": 9,
+    "unanimous_items": 1,
+    "split_items": 2,
+    "unanimous_item_ids": [
+      "ITEM-B"
+    ],
+    "split_item_ids": [
+      "ITEM-A",
+      "ITEM-C"
+    ],
+    "human_adjudications_completed": 0,
+    "paid_calls_for_this_review": 0
+  },
+  "preservation": {
+    "original_labels_changed": false,
+    "human_templates_filled": false,
+    "scoring_changed": false,
+    "majority_vote_used_as_gold": false
+  },
+  "interpretation_limit": "These are observed model opinions, not semantic correctness, validation, independent evidence or model rankings."
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "model": "openai/gpt-6.1-sol",
+    "url": "https://openrouter.ai/api/v1/models/openai/gpt-6.1-sol/endpoints",
+    "archive": "endpoint-openai__gpt-6.1-sol.json",
+    "retrieved_at": "2026-11-11T19:04:37.628607+00:00",
+    "previous_pin": "openai",
+    "selected_pin": "openai",
+    "rationale": "Retain exact available endpoint before freeze."
+  },
+  {
+    "model": "anthropic/claude-opus-5.5",
+    "url": "https://openrouter.ai/api/v1/models/anthropic/claude-opus-5.5/endpoints",
+    "archive": "endpoint-anthropic__claude-opus-5.5.json",
+    "retrieved_at": "2026-11-11T19:04:37.758328+00:00",
+    "previous_pin": "anthropic",
+    "selected_pin": "anthropic",
+    "rationale": "Retain exact available endpoint before freeze."
+  },
+  {
+    "model": "google/gemini-4-argon",
+    "url": "https://openrouter.ai/api/v1/models/google/gemini-4-argon/endpoints",
+    "archive": "endpoint-google__gemini-4-argon.json",
+    "retrieved_at": "2026-11-11T19:04:37.885061+00:00",
+    "previous_pin": "google-ai-studio",
+    "selected_pin": "google-vertex/us",
+    "rationale": "Google AI Studio standard and Vertex global endpoints report status -2 at freeze; select available Google Vertex US status 0 before freeze. No fallback."
+  }
+]

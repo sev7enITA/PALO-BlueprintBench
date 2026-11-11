@@ -1,0 +1,51 @@
+{
+  "id": "018-workflow-bank-change-anthropic__claude-opus-5.5",
+  "task_id": "workflow-bank-change",
+  "model": "anthropic/claude-opus-5.5",
+  "repetition": 1,
+  "pinned_provider": "anthropic",
+  "started_at": "2026-11-11T19:20:52.601331+00:00",
+  "source_packet_sha256": "ac613da2fc8d0b872069ab4e2e0be63f3ba935e272661729a3cd74410ff92115",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "f6d2b1cde414275347f5007b2c68b558ca926dce0a969414f5192c23a883c840",
+  "reserved_usd": 0.8153728000000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.079628,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "78fdd42fb1f26dfd14614d9fd7910e05ef0d33b9c0a6fb9375987befe95ed55b",
+  "provider_request_id": "gen-1794424852-U3Qn2VbSyxClQhyUFU5R",
+  "returned_model": "anthropic/claude-opus-5.5",
+  "returned_provider": "Anthropic",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 2907,
+    "completion_tokens": 3400,
+    "total_tokens": 6307,
+    "cost": 0.079628,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.079628,
+      "upstream_inference_prompt_cost": 0.011628,
+      "upstream_inference_completions_cost": 0.068
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1132,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "fda072b59703010e00e26767e7c5d802af4a364e99aab00751461224d728d31f",
+  "elapsed_seconds": 42.324358834011946,
+  "finished_at": "2026-11-11T19:21:34.927899+00:00"
+}

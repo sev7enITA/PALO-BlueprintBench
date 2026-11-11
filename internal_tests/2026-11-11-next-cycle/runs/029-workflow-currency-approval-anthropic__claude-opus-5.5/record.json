@@ -1,0 +1,51 @@
+{
+  "id": "029-workflow-currency-approval-anthropic__claude-opus-5.5",
+  "task_id": "workflow-currency-approval",
+  "model": "anthropic/claude-opus-5.5",
+  "repetition": 1,
+  "pinned_provider": "anthropic",
+  "started_at": "2026-11-11T19:29:10.100106+00:00",
+  "source_packet_sha256": "8f93051dd21bc9d4fbb72882f245fef47ed853b7faeb7a34eb9b1980576a6b5d",
+  "manifest_sha256": "328a52eca25956c4ea12ccf4531fcdbb770e0dee7571aa509a550620ace0df56",
+  "request_sha256": "b6cc76ee7ebc108cedb5f4ae6d7a26087f6fa7f14c6839b106a3bd9a48ef8085",
+  "reserved_usd": 0.8143432000000002,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.069848,
+  "state": "completed",
+  "qualified": false,
+  "qualification": "internal_engineering_feasibility",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "ab2178bc67edb20238675cb992cc583b4465061f303f2459545b1c752bded40a",
+  "provider_request_id": "gen-1794425350-dPmVq1CqkKjdV21ljw0H",
+  "returned_model": "anthropic/claude-opus-5.5",
+  "returned_provider": "Anthropic",
+  "returned_identity_matches_pin": true,
+  "usage": {
+    "prompt_tokens": 2907,
+    "completion_tokens": 2911,
+    "total_tokens": 5818,
+    "cost": 0.069848,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.069848,
+      "upstream_inference_prompt_cost": 0.011628,
+      "upstream_inference_completions_cost": 0.05822
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 688,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "c1f0589a6922a05417b1407e2871d8c19a550f2f0decef4495f751ec6085d884",
+  "elapsed_seconds": 36.79894204199081,
+  "finished_at": "2026-11-11T19:29:46.900027+00:00"
+}
