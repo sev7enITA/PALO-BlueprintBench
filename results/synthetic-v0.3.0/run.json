@@ -1,0 +1,73 @@
+{
+  "run_id": "synthetic-example",
+  "campaign_sha256": "c0d42c57fbcefd0d81507cccadd3931992d960cbad02dc073ace89043e2e786d",
+  "subject_id": "fixture",
+  "configuration_sha256": "d1df3a90c515811a2a985160a0bb625a2cb2dde13876e86f89c9edb038c3a95a",
+  "started_at": "2026-11-11T18:25:29.260593+00:00",
+  "finished_at": "2026-11-11T18:25:29.260593+00:00",
+  "evidence_status": "self_reported",
+  "attempts": [
+    {
+      "task_id": "faithful",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0,
+      "cost": {
+        "status": "not_incurred",
+        "usd": 0,
+        "reason": "Synthetic fixture, no inference"
+      },
+      "receipt": {
+        "path": "faithful/receipt.json",
+        "sha256": "b5d4f581078ee3ecbbb3191b381a488d71b7919f911c2f3cc7223b9ec4ed2564"
+      },
+      "annotation": {
+        "path": "faithful/annotation.json",
+        "sha256": "57899ccc01a7152388d82a1e67f5ef8480be854f803811d4e440dac0f09d0379"
+      }
+    },
+    {
+      "task_id": "inverted_rule",
+      "repetition": 1,
+      "state": "fail",
+      "elapsed_seconds": 0,
+      "cost": {
+        "status": "not_incurred",
+        "usd": 0,
+        "reason": "Synthetic fixture, no inference"
+      },
+      "receipt": {
+        "path": "inverted_rule/receipt.json",
+        "sha256": "685c801bd5390bcf666dd630de5a7ba00296f131bcfcb2c15ccc4b05d5f6c552"
+      },
+      "annotation": {
+        "path": "inverted_rule/annotation.json",
+        "sha256": "86de01baa8ffd493e334bc2703f34a8446d338c3395eee824755f9089d8a6ef6"
+      }
+    },
+    {
+      "task_id": "empty",
+      "repetition": 1,
+      "state": "abstain",
+      "elapsed_seconds": 0,
+      "cost": {
+        "status": "not_incurred",
+        "usd": 0,
+        "reason": "Synthetic fixture, no inference"
+      },
+      "receipt": {
+        "path": "empty/receipt.json",
+        "sha256": "b5d728c7b06d80c86f035b2310616ab238db3f8451c56e63f8ecc13ec6d4c272"
+      },
+      "annotation": {
+        "path": "empty/annotation.json",
+        "sha256": "cef49a1552cd92f93f941d1a7c1dfc00aefa836217264768719c1247116b1c87"
+      }
+    }
+  ],
+  "submitter_id": "synthetic-author",
+  "execution": {
+    "mode": "serial",
+    "max_concurrency": 1
+  }
+}

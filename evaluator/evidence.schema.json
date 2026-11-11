@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://paloframework.org/downloads/blueprintbench/evidence-v0.3-draft.schema.json",
-  "title": "PALO BlueprintBench evidence contract 0.3.0-dev.1",
+  "title": "PALO BlueprintBench evidence contract 0.3.0",
   "$defs": {
     "artifact": {
       "type": "object",
@@ -339,7 +339,7 @@
           "minLength": 1
         },
         "benchmark_version": {
-          "const": "0.3.0-dev.1"
+          "const": "0.3.0"
         },
         "split": {
           "enum": [

@@ -1,0 +1,26 @@
+{
+  "revision": "2026-11-11.3",
+  "packet_version": "0.1.0-draft",
+  "status": "development_exposed_assistant_drafts",
+  "qualification": false,
+  "semantic_validation": false,
+  "independent_human_reviews": 0,
+  "new_model_calls": 0,
+  "new_model_spend_usd": 0,
+  "files": {
+    "README.md": "74a49f0d4382bee622aadea090e2fc9be3d6b350f6f3af568a005ca14009567e",
+    "adjudication/adjudication.template.json": "9d4387acc3cf96985a958e8229366bdbca81a83b7d1a8bbda5d840d1bbc48e57",
+    "adjudication/annotation-a.template.json": "beda2fd23e167574898cb319eb72ce7a1168d430fd9660a62fa30c5d58bb5414",
+    "adjudication/annotation-b.template.json": "beda2fd23e167574898cb319eb72ce7a1168d430fd9660a62fa30c5d58bb5414",
+    "adjudication/custodian-provenance.json": "f92596d5ac639fe03a4de3e7f5282ab087a871cc2fd2d2603301e0be1e47be5a",
+    "adjudication/reviewer-packet.json": "4d057930ae7c9cfca11fed3c99a78730487cb28eb1ba64c3bda992aea675ae64",
+    "adjudication/second-pass-interpretations.json": "9010a6eb330724a214808d7454293eefe21d20b16e4ca433d57f77b5308b2d43",
+    "case-bank.json": "e0641ef6062ee0baa16ae2a01f739ab1698439c50ec7cd57ea63662fbbdbc3e0",
+    "coverage-matrix.json": "341ef9320ccd656fed6f7238c1612fe7be679fa13381de41414dde4b439fbe57",
+    "metamorphic-checks.json": "a4655e339a65df52ae85c1b21972d78705667b79c6d0b883855e43b489199c36",
+    "rubric.md": "cbc9320d0e6c010b2abc97a9a0d3561e4f96bdbfa8529e2ef9e7951b056bd02e",
+    "sufficiency-gates.json": "67909f5b17a234818b5415c19b0ed34a7e22509120e0e0f4635a192dfa7e5408",
+    "validate.py": "dea3d36db8def4a1c3263ded81865bfe431f64a8a6b899bab1cf28edce013498",
+    "workflow-tasks.json": "5971e490bf3c7666a47e933251d5f3cd77a38f3a393da865996e1cd6390ca055"
+  }
+}

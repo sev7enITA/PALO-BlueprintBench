@@ -1,0 +1,99 @@
+{
+  "status": "design_coverage_only",
+  "required_dimensions": [
+    "modality",
+    "negation",
+    "exception",
+    "threshold",
+    "ownership",
+    "temporal",
+    "scope",
+    "cross_document",
+    "unsupported_detail",
+    "conflict",
+    "precedence",
+    "unanswerability",
+    "condition"
+  ],
+  "scenario_count": 6,
+  "probe_count": 48,
+  "independent_source_families": 0,
+  "minimum_pair_groups": 6,
+  "dimensions": {
+    "condition": [
+      "bank-change-P04",
+      "bank-change-P05"
+    ],
+    "conflict": [
+      "policy-transition-P05",
+      "policy-transition-P07"
+    ],
+    "cross_document": [
+      "framework-calloffs-P01",
+      "framework-calloffs-P02",
+      "currency-approval-P03"
+    ],
+    "exception": [
+      "emergency-spares-P01",
+      "emergency-spares-P02",
+      "framework-calloffs-P07",
+      "bank-change-P01",
+      "bank-change-P02",
+      "service-acceptance-P03"
+    ],
+    "modality": [
+      "emergency-spares-P03",
+      "bank-change-P08"
+    ],
+    "negation": [
+      "emergency-spares-P04",
+      "framework-calloffs-P04",
+      "policy-transition-P08"
+    ],
+    "ownership": [
+      "emergency-spares-P08",
+      "bank-change-P03",
+      "bank-change-P07",
+      "currency-approval-P04",
+      "service-acceptance-P04"
+    ],
+    "precedence": [
+      "policy-transition-P06",
+      "currency-approval-P05"
+    ],
+    "scope": [
+      "framework-calloffs-P05",
+      "currency-approval-P06",
+      "currency-approval-P08",
+      "service-acceptance-P05",
+      "service-acceptance-P06"
+    ],
+    "temporal": [
+      "emergency-spares-P05",
+      "framework-calloffs-P08",
+      "policy-transition-P01",
+      "policy-transition-P02",
+      "policy-transition-P04",
+      "service-acceptance-P01",
+      "service-acceptance-P02"
+    ],
+    "threshold": [
+      "emergency-spares-P06",
+      "framework-calloffs-P03",
+      "policy-transition-P03",
+      "currency-approval-P01",
+      "currency-approval-P02"
+    ],
+    "unanswerability": [
+      "service-acceptance-P07"
+    ],
+    "unsupported_detail": [
+      "emergency-spares-P07",
+      "framework-calloffs-P06",
+      "bank-change-P06",
+      "currency-approval-P07",
+      "service-acceptance-P08"
+    ]
+  },
+  "coverage_is_statistical_sufficiency": false
+}

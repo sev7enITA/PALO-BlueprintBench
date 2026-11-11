@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "Cite this pilot's exact version and evidence scope; it has no qualified held-out leaderboard yet."
-title: "PALO BlueprintBench: an open research pilot for AI-generated business blueprints"
+title: "PALO BlueprintBench: internal tests of specification fidelity"
 type: software
 authors:
   - family-names: Degni
     given-names: Fabrizio
-version: 0.3.0-pilot.1
+version: 0.3.0-internal.1
 date-released: 2026-11-11
 repository-code: "https://github.com/sev7enITA/PALO-BlueprintBench"
 url: "https://paloframework.org/PALO_BlueprintBench.html"

@@ -1,0 +1,148 @@
+{
+  "status": "assistant_draft_unexecuted",
+  "checks": [
+    {
+      "id": "emergency-spares-document-order",
+      "case_id": "emergency-spares",
+      "operation": "reverse_document_order",
+      "source_change": "presentation_only",
+      "expected_relation": "same_dispositions",
+      "invariant_probe_ids": [
+        "emergency-spares-P01",
+        "emergency-spares-P02",
+        "emergency-spares-P03",
+        "emergency-spares-P04",
+        "emergency-spares-P05",
+        "emergency-spares-P06",
+        "emergency-spares-P07",
+        "emergency-spares-P08"
+      ],
+      "status": "assistant_draft_unexecuted"
+    },
+    {
+      "id": "framework-calloffs-document-order",
+      "case_id": "framework-calloffs",
+      "operation": "reverse_document_order",
+      "source_change": "presentation_only",
+      "expected_relation": "same_dispositions",
+      "invariant_probe_ids": [
+        "framework-calloffs-P01",
+        "framework-calloffs-P02",
+        "framework-calloffs-P03",
+        "framework-calloffs-P04",
+        "framework-calloffs-P05",
+        "framework-calloffs-P06",
+        "framework-calloffs-P07",
+        "framework-calloffs-P08"
+      ],
+      "status": "assistant_draft_unexecuted"
+    },
+    {
+      "id": "bank-change-document-order",
+      "case_id": "bank-change",
+      "operation": "reverse_document_order",
+      "source_change": "presentation_only",
+      "expected_relation": "same_dispositions",
+      "invariant_probe_ids": [
+        "bank-change-P01",
+        "bank-change-P02",
+        "bank-change-P03",
+        "bank-change-P04",
+        "bank-change-P05",
+        "bank-change-P06",
+        "bank-change-P07",
+        "bank-change-P08"
+      ],
+      "status": "assistant_draft_unexecuted"
+    },
+    {
+      "id": "policy-transition-document-order",
+      "case_id": "policy-transition",
+      "operation": "reverse_document_order",
+      "source_change": "presentation_only",
+      "expected_relation": "same_dispositions",
+      "invariant_probe_ids": [
+        "policy-transition-P01",
+        "policy-transition-P02",
+        "policy-transition-P03",
+        "policy-transition-P04",
+        "policy-transition-P05",
+        "policy-transition-P06",
+        "policy-transition-P07",
+        "policy-transition-P08"
+      ],
+      "status": "assistant_draft_unexecuted"
+    },
+    {
+      "id": "currency-approval-document-order",
+      "case_id": "currency-approval",
+      "operation": "reverse_document_order",
+      "source_change": "presentation_only",
+      "expected_relation": "same_dispositions",
+      "invariant_probe_ids": [
+        "currency-approval-P01",
+        "currency-approval-P02",
+        "currency-approval-P03",
+        "currency-approval-P04",
+        "currency-approval-P05",
+        "currency-approval-P06",
+        "currency-approval-P07",
+        "currency-approval-P08"
+      ],
+      "status": "assistant_draft_unexecuted"
+    },
+    {
+      "id": "service-acceptance-document-order",
+      "case_id": "service-acceptance",
+      "operation": "reverse_document_order",
+      "source_change": "presentation_only",
+      "expected_relation": "same_dispositions",
+      "invariant_probe_ids": [
+        "service-acceptance-P01",
+        "service-acceptance-P02",
+        "service-acceptance-P03",
+        "service-acceptance-P04",
+        "service-acceptance-P05",
+        "service-acceptance-P06",
+        "service-acceptance-P07",
+        "service-acceptance-P08"
+      ],
+      "status": "assistant_draft_unexecuted"
+    },
+    {
+      "id": "emergency-threshold-counterfactual",
+      "case_id": "emergency-spares",
+      "operation": "replace_source_text",
+      "replacements": [
+        {
+          "unit_id": "E01",
+          "old": "EUR 12,000",
+          "new": "EUR 15,000"
+        },
+        {
+          "unit_id": "E05",
+          "old": "EUR 12,000",
+          "new": "EUR 15,000"
+        }
+      ],
+      "probe_scope": [
+        "emergency-spares-P01",
+        "emergency-spares-P02"
+      ],
+      "expected_dispositions": {
+        "emergency-spares-P01": "contradicted",
+        "emergency-spares-P02": "supported"
+      },
+      "invariant_probe_ids": [
+        "emergency-spares-P03",
+        "emergency-spares-P04",
+        "emergency-spares-P05",
+        "emergency-spares-P07"
+      ],
+      "status": "assistant_draft_unexecuted",
+      "interpretation_note": "E01 explicitly defines the complete amount trigger and the lower-side exclusion. This counterfactual changes that amount only; independent human confirmation is still pending."
+    }
+  ],
+  "execution_count": 0,
+  "warning": "Proposed invariant relations need human confirmation; structural validation does not establish semantic correctness."
+}

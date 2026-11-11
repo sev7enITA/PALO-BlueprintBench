@@ -88,7 +88,7 @@ class CalibrationTests(unittest.TestCase):
         self.assertNotEqual([x['id'] for x in packet['items']], [x['id'] for x in c.read(c.BASE / 'items.json')])
 
     def test_panel_assets_and_invalid_envelopes_are_explicit(self):
-        page = (c.ROOT / 'web/PALO_BlueprintBench_Leaderboard.html').read_text(encoding='utf-8')
+        page = (c.ROOT / 'web/PALO_BlueprintBench_Diagnostics.html').read_text(encoding='utf-8')
         self.assertIn('src="assets/blueprintbench/calibration.js?', page)
         self.assertIn('href="assets/blueprintbench/calibration.css?', page)
         for row in c.build()['results']:

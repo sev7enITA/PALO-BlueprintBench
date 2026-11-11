@@ -1,0 +1,38 @@
+{
+  "current_state": "not_ready_for_model_comparison",
+  "new_model_calls": 0,
+  "new_model_spend_usd": 0,
+  "gates": [
+    {
+      "id": "coverage",
+      "state": "draft_only",
+      "requirement": "All declared dimensions have positive and adversarial examples; each scenario has a minimal pair and at least one cross-document dependency. Human review confirms intended discrimination."
+    },
+    {
+      "id": "rubric",
+      "state": "pending_humans",
+      "requirement": "Two domain annotators independently label first-pass packets; pre-adjudication agreement and unresolved items are published."
+    },
+    {
+      "id": "construct",
+      "state": "pending_humans",
+      "requirement": "Known semantic defects and faithful paraphrases are independently adjudicated; report detection and false-alarm rates without conflating parsing and semantic judgments."
+    },
+    {
+      "id": "independent_families",
+      "state": "not_met",
+      "requirement": "External custodian selects genuinely separate source organisations/process families unseen by engineering. This authored bank cannot satisfy the gate."
+    },
+    {
+      "id": "power",
+      "state": "not_estimated",
+      "requirement": "Choose a practically meaningful paired difference and uncertainty target before scoring. Estimate family-level variance in a separate feasibility sample, then preregister family count and comparison plan. Six scenarios and 48 probes are coverage targets, not a sufficient statistical sample."
+    },
+    {
+      "id": "campaign_freeze",
+      "state": "not_started",
+      "requirement": "Freeze corpus, eligible tasks, supported model settings, endpoint/runtime, prompt and harness versions, resource bounds, failure attribution and retry policy before inference."
+    }
+  ],
+  "promotion_rule": "No numerical quality/cost/time ranking from this bank. No new model expansion until labels, coverage and campaign design are reviewed; independent qualification needs all relevant external gates."
+}

@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.3.0-internal.1 / revision 2026-11-11.3
+
+- Release evaluator and contract 0.3.0 as an explicitly internal-test prerelease; preserve historical 0.2 artifacts with EV-01 warning and migration instructions.
+- Suspend numerical quality, completion, cost and time ranks while retaining descriptive exploration and exports.
+- Align release identity, method, announcement and current audit register; disclose unavailable authoring model identity.
+- Separate automatic reviewer diagnostics from model measurements and withdraw testing-badge distribution.
+- Prepare the next discriminating-case and label-adjudication cycle before additional model inference.
+
+No independent human review, validated ranking or qualified PALO Blueprint Index is claimed.
+
+
 ## 2026-11-11: reference catalogue expanded to 35
 
 Added 15 benchmark families selected for source-backed visibility: HLE, ARC-AGI, GPQA, MMLU-Pro, AIME, FrontierMath, LiveCodeBench, Terminal-Bench, SWE-Bench Pro, BrowseComp, DeepResearch Bench, OSWorld, tau2-bench, BFCL and GDPval. Each includes version boundaries, visibility sources, limitations and a PALO transfer assessment. Repository attention snapshots are dated and kept separate from validity; no external suite was run and no score or independent qualification was added. The website, GitHub comparison and CSV/JSON exports share one catalogue.

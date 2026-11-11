@@ -26,7 +26,7 @@ This handbook explains the research question, the executable evaluator and how t
 
 ## Available now
 
-The evaluator has an executable JSON Schema, raw-output binding, annotation-consistency checks and calculated task acceptance. The retained release verification reports 42 passing tests and 26 matching historical offline reproductions. These establish bounded software behaviour, not semantic validity or an independent ranking.
+The evaluator has an executable JSON Schema, raw-output binding, annotation-consistency checks and calculated task acceptance. Evaluator 0.3.0 is distributed in internal prerelease v0.3.0-internal.1. Historical releases retain their original test receipts; consult the new release verification for current checks. These establish bounded software behaviour, not semantic validity or an independent ranking.
 
 [Live explorer](https://paloframework.org/PALO_BlueprintBench.html) | [Research repository](https://github.com/sev7enITA/PALO-BlueprintBench) | [Release v0.3.0-pilot.1](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/v0.3.0-pilot.1)
 
@@ -36,4 +36,4 @@ The wiki source is versioned in [`wiki/`](https://github.com/sev7enITA/PALO-Blue
 
 The unified catalogue contains 18 model IDs, with 28 cohort/configuration records. The procurement campaigns have 324 assigned slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses and 18 pre-call blocks. These are internal controls with assistant-draft labels, not independent validation.
 
-[Leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [[Identity and testing badge|Brand-and-presentation]]
+[Internal test results](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [[Project identity and release|Brand-and-presentation]]

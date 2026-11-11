@@ -16,7 +16,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 CONTRACT = json.loads(Path(__file__).with_name("evidence.schema.json").read_text(encoding="utf-8"))
 Draft202012Validator.check_schema(CONTRACT)
 
-VERSION = "0.3.0-dev.1"
+VERSION = "0.3.0"
 STATES = {"pass", "fail", "abstain", "not_run"}
 
 
@@ -444,6 +444,7 @@ def write_new(path, data):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--version", action="version", version=f"PALO BlueprintBench evaluator {VERSION} (internal tests; not independently validated)")
     sub = parser.add_subparsers(dest="command", required=True)
     freeze_parser = sub.add_parser("freeze")
     freeze_parser.add_argument("campaign")

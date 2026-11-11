@@ -1,0 +1,45 @@
+{
+  "status": "blank_template",
+  "reviewer_registry_id": null,
+  "identity_verified_by_external_coordinator": false,
+  "prior_exposure_declaration": null,
+  "model_identity_hidden": true,
+  "original_labels_hidden": true,
+  "completed_at": null,
+  "rubric_version": "0.1.0-draft",
+  "annotations": [
+    {
+      "review_item": "ITEM-A",
+      "atomicity": null,
+      "atomic_parts": [],
+      "disposition": null,
+      "source_units": [],
+      "rationale": null,
+      "severity_if_misinterpreted": null,
+      "active_seconds": null,
+      "confidence": null
+    },
+    {
+      "review_item": "ITEM-B",
+      "atomicity": null,
+      "atomic_parts": [],
+      "disposition": null,
+      "source_units": [],
+      "rationale": null,
+      "severity_if_misinterpreted": null,
+      "active_seconds": null,
+      "confidence": null
+    },
+    {
+      "review_item": "ITEM-C",
+      "atomicity": null,
+      "atomic_parts": [],
+      "disposition": null,
+      "source_units": [],
+      "rationale": null,
+      "severity_if_misinterpreted": null,
+      "active_seconds": null,
+      "confidence": null
+    }
+  ]
+}
