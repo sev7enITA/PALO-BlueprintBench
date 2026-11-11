@@ -1,0 +1,107 @@
+Advisory review, not independent validation. UI selected model-selector-input-glm-5_3-button; effort menu showed Max.
+Prompt:
+Act as an adversarial methodological and dashboard reviewer for PALO BlueprintBench. Advisory model review only, never independent validation. Public context: https://paloframework.org/PALO_BlueprintBench_Leaderboard.html and https://paloframework.org/PALO_BlueprintBench.html . Current internal cohort: 18 model IDs, 28 configuration/cohort records including ten historical adapter diagnostics. Internal procurement: 3 short synthetic cases, one maintainer-authored source family, 36 rules, 108 seeded statements, 3 repetitions, 2 tasks. 324 assigned requests; 306 dispatched; 299 complete; 7 failed/incomplete; 18 Sakana pre-call-blocked. Expected labels are assistant drafts; one contested invoice label has a separate post-hoc exclusion sensitivity. There is no independent custodian, human adjudicated gold or qualified PBI. Historical diagnostics are separate and not comparable ranks. User wants a standard results-first leaderboard: numeric columns sortable/filterable, compare configurations, export CSV/JSON, inspect source and model outputs, challenge a result via prefilled GitHub issue. Remove marketing questions, the zero-qualified hero panel, all public presentation access (internal document), and raw .md browsing links (use GitHub rendered documents). Keep dark PALO palette. QUESTIONS: (1) Can an adversarial LLM countertest honestly turn independently qualified count above zero? State precise prerequisites for that, and a useful labelled internal adversarial check we can perform now. (2) Give 5 concrete dashboard failure cases and fixes, including denominator, sorting, comparability, export/provenance, and challenge workflow. (3) Recommend JSON-LD types for the real page/datasets/logo, with no implied certification and no public presentation metadata. Distinguish observations from suggestions; if you cannot fetch pages, state that limitation. Be concise, around 700 words, English.
+Clarification: 324 assigned API requests is the whole campaign. Each model separately has 324 assigned probe judgments (108 statements x 3 repetitions), not 324 calls. New UI request: Pareto frontier, top 10 by the three real procurement use cases, leaderboard trends, new release rankings, total sessions, more interactive diagrams. We only have one same-day cohort. Plan: Pareto within verification task with complete known task costs, unknown charges excluded and counted; top10 by label agreement assigned with ties, not business certification; repetition variability rather than fabricated longitudinal improvement; latest tested timestamps not unverified release dates; total dispatched model calls, not human sessions. Please critically review these additions, keep concise.
+
+Observed response:
+Browser tab: 1454351874, Title: "Act as an adversarial methodol... | Z", URL: "https://chat.z.ai/c/5c5b0cc0-e91a-4a2d-851b-704fa05862cd".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 218-220, 229-230
+~								20 button PALO BlueprintBench Review
+~						208 button Share
++								233 container response-content-container
++									234 button Thought Process
++										235 image
++										236 text Thought Process
++									237 text I'll first try to fetch the two public pages to ground the review.
++									238 button Explored 2 files
++										239 image
++										240 text Explored 2 files
++									241 text Both public pages fetched successfully, so this review is grounded in the live leaderboard and benchmark pages plus your internal numbers. It is advisory only, not independent validation. Note: the live pages still carry the elements you plan to remove, so I review the redesign, not the current page.
++									242 heading 1. Can an adversarial LLM countertest honestly raise "independently qualified" above zero?, Value: 2
++										243 text 1. Can an adversarial LLM countertest honestly raise "independently qualified" above zero?
++									244 container
++										245 text Observation:  No. Independence is a property of governance, not of test aggressiveness. A maintainer-run adversarial LLM is still internal, and with assistant-draft expected labels plus the confirmed exclusion-of-claims flaw in Evaluator 0.2, an LLM adversary is error-correlated with the labels unless it attacks the labels and evaluator themselves. It can falsify; it cannot qualify.
++									246 text Prerequisites for an honest count above zero:
++									247 content list
++										248 container
++											249 AXListMarker • 
++											250 text External custodian and raters outside the authoring organization, with a conflict-of-interest statement.
++										251 container
++											252 AXListMarker • 
++											253 text Human-adjudicated gold: at least two blind raters per sampled item (model identity hidden), reported inter-rater agreement, pre-registered tie-break rule.
++										254 container
++											255 AXListMarker • 
++											256 text A sampling frame independent of the draft labels (not only items the drafts flagged), with the EUR-10 / invoice-label exclusion sensitivity pre-specified, not post-hoc.
++										257 container
++											258 AXListMarker • 
++											259 text Protocol and artifacts frozen (hashes) before adjudication; results reported either way.
++										260 container
++											261 AXListMarker • 
++											262 text Evaluator 0.2 remediated, with evaluator version recorded per record.
++									263 container
++										264 text Useful internal check now  (labelled "maintainer-run adversarial label audit — internal, non-independent, not qualification"): a strong LLM not used as a label source attacks in both directions — seeded statements whose draft label appears wrong, and outputs that pass despite violating the 36 rules — reporting per-rule flip rates and re-running the contested-invoice sensitivity.
++									265 heading 2. Five dashboard failure cases and fixes, Value: 2
++										266 text 2. Five dashboard failure cases and fixes
++									267 content list
++										268 container
++											269 AXListMarker • 
++											270 text Denominator.  Failure: per-model agreement computed interchangeably over 324 assigned vs per-model complete vs campaign-complete, with 18 pre-call-blocked (Sakana) rows silently dropped, flattering survivors. Fix: per-row columns for assigned (324 = 108×3), complete, blocked, failed; one campaign funnel (324→306→299); a visible exclusion toggle with score deltas.
++										271 container
++											272 AXListMarker • 
++											273 text Sorting.  Failure: default sort read as ranking; silent tie-breaks; 28 rows mixing the same-day cohort with 10 historical adapter diagnostics. Fix: keep "exploration sort, not a qualified ranking" wording; deterministic tie-break with visible tie groups (1, 1, 3); historical diagnostics in a separate non-ranked tab marked not comparable.
++										274 container
++											275 AXListMarker • 
++											276 text Comparability.  Failure: cross-cohort comparison or deltas fabricated from one same-day cohort; adapter diagnostics ran under different conditions. Fix: comparison restricted to same cohort and task; comparability badge; cross-cohort delta arrows disabled.
++										277 container
++											278 AXListMarker • 
++											279 text Export/provenance.  Failure: CSV/JSON lacking cohort/run IDs, label version, n, blocked/failed, timestamp becomes an authoritative artifact detached from its caveats; CSV and JSON disagree on rounding. Fix: both carry schema version, generated-at, cohort/run IDs, "assistant-draft labels vX", per-row denominators, and the non-endorsement line; JSON mirrors displayed values exactly. Pin GitHub-rendered document links to a ref or tag so evidence cannot drift.
++										280 container
++											281 AXListMarker • 
++											282 text Challenge workflow.  Failure: a prefilled issue without a record locator is unactionable; or the workflow implies results flip on complaint. Fix: prefill model ID, configuration, statement ID, repetition, draft label, output hash, cohort commit; state the adjudication path (maintainer review only — no independent custodian exists) and expected turnaround.
++									283 heading 3. JSON-LD, Value: 2
++										284 text 3. JSON-LD
++									285 content list
++										286 container
++											287 AXListMarker • 
++											288 text Page:  WebPage  with  dateModified ;  conditionsOfAccess  reflecting internal status.
++										289 container
++											290 AXListMarker • 
++											291 text Data:  Dataset  per leaderboard table;  variableMeasured : label agreement, n, blocked, failed;  distribution :  DataDownload  entries for CSV/JSON with  encodingFormat  and  contentUrl .
++										292 container
++											293 AXListMarker • 
++											294 text Identity:  Organization  with  logo  as  ImageObject .
++										295 container
++											296 AXListMarker • 
++											297 text Do not use:  Product  with  AggregateRating  or  Review  for models (implies certification),  PresentationDigitalDocument / VideoObject  (public presentation removed), or any claim-style qualification markup. Models remain table rows, not rated entities.
++									298 heading 4. Review of the new UI additions, Value: 2
++										299 text 4. Review of the new UI additions
++									300 content list
++										301 container
++											302 AXListMarker • 
++											303 text Pareto frontier:  Acceptable scope. Observation: small per-model n makes frontier position noisy. Suggestion: define cost per complete judgment, use epsilon-dominance so near-ties do not crown a winner, list excluded unknown-charge models with their count, and title it "known-cost subset, verification task".
++										304 container
++											305 AXListMarker • 
++											306 text Top 10 with ties:  Right framing ("assigned, not certified"). Suggestion: render all 18 with the top 10 highlighted rather than hiding eight; tie groups share ranks and the tie-break rule is displayed.
++										307 container
++											308 AXListMarker • 
++											309 text Trends:  Suggestion: rename to "stability view" — per-statement across-repetition disagreement (min–max agreement). Any time axis across the 28 records would mix non-comparable diagnostics; refuse it.
++										310 container
++											311 AXListMarker • 
++											312 text New-release rankings:  Drop, or relabel "first tested in this cohort." Last-tested timestamps per configuration are the honest field; release dates remain unverified.
++										313 container
++											314 AXListMarker • 
++											315 text Total sessions:  Reporting dispatched model calls (306; 299 complete; 18 blocked) is correct. Observation: the coincidence of 324 campaign requests and 324 judgments per model (108×3) invites conflation. Suggestion: label the two funnels distinctly ("API requests" vs "probe judgments per model") and never reuse one number for the other.
++										316 container
++											317 AXListMarker • 
++											318 text More interactivity:  every interactive element must carry its caveat (tooltips show n and denominator); static clarity beats diagram count.
++									319 container
++										320 text Final observation:  removing the zero-qualified hero panel is fine as layout, but retain a compact status line ("internal testing; 0 independently qualified results") in the header or footer — otherwise the removal erases the page's central honesty claim, which is exactly what an adversarial reviewer would flag.
++								321 button Copy
++								322 button Regenerate
++							323 container
++								324 button Scroll to root message
++								325 button Scroll to bottom
++								326 container Send Message
++									327 button (disabled) Description: Send Message, ID: send-message-button
+The focused UI element is 223 text entry area (settable) chat-input

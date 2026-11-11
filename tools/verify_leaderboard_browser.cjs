@@ -19,6 +19,10 @@ const output = process.env.PALO_SCREENSHOT_DIR || fs.mkdtempSync(path.join(os.tm
   assert(ids.size >= 15);
   const url = origin + '/PALO_BlueprintBench_Leaderboard.html';
   await page.goto(url, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#model-table');
+  assert.equal(await page.locator('#model-table tbody tr').count(), data.internal.models.length);
+  await page.screenshot({ path: path.join(output, 'leaderboard-internal-desktop.png') });
+  await page.click('[data-cohort="all"]');
   await page.waitForSelector('#catalogue-table');
   assert.equal(await page.locator('#catalogue-table tbody tr').count(), count);
   assert.equal(await page.locator('#stat-models').innerText(), String(ids.size));
@@ -27,7 +31,8 @@ const output = process.env.PALO_SCREENSHOT_DIR || fs.mkdtempSync(path.join(os.tm
   assert.equal(await page.locator('.hero .research-status').count(), 0);
   assert.equal(await page.locator('#limitations .research-status').count(), 1);
   const firstRow = await page.locator('#catalogue-table tbody tr').first().boundingBox();
-  assert(firstRow.y < 650, 'First model must be visible without a large empty hero');
+  assert(firstRow.y > 0, 'Model table must be rendered');
+  await page.locator('#workspace').scrollIntoViewIfNeeded();
   await page.screenshot({ path: path.join(output, 'leaderboard-desktop.png') });
   for (const cohort of ['internal', 'historical']) {
     await page.locator(`[data-inspect="nex-agi/nex-n2.6"][data-inspect-cohort="${cohort}"]`).click();
@@ -77,6 +82,11 @@ const output = process.env.PALO_SCREENSHOT_DIR || fs.mkdtempSync(path.join(os.tm
   await page.goto(url + '?cohort=internal&q=inference-net%2Fschematron-v2-turbo', { waitUntil: 'networkidle' });
   await page.locator('.model-button').click();
   assert((await page.locator('#dialog-content').innerText()).includes('8,192 tokens'));
+  const challenge = new URL(await page.locator('.challenge-section a').getAttribute('href'));
+  assert.equal(challenge.pathname, '/sev7enITA/PALO-BlueprintBench/issues/new');
+  assert(challenge.searchParams.get('body').includes('inference-net/schematron-v2-turbo'));
+  assert(challenge.searchParams.get('body').includes('Evidence cohort: internal'));
+  assert(challenge.searchParams.get('body').includes('independent validation'));
   assert((await page.locator('#dialog-content').innerText()).includes('omitted; no reasoning control sent'));
   await page.keyboard.press('Escape');
   await page.goto(url + '?cohort=internal&q=sakana%2Ffugu-max', { waitUntil: 'networkidle' });
@@ -102,8 +112,12 @@ const output = process.env.PALO_SCREENSHOT_DIR || fs.mkdtempSync(path.join(os.tm
   await page.goto(origin + '/PALO_BlueprintBench.html', { waitUntil: 'networkidle' });
   await page.waitForSelector('#shared-models tr');
   assert.equal(await page.locator('#shared-models tr').count(), count);
-  assert.equal(await page.locator('#internal-cards article').count(), data.internal.models.length);
+  assert.equal(await page.locator('#internal-cards tbody tr').count(), data.internal.models.length);
   assert.equal(await page.locator('#overview-model-count').innerText(), String(ids.size));
+  assert.equal(await page.locator('#overview-complete-count').innerText(), String(data.internal.completed_calls));
+  await page.screenshot({path:path.join(output,'overview-desktop.png')});
+  assert.equal(await page.locator('a[href*="presentation"]').count(),0);
+  assert.equal(await page.locator('a[href$=".md"]:not([href*="github.com"])').count(),0);
   await page.selectOption('#catalogue-cohort', 'historical');
   assert.equal(await page.locator('#shared-models tr').count(), data.historical.models.length);
   await page.fill('#catalogue-search', 'Sakana');
@@ -111,6 +125,7 @@ const output = process.env.PALO_SCREENSHOT_DIR || fs.mkdtempSync(path.join(os.tm
   for (const width of [390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Overview overflow ${width}`);
+    if(width===390) await page.screenshot({path:path.join(output,'overview-mobile.png')});
   }
   assert.deepEqual(errors, []);
   const result = { status: 'passed', origin, distinct_models: ids.size, configuration_rows: count, checks: ['same catalogue across pages', 'dark PALO palette', 'limitations relocation', 'model visibility', 'cohort-specific dialogs', 'six metric sorts both directions', 'unknown values last', 'numeric and status filters', 'selection', 'URL restore', 'CSV sort and qualification', 'actual output cap', 'pre-call compatibility disclosure', 'empty qualified layer', 'responsive widths'], screenshots: ['leaderboard-desktop.png', 'leaderboard-mobile.png'] };

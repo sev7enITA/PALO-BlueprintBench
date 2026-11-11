@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "origin": "http://127.0.0.1:58192",
+  "distinct_models": 18,
+  "configuration_rows": 28,
+  "checks": [
+    "same catalogue across pages",
+    "dark PALO palette",
+    "limitations relocation",
+    "model visibility",
+    "cohort-specific dialogs",
+    "six metric sorts both directions",
+    "unknown values last",
+    "numeric and status filters",
+    "selection",
+    "URL restore",
+    "CSV sort and qualification",
+    "actual output cap",
+    "pre-call compatibility disclosure",
+    "empty qualified layer",
+    "responsive widths"
+  ],
+  "screenshots": [
+    "leaderboard-desktop.png",
+    "leaderboard-mobile.png"
+  ]
+}

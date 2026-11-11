@@ -52,7 +52,7 @@ PALO's proposed study examines **modality, negation, ownership, conditions and e
 
 The shared catalogue contains **18 distinct model IDs and 28 configuration/cohort records**. Internal procurement tests retain **324 assigned slots, 306 dispatched requests, 299 complete responses, 7 incomplete or failed responses and 18 pre-call-blocked assignments**. Historical adapter diagnostics remain separate. Filters, sortable internal-test columns, source inspection and a call ledger expose the evidence without assigning a qualified rank.
 
-[Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [15-slide presentation](https://paloframework.org/downloads/blueprintbench/presentation/index.html) · [Brand assets and testing badge](docs/brand-usage.md)
+[Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Brand assets and testing badge](docs/brand-usage.md)
 
 <img src="web/assets/blueprintbench/brand/internal-testing-badge.png" width="180" alt="BlueprintBench Internal testing badge, evidence linked; not certification">
 
@@ -63,7 +63,7 @@ The shared catalogue contains **18 distinct model IDs and 28 configuration/cohor
 
 Actual Workbench pilot capture using synthetic procurement content. The entity graph, source evidence and pending decisions illustrate the workflow being studied. This image is not evidence of a qualified application release or completed benchmark campaign.
 
-[15-slide process presentation source](presentation/) · [Workbench pilot](https://paloframework.org/PALO_DocumentWorkbench.html)
+[Workbench pilot](https://paloframework.org/PALO_DocumentWorkbench.html)
 
 </details>
 
@@ -186,7 +186,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), browse [issues](https://github.com/sev7
 | [FAQ](https://github.com/sev7enITA/PALO-BlueprintBench/wiki/FAQ) | [Semantic vocabulary, SKOS and OWL](semantic/README.md) |
 | [Contributing](https://github.com/sev7enITA/PALO-BlueprintBench/wiki/Contributing) | [Versioning](docs/versioning.md) and [corrections](docs/corrections.md) |
 
-Repository map: `evaluator/` executable checks; `evidence/` retained diagnostics; `results/` labelled receipts; `docs/` research and contracts; `wiki/` versioned wiki source; `web/` explorer; `semantic/` vocabulary; `presentation/` slides and real captures.
+Repository map: `evaluator/` executable checks; `evidence/` retained diagnostics; `results/` labelled receipts; `docs/` research and contracts; `wiki/` versioned wiki source; `web/` explorer; `semantic/` vocabulary; internal presentation assets are excluded from the public website.
 
 ## Citation
 

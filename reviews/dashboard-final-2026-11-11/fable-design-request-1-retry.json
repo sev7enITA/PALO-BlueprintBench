@@ -1,0 +1,41 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "reasoning": {
+    "effort": "high",
+    "exclude": true
+  },
+  "max_tokens": 16000,
+  "provider": {
+    "only": [
+      "anthropic"
+    ],
+    "allow_fallbacks": false
+  },
+  "prompt": "You are a rigorous external visual design evaluator reviewing the supplied REAL screenshots of a local PALO BlueprintBench dashboard. This is advisory UX review, not independent benchmark validation. Judge the screenshots, not imaginary pages. Brief: dark PALO palette (#080f1c) with cyan accents, compact research dashboard, charts-first, standard results filters/sort/compare/export/challenge, preserve original logos. Current internal data18models28cohortrecords,324assigned API slots306dispatched299complete7failed18blockedslots oneSakana;324probejudgmentsPERmodel is separate. Assistant-draftlabels unqualified. Added Pareto verificationcost vsagreement (15knowncost points,3excluded), repetitionvariability (not longitudinalprogress),Top10 by3actualprocurementcases inclties,latesttested timestamps notunverifiedreleases,workflow. No public presentation links,rawMDlinks goGitHub. User explicitly wants moregraphslessprose. Requiredscore0\u20133 for DesignQuality,Originality,Craft,Functionality. DesignQuality andOriginality pass>=2,other>=1; any0majorrevision. Be skeptical but distinguishtaste fromquality. Myfresh automated tests show375pxdocumentoverflow true and the375pxPareto screenshot appearscropped, although390pxpreviouspassed. Inspectvisuals and identifypriorityfixeswithconcrete selectors/behaviour ifpossible. Evaluate all siximages labelled. ReturnJSON with verdict PASS/NEEDS REVISION/MAJOR REVISION, scores object, strengths[], priority_fixes[] (what,where,why,fix), limitations. Do not treat this review as a benchmark score or inventmodelcomparisons.",
+  "images": [
+    {
+      "filename": "PALO_BlueprintBench_Leaderboard-1440-top.png",
+      "sha256": "a9f6e36423e807d3190840965b24c994f02551e0b9ef94cec4512d274c310ef7"
+    },
+    {
+      "filename": "PALO_BlueprintBench_Leaderboard-375-top.png",
+      "sha256": "6672450fe41f4f51838f519f25d892e94d63d775f47bdd92274408de33923c20"
+    },
+    {
+      "filename": "pareto-375.png",
+      "sha256": "fca1c8d3d878b22fa932992d3104a3e10b0926fc6fc4806a25457b13f1b65e05"
+    },
+    {
+      "filename": "leaders-1440.png",
+      "sha256": "b069ecebf7cdfb62f7a81302fa5995c5a6dde2a4d548412f99b959dfa940c40f"
+    },
+    {
+      "filename": "workflow-768.png",
+      "sha256": "9db36250048dfa48314e6706e87edacfb2cff2c97dd65a6e1379b77cbeb40444"
+    },
+    {
+      "filename": "PALO_BlueprintBench-1440-top.png",
+      "sha256": "86d3912a89975a52a2b47720b99412e7344fab145cf68038bc6086735f7460b5"
+    }
+  ]
+}

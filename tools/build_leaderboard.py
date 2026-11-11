@@ -82,8 +82,8 @@ def dataset_graph(data,url):
                       'Inspect configurations, source evidence, missing responses and disputed labels. No independently qualified ranking.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
            {'@type':'WebSite','@id':SITE+'#website','name':'PALO Framework','url':SITE,'publisher':{'@id':person}},
-           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'PALO BlueprintBench Leaderboard' if url==BOARD else 'PALO BlueprintBench | Specification Fidelity',
-            'image':'https://paloframework.org/assets/blueprintbench/brand/blueprintbench-logo.png','description':page_description,'inLanguage':'en','dateModified':data['as_of'],'isAccessibleForFree':True,
+           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'PALO BlueprintBench Leaderboard' if url==BOARD else 'PALO BlueprintBench | Results and Method',
+            'image':{'@id':OVERVIEW+'#benchmark-logo'},'description':page_description,'inLanguage':'en','dateModified':data['as_of'],'isAccessibleForFree':True,
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
             'hasPart':[{'@id':internal_id},{'@id':historical_id}],
@@ -112,6 +112,15 @@ def dataset_graph(data,url):
             'measurementTechnique':historical['metric_notes']['structural_acceptance'],
             'variableMeasured':['Proposed and structurally accepted candidates by type','Assigned, completed and not-run adapter requests'],
             'distribution':[{'@type':'DataDownload','name':'Historical diagnostic records and limitations','contentUrl':SITE+'assets/blueprintbench/explorer-data.json','encodingFormat':'application/json'}]}]
+    graph.extend([
+        {'@type':'ImageObject','@id':OVERVIEW+'#benchmark-logo','name':'PALO BlueprintBench identity',
+         'contentUrl':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png','encodingFormat':'image/png',
+         'caption':'PALO BlueprintBench identity. A project mark, not certification or independent validation.'},
+        {'@type':'ImageObject','@id':OVERVIEW+'#testing-badge','name':'PALO BlueprintBench internal testing badge',
+         'contentUrl':SITE+'assets/blueprintbench/brand/internal-testing-badge.png','encodingFormat':'image/png',
+         'caption':'Internal testing badge; requires a linked evidence record. Not a certification or qualified PALO Blueprint Index.'},
+        {'@type':'ImageObject','@id':SITE+'#palo-logo','name':'PALO Framework logo',
+         'contentUrl':SITE+'assets/blueprintbench/brand/palo-framework-logo.png','encodingFormat':'image/png'}])
     return {'@context':'https://schema.org','@graph':graph}
 
 

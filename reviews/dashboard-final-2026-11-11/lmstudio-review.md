@@ -1,0 +1,23 @@
+# Local model advisory review
+
+Status: internal advisory only, not independent validation. Supplied summary review, not live page evaluation.
+
+1. **Adversarial Counter-Test Scope**
+An adversarial counter-test against the 324 assigned probe judgments can establish internal consistency and rule adherence but cannot establish ground truth validity because all labels are assistant drafts, not independent human gold. It also cannot validate generalizability beyond the single maintainer-authored family of synthetic procurement cases. To legitimately make independently qualified count nonzero, at least one model must pass a pre-registered threshold on an external dataset with adjudicated human labels, verified by a custodian distinct from the model developers. Current zero-qualified status is accurate; any non-zero claim without this external anchor is premature.
+
+2. **Misleading Labels and Denominators**
+Avoid conflating "306 dispatched" API calls with "324 assigned probe judgments." The latter includes pre-call-blocked slots, creating a denominator mismatch that inflates apparent coverage if not explicitly footnoted. Label the 18 blocked models as "Pre-Call Blocked," not "Failed," to distinguish infrastructure issues from performance failures. Do not use "Verified" for the verification task; use "Rule-Consistent Verification" since it relies on internal rules, not external truth. The term "Internal Tests" is appropriate but must be visually distinct from any future "External Validation." Avoid implying that 108 seeded statements represent a comprehensive corpus; specify they are synthetic and single-family.
+
+3. **Six Concrete Acceptance Checks**
+1. UI displays the exact ratio of complete (299) vs. failed/incomplete (7) calls, not just total dispatched.
+2. CSV/JSON exports preserve null values for blocked models rather than defaulting to zero or omitting rows.
+3. Challenge button generates a GitHub issue pre-filled with specific Model ID, Configuration Record ID, and Evidence Statement ID; no auto-submit occurs.
+4. JSON-LD schema explicitly tags the dataset as "Internal Synthetic" and excludes `Rating` or `Certification` properties.
+5. Filters allow isolating the 18 blocked models without altering the primary table’s sort order.
+6. Method disclosure page clearly states that labels are assistant drafts, not human gold, in plain language above the fold.
+
+4. **Bounded No-Cost Robustness Test**
+Execute a "Label Perturbation" test on the existing 108 frozen statements. Randomly flip 5% of assistant-drafted labels (approx. 5–6 items) to create a synthetic error set. Re-run the internal verification rules against this perturbed set for one representative model configuration. If the model’s pass/fail status changes, document the sensitivity threshold. This test uses existing frozen data and code, costs no new API calls, leaves primary labels unchanged, and quantifies how fragile current "qualified" (currently zero) or near-qualified results are to minor labeling errors.
+
+5. **Verdict and Blocking Defects**
+The proposed UX is sound for an early-stage internal dashboard but risks overclaiming if presented as a public benchmark. The removal of the "zero-qualified hero" is correct; it reduces cognitive dissonance without hiding data. **Blocking defects:** (1) Failure to visually distinguish the 324 probe judgments from 306 API calls will mislead users about coverage; (2) Absence of explicit "Assistant Draft" labeling in the primary table view, not just method pages. **Research limitations:** Single-family synthetic data and lack of independent adjudication are significant but acceptable if clearly labeled as "Internal Diagnostics." The dashboard is ready for public release only if these two blocking defects are resolved; otherwise, it remains an internal tool with public access.

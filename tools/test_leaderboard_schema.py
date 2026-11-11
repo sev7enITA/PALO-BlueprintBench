@@ -175,6 +175,22 @@ class PublicationContractTests(unittest.TestCase):
             self.assertEqual(record['cost_status'],'not_incurred')
             self.assertNotIn('provider_request_id',record)
 
+    def test_public_identity_and_private_presentation(self):
+        graph=build.dataset_graph(self.data,build.BOARD)
+        images=[n for n in graph['@graph'] if n['@type']=='ImageObject']
+        self.assertEqual(len(images),3)
+        for image in images:
+            self.assertTrue((ROOT/'web'/image['contentUrl'].removeprefix(build.SITE)).is_file())
+        for filename in ['PALO_BlueprintBench.html','PALO_BlueprintBench_Leaderboard.html']:
+            page=(ROOT/'web'/filename).read_text(encoding='utf-8')
+            self.assertNotRegex(page,r'href="[^"\n]*downloads/blueprintbench/presentation/')
+            self.assertNotRegex(page,r'href="(?:https://paloframework.org/)?downloads/blueprintbench/[^"\n]*\.md"')
+        self.assertNotIn('presentation/',json.dumps(graph))
+        rules=(ROOT/'web/downloads/blueprintbench/.htaccess').read_text(encoding='utf-8')
+        self.assertIn('presentation(?:/.*)?$ - [G,L]',rules)
+        self.assertIn(re.escape('internal-cohort-report.md')+'$',rules)
+        self.assertIn('github.com/sev7enITA/PALO-BlueprintBench/blob/',rules)
+
     def test_archive_drift_is_detectable_without_silent_repair(self):
         archive=ROOT/'web/downloads/blueprintbench/internal-expansion-evidence.zip'
         original=archive.read_bytes()

@@ -24,4 +24,4 @@ Preserve aspect ratios, exact wording and visible status. Use the provided origi
 
 Artwork generated with the built-in Imagegen tool, then visually inspected. No external-model inference benchmark calls were required for this publication update.
 
-[Public 15-slide presentation](https://paloframework.org/downloads/blueprintbench/presentation/index.html)
+The working presentation is internal and is not distributed from the public website.

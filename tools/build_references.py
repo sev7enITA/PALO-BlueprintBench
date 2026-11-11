@@ -39,7 +39,7 @@ def render(root):
     for r in rows:
         html += f'<tr><th scope="row"><a href="{escape(r["source_url"],quote=True)}">{escape(r["name"])}</a><small>{escape(r["kind"])}</small></th><td>{escape(r["focus"])}<p>{escape(r["evidence"])}</p><small>{escape(r["source_status"])}</small></td><td>{escape(r["palo_difference"])}</td><td>{escape(r["lesson"])}</td></tr>'
     html += '''</tbody></table></div></details>
-<p class="method-note"><a href="downloads/blueprintbench/benchmark-references.md">Read the reference comparison</a> / <a href="downloads/blueprintbench/benchmark-references.csv">Download CSV</a> / <a href="downloads/blueprintbench/benchmark-references.json">Inspect dated source records</a> / <a href="downloads/blueprintbench/research.md">Earlier methodological review</a></p>
+<p class="method-note"><a href="https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/benchmark-references.md">Read the reference comparison</a> / <a href="downloads/blueprintbench/benchmark-references.csv">Download CSV</a> / <a href="downloads/blueprintbench/benchmark-references.json">Inspect dated source records</a> / <a href="https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/research.md">Earlier methodological review</a></p>
 </section>
 ''' + END
     return md.encode('utf-8'),stream.getvalue().encode('utf-8'),html

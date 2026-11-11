@@ -36,4 +36,4 @@ The wiki source is versioned in [`wiki/`](https://github.com/sev7enITA/PALO-Blue
 
 The unified catalogue contains 18 model IDs, with 28 cohort/configuration records. The procurement campaigns have 324 assigned slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses and 18 pre-call blocks. These are internal controls with assistant-draft labels, not independent validation.
 
-[Leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Updated presentation](https://paloframework.org/downloads/blueprintbench/presentation/index.html) · [[Identity and testing badge|Brand-and-presentation]]
+[Leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [[Identity and testing badge|Brand-and-presentation]]
