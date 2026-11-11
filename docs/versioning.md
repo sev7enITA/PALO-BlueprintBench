@@ -14,3 +14,5 @@ Version separately:
 - **PBI**: unavailable until its scoring specification and independent validation gates are adopted.
 
 Initial repository release: `v0.2.0-pilot.1`, containing explorer v0.2 and evaluator v0.1. This is an archival pilot release, not benchmark qualification. Tags and Git hashes establish artifact identity; they are not independent scientific review or trusted preregistration by themselves.
+
+Research launch release `v0.3.0-pilot.1` contains explorer 0.3.0 and evaluator/evidence contract 0.2.0. Component versions remain separate. The release manifest binds source bytes and public packages; no old tag is moved.

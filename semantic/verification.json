@@ -10,5 +10,7 @@
   "pbi_results_asserted": 0,
   "core_parents_resolve": true,
   "structured_data_json_parses": true,
-  "scope": "Vocabulary and publication checks; not benchmark qualification."
+  "scope": "Current semantic parse/count/mapping checks; original Atlas/core-parent checks retained from platform publication. Not benchmark qualification.",
+  "evaluator_code_mapping_verified": true,
+  "vocabulary_version": "0.1.1"
 }

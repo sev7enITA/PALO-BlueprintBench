@@ -1,0 +1,192 @@
+[
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "baidu/ernie-5.5-flash-preview",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "baidu",
+    "reasoning_effort": "high",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.28,
+      "output_per_million": 1.13,
+      "price_model": "baidu/ernie-5.5-flash-preview",
+      "price_provider": "baidu",
+      "price_checked_at": "2026-11-10T20:40:14.603695+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/baidu/ernie-5.5-flash-preview/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "nex-agi/nex-n2.6",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "nex-agi/fp8",
+    "reasoning_effort": "medium",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.12,
+      "output_per_million": 0.4,
+      "price_model": "nex-agi/nex-n2.6",
+      "price_provider": "nex-agi/fp8",
+      "price_checked_at": "2026-11-10T20:40:14.743412+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/nex-agi/nex-n2.6/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "tencent/hy4",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "tencent/fp4",
+    "reasoning_effort": "none",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.417,
+      "output_per_million": 1.2505,
+      "price_model": "tencent/hy4",
+      "price_provider": "tencent/fp4",
+      "price_checked_at": "2026-11-10T20:40:14.882199+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/tencent/hy4/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "reflection/beam-1.0-501b-a23b",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "nebius/fp4",
+    "reasoning_effort": "low",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.25,
+      "output_per_million": 1.0,
+      "price_model": "reflection/beam-1.0-501b-a23b",
+      "price_provider": "nebius/fp4",
+      "price_checked_at": "2026-11-10T20:40:15.109826+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/reflection/beam-1.0-501b-a23b/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "prism-ml/ternary-bonsai-2-9b",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "darkbloom/int4",
+    "reasoning_effort": "",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.08,
+      "output_per_million": 0.13,
+      "price_model": "prism-ml/ternary-bonsai-2-9b",
+      "price_provider": "darkbloom/int4",
+      "price_checked_at": "2026-11-10T20:40:15.226216+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/prism-ml/ternary-bonsai-2-9b/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "mistralai/mistral-large-4-0",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "mistral/eu",
+    "reasoning_effort": "none",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.77,
+      "output_per_million": 2.31,
+      "price_model": "mistralai/mistral-large-4-0",
+      "price_provider": "mistral/eu",
+      "price_checked_at": "2026-11-10T20:40:15.376800+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/mistralai/mistral-large-4-0/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "upstage/solar-mini4",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "upstage/zdr",
+    "reasoning_effort": "none",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.05,
+      "output_per_million": 0.2,
+      "price_model": "upstage/solar-mini4",
+      "price_provider": "upstage/zdr",
+      "price_checked_at": "2026-11-10T20:40:15.548679+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/upstage/solar-mini4/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "cohere/command-a-plus",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "cohere/fp8",
+    "reasoning_effort": "",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.3,
+      "output_per_million": 1.5,
+      "price_model": "cohere/command-a-plus",
+      "price_provider": "cohere/fp8",
+      "price_checked_at": "2026-11-10T20:40:15.694834+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/cohere/command-a-plus/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "sakana/fugu-max",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "sakana",
+    "reasoning_effort": "high",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 2.0,
+      "output_per_million": 6.0,
+      "price_model": "sakana/fugu-max",
+      "price_provider": "sakana",
+      "price_checked_at": "2026-11-10T20:40:15.817484+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/sakana/fugu-max/endpoints"
+    }
+  },
+  {
+    "mode": "enterprise",
+    "runtime": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "inference-net/schematron-v2-small",
+    "api_key_env": "PALO_OPENROUTER_KEY",
+    "enterprise_confirmed": true,
+    "provider": "inference-net/us",
+    "reasoning_effort": "",
+    "finops": {
+      "budget_usd": 1.0,
+      "input_per_million": 0.05,
+      "output_per_million": 0.23,
+      "price_model": "inference-net/schematron-v2-small",
+      "price_provider": "inference-net/us",
+      "price_checked_at": "2026-11-10T20:40:15.955149+00:00",
+      "price_source": "https://openrouter.ai/api/v1/models/inference-net/schematron-v2-small/endpoints"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "case": "restoration",
+  "model": "cohere/command-a-plus",
+  "provider": "cohere/fp8",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "error": "Model endpoint returned HTTP 400; no fallback was attempted",
+  "seconds": 2.3138104579993524
+}

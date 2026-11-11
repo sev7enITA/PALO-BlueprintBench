@@ -1,0 +1,68 @@
+{
+  "run_id": "synthetic-example",
+  "campaign_sha256": "f731c5cad9b6e0c362afd73f070e333900e28969242bf9892601895cc0d05680",
+  "subject_id": "fixture",
+  "configuration_sha256": "18be6d8ddcef5a2b1baeedd0666b2404bb3fe278ca5df825f7a61ee7984b5ee0",
+  "started_at": "2026-11-11T03:45:22.465086+00:00",
+  "finished_at": "2026-11-11T03:45:22.465086+00:00",
+  "evidence_status": "self_reported",
+  "attempts": [
+    {
+      "task_id": "faithful",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0,
+      "cost": {
+        "status": "not_incurred",
+        "usd": 0,
+        "reason": "Synthetic fixture, no inference"
+      },
+      "receipt": {
+        "path": "faithful/receipt.json",
+        "sha256": "86d7b31d92b5b4489ed46af533009439ed81d4e078809b657653f5ec0b8c5700"
+      },
+      "annotation": {
+        "path": "faithful/annotation.json",
+        "sha256": "9cc08c4b1fc85a0fb0d6769e7964637bda843e18bb8a57bba49e2eab7f8f4847"
+      }
+    },
+    {
+      "task_id": "inverted_rule",
+      "repetition": 1,
+      "state": "fail",
+      "elapsed_seconds": 0,
+      "cost": {
+        "status": "not_incurred",
+        "usd": 0,
+        "reason": "Synthetic fixture, no inference"
+      },
+      "receipt": {
+        "path": "inverted_rule/receipt.json",
+        "sha256": "42709fc243f6c33b569e63879c9fa3b2c9e2bb90a55da35d43f7a23d3265597a"
+      },
+      "annotation": {
+        "path": "inverted_rule/annotation.json",
+        "sha256": "5fe50094a0a5671b273170272f724fe7e232a0b17e2c8af58cc11ed89423d78b"
+      }
+    },
+    {
+      "task_id": "empty",
+      "repetition": 1,
+      "state": "abstain",
+      "elapsed_seconds": 0,
+      "cost": {
+        "status": "not_incurred",
+        "usd": 0,
+        "reason": "Synthetic fixture, no inference"
+      },
+      "receipt": {
+        "path": "empty/receipt.json",
+        "sha256": "466692b49dbedc10be97530f713506df604ffce6cf013ee59c2ed8af6dea5e95"
+      },
+      "annotation": {
+        "path": "empty/annotation.json",
+        "sha256": "3f3b6409a2e7e412bfb079a67aee42a9bbbcb0d9585c6f8ac8095af9e05bd55f"
+      }
+    }
+  ]
+}

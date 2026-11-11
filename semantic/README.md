@@ -1,6 +1,6 @@
 # BlueprintBench semantics
 
-Version 0.1.0 provides an additive vocabulary for evaluation programmes, model configurations, cohorts, runs, measurements, blueprints and reviews.
+Vocabulary 0.1.1 adds explicit evaluator-code mappings; the OWL ontology retains version 0.1.0. This extension provides an additive vocabulary for evaluation programmes, model configurations, cohorts, runs, measurements, blueprints and reviews.
 
 - [Dictionary](data/blueprintbench-vocabulary.json): definitions and eight dimensions.
 - [Taxonomy](formal/palo-blueprintbench-taxonomy.ttl): SKOS concepts for dimensions, evidence provenance, qualification and index availability.

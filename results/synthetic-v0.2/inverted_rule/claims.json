@@ -1,0 +1,18 @@
+[
+  {
+    "id": "c0",
+    "text": "Purchases above EUR 500 require owner approval.",
+    "span": [
+      0,
+      47
+    ]
+  },
+  {
+    "id": "c1",
+    "text": "All purchases must have owner approval",
+    "span": [
+      48,
+      86
+    ]
+  }
+]

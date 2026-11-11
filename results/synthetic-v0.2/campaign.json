@@ -1,0 +1,53 @@
+{
+  "id": "synthetic-evaluator-conformance",
+  "benchmark_version": "0.2.0",
+  "split": "synthetic",
+  "track": "interpretation",
+  "repetitions": 1,
+  "success_policy": {
+    "minimum_precision": 1,
+    "minimum_recall": 1,
+    "maximum_critical_errors": 0
+  },
+  "subjects": [
+    {
+      "id": "fixture",
+      "configuration": {
+        "path": "configuration.json",
+        "sha256": "18be6d8ddcef5a2b1baeedd0666b2404bb3fe278ca5df825f7a61ee7984b5ee0"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "faithful",
+      "family": "synthetic-purchasing",
+      "domain": "procurement",
+      "scope": "two explicitly defined rules",
+      "gold": {
+        "path": "faithful/gold.json",
+        "sha256": "e2d65b1b3bd5b13c60dac66f94c974275399a6197354307e145cf7d0ec531ce5"
+      }
+    },
+    {
+      "id": "inverted_rule",
+      "family": "synthetic-purchasing",
+      "domain": "procurement",
+      "scope": "two explicitly defined rules",
+      "gold": {
+        "path": "inverted_rule/gold.json",
+        "sha256": "e2d65b1b3bd5b13c60dac66f94c974275399a6197354307e145cf7d0ec531ce5"
+      }
+    },
+    {
+      "id": "empty",
+      "family": "synthetic-purchasing",
+      "domain": "procurement",
+      "scope": "two explicitly defined rules",
+      "gold": {
+        "path": "empty/gold.json",
+        "sha256": "e2d65b1b3bd5b13c60dac66f94c974275399a6197354307e145cf7d0ec531ce5"
+      }
+    }
+  ]
+}

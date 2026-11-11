@@ -1,0 +1,166 @@
+{
+  "case": "redevelopment",
+  "model": "prism-ml/ternary-bonsai-2-9b",
+  "provider": "darkbloom/int4",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "term",
+        "name": "10 Triumphs in 10 Years",
+        "description": "Proposed timeline for achieving major plan goals",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "Dayton Mall Area Master Plan",
+        "description": "Title of the planning document",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "Dayton Mall Area",
+        "description": "Location subject to the plan",
+        "entity": "Dayton Mall Area",
+        "target": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "Local municipalities",
+        "description": "Stakeholder group with a role to play",
+        "entity": "Local municipalities",
+        "target": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "private-sector partners",
+        "description": "Stakeholder group involved in implementation",
+        "entity": "private-sector partners",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "businesses",
+        "description": "Stakeholder group involved in transformation",
+        "entity": "businesses",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "developers",
+        "description": "Stakeholder group involved in new development",
+        "entity": "developers",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "community organizations",
+        "description": "Stakeholder group involved in transformation",
+        "entity": "community organizations",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "The Implementation Matrix identifies actions that could be taken to achieve each goal",
+        "description": "Defines purpose of the Implementation Matrix section",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "Strategically integrating physical, economic and social investments",
+        "description": "Action required to create critical mass of support",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "design and construction of new buildings, streets and open spaces",
+        "description": "Development activity for major triumphs",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 826,
+      "completion_tokens": 4351,
+      "total_tokens": 5177
+    },
+    "seconds": 65.543,
+    "max_tokens": 8000,
+    "content_bytes": 2767,
+    "content_sha256": "c5b1664fd813e8650368146cbeefdfb01eb00a73c5718320abf547f0a5630dbf",
+    "model": "prism-ml/ternary-bonsai-2-9b",
+    "accounting": {
+      "id": "gen-1794343979-TElzQrKHMj9FyrHsxanp",
+      "provider": "Darkbloom",
+      "usage": {
+        "prompt_tokens": 826,
+        "completion_tokens": 4351,
+        "total_tokens": 5177,
+        "cost": 0.00063171,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00063171,
+          "upstream_inference_prompt_cost": 6.608e-05,
+          "upstream_inference_completions_cost": 0.00056563
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3540,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 65.54290074999881
+}

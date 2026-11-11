@@ -1,0 +1,185 @@
+{
+  "case": "maintenance",
+  "model": "tencent/hy4",
+  "provider": "tencent/fp4",
+  "output_cap": 8000,
+  "reasoning_effort": "none",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "description": "Regulations do not require periodic weighing of privately owned and operated aircraft.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Regulations do not require periodic weighing of privately owned and operated aircraft",
+        "target": ""
+      },
+      {
+        "description": "Privately owned and operated aircraft are usually weighed when originally certificated or after major alterations that can affect the weight and balance.",
+        "entity": "privately owned and operated aircraft",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "attribute",
+        "name": "usually weighed when originally certificated or after major alterations that can affect the weight and balance",
+        "target": ""
+      },
+      {
+        "description": "The primary purpose of aircraft weight and balance control is safety.",
+        "entity": "aircraft weight and balance control",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "attribute",
+        "name": "primary purpose is safety",
+        "target": ""
+      },
+      {
+        "description": "Manufacturers conduct extensive flight tests to establish loading limits for their aircraft because limit information is critical for safe flight.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "step",
+        "name": "Manufacturers conduct extensive flight tests to establish loading limits for their aircraft",
+        "target": ""
+      },
+      {
+        "description": "A secondary purpose of aircraft weight and balance control is to aid efficiency during flight.",
+        "entity": "aircraft weight and balance control",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "attribute",
+        "name": "secondary purpose is to aid efficiency during flight",
+        "target": ""
+      },
+      {
+        "description": "Overloading of the aircraft is not the only concern; the distribution of the weight is important also.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Overloading of the aircraft is not the only concern; the distribution of the weight is important also",
+        "target": ""
+      },
+      {
+        "description": "The aircraft has CG limits.",
+        "entity": "The aircraft",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "attribute",
+        "name": "has CG limits",
+        "target": ""
+      },
+      {
+        "description": "Any loading that places the CG outside the established limits seriously impairs controllability of the aircraft.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Any loading that places the CG outside the established limits seriously impairs controllability of the aircraft",
+        "target": ""
+      },
+      {
+        "description": "Each Federal Aviation Administration (FAA) certificated mechanic or repairman maintaining an aircraft must be fully aware of his or her responsibility to provide the pilot with current and accurate information for the actual weight of the aircraft and the location of the CG.",
+        "entity": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "rule",
+        "name": "each Federal Aviation Administration (FAA) certificated mechanic or repairman maintaining an aircraft must be fully aware of his or her responsibility",
+        "target": ""
+      },
+      {
+        "description": "Each FAA certificated mechanic or repairman maintaining an aircraft is responsible for providing the pilot with current and accurate information for the actual weight of the aircraft and the location of the CG.",
+        "entity": "Federal Aviation Administration (FAA) certificated mechanic or repairman maintaining an aircraft",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "responsibility to provide the pilot with current and accurate information",
+        "target": "the pilot"
+      },
+      {
+        "description": "The pilot in command (PIC) is responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits of the aircraft.",
+        "entity": "The pilot in command (PIC)",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits of the aircraft",
+        "target": ""
+      },
+      {
+        "description": "The weight and balance report must include an equipment list showing weights and moment arms of all required and optional items of equipment included in the certificate empty weight.",
+        "entity": "The weight and balance report",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "must include an equipment list showing weights and moment arms of all required and optional items of equipment included in the certificate empty weight",
+        "target": ""
+      },
+      {
+        "description": "Weight and balance records used in accounting for and correcting the CG location are reliable for only limited time; the supplied text ends before stating the duration.",
+        "entity": "Weight and balance records used in accounting for and correcting the CG location",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "reliable for only limited",
+        "target": ""
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 629,
+      "completion_tokens": 887,
+      "total_tokens": 1516
+    },
+    "seconds": 6.825,
+    "max_tokens": 8000,
+    "content_bytes": 4399,
+    "content_sha256": "8501d5ff07da59b4be5afe85585d7e9a6cbd75fc6ff786934f7f5a99122192f3",
+    "model": "tencent/hy4",
+    "accounting": {
+      "id": "gen-1794343848-l3haxVxNGcQNhUGqkTOn",
+      "provider": "Tencent",
+      "usage": {
+        "prompt_tokens": 629,
+        "completion_tokens": 887,
+        "total_tokens": 1516,
+        "cost": 0.0011687345,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0011687345,
+          "upstream_inference_prompt_cost": 5.9541e-05,
+          "upstream_inference_completions_cost": 0.0011091935
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 6.8250103749960545
+}

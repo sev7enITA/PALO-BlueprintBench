@@ -1,0 +1,187 @@
+{
+  "case": "maintenance",
+  "model": "mistralai/mistral-large-4-0",
+  "provider": "mistral/eu",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "rule",
+        "name": "Regulations do not require periodic weighing of privately owned and operated aircraft",
+        "description": "Regulations do not require periodic weighing of privately owned and operated aircraft.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "Privately owned and operated aircraft weighed when originally certificated or after major alterations",
+        "description": "Privately owned and operated aircraft are usually weighed when originally certificated or after major alterations that can affect the weight and balance.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "Primary purpose of aircraft weight and balance control is safety",
+        "description": "The primary purpose of aircraft weight and balance control is safety.",
+        "entity": "aircraft weight and balance control",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "Manufacturers conduct extensive flight tests to establish loading limits",
+        "description": "Manufacturers conduct extensive flight tests to establish loading limits for their aircraft because limit information is critical for safe flight.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "Secondary purpose of aircraft weight and balance control aids efficiency during flight",
+        "description": "A secondary purpose of aircraft weight and balance control is to aid efficiency during flight.",
+        "entity": "aircraft weight and balance control",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "Aircraft has CG limits",
+        "description": "The aircraft has CG (center of gravity) limits.",
+        "entity": "aircraft",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Loading placing CG outside established limits impairs controllability",
+        "description": "Any loading that places the CG outside the established limits seriously impairs controllability of the aircraft.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "FAA certificated mechanic or repairman provides weight and CG information to pilot",
+        "description": "Each Federal Aviation Administration (FAA) certificated mechanic or repairman maintaining an aircraft must be fully aware of his or her responsibility to provide the pilot with current and accurate information for the actual weight of the aircraft and the location of the CG.",
+        "entity": "Federal Aviation Administration (FAA) certificated mechanic or repairman",
+        "target": "pilot",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Pilot in command responsible for knowing load weight, CG, maximum allowable weight, and CG limits",
+        "description": "The pilot in command (PIC) is responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits of the aircraft.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Weight and balance report must include equipment list with weights and moment arms",
+        "description": "The weight and balance report must include an equipment list showing weights and moment arms of all required and optional items of equipment included in the certificate empty weight.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "Weight and balance records reliable for only limited period",
+        "description": "Weight and balance records used in accounting for and correcting the CG location are reliable for only limited [duration; source text incomplete].",
+        "entity": "Weight and balance records",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "FAA stands for Federal Aviation Administration",
+        "description": "FAA is the abbreviation for the Federal Aviation Administration.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "PIC stands for pilot in command",
+        "description": "PIC is the abbreviation for pilot in command.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "Source text ends mid-sentence at 'reliable for only limited', so the specific limited duration or scope of record reliability is not provided.",
+      "The abbreviation 'CG' is used without definition in the provided text."
+    ]
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 796,
+      "completion_tokens": 6918,
+      "total_tokens": 7714
+    },
+    "seconds": 53.666,
+    "max_tokens": 8000,
+    "content_bytes": 4794,
+    "content_sha256": "f814b2229ca6848e9d9c50877c0aef73c12e4b10ae4e56226cc0759b3faaacb3",
+    "model": "mistralai/mistral-large-4-0",
+    "accounting": {
+      "id": "gen-1794344040-6A93F3H67Z1rytfjsFmt",
+      "provider": "Mistral",
+      "usage": {
+        "prompt_tokens": 796,
+        "completion_tokens": 6918,
+        "total_tokens": 7714,
+        "cost": 0.0165935,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0165935,
+          "upstream_inference_prompt_cost": 0.00061292,
+          "upstream_inference_completions_cost": 0.01598058
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5852,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 53.66559720800433
+}

@@ -1,0 +1,219 @@
+{
+  "case": "redevelopment",
+  "model": "mistralai/mistral-large-4-0",
+  "provider": "mistral/eu",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "entity",
+        "name": "Dayton Mall Area Master Plan",
+        "description": "Master plan document for the Dayton Mall Area intended to be a 'living' plan that is used, implemented and leads to catalytic redevelopment of the area",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "living plan status",
+        "description": "The Dayton Mall Area Master Plan aims to be a 'living' plan that is used and implemented, leading to catalytic redevelopment of the area",
+        "entity": "Dayton Mall Area Master Plan",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "stakeholder municipalities",
+        "description": "Municipalities identified as stakeholders with a role to play in making the Dayton Mall Area Master Plan a living plan and achieving community goals for the Mall Area",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "private-sector partners",
+        "description": "Private-sector partners identified as having a role to play in implementing the Dayton Mall Area Master Plan",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "advocacy organizations",
+        "description": "Advocacy organizations identified as having a role to play in implementing the Dayton Mall Area Master Plan",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "strategic integration of investments",
+        "description": "Strategically integrating physical, economic and social investments creates a critical mass of support needed to achieve the community's goals for the Mall Area",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "ten major triumphs",
+        "description": "The implementation chapter identifies specific actions and strategies to achieve ten major 'triumphs' reflecting plan goals, based on analysis, outreach, research and planning presented in previous chapters",
+        "entity": "Dayton Mall Area Master Plan",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "triumphs catalyze transformation",
+        "description": "The ten major triumphs will be catalysts for further transformation in the Mall Area",
+        "entity": "ten major triumphs",
+        "target": "Mall Area",
+        "evidence": [
+          "s1",
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "Local municipalities",
+        "description": "Local municipalities have a role in transforming the mall area into a more accessible, welcoming and green place to live, work and play",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "businesses",
+        "description": "Businesses have a role to play in the transformation of the mall area into a more accessible, welcoming and green place",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "developers",
+        "description": "Developers have a role to play in the transformation of the mall area into a more accessible, welcoming and green place",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "community organizations",
+        "description": "Community organizations have a role to play in the transformation of the mall area",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "transformation vision",
+        "description": "The mall area is to be transformed into a more accessible, welcoming and green place to live, work and play",
+        "entity": "Mall Area",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "Implementation Matrix",
+        "description": "Matrix following the implementation section that identifies actions to achieve each goal, key partners needed to collaborate, priority of each action and proposed timeline of completion",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "new development construction",
+        "description": "Three major triumphs for the Dayton Mall Area involve new development through design and construction of new buildings, streets and open spaces that begin to transform the entire district",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "other stakeholders",
+        "description": "Other stakeholders beyond municipalities, businesses, developers and community organizations have a role in the mall area transformation",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "Whether 'stakeholder municipalities' (s1) and 'Local municipalities' (s2) refer to identical entities",
+      "Whether 'Mall Area', 'the area', and 'the district' denote the same geographic scope",
+      "The '10 Years' timeframe appears in the heading '10 Triumphs in 10 Years' (s1) but is not explicitly restated in the body text describing the ten triumphs"
+    ]
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 821,
+      "completion_tokens": 6682,
+      "total_tokens": 7503
+    },
+    "seconds": 55.227,
+    "max_tokens": 8000,
+    "content_bytes": 4420,
+    "content_sha256": "5d559c5dff3ab0f75ac3fc68fa27d3a4c6d28cbd071383b6bce30554984d0e50",
+    "model": "mistralai/mistral-large-4-0",
+    "accounting": {
+      "id": "gen-1794343985-ROGFcAm6OIVZEJrfYt05",
+      "provider": "Mistral",
+      "usage": {
+        "prompt_tokens": 821,
+        "completion_tokens": 6682,
+        "total_tokens": 7503,
+        "cost": 0.01606759,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.01606759,
+          "upstream_inference_prompt_cost": 0.00063217,
+          "upstream_inference_completions_cost": 0.01543542
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5766,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 55.22684987499815
+}

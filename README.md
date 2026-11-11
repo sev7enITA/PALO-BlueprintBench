@@ -11,7 +11,7 @@ BlueprintBench studies the route from PDF and Excel documents to source-linked e
 | Component | Status |
 |---|---|
 | Explorer | Ten historical model passage diagnostics, filters, charts, four-model comparison and CSV export |
-| Evaluator v0.1 | Executable evidence-integrity checks and scoped, already-adjudicated semantic accounting |
+| Evaluator v0.2 | Executable evidence-integrity checks and scoped, already-adjudicated semantic accounting |
 | Original three repositories above 100 MB | Development cases used to repair PALO, not held-out qualification |
 | Independent reference annotation | Contributors being recruited |
 | Qualified held-out entries | **0** |
@@ -25,12 +25,13 @@ Python 3.10 or later; standard library only. No API credentials or paid inferenc
 
 ```sh
 cd evaluator
+python3 -m pip install -r requirements.txt
 python3 -m unittest -v test_blueprintbench
 python3 demo.py /tmp/blueprintbench-example
 python3 blueprintbench.py evaluate /tmp/blueprintbench-example/campaign.lock.json /tmp/blueprintbench-example/run.json --evidence-root /tmp/blueprintbench-example --output /tmp/blueprintbench-result.json
 ```
 
-Choose fresh output paths. The demo is synthetic evaluator testing, not a model measurement. Seventeen checks passed in the initial local verification. Qualification always remains false in this evaluator release because human independence and reproduction are not verified by JSON declarations.
+Choose fresh output paths. The demo is synthetic evaluator testing, not a model measurement. The current regression suite includes the adversarial annotation and acceptance cases recorded in the release verification. Qualification always remains false in this evaluator release because human independence and reproduction are not verified by JSON declarations.
 
 ## Repository map
 
@@ -55,6 +56,10 @@ The [BlueprintBench vocabulary](semantic/README.md) defines the evaluation conce
 ## Naming clarification
 
 PALO BlueprintBench evaluates business-document interpretation and is unrelated to Andon Labs' [Blueprint-Bench / Blueprint-Bench 2](https://arxiv.org/abs/2509.25229), which evaluates spatial floor-plan generation. See the [dedicated-domain proposal](docs/palo-blueprint-index.md#domain-proposal). No dedicated domain is registered by this project at this stage.
+
+## Public research release
+
+See the [launch verification](docs/launch-readiness.md), [executable contract and migration](docs/evaluator-contract.md), and [historical outputs with offline replay](evidence/development-2026-11-10/README.md). The launch opens independent validation and participation; it adds no qualified score or Workbench app release.
 
 ## Cross-review and next study
 

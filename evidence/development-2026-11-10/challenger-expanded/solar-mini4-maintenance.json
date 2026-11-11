@@ -1,0 +1,137 @@
+{
+  "case": "maintenance",
+  "model": "upstage/solar-mini4",
+  "provider": "upstage/zdr",
+  "output_cap": 8000,
+  "reasoning_effort": "none",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "description": "Regulations do not require periodic weighing of privately owned and operated aircraft; such aircraft are usually weighed when originally certificated or after major alterations that can affect weight and balance.",
+        "entity": "privately owned and operated aircraft",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Regulation on periodic weighing of privately owned and operated aircraft",
+        "target": ""
+      },
+      {
+        "description": "The primary purpose of aircraft weight and balance control is safety; manufacturers conduct extensive flight tests to establish loading limits for their aircraft because limit information is critical for safe flight.",
+        "entity": "aircraft weight and balance control",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Primary purpose of aircraft weight and balance control",
+        "target": ""
+      },
+      {
+        "description": "A secondary purpose of aircraft weight and balance control is to aid efficiency during flight.",
+        "entity": "aircraft weight and balance control",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Secondary purpose of aircraft weight and balance control",
+        "target": ""
+      },
+      {
+        "description": "Overloading is not the only concern; the distribution of weight is important because aircraft CG limits exist and any loading that places the CG outside established limits seriously impairs controllability.",
+        "entity": "aircraft",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Weight distribution and CG limit constraints",
+        "target": ""
+      },
+      {
+        "description": "Each FAA certificated mechanic or repairman maintaining an aircraft must be fully aware of responsibility to provide the pilot with current and accurate information for the actual weight of the aircraft and the location of the CG.",
+        "entity": "FAA certificated mechanic or repairman",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "FAA certificated mechanic or repairman duty regarding weight and CG information",
+        "target": "pilot"
+      },
+      {
+        "description": "The pilot in command (PIC) is responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits of the aircraft.",
+        "entity": "pilot in command (PIC)",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "Pilot in command responsibilities for weight, CG, maximum allowable weight, and CG limits",
+        "target": ""
+      },
+      {
+        "description": "The weight and balance report must include an equipment list showing weights and moment arms of all required and optional items of equipment included in the certificate empty weight.",
+        "entity": "weight and balance report",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "Equipment list requirement in weight and balance report",
+        "target": ""
+      },
+      {
+        "description": "Weight and balance records used in accounting for and correcting the CG location are reliable for only limited [duration/value].",
+        "entity": "weight and balance records",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "rule",
+        "name": "Reliability limitation of weight and balance records",
+        "target": ""
+      }
+    ],
+    "uncertainties": [
+      "The exact scope or duration of the reliability limitation for weight and balance records is not specified in the supplied text.",
+      "The precise definition of 'certificate empty weight' and its relation to the equipment list is not detailed beyond the provided fragment."
+    ]
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 657,
+      "completion_tokens": 772,
+      "total_tokens": 1429
+    },
+    "seconds": 9.743,
+    "max_tokens": 8000,
+    "content_bytes": 3668,
+    "content_sha256": "5642461fb7f36cb2b94a45a7db0f8a1954cefa0d9341b00ad4e8c83ae4a585ee",
+    "model": "upstage/solar-mini4",
+    "accounting": {
+      "id": "gen-1794344123-OSXgZFK0X4JYKFVcvUVz",
+      "provider": "Upstage",
+      "usage": {
+        "prompt_tokens": 657,
+        "completion_tokens": 772,
+        "total_tokens": 1429,
+        "cost": 0.00018725,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018725,
+          "upstream_inference_prompt_cost": 3.285e-05,
+          "upstream_inference_completions_cost": 0.0001544
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 9.742844332999084
+}

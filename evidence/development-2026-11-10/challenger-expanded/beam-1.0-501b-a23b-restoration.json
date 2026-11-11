@@ -1,0 +1,136 @@
+{
+  "case": "restoration",
+  "model": "reflection/beam-1.0-501b-a23b",
+  "provider": "nebius/fp4",
+  "output_cap": 8000,
+  "reasoning_effort": "low",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "relationship",
+        "name": "Lakes are primarily owned by Louisiana State University",
+        "description": "The Lakes are primarily owned by Louisiana State University, with the exception of City Park Lake and Lake Erie, which are owned by the City-Parish of Baton Rouge.",
+        "entity": "the Lakes",
+        "target": "Louisiana State University",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "City Park Lake",
+        "description": "City Park Lake is owned by the City-Parish of Baton Rouge.",
+        "entity": "City Park Lake",
+        "target": "City-Parish of Baton Rouge",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "Lake Erie",
+        "description": "Lake Erie is owned by the City-Parish of Baton Rouge.",
+        "entity": "Lake Erie",
+        "target": "City-Parish of Baton Rouge",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC).",
+        "description": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC), which is distinct from ownership of the Lakes.",
+        "entity": "Park spaces within the study area",
+        "target": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "have a strong sense of implied ownership of the Lakes",
+        "description": "Residents of the neighborhoods that line the study area have a strong sense of implied ownership of the Lakes due to their immediate proximity.",
+        "entity": "residents of the neighborhoods that line the study area",
+        "target": "the Lakes",
+        "evidence": [
+          "s1",
+          "s2"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "co-opted the lake edges into \u201cprivate\u201d gardens, reserves, and boat launches",
+        "description": "Many residents have co-opted the lake edges into \u201cprivate\u201d gardens, reserves, and boat launches; these additions can create charm and beauty but can also create issues for lake operations, maintenance, and adjacent property owners.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "residents along the Lakes were engaged and that this sense of ownership is preserved in this Master Plan.",
+        "description": "The master planning process made every effort to ensure that residents along the Lakes were engaged and that this sense of ownership is preserved in this Master Plan.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "implied ownership",
+        "description": "A strong sense of ownership of the Lakes held by nearby residents due to immediate proximity; it is not described as legal ownership.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 805,
+      "completion_tokens": 2857,
+      "total_tokens": 3662
+    },
+    "seconds": 5.229,
+    "max_tokens": 8000,
+    "content_bytes": 2626,
+    "content_sha256": "4187df1df0a96f5ee2e530acf4e311b5142ba52808227fdd39c3f393b5944e4f",
+    "model": "reflection/beam-1.0-501b-a23b",
+    "accounting": {
+      "id": "gen-1794343855-y0dRhqODpJb5zO0IAguK",
+      "provider": "Nebius",
+      "usage": {
+        "prompt_tokens": 805,
+        "completion_tokens": 2857,
+        "total_tokens": 3662,
+        "cost": 0.00290465,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 768,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00290465,
+          "upstream_inference_prompt_cost": 4.765e-05,
+          "upstream_inference_completions_cost": 0.002857
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2303,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 5.2292713330025435
+}

@@ -1,0 +1,174 @@
+{
+  "case": "maintenance",
+  "model": "prism-ml/ternary-bonsai-2-9b",
+  "provider": "darkbloom/int4",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "rule",
+        "name": "Regulations do not require periodic weighing of privately owned and operated aircraft",
+        "description": "Regulations do not require periodic weighing of privately owned and operated aircraft",
+        "entity": "Regulations",
+        "target": "privately owned and operated aircraft",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Such aircraft are usually weighed when originally certificated or after major alterations",
+        "description": "Such aircraft are usually weighed when originally certificated or after major alterations",
+        "entity": "Such aircraft",
+        "target": "originally certificated or after major alterations",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "primary purpose of aircraft weight and balance control is safety",
+        "description": "primary purpose of aircraft weight and balance control is safety",
+        "entity": "aircraft weight and balance control",
+        "target": "safety",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "Manufacturers conduct extensive flight tests",
+        "description": "Manufacturers conduct extensive flight tests to establish loading limits",
+        "entity": "Manufacturers",
+        "target": "extensive flight tests",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "limit information is critical for safe flight",
+        "description": "limit information is critical for safe flight",
+        "entity": "limit information",
+        "target": "safe flight",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "secondary purpose is to aid efficiency during flight",
+        "description": "secondary purpose is to aid efficiency during flight",
+        "entity": "secondary purpose",
+        "target": "aid efficiency during flight",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "aircraft has CG limits",
+        "description": "The aircraft has CG limits",
+        "entity": "The aircraft",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "loading that places the CG outside the established limits seriously impairs controllability",
+        "description": "loading that places the CG outside the established limits seriously impairs controllability of the aircraft",
+        "entity": "loading",
+        "target": "CG outside established limits",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "FAA certificated mechanic or repairman maintaining an aircraft must be fully aware of responsibility",
+        "description": "FAA certificated mechanic or repairman maintaining an aircraft must be fully aware of his or her responsibility to provide the pilot with current and accurate information for the actual weight of the aircraft and the location of the CG",
+        "entity": "FAA certificated mechanic or repairman",
+        "target": "responsibility to provide pilot",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "PIC is responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits",
+        "description": "The pilot in command (PIC) is responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits of the aircraft",
+        "entity": "The pilot in command (PIC)",
+        "target": "knowing the weight of the load, CG, maximum allowable weight, and CG limits",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "The weight and balance report must include an equipment list showing weights and moment arms",
+        "description": "The weight and balance report must include an equipment list showing weights and moment arms of all required and optional items of equipment included in the certificate empty weight",
+        "entity": "Weight and balance report",
+        "target": "equipment list showing weights and moment arms",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "Weight and balance records used in accounting for and correcting the CG location are reliable for only limited",
+        "description": "Weight and balance records used in accounting for and correcting the CG location are reliable for only limited",
+        "entity": "Weight and balance records used in accounting for and correcting the CG location",
+        "target": "reliable for only limited",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 795,
+      "completion_tokens": 7059,
+      "total_tokens": 7854
+    },
+    "seconds": 108.141,
+    "max_tokens": 8000,
+    "content_bytes": 4707,
+    "content_sha256": "42b7c391122700b9ac0c05e926383041f0f8271cd8f25fdddbf886c1179d77d2",
+    "model": "prism-ml/ternary-bonsai-2-9b",
+    "accounting": {
+      "id": "gen-1794344045-giRzNOYoszadtBDmUbKx",
+      "provider": "Darkbloom",
+      "usage": {
+        "prompt_tokens": 795,
+        "completion_tokens": 7059,
+        "total_tokens": 7854,
+        "cost": 0.00098127,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00098127,
+          "upstream_inference_prompt_cost": 6.36e-05,
+          "upstream_inference_completions_cost": 0.00091767
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5880,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 108.14135987500049
+}

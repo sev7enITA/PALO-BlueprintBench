@@ -1,0 +1,126 @@
+{
+  "case": "maintenance",
+  "model": "inference-net/schematron-v2-small",
+  "provider": "inference-net/us",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "attachment",
+        "name": "Figure 3-1. Platform scales",
+        "description": "Illustration of an aircraft platform with weights and CG motion.",
+        "entity": "Figure 3-1. Platform scales",
+        "target": "visible graph",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "Federal Aviation Administration (FAA)",
+        "description": "U.S. government agency responsible for regulating and overseeing air plant maintenance.",
+        "entity": "Federal Aviation Administration (FAA)",
+        "target": "organizational entity",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "operation",
+        "name": "Weigh aircraft when originally certificated",
+        "description": "Initial weighing of an aircraft at one or more stages of its life cycle.",
+        "entity": "aircraft",
+        "target": "FAA certificated handling",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "operation",
+        "name": "Weigh aircraft after major alterations",
+        "description": "Re\u2011weigh aircraft after any modifications that change its center of gravity or mass.",
+        "entity": "aircraft",
+        "target": "improved handling",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "operation",
+        "name": "Conduct flight tests for loading limits",
+        "description": "Manufacturers perform flight tests to establish safe loading limits for an aircraft.",
+        "entity": "manufacturer",
+        "target": "pilot information for safe flight",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "operation",
+        "name": "Maintain accurate weight for pilot",
+        "description": "Mechanicals must give pilots current and accurate weight and CG information.",
+        "entity": "mechanic or repairman",
+        "target": "pilot",
+        "evidence": [
+          "s2",
+          "s1"
+        ]
+      },
+      {
+        "kind": "operation",
+        "name": "Submit weight and balance report",
+        "description": "A report including equipment list, loads, and CG information must be filed with the FAA.",
+        "entity": "mechanic or repairman",
+        "target": "FAA",
+        "evidence": [
+          "s2",
+          "s1"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 639,
+      "completion_tokens": 560,
+      "total_tokens": 1199
+    },
+    "seconds": 1.982,
+    "max_tokens": 8000,
+    "content_bytes": 2275,
+    "content_sha256": "182223b8165f7f21e57a36a165dd8f13dc61b169d74f25406d543fe89bd2e091",
+    "model": "inference-net/schematron-v2-small",
+    "accounting": {
+      "id": "gen-1794344159-dwyrFYWl5uDn9lFiSS91",
+      "provider": "InferenceNet",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 560,
+        "total_tokens": 1199,
+        "cost": 0.00016075,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016075,
+          "upstream_inference_prompt_cost": 3.195e-05,
+          "upstream_inference_completions_cost": 0.0001288
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 1.9823960830035503
+}

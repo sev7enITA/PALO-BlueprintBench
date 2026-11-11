@@ -1,0 +1,171 @@
+{
+  "case": "restoration",
+  "model": "baidu/ernie-5.5-flash-preview",
+  "provider": "baidu",
+  "output_cap": 8000,
+  "reasoning_effort": "high",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "description": "The Lakes are primarily owned by Louisiana State University, with exceptions for City Park Lake and Lake Erie.",
+        "entity": "the Lakes",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "Louisiana State University owns the Lakes",
+        "target": "Louisiana State University"
+      },
+      {
+        "description": "City Park Lake is an exception to LSU ownership and is owned by the City-Parish of Baton Rouge.",
+        "entity": "City Park Lake",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "City-Parish of Baton Rouge owns City Park Lake",
+        "target": "City-Parish of Baton Rouge"
+      },
+      {
+        "description": "Lake Erie is an exception to LSU ownership and is owned by the City-Parish of Baton Rouge.",
+        "entity": "Lake Erie",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "City-Parish of Baton Rouge owns Lake Erie",
+        "target": "City-Parish of Baton Rouge"
+      },
+      {
+        "description": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC).",
+        "entity": "park spaces",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "BREC manages park spaces",
+        "target": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)"
+      },
+      {
+        "description": "BREC is The Recreation and Park Commission for the Parish of East Baton Rouge, which manages park spaces within the study area.",
+        "entity": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "entity",
+        "name": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "target": ""
+      },
+      {
+        "description": "Ownership rests with only two entities: Louisiana State University and the City-Parish of Baton Rouge.",
+        "entity": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "rule",
+        "name": "ownership rests with two entities",
+        "target": ""
+      },
+      {
+        "description": "Residents of neighborhoods lining the study area have a strong sense of implied ownership of the Lakes due to their immediate proximity.",
+        "entity": "residents",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "implied ownership of the Lakes",
+        "target": "the Lakes"
+      },
+      {
+        "description": "Many residents have co-opted the lake edges into private gardens, reserves, and boat launches.",
+        "entity": "residents",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "co-opted lake edges",
+        "target": ""
+      },
+      {
+        "description": "Residents' additions to lake edges can create moments of charm and beauty that add to the cultural integrity of the Lakes.",
+        "entity": "residents",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "additions add cultural integrity",
+        "target": ""
+      },
+      {
+        "description": "Residents' additions to lake edges can also create issues for lake operations and maintenance as well as adjacent property owners.",
+        "entity": "residents",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "additions create issues",
+        "target": ""
+      },
+      {
+        "description": "The master planning process made every effort to ensure that residents along the Lakes were engaged and that the sense of ownership is preserved in the Master Plan.",
+        "entity": "Master Plan",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "preserve resident sense of ownership",
+        "target": ""
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 770,
+      "completion_tokens": 1004,
+      "total_tokens": 1774
+    },
+    "seconds": 3.227,
+    "max_tokens": 8000,
+    "content_bytes": 3004,
+    "content_sha256": "dc8be5ebf1c7ae5a0e483a0bd27268e1456d350de39c4f23feee170eec763c69",
+    "model": "baidu/ernie-5.5-flash-preview",
+    "accounting": {
+      "id": "gen-1794343797-WMteFqL7cm40sUcMU2qJ",
+      "provider": "Baidu",
+      "usage": {
+        "prompt_tokens": 770,
+        "completion_tokens": 1004,
+        "total_tokens": 1774,
+        "cost": 0.001156584,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 768,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001156584,
+          "upstream_inference_prompt_cost": 2.2064e-05,
+          "upstream_inference_completions_cost": 0.00113452
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 358,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 3.2276248339985614
+}

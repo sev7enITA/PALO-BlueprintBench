@@ -1,0 +1,186 @@
+{
+  "case": "maintenance",
+  "model": "reflection/beam-1.0-501b-a23b",
+  "provider": "nebius/fp4",
+  "output_cap": 8000,
+  "reasoning_effort": "low",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "rule",
+        "name": "Regulations do not require periodic weighing",
+        "description": "Regulations do not require periodic weighing of privately owned and operated aircraft.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "weighed when originally certificated or after major alterations",
+        "description": "Privately owned and operated aircraft are usually weighed when originally certificated or after major alterations that can affect the weight and balance.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "primary purpose",
+        "description": "safety",
+        "entity": "aircraft weight and balance control",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "secondary purpose",
+        "description": "aid efficiency during flight",
+        "entity": "aircraft weight and balance control",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "conduct extensive flight tests",
+        "description": "Manufacturers conduct extensive flight tests to establish loading limits for their aircraft because limit information is critical for safe flight.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "establish loading limits for",
+        "description": "Manufacturers establish loading limits for their aircraft.",
+        "entity": "Manufacturers",
+        "target": "aircraft",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "CG limits",
+        "description": "The aircraft has CG limits.",
+        "entity": "aircraft",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "any loading that places the CG outside the established limits",
+        "description": "Any loading that places the CG outside the established limits seriously impairs controllability of the aircraft.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "must be fully aware of his or her responsibility",
+        "description": "Each Federal Aviation Administration (FAA) certificated mechanic or repairman maintaining an aircraft must be fully aware of his or her responsibility to provide the pilot with current and accurate information for the actual weight of the aircraft and the location of the CG.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "maintaining",
+        "description": "A Federal Aviation Administration (FAA) certificated mechanic or repairman maintains an aircraft.",
+        "entity": "Federal Aviation Administration (FAA) certificated mechanic or repairman",
+        "target": "aircraft",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Pilot in command (PIC) is responsible",
+        "description": "The pilot in command (PIC) is responsible for knowing the weight of the load, CG, maximum allowable weight, and CG limits of the aircraft.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Weight and balance report must include an equipment list",
+        "description": "The weight and balance report must include an equipment list showing weights and moment arms of all required and optional items of equipment included in the certificate empty weight.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "reliable for only limited",
+        "description": "Weight and balance records used in accounting for and correcting the CG location are reliable for only limited (period unspecified in supplied text).",
+        "entity": "weight and balance records",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "The supplied text truncates after 'limited', so the reliability period for weight and balance records is not specified."
+    ]
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 659,
+      "completion_tokens": 3612,
+      "total_tokens": 4271
+    },
+    "seconds": 5.719,
+    "max_tokens": 8000,
+    "content_bytes": 4173,
+    "content_sha256": "eafad3e2afbc2b8dc4949d24786960e56e0a9f894f2343127053d960a4d9d1de",
+    "model": "reflection/beam-1.0-501b-a23b",
+    "accounting": {
+      "id": "gen-1794343865-uEB1yKnzUVbtxWz1WgKG",
+      "provider": "Nebius",
+      "usage": {
+        "prompt_tokens": 659,
+        "completion_tokens": 3612,
+        "total_tokens": 4271,
+        "cost": 0.00377675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00377675,
+          "upstream_inference_prompt_cost": 0.00016475,
+          "upstream_inference_completions_cost": 0.003612
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2651,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 5.719542999999248
+}

@@ -1,0 +1,205 @@
+{
+  "case": "redevelopment",
+  "model": "tencent/hy4",
+  "provider": "tencent/fp4",
+  "output_cap": 8000,
+  "reasoning_effort": "none",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "description": "The document section identifies implementation goals framed as \"10 Triumphs in 10 Years\" for the Dayton Mall Area Master Plan.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "term",
+        "name": "10 Triumphs in 10 Years",
+        "target": ""
+      },
+      {
+        "description": "To make the Dayton Mall Area Master Plan a \"living\" plan that is used, implemented and leads to catalytic redevelopment of the area, stakeholder municipalities, private-sector partners and advocacy organizations will each have a role to play.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "stakeholder municipalities, private-sector partners and advocacy organizations will each have a role to play",
+        "target": ""
+      },
+      {
+        "description": "Strategically integrating physical, economic and social investments will create a critical mass of support needed to achieve the community's goals for the Mall Area.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "Strategically integrating physical, economic and social investments will create a critical mass of support needed to achieve the community's goals for the Mall Area",
+        "target": ""
+      },
+      {
+        "description": "The chapter identifies specific actions and strategies that can be taken to achieve ten major \"triumphs\" reflecting the goals of the Dayton Mall Area Master Plan.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "step",
+        "name": "identifies specific actions and strategies that can be taken to achieve ten major \"triumphs\"",
+        "target": ""
+      },
+      {
+        "description": "The goals are based on analysis, outreach, research and planning efforts presented in previous chapters of the plan.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "relationship",
+        "name": "are based on",
+        "target": "analysis, outreach, research and planning efforts presented in the previous chapters of this plan"
+      },
+      {
+        "description": "The goals will be catalysts for further transformation in the Mall Area.",
+        "entity": "goals",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "will be catalysts for further transformation in the Mall Area",
+        "target": ""
+      },
+      {
+        "description": "Local municipalities, businesses, developers, community organizations and other stakeholders will each have a role to play in transforming the mall area into a more accessible, welcoming and green place to live, work and play.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "rule",
+        "name": "Local municipalities, businesses, developers, community organizations and other stakeholders will each have a role to play",
+        "target": ""
+      },
+      {
+        "description": "The Implementation Matrix identifies actions that could be taken to achieve each goal, key partners that will need to collaborate, priority of each action and a proposed timeline of completion.",
+        "entity": "Implementation Matrix",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "identifies actions that could be taken to achieve each goal, the key partners that will need to collaborate to do so, the priority of each action and a proposed timeline of completion",
+        "target": ""
+      },
+      {
+        "description": "The Implementation Matrix follows this section.",
+        "entity": "Implementation Matrix",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "follows this section",
+        "target": ""
+      },
+      {
+        "description": "Three major triumphs for the Dayton Mall Area involve new development.",
+        "entity": "Three major triumphs for the Dayton Mall Area",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "involve new development",
+        "target": ""
+      },
+      {
+        "description": "New development is described as the design and construction of new buildings, streets and open spaces that begin to transform the entire district.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "term",
+        "name": "new development: the design and construction of new buildings, streets and open spaces that begin to transform the entire district",
+        "target": ""
+      },
+      {
+        "description": "Stakeholder municipalities, private-sector partners and advocacy organizations are distinct participant groups named for implementation roles.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "entity",
+        "name": "stakeholder municipalities, private-sector partners and advocacy organizations",
+        "target": ""
+      },
+      {
+        "description": "Local municipalities, businesses, developers, community organizations and other stakeholders are distinct participant groups named for roles in transforming the mall area.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "entity",
+        "name": "Local municipalities, businesses, developers, community organizations and other stakeholders",
+        "target": ""
+      },
+      {
+        "description": "The Dayton Mall Area Master Plan is the named plan whose implementation goals and goals are discussed.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "entity",
+        "name": "Dayton Mall Area Master Plan",
+        "target": ""
+      },
+      {
+        "description": "The Implementation Matrix is a named matrix that follows this section and identifies actions, key partners, priorities and proposed completion timelines.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "entity",
+        "name": "Implementation Matrix",
+        "target": ""
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 647,
+      "completion_tokens": 979,
+      "total_tokens": 1626
+    },
+    "seconds": 7.264,
+    "max_tokens": 8000,
+    "content_bytes": 4834,
+    "content_sha256": "ff4534e296269d91ccb4e59271e8c8f6a1521e86ddab3eaccb5c05beb4eb3ef8",
+    "model": "tencent/hy4",
+    "accounting": {
+      "id": "gen-1794343841-rXwyJRaKdvVz8ExUBg5I",
+      "provider": "Tencent",
+      "usage": {
+        "prompt_tokens": 647,
+        "completion_tokens": 979,
+        "total_tokens": 1626,
+        "cost": 0.0012659425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 576,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0012659425,
+          "upstream_inference_prompt_cost": 4.1703e-05,
+          "upstream_inference_completions_cost": 0.0012242395
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 7.264053667000553
+}

@@ -1,0 +1,17 @@
+{
+  "model": {
+    "id": "synthetic-fixture-not-a-model"
+  },
+  "provider_runtime": {
+    "id": "none"
+  },
+  "settings": {
+    "reasoning": "not_applicable"
+  },
+  "pipeline": {
+    "version": "fixture-1"
+  },
+  "environment": {
+    "id": "synthetic"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "case": "redevelopment",
+  "model": "nex-agi/nex-n2.6",
+  "provider": "nex-agi/fp8",
+  "output_cap": 8000,
+  "reasoning_effort": "medium",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "entity",
+        "name": "Dayton Mall Area Master Plan",
+        "description": "A master plan for the Dayton Mall Area intended to be a \"living\" plan that is used, implemented, and leads to catalytic redevelopment of the area.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "7.02 Implementation Goals",
+        "description": "Chapter 7.02, \"Implementation Goals,\" presents \"10 Triumphs in 10 Years\" and identifies specific actions and strategies to achieve ten major \"triumphs\" that reflect the goals of the Dayton Mall Area Master Plan.",
+        "entity": "Dayton Mall Area Master Plan",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "stakeholder municipalities, private-sector partners and advocacy organizations will each have a role to play",
+        "description": "To make the Dayton Mall Area Master Plan a \"living\" plan that is used, implemented and leads to catalytic redevelopment, stakeholder municipalities, private-sector partners and advocacy organizations will each have a role to play.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Strategically integrating physical, economic and social investments",
+        "description": "Strategically integrating physical, economic and social investments will create a critical mass of support needed to achieve the community's goals for the Mall Area.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "based on the analysis, outreach, research and planning efforts",
+        "description": "The plan's goals are based on the analysis, outreach, research and planning efforts presented in the previous chapters of the plan and are intended to be catalysts for further transformation in the Mall Area.",
+        "entity": "goals of the Dayton Mall Area Master Plan",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "Local municipalities, businesses, developers, community organizations and other stakeholders will each have a role to play",
+        "description": "These stakeholders will each have a role in transforming the mall area into a more accessible, welcoming and green place to live, work and play.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "Implementation Matrix",
+        "description": "A matrix that follows the Implementation Goals section; it identifies actions that could be taken to achieve each goal, the key partners that will need to collaborate, the priority of each action, and a proposed timeline of completion.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "attribute",
+        "name": "Three major triumphs for the Dayton Mall Area involve new development",
+        "description": "Under \"Unlocking Potential: Catalytic Development,\" three major triumphs involve new development: the design and construction of new buildings, streets and open spaces that begin to transform the entire district.",
+        "entity": "Dayton Mall Area Master Plan",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "The \"10 Years\" timeframe appears in the section heading \"10 Triumphs in 10 Years,\" but the body text does not explicitly state a ten-year deadline for achieving the triumphs.",
+      "Segment s1 ends mid-sentence (\"Local municipalities, bus\"), continuing in s2; the full sentence about local municipalities is reconstructed from the joined text."
+    ]
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 630,
+      "completion_tokens": 3209,
+      "total_tokens": 3839
+    },
+    "seconds": 28.523,
+    "max_tokens": 8000,
+    "content_bytes": 3727,
+    "content_sha256": "8c5179bb11b61bdbd83809a9e9556ba310bfaa0d21626ab366f2c1594cf13c10",
+    "model": "nex-agi/nex-n2.6",
+    "accounting": {
+      "id": "gen-1794343827-X9dhwahtZHfUwY9bv5Zg",
+      "provider": "Nex AGI",
+      "usage": {
+        "prompt_tokens": 630,
+        "completion_tokens": 3209,
+        "total_tokens": 3839,
+        "cost": 0.001310048,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001310048,
+          "upstream_inference_prompt_cost": 2.6448e-05,
+          "upstream_inference_completions_cost": 0.0012836
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2381,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 28.523288249998586
+}

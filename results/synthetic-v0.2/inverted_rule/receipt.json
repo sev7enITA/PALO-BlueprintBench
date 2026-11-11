@@ -1,0 +1,34 @@
+{
+  "task_id": "inverted_rule",
+  "repetition": 1,
+  "state": "fail",
+  "termination_reason": "completed",
+  "all_retry_costs_included": true,
+  "artifacts": [
+    {
+      "path": "inverted_rule/claims.json",
+      "sha256": "86b8350caa0b2c6bcc1f2f3deb72b3de5bd913b33e1d3f601e3830ce7e090cdb"
+    },
+    {
+      "path": "inverted_rule/raw.txt",
+      "sha256": "65e062f218628ef38dc28a1af0afe389045a09e87b9231e4dcfbc8b1884aa678"
+    }
+  ],
+  "claims_artifact": {
+    "path": "inverted_rule/claims.json",
+    "sha256": "86b8350caa0b2c6bcc1f2f3deb72b3de5bd913b33e1d3f601e3830ce7e090cdb"
+  },
+  "raw_output": {
+    "path": "inverted_rule/raw.txt",
+    "sha256": "65e062f218628ef38dc28a1af0afe389045a09e87b9231e4dcfbc8b1884aa678"
+  },
+  "non_claim_spans": [
+    {
+      "span": [
+        47,
+        48
+      ],
+      "reason": "newline separator"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "faithful",
+  "receipt_sha256": "86d7b31d92b5b4489ed46af533009439ed81d4e078809b657653f5ec0b8c5700",
+  "scope_complete": true,
+  "atomicity_reviewed": true,
+  "review_type": "synthetic",
+  "claims": [
+    {
+      "id": "c0",
+      "equivalence_id": "p0",
+      "verdict": "supported",
+      "matches_gold": [
+        "g1"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "critical_rationale": "No critical error",
+      "text_sha256": "ed5233b246309bac3babc861036fc79538e6f137204add8520ee233ecc0b48b6"
+    },
+    {
+      "id": "c1",
+      "equivalence_id": "p1",
+      "verdict": "supported",
+      "matches_gold": [
+        "g2"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "critical_rationale": "No critical error",
+      "text_sha256": "635de83790a80edd9425b75eae75d2b0792c2d72b087fbbd0fb5b703d155b892"
+    }
+  ]
+}

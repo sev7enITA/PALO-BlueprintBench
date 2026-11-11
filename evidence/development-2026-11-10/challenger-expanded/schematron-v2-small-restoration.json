@@ -1,0 +1,10 @@
+{
+  "case": "restoration",
+  "model": "inference-net/schematron-v2-small",
+  "provider": "inference-net/us",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "error": "Model reached the output limit (8000 tokens) for this batch. Partial output was discarded and completed batches are saved. Repeating the same request may fail again; the pipeline will try smaller requests within its recovery budget.",
+  "seconds": 22.40583058300399
+}

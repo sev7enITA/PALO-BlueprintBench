@@ -1,0 +1,23 @@
+{
+  "required_propositions": [
+    "g1",
+    "g2"
+  ],
+  "annotation_status": "synthetic",
+  "answerable": true,
+  "allowed_match_groups": [],
+  "allowed_alternatives": {},
+  "forbidden_inferences": [
+    "All purchases require owner approval"
+  ],
+  "critical_rule_ids": [
+    "g1",
+    "g2"
+  ],
+  "source_scope": "Synthetic purchase example, two propositions only",
+  "source_text": "Purchases above EUR 500 require owner approval. Purchases at or below EUR 500 may proceed without owner approval.",
+  "meaning": {
+    "g1": "Above EUR 500 requires owner approval",
+    "g2": "At or below EUR 500 permits proceeding without owner approval"
+  }
+}

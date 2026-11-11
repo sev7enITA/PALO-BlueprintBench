@@ -1,0 +1,33 @@
+{
+  "task_id": "inverted_rule",
+  "receipt_sha256": "42709fc243f6c33b569e63879c9fa3b2c9e2bb90a55da35d43f7a23d3265597a",
+  "scope_complete": true,
+  "atomicity_reviewed": true,
+  "review_type": "synthetic",
+  "claims": [
+    {
+      "id": "c0",
+      "equivalence_id": "p0",
+      "verdict": "supported",
+      "matches_gold": [
+        "g1"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "critical_rationale": "No critical error",
+      "text_sha256": "ed5233b246309bac3babc861036fc79538e6f137204add8520ee233ecc0b48b6"
+    },
+    {
+      "id": "c1",
+      "equivalence_id": "p1",
+      "verdict": "unsupported",
+      "matches_gold": [],
+      "critical": true,
+      "violated_gold": [
+        "g2"
+      ],
+      "critical_rationale": "Synthetic rule inversion",
+      "text_sha256": "d56699f10137830fc1137546a806618e67fb21516377ea3dcd32d7622f835558"
+    }
+  ]
+}

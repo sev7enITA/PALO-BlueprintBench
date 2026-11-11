@@ -2,6 +2,10 @@
 
 11 November 2026. Reviewed source: `66c6c5b`. This is an advisory static review and targeted evaluator reproduction, not independent benchmark validation or Workbench application qualification.
 
+## Implementation follow-up
+
+The findings below describe source `66c6c5b` and remain an immutable-in-meaning historical review. The subsequent [launch verification](launch-readiness.md) records evaluator 0.2 fixes, explicit trust boundaries and the raw-output replay archive. Consult that release report for current implementation status.
+
 ## Decision
 
 Concentrate the first empirical study on **specification fidelity in procurement**: critical changes to obligations, permissions, negation, ownership and exceptions, alongside required-fact coverage and measured human correction effort. The eight-dimensional programme remains a research roadmap. The [study RFC](specification-fidelity-study.md) does not adopt a score or claim a validated cohort.

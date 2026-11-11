@@ -1,0 +1,215 @@
+{
+  "case": "restoration",
+  "model": "tencent/hy4",
+  "provider": "tencent/fp4",
+  "output_cap": 8000,
+  "reasoning_effort": "none",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "description": "Document section titled Site Context, dated December 2016, page 47.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "entity",
+        "name": "BATON ROUGE LAKES",
+        "target": ""
+      },
+      {
+        "description": "The Lakes are primarily owned by Louisiana State University; City Park Lake and Lake Erie are stated as exceptions.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "step",
+        "name": "The Lakes are primarily owned by Louisiana State University",
+        "target": ""
+      },
+      {
+        "description": "City Park Lake is stated as an exception to primary Louisiana State University ownership and is owned by the City-Parish of Baton Rouge.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "relationship",
+        "name": "owned by",
+        "target": "City-Parish of Baton Rouge"
+      },
+      {
+        "description": "Lake Erie is stated as an exception to primary Louisiana State University ownership and is owned by the City-Parish of Baton Rouge.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "relationship",
+        "name": "owned by",
+        "target": "City-Parish of Baton Rouge"
+      },
+      {
+        "description": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC), which is not described as ownership.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "step",
+        "name": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "target": ""
+      },
+      {
+        "description": "Louisiana State University is a named owner of the Lakes, subject to the stated exceptions of City Park Lake and Lake Erie.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "entity",
+        "name": "Louisiana State University",
+        "target": ""
+      },
+      {
+        "description": "The City-Parish of Baton Rouge is the named owner of City Park Lake and Lake Erie.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "entity",
+        "name": "City-Parish of Baton Rouge",
+        "target": ""
+      },
+      {
+        "description": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC) manages park spaces within the study area.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "entity",
+        "name": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "target": ""
+      },
+      {
+        "description": "The text states that ownership may rest with only two entities.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "ownership may rest with only two entities",
+        "target": ""
+      },
+      {
+        "description": "Residents of neighborhoods that line the study area have a strong sense of implied ownership of the Lakes due to their immediate proximity.",
+        "entity": "",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "step",
+        "name": "residents of the neighborhoods that line the study area have a strong sense of implied ownership of the Lakes due to their immediate proximity",
+        "target": ""
+      },
+      {
+        "description": "Many residents have co-opted lake edges into \u201cprivate\u201d gardens, reserves, and boat launches.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "many residents have co-opted the lake edges into \u201cprivate\u201d gardens, reserves, and boat launches",
+        "target": ""
+      },
+      {
+        "description": "The additions of \u201cprivate\u201d gardens, reserves, and boat launches can create moments of charm and beauty that add to the cultural integrity of the Lakes.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "These additions can create moments of charm and beauty that add to the cultural integrity of the Lakes",
+        "target": ""
+      },
+      {
+        "description": "The additions can also create issues for lake operations and maintenance as well as adjacent property owners.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "they can also create issues for lake operations and maintenance as well as adjacent property owners",
+        "target": ""
+      },
+      {
+        "description": "This reality has been carefully considered throughout every phase of planning.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "This reality has been carefully considered throughout every phase of planning",
+        "target": ""
+      },
+      {
+        "description": "The master planning process made every effort to ensure that residents along the Lakes were engaged and that the sense of ownership is preserved in this Master Plan.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "step",
+        "name": "The master planning process made every effort to ensure that residents along the Lakes were engaged and that this sense of ownership is preserved in this Master Plan",
+        "target": ""
+      },
+      {
+        "description": "A legend includes the label Lake Ownership and an entry for LSU Owned Lake.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "term",
+        "name": "Lake Ownership / LSU Owned Lake",
+        "target": ""
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 780,
+      "completion_tokens": 985,
+      "total_tokens": 1765
+    },
+    "seconds": 7.596,
+    "max_tokens": 8000,
+    "content_bytes": 4389,
+    "content_sha256": "1104303c204f54082684320aaa6a37e34ff8bb7c379c90abc6ee27b1d42d3889",
+    "model": "tencent/hy4",
+    "accounting": {
+      "id": "gen-1794343833-LwuLEVQw1umkSIo7VVHB",
+      "provider": "Tencent",
+      "usage": {
+        "prompt_tokens": 780,
+        "completion_tokens": 985,
+        "total_tokens": 1765,
+        "cost": 0.0012782185,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0012782185,
+          "upstream_inference_prompt_cost": 4.6476e-05,
+          "upstream_inference_completions_cost": 0.0012317425
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 7.595967291999841
+}

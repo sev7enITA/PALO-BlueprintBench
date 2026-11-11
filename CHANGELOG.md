@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.3.0-pilot.1 · 11 November 2026
+
+- Released evidence contract/evaluator 0.2.0 with deduplicated critical errors, computed acceptance, raw-output provenance and explicit termination/registration states.
+- Added regression cases for the independently reported inconsistencies and copied-artifact verification in CI.
+- Published 26 retained development attempts, prompts, schemas, adapter/checker source and an offline replay matching the recorded structural counts.
+- Updated explorer 0.3.0, launch wording, configuration export and data-driven correction labels.
+- Opened the procurement specification-fidelity study for independent participation. No qualified ranking or app release is claimed.
+
+
 ## Documentation and semantics · 11 November 2026
 
 - Aligned the PALO homepage, Platform Map, changelog and semantic guides with BlueprintBench and PALO Blueprint Index.

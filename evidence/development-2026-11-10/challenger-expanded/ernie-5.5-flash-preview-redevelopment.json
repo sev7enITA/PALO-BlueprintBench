@@ -1,0 +1,190 @@
+{
+  "case": "redevelopment",
+  "model": "baidu/ernie-5.5-flash-preview",
+  "provider": "baidu",
+  "output_cap": 8000,
+  "reasoning_effort": "high",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "description": "The master plan's Implementation Goals section sets out how the plan will be used and implemented to lead to catalytic redevelopment of the Dayton Mall Area.",
+        "entity": "DAYTON MALL AREA MASTER PLAN",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "attribute",
+        "name": "Implementation Goals (Section 7.02)",
+        "target": ""
+      },
+      {
+        "description": "Chapter 7.02 identifies specific actions and strategies to achieve ten major goals (\u201ctriumphs\u201d) that reflect the Dayton Mall Area Master Plan\u2019s goals and serve as catalysts for further transformation in the Mall Area.",
+        "entity": "DAYTON MALL AREA MASTER PLAN",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "step",
+        "name": "identify specific actions and strategies to achieve ten major \u201ctriumphs\u201d",
+        "target": ""
+      },
+      {
+        "description": "Ten major \u201ctriumphs\u201d reflecting the master plan\u2019s goals, with a \u201c10 Triumphs in 10 Years\u201d label; they are based on prior analysis, outreach, research and planning and will catalyze further transformation in the Mall Area.",
+        "entity": "DAYTON MALL AREA MASTER PLAN",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "term",
+        "name": "10 Triumphs in 10 Years",
+        "target": ""
+      },
+      {
+        "description": "Stakeholder municipalities, private-sector partners and advocacy organizations will each have a role to make the plan a \u201cliving\u201d plan that is used and implemented and leads to catalytic redevelopment of the area.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "make the Dayton Mall Area Master Plan a \u201cliving\u201d plan that is used, implemented and leads to catalytic redevelopment of the area",
+        "target": ""
+      },
+      {
+        "description": "Stakeholder municipalities, private-sector partners and advocacy organizations will each have a role, alongside strategic integration of physical, economic and social investments to build the critical mass of support needed to achieve the community\u2019s goals for the Mall Area.",
+        "entity": "",
+        "evidence": [
+          "s1"
+        ],
+        "kind": "rule",
+        "name": "strategically integrating physical, economic and social investments will create a critical mass of support needed to achieve the community\u2019s goals for the Mall Area",
+        "target": ""
+      },
+      {
+        "description": "The transformation applies to the mall area, to be made more accessible, welcoming and green as a place to live, work and play.",
+        "entity": "Mall Area",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "more accessible, welcoming and green place to live, work and play",
+        "target": ""
+      },
+      {
+        "description": "Local municipalities, businesses, developers, community organizations and other stakeholders are named as each having a role in the mall area\u2019s transformation.",
+        "entity": "local municipalities, businesses, developers, community organizations and other stakeholders",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "role to play in the transformation of the mall area",
+        "target": "Mall Area"
+      },
+      {
+        "description": "A matrix following the Implementation Goals section that identifies actions to achieve each goal, the key partners that need to collaborate, the priority of each action and a proposed timeline of completion.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "entity",
+        "name": "Implementation Matrix",
+        "target": ""
+      },
+      {
+        "description": "Each action in the Implementation Matrix has a priority of each action recorded.",
+        "entity": "Implementation Matrix",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "priority of each action",
+        "target": ""
+      },
+      {
+        "description": "The Implementation Matrix gives a proposed (not finalized) timeline for completing each action.",
+        "entity": "Implementation Matrix",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "attribute",
+        "name": "proposed timeline of completion",
+        "target": ""
+      },
+      {
+        "description": "Catalytic Development (\u201cUnlocking Potential\u201d) comprises three major triumphs for the Dayton Mall Area that involve new development: the design and construction of new buildings, streets and open spaces beginning to transform the entire district.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "term",
+        "name": "Unlocking Potential: Catalytic Development",
+        "target": ""
+      },
+      {
+        "description": "Three major Dayton Mall Area triumphs involve the design and construction of new buildings, streets and open spaces that begin to transform the entire district.",
+        "entity": "",
+        "evidence": [
+          "s2"
+        ],
+        "kind": "rule",
+        "name": "three major triumphs for the Dayton Mall Area involve new development",
+        "target": ""
+      },
+      {
+        "description": "Within the Dayton Mall Area Master Plan, catalytic redevelopment is linked to the plan being implemented (\u201cliving\u201d plan) and to the master plan's ten triumphs.",
+        "entity": "Dayton Mall Area",
+        "evidence": [
+          "s1",
+          "s2"
+        ],
+        "kind": "relationship",
+        "name": "transformation of the mall area",
+        "target": "Dayton Mall Area Master Plan"
+      }
+    ],
+    "uncertainties": [
+      "The passage breaks off mid-sentence (\u201cLocal municipalities, bus\u201d), so the roles of some stakeholders, such as local municipalities, businesses, developers and community organizations, may continue in the missing text.",
+      "The text does not name the individual ten triumphs beyond the three new-development triumphs under \u201cUnlocking Potential: Catalytic Development.\u201d",
+      "Whether \u201cstakeholder municipalities\u201d is a defined term for the municipalities with a role is unclear; a later passage lists \u201cLocal municipalities\u201d separately as having a role in the transformation."
+    ]
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 639,
+      "completion_tokens": 2406,
+      "total_tokens": 3045
+    },
+    "seconds": 8.114,
+    "max_tokens": 8000,
+    "content_bytes": 5158,
+    "content_sha256": "e2b5e876f93d75106ed447b646a55995f4e6bb45060687187a4ae8ade2b9746d",
+    "model": "baidu/ernie-5.5-flash-preview",
+    "accounting": {
+      "id": "gen-1794343800-oKCfDTnefyrgbldzu6dF",
+      "provider": "Baidu",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 2406,
+        "total_tokens": 3045,
+        "cost": 0.002833188,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002833188,
+          "upstream_inference_prompt_cost": 0.000114408,
+          "upstream_inference_completions_cost": 0.00271878
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1389,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 8.114424291001342
+}

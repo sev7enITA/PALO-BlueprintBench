@@ -1,0 +1,10 @@
+{
+  "case": "maintenance",
+  "model": "baidu/ernie-5.5-flash-preview",
+  "provider": "baidu",
+  "output_cap": 8000,
+  "reasoning_effort": "high",
+  "scope": "Single frozen public passage, not full repository",
+  "error": "Model reached the output limit (8000 tokens) for this batch. Partial output was discarded and completed batches are saved. Repeating the same request may fail again; the pipeline will try smaller requests within its recovery budget.",
+  "seconds": 24.60358270800498
+}

@@ -1,0 +1,134 @@
+{
+  "case": "restoration",
+  "model": "prism-ml/ternary-bonsai-2-9b",
+  "provider": "darkbloom/int4",
+  "output_cap": 8000,
+  "reasoning_effort": "provider default",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "relationship",
+        "name": "Lake ownership",
+        "description": "The Lakes are primarily owned by Louisiana State University",
+        "entity": "Louisiana State University",
+        "target": "The Lakes",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "City Park Lake ownership",
+        "description": "City Park Lake is owned by the City-Parish of Baton Rouge",
+        "entity": "City-Parish of Baton Rouge",
+        "target": "City Park Lake",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "Lake Erie ownership",
+        "description": "Lake Erie is owned by the City-Parish of Baton Rouge",
+        "entity": "City-Parish of Baton Rouge",
+        "target": "Lake Erie",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "Park space management",
+        "description": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "entity": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "target": "Park spaces",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "Master Plan preservation",
+        "description": "this sense of ownership is preserved in this Master Plan",
+        "entity": "this Master Plan",
+        "target": "sense of ownership",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "implied ownership",
+        "description": "strong sense of implied ownership of the Lakes due to their immediate proximity",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "co-opted edges",
+        "description": "residents have co-opted the lake edges into \"private\" gardens, reserves, and boat launches",
+        "entity": "residents",
+        "target": "lake edges",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "rule",
+        "name": "planning consideration",
+        "description": "This reality has been carefully considered throughout every phase of planning",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 945,
+      "completion_tokens": 7075,
+      "total_tokens": 8020
+    },
+    "seconds": 108.524,
+    "max_tokens": 8000,
+    "content_bytes": 2367,
+    "content_sha256": "d0d0abd7f0aa31b6ca6cc2fcc03e82b5a4991d908ac06463282dcdfbf10157a3",
+    "model": "prism-ml/ternary-bonsai-2-9b",
+    "accounting": {
+      "id": "gen-1794343871-uxQMo1jRbjus0xpHosoq",
+      "provider": "Darkbloom",
+      "usage": {
+        "prompt_tokens": 945,
+        "completion_tokens": 7075,
+        "total_tokens": 8020,
+        "cost": 0.00099535,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00099535,
+          "upstream_inference_prompt_cost": 7.56e-05,
+          "upstream_inference_completions_cost": 0.00091975
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6401,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 108.52369616700162
+}

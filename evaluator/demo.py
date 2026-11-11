@@ -9,8 +9,29 @@ import blueprintbench as bb
 def put(root, name, value):
     path = Path(root) / name
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2) + "\n")
+    path.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
     return {"path": name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+
+
+def put_text(root, name, text):
+    path = Path(root) / name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    return {"path": name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+
+
+def bind_output(root, name, emitted):
+    """Synthetic decomposition with exact code-point spans, including separators."""
+    text = ""
+    non_claim = []
+    for claim in emitted:
+        if text:
+            non_claim.append({"span": [len(text), len(text) + 1], "reason": "newline separator"})
+            text += "\n"
+        claim["span"] = [len(text), len(text) + len(claim["text"])]
+        text += claim["text"]
+    return (put(root, f"{name}/claims.json", emitted),
+            put_text(root, f"{name}/raw.txt", text), non_claim)
 
 
 def make(root):
@@ -27,6 +48,8 @@ def make(root):
                                   ("empty", "abstain", [])]:
         gold = put(root, f"{name}/gold.json", {
             "required_propositions": ["g1", "g2"], "annotation_status": "synthetic",
+            "answerable": True, "allowed_match_groups": [], "allowed_alternatives": {},
+            "forbidden_inferences": ["All purchases require owner approval"], "critical_rule_ids": ["g1", "g2"],
             "source_scope": "Synthetic purchase example, two propositions only",
             "source_text": "Purchases above EUR 500 require owner approval. Purchases at or below EUR 500 may proceed without owner approval.",
             "meaning": {"g1": "Above EUR 500 requires owner approval", "g2": "At or below EUR 500 permits proceeding without owner approval"}})
@@ -36,21 +59,26 @@ def make(root):
                    "g2": "Purchases at or below EUR 500 may proceed without owner approval."}
         emitted = [{"id": f"c{i}", "text": (meaning[m] if m else "All purchases must have owner approval")}
                    for i, m in enumerate(matches)]
-        claims_ref = put(root, f"{name}/claims.json", emitted)
+        claims_ref, raw_ref, non_claim = bind_output(root, name, emitted)
         receipt = put(root, f"{name}/receipt.json", {
-            "task_id": name, "repetition": 1, "state": state,
-            "all_retry_costs_included": True, "artifacts": [claims_ref], "claims_artifact": claims_ref})
+            "task_id": name, "repetition": 1, "state": state, "termination_reason": "completed",
+            "all_retry_costs_included": True, "artifacts": [claims_ref, raw_ref], "claims_artifact": claims_ref,
+            "raw_output": raw_ref, "non_claim_spans": non_claim})
         annotation = put(root, f"{name}/annotation.json", {
-            "task_id": name, "receipt_sha256": receipt["sha256"], "scope_complete": True,
+            "task_id": name, "receipt_sha256": receipt["sha256"], "scope_complete": True, "atomicity_reviewed": True,
             "review_type": "synthetic", "claims": [
                 {"id": f"c{i}", "equivalence_id": f"p{i}", "verdict": "supported" if m else "unsupported",
-                 "matches_gold": [m] if m else [], "critical": m is None}
+                 "matches_gold": [m] if m else [], "critical": m is None,
+                 "violated_gold": [] if m else ["g2"],
+                 "critical_rationale": "Synthetic rule inversion" if m is None else "No critical error",
+                 "text_sha256": hashlib.sha256(emitted[i]["text"].encode("utf-8")).hexdigest()}
                 for i, m in enumerate(matches)]})
         attempts.append({"task_id": name, "repetition": 1, "state": state, "elapsed_seconds": 0,
                          "cost": {"status": "not_incurred", "usd": 0, "reason": "Synthetic fixture, no inference"},
                          "receipt": receipt, "annotation": annotation})
     campaign = {"id": "synthetic-evaluator-conformance", "benchmark_version": bb.VERSION,
                 "split": "synthetic", "track": "interpretation", "repetitions": 1,
+                "success_policy": {"minimum_precision": 1, "minimum_recall": 1, "maximum_critical_errors": 0},
                 "subjects": [{"id": "fixture", "configuration": config}], "tasks": tasks}
     lock = bb.freeze(campaign, root)
     now = dt.datetime.now(dt.timezone.utc).isoformat()

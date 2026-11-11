@@ -1,0 +1,145 @@
+{
+  "case": "restoration",
+  "model": "nex-agi/nex-n2.6",
+  "provider": "nex-agi/fp8",
+  "output_cap": 8000,
+  "reasoning_effort": "medium",
+  "scope": "Single frozen public passage, not full repository",
+  "output": {
+    "claims": [
+      {
+        "kind": "attribute",
+        "name": "1.0 Site Context December 2016",
+        "description": "The Site Context section (page 47) is dated December 2016.",
+        "entity": "1.0 Site Context",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "entity",
+        "name": "The Lakes",
+        "description": "The Baton Rouge Lakes are the subject of the site context; they are primarily owned by Louisiana State University, with City Park Lake and Lake Erie as exceptions.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "The Lakes are primarily owned by Louisiana State University",
+        "description": "Primary ownership of The Lakes rests with Louisiana State University.",
+        "entity": "The Lakes",
+        "target": "Louisiana State University",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "City Park Lake and Lake Erie, which is owned by the City-Parish of Baton Rouge",
+        "description": "Exception to LSU ownership: City Park Lake and Lake Erie are owned by the City-Parish of Baton Rouge.",
+        "entity": "City Park Lake and Lake Erie",
+        "target": "City-Parish of Baton Rouge",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "Park spaces within the study area are managed by The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "description": "Management (not ownership) of park spaces within the study area is handled by BREC, the Recreation and Park Commission for the Parish of East Baton Rouge.",
+        "entity": "Park spaces within the study area",
+        "target": "The Recreation and Park Commission for the Parish of East Baton Rouge (BREC)",
+        "evidence": [
+          "s1"
+        ]
+      },
+      {
+        "kind": "relationship",
+        "name": "strong sense of implied ownership of the Lakes",
+        "description": "Residents of the neighborhoods lining the study area have a strong sense of implied ownership of the Lakes due to their immediate proximity; this is a perceived sense of ownership, not legal title.",
+        "entity": "residents of the neighborhoods that line the study area",
+        "target": "the Lakes",
+        "evidence": [
+          "s1",
+          "s2"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "many res-idents have co-opted the lake edges into \u201cprivate\u201d gar-dens, reserves, and boat launches",
+        "description": "Many residents have co-opted lake edges into \u201cprivate\u201d gardens, reserves, and boat launches. These additions can add charm, beauty, and cultural integrity, but can also create issues for lake operations and maintenance as well as for adjacent property owners.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "step",
+        "name": "The master planning process made every effort to ensure that residents along the Lakes were engaged",
+        "description": "The master planning process made every effort to engage residents along the Lakes and to preserve their sense of ownership in the Master Plan.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      },
+      {
+        "kind": "term",
+        "name": "LSU Owned Lake",
+        "description": "Legend category shown under \u201cLake Ownership\u201d on the map, denoting lakes owned by LSU.",
+        "entity": "",
+        "target": "",
+        "evidence": [
+          "s2"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "metric": {
+    "finish_reason": "stop",
+    "tokens": {
+      "prompt_tokens": 753,
+      "completion_tokens": 3289,
+      "total_tokens": 4042
+    },
+    "seconds": 29.904,
+    "max_tokens": 8000,
+    "content_bytes": 2915,
+    "content_sha256": "50c2edfdf90bf6e5db719d28fc1a570a5d54be1e009f3b7037e5da66f04ea0c1",
+    "model": "nex-agi/nex-n2.6",
+    "accounting": {
+      "id": "gen-1794343797-9rpiFCf7i6nQmMueLfAl",
+      "provider": "Nex AGI",
+      "usage": {
+        "prompt_tokens": 753,
+        "completion_tokens": 3289,
+        "total_tokens": 4042,
+        "cost": 0.001356808,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001356808,
+          "upstream_inference_prompt_cost": 4.1208e-05,
+          "upstream_inference_completions_cost": 0.0013156
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2674,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "seconds": 29.903913834001287
+}

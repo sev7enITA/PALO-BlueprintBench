@@ -1,0 +1,7 @@
+{
+  "mode": "offline checker replay; no inference",
+  "recorded_attempts": 26,
+  "replayed_attempts": 26,
+  "differences": [],
+  "counts_match": true
+}

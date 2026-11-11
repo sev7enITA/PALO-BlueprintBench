@@ -1,0 +1,10 @@
+{
+  "case": "restoration",
+  "model": "sakana/fugu-max",
+  "provider": "sakana",
+  "output_cap": 8000,
+  "reasoning_effort": "high",
+  "scope": "Single frozen public passage, not full repository",
+  "error": "Model endpoint returned HTTP 404; no fallback was attempted",
+  "seconds": 0.13567820900061633
+}
