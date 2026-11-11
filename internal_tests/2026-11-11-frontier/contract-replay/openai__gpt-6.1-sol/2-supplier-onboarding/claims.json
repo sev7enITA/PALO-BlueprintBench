@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: A new supplier must complete identity verification before its first purchase order.",
+    "span": [
+      0,
+      90
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: The Compliance officer performs identity verification; the buyer does not perform it.",
+    "span": [
+      91,
+      183
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For a low-risk supplier, Compliance may request a site visit but is not obliged to request one.",
+    "span": [
+      184,
+      286
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A high-risk supplier must undergo an enhanced review.",
+    "span": [
+      287,
+      347
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "span": [
+      348,
+      467
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The renewal exemption does not apply when the supplier changes its legal name.",
+    "span": [
+      468,
+      553
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: A buyer must not activate a supplier flagged as blocked.",
+    "span": [
+      554,
+      617
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: A risk score of 70 or more is classified as high risk.",
+    "span": [
+      618,
+      679
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: Risk scores below 70 are classified as low risk.",
+    "span": [
+      680,
+      735
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: Approval expires 365 calendar days after its approval date.",
+    "span": [
+      736,
+      802
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+    "span": [
+      803,
+      913
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: Two supplier records may share a contact email address; the email address is not unique.",
+    "span": [
+      914,
+      1009
+    ]
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "required_propositions": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "meaning": {
+    "R01": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+    "R02": "An invoice variance of exactly EUR 10 is within tolerance.",
+    "R03": "An invoice variance above EUR 10 blocks automatic payment.",
+    "R04": "For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.",
+    "R05": "Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.",
+    "R06": "The person who changed supplier bank details must not approve payment to those details.",
+    "R07": "For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+    "R08": "Service acceptance does not replace the purchase-order requirement.",
+    "R09": "A dispute freezes the payment clock until the dispute is resolved.",
+    "R10": "After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.",
+    "R11": "An invoice number is unique only within a supplier; different suppliers may reuse the same number.",
+    "R12": "The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices."
+  },
+  "annotation_status": "assistant_draft",
+  "answerable": true,
+  "allowed_match_groups": [],
+  "allowed_alternatives": {},
+  "forbidden_inferences": [
+    {
+      "id": "P004",
+      "text": "A service invoice with service acceptance does not need a purchase order.",
+      "violated_gold": [
+        "R08"
+      ]
+    },
+    {
+      "id": "P011",
+      "text": "An analyst must request a corrected invoice for every blocked invoice.",
+      "violated_gold": [
+        "R04"
+      ]
+    },
+    {
+      "id": "P013",
+      "text": "Resolution restarts the payment clock at zero.",
+      "violated_gold": [
+        "R10"
+      ]
+    },
+    {
+      "id": "P014",
+      "text": "An invoice can be paid automatically when no receipt record exists.",
+      "violated_gold": [
+        "R01"
+      ]
+    },
+    {
+      "id": "P015",
+      "text": "The bank-details editor may approve payment to the edited details.",
+      "violated_gold": [
+        "R06"
+      ]
+    },
+    {
+      "id": "P019",
+      "text": "Invoice numbers are globally unique across all suppliers.",
+      "violated_gold": [
+        "R11"
+      ]
+    },
+    {
+      "id": "P020",
+      "text": "A variance of exactly EUR 10 is outside tolerance.",
+      "violated_gold": [
+        "R02"
+      ]
+    },
+    {
+      "id": "P022",
+      "text": "Accounts Payable may record goods receipt.",
+      "violated_gold": [
+        "R05"
+      ]
+    },
+    {
+      "id": "P024",
+      "text": "A service invoice always needs a goods receipt even with authorised service acceptance.",
+      "violated_gold": [
+        "R07"
+      ]
+    },
+    {
+      "id": "P027",
+      "text": "A variance of EUR 11 permits automatic payment.",
+      "violated_gold": [
+        "R03"
+      ]
+    },
+    {
+      "id": "P033",
+      "text": "The payment clock continues to run during a dispute.",
+      "violated_gold": [
+        "R09"
+      ]
+    },
+    {
+      "id": "P034",
+      "text": "Apply tolerance to the monthly sum instead of each invoice.",
+      "violated_gold": [
+        "R12"
+      ]
+    }
+  ],
+  "critical_rule_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "source_scope": "All 12 explicitly numbered synthetic rules. All are treated as critical controls in this internal replay; not a validated severity rubric.",
+  "source_text": "R01 An invoice requires both an existing purchase order and a receipt record before automatic payment.\nR02 An invoice variance of exactly EUR 10 is within tolerance.\nR03 An invoice variance above EUR 10 blocks automatic payment.\nR04 For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.\nR05 Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.\nR06 The person who changed supplier bank details must not approve payment to those details.\nR07 For a service invoice, an authorised service acceptance replaces the goods receipt record.\nR08 Service acceptance does not replace the purchase-order requirement.\nR09 A dispute freezes the payment clock until the dispute is resolved.\nR10 After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.\nR11 An invoice number is unique only within a supplier; different suppliers may reuse the same number.\nR12 The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices."
+}

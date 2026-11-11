@@ -1,0 +1,96 @@
+{
+  "status": "internal_draft_requires_business_review",
+  "qualified": false,
+  "model": "google/gemini-4-argon",
+  "case": "supplier-onboarding",
+  "repetition": 3,
+  "source_family": "maintainer-authored-synthetic-procurement-v1",
+  "origin": "Source-indexed translation test, not Workbench application end-to-end execution",
+  "inference_record_id": "3-supplier-onboarding-translation-google__gemini-4-argon",
+  "rules": [
+    {
+      "id": "R01",
+      "proposed_specification": "A new supplier must complete identity verification before its first purchase order.",
+      "source_text": "A new supplier must complete identity verification before its first purchase order.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R02",
+      "proposed_specification": "The Compliance officer performs identity verification, and the buyer does not perform identity verification.",
+      "source_text": "The Compliance officer performs identity verification; the buyer does not perform it.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R03",
+      "proposed_specification": "For a low-risk supplier, Compliance may request a site visit but is not obliged to request a site visit.",
+      "source_text": "For a low-risk supplier, Compliance may request a site visit but is not obliged to request one.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R04",
+      "proposed_specification": "A high-risk supplier must undergo an enhanced review.",
+      "source_text": "A high-risk supplier must undergo an enhanced review.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R05",
+      "proposed_specification": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+      "source_text": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R06",
+      "proposed_specification": "The renewal exemption does not apply when the supplier changes its legal name.",
+      "source_text": "The renewal exemption does not apply when the supplier changes its legal name.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R07",
+      "proposed_specification": "A buyer must not activate a supplier flagged as blocked.",
+      "source_text": "A buyer must not activate a supplier flagged as blocked.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R08",
+      "proposed_specification": "A risk score of 70 or more is classified as high risk.",
+      "source_text": "A risk score of 70 or more is classified as high risk.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R09",
+      "proposed_specification": "Risk scores below 70 are classified as low risk.",
+      "source_text": "Risk scores below 70 are classified as low risk.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R10",
+      "proposed_specification": "Approval expires 365 calendar days after its approval date.",
+      "source_text": "Approval expires 365 calendar days after its approval date.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R11",
+      "proposed_specification": "Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+      "source_text": "Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R12",
+      "proposed_specification": "Two supplier records may share a contact email address, and the email address is not unique.",
+      "source_text": "Two supplier records may share a contact email address; the email address is not unique.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "task_id": "purchase-approval",
+  "receipt_sha256": "3fde05de8af10400176cd71f25ed1c4989844e8cc9bd1c8289794b3a29d2aa1c",
+  "scope_complete": true,
+  "atomicity_reviewed": true,
+  "review_type": "assistant_draft",
+  "claims": [
+    {
+      "id": "c1",
+      "equivalence_id": "purchase-approval:R01",
+      "verdict": "supported",
+      "matches_gold": [
+        "R01"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "b4ea8d05d6af710626fc7dd69889085e9b8eed18544a36118e22079d6d48bc6e"
+    },
+    {
+      "id": "c2",
+      "equivalence_id": "purchase-approval:R02",
+      "verdict": "supported",
+      "matches_gold": [
+        "R02"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "18d00162a95ed950db2499049a05db1445a7e9656d3790f0ba127af9e7446f2f"
+    },
+    {
+      "id": "c3",
+      "equivalence_id": "purchase-approval:R03",
+      "verdict": "supported",
+      "matches_gold": [
+        "R03"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "2be76c6f381acd790e6b1c6518c201058438af2fbcd74f9628271f4d546593cf"
+    },
+    {
+      "id": "c4",
+      "equivalence_id": "purchase-approval:R04",
+      "verdict": "supported",
+      "matches_gold": [
+        "R04"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "dee5958f5df319279f147490c3070627896144d6de9f3230b22de99101c551ae"
+    },
+    {
+      "id": "c5",
+      "equivalence_id": "purchase-approval:R05",
+      "verdict": "supported",
+      "matches_gold": [
+        "R05"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "16ca3378ae1bdafeaceb86455de6e607eec0460ee1ec10f5a3140533fcb4d966"
+    },
+    {
+      "id": "c6",
+      "equivalence_id": "purchase-approval:R06",
+      "verdict": "supported",
+      "matches_gold": [
+        "R06"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "0a6e075994cc2226ff924d22fc69f2c1dfb1419c8a2402e6ad2f8feb718512c1"
+    },
+    {
+      "id": "c7",
+      "equivalence_id": "purchase-approval:R07",
+      "verdict": "supported",
+      "matches_gold": [
+        "R07"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "73d5972594995e90396a47da5615ed06ad059433f3612353343c42fc99c399c4"
+    },
+    {
+      "id": "c8",
+      "equivalence_id": "purchase-approval:R08",
+      "verdict": "supported",
+      "matches_gold": [
+        "R08"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "22c8b4a8b54360ef3921b546947531e03ee6ed9119b32717c7ee5d185d7cd9ae"
+    },
+    {
+      "id": "c9",
+      "equivalence_id": "purchase-approval:R09",
+      "verdict": "supported",
+      "matches_gold": [
+        "R09"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "6622aa91a6fb5fcacaef3a9b05d03fda12858f7c6ca4f4416b6c531567512780"
+    },
+    {
+      "id": "c10",
+      "equivalence_id": "purchase-approval:R10",
+      "verdict": "supported",
+      "matches_gold": [
+        "R10"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "fc58ceee26f45848be50664f8eb0dec263a78b5ceeeb754cec4cef28205a28ca"
+    },
+    {
+      "id": "c11",
+      "equivalence_id": "purchase-approval:R11",
+      "verdict": "supported",
+      "matches_gold": [
+        "R11"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "984679770dc615eb485982a70bd23d08233221de17c28e97de207b09b10994f1"
+    },
+    {
+      "id": "c12",
+      "equivalence_id": "purchase-approval:R12",
+      "verdict": "supported",
+      "matches_gold": [
+        "R12"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "e695784364b8dd4484f1213f2937225cd02573cce47bc906a2f6ec48cde3f185"
+    }
+  ]
+}

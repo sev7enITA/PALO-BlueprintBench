@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: A purchase above EUR 5,000 is required to receive Finance approval before the purchase order is issued.",
+    "span": [
+      0,
+      110
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: For a purchase of exactly EUR 5,000, Finance approval is not required.",
+    "span": [
+      111,
+      188
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For a purchase below EUR 5,000, the department manager is permitted to approve the purchase but is not obliged to approve it.",
+    "span": [
+      189,
+      321
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A requester is prohibited from ever approving their own purchase request.",
+    "span": [
+      322,
+      402
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: An emergency purchase is exempt from the requirement to obtain competitive quotations.",
+    "span": [
+      403,
+      496
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The emergency quotation exemption does not remove the requirement for Finance approval for a purchase above EUR 5,000.",
+    "span": [
+      497,
+      622
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: Only the Head of Finance is permitted to provide Finance approval, and the buyer is prohibited from providing Finance approval.",
+    "span": [
+      623,
+      757
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: If a requester cancels a request before approval, that requester is required to record the cancellation reason.",
+    "span": [
+      758,
+      876
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: Approval records are required to be retained for at least 30 calendar days and are prohibited from being deleted earlier than 30 calendar days.",
+    "span": [
+      877,
+      1027
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: The purchase threshold applies separately to each individual request and does not apply to the monthly total for a supplier.",
+    "span": [
+      1028,
+      1159
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: Different suppliers are permitted to share the same supplier name, and the supplier name is not a unique identifier.",
+    "span": [
+      1160,
+      1283
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: The retention period begins on the approval date and does not begin on the purchase-order date.",
+    "span": [
+      1284,
+      1386
+    ]
+  }
+]

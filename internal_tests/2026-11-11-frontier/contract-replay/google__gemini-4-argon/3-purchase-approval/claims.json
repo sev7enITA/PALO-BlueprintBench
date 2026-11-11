@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+    "span": [
+      0,
+      100
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: For a purchase of exactly EUR 5,000, Finance approval is not required.",
+    "span": [
+      101,
+      178
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For a purchase below EUR 5,000, the department manager is permitted to approve it but is not obliged to approve it.",
+    "span": [
+      179,
+      301
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A requester must never approve their own purchase request.",
+    "span": [
+      302,
+      367
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: An emergency purchase is exempt from obtaining competitive quotations.",
+    "span": [
+      368,
+      445
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The emergency quotation exemption does not remove the Finance approval requirement for a purchase above EUR 5,000.",
+    "span": [
+      446,
+      567
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: Only the Head of Finance can provide the Finance approval, and the buyer cannot provide the Finance approval.",
+    "span": [
+      568,
+      684
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: If a requester cancels a request before approval, that requester must record the cancellation reason.",
+    "span": [
+      685,
+      793
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: Approval records must be retained for at least 30 calendar days and cannot be deleted earlier than 30 calendar days.",
+    "span": [
+      794,
+      917
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: The purchase threshold applies separately to each request and does not apply to the monthly total for a supplier.",
+    "span": [
+      918,
+      1038
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: Different suppliers may have the same supplier name, and the supplier name is not a unique identifier.",
+    "span": [
+      1039,
+      1148
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: The retention period begins on the approval date and does not begin on the purchase-order date.",
+    "span": [
+      1149,
+      1251
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+R01 :: An invoice is eligible for automatic payment only if both an existing purchase order and a receipt record exist for it.
+R02 :: If an invoice's variance equals exactly EUR 10, the variance is within tolerance.
+R03 :: If an invoice's variance is greater than EUR 10, automatic payment of that invoice is blocked.
+R04 :: For a blocked invoice, an Accounts Payable analyst is permitted, but not obligated, to request a corrected invoice.
+R05 :: Goods receipt may be recorded only by the receiving team, and Accounts Payable is prohibited from recording goods receipt.
+R06 :: A person who changed a supplier's bank details is prohibited from approving any payment to those changed bank details.
+R07 :: For a service invoice, an authorised service acceptance substitutes for the goods receipt record.
+R08 :: A service acceptance does not substitute for the purchase-order requirement, so the purchase order remains required.
+R09 :: While a dispute is unresolved, the payment clock is frozen, and it remains frozen until the dispute is resolved.
+R10 :: After a dispute is resolved, the payment clock resumes from the value at which it was paused and does not restart at zero.
+R11 :: An invoice number must be unique within a single supplier, and the same invoice number may be used by different suppliers.
+R12 :: Tolerance is assessed separately for each individual invoice and is not assessed against the monthly total of a supplier's invoices.

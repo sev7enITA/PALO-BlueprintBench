@@ -1,0 +1,96 @@
+{
+  "status": "internal_draft_requires_business_review",
+  "qualified": false,
+  "model": "google/gemini-4-argon",
+  "case": "purchase-approval",
+  "repetition": 2,
+  "source_family": "maintainer-authored-synthetic-procurement-v1",
+  "origin": "Source-indexed translation test, not Workbench application end-to-end execution",
+  "inference_record_id": "2-purchase-approval-translation-google__gemini-4-argon",
+  "rules": [
+    {
+      "id": "R01",
+      "proposed_specification": "A purchase above EUR 5,000 is obligated to receive Finance approval before the purchase order is issued.",
+      "source_text": "A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R02",
+      "proposed_specification": "For a purchase of exactly EUR 5,000, Finance approval is not required.",
+      "source_text": "For a purchase of exactly EUR 5,000, Finance approval is not required.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R03",
+      "proposed_specification": "For a purchase below EUR 5,000, the department manager is permitted to approve the purchase but is not obliged to approve it.",
+      "source_text": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R04",
+      "proposed_specification": "A requester is prohibited from ever approving their own purchase request.",
+      "source_text": "A requester must never approve their own purchase request.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R05",
+      "proposed_specification": "An emergency purchase is exempt from obtaining competitive quotations.",
+      "source_text": "An emergency purchase is exempt from obtaining competitive quotations.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R06",
+      "proposed_specification": "The emergency quotation exemption does not remove the Finance approval requirement for a purchase above EUR 5,000.",
+      "source_text": "The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R07",
+      "proposed_specification": "Exclusively the Head of Finance can provide the Finance approval, and the buyer is prohibited from providing it.",
+      "source_text": "Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R08",
+      "proposed_specification": "If a requester cancels a request before approval, that requester is obligated to record the cancellation reason.",
+      "source_text": "If a requester cancels a request before approval, that requester must record the cancellation reason.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R09",
+      "proposed_specification": "Approval records are obligated to be retained for at least 30 calendar days and cannot be deleted earlier than 30 calendar days.",
+      "source_text": "Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R10",
+      "proposed_specification": "The purchase threshold applies separately to each request and does not apply to the monthly total for a supplier.",
+      "source_text": "The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R11",
+      "proposed_specification": "Different suppliers may have the same supplier name, and the supplier name is not a unique identifier.",
+      "source_text": "Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R12",
+      "proposed_specification": "The retention period begins on the approval date and does not begin on the purchase-order date.",
+      "source_text": "The retention period begins on the approval date, not the purchase-order date.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    }
+  ]
+}

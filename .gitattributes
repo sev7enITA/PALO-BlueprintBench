@@ -9,3 +9,6 @@ results/** -text
 *.jpg binary
 *.jpeg binary
 *.pdf binary
+
+# Frozen inference bytes and internal replay evidence must survive checkout unchanged.
+internal_tests/** -text

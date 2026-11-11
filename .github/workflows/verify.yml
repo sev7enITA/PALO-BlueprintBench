@@ -38,3 +38,8 @@ jobs:
         run: python evidence/development-2026-11-10/replay.py
       - name: Verify wiki navigation and README links
         run: python tools/check_wiki.py
+      - name: Verify internal baseline analysis and replay
+        run: |
+          python -m unittest discover -s internal_tests/2026-11-11-frontier -p 'test_*.py'
+          python tools/build_internal_tests.py --check
+          python internal_tests/2026-11-11-frontier/replay_translation.py "$RUNNER_TEMP/internal-baseline-replay"

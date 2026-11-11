@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: A new supplier must complete identity verification before its first purchase order.",
+    "span": [
+      0,
+      90
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: The Compliance officer performs identity verification, and the buyer does not perform identity verification.",
+    "span": [
+      91,
+      206
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For a low-risk supplier, Compliance is permitted to request a site visit but is not obliged to request one.",
+    "span": [
+      207,
+      321
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A high-risk supplier must undergo an enhanced review.",
+    "span": [
+      322,
+      382
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "span": [
+      383,
+      502
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The renewal exemption does not apply when the supplier changes its legal name.",
+    "span": [
+      503,
+      588
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: A buyer must not activate a supplier flagged as blocked.",
+    "span": [
+      589,
+      652
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: A risk score of 70 or more is classified as high risk.",
+    "span": [
+      653,
+      714
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: Risk scores below 70 are classified as low risk.",
+    "span": [
+      715,
+      770
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: Approval expires 365 calendar days after its approval date.",
+    "span": [
+      771,
+      837
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+    "span": [
+      838,
+      948
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: Two supplier records may share a contact email address, and the contact email address is not unique.",
+    "span": [
+      949,
+      1056
+    ]
+  }
+]

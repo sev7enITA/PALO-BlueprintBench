@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "blocker": null,
+  "assigned_calls": 54,
+  "recorded_calls": 54,
+  "not_run": 0,
+  "provider_reported_cost_usd": 0.8305669,
+  "unknown_costs": 1,
+  "qualified": false,
+  "label": "internal_tests"
+}

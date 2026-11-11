@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: An invoice is eligible for automatic payment only if both an existing purchase order and a receipt record exist for it.",
+    "span": [
+      0,
+      126
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: If an invoice's variance equals exactly EUR 10, the variance is within tolerance.",
+    "span": [
+      127,
+      215
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: If an invoice's variance is greater than EUR 10, automatic payment of that invoice is blocked.",
+    "span": [
+      216,
+      317
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: For a blocked invoice, an Accounts Payable analyst is permitted, but not obligated, to request a corrected invoice.",
+    "span": [
+      318,
+      440
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: Goods receipt may be recorded only by the receiving team, and Accounts Payable is prohibited from recording goods receipt.",
+    "span": [
+      441,
+      570
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: A person who changed a supplier's bank details is prohibited from approving any payment to those changed bank details.",
+    "span": [
+      571,
+      696
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: For a service invoice, an authorised service acceptance substitutes for the goods receipt record.",
+    "span": [
+      697,
+      801
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: A service acceptance does not substitute for the purchase-order requirement, so the purchase order remains required.",
+    "span": [
+      802,
+      925
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: While a dispute is unresolved, the payment clock is frozen, and it remains frozen until the dispute is resolved.",
+    "span": [
+      926,
+      1045
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: After a dispute is resolved, the payment clock resumes from the value at which it was paused and does not restart at zero.",
+    "span": [
+      1046,
+      1175
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: An invoice number must be unique within a single supplier, and the same invoice number may be used by different suppliers.",
+    "span": [
+      1176,
+      1305
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: Tolerance is assessed separately for each individual invoice and is not assessed against the monthly total of a supplier's invoices.",
+    "span": [
+      1306,
+      1445
+    ]
+  }
+]

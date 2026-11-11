@@ -1,0 +1,187 @@
+{
+  "run_id": "anthropic__claude-opus-5.5-posthoc-replay",
+  "campaign_sha256": "0bf65a4b8e06fea7dbedc25e98d895526c5ec5b4bae224f2b8513cb7a468b085",
+  "subject_id": "anthropic__claude-opus-5.5",
+  "configuration_sha256": "4dcc2beda608433fab3ad4f4bd80b40f93b0e8c0bfd9e009e0f720432bc3fe14",
+  "started_at": "2026-11-11T05:45:10.487450+00:00",
+  "finished_at": "2026-11-11T05:45:10.497637+00:00",
+  "evidence_status": "self_reported",
+  "attempts": [
+    {
+      "task_id": "purchase-approval",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.001082749993656762,
+      "cost": {
+        "status": "reported",
+        "usd": 0.016092,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/1-purchase-approval/receipt.json",
+        "sha256": "2d03f3b31e7206ab2e887b2c909c71e2f722813d9be5126ad6810289ac3ed84b"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/1-purchase-approval/annotation.json",
+        "sha256": "60bb67e1c5ef7637389fb2a0aa4b6e9d3510dabac6f7c8d733f192d18b47f973"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.0009773329948075116,
+      "cost": {
+        "status": "reported",
+        "usd": 0.011844,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/1-supplier-onboarding/receipt.json",
+        "sha256": "e6d7d122fc5812049378971b74f8b58adbc16a0891bd83dc5556521f56434d8f"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/1-supplier-onboarding/annotation.json",
+        "sha256": "42e8d82717ccb9f1921def84177ab936b1c30037b319d686e522f87e6d02c9a3"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.0009072499960893765,
+      "cost": {
+        "status": "reported",
+        "usd": 0.013724,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/1-invoice-matching/receipt.json",
+        "sha256": "3d9c74fdf2a09d5eb66195c4958d75648bf260312e64371a4163ebc99477c826"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/1-invoice-matching/annotation.json",
+        "sha256": "59fda3cf3bd71db2743386f82f38efd6f652324092476a60a94cddd3f244937c"
+      }
+    },
+    {
+      "task_id": "purchase-approval",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0010687500034691766,
+      "cost": {
+        "status": "reported",
+        "usd": 0.015112,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/2-purchase-approval/receipt.json",
+        "sha256": "f54ed72dc7d83023735eb0f6f274722b695a05ac3980824fb86bb19c88911c07"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/2-purchase-approval/annotation.json",
+        "sha256": "6b37bfbb97728f216086189b44e6b653cc3a71c98dbb9470f0f1c084cc4900ae"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0009864579915301874,
+      "cost": {
+        "status": "reported",
+        "usd": 0.020564,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/2-supplier-onboarding/receipt.json",
+        "sha256": "98e6f4dae9acc212b0cccc66522f91a0b17c24debf99ff989517d9db51b582a5"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/2-supplier-onboarding/annotation.json",
+        "sha256": "de7ddc2b4353ccf2d50951f5e37f0be9bc50480608c5774564a2496a2a80a83e"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0009213750017806888,
+      "cost": {
+        "status": "reported",
+        "usd": 0.014084,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/2-invoice-matching/receipt.json",
+        "sha256": "9e84f7bd832ad961849faf5aa239b2edd2bddb2b3423d70b1a06a09f5439ac9a"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/2-invoice-matching/annotation.json",
+        "sha256": "82fec96d84c067f106b0fa9b1d815b5fdc3e10446799809c3be7c6d86f5bbe53"
+      }
+    },
+    {
+      "task_id": "purchase-approval",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0009133749990724027,
+      "cost": {
+        "status": "reported",
+        "usd": 0.015852,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/3-purchase-approval/receipt.json",
+        "sha256": "53cc02282f1a4bf576f944edcbcfa75b12649913a833accde5ceb9b2ccad6685"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/3-purchase-approval/annotation.json",
+        "sha256": "b2b0d9e8532f8fba401e923bef37410886c66be588667657f39ee2547259ae2f"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0009668749989941716,
+      "cost": {
+        "status": "reported",
+        "usd": 0.010964,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/3-supplier-onboarding/receipt.json",
+        "sha256": "4e36f1b074e685f66ec72238c3ba924cb7bdfdb468df313e95fef85c01371e4d"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/3-supplier-onboarding/annotation.json",
+        "sha256": "2a90309d74e3317030aa0bd7827f346915d0b82a88a6954ca18ebbf0de4265bf"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0008340000058524311,
+      "cost": {
+        "status": "reported",
+        "usd": 0.018864,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "anthropic__claude-opus-5.5/3-invoice-matching/receipt.json",
+        "sha256": "5766ddf8a8ed4ab2d58cf66ebf344f8794b66b3c2714a5088771e4abfd2454b9"
+      },
+      "annotation": {
+        "path": "anthropic__claude-opus-5.5/3-invoice-matching/annotation.json",
+        "sha256": "cb90c360293093470aa3fad3e1550d9c4ba9418c663c65c91a6e17a129eb2fce"
+      }
+    }
+  ],
+  "submitter_id": "palo-maintainer",
+  "execution": {
+    "mode": "serial",
+    "max_concurrency": 1
+  }
+}

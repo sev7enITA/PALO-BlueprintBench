@@ -207,3 +207,9 @@ PALO and this toolkit are free. Code is [MIT licensed](LICENSE); third-party doc
 **Naming:** PALO BlueprintBench concerns business development specifications. It is unrelated to Andon Labs' [Blueprint-Bench 2](https://andonlabs.com/evals/blueprint-bench-2), which evaluates spatial floor-plan reconstruction.
 
 <p align="center"><b>Join the Human Agency.</b><br>Build with AI. Keep humans in command.</p>
+
+## Internal baseline tests
+
+A separate internal cohort adds OpenAI GPT-6.1 Sol, Anthropic Claude Opus 5.5 and Google Gemini 4 Argon. It records 54 requests on three short synthetic procurement cases, three repetitions and two tasks. There are 53 complete responses, one provider failure, and a contested expected label. These are internal tests, with zero independently qualified results.
+
+[Read the report](internal_tests/2026-11-11-frontier/REPORT.md) · [Inspect the frozen design](internal_tests/2026-11-11-frontier/README.md) · [Explore results](https://paloframework.org/PALO_BlueprintBench.html#internal-tests). The 27 exported blueprints are assistant-reviewed drafts requiring business approval. No PBI score, superiority claim or 100 MB processing claim follows from this cohort.

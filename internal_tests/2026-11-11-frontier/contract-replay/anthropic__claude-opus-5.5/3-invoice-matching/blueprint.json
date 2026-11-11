@@ -1,0 +1,96 @@
+{
+  "status": "internal_draft_requires_business_review",
+  "qualified": false,
+  "model": "anthropic/claude-opus-5.5",
+  "case": "invoice-matching",
+  "repetition": 3,
+  "source_family": "maintainer-authored-synthetic-procurement-v1",
+  "origin": "Source-indexed translation test, not Workbench application end-to-end execution",
+  "inference_record_id": "3-invoice-matching-translation-anthropic__claude-opus-5.5",
+  "rules": [
+    {
+      "id": "R01",
+      "proposed_specification": "Automatic payment of an invoice is permitted only if both an existing purchase order and a receipt record exist for that invoice.",
+      "source_text": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R02",
+      "proposed_specification": "An invoice variance of exactly EUR 10 is within tolerance.",
+      "source_text": "An invoice variance of exactly EUR 10 is within tolerance.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R03",
+      "proposed_specification": "If an invoice's variance is greater than EUR 10, automatic payment of that invoice is blocked.",
+      "source_text": "An invoice variance above EUR 10 blocks automatic payment.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R04",
+      "proposed_specification": "For a blocked invoice, an Accounts Payable analyst is permitted, but not obliged, to request a corrected invoice.",
+      "source_text": "For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R05",
+      "proposed_specification": "Only the receiving team may record goods receipt, and Accounts Payable is prohibited from recording goods receipt.",
+      "source_text": "Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R06",
+      "proposed_specification": "The person who changed a supplier's bank details is prohibited from approving payment to those bank details.",
+      "source_text": "The person who changed supplier bank details must not approve payment to those details.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R07",
+      "proposed_specification": "For a service invoice, an authorised service acceptance substitutes for the goods receipt record.",
+      "source_text": "For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R08",
+      "proposed_specification": "A service acceptance does not substitute for the purchase-order requirement.",
+      "source_text": "Service acceptance does not replace the purchase-order requirement.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R09",
+      "proposed_specification": "While a dispute is unresolved, the payment clock is frozen, and it remains frozen until the dispute is resolved.",
+      "source_text": "A dispute freezes the payment clock until the dispute is resolved.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R10",
+      "proposed_specification": "Upon dispute resolution, the payment clock resumes from the value at which it was paused and does not restart at zero.",
+      "source_text": "After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R11",
+      "proposed_specification": "An invoice number must be unique within a single supplier, and the same invoice number may be used by different suppliers.",
+      "source_text": "An invoice number is unique only within a supplier; different suppliers may reuse the same number.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    },
+    {
+      "id": "R12",
+      "proposed_specification": "The variance tolerance is assessed separately for each individual invoice and not against the monthly sum of a supplier's invoices.",
+      "source_text": "The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.",
+      "internal_review": "assistant_draft_supported",
+      "business_approval": "pending"
+    }
+  ]
+}
