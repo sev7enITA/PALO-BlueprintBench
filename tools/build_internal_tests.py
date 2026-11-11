@@ -123,7 +123,7 @@ Frozen design: `internal_tests/2026-11-11-frontier/README.md`. Primary counts: `
     (DL/'internal-tests-results.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8',newline='\n')
     files={p.relative_to(BASE).as_posix():p.read_bytes() for p in BASE.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'}
     manifest={n:hashlib.sha256(b).hexdigest() for n,b in files.items()}
-    files['public-archive-manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode()
+    files['public-archive-manifest.json']=(json.dumps(manifest,indent=2,sort_keys=True)+'\n').encode()
     output=io.BytesIO()
     with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED) as z:
         for name,body in sorted(files.items()):
