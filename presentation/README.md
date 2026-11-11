@@ -1,11 +1,11 @@
 # Fifteen-slide process explanation
 
-The editable presentation was authored in ChatGPT Spaces on 11 November 2026. `author.mjs` records the complete slide composition (`addCover`, followed by `addBatch` for slides 2–15), and `screenshots/` contains actual Workbench, LM Studio and explorer captures used in it. These are real interface captures, not generated UI mockups.
+[Public presentation](https://paloframework.org/downloads/blueprintbench/presentation/index.html) · [Editable original deck](https://chatgpt.com/space/page_4a816fc3283c8191ba4609dafd42d79f)
 
-The cover reads **PALO BlueprintBench: From documents to evidence**. The deck explains the purpose, eight dimensions, local and enterprise settings, FinOps, source review, three PALO modules, export gate, development-repository limits, qualification process and community participation.
+Updated 11 November 2026. The same saved 15-slide Spaces presentation now includes the original PALO logo, the BlueprintBench identity, the Internal testing badge and the expanded internal cohort. The public viewer contains rendered copies with an accessible transcript. Access to the editable deck follows its existing account permissions.
 
-The captured procurement example is synthetic, unreviewed and blocked from export. The local model screenshot proves only that the runtime was loaded. The explorer measurements are historical diagnostics, not an independently validated score. No API secret is shown.
+`author.mjs` preserves the original authoring source. `update-20261111.mjs` applies the current revision to the existing deck through Artifact Session. `screenshots/` contains authentic Workbench, LM Studio and explorer captures. The additional leaderboard screenshot shows the current publication source. `capture-manifest.json` records their hashes. Generated branding is artwork, not an application screenshot.
 
-The source uses the first-party presentation artifact API and requires an appropriate authoring environment; it is not a standalone dependency-free renderer. The app's live presentation viewer supports export. The source screenshots remain available for independent inspection.
+18 model IDs, 324 assigned internal slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses, 18 pre-call blocks. Three short synthetic procurement cases, one authored family, three repetitions and assistant-draft labels. Historical adapter tests and earlier large-repository runs retain their separate scope. No independent qualification or PBI is assigned.
 
-Mobile screenshots from the browser compositor were excluded because they repeated page sections. They must not be used as proof of mobile visual validation.
+The captured Workbench case is synthetic, unreviewed and blocked from export. The local runtime screenshot shows configuration only. No API secret is shown.

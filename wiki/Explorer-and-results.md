@@ -1,4 +1,8 @@
-# Reading the explorer
+# Reading the evidence workspace
+
+[Current 18-model catalogue and internal tests](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html). The internal procurement view supports sorting, filters, source/output inspection and a request ledger. Counts use assigned tasks, missing values stay distinct from zero, and contested-label sensitivity remains separate from the primary analysis. No PBI is assigned.
+
+## Historical adapter diagnostics
 
 [Open the live explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer).
 

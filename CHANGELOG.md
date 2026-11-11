@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-11: research identity and updated presentation
+
+Added an original BlueprintBench logo and an Internal testing badge with evidence-link requirements. Preserved the PALO Framework logo. Updated the existing fifteen-slide deck with current cohort counts and real leaderboard screenshots, and added a public slide viewer. Aligned site resources, repository handbook and wiki. No scoring, qualification or model-run changes.
+
+
 ## 2026-11-11: unified model catalogue and procurement extensions
 
 Aligned overview and leaderboard on one catalogue, retaining every original historical model identity. Added internal campaigns for 12 additional configurations and 3 exact legacy identities, with unchanged source/prompts/labels and 3 repetitions. Exposed per-configuration reasoning/output limits, missing assignments and compatibility blocks. Applied the PALO dark palette, sortable/filterable columns, shared URL/CSV state, and moved detailed qualification to Limits, limitations and further development. No independent validation or PBI assigned.

@@ -1,6 +1,6 @@
 {
   "capture_date": "2026-11-11",
-  "source": "Actual local Workbench and LM Studio interfaces; explorer preview v0.2",
+  "source": "Actual local Workbench and LM Studio interfaces, retained historical explorer captures, and current leaderboard served from the publication source",
   "qualification": "Development evidence only; synthetic application case unreviewed, export blocked",
   "files": [
     {
@@ -50,6 +50,12 @@
     {
       "path": "screenshots/16-source-fingerprints.jpg",
       "sha256": "3a608e1002a77970a7ce4683eb9524d298a6e1075d1f8a537fc0d212012cc7e9"
+    },
+    {
+      "path": "screenshots/18-internal-leaderboard.png",
+      "sha256": "79afc1d96f8e63902cc6101604b4d92f8d084a24f732d02083698c4ba1ce2e9a",
+      "url": "http://127.0.0.1:58192/PALO_BlueprintBench_Leaderboard.html?cohort=internal#workspace",
+      "scope": "Current publication source, 18 configurations, 11 November 2026"
     }
   ]
 }

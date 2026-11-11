@@ -2,7 +2,8 @@
 
 > **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. The [0.3 draft repair](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1) passes 76 local tests and awaits human review; the current toolkit is still 0.2. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
 
-  <img src="assets/readme/blueprintbench-banner.svg" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
+  <img src="web/assets/logo.webp" alt="Original PALO Framework logo" width="80">
+  <img src="web/assets/blueprintbench/brand/blueprintbench-logo.png" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
 </p>
 
 <p align="center">
@@ -49,7 +50,11 @@ PALO's proposed study examines **modality, negation, ownership, conditions and e
 
 ## Explore the project
 
-The current explorer shows fixed-alphabetical adapter records and pooled contract diagnostics. The former latency/acceptance scatter plot has been withdrawn following audit. [Inspect the corrected explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer).
+The shared catalogue contains **18 distinct model IDs and 28 configuration/cohort records**. Internal procurement tests retain **324 assigned slots, 306 dispatched requests, 299 complete responses, 7 incomplete or failed responses and 18 pre-call-blocked assignments**. Historical adapter diagnostics remain separate. Filters, sortable internal-test columns, source inspection and a call ledger expose the evidence without assigning a qualified rank.
+
+[Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [15-slide presentation](https://paloframework.org/downloads/blueprintbench/presentation/index.html) · [Brand assets and testing badge](docs/brand-usage.md)
+
+<img src="web/assets/blueprintbench/brand/internal-testing-badge.png" width="180" alt="BlueprintBench Internal testing badge, evidence linked; not certification">
 
 <details>
 <summary><b>See the document-to-blueprint review context</b></summary>

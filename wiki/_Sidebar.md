@@ -13,3 +13,5 @@
 - [[FAQ|FAQ]]
 
 [Explorer](https://paloframework.org/PALO_BlueprintBench.html) | [Source repository](https://github.com/sev7enITA/PALO-BlueprintBench)
+
+- [[Identity and presentation|Brand-and-presentation]]
