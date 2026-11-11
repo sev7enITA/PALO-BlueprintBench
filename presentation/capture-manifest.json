@@ -1,0 +1,55 @@
+{
+  "capture_date": "2026-11-11",
+  "source": "Actual local Workbench and LM Studio interfaces; explorer preview v0.2",
+  "qualification": "Development evidence only; synthetic application case unreviewed, export blocked",
+  "files": [
+    {
+      "path": "screenshots/01-workbench-home.jpg",
+      "sha256": "c693535d88387637fca9abad07de7192a0f5a9691086ebe3c1d84a5ccb1eb7bf"
+    },
+    {
+      "path": "screenshots/03-reasoning-options.jpg",
+      "sha256": "bbf4a78d017d79f05781e3068b6fcd8ff2694e05b64be1f56e7c53ea854038e0"
+    },
+    {
+      "path": "screenshots/06-token-accounting.jpg",
+      "sha256": "8bde4ea4af5129db3a8571a0cba7e61da0d7acb61f89145f4c7b1246ba348b46"
+    },
+    {
+      "path": "screenshots/07-graph-and-evidence.jpg",
+      "sha256": "749051773258231a90fc2bb9c81f5897c7dbe769684fab2c94225d90ae06cd18"
+    },
+    {
+      "path": "screenshots/08-dictionary.jpg",
+      "sha256": "b4db38d9439d4d54366b4fd780bff23805aeeca1816989b2ebef8ff2a90d3d8c"
+    },
+    {
+      "path": "screenshots/09-process.jpg",
+      "sha256": "ea4bd0870cf00ad7d280b99e97022161eda67a365fd823a8816e7a8012369267"
+    },
+    {
+      "path": "screenshots/10-palo-controls.jpg",
+      "sha256": "7120fc1a7001701c77c8d6dabe3f30c4028cf43e592f7f40236924b0552c7644"
+    },
+    {
+      "path": "screenshots/11-export-gate.jpg",
+      "sha256": "431e7f79f92da47b6c4f3ba70c697efc5eda443a82f17b70fb5d78b35533e955"
+    },
+    {
+      "path": "screenshots/12-lm-studio-runtime.png",
+      "sha256": "07ec643585777544bc9fcc38c237c4a4c40872651aeaa1e078156290e7b083e9"
+    },
+    {
+      "path": "screenshots/13-explorer.jpg",
+      "sha256": "d85e6adcd7e4484eecb81811fa28810a67fafeb6eedf844d4e843739d10a1d91"
+    },
+    {
+      "path": "screenshots/14-comparison.jpg",
+      "sha256": "a78377c54d663c39c18b6957925f494938581ee02bf6e70ce52daa411a43de02"
+    },
+    {
+      "path": "screenshots/16-source-fingerprints.jpg",
+      "sha256": "3a608e1002a77970a7ce4683eb9524d298a6e1075d1f8a537fc0d212012cc7e9"
+    }
+  ]
+}

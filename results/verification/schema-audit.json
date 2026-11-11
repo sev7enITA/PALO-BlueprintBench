@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-11",
+  "scope": "PALO_BlueprintBench.html and scoped explorer assets/downloads",
+  "initial_findings": [
+    "Existing JSON-LD was syntactically valid but only described a WebPage.",
+    "The expanded Mistral measurements were attached to the rejected none setting in historical catalogue metadata.",
+    "Explorer functionality and visual comparison were missing."
+  ],
+  "changes": [
+    "CollectionPage linked to canonical WebSite and Person identifiers",
+    "Visible breadcrumb mirrored by BreadcrumbList",
+    "Unordered ItemList of ten diagnostic models, no ratings or ranking",
+    "dateModified updated to match explorer release",
+    "Corrected Mistral provider-default setting and published correction log"
+  ],
+  "checks": {
+    "json_ld_parses": true,
+    "single_json_ld_block": true,
+    "unique_models": 10,
+    "visible_breadcrumb_matches": true,
+    "catalogue_matches_explorer": true,
+    "missing_cost_not_zero": true,
+    "downloaded_csv_rows": 10,
+    "downloaded_csv_columns": 24,
+    "toolkit_tests_passed": 17
+  },
+  "external_validation": {
+    "schema_org": {
+      "errors": 0,
+      "warnings": 0,
+      "url": "https://validator.schema.org/#url=https%3A%2F%2Fpaloframework.org%2FPALO_BlueprintBench.html"
+    },
+    "google_rich_results": {
+      "valid_items": 1,
+      "type": "Breadcrumb",
+      "url": "https://search.google.com/test/rich-results/result?id=MwTN3WhiG7voqsRn9VL5vg",
+      "guarantee_of_display": false
+    }
+  },
+  "publication": {
+    "status": "verified",
+    "https_files_matched": 9,
+    "total_files": 9
+  },
+  "limits": [
+    "Schema validity does not guarantee Google rich results.",
+    "No independent held-out ranking qualified.",
+    "Structural checks are not semantic accuracy.",
+    "No new Workbench release qualification claimed."
+  ],
+  "visual_review": {
+    "verdict": "PASS",
+    "mobile": "375 and 390 pixel DOM checks show no horizontal overflow; mobile screenshot backend unreliable, full visual qualification limited"
+  }
+}
