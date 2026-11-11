@@ -31,15 +31,17 @@ The project is an **open research pilot**. The executable evaluator, historical 
 | [20 benchmark references](docs/benchmark-references.md) | [Historical evidence and replay](evidence/development-2026-11-10/README.md) | [Procurement study](docs/specification-fidelity-study.md) |
 | [Metrics and trust boundaries](docs/evaluator-contract.md) | [Release and packages](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/v0.3.0-pilot.1) | [Reviewer kit](docs/reviewer-kit.md) |
 
-## Current internal tests and presentation
+## Current internal tests and dashboard
 
 The published catalogue contains **18 distinct model IDs and 28 cohort/configuration records**. Internal procurement tests have **324 assigned slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses and 18 pre-call-blocked assignments**. These are short synthetic tests with assistant-draft labels. Historical adapter diagnostics remain separate. No independent qualification or PALO Blueprint Index is assigned.
 
-[Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Updated 15-slide presentation](https://paloframework.org/downloads/blueprintbench/presentation/index.html) · [Logo and Internal testing badge](https://paloframework.org/downloads/blueprintbench/brand-kit.zip) · [Badge usage](https://paloframework.org/downloads/blueprintbench/brand-usage.md)
+[Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Logo and Internal testing badge](https://paloframework.org/downloads/blueprintbench/brand-kit.zip) · [Badge usage](https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/brand-usage.md)
 
 <img src="https://paloframework.org/assets/logo.webp" alt="Original PALO Framework logo" width="75"> <img src="https://paloframework.org/assets/blueprintbench/brand/internal-testing-badge.png" alt="BlueprintBench Internal testing, evidence linked; not certification" width="150">
 
-The updated implementation and complete presentation source are in [publication PR #3](https://github.com/sev7enITA/PALO-BlueprintBench/pull/3). This documentation update does not promote the evaluator repair or change a scoring release.
+The updated implementation and interactive result exploration are in [publication PR #3](https://github.com/sev7enITA/PALO-BlueprintBench/pull/3). This documentation update does not promote the evaluator repair or change a scoring release.
+
+The dashboard provides within-task Pareto comparisons, case-specific top results, repetition variability, provenance-preserving CSV/JSON exports and prefilled result challenges. These are views of internal measurements, not independently qualified model rankings.
 
 ## Contents
 
@@ -67,7 +69,7 @@ The current explorer shows fixed-alphabetical adapter records and pooled contrac
 
 Actual Workbench pilot capture using synthetic procurement content. The entity graph, source evidence and pending decisions illustrate the workflow being studied. This image is not evidence of a qualified application release or completed benchmark campaign.
 
-[15-slide process presentation source](presentation/) · [Workbench pilot](https://paloframework.org/PALO_DocumentWorkbench.html)
+[Workbench pilot](https://paloframework.org/PALO_DocumentWorkbench.html)
 
 </details>
 
@@ -190,7 +192,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), browse [issues](https://github.com/sev7
 | [FAQ](https://github.com/sev7enITA/PALO-BlueprintBench/wiki/FAQ) | [Semantic vocabulary, SKOS and OWL](semantic/README.md) |
 | [Contributing](https://github.com/sev7enITA/PALO-BlueprintBench/wiki/Contributing) | [Versioning](docs/versioning.md) and [corrections](docs/corrections.md) |
 
-Repository map: `evaluator/` executable checks; `evidence/` retained diagnostics; `results/` labelled receipts; `docs/` research and contracts; `wiki/` versioned wiki source; `web/` explorer; `semantic/` vocabulary; `presentation/` slides and real captures.
+Repository map: `evaluator/` executable checks; `evidence/` retained diagnostics; `results/` labelled receipts; `docs/` research and contracts; `wiki/` versioned wiki source; `web/` explorer; `semantic/` vocabulary; internal working presentation is not linked from the public site.
 
 ## Citation
 
