@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-11: leaderboard structured-data alignment
+
+Aligned both public pages on explicit KPI definitions, exploratory rank scope and tie/eligibility rules, a separate sourced developer-country metadata dataset, and browser-generated CSV/JSON export capabilities. The source register is no longer described as a distribution of measured test results. No static filtered-export URL, independent validation, qualified score or country-of-hosting claim is introduced. Frozen test evidence is unchanged.
+
+
 ## 2026-11-11: metric ranks, developer countries and exports
 
 Added metric-specific internal-test ranks with competition ties and explicit eligibility. Visibility filters retain cohort-wide positions. Added sourced developer-organization country metadata, country filtering/sorting, KPI columns and CSV/JSON exports of the visible ordered rows with scope, denominators and provenance. Unknown locations remain unknown; developer country does not establish serving location or data residency. Frozen campaign results, adversarial reviews and qualification are unchanged.

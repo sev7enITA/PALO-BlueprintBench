@@ -79,7 +79,7 @@ def dataset_graph(data,url):
                  "Agreement with assistant-draft labels; one contested label; failed assignments remain in the denominator. "
                  "The original baseline and later extensions retain their campaign identities. No independently qualified results or PALO Blueprint Index. Post-hoc sensitivity is explicitly labelled; translations remain assistant-draft outputs; a selected sample has separate internal model reviews.")
     page_description=('Explore internal procurement tests and historical adapter diagnostics in separate cohorts. '
-                      'Inspect configurations, source evidence, missing responses and disputed labels. No independently qualified ranking.')
+                      'Explore metric-specific internal-test ranks, developer-country filters and sortable KPIs in the leaderboard, with filtered CSV and JSON exports. Inspect configurations, source evidence, missing responses and disputed labels. No independently qualified ranking.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
            {'@type':'WebSite','@id':SITE+'#website','name':'PALO Framework','url':SITE,'publisher':{'@id':person}},
            {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'PALO BlueprintBench Leaderboard' if url==BOARD else 'PALO BlueprintBench | Results and Method',
@@ -102,7 +102,6 @@ def dataset_graph(data,url):
             'isBasedOn':[c['evidence_base']+'/manifest.json' for c in internal['campaigns']],
             'usageInfo':EVIDENCE+'/README.md',
             'distribution':[{'@type':'DataDownload','name':'All internal counts, configurations and limitations','contentUrl':SITE+'downloads/blueprintbench/leaderboard-data.json','encodingFormat':'application/json'},
-                            {'@type':'DataDownload','name':'Dated developer organization countries with official sources; not serving location or data residency','contentUrl':SITE+'downloads/blueprintbench/model-origins.json','encodingFormat':'application/json'},
                             {'@type':'DataDownload','name':'Original baseline evidence and post-hoc replay','contentUrl':SITE+'downloads/blueprintbench/internal-tests-evidence.zip','encodingFormat':'application/zip'},
                             {'@type':'DataDownload','name':'Additional model campaign evidence','contentUrl':SITE+'downloads/blueprintbench/internal-expansion-evidence.zip','encodingFormat':'application/zip'}]},
            {'@type':'Dataset','@id':historical_id,'name':'BlueprintBench historical adapter smoke tests, 10 November 2026',
@@ -126,6 +125,55 @@ def dataset_graph(data,url):
             'variableMeasured':['Reviewer agreement, divergence, uncertainty and missing judgments','Raw response-envelope compliance','Selected-probe replay against each reviewer, with 54 assigned slots per original model'],
             'isBasedOn':review['protocol_url'],
             'distribution':[{'@type':'DataDownload','name':'Internal cross-model judgments and evidence links','contentUrl':SITE+'downloads/blueprintbench/adversarial-tests.json','encodingFormat':'application/json'}]})
+    # Country provenance is a dated metadata overlay, not a measurement result.
+    origins = read(WEB/'downloads/blueprintbench/model-origins.json')
+    country_id = OVERVIEW+'#developer-country-metadata'
+    workspace_id = BOARD+'#results-workspace'
+    kpis = [
+        ('matches', 'Draft-label agreement', 'ratio', 'Matched statements divided by all assigned statements in the selected case, dimension and label lens. Missing assignments remain in the denominator; agreement is not independent semantic accuracy.'),
+        ('coverage', 'Classification coverage', 'ratio', 'Classified statements divided by assigned statements in the selected semantic scope.'),
+        ('disagreements', 'Draft-label disagreements', 'statements', 'Classified statements disagreeing with the draft label. Ranking minimises their assigned-denominator ratio and requires complete classification in the selected scope.'),
+        ('missing', 'Missing classifications', 'statements', 'Assigned statements without a classification, including unrun assignments. Ranking minimises the assigned-denominator ratio.'),
+        ('calls', 'Call completion', 'ratio', 'Complete calls divided by all assigned calls across both tasks and all cases, independently of semantic filters.'),
+        ('cost', 'Provider-reported charges', 'USD', 'Recorded provider charges across both tasks and all cases. Unknown charges remain separate. Charge ranking requires all assigned calls to complete and complete accounting.'),
+        ('time', 'Median request time', 'seconds', 'Observed median request duration across both tasks and all cases. Time ranking requires all assigned calls to complete; this is not a controlled throughput comparison.'),
+        ('costpercall', 'Cost per complete call', 'USD per call', 'Provider-reported charges divided by completed calls, available only when all assigned calls complete and accounting is complete.'),
+        ('input', 'Input tokens', 'tokens', 'Reported prompt-token total across dispatched calls in both tasks and all cases; unavailable if any dispatched call lacks the value.'),
+        ('output', 'Completion tokens including reasoning', 'tokens', 'Reported completion-token total, including reasoning where reported in that total, across dispatched calls in both tasks and all cases; unavailable if any value is missing.'),
+        ('rank', 'Exploratory metric rank', 'ordinal position', 'Derived within the eligible internal cohort for the selected metric and semantic scope. Unrounded values and competition ties (1, 1, 3); visibility filters do not renumber positions. Blocked configurations are unranked. No PALO Blueprint Index or independent qualification.')
+    ]
+    measured = next(n for n in graph if n.get('@id') == internal_id)
+    measured['variableMeasured'] = [
+        {'@type':'PropertyValue','propertyID':key,'name':name,'description':description,'unitText':unit}
+        for key,name,unit,description in kpis
+    ] + measured['variableMeasured'][5:]
+    measured['usageInfo'] = [EVIDENCE+'/README.md', BOARD+'#workspace', BOARD+'#limitations']
+    graph.append({
+        '@type':'Dataset','@id':country_id,'name':'BlueprintBench developer-organisation country source register',
+        'identifier':origins['version'],'version':origins['version'],'dateModified':origins['as_of'],
+        'url':BOARD+'#workspace','creator':{'@id':person},'isAccessibleForFree':True,
+        'description':origins['definition'],
+        'creativeWorkStatus':'Dated source metadata; internal tests not independently validated',
+        'measurementTechnique':'Official-source review with per-organisation attribution basis and retrieval date. Unknown attribution has no country assertion. This overlay does not change frozen campaign evidence.',
+        'variableMeasured':['Documented developer business-base country','Country attribution status and source provenance'],
+        'about':[
+            dict({'@type':'Organization','name':m['name'],'identifier':m['id'],'description':m['basis'],
+                  'subjectOf':[{'@type':'WebPage','url':source['url'],'name':source['title']} for source in m['sources']]},
+                 **({'location':[{'@type':'Country','identifier':c['code'],'name':c['name']} for c in m['countries']]} if m['status']=='verified' else {}))
+            for m in origins['makers']
+        ],
+        'distribution':[{'@type':'DataDownload','name':'Developer-country source register','contentUrl':SITE+'downloads/blueprintbench/model-origins.json','encodingFormat':'application/json'}]
+    })
+    graph.append({
+        '@type':'WebPageElement','@id':workspace_id,'name':'BlueprintBench results workspace','url':BOARD+'#workspace',
+        'description':'Interactive internal-test ranking with selectable metrics, competition ties, developer-country and serving-provider filters, sortable quality and operational KPIs, and configuration comparison. Export CSV or JSON for the visible ordered rows with rank eligibility, filters, scope, denominators, data revision and country sources. Filtered downloads are generated in the browser, not permanent file endpoints. Historical diagnostics stay separate; no independently validated ranking or PALO Blueprint Index.',
+        'about':[{'@id':internal_id},{'@id':historical_id},{'@id':country_id}]
+    })
+    graph[2]['mentions'] = [{'@id':country_id},{'@id':workspace_id}]
+    if url == BOARD:
+        graph[2]['hasPart'].append({'@id':workspace_id})
+    else:
+        graph[2]['relatedLink'] = BOARD+'#workspace'
     graph.extend([
         {'@type':'ImageObject','@id':OVERVIEW+'#benchmark-logo','name':'PALO BlueprintBench identity',
          'contentUrl':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png','encodingFormat':'image/png',

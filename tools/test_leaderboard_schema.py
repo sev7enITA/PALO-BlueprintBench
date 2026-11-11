@@ -92,7 +92,7 @@ class PublicationContractTests(unittest.TestCase):
     def test_dataset_distributions_exist_and_preserve_states(self):
         g=build.dataset_graph(self.data,build.BOARD)
         datasets=[n for n in g['@graph'] if n['@type']=='Dataset']
-        self.assertEqual(len(datasets),3)
+        self.assertEqual(len(datasets),4)
         for d in datasets:
             self.assertIn('unqualified' if 'historical' in d['@id'] else 'not independently validated',d['creativeWorkStatus'])
             self.assertNotIn('license',d)  # No invented blanket licence over model responses.
@@ -103,6 +103,45 @@ class PublicationContractTests(unittest.TestCase):
         self.assertIn(str(self.data['internal']['assigned_calls'])+' assigned requests',internal['description'])
         self.assertIn(str(self.data['internal']['completed_calls'])+' complete responses',internal['description'])
         self.assertIn('one contested label',internal['description'])
+
+
+    def test_ranking_kpis_exports_and_country_overlay_match_both_pages(self):
+        graphs = [build.dataset_graph(self.data, url)['@graph'] for url in (build.OVERVIEW, build.BOARD)]
+        shared = [build.OVERVIEW+'#internal-procurement-dataset', build.OVERVIEW+'#developer-country-metadata', build.BOARD+'#results-workspace']
+        for identifier in shared:
+            self.assertEqual(next(n for n in graphs[0] if n.get('@id') == identifier),
+                             next(n for n in graphs[1] if n.get('@id') == identifier))
+        internal = next(n for n in graphs[0] if n.get('@id') == shared[0])
+        kpis = {x['propertyID']: x for x in internal['variableMeasured'] if isinstance(x, dict)}
+        self.assertEqual(set(kpis), {'matches','coverage','calls','disagreements','missing','cost','time','costpercall','input','output','rank'})
+        self.assertIn('1, 1, 3', kpis['rank']['description'])
+        self.assertIn('visibility filters do not renumber', kpis['rank']['description'])
+        self.assertIn('all assigned calls', kpis['cost']['description'])
+        self.assertIn('all assigned calls', kpis['time']['description'])
+        self.assertTrue(all('value' not in x for x in kpis.values()))
+        origins = json.loads((ROOT/'docs/model-origins.json').read_text(encoding='utf-8'))
+        countries = next(n for n in graphs[0] if n.get('@id') == shared[1])
+        self.assertEqual(countries['version'], origins['version'])
+        self.assertEqual(countries['dateModified'], origins['as_of'])
+        self.assertEqual(countries['description'], origins['definition'])
+        for maker, organisation in zip(origins['makers'], countries['about'], strict=True):
+            self.assertEqual(organisation['identifier'], maker['id'])
+            self.assertEqual(organisation['description'], maker['basis'])
+            self.assertEqual([p['url'] for p in organisation['subjectOf']], [p['url'] for p in maker['sources']])
+            self.assertEqual([c['identifier'] for c in organisation.get('location', [])], [c['code'] for c in maker['countries']])
+            if maker['status'] != 'verified': self.assertNotIn('location', organisation)
+        self.assertFalse(any(d['contentUrl'].endswith('model-origins.json') for d in internal['distribution']))
+        self.assertNotIn('spatialCoverage', countries)
+        workspace = next(n for n in graphs[0] if n.get('@id') == shared[2])
+        self.assertIn('generated in the browser', workspace['description'])
+        self.assertIn('CSV or JSON', workspace['description'])
+        self.assertNotIn('potentialAction', workspace)
+        page = (ROOT/'web/PALO_BlueprintBench_Leaderboard.html').read_text(encoding='utf-8')
+        for anchor in ('workspace','download-csv','download-json'):
+            self.assertIn('id="'+anchor+'"', page)
+        for graph in graphs:
+            self.assertNotIn('countryOfOrigin', json.dumps(graph))
+            self.assertNotIn('blob:', json.dumps(graph))
 
 
     def test_exact_historical_model_identities_are_retained(self):
