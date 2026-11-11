@@ -1,0 +1,449 @@
+La presente revisione avversariale valuta il pilota di ricerca pubblico PALO BlueprintBench / PALO Blueprint Index alla data dell'11 novembre 2026, trattandolo rigorosamente come proposta metodologica e diagnostica di sviluppo, non come benchmark validato.
+
+Perimetro Epistemico e Distinzione delle Fonti
+
+[OSSERVATO NEI SORGENTI / METADATI]: Rilievi estratti tramite ispezione statica diretta dei file forniti nel prompt (README.md, GOVERNANCE.md, docs/palo-blueprint-index.md, docs/protocol.md, semantic/data/blueprintbench-vocabulary.json, semantic/formal/palo-blueprintbench-ontology.ttl, evaluator/blueprintbench.py, web/assets/blueprintbench/blueprintbench.js) e dei metadati operativi dichiarati.
+
+[INFERENZA TECNICA / METODOLOGICA]: Conseguenze logiche, statistiche o di sicurezza del codice derivate dalla struttura dei file ispezionati (es. vulnerabilità di calcolo in blueprintbench.py, bias visivi in blueprintbench.js, conflitti semantici tra vocabolario e codice).
+
+[RICHIEDE ESECUZIONE / VERIFICA ESTERNA]: Non è stata effettuata navigazione live sugli URL (paloframework.org, andonlabs.com, arxiv.org, github.com), non sono state eseguite query RDAP live né test runtime locali della suite unittest o del binario macOS notarizzato. Ogni controllo che richiede esecuzione su macchina pulita, verifica DOM live o ispezione git remota è marcato esplicitamente come tale. Il consenso o la revisione da parte di modelli linguistici non costituisce validazione scientifica.
+
+1. Stato di Prontezza: Recruitment vs Model Ranking vs App Qualification
+Ambito	Stato	Giudizio Sintetico ed Evidenza Bloccante
+1. Recruitment (Reclutamento annotatori, reproducer, utenti business)	CONDITIONAL GO (Avviabile solo dopo riallineamento identità/tag)	[OSSERVATO]: Le clausole sul conflitto di interessi (GOVERNANCE.md, README.md) e sullo stato qualified: false sono trasparenti. Bloccanti pre-campagna: schizofrenia del nome (BlueprintBench vs PALO Blueprint Index dopo la collisione con Andon Labs), disallineamento tra tag git v0.2.0-pilot.1, commit 66c6c5b e VERSION = "0.1.0", e assenza nel codice dell'evaluator dei campi per misurare lo sforzo umano dei revisori business.
+2. Model Ranking (Classifica o comparazione competitiva dei modelli)	NO-GO ASSOLUTO (Bloccato — Solo diagnostica storica)	[OSSERVATO]: Zero repository held-out qualificati (Qualified held-out entries: 0); 10 configurazioni storiche su singolo passaggio con appena 1 o 3 chiamate tentate, impostazioni di reasoning/provider eterogenee, cap di output a 8.000 token, costi parziali/riservati (unknown_reserved_usd) e soli controlli deterministici strutturali (mechanically_valid / raw_claims). Nessuna validità statistica o semantica per classificare modelli.
+3. App Qualification (Qualificazione ingegneristica di PALO Workbench)	NO-GO / PILOTA INCOMPLETO (Non qualificato end-to-end)	[OSSERVATO]: I 3 repository di sviluppo (111,95 MB / 168 pp.; 163,31 MB / 550 pp.; 107,42 MB / 791 pp.) sono contaminati poiché usati per riparare PALO. L'ultima campagna full-repository (Beam) si è arrestata per esaurimento budget dopo 128,6 minuti sul primo caso producendo 0 export revisionati, con i restanti 2 casi bloccati prima delle chiamate al modello. I 17 test dell'evaluator testano uno script sintetico separato, non l'app Workbench; i test su macchina pulita e hardware minimo sono ancora aperti.
+2. Revisione Avversariale sugli 8 Assi
+Asse 1: Dominio, Brand e Collisione di Nome (Andon Labs Blueprint-Bench 2)
+[DB-01] Contraddizione interna nei sorgenti sulla scelta del dominio e collisione diretta con Blueprint-Bench 2 (Andon Labs, arXiv:2509.25229)
+
+Severità: CRITICA
+
+Evidenza Concreta:
+
+[OSSERVATO]: Il contesto operativo attesta l'esistenza di Blueprint-Bench 2 di Andon Labs ([https://andonlabs.com/evals/blueprint-bench-2](https://andonlabs.com/evals/blueprint-bench-2), paper arXiv:2509.25229 del 2025 su ragionamento spaziale / generazione di planimetrie) e indica il cambio di preferenza verso paloblueprint.org con identità PALO Blueprint Index.
+
+[OSSERVATO]: docs/palo-blueprint-index.md (sezione ## Domain proposal) dichiara l'esatto opposto: "blueprintbench.org is the preferred proposed domain... paloblueprint.org is an alternative".
+
+[OSSERVATO]: Nessuno dei file sorgente (README.md, docs/protocol.md, docs/palo-blueprint-index.md) contiene una nota di disambiguazione rispetto al benchmark omonimo di Andon Labs.
+
+[INFERENZA]: Mantenere il nome nudo BlueprintBench nel titolo di README.md (# PALO BlueprintBench / "BlueprintBench studies..."), negli heading della pagina (Contribute to BlueprintBench), nell'oggetto mail di blueprintbench.js (BlueprintBench: volunteer expression of interest), nei nomi file CSV (PALO-BlueprintBench-filtered-...) e nel namespace RDF ([https://paloframework.org/semantic/blueprintbench/](https://paloframework.org/semantic/blueprintbench/)) genera confusione bibliografica, collisione nelle query di ricerca e contaminazione nelle citazioni automatiche da parte di LLM tra il benchmark di planimetrie (Andon Labs) e il benchmark di blueprint di processo/dati aziendali (PALO).
+
+Rilievo: La documentazione pubblicata nel repository contraddice la decisione di riposizionamento presa dopo la scoperta della collisione con Andon Labs e non isola semanticamente il dominio applicativo di PALO (architettura informativa e processi da documenti aziendali PDF/XLSX) da quello di Andon Labs (planimetrie spaziali).
+
+Correzione Minima:
+
+In docs/palo-blueprint-index.md (## Domain proposal), invertire la gerarchia indicando paloblueprint.org (o paloblueprintindex.org) come candidato primario in valutazione (senza asserirne la disponibilità né l'acquisto, dato l'HTTP 403 su RDAP) e declassare blueprintbench.org per via dell'omonimia nel settore AI evaluation.
+
+Inserire in README.md e docs/protocol.md un blocco esplicito di disambiguazione: "Disambiguation: PALO Blueprint Index / PALO Blueprint evaluation is unrelated to Andon Labs' Blueprint-Bench / Blueprint-Bench 2 (arXiv:2509.25229), which evaluates spatial floor-plan generation."
+
+Criterio di Accettazione: grep -rn "blueprintbench.org is the preferred" docs/ restituisce 0 occorrenze; README.md e docs/protocol.md contengono la clausola di disambiguazione esplicita; nessuna occorrenza residua del termine BlueprintBench appare priva del prefisso PALO.
+
+[DB-02] Cortocircuito concettuale tra "PALO Blueprint Index" come nome dell'intero programma e "PBI" come indice composito attualmente nullo
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: Gli heading della pagina live iniziano con PALO Blueprint Index e finiscono con Contribute to BlueprintBench.
+
+[OSSERVATO]: docs/palo-blueprint-index.md (sezione ## Naming) e semantic/data/blueprintbench-vocabulary.json definiscono PALO BlueprintBench come EvaluationProgramme (programma, protocollo, corpus, tooling) e PALO Blueprint Index (PBI) esclusivamente come IndexDefinition (punteggio sintetico futuro con "formula": null, "weights": null, "currentResult": null).
+
+[INFERENZA]: Se si rinomina l'intero programma/sito in PALO Blueprint Index per evitare la collisione con Andon Labs, si viola il principio cardine di docs/palo-blueprint-index.md (## Publish a profile before a composite), perché il nome dell'intero progetto coincide con l'indice composito che il progetto stesso dichiara non esistente e metodologicamente prematuro.
+
+Rilievo: Coesistono due tassonomie nominali incompatibili tra pagina live e file sorgente. Se PALO Blueprint Index diventa l'identità ombrello, la distinzione tra programma di valutazione e punteggio composito collassa.
+
+Correzione Minima: Separare formalmente i due livelli usando una nomenclatura univoca priva del suffisso -Bench: denominare il programma/suite PALO Blueprint Evaluation (o PALO Blueprint Suite, ospitato su paloblueprint.org se acquisito in futuro) e riservare PALO Blueprint Index (PBI) all'indice sintetico futuro, oppure unificare tutto sotto PALO Blueprint Index Programme aggiornando programme.label in blueprintbench-vocabulary.json e tutti gli heading (Contribute to the PALO Blueprint Index Programme).
+
+Criterio di Accettazione: Allineamento 1:1 tra H1/H2 della pagina live, README.md, docs/palo-blueprint-index.md e blueprintbench-vocabulary.json senza alternanza casuale tra BlueprintBench e PALO Blueprint Index.
+
+Asse 2: Validità Metodologica e Logica dell'Evaluator (docs/protocol.md vs evaluator/blueprintbench.py)
+[MV-01] Inflazione artificiale della Precision tramite proposizioni banali supportate (matches_gold: []) in evaluator/blueprintbench.py
+
+Severità: CRITICA
+
+Evidenza Concreta:
+
+[OSSERVATO]: In evaluator/blueprintbench.py (righe 173–197):
+
+Python
+if claim["verdict"] == "supported":
+    supported += 1
+    matched |= hits
+...
+"precision": sum(v[0] == "supported" for v in propositions.values()) / len(propositions) if propositions else None,
+
+
+[OSSERVATO]: docs/protocol.md prescrive: "Atomic proposition scoring must not reward verbosity or duplicate synonymous claims."
+
+[INFERENZA]: In blueprintbench.py, una proposizione con verdict == "supported" è ammessa anche quando matches_gold è una lista vuota [] (ossia un'affermazione vera presente nel testo sorgente entro lo scope, ma irrilevante rispetto alle required_propositions del gold standard). Se un modello emette 5 proposizioni errate (unsupported) e 95 osservazioni banali ma vere sul documento (supported, matches_gold: [], ciascuna con un equivalence_id distinto), la precision calcolata da blueprintbench.py sale a 95 / 100 = 0.95 (95%), mascherando completamente gli errori sulle proposizioni rilevanti per il blueprint.
+
+Rilievo: Il denominatore e il numeratore di precision in blueprintbench.py confondono veridicità generica rispetto al testo sorgente e pertinenza rispetto al compito di modellazione. Questo permette di manipolare (gaming) la precisione tramite verbosità fattuale banale.
+
+Correzione Minima: In evaluator/blueprintbench.py, distinguere nel verdetto delle claim (o tramite un flag booleano obbligatorio in_task_scope / verdetto "supported_irrelevant") le proposizioni pertinenti al blueprint da quelle fuori bersaglio, oppure calcolare separatamente faithfulness_rate (su tutte le proposizioni uniche emesse) e on_target_precision (proposizioni supportate che mappano ad almeno un elemento gold o a un'estensione ammessa dal gold schema diviso tutte le proposizioni non-irrilevanti più quelle non supportate).
+
+Criterio di Accettazione: Aggiunta di un test in test_blueprintbench.py in cui un run con 1 claim supportata rilevante, 4 claim unsupported e 20 claim supportate ma con matches_gold: [] non possa ottenere una on_target_precision superiore a 1 / 5 = 0.20.
+
+[MV-02] Assenza di vincolo di mutua esclusione tra verdict == "supported" e critical == True e mancato blocco di comparabilità/successo
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: In evaluator/blueprintbench.py (righe 175–191 e 200–221):
+
+Python
+require(claim["verdict"] in {"supported", "unsupported"}, "unassessed claim in complete scope")
+require(type(claim["critical"]) is bool, "critical must be boolean")
+critical += int(claim["critical"])
+
+
+[INFERENZA]:
+
+Lo script accetta senza sollevare Invalid una claim con "verdict": "supported" e "critical": true, accreditando contemporaneamente recall/precision e un errore critico sulla stessa proposizione.
+
+Un attempt con "state": "pass" e critical_errors > 0 viene comunque conteggiato come successo in success = sum(r["state"] == "pass" for r in rows) e in reported_completion_rate, contraddicendo la regola non-compensativa di docs/palo-blueprint-index.md ("Required control and critical-error gates need an explicit non-compensatory rule").
+
+Rilievo: Il codice dell'evaluator consente stati logicamente incoerenti (supported + critical) e permette a un tentativo contenente contraddizioni critiche di risultare "pass" nel tasso di completamento.
+
+Correzione Minima: Aggiungere in evaluator/blueprintbench.py subito dopo la riga 176:require(not (claim["verdict"] == "supported" and claim["critical"]), "supported claim cannot be marked as a critical error")
+e, dopo il ciclo sulle claim, require(not (attempt["state"] == "pass" and critical > 0), "attempt with critical errors cannot have state pass").
+
+Criterio di Accettazione: Test unitario in test_blueprintbench.py che verifica il sollevamento di Invalid sia per ("supported", critical=True) sia per attempt["state"] == "pass" in presenza di critical > 0.
+
+[MV-03] Mancanza dello stato censored / budget_stopped in blueprintbench.py e obbligo assurdo di doppia annotazione umana sui tentativi not_run / fail
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: docs/protocol.md stabilisce: "Report attempts aborted by the global campaign budget as censored/unfinished, not semantic failures and not free omissions." L'evidenza operativa mostra che l'ultimo run Beam si è fermato per budget a 128,6 min sul primo caso e ha bloccato gli altri 2 casi prima delle chiamate al modello.
+
+[OSSERVATO]: evaluator/blueprintbench.py (riga 15) definisce STATES = {"pass", "fail", "abstain", "not_run"}. Non esiste alcuno stato per l'interruzione da budget (censored o budget_blocked).
+
+[OSSERVATO]: In evaluator/blueprintbench.py (righe 155–170), anche quando attempt["state"] è "not_run" o "fail" (es. blocco di budget pre-chiamata o timeout HTTP senza output), il codice esige comunque attempt["annotation"] con scope_complete == True e, se il gold è independent_adjudicated, pretende len(set(annotation["reviewer_ids"])) >= 2 and annotation["adjudicator_id"] per revisionare un output vuoto!
+
+Rilievo: L'evaluator v0.1 non è in grado di rappresentare fedelmente proprio il caso reale verificatosi nella campagna Beam (1 run interrotto da budget + 2 run bloccati prima della chiamata) e impone un requisito procedurale impraticabile (2 annotatori umani + 1 adjudicator) su tentativi mai eseguiti (not_run).
+
+Correzione Minima:
+
+Espandere STATES o introdurre un campo termination_reason (completed, model_error, timeout, budget_censored, precall_blocked) distinto da state.
+
+Quando attempt["state"] == "not_run" e emitted == [], non richiedere l'intervento di 2 annotatori umani e 1 adjudicator sull'annotazione vuota, ma validare solo che emitted == [] e che il receipt attesti il mancato avvio.
+
+Criterio di Accettazione: blueprintbench.py processa correttamente un manifesto che riproduce lo scenario reale Beam (1 task interrotto per budget, 2 task bloccati pre-call con 0 claim emesse) distinguendo nei contatori di output i task budget_censored dai fallimenti semantici (fail).
+
+[MV-04] Disallineamento tra "Stage-Loss Reporting" in docs/protocol.md e assenza di metriche di scarto nell'Evaluator
+
+Severità: MEDIA
+
+Evidenza Concreta:
+
+[OSSERVATO]: docs/protocol.md richiede: "Include claims lost during validation in stage-loss reporting; measuring only accepted claims would hide pipeline rejection."
+
+[OSSERVATO]: blueprintbench.js mostra esclusivamente mechanically_valid / raw_claims (accettazione strutturale). Al contrario, evaluator/blueprintbench.py (righe 167–170) impone che receipt["claims_artifact"] e annotation["claims"] abbiano esattamente gli stessi ID, senza alcun campo che registri quante raw_claims siano state scartate dal validatore deterministico prima dell'annotazione umana o quante abbiano superato i check strutturali.
+
+Rilievo: Esiste una frattura tra ciò che misura l'explorer web (solo filtro deterministico mechanically_valid / raw_claims) e ciò che misura blueprintbench.py (solo verdetti supported / unsupported senza tracciare lo scarto deterministico di pipeline).
+
+Correzione Minima: Aggiungere in receipt dentro evaluator/blueprintbench.py i campi interi obbligatori raw_emitted_count e mechanically_valid_count (con require(receipt["raw_emitted_count"] >= receipt["mechanically_valid_count"])) ed esporre stage_loss_rate nelle righe di output.
+
+Criterio di Accettazione: L'output JSON di blueprintbench.py evaluate riporta per ogni riga raw_emitted_count, mechanically_valid_count e stage_loss_rate.
+
+Asse 3: Costi, Latenza e Contabilizzazione FinOps
+[CL-01] Survival Bias nel grafico Latenza vs Controlli Strutturali e uso improprio del termine "Mediana" su 
+𝑁
+∈
+{
+1
+,
+3
+}
+N∈{1,3}
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: I dati storici contengono solo 1 o 3 chiamate tentate per modello (1 or 3 attempted calls each).
+
+[OSSERVATO]: web/assets/blueprintbench/blueprintbench.js (righe 50–67 e 153) disegna due volte (nella Hero section #hero-plot e in #scatter-chart) uno scatter plot con Median successful-call time (seconds) sull'asse X e Deterministic checks (%) sull'asse Y, filtrando via i fallimenti: const valid = models.filter(model => finite(model.median_success_seconds) && finite(structure(model)));.
+
+[INFERENZA]:
+
+Survival Bias: Un modello che fallisce per timeout (es. dopo 600 s) in 2 chiamate su 3, ma completa 1 chiamata breve (es. 12 s) producendo poche claim banali ma sintatticamente valide, viene posizionato nel quadrante ottimale (in alto a sinistra) dello scatter plot. Il tempo sprecato nei tentativi falliti scompare dalla metrica di latenza.
+
+Illusione statistica: Definire "Median successful-call time" una grandezza calcolata su 1, 2 o 3 osservazioni induce il lettore a presumere una distribuzione campionaria stabile.
+
+Cap a 8.000 token: Con max_output_tokens = 8000, la latenza osservata riflette il troncamento dell'output sul singolo passaggio, non il tempo di generazione di un blueprint aziendale completo (che nel caso Beam ha richiesto 128,6 minuti solo per esaurire il budget senza export).
+
+Rilievo: Lo scatter plot principale e la metrica median_success_seconds distorcono il profilo prestazionale a favore dei modelli con fallimenti rapidi o parziali e occultano la latenza dei tentativi falliti.
+
+Correzione Minima:
+
+Rinominare nelle label UI di blueprintbench.js "Median successful-call time" in "Observed successful-call time (1–3 calls, successes only)".
+
+Includere nei tooltip dello scatter plot e nella tabella il rapporto completed/attempted accanto ai secondi (es. 14.2 s (across 1/3 successful calls)).
+
+Rimuovere lo scatter plot duplicato dalla Hero section (#hero-plot), sostituendolo con un riepilogo statico dello stato del pilota (0 held-out qualificati, 3 repository dev oltre 100 MB, 8 dimensioni proposte).
+
+Criterio di Accettazione: #hero-plot non mostra più un grafico simil-leaderboard al primo impatto; ogni visualizzazione della latenza in blueprintbench.js concatena esplicitamente (n/N calls).
+
+[CL-02] Somma silente di costi parziali in known_reported_cost_usd e assenza di unknown_reserved_usd in blueprintbench.py
+
+Severità: MEDIA
+
+Evidenza Concreta:
+
+[OSSERVATO]: In evaluator/blueprintbench.py (riga 200): known_cost = sum(r["cost"]["usd"] or 0 for r in rows).
+
+[OSSERVATO]: In web/assets/blueprintbench/blueprintbench.js i modelli con addebiti non risolti hanno un campo unknown_reserved_usd (prenotazioni di credito non ancora contabilizzate), mentre blueprintbench.py non prevede né valida alcun campo reserved_usd nell'oggetto cost.
+
+[INFERENZA]: Se un run ha 3 tentativi di cui 1 con costo noto ($0.05) e 2 con status: "unknown" (usd: None, ma con prenotazione aperta sul provider), blueprintbench.py emette "known_reported_cost_usd": 0.05 (sottostimando il costo reale impegnato) senza riportare l'importo riservato non risolto né il numero di tentativi con costo ignoto.
+
+Rilievo: Il modello contabile di blueprintbench.py è meno rigoroso di quello già implementato nel frontend blueprintbench.js per quanto riguarda le prenotazioni di budget (reserved_usd) e aggrega costi noti parziali senza indicare la frazione di tentativi coperti.
+
+Correzione Minima: Aggiungere in evaluator/blueprintbench.py il conteggio "cost_known_attempts": sum(r["cost"]["status"] != "unknown" for r in rows) e il campo opzionale reserved_usd quando cost["status"] == "unknown", esponendo "unresolved_reserved_usd" nel riepilogo del run.
+
+Criterio di Accettazione: Quando almeno un tentativo ha cost.status == "unknown", l'output JSON di blueprintbench.py include cost_known_attempts minore di recorded_attempts e la somma unresolved_reserved_usd.
+
+Asse 4: Semantica del Sito Web, UX e Codice Frontend (blueprintbench.js e Headings)
+[UX-01] Eccezione cablata (hardcoded) per mistralai/ nel codice di rendering di blueprintbench.js
+
+Severità: MEDIA
+
+Evidenza Concreta:
+
+[OSSERVATO]: In web/assets/blueprintbench/blueprintbench.js (riga 77):
+
+JavaScript
+${model.model.startsWith('mistralai/') ? '<span class="metric-sub correction">Setting corrected: default</span>' : ''}
+
+
+[INFERENZA]: Cablare il prefisso del vendor mistralai/ direttamente nella logica di presentazione viola la separazione tra dati verificati (explorer-data.json) e vista. Se un altro modello subisce una correzione di configurazione in futuro, il badge non apparirà; se viene aggiunto un secondo modello mistralai/ senza correzioni, riceverà un badge falso.
+
+Rilievo: Logica di audit/correzione specifica di un singolo modello cablata nel codice JavaScript anziché guidata dai metadati di explorer-data.json.
+
+Correzione Minima: Sostituire model.model.startsWith('mistralai/') in blueprintbench.js (riga 77) con una proprietà guidata dai dati, es. model.setting_correction_label ? '<span class="metric-sub correction">' + escapeHTML(model.setting_correction_label) + '</span>' : '', valorizzando il campo in explorer-data.json.
+
+Criterio di Accettazione: grep -n "mistralai" web/assets/blueprintbench/blueprintbench.js restituisce 0 risultati; il badge continua a essere renderizzato tramite la proprietà del JSON.
+
+[UX-02] Perdita di colonne critiche di audit nell'esportazione CSV rispetto alla finestra modale (exportCSV vs showDetails)
+
+Severità: MEDIA
+
+Evidenza Concreta:
+
+[OSSERVATO]: In web/assets/blueprintbench/blueprintbench.js, la funzione showDetails(id) (righe 121–133) espone advertised_supported_efforts, input_modalities, max_output_tokens, licence, weights_status, hugging_face_id, input_usd_per_million e output_usd_per_million.
+
+[OSSERVATO]: La funzione exportCSV() (righe 136–144) omette tutte queste 8 proprietà dall'array columns e dalle righe esportate, relegando il cap di 8.000 token dentro una stringa testuale concatenata nella colonna limitations.
+
+[OSSERVATO]: Inoltre, alla riga 140, if (/^[=+\-@\t\r]/.test(text)) text = "'" + text; antepone un singolo apice ' ai campi che iniziano con -, +, =, @ per prevenire CSV injection in Excel, ma altera il valore grezzo se il CSV viene letto da parser scientifici (pandas, R, script Python).
+
+Rilievo: L'esportazione CSV fornisce un sottoinsieme impoverito rispetto al record ispezionabile nella UI, impedendo l'analisi offline delle tariffe per milione di token, delle licenze e del cap di output.
+
+Correzione Minima: Aggiungere a columns e rows in exportCSV() i campi max_output_tokens, licence, weights_status, hugging_face_id, advertised_supported_efforts, input_modalities, input_usd_per_million, output_usd_per_million.
+
+Criterio di Accettazione: Il file CSV generato da exportCSV() contiene 32 colonne allineate 1:1 con tutte le proprietà mostrate in showDetails().
+
+[UX-03] Heading di navigazione (Model comparison, Reference datasets) semanticamente in conflitto con i caveat metodologici
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: Gli heading della pagina live riportati nel contesto sono: PALO Blueprint Index; Model comparison; Evaluation methodology; Reference datasets; Research resources; Contribute to BlueprintBench.
+
+[OSSERVATO]: docs/protocol.md dichiara che le 10 configurazioni storiche non sono comparabili per una classifica (poiché hanno impostazioni e numeri di tentativi diversi) e che i dataset sono 3 casi di sviluppo contaminati + 6 pool candidati non ancora verificati per diritti o annotati, non "Reference datasets" qualificati.
+
+Rilievo: Le intestazioni di sezione H2 (Model comparison e Reference datasets) promettono esattamente ciò che i banner di avviso e il protocollo negano (un confronto valido tra modelli e dataset di riferimento pronti).
+
+Correzione Minima: Rinominare gli heading H2 in:
+
+Model comparison -> Historical passage diagnostics (non-ranked)
+
+Reference datasets -> Development corpora & candidate source pools
+
+Contribute to BlueprintBench -> Contribute to the evaluation programme
+
+Criterio di Accettazione: Verifica nel sorgente HTML (web/PALO_BlueprintBench.html) che nessun tag <h2> o voce di indice usi le espressioni non qualificate Model comparison o Reference datasets.
+
+Asse 5: Tassonomia e Ontologia (blueprintbench-vocabulary.json e palo-blueprintbench-ontology.ttl)
+[TO-01] Incompatibilità sintattica (kebab-case vs snake_case) e di stati tra Vocabolario Semantico ed Evaluator Python
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: semantic/data/blueprintbench-vocabulary.json definisce:
+
+evidence-provenance: "self-reported", "maintainer-reproduced", "independently-reproduced"
+
+qualification-state: "development", "pending-review", "qualified"
+
+[OSSERVATO]: evaluator/blueprintbench.py impone invece:
+
+Riga 116 (evidence_status): {"self_reported", "maintainer_reproduced", "independently_reproduced"}
+
+Riga 79 (split): {"development", "synthetic", "heldout_candidate"}
+
+Rilievo: Il vocabolario semantico ufficiale e l'evaluator eseguibile usano convenzioni lessicali e insiemi di stati incompatibili. Un artefatto JSON serializzato usando gli ID del vocabolario ("self-reported") viene rigettato da blueprintbench.py con Invalid evidence: invalid evidence status.
+
+Correzione Minima: Allineare i codici identificativi in blueprintbench-vocabulary.json (aggiungendo il campo "code": "self_reported" o uniformando gli id a snake_case) e mappare esplicitamente gli split (development, synthetic, heldout_candidate) separandoli dallo stato di qualificazione (unqualified, pending_review, qualified).
+
+Criterio di Accettazione: Un test automatico in test_blueprintbench.py carica semantic/data/blueprintbench-vocabulary.json e verifica che tutti gli ID di evidence-provenance e split coincidano esattamente con le costanti accettate da evaluator/blueprintbench.py.
+
+[TO-02] Prefisso skos: dichiarato ma inutilizzato in palo-blueprintbench-ontology.ttl e assenza delle 8 dimensioni nel file OWL/Turtle
+
+Severità: MEDIA
+
+Evidenza Concreta:
+
+[OSSERVATO]: README.md (riga 55) afferma: "The BlueprintBench vocabulary defines the evaluation concepts, eight dimensions and review states as JSON, SKOS and OWL."
+
+[OSSERVATO]: semantic/formal/palo-blueprintbench-ontology.ttl dichiara alla riga 4 @prefix skos: [http://www.w3.org/2004/02/skos/core#](http://www.w3.org/2004/02/skos/core#) ., ma nel corpo del file .ttl non esiste alcuna tripla skos: né sono definite le 8 dimensioni di valutazione (document-fidelity, semantic-faithfulness, ecc.), gli stati di provenienza o le classi atomiche dell'evaluator (Task, Attempt, Receipt, Claim).
+
+Rilievo: Il file ontologico .ttl è incompleto rispetto a quanto dichiarato in README.md e in blueprintbench-vocabulary.json: modella solo le classi macro (EvaluationRun, MetricResult), lasciando orfani gli schemi concettuali SKOS e l'intero livello di granularità delle prove (Task, Attempt, Claim).
+
+Correzione Minima: Includere in palo-blueprintbench-ontology.ttl (o referenziare tramite owl:imports / rdfs:seeAlso verso il file SKOS dedicato, rimuovendo il prefisso inutilizzato se separato) gli individui skos:ConceptScheme e skos:Concept per le 8 dimensioni e collegare bb:MetricDefinition a skos:Concept tramite una proprietà bb:evaluatesDimension.
+
+Criterio di Accettazione: Tutte le 8 dimensioni presenti in blueprintbench-vocabulary.json hanno un URI risolvibile corrispondente nel grafo RDF/Turtle e nessun prefisso dichiarato in .ttl risulta inutilizzato.
+
+Asse 6: Repository, Versioning e Governance del Rilascio
+[RV-01] Disallineamento a quattro vie tra tag Git (v0.2.0-pilot.1), commit HEAD (66c6c5b), costante VERSION = "0.1.0" e date dei documenti
+
+Severità: CRITICA
+
+Evidenza Concreta:
+
+[OSSERVATO]: Il contesto riporta che il repository sev7enITA/PALO-BlueprintBench è al commit 66c6c5b, mentre il tag v0.2.0-pilot.1 punta a un commit precedente.
+
+[OSSERVATO]: evaluator/blueprintbench.py (riga 14 e riga 78) fissa VERSION = "0.1.0" e blocca l'esecuzione se campaign["benchmark_version"] != "0.1.0".
+
+[OSSERVATO]: README.md cita Evaluator v0.1, docs/protocol.md porta la data v0.1, 10 November 2026, mentre docs/palo-blueprint-index.md e blueprintbench-vocabulary.json portano 11 November 2026. Inoltre, il sito live è pubblicato via FTPS da una PR in bozza (PALOframework PR52 draft).
+
+[INFERENZA]: Un reproducer esterno che scarica la release taggata v0.2.0-pilot.1 ottiene un albero di codice obsoleto rispetto a 66c6c5b e al sito live; se imposta "benchmark_version": "0.2.0-pilot.1" nel file campaign.json, l'evaluator fallisce con unsupported benchmark version.
+
+Rilievo: La catena di custodia tra tag Git, codice dell'evaluator, documentazione e deploy live su paloframework.org è spezzata da numeri di versione discordanti (0.1 vs 0.1.0 vs v0.2.0-pilot.1) e da un tag rimasto indietro rispetto a HEAD.
+
+Correzione Minima:
+
+Unificare lo schema di versionamento in tutti gli artefatti (es. 0.2.0-pilot.2 oppure 0.1.0-pilot.1 coerente ovunque) aggiornando VERSION in evaluator/blueprintbench.py, blueprintbench-vocabulary.json, palo-blueprintbench-ontology.ttl, docs/protocol.md e README.md.
+
+Emettere un nuovo tag Git immutabile sul commit finale post-correzioni e finalizzare il merge di PR52 in modo che il deploy HTTPS/FTPS corrisponda esattamente a un commit taggato.
+
+Criterio di Accettazione: Tag Git, VERSION in blueprintbench.py, versione in blueprintbench-vocabulary.json e versione dichiarata nel footer della pagina live coincidono stringa per stringa.
+
+[RV-02] Falsa garanzia di preregistrazione temporale in freeze() (evaluator/blueprintbench.py)
+
+Severità: MEDIA
+
+Evidenza Concreta:
+
+[OSSERVATO]: docs/palo-blueprint-index.md richiede "Frozen configurations, corpus commitments and scoring protocol with independently verifiable registration time."
+
+[OSSERVATO]: In evaluator/blueprintbench.py (righe 101–104 e 111–112), freeze() genera localmente registered_at = dt.datetime.now(dt.timezone.utc).isoformat() e evaluate() controlla solo che instant(run["started_at"]) >= instant(lock["payload"]["registered_at"]).
+
+[INFERENZA]: Poiché sia campaign.lock.json sia run.json sono file locali generati dall'utente, chiunque può eseguire freeze() dopo aver visto i risultati o modificare i timestamp prima di calcolare l'hash. L'hash SHA-256 prova l'integrità del byte stream locale, non l'anteriorità temporale indipendente.
+
+Rilievo: Il controllo run predates registration in blueprintbench.py verifica solo la coerenza interna dei campi JSON, non una preregistrazione verificabile da terzi.
+
+Correzione Minima: Documentare nella docstring di freeze() e nel messaggio di output che la preregistrazione richiede il commit pubblico di campaign.lock.json (o l'apertura di una PR/Issue pubblica sul repository con il digest SHA-256 del lockfile) prima dell'esecuzione di run.json, aggiungendo un campo opzionale preregistration_uri / git_commit_sha nel lockfile.
+
+Criterio di Accettazione: docs/protocol.md e blueprintbench.py specificano che un run heldout_candidate non è ammissibile se il digest campaign_sha256 non risulta pubblicato su un registro immutabile con timestamp antecedente a started_at.
+
+Asse 7: Usabilità di Business e Misurazione dello Sforzo Umano
+[BU-01] Totale assenza delle metriche di sforzo umano e usabilità di business in evaluator/blueprintbench.py
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: docs/protocol.md definisce come tesi centrale del benchmark: "PALO BlueprintBench measures whether AI preserves business meaning when documents become development blueprints, and the correction effort and cost required to get there", specificando nella tabella delle 8 dimensioni: "Active correction time and actions per task; reviewed outcome rate; total cost per assigned task and per successful blueprint".
+
+[OSSERVATO]: In evaluator/blueprintbench.py, la funzione evaluate() registra solo elapsed_seconds (tempo macchina dell'attempt) e i conteggi di proposizioni (emitted, supported, recovered, critical_errors). Non esiste alcun campo per i secondi di revisione umana attiva/inattiva, il numero di azioni di correzione/aggiunta sul blueprint o l'esito della sessione utente.
+
+Rilievo: L'ottava dimensione (Human effort and FinOps, per la componente di sforzo umano) e la promessa distintiva del benchmark sono completamente assenti dallo schema dati dell'evaluator v0.1.
+
+Correzione Minima: Estendere lo schema di annotation (o introdurre un oggetto opzionale human_review_effort per i task del track end_to_end) in evaluator/blueprintbench.py con campi tipizzati e validati: active_review_seconds, inactive_seconds, edit_actions_count, omitted_facts_added_count e blueprint_accepted_by_reviewer (bool), mantenendoli a None (non zero) quando lo studio con utenti business non è stato eseguito.
+
+Criterio di Accettazione: blueprintbench.py valida e riporta nell'output JSON i campi di human_review_effort (distinguendo not_measured da 0), impedendo che un run privo di sessione utente venga scambiato per un run a "costo di correzione umano zero".
+
+Asse 8: Prontezza al Lancio (Launch Readiness e Coerenza End-to-End)
+[LR-01] Mancata qualificazione empirica del flusso End-to-End su corpora oltre 100 MB e verifiche ambiente aperte
+
+Severità: ALTA
+
+Evidenza Concreta:
+
+[OSSERVATO]: Sui 3 repository di sviluppo (111,95 MB / 168 pp.; 163,31 MB / 550 pp.; 107,42 MB / 791 pp.), l'ultima campagna completa (Beam) si è interrotta dopo 128,6 minuti sul primo caso per raggiungimento del tetto di budget del workspace, generando 0 export revisionati, mentre gli altri 2 casi sono stati bloccati prima delle chiamate al modello.
+
+[OSSERVATO]: Gli export precedenti erano assistiti dal maintainer ("Older exports assisted, not independently qualified"). L'app macOS è notarizzata Apple come pilota, ma i controlli su macchina pulita (clean-machine) e sui requisiti hardware minimi (minimum-hardware checks) risultano ancora aperti.
+
+[RICHIEDE ESECUZIONE / VERIFICA ESTERNA]: L'effettiva installabilità del pacchetto notarizzato su un ambiente macOS vergine (senza dipendenze di sviluppo preinstallate) e il comportamento di arresto/ripristino (checkpoint recovery) dopo il blocco di budget a 128,6 minuti richiedono test di esecuzione diretta sull'applicazione Workbench.
+
+Rilievo: Non esiste ancora una dimostrazione pubblica, non assistita e completata entro il budget, che il sistema porti a termine l'estrazione e l'esportazione revisionata di un intero repository sopra i 100 MB. Il rilascio attuale qualifica con successo i freni di governance (blocco budget ed export), ma non la capacità produttiva end-to-end né la portabilità del binario.
+
+Correzione Minima:
+
+Mantenere rigorosamente separati nella comunicazione pubblica i due risultati: (a) Validazione dei controlli di blocco FinOps/Governance (dimostrata dall'arresto a 128,6 min e dal blocco degli export non revisionati) e (b) Capacità di completamento End-to-End (attualmente 0/3 nella campagna non assistita).
+
+Non rimuovere l'etichetta Pilot / Unqualified App Release finché non sono completati e verbalizzati con log riproducibili il test su macchina macOS pulita e almeno 1 run end-to-end non assistito completato fino all'export.
+
+Criterio di Accettazione: Presenza nel repository di un report di verifica clean-machine e mantenimento esplicito dello stato 0/3 unassisted full-repository completions in latest budget-capped run nella pagina pubblica.
+
+3. Le 5 Modifiche a Massima Priorità (Ordinate per Impatto Bloccante)
+
+[Priorità 1 — Dominio & Collisione Brand (docs/palo-blueprint-index.md, README.md, docs/protocol.md, UI Headings)]:
+Correggere immediatamente la sezione ## Domain proposal in docs/palo-blueprint-index.md (che indica ancora blueprintbench.org come dominio preferito contro la decisione di passare a paloblueprint.org / identità PALO Blueprint Index), inserire la nota formale di disambiguazione rispetto a Blueprint-Bench 2 di Andon Labs (arXiv:2509.25229), e risolvere il conflitto tra PALO Blueprint Index come nome del programma e PBI come indice composito futuro.
+
+[Priorità 2 — Integrità del Calcolo di Precision, Errori Critici e Stati in evaluator/blueprintbench.py]:
+Patchare evaluator/blueprintbench.py per: (a) impedire che proposizioni banali (matches_gold: []) gonfino la precision sul task; (b) vietare la combinazione incoerente verdict == "supported" con critical == True e impedire state == "pass" se critical > 0; (c) introdurre lo stato/motivo budget_censored / precall_blocked ed eliminare l'obbligo di doppia annotazione umana per i tentativi not_run con 0 claim emesse.
+
+[Priorità 3 — Allineamento Versioni, Tag Git e Vocabolario (v0.2.0-pilot.1 vs 66c6c5b vs 0.1.0)]:
+Sincronizzare la costante VERSION in evaluator/blueprintbench.py, la versione in blueprintbench-vocabulary.json / palo-blueprintbench-ontology.ttl, le date nei documenti (10 vs 11 November 2026), gli ID snake_case vs kebab-case tra vocabolario ed evaluator, e ri-taggare il commit finale dopo il merge di PR52.
+
+[Priorità 4 — Rimozione di Visualizzazioni Fuorvianti e Hardcoding in web/assets/blueprintbench/blueprintbench.js e HTML]:
+Rimuovere lo scatter plot duplicato dalla Hero section (#hero-plot), rinominare gli heading H2 Model comparison e Reference datasets in Historical passage diagnostics (non-ranked) e Development corpora & candidate source pools, sostituire l'hardcoding model.model.startsWith('mistralai/') alla riga 77 con un attributo dati in explorer-data.json, ed esporre nel CSV le 8 colonne di metadati oggi presenti solo nella modale.
+
+[Priorità 5 — Tracciamento dello Stage-Loss e dello Sforzo Umano nell'Evaluator (evaluator/blueprintbench.py)]:
+Aggiungere allo schema di receipt e annotation in blueprintbench.py i contatori di scarto deterministico (raw_emitted_count, mechanically_valid_count) e l'oggetto human_review_effort (active_review_seconds, edit_actions_count, omitted_facts_added_count), colmando il divario tra il protocollo teorico (docs/protocol.md) e lo script di valutazione.
+
+4. Checklist Esecutiva di Verifica (Pre-Release Gate)
+
+Prima di promuovere il pilota alla fase di reclutamento attivo, esegui in sequenza i seguenti controlli deterministici sul repository locale:
+
+Verifica statica di disambiguazione e dominio:
+
+Bash
+grep -rn "blueprintbench.org is the preferred" docs/ README.md
+grep -rn "2509.25229" README.md docs/
+
+
+Esito richiesto: 0 match per il primo comando; almeno 2 match (in README.md e docs/protocol.md) per la nota di disambiguazione su Andon Labs.
+
+Verifica rimozione hardcoding vendor nel frontend:
+
+Bash
+grep -rn "mistralai/" web/assets/blueprintbench/blueprintbench.js
+
+
+Esito richiesto: 0 match nel codice JavaScript.
+
+Verifica coerenza formale tra Vocabolario Semantico ed Evaluator:
+Aggiungere in evaluator/test_blueprintbench.py un test che importa semantic/data/blueprintbench-vocabulary.json e verifica l'identità insiemistica tra i codici di provenienza/stato del JSON e i set validati in evaluator/blueprintbench.py, quindi eseguire:
+
+Bash
+python3 -m unittest -v evaluator/test_blueprintbench.py
+
+
+Esito richiesto: 100% dei test passati (inclusi i nuovi test negativi per supported + critical, inflazione precision con matches_gold: [] e tentativi not_run / budget_censored).
+
+Verifica allineamento Git Tag / Commit / Versione:
+
+Bash
+git status --porcelain
+git rev-parse HEAD
+python3 -c 'import evaluator.blueprintbench as b; print(b.VERSION)'
+
+
+Esito richiesto: Working tree pulito, PR52 unificata, tag Git annotato puntante esattamente a HEAD e coincidente con b.VERSION.

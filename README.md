@@ -51,3 +51,11 @@ The project and tooling are free. External model providers may charge for infere
 ## Semantic vocabulary
 
 The [BlueprintBench vocabulary](semantic/README.md) defines the evaluation concepts, eight dimensions and review states as JSON, SKOS and OWL.
+
+## Naming clarification
+
+PALO BlueprintBench evaluates business-document interpretation and is unrelated to Andon Labs' [Blueprint-Bench / Blueprint-Bench 2](https://arxiv.org/abs/2509.25229), which evaluates spatial floor-plan generation. See the [dedicated-domain proposal](docs/palo-blueprint-index.md#domain-proposal). No dedicated domain is registered by this project at this stage.
+
+## Cross-review and next study
+
+The [11 November cross-review](docs/cross-review-2026-11-11.md) records GLM, Gemini and LM Studio advice, six reproduced evaluator behaviours and disagreements retained during adjudication. The [Specification Fidelity Study](docs/specification-fidelity-study.md) proposes a procurement-focused calibration and human-review study. These documents add no qualified score or application release.

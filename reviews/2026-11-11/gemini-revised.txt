@@ -1,0 +1,82 @@
+1. Rettifiche Esplicite e Riadjudicazione dei Rilievi Precedenti
+
+Alla luce dei due file integrati (docs/versioning.md e il vocabolario formale SKOS .ttl) e dei chiarimenti metodologici, i seguenti rilievi vengono formalmente ritirati o riclassificati:
+
+[TO-02] Mancanza di SKOS per le 8 dimensioni e stati — RITIRATO: Il file SKOS fornito definisce integralmente bb:evaluation-dimension, bb:evidence-provenance, bb:qualification-state e bb:index-availability tramite skos:ConceptScheme e skos:Concept. Resta solo un refuso cosmetico in palo-blueprintbench-ontology.ttl (riga 4: @prefix skos: dichiarato ma non usato in quel singolo file).
+
+[RV-01 / RV-02] Conflitto di versione (v0.2.0-pilot.1 vs 0.1.0) e preregistrazione — RITIRATO (Architettura) / RIDOTTO A SYNC OPERATIVO: docs/versioning.md documenta esplicitamente il versionamento disaccoppiato dei componenti ("Initial repository release: v0.2.0-pilot.1, containing explorer v0.2 and evaluator v0.1") e dichiara già che tag e hash Git non costituiscono di per sé preregistrazione indipendente. Resta unicamente la necessità operativa di emettere un nuovo tag dopo il commit 66c6c5b.
+
+[MV-01] Calcolo della Precision in evaluator/blueprintbench.py — RICLASSIFICATO DA CRITICO A BASSA (Allineamento Lessicale): docs/protocol.md definisce Semantic faithfulness come "Supported propositions over all emitted assessable propositions in the declared audit scope". Poiché task["scope"] e gold["source_scope"] circoscrivono il perimetro valutabile e propositions deduplica per equivalence_id, il rapporto calcolato alla riga 196 misura correttamente la fedeltà semantica deduplicata nello scope, mentre la copertura dei fatti richiesti è catturata da recall. Non vi è difetto matematico: basta rinominare o documentare la chiave JSON "precision" come "scoped_faithfulness_precision" per evitare che venga confusa con la relevance precision.
+
+[MV-02 parziale] reported_completion_rate con errori critici — RITIRATO: reported_completion_rate è una metrica descrittiva di completamento grezzo ed è già neutralizzata ai fini di classifica da "qualified": False cablato alla riga 219.
+
+[CL-02] Gestione dei costi unknown in blueprintbench.py — RITIRATO: Il codice (righe 142–144 e 216–217) imposta già correttamente cost_complete: False e cost_per_success_usd: None in presenza di qualsiasi costo unknown, impedendo silenziose sottostime del costo per blueprint riuscito.
+
+[UX-03] Modifica degli Heading H2 — RITIRATO: Si mantengono invariati gli heading approvati (PALO Blueprint Index; Model comparison; Evaluation methodology; Reference datasets; Research resources; Contribute to BlueprintBench), demandando i caveat ai banner di stato e alle note contestuali.
+
+[MV-04 / BU-01] Stage-loss granulare e telemetria delle sessioni utente business — RICLASSIFICATI COME CAPACITÀ FUTURE (v0.2+): README.md circoscrive Evaluator v0.1 a "evidence-integrity checks and scoped, already-adjudicated semantic accounting". La telemetria dello sforzo umano (human-effort-finops), l'interprete deterministico dei contratti e lo stage-loss multi-stadio appartengono alle milestone successive del protocollo, non a difetti dello script v0.1.
+
+2. Top 5 Modifiche Prioritarie Revisionate (Difetti Reali nello Scope v0.1/v0.2)
+1. [DB-01/DB-02] Disallineamento su Dominio, Collisione Andon Labs e Ruolo di "PALO Blueprint Index"
+
+Severità: CRITICA
+
+Evidenza [OSSERVATA]: docs/palo-blueprint-index.md (## Domain proposal) dichiara ancora: "blueprintbench.org is the preferred proposed domain... paloblueprint.org is an alternative", contraddicendo la decisione operativa post-collisione di preferire paloblueprint.org con identità PALO Blueprint Index. Nessun documento nel repository contiene una clausola di disambiguazione rispetto a Blueprint-Bench 2 di Andon Labs (arXiv:2509.25229, 2025). Inoltre, docs/palo-blueprint-index.md e blueprintbench-vocabulary.json definiscono PALO BlueprintBench come programma (EvaluationProgramme) e PALO Blueprint Index solo come indice composito futuro (IndexDefinition, formula: null).
+
+Correzione Minima: Aggiornare ## Domain proposal in docs/palo-blueprint-index.md indicando paloblueprint.org / paloblueprintindex.org come opzioni primarie (senza asserire disponibilità/prezzo visto l'HTTP 403 RDAP), inserire in README.md e docs/protocol.md una nota di disambiguazione da Andon Labs (arXiv:2509.25229), e chiarire in docs/palo-blueprint-index.md se PALO Blueprint Index identifica ora l'intero programma o solo la metrica sintetica futura.
+
+Criterio di Accettazione: Zero occorrenze di "blueprintbench.org is the preferred" nei sorgenti e presenza esplicita della citazione disambiguante 2509.25229.
+
+2. [MV-03] Obbligo improprio di doppia annotazione umana sui tentativi not_run in evaluator/blueprintbench.py
+
+Severità: ALTA
+
+Evidenza [OSSERVATA]: In evaluator/blueprintbench.py (righe 155–170), per ogni elemento di run["attempts"] — inclusi i tentativi con state == "not_run" (es. task bloccati prima della chiamata al modello per esaurimento del budget di campagna, come gli ultimi 2 casi Beam) — il codice carica obbligatoriamente attempt["annotation"], pretende scope_complete is True e, se il gold è independent_adjudicated, richiede len(set(annotation["reviewer_ids"])) >= 2 and annotation["adjudicator_id"] per non far scattare il blocco independent_human_gold_or_assessment_missing su un tentativo mai eseguito (emitted == []).
+
+Correzione Minima: Quando attempt["state"] == "not_run", verificare che emitted == [] e che annotation["claims"] == [] senza esigere la firma di 2 revisori umani e 1 adjudicator su un output inesistente, e aggiungere in receipt un campo opzionale not_run_reason (es. budget_blocked_precall).
+
+Criterio di Accettazione: Un test in test_blueprintbench.py con 1 tentativo not_run (claims: [], reviewer_ids: []) non invalida il flag all_human per i restanti tentativi eseguiti.
+
+3. [MV-02-bis] Assenza di mutua esclusione tra verdict == "supported" e critical == True in evaluator/blueprintbench.py
+
+Severità: MEDIA
+
+Evidenza [OSSERVATA]: In evaluator/blueprintbench.py (righe 175–191), lo script valida claim["verdict"] in {"supported", "unsupported"} e type(claim["critical"]) is bool in modo indipendente. Una singola proposizione può essere annotata come "verdict": "supported" e contemporaneamente "critical": true, incrementando sia i contatori positivi (supported, matched, precision, recall) sia critical_errors.
+
+Correzione Minima: Aggiungere alla riga 178 di evaluator/blueprintbench.py: require(not (claim["verdict"] == "supported" and claim["critical"]), "supported claim cannot be marked critical").
+
+Criterio di Accettazione: Un test unitario in test_blueprintbench.py verifica che ("supported", critical=True) sollevi Invalid.
+
+4. [TO-01] Disallineamento dei codici (kebab-case vs snake_case) tra Vocabolario/SKOS ed Evaluator
+
+Severità: MEDIA
+
+Evidenza [OSSERVATA]: blueprintbench-vocabulary.json e il file SKOS definiscono gli ID di evidence-provenance come self-reported, maintainer-reproduced, independently-reproduced, mentre evaluator/blueprintbench.py (riga 116) accetta solo {"self_reported", "maintainer_reproduced", "independently_reproduced"}.
+
+Correzione Minima: Aggiungere skos:notation nel file SKOS e "evaluatorCode" in blueprintbench-vocabulary.json (oppure normalizzare la validazione in blueprintbench.py).
+
+Criterio di Accettazione: Corrispondenza verificata via test tra i concetti di blueprintbench-vocabulary.json e il set validato alla riga 116 di blueprintbench.py.
+
+5. [UX-01/UX-02/RV-sync] Hardcoding vendor (mistralai/), colonne CSV omesse in blueprintbench.js e ri-tag Git
+
+Severità: MEDIA
+
+Evidenza [OSSERVATA]:
+
+In web/assets/blueprintbench/blueprintbench.js (riga 77), il badge "Setting corrected: default" è cablato sul prefisso stringa model.model.startsWith('mistralai/') anziché derivato da un campo dati di explorer-data.json.
+
+In exportCSV() (righe 136–140), mancano 8 campi presenti nel modale showDetails() (max_output_tokens, licence, weights_status, hugging_face_id, advertised_supported_efforts, input_modalities, input_usd_per_million, output_usd_per_million).
+
+Il commit 66c6c5b è successivo al tag v0.2.0-pilot.1.
+
+Correzione Minima: Guidare il badge di correzione tramite un campo opzionale in explorer-data.json, allineare le colonne di exportCSV() a showDetails(), e taggare il commit finale come v0.2.0-pilot.2.
+
+Criterio di Accettazione: Zero occorrenze di mistralai/ in blueprintbench.js, CSV esportato completo di tutte le proprietà del modale e tag Git allineato a HEAD.
+
+3. Stato Sintetico Confermato
+
+Recruitment: CONDITIONAL GO (subordinato alle correzioni 1 e 2).
+
+Model Ranking: NO-GO (0 held-out qualificati; sole diagnostiche storiche non classificabili).
+
+App Qualification: NO-GO / IN CORSO (0 export revisionati nell'ultimo run Beam non assistito per blocco budget a 128,6 min; verifiche clean-machine e minimum-hardware ancora aperte).

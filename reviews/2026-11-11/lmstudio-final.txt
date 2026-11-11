@@ -1,0 +1,43 @@
+**Stato attuale:** *Pilot di ricerca non qualificato*. Non è un benchmark validato né una classifica modelli.
+
+**1. Collisione di Nomenclatura (Alta)**
+*   **Evidenza:** Andon Labs possiede "Blueprint-Bench 2" per ragionamento spaziale. Il dominio `blueprintbench.org` è in collisione diretta; RDAP HTTP403 impedisce la verifica di disponibilità.
+*   **Inferenza:** L'uso del nome attuale crea confusione semantica immediata con un benchmark esistente e distinto.
+*   **Correzione minima:** Adottare `paloblueprint.org` come dominio canonico e rinominare l'identità pubblica in "PALO Blueprint Index". Evitare il suffisso "Bench" nel titolo principale finché non si acquista un dominio protetto.
+*   **Check di accettazione:** Registro RDAP confermato per `paloblueprint.org`; header HTML aggiornato; link a Andon Labs citato come disambiguazione nella pagina metodologia.
+
+**2. Semantica dei Dati e Errori Critici (Alta)**
+*   **Evidenza:** Claim critici duplicati gonfiano i conteggi degli errori; "supported+critical" è accettato erroneamente; il passaggio dichiarato può avere precisione/ricall zero.
+*   **Inferenza:** La logica di scoring attuale non distingue tra *presenza* dell'errore e *gravità* unica, violando la fedeltà semantica.
+*   **Correzione minima:** Implementare una regola di deduplicazione basata su hash del contenuto per i claim critici prima dell'aggregazione. Introdurre un gate non compensatorio: se esiste un errore critico non risolto, lo stato è "Failed" indipendentemente dal punteggio aggregato.
+*   **Check di accettazione:** Test unitario che dimostra che due claim identici contano come uno; test di integrazione dove un run con precisione zero ma "pass" dichiarato viene marcato come `qualified: false`.
+
+**3. Validità Metodologica e Campione (Media-Alta)**
+*   **Evidenza:** 10 configurazioni storiche, solo 1-3 chiamate ciascuna. Nessun heldout indipendente. I corpora di sviluppo (fino a 791 pagine) non sono qualificati per lo scoring finale.
+*   **Inferenza:** La varianza statistica è troppo alta per affermare stabilità. L'assenza di un set "heldout" impedisce la generalizzazione.
+*   **Correzione minima:** Definire una coorte di valutazione separata (almeno 3 famiglie di documenti indipendenti) con annotazione cieca. Congelare il protocollo prima dell'esecuzione.
+*   **Check di accettazione:** Pubblicazione del file `protocol_v1.json` con hash SHA-256; esecuzione di almeno 3 run ripetuti sulla stessa configurazione per calcolare l'intervallo di confidenza.
+
+**4. Costi e FinOps (Media)**
+*   **Evidenza:** Costi "N/A" per prenotazioni non risolte. Un run Beam si è fermato dopo 128 min senza export revisionato.
+*   **Inferenza:** L'assenza di contabilità completa rende impossibile confrontare l'efficienza economica tra modelli.
+*   **Correzione minima:** Tracciare il costo per token e per secondo di latenza anche nei run falliti o interrotti. Distinguere esplicitamente "costo stimato" da "costo fatturato".
+*   **Check di accettazione:** CSV di export che include colonne `estimated_cost_usd` e `actual_latency_ms` per ogni attempt, inclusi i timeout.
+
+**5. Versioning e Riproducibilità (Media)**
+*   **Evidenza:** Commit `66c6c5b` vs tag `v0.2.0-pilot.1`. PR52 in draft ma già pubblicato via FTPS.
+*   **Inferenza:** La discrepanza tra stato del repo e stato live crea ambiguità sulla versione esatta testata.
+*   **Correzione minima:** Sincronizzare il tag Git con la release pubblicata. Aggiungere un campo `build_commit` nell'header della pagina web per tracciare l'esatto commit servito.
+*   **Check di accettazione:** Verifica che l'hash del file HTML servito corrisponda all'hash nel CHANGELOG e al commit Git specificato.
+
+**Priorità Top 5:**
+1. Rinominazione a "PALO Blueprint Index" + dominio `paloblueprint.org`.
+2. Deduplicazione claim critici + gate non compensatorio.
+3. Creazione coorte heldout indipendente con annotazione cieca.
+4. Tracciamento costi/latenza per run falliti.
+5. Sincronizzazione tag Git e versione live.
+
+**Status Finale:**
+*   **Reclutamento (Evaluatori):** *Aperto*. Serve personale per l'annotazione cieca della coorte heldout.
+*   **Ranking Modelli:** *Sospeso*. I dati attuali sono diagnostici, non comparativi validati.
+*   **Qualificazione App:** *Non qualificata*. Manca la verifica su macchina pulita e il superamento dei gate semantici critici.

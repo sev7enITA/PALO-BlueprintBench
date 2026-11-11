@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-11",
+  "source_commit": "66c6c5b",
+  "scope": "static public-source review plus six synthetic evaluator probes; no new Workbench end-to-end qualification",
+  "web_reviewers": [
+    {
+      "model_ui": "GLM-5.3",
+      "effort_ui": "Max",
+      "completed": true,
+      "scope": "full packet; feedback follow-up informed by reproduced findings"
+    },
+    {
+      "model_ui": "Gemini 4 Argon",
+      "effort_ui": "Alta (High)",
+      "completed": true,
+      "scope": "full packet and source supplement",
+      "additional_feedback_followup": "refusal"
+    }
+  ],
+  "local_review": {
+    "model_returned": "qwen3.8-27b-uncensored",
+    "quantization_reported": "Q6_K",
+    "loaded_context_tokens": 8192,
+    "endpoint": "/v1/completions",
+    "mode": "direct answer, explicit closed thinking block",
+    "usage": {
+      "prompt_tokens": 2878,
+      "completion_tokens": 1161,
+      "total_tokens": 4039
+    },
+    "finish_reason": "stop",
+    "prior_incomplete_attempts": [
+      {
+        "max_tokens": 3500,
+        "finish_reason": "length",
+        "final_content_empty": true
+      },
+      {
+        "max_tokens": 5200,
+        "finish_reason": "length",
+        "final_content_empty": true
+      }
+    ]
+  },
+  "packets": {
+    "full-review-packet.txt": {
+      "sha256": "c1ca479fee1d7611204faf3f7cbbdc48924dd47f0b2f6596a54af68160518923",
+      "bytes": 84376
+    },
+    "local-review-packet.txt": {
+      "sha256": "e129a5b32488248bcb1a20fbd9f588fb86ec0bfc18ca593436352024c0692d92",
+      "bytes": 11672
+    }
+  },
+  "openrouter_calls": 0,
+  "tests_passed": 17,
+  "probe_cases": 6,
+  "qualified_entries_added": 0,
+  "domain_purchased": false,
+  "domain_availability": "unverified; RDAP HTTP 403",
+  "artifact_sha256": {
+    "gemini-initial.txt": "87662bae613812175a88ee2278fb5fef018ad4ed0b75fdd02ce154c97d30189d",
+    "gemini-feedback-followup.txt": "0ad47a76b7e78bdb6260ce314151c63fc30ba3d3eda626e4476e9b3009e5d0ac",
+    "reproduce_findings.py": "9215c27f7c914e6e2a9fb0a501418249dc1a561e370e77910bbb81c11873adc1",
+    "glm-final.txt": "94ceff81f5335730e91a7a9508598e6c544f21781adf4a8d01f626f275c13188",
+    "lmstudio-final.txt": "745748da41e393be78ddeecc055d563d8b9a9a57f445347ca765c4b00ec15f75",
+    "gemini-revised.txt": "cd39e2554187c49719063aa93a80b553d2ee1702965a042cbe345632a26a665d",
+    "reproduced-findings.json": "d5dd8c56f5fd323a935335ef44e32a09194355770705e3358b5175b4575db568"
+  }
+}

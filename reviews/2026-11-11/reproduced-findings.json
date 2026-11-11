@@ -1,0 +1,201 @@
+{
+  "source_commit": "66c6c5b",
+  "cases": {
+    "duplicate_critical": {
+      "qualified": false,
+      "reported_completion_rate": 0.3333333333333333,
+      "critical_errors": 4,
+      "cost_complete": true,
+      "cost_per_success_usd": 0.0,
+      "comparability_blocks": [
+        "development_or_synthetic_data",
+        "fewer_than_three_repetitions",
+        "independent_human_gold_or_assessment_missing"
+      ],
+      "affected_row": {
+        "task_id": "inverted_rule",
+        "repetition": 1,
+        "family": "synthetic-purchasing",
+        "domain": "procurement",
+        "state": "fail",
+        "emitted": 5,
+        "supported": 1,
+        "gold": 2,
+        "recovered": 1,
+        "critical_errors": 4,
+        "unique_propositions": 2,
+        "precision": 0.5,
+        "recall": 0.5,
+        "elapsed_seconds": 0,
+        "cost": {
+          "status": "not_incurred",
+          "usd": 0,
+          "reason": "Synthetic fixture, no inference"
+        }
+      }
+    },
+    "supported_critical": {
+      "qualified": false,
+      "reported_completion_rate": 0.3333333333333333,
+      "critical_errors": 3,
+      "cost_complete": true,
+      "cost_per_success_usd": 0.0,
+      "comparability_blocks": [
+        "development_or_synthetic_data",
+        "fewer_than_three_repetitions",
+        "independent_human_gold_or_assessment_missing"
+      ],
+      "affected_row": {
+        "task_id": "faithful",
+        "repetition": 1,
+        "family": "synthetic-purchasing",
+        "domain": "procurement",
+        "state": "pass",
+        "emitted": 2,
+        "supported": 2,
+        "gold": 2,
+        "recovered": 2,
+        "critical_errors": 2,
+        "unique_propositions": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "elapsed_seconds": 0,
+        "cost": {
+          "status": "not_incurred",
+          "usd": 0,
+          "reason": "Synthetic fixture, no inference"
+        }
+      }
+    },
+    "declared_pass": {
+      "qualified": false,
+      "reported_completion_rate": 0.6666666666666666,
+      "critical_errors": 1,
+      "cost_complete": true,
+      "cost_per_success_usd": 0.0,
+      "comparability_blocks": [
+        "development_or_synthetic_data",
+        "fewer_than_three_repetitions",
+        "independent_human_gold_or_assessment_missing"
+      ],
+      "affected_row": {
+        "task_id": "inverted_rule",
+        "repetition": 1,
+        "family": "synthetic-purchasing",
+        "domain": "procurement",
+        "state": "pass",
+        "emitted": 2,
+        "supported": 0,
+        "gold": 2,
+        "recovered": 0,
+        "critical_errors": 1,
+        "unique_propositions": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "elapsed_seconds": 0,
+        "cost": {
+          "status": "not_incurred",
+          "usd": 0,
+          "reason": "Synthetic fixture, no inference"
+        }
+      }
+    },
+    "rehashed_lock": {
+      "qualified": false,
+      "reported_completion_rate": 0.3333333333333333,
+      "critical_errors": 1,
+      "cost_complete": true,
+      "cost_per_success_usd": 0.0,
+      "comparability_blocks": [
+        "fewer_than_three_repetitions",
+        "independent_human_gold_or_assessment_missing"
+      ],
+      "affected_row": {
+        "task_id": "faithful",
+        "repetition": 1,
+        "family": "synthetic-purchasing",
+        "domain": "procurement",
+        "state": "pass",
+        "emitted": 2,
+        "supported": 2,
+        "gold": 2,
+        "recovered": 2,
+        "critical_errors": 0,
+        "unique_propositions": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "elapsed_seconds": 0,
+        "cost": {
+          "status": "not_incurred",
+          "usd": 0,
+          "reason": "Synthetic fixture, no inference"
+        }
+      }
+    },
+    "one_claim_all_gold": {
+      "qualified": false,
+      "reported_completion_rate": 0.3333333333333333,
+      "critical_errors": 1,
+      "cost_complete": true,
+      "cost_per_success_usd": 0.0,
+      "comparability_blocks": [
+        "development_or_synthetic_data",
+        "fewer_than_three_repetitions",
+        "independent_human_gold_or_assessment_missing"
+      ],
+      "affected_row": {
+        "task_id": "faithful",
+        "repetition": 1,
+        "family": "synthetic-purchasing",
+        "domain": "procurement",
+        "state": "pass",
+        "emitted": 1,
+        "supported": 1,
+        "gold": 2,
+        "recovered": 2,
+        "critical_errors": 0,
+        "unique_propositions": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "elapsed_seconds": 0,
+        "cost": {
+          "status": "not_incurred",
+          "usd": 0,
+          "reason": "Synthetic fixture, no inference"
+        }
+      }
+    },
+    "unknown_cost": {
+      "qualified": false,
+      "reported_completion_rate": 0.3333333333333333,
+      "critical_errors": 1,
+      "cost_complete": false,
+      "cost_per_success_usd": null,
+      "comparability_blocks": [
+        "development_or_synthetic_data",
+        "fewer_than_three_repetitions",
+        "independent_human_gold_or_assessment_missing"
+      ],
+      "affected_row": {
+        "task_id": "faithful",
+        "repetition": 1,
+        "family": "synthetic-purchasing",
+        "domain": "procurement",
+        "state": "pass",
+        "emitted": 2,
+        "supported": 2,
+        "gold": 2,
+        "recovered": 2,
+        "critical_errors": 0,
+        "unique_propositions": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "elapsed_seconds": 0,
+        "cost": {
+          "status": "unknown",
+          "usd": null
+        }
+      }
+    }
+  }
+}
