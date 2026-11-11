@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: unified model catalogue and procurement extensions
+
+Aligned overview and leaderboard on one catalogue, retaining every original historical model identity. Added internal campaigns for 12 additional configurations and 3 exact legacy identities, with unchanged source/prompts/labels and 3 repetitions. Exposed per-configuration reasoning/output limits, missing assignments and compatibility blocks. Applied the PALO dark palette, sortable/filterable columns, shared URL/CSV state, and moved detailed qualification to Limits, limitations and further development. No independent validation or PBI assigned.
+
 ## 2026-11-11: leaderboard and source-bound structured data
 
 Published a dedicated evidence workspace with separate internal, historical and qualified-result views. Added fixed-denominator matrices, primary/post-hoc lens, configuration comparisons, source/output translation inspection and recorded-call accounting. Qualified results remain empty. Replaced model-list metadata with two explicit Dataset nodes generated from evidence, with schema regression checks. Fable 5.2 provided advisory design insights; it was not added to the tested cohort or represented as independent validation.

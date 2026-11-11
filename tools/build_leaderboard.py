@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import re
+import build_expansion
 
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'web'
@@ -12,9 +13,58 @@ OVERVIEW=SITE+'PALO_BlueprintBench.html'
 BOARD=SITE+'PALO_BlueprintBench_Leaderboard.html'
 SOURCE_REVISION='c85624939bde546d67f3869c656cfb8b97b7ae00'
 EVIDENCE='https://github.com/sev7enITA/PALO-BlueprintBench/tree/'+SOURCE_REVISION+'/internal_tests/2026-11-11-frontier'
+EXPANSION_REVISION='2b054692baea4ca1a892e3d39453a76097a64f74'
 
 
 def read(p):return json.loads(p.read_bytes().decode('utf-8'))
+
+
+def internal_report(data):
+    d=data['internal']
+    report=f'''# Internal procurement tests and model catalogue
+
+Revision {data['version']}. Internal tests; independent qualification pending.
+
+Both the [launch page]({OVERVIEW}) and [leaderboard]({BOARD}) use this evidence dataset. The internal view contains **{len(d['models'])} distinct model IDs**, with the original ten historical identities preserved in a separate adapter-diagnostics view. A model with two evidence cohorts has two configuration rows; they are not two different models.
+
+## Execution scope
+
+Three short synthetic procurement cases, one maintainer-authored family, 36 source rules, 108 seeded statements, two tasks and three repetitions. Source, prompt and draft expected-label bytes are unchanged across all campaigns. **{d['assigned_calls']} assigned task slots; {d['attempted_calls']} dispatched requests; {d['completed_calls']} complete responses; {d['failed_calls']} failed or incomplete responses; {d['not_run']} unrun assignments**, including {d['precall_blocked_assignments']} compatibility blocks. Failures and missing assignments remain in the fixed denominator.
+
+| Configuration | Complete / assigned calls | Draft-label matches / assigned | Missing classifications | Known inference USD | Unknown charges | Unrun assignments |
+|---|---:|---:|---:|---:|---:|---:|
+'''
+    for m in sorted(d['models'],key=lambda m:m['name']):
+        report+=f"| {m['name']} | {m['completed_calls']}/{m['assigned_calls']} | {m['verification_correct']}/324 | {m['verification_missing']} | {m['provider_reported_cost_usd']:.7f} | {m['unknown_cost_calls']} | {m['not_run']} |\n"
+    report+='''
+These counts measure agreement with assistant-draft labels and delivery under each serving configuration. They are not independently adjudicated accuracy or a qualified model ranking. The primary label for invoice P002 remains contested; the optional post-hoc sensitivity excludes it uniformly across every model and repetition. Missing classifications are not assumed wrong semantic judgments.
+
+## Compatibility and configuration
+
+Sakana Fugu Max is catalogued with no supported max_tokens or response_format controls. Under the frozen strict-parameter, bounded-output policy its supplement assignments are blocked before dispatch. Zero request charge is explicitly not_incurred; latency and semantic output are unavailable. Its original historical transport failures remain preserved. This does not establish model incapability.
+
+Schematron Small and Turbo use an advertised 8,192-token output cap and have no reasoning control. Other runnable configurations use 32,768. Supported high reasoning is used where offered, xhigh for Bonsai27B where high is unavailable, and enabled reasoning for endpoints without effort enums. Provider/quantisation/reasoning differences are retained in the metadata. High effort is not equal compute. Temperature is provider default and seed omitted. Endpoint fallback and inference retries are disabled.
+
+The original baseline ran serially. The later extensions use up to four concurrent requests. Observed request duration includes network and provider scheduling; it is not a controlled speed comparison. The extensions were selected after baseline outcomes were known and retain separate campaign identities.
+
+## Source-indexed translations
+
+The original three-model baseline has 27 assistant-reviewed draft exports. The new extensions preserve source-indexed raw outputs as unreviewed model drafts; no prior review, business approval or blueprint-export result is inherited. Exact source-copy counts and source/output inspection are descriptive. A wording change is not automatically an improvement.
+
+## Cost and limits
+
+'''
+    report+=f"Known provider-reported charges in the internal dataset total USD {sum(m['provider_reported_cost_usd'] for m in d['models']):.7f}. There are {d['unknown_cost_calls']} unknown-charge records carrying USD {d['unknown_cost_reserved_usd']:.7f} in conservative reservations. Reservations are not charges. The overall user-authorised ceiling remains USD40 including prior work and advisory reviews; this dataset's inference cost is not the full key spend. No paid retrieval, embeddings, tools or search were requested. Engineering, review, electricity and hosting costs are not measured.\n\n"
+    report+='''One synthetic authoring family, assistant-draft labels, unreviewed new translations and differing serving configurations limit interpretation. No independent custodian, blind domain annotation or independent reproduction is claimed. No PALO Blueprint Index is assigned. Detailed limitations remain in the research interface and method document.
+
+## Reproduce and inspect
+
+Run `python tools/build_leaderboard.py --check` and `python -m unittest discover -s tools -p test_leaderboard_schema.py` after installing evaluator requirements. These are offline checks; they do not make paid model calls. The raw successful responses, exact outputs, frozen inputs and request hashes are in the campaign archives. Public error bodies with account identifiers are explicitly redacted with original/public hashes. Hash consistency is not independent custody.
+
+'''
+    for c in d['campaigns']:
+        report+=f"- [{c['id']}]({c['evidence_base']}): {c['models']} models, {c['assigned_calls']} assigned tasks; {c['design']}.\n"
+    return report
 
 
 def dataset_graph(data,url):
@@ -24,10 +74,10 @@ def dataset_graph(data,url):
     historical_id=OVERVIEW+'#historical-adapter-dataset'
     description=(f"Internal tests on {internal['cases']} short synthetic procurement cases from one maintainer-authored family. "
                  f"{len(internal['models'])} API configurations, {internal['repetitions']} repetitions, {internal['assigned_calls']} assigned requests: "
-                 f"{internal['completed_calls']} complete responses and {internal['failed_calls']} provider failure. "
+                 f"{internal['completed_calls']} complete responses, {internal['failed_calls']} failed requests and {internal['not_run']} unrun assignments. "
                  f"{internal['source_rules']} source rules and {internal['verification_probes']} seeded statements. "
                  "Agreement with assistant-draft labels; one contested label; failed assignments remain in the denominator. "
-                 "No independently qualified results, model ranking or PALO Blueprint Index. Post-hoc sensitivity and scoring replay are explicitly labelled.")
+                 "The original baseline and later extensions retain their campaign identities. No independently qualified results or PALO Blueprint Index. Post-hoc sensitivity is explicitly labelled; new translations are unreviewed drafts.")
     page_description=('Explore internal procurement tests and historical adapter diagnostics in separate cohorts. '
                       'Inspect configurations, source evidence, missing responses and disputed labels. No independently qualified ranking.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
@@ -42,17 +92,18 @@ def dataset_graph(data,url):
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([
                {'@type':'ListItem','position':3,'name':'Leaderboard','item':BOARD}] if url==BOARD else [])},
-           {'@type':'Dataset','@id':internal_id,'name':'BlueprintBench internal procurement baseline tests, 11 November 2026',
-            'identifier':internal['campaign_id'],'version':data['version'],'url':OVERVIEW+'#internal-tests','description':description,
+           {'@type':'Dataset','@id':internal_id,'name':'BlueprintBench internal procurement tests and extensions, 11 November 2026',
+            'identifier':internal['campaign_id'],'version':data['version'],'url':BOARD+'?cohort=internal','description':description,
             'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'temporalCoverage':data['as_of'],
             'isAccessibleForFree':True,'creativeWorkStatus':'Internal tests; assistant-draft labels; not independently validated',
             'measurementTechnique':'Source-indexed translation and seeded-statement verification, three repetitions; fixed assigned denominators. Frozen primary labels and separate post-hoc sensitivity analysis. No confidence interval or model quality ordering.',
             'variableMeasured':['Agreement with assistant-draft labels over assigned statements','Missing and conflicting classifications','Request completion over assigned requests','Provider-reported inference charges, with unknown charges separate','Observed request latency in seconds; not a throughput comparison','Source-indexed draft translation coverage and verbatim-copy counts'],
             'about':[{'@type':'Thing','name':'Specification fidelity in synthetic procurement'}]+[{'@type':'Thing','name':m['name'],'identifier':m['id']} for m in internal['models']],
-            'isBasedOn':EVIDENCE+'/manifest.json',
+            'isBasedOn':[c['evidence_base']+'/manifest.json' for c in internal['campaigns']],
             'usageInfo':EVIDENCE+'/README.md',
-            'distribution':[{'@type':'DataDownload','name':'Internal test counts, configurations and limitations','contentUrl':SITE+'downloads/blueprintbench/internal-tests-results.json','encodingFormat':'application/json'},
-                            {'@type':'DataDownload','name':'Frozen design, public responses and post-hoc replay evidence','contentUrl':SITE+'downloads/blueprintbench/internal-tests-evidence.zip','encodingFormat':'application/zip'}]},
+            'distribution':[{'@type':'DataDownload','name':'All internal counts, configurations and limitations','contentUrl':SITE+'downloads/blueprintbench/leaderboard-data.json','encodingFormat':'application/json'},
+                            {'@type':'DataDownload','name':'Original baseline evidence and post-hoc replay','contentUrl':SITE+'downloads/blueprintbench/internal-tests-evidence.zip','encodingFormat':'application/zip'},
+                            {'@type':'DataDownload','name':'Additional model campaign evidence','contentUrl':SITE+'downloads/blueprintbench/internal-expansion-evidence.zip','encodingFormat':'application/zip'}]},
            {'@type':'Dataset','@id':historical_id,'name':'BlueprintBench historical adapter smoke tests, 10 November 2026',
             'identifier':'challenger-expanded-adapter-smoke-tests-20261110','version':historical['content_revision'],'url':OVERVIEW+'#explorer',
             'description':f"{len(historical['models'])} historical configurations assigned to three passages containing 4,994 UTF-8 bytes of document text. Structural PALO-contract diagnostics only, differing reasoning and quantisation, no repetitions or independent semantic gold. All 43 proposed relations failed checks; these observations are not a model capability ranking. Cost totals remain unreconciled.",
@@ -79,10 +130,46 @@ def outputs():
                 evidence_path=p.relative_to(base).as_posix()))
     assert len(examples)==324
     internal['translation_examples']=examples
-    data={'version':'2026-11-11.1','as_of':'2026-11-11','qualified_count':0,'internal':internal,
+    internal['campaigns']=[dict(id=internal['campaign_id'],models=len(internal['models']),assigned_calls=54,evidence_base=EVIDENCE,design='original baseline')]
+    for group in ['models','records','configurations','translation_examples']:
+        for item in internal[group]:
+            item['evidence_base']=EVIDENCE
+            item['campaign_id']=internal['campaign_id']
+    for item in internal['translation_examples']:item['review_status']='assistant_draft'
+    derived_paths=[WEB/'downloads/blueprintbench/internal-expansion-evidence.zip']
+    derived_paths += [folder/name for folder in build_expansion.EXPANSIONS if folder.exists()
+                     for name in ['analysis.json','translation-review-queue.json']]
+    before={path:path.read_bytes() if path.exists() else None for path in derived_paths}
+    try:
+        additions=build_expansion.extensions()
+        build_expansion.archive(additions)
+        generated={path:path.read_bytes() for path in derived_paths}
+    finally:
+        # A --check must detect drift, not silently repair an archive before comparison.
+        for path,body in before.items():
+            if body is None:path.unlink(missing_ok=True)
+            else:path.write_bytes(body)
+    for folder,extension in additions:
+        evidence='https://github.com/sev7enITA/PALO-BlueprintBench/tree/'+EXPANSION_REVISION+'/internal_tests/'+folder.name
+        internal['campaigns'].append(dict(id=extension['campaign_id'],models=len(extension['models']),assigned_calls=extension['assigned_calls'],evidence_base=evidence,design='extension after original baseline observations'))
+        for key in ['assigned_calls','recorded_calls','completed_calls','failed_calls','not_run','unknown_cost_calls','unknown_cost_reserved_usd']:
+            internal[key]+=extension[key]
+        for key in ['models','configurations','records','verification_rows','sensitivity','translations','translation_examples']:
+            for item in extension[key]:
+                item['campaign_id']=extension['campaign_id']
+                item['evidence_base']=evidence
+            internal[key].extend(extension[key])
+    internal['campaign_id']='internal-procurement-baseline-and-extensions-20261111'
+    internal['attempted_calls']=sum(r['state']!='not_run' for r in internal['records'])
+    internal['precall_blocked_assignments']=sum(r['state']=='not_run' for r in internal['records'])
+    internal['label_challenge']['resolution']='Preserve frozen primary labels. Post-hoc sensitivity excludes invoice P002 for every model and repetition. No independent adjudication.'
+    internal['limitations']+=['Later extensions were selected after baseline outcomes were known; identities remain visible.', 'Supported reasoning settings, endpoint quantisation and output caps differ; high effort is not equal compute.', 'New translation outputs have not received the original baseline assistant review or draft-evaluator export.']
+    data={'version':'2026-11-11.2','as_of':'2026-11-11','qualified_count':0,'internal':internal,
           'historical':read(WEB/'assets/blueprintbench/explorer-data.json'),'evidence_base':EVIDENCE,
           'qualification_gates':[{'name':n,'state':'pending'} for n in ['Named independent custodian','Independent domain annotations and adjudication','Validated severity and error-detection measure','Independent reproduction']]}
-    out={WEB/'downloads/blueprintbench/leaderboard-data.json':(json.dumps(data,indent=2)+'\n').encode()}
+    out=dict(generated)
+    out[WEB/'downloads/blueprintbench/leaderboard-data.json']=(json.dumps(data,indent=2)+'\n').encode()
+    out[WEB/'downloads/blueprintbench/internal-cohort-report.md']=internal_report(data).encode()
     for name,url in [('PALO_BlueprintBench.html',OVERVIEW),('PALO_BlueprintBench_Leaderboard.html',BOARD)]:
         path=WEB/name
         if not path.exists():continue
@@ -91,6 +178,11 @@ def outputs():
         pattern=r'<script[^>]*type="application/ld\+json"[^>]*>.*?</script>'
         assert len(re.findall(pattern,html,re.S))==1,name
         html=re.sub(pattern,lambda _: '<script type="application/ld+json">'+encoded+'</script>',html,flags=re.S)
+        metadata=(f"Explore {len(internal['models'])} model configurations in internal procurement tests, "
+                  f"{internal['assigned_calls']} assigned tasks and separate historical diagnostics. "
+                  "Inspect sources, settings and missing results. Independent validation pending.")
+        for attribute in ['name="description"','property="og:description"','name="twitter:description"']:
+            html=re.sub(r'<meta '+attribute+r' content="[^"]*">',lambda _: '<meta '+attribute+' content="'+metadata+'">',html)
         out[path]=html.encode()
     return out
 
