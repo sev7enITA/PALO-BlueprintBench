@@ -255,3 +255,7 @@ New source-indexed translations are unreviewed drafts linked to raw outputs. The
 ### Six-scenario engineering feasibility
 
 The separate [next-cycle view](https://paloframework.org/PALO_BlueprintBench_NextCycle.html) reports internal execution on six fictional procurement scenarios, 48 propositions, workflow drafts and metamorphic checks. It preserves the original cohort unchanged. See [execution method](docs/next-cycle-execution.md) and [source records](internal_tests/2026-11-11-next-cycle). Human adjudication remains pending; no numerical model ranks or independent validation are assigned.
+
+### Qualification study
+
+The [planned qualification protocol](docs/qualification-roadmap.md) defines generation tasks, the contradiction rubric, external roles and acceptance evidence. Its six gates remain open. [Archived six-scenario observations](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-11-six-scenario.1) are internal engineering evidence; presentation revision 2026-11-11.5 does not change those records.

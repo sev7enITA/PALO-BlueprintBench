@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,io,json,zipfile
 from build_references import render, START, END
+from research_publication import PRESENTATION_REVISION
 ROOT=Path(__file__).resolve().parents[1]
 DL=ROOT/'web/downloads/blueprintbench'
 RELEASE=json.loads((ROOT/'release.json').read_text(encoding='utf-8'))
@@ -22,6 +23,8 @@ def outputs():
     out={ROOT/dest:(ROOT/src).read_bytes() for src,dest in mapping.items()}
     verified=json.loads((RELEASE_RESULTS/'toolkit-verification.json').read_text(encoding='utf-8'))
     current_status={
+        'presentation_revision':PRESENTATION_REVISION, 'observation_revision':'2026-11-11.4',
+        'current_evidence_release':'study-2026-11-11-six-scenario.1',
         'as_of':RELEASE['release_date'], 'release':RELEASE['release_tag'],
         'content_revision':RELEASE['content_revision'], 'tool_version':RELEASE['evaluator_version'],
         'evidence_contract':RELEASE['evidence_contract'], 'test_count':verified['tests_passed'],
@@ -62,7 +65,7 @@ def outputs():
         sources[name] = out.get(ROOT/name,(ROOT/name).read_bytes())
     sources.update({p.relative_to(ROOT).as_posix():data for p,data in out.items()})
     sources = {name: data for name, data in sources.items() if '/presentation/' not in name or name.endswith('/.htaccess')}
-    manifest = {'release_tag':RELEASE['release_tag'],'base_release_tag':'v0.3.0-pilot.1','content_revision':RELEASE['content_revision'],'leaderboard_revision':RELEASE['leaderboard_revision'],'scope':'Selected public documentation and toolkit files only; original evidence is covered by archive manifests. Historical tags and packages retain their original bytes. Internal presentation and withdrawn testing badges are excluded. Not a complete repository manifest.','evaluator_version':RELEASE['evaluator_version'],'source_dataset_revision':RELEASE['frozen_dataset_revision'],'source_dataset_sha256':RELEASE['source_dataset_sha256'],'explorer_version':'0.3.0','qualification':'internal tests only; no independent human approval or qualified held-out entries','known_vulnerable_release':RELEASE['known_vulnerable_release'],'files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
+    manifest = {'presentation_revision':PRESENTATION_REVISION,'observation_revision':'2026-11-11.4','current_evidence_release':'study-2026-11-11-six-scenario.1','release_tag':RELEASE['release_tag'],'base_release_tag':'v0.3.0-pilot.1','content_revision':RELEASE['content_revision'],'leaderboard_revision':RELEASE['leaderboard_revision'],'scope':'Selected public documentation and toolkit files only; original evidence is covered by archive manifests. Historical tags and packages retain their original bytes. Internal presentation and withdrawn testing badges are excluded. Not a complete repository manifest.','evaluator_version':RELEASE['evaluator_version'],'source_dataset_revision':RELEASE['frozen_dataset_revision'],'source_dataset_sha256':RELEASE['source_dataset_sha256'],'explorer_version':'0.3.0','qualification':'internal tests only; no independent human approval or qualified held-out entries','known_vulnerable_release':RELEASE['known_vulnerable_release'],'files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
     out[DL/'release-manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')
     return out
 

@@ -5,6 +5,8 @@ import hashlib
 import json
 import re
 import build_expansion
+import build_next_cycle
+import research_publication
 
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'web'
@@ -90,7 +92,7 @@ def dataset_graph(data,url):
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
             'hasPart':[{'@id':internal_id},{'@id':historical_id}],
-            'version':publication()['content_revision'],'relatedLink':[DIAGNOSTICS,SITE+'PALO_BlueprintBench_NextCycle.html'],'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
+            'version':research_publication.PRESENTATION_REVISION,'relatedLink':[DIAGNOSTICS,SITE+'PALO_BlueprintBench_NextCycle.html'],'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
            {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([
@@ -187,6 +189,9 @@ def dataset_graph(data,url):
         'description':'18 internal configurations in the default primary-label, all-case scope. Alphabetical order, conditional draft-label agreement, fixed assignments and missing counts; no model ranks. Observed prompt-token ranges are distinct from advertised context ceilings. Ten historical configurations are unranked; 35 external benchmark references were not executed. CSV and JSON exports reproduce this fixed scope.',
         'associatedMedia':[{'@type':'DataDownload','contentUrl':SITE+'downloads/blueprintbench/model-roster.csv','encodingFormat':'text/csv'},
                            {'@type':'DataDownload','contentUrl':SITE+'downloads/blueprintbench/model-roster.json','encodingFormat':'application/json'}]})
+    next_dataset = build_next_cycle.schema(build_next_cycle.build())['@graph'][1]
+    graph.append(next_dataset)
+    graph[2]['mentions'].append({'@id':next_dataset['@id']})
     return {'@context':'https://schema.org','@graph':graph}
 
 
@@ -249,7 +254,7 @@ def outputs():
         path=WEB/name
         if not path.exists():continue
         html=path.read_text(encoding='utf-8')
-        for key,value in [('palo-publication-revision',publication()['content_revision']),('palo-release-tag',publication()['release_tag'])]:
+        for key,value in [('palo-publication-revision',research_publication.PRESENTATION_REVISION),('palo-release-tag',publication()['release_tag'])]:
             tag=f'<meta name="{key}" content="{value}">'
             pattern_meta=r'<meta name="'+key+r'"[^>]*>'
             html=re.sub(pattern_meta,lambda _:tag,html) if re.search(pattern_meta,html) else html.replace('</head>',tag+'\n</head>')

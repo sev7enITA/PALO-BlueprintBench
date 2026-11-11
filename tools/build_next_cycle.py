@@ -6,6 +6,7 @@ import io
 import zipfile
 import json
 import re
+import research_publication
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'internal_tests/2026-11-11-next-cycle'
@@ -156,7 +157,7 @@ def schema(data):
     observed_tokens = [{'@type': 'PropertyValue', 'propertyID': key, 'name': label, 'unitText': 'tokens'}
         for key, label in [('prompt_tokens', 'Observed provider-reported prompt tokens'), ('completion_tokens', 'Observed provider-reported completion tokens'), ('total_tokens', 'Observed provider-reported total tokens'), ('reasoning_tokens', 'Observed provider-reported reasoning tokens'), ('cached_tokens', 'Observed provider-reported cached prompt tokens'), ('cache_write_tokens', 'Observed provider-reported cache-write tokens')]
         if any(row.get(key) is not None for row in (data['analysis'] or {}).get('attempts', []))]
-    return {'@context': 'https://schema.org', '@graph': [
+    graph = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'WebPage', '@id': URL + '#webpage', 'url': URL,
          'name': 'BlueprintBench next-cycle internal feasibility', 'description': description,
          'version': REVISION, 'inLanguage': 'en', 'isAccessibleForFree': True,
@@ -177,12 +178,18 @@ def schema(data):
          ] + observed_tokens,
          'distribution': {'@type': 'DataDownload', 'name': 'Next-cycle internal observations JSON', 'encodingFormat': 'application/json', 'contentUrl': 'https://paloframework.org/downloads/blueprintbench/next-cycle-results.json'}},
     ]}
+    return research_publication.enrich(graph, data)
 
 
 def outputs():
     data = build()
     page = ROOT / 'web/PALO_BlueprintBench_NextCycle.html'
     text = page.read_text(encoding='utf-8')
+    for name, body in [('RELEASE-SUMMARY', research_publication.visible_summary(data)), ('QUALIFICATION-PLAN', research_publication.roadmap_html())]:
+        start, end = '<!-- ' + name + ':START -->', '<!-- ' + name + ':END -->'
+        if start not in text:
+            text = text.replace('</main>', start + end + '</main>')
+        text = text[:text.index(start) + len(start)] + body + text[text.index(end):]
     payload = json.dumps(schema(data), ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
     text, n = re.subn(r'(<script type="application/ld\+json" id="next-cycle-schema">).*?(</script>)', lambda m: m[1] + payload + m[2], text, flags=re.S)
     if n != 1:
@@ -211,6 +218,7 @@ def outputs():
         path = ROOT / 'web/assets/blueprintbench' / name
         public_hashes[path.relative_to(ROOT / 'web').as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
     result[DL / 'next-cycle-manifest.json'] = (json.dumps({**archive_manifest,
+        'presentation_revision': research_publication.PRESENTATION_REVISION,
         'publication_kind': 'page_only_internal_feasibility', 'evaluator_release': 'v0.3.0-internal.1',
         'original_18_model_results_modified': False, 'public_files': public_hashes}, indent=2) + '\n').encode()
     return result
