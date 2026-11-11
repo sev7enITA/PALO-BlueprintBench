@@ -30,6 +30,16 @@ def audit():
             model['attempts_without_cost'] += 1
         else:
             model['archive_cost_usd'] += Decimal(str(cost))
+    ledger_file = ROOT / 'docs/historical-ledger-correction.json'
+    if ledger_file.exists():
+        ledger = json.loads(ledger_file.read_text(encoding='utf-8'))
+        for model_id, model in models.items():
+            entries = [e for e in ledger['entries'] if e['model'] == model_id]
+            known = [e for e in entries if e['state'] == 'reported' and e['charged_microusd'] is not None]
+            model['ledger_reported_microusd'] = sum(e['charged_microusd'] for e in known)
+            model['ledger_known_attempts'] = len(known)
+            model['ledger_unknown_attempts'] = len(entries) - len(known)
+            model['ledger_status'] = 'reconstructible local accounting; not invoice reconciliation'
     passages = []
     for path in sorted(ARCHIVE.glob('*probe-request.json')):
         units = json.loads(json.loads(path.read_text(encoding='utf-8'))['messages'][1]['content'])

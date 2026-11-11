@@ -1,6 +1,6 @@
 <p align="center">
 
-> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
+> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. The [0.3 draft repair](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1) passes 76 local tests and awaits human review; the current toolkit is still 0.2. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
 
   <img src="assets/readme/blueprintbench-banner.svg" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
 </p>
