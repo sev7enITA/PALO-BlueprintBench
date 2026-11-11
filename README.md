@@ -1,4 +1,7 @@
 <p align="center">
+
+> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
+
   <img src="assets/readme/blueprintbench-banner.svg" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
 </p>
 
@@ -45,9 +48,7 @@ PALO's proposed study examines **modality, negation, ownership, conditions and e
 
 ## Explore the project
 
-<a href="https://paloframework.org/PALO_BlueprintBench.html#explorer"><img src="presentation/screenshots/13-explorer.jpg" alt="Actual historical BlueprintBench explorer showing model filters, structural-check bars and latency scatter plot" width="100%"></a>
-
-*Actual explorer capture retained with the presentation. Ten historical model configurations; structural checks and successful-call timings are development diagnostics. Current page wording and configuration disclosures have since been updated. [Open the current explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer).*
+The current explorer shows fixed-alphabetical adapter records and pooled contract diagnostics. The former latency/acceptance scatter plot has been withdrawn following audit. [Inspect the corrected explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer).
 
 <details>
 <summary><b>See the document-to-blueprint review context</b></summary>

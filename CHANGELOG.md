@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: audit disclosure and diagnostic corrections
+
+Published the evaluator 0.2 non-claim flaw warning; replaced model rankings and scatter plots with pooled adapter diagnostics; corrected the assigned denominator to three for every configuration; withdrew unreconciled cost comparison and unsupported metadata. Preserved immutable releases and the historical evidence archive. Independent qualification remains unavailable.
+
 ## Repository handbook - 2026-11-11
 
 - Added a visual README with original project artwork, real historical screenshots, navigation, a protocol diagram, tested setup instructions and citation guidance.

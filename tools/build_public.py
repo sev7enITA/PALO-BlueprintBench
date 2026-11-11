@@ -42,7 +42,7 @@ def outputs():
     for name in ['README.md','GOVERNANCE.md','CHANGELOG.md','CITATION.cff','web/PALO_BlueprintBench.html','web/assets/blueprintbench/blueprintbench.js','web/assets/blueprintbench/blueprintbench.css','web/assets/blueprintbench/explorer-data.json']:
         sources[name] = out.get(ROOT/name,(ROOT/name).read_bytes())
     sources.update({str(p.relative_to(ROOT)):data for p,data in out.items()})
-    manifest = {'release_tag':None,'base_release_tag':'v0.3.0-pilot.1','content_revision':'handbook-2026-11-11','scope':'Post-release documentation snapshot; the immutable tagged release retains its original manifest','evaluator_version':'0.2.0','explorer_version':'0.3.0','qualification':'research release; zero qualified held-out entries','files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
+    manifest = {'release_tag':None,'base_release_tag':'v0.3.0-pilot.1','content_revision':'audit-correction-2026-11-11','scope':'Selected public documentation and toolkit files only; excludes original evidence (covered by its archive manifest), reviews, presentation and historical development results. Not a complete repository manifest. Immutable tags retain their original manifests','evaluator_version':'0.2.0','explorer_version':'0.3.0','qualification':'research release; zero qualified held-out entries','files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
     out[DL/'release-manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')
     return out
 

@@ -1,5 +1,8 @@
 ![PALO BlueprintBench](https://raw.githubusercontent.com/sev7enITA/PALO-BlueprintBench/main/assets/readme/blueprintbench-banner.svg)
 
+> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
+
+
 # PALO BlueprintBench handbook
 
 **Specification fidelity: preserving business meaning when AI turns documents into development blueprints.**
