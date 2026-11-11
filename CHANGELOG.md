@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-11: metric ranks, developer countries and exports
+
+Added metric-specific internal-test ranks with competition ties and explicit eligibility. Visibility filters retain cohort-wide positions. Added sourced developer-organization country metadata, country filtering/sorting, KPI columns and CSV/JSON exports of the visible ordered rows with scope, denominators and provenance. Unknown locations remain unknown; developer country does not establish serving location or data residency. Frozen campaign results, adversarial reviews and qualification are unchanged.
+
+
 ## 2026-11-11: temporal model results
 
 Added an interactive timestamp scatter chart with case, metric, provider and model controls. The chart uses recorded verification-request times and fixed assigned denominators. It shows 17 dispatched models and separately identifies the blocked configuration. CSV and SVG exports preserve the selected view. These are collection timestamps from one day, not release dates or longitudinal model improvement. Original scores and qualification are unchanged.

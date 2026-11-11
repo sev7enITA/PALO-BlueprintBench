@@ -56,6 +56,8 @@ The shared catalogue contains **18 distinct model IDs and 28 configuration/cohor
 
 [Model results over time](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#temporal-model-results) plots recorded verification-request timestamps with case, metric and model filters, plus CSV/SVG export. Collection times from 11 November are not model release dates or a longitudinal progress study.
 
+The results table supports metric-specific internal ranks with tied positions, developer-country filters, sortable quality and operational KPIs, and CSV/JSON export of the visible ordered rows. Exports retain the ranking population, eligibility, denominators and metadata sources. Country describes a documented developer-organization business base, not serving location or data residency. See the [country source register](docs/model-origins.json).
+
 [Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Brand assets and testing badge](docs/brand-usage.md)
 
 <img src="web/assets/blueprintbench/brand/internal-testing-badge.png" width="180" alt="BlueprintBench Internal testing badge, evidence linked; not certification">

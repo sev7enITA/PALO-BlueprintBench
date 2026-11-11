@@ -1,0 +1,35 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "provider": {
+    "only": [
+      "anthropic"
+    ],
+    "allow_fallbacks": false
+  },
+  "reasoning": {
+    "effort": "high",
+    "exclude": true
+  },
+  "max_tokens": 14000,
+  "prompt": "You are a rigorous different-provider visual design reviewer. Inspect these FOUR ACTUAL BROWSER SCREENSHOTS of the updated PALO BlueprintBench ranked leaderboard. This is an INTERNAL ADVISORY DESIGN REVIEW, not independent benchmark validation or a new benchmark score. Scope: metric-specific ranks, developer-country filtering/sorting with sourced metadata, KPI presets, CSV/JSON exports, responsive visuals. Preserve established dark navy/cyan PALO identity. User wants a professional advanced leaderboard, not a redesign of the research protocol.\nActual evidence:18 internal model configurations, 17 dispatched and eligible by default; Sakana blocked and unranked. Fixed324 draft-label verification judgments per model;3 synthetic procurement cases, one source family. No independently qualified PBI. Competition ties 1,1,3 from unrounded values. Rank population is all eligible internal configurations in selected semantic case/dimension/label lens; country/provider/search filters do not renumber. Country means documented developer business/operating base, not hosting/data-residency. Unknown countries sort last. Cost/time rankings require all assigned calls complete; cost additionally requires complete accounting. Operational metrics cover both tasks and all cases even under semantic filters. Historical diagnostics remain separate and unranked. Model details expose country sources. Default has six rank1 ties, then rank7. Different KPI presets use horizontally scrollable tables with explicit cue. Operations screenshot selects cost-per-complete-call rank. Screenshot stills do not prove interactions; independent local browser checks recomputed ranks from raw judgments, semantic sensitivity ranks, filter-stable ranks, export math and eligibility; no document overflow or JS errors at1440/768/375.\nJudge clarity and visual execution of this exact iteration: rank vs sort distinction, table headers and active metric discoverability, tie labels, country meaning, control density, row readability, mobile horizontal navigation, export discoverability. Do not mistake the documented internal metric rank for an independent validation claim. Don't invent issues not visible in screenshots. Clearly separate genuine release blockers from nonblocking improvements. Within600words return JSON with verdict PASS/NEEDS_REVISION/MAJOR_REVISION, scores {DesignQuality,Originality,Craft,Functionality} each0\u20133, priority_fixes with severity and specific locations, strengths, limitations. Professional threshold: DesignQuality and Originality>=2, Craft and Functionality>=1; any0 =>major revision. A score3 requires exceptional craft.",
+  "images": [
+    {
+      "filename": "workspace-1440.png",
+      "sha256": "30dca0921b1c63dde5bcad78802f642ce63f73efe8efe97d6d6e74dc14b4f229"
+    },
+    {
+      "filename": "workspace-375.png",
+      "sha256": "1735ee95dc293a7fa4fcdc4b270c9abbbcedbc88a5f9946b0042599a47062c8f"
+    },
+    {
+      "filename": "table-375.png",
+      "sha256": "8be6e96fc25bdcab42f0b6ca3b61328838f3949f55888f109f14b1a4fe08bbfd"
+    },
+    {
+      "filename": "operations-1440.png",
+      "sha256": "e0afa62f0a91c5e524b44e39e15b05e10cf51d5882acc51b2b234855038a7793"
+    }
+  ],
+  "review_classification": "internal_advisory_design_review",
+  "independent_benchmark_validation": false
+}

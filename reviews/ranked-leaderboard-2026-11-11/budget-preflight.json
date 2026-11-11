@@ -1,0 +1,11 @@
+{
+  "account_usage_usd": 17.531118922,
+  "key_usage_usd": 9.983022137,
+  "existing_unknown_reserve_usd": 0.481264729,
+  "new_design_review_reserved_max_usd": 0.75,
+  "conservative_bound_with_reserve_usd": 18.762383651,
+  "authorised_total_usd": 40,
+  "new_benchmark_calls": 0,
+  "review_classification": "internal_advisory_design_review",
+  "independent_benchmark_validation": false
+}
