@@ -64,3 +64,7 @@ See the [launch verification](docs/launch-readiness.md), [executable contract an
 ## Cross-review and next study
 
 The [11 November cross-review](docs/cross-review-2026-11-11.md) records GLM, Gemini and LM Studio advice, six reproduced evaluator behaviours and disagreements retained during adjudication. The [Specification Fidelity Study](docs/specification-fidelity-study.md) proposes a procurement-focused calibration and human-review study. These documents add no qualified score or application release.
+
+## Benchmark references
+
+The [dated comparison of 20 references](docs/benchmark-references.md) covers every entry in terryyz/llm-benchmark and eight applied comparators, with primary-source links, documented scope and explicit PALO differences. It distinguishes implemented evidence checks from the proposed independently validated study.

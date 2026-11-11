@@ -1,5 +1,11 @@
 # Changelog
 
+## Reference update - 2026-11-11
+
+- Added a primary-source comparison of all 12 entries from terryyz/llm-benchmark and eight applied comparators, including Vals AI and Andon Labs.
+- Published a visible reference section and dated Markdown, CSV and JSON records generated from one catalogue. Unavailable references and historical implementations are labelled.
+- Evaluator 0.2.0, diagnostic measurements and immutable release v0.3.0-pilot.1 are unchanged. The current site manifest identifies this documentation snapshot separately.
+
 ## v0.3.0-pilot.1 · 11 November 2026
 
 - Released evidence contract/evaluator 0.2.0 with deduplicated critical errors, computed acceptance, raw-output provenance and explicit termination/registration states.
