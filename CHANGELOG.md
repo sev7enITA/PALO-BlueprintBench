@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-11: presentation and schema revision 2026-11-11.5
+
+- Align overview, dashboard and six-scenario JSON-LD with the frozen internal observations and immutable GitHub evidence release.
+- Publish the planned qualification protocol: real procurement families, primary generation, blind expert gold, external custody, seeded-defect validation and replicated family-level comparisons. All independent acceptance gates remain open.
+- Preserve observation revision 2026-11-11.4, original cohort data, evidence archives and evaluator release bytes. No new model calls, rankings or independent-validation claims.
+
+
 ## v0.3.0-internal.1 / revision 2026-11-11.3
 
 - Release evaluator and contract 0.3.0 as an explicitly internal-test prerelease; preserve historical 0.2 artifacts with EV-01 warning and migration instructions.

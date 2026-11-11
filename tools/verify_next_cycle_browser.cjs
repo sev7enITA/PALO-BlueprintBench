@@ -33,9 +33,10 @@ const server = http.createServer((req, res) => {
     assert.equal(await page.locator('#integrity code').first().textContent(),data.case_bank_sha256);
     const graph = await page.locator('#next-cycle-schema').evaluate(el=>JSON.parse(el.textContent));
     assert.deepEqual(graph['@graph'].map(x=>x['@type']),['WebPage','Dataset']);
-    assert(graph['@graph'].every(x=>x.version===data.revision));
+    assert.equal(graph['@graph'][0].version,'2026-11-11.5');
+    assert.equal(graph['@graph'][1].version,data.revision);
     for(const node of graph['@graph']) {assert(!('aggregateRating' in node));assert(!('review' in node));assert(!('ratingValue' in node));}
-    assert.equal(graph['@graph'][1].distribution.contentUrl,'https://paloframework.org/downloads/blueprintbench/next-cycle-results.json');
+    assert.equal(graph['@graph'][1].distribution[0].contentUrl,'https://paloframework.org/downloads/blueprintbench/next-cycle-results.json');
     assert((await page.locator('body').innerText()).includes('independent semantic accuracy'));
     assert(!(await page.locator('body').innerText()).includes('\u2014'));
     assert.deepEqual(data.legacy_identity_map.items,[{review_item:'ITEM-A',original_probe_id:'P002'},{review_item:'ITEM-B',original_probe_id:'P013'},{review_item:'ITEM-C',original_probe_id:'P036'}]);

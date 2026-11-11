@@ -92,11 +92,15 @@ class PublicationContractTests(unittest.TestCase):
     def test_dataset_distributions_exist_and_preserve_states(self):
         g=build.dataset_graph(self.data,build.BOARD)
         datasets=[n for n in g['@graph'] if n['@type']=='Dataset']
-        self.assertEqual(len(datasets),3)
+        self.assertEqual(len(datasets),4)
         for d in datasets:
             self.assertIn('unqualified' if 'historical' in d['@id'] else 'not independently validated',d['creativeWorkStatus'])
             self.assertNotIn('license',d)  # No invented blanket licence over model responses.
             for download in d['distribution']:
+                if download['contentUrl'].startswith('https://github.com/'):
+                    asset=next(a for a in build.research_publication.release()['assets'] if a['url']==download['contentUrl'])
+                    self.assertEqual(hashlib.sha256((ROOT/'web/downloads/blueprintbench'/asset['name']).read_bytes()).hexdigest(),asset['sha256'])
+                    continue
                 relative=download['contentUrl'].removeprefix(build.SITE)
                 self.assertTrue((ROOT/'web'/relative).is_file(),relative)
         internal=datasets[0]

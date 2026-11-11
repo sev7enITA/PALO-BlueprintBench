@@ -67,3 +67,6 @@ jobs:
           python tools/build_next_cycle.py --check
       - name: Verify frozen next-cycle receipts and final publication evidence
         run: python -m unittest discover -s tools -p 'test_next_cycle_evidence.py'
+
+      - name: Verify shared schema and qualification boundaries
+        run: python -m unittest discover -s tools -p 'test_schema_alignment.py'

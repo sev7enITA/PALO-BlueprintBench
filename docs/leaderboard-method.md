@@ -1,6 +1,6 @@
 # BlueprintBench internal test results: method and qualification
 
-Publication revision `2026-11-11.3`, shared with `release.json`, the public page and announcement. The source observation snapshot remains frozen as dataset `2026-11-11.2`; its exact SHA-256 is recorded in `release.json`. Dataset metadata identifies those unchanged evidence bytes, while page and release metadata identify the new presentation. These are intentionally distinct versions, not competing current methods.
+Current presentation and schema revision `2026-11-11.5` links the separate six-scenario observation revision `2026-11-11.4` and its GitHub evidence release. Evaluator release metadata remains at its archived publication revision `2026-11-11.3` in `release.json`; it is not a new evaluator release. The source observation snapshot remains frozen as dataset `2026-11-11.2`; its exact SHA-256 is recorded in `release.json`. Dataset metadata identifies those unchanged evidence bytes, while page and release metadata identify the new presentation. These are intentionally distinct versions, not competing current methods.
 
 The internal-results dashboard is a research interface for inspecting configurations and evidence. As of 11 November 2026 there are **zero independently qualified results** and no PALO Blueprint Index or numerical model ranks. The interface does not establish superiority over Arena or any other benchmark.
 
@@ -62,3 +62,7 @@ Automatic reviewer evidence is published separately from model results. API and 
 ## Next cycle
 
 Freeze a discriminating case matrix and annotation rubric before new inference. Prioritise new procurement families and human adjudication over adding model IDs. Necessary coverage and a sufficient sample must be justified by the intended comparison and variance across independent families; no fixed item count guarantees sufficiency. See the [next-cycle protocol and annotation package](next-cycle-plan.md).
+
+## Qualification study
+
+The [qualification protocol](qualification-roadmap.md) prioritises open specification generation from real document families, expert gold, external custody, seeded-defect validation and preregistered replicated comparisons. Its [gate register](qualification-roadmap.json) records unmet requirements; it does not grant qualification. The 60–85% development diagnostic is not a target for tuning held-out outcomes. Current internal label agreement must not be read as generated-specification semantic accuracy.
