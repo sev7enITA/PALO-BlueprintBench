@@ -47,3 +47,7 @@ No company documents, production credentials or active held-out answer keys belo
 Fabrizio Degni maintains PALO and this benchmark. That conflict is disclosed, not removed by giving the project a separate repository. Independent annotators and reproducers are being recruited; no external board or accreditation is claimed. See [governance](GOVERNANCE.md), [version policy](docs/versioning.md) and [corrections](docs/corrections.md).
 
 The project and tooling are free. External model providers may charge for inference. Code is MIT licensed; third-party source documents and model licences retain their own terms.
+
+## Semantic vocabulary
+
+The [BlueprintBench vocabulary](semantic/README.md) defines the evaluation concepts, eight dimensions and review states as JSON, SKOS and OWL.

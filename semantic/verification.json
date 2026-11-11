@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-11",
+  "status": "passed",
+  "owl_classes": 11,
+  "owl_object_properties": 11,
+  "skos_concepts": 16,
+  "evaluation_dimensions": 8,
+  "atlas_routes": 19,
+  "atlas_card_table_parity": true,
+  "pbi_results_asserted": 0,
+  "core_parents_resolve": true,
+  "structured_data_json_parses": true,
+  "scope": "Vocabulary and publication checks; not benchmark qualification."
+}

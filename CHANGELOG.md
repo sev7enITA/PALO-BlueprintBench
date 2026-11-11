@@ -1,5 +1,12 @@
 # Changelog
 
+## Documentation and semantics · 11 November 2026
+
+- Aligned the PALO homepage, Platform Map, changelog and semantic guides with BlueprintBench and PALO Blueprint Index.
+- Added vocabulary 0.1.0 with eight dimensions, 11 OWL classes, 11 object properties and 16 SKOS concepts.
+- Retained separate provenance, qualification and index-availability axes; no index score is assigned.
+
+
 ## v0.2.0-pilot.1 · 11 November 2026
 
 - Established a dedicated research repository, governance and contribution policy.
