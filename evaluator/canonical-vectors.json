@@ -1,0 +1,41 @@
+{
+  "format": "python-json-sorted-utf8-v1; not RFC 8785 JCS",
+  "unicode": "preserve code points; no NFC conversion",
+  "numbers": "integer 1 and float 1.0 deliberately remain distinct",
+  "vectors": [
+    {
+      "input": {
+        "value": 1
+      },
+      "canonical_utf8_hex": "7b2276616c7565223a317d",
+      "sha256": "48208f9428d64634bd8e28ff345bf0eab60d53c18fa2fbdb0b9bc1e84df2b5f6"
+    },
+    {
+      "input": {
+        "value": 1.0
+      },
+      "canonical_utf8_hex": "7b2276616c7565223a312e307d",
+      "sha256": "3a7d647740ec6f86b72e0bf3948ab456551e07e9605e3a2785de1c66842ebb48"
+    },
+    {
+      "input": {
+        "b": true,
+        "a": [
+          "\u20ac",
+          "e\u0301",
+          "\u00e9"
+        ]
+      },
+      "canonical_utf8_hex": "7b2261223a5b22e282ac222c2265cc81222c22c3a9225d2c2262223a747275657d",
+      "sha256": "78ceae772e13f3044ca99cd8cf90cd98538b27a7bbcbd0a1e51a3f9391d90adf"
+    },
+    {
+      "input": {
+        "z": null,
+        "a": "line\r\nline"
+      },
+      "canonical_utf8_hex": "7b2261223a226c696e655c725c6e6c696e65222c227a223a6e756c6c7d",
+      "sha256": "54d312df422bfebd6bc095f5d7a86e0bcea108908e909b5cabbf5844dfb78e24"
+    }
+  ]
+}

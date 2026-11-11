@@ -1,0 +1,11 @@
+# Byte-stable source text across supported checkouts.
+* text=auto eol=lf
+# Evidence hashes and generated CSV bytes must survive checkout unchanged.
+evidence/** -text
+results/** -text
+*.csv -text
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary

@@ -8,7 +8,7 @@ Which model and system configuration can turn a business document collection int
 
 The proposed contribution is to measure this complete outcome: **documents → business interpretation → reviewed blueprint → executable contract checks**. Multi-dimensional evaluation, document understanding and process-model evaluation already have substantial prior work. PALO must acknowledge that work and earn credibility through its evaluation design and independent reproduction. It cannot yet claim to outperform existing benchmarks in methodological quality.
 
-The three existing repositories remain valuable regression tests. They are now development data, because their failures have guided changes to PALO. Their 27 reference items are a small diagnostic set, not exhaustive ground truth and not evidence of unseen-domain generalisation. None of the ten-model passage probes is currently eligible for an unseen-task leaderboard.
+The three existing repositories remain valuable regression tests. They are now development data, because their failures have guided changes to PALO. No published independent gold set is available for these repositories; unpublished internal reference counts are not benchmark evidence. None of the ten-model passage probes is currently eligible for an unseen-task leaderboard.
 
 See [RESEARCH.md](research.md) for the primary-source comparison, and [REVIEW-DECISIONS.md](review-decisions.md) for the model reviewers' challenges and our adjudication.
 

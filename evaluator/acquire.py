@@ -51,6 +51,10 @@ def acquire(registry, output):
                             content_type=response.headers.get("Content-Type"), bytes=size,
                             sha256=sha.hexdigest(), format=kind,
                             downloaded_at=dt.datetime.now(dt.timezone.utc).isoformat())
+            expected = family.get("expected_sha256")
+            if expected is not None and expected != item["sha256"]:
+                raise ValueError("download differs from expected SHA-256")
+            item["expected_hash_verified"] = expected is not None
             final = output / (family["id"] + (".pdf" if kind == "pdf" else ".zip-container"))
             part.rename(final)
             item["local_filename"] = final.name
@@ -60,8 +64,7 @@ def acquire(registry, output):
             item["error"] = str(exc)[:200]
             if part is not None and part.exists(): part.unlink()
         results.append(item)
-        (output / "acquisition.json").write_text(json.dumps({"version": "0.1.0", "status": "seeds_only_not_corpora", "results": results}, indent=2) + "\n")
-    (output / "acquisition.json").write_text(json.dumps({"version": "0.1.0", "status": "seeds_only_not_corpora", "results": results}, indent=2) + "\n")
+    (output / "acquisition.json").write_text(json.dumps({"version": "0.1.0", "status": "seeds_only_not_corpora", "results": results}, indent=2) + "\n", encoding="utf-8")
     return results
 
 
@@ -70,5 +73,5 @@ if __name__ == "__main__":
     parser.add_argument("registry")
     parser.add_argument("output")
     args = parser.parse_args()
-    result = acquire(json.loads(Path(args.registry).read_text()), args.output)
+    result = acquire(json.loads(Path(args.registry).read_text(encoding="utf-8")), args.output)
     print(json.dumps([{k: x[k] for k in ("family", "status")} for x in result]))

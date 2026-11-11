@@ -11,6 +11,7 @@
   "core_parents_resolve": true,
   "structured_data_json_parses": true,
   "scope": "Current semantic parse/count/mapping checks; original Atlas/core-parent checks retained from platform publication. Not benchmark qualification.",
-  "evaluator_code_mapping_verified": true,
-  "vocabulary_version": "0.1.1"
+  "vocabulary_version": "0.1.1",
+  "provenance_code_mapping_verified": true,
+  "mapping_scope": "Three evidence-provenance codes only. Full schema enumeration alignment has not been verified."
 }

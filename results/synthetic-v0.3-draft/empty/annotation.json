@@ -1,0 +1,8 @@
+{
+  "task_id": "empty",
+  "receipt_sha256": "b5d728c7b06d80c86f035b2310616ab238db3f8451c56e63f8ecc13ec6d4c272",
+  "scope_complete": true,
+  "atomicity_reviewed": true,
+  "review_type": "synthetic",
+  "claims": []
+}
