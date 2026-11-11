@@ -1,0 +1,16 @@
+{
+  "key": {
+    "limit": 40,
+    "limit_remaining": 29.787137862999998,
+    "usage": 10.212862137
+  },
+  "credits": {
+    "total_credits": 60,
+    "total_usage": 17.760958922
+  },
+  "existing_unknown_reserve_usd": 0.481264729,
+  "authorised_total_usd": 40,
+  "review_actual_cost_usd": 0.22984,
+  "new_benchmark_calls": 0,
+  "conservative_bound_usd": 18.242223651
+}

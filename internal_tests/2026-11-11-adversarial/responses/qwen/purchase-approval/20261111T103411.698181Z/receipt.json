@@ -1,0 +1,49 @@
+{
+  "case": "purchase-approval",
+  "reviewer": "qwen3.8-27b-uncensored-local",
+  "endpoint": "http://127.0.0.1:1234/v1/completions",
+  "requested_model": "qwen3.8-27b-uncensored",
+  "frozen_commit": "80df7dbb33c446239370c000c0649b2aaedee30c",
+  "prompt_sha256": "5fa4d7452f4dd41605b9f86c74a95b3b6de6845dab5fcc5e51ff3691749104ab",
+  "protocol_sha256": "c39b7a6eeb98c86028d23b96a0453d854c09f6c71b31ee7687e150ad2a029a04",
+  "request_sha256": "5720258ed5594d8c70ac41724ef5b54134a38851283ff6f1c74bb4a28f002a7d",
+  "assigned_records": 12,
+  "request_started_at": "2026-11-11T10:34:11.715259+00:00",
+  "loaded_context_tokens": 8192,
+  "quantization": "Q6_K",
+  "completion_template": {
+    "prefix": "<|im_start|>user\n",
+    "suffix": "\n<|im_end|>\n<|im_start|>assistant\n<think>\n</think>\n"
+  },
+  "template_note": "Exact frozen prompt without substantive additions. Explicit closed thinking channel requests a final-only completion; this configuration is disclosed and differs from web reviewer settings.",
+  "settings": {
+    "max_tokens": 3000,
+    "temperature": 0.0,
+    "stream": false,
+    "seed": "not_set",
+    "provider_defaults_otherwise": true
+  },
+  "qualification": "internal_countertest_only",
+  "cloud_calls": 0,
+  "selection_or_author_identity_supplied": false,
+  "http_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Wed, 11 Nov 2026 10:34:37 GMT"
+  },
+  "raw_response_sha256": "b89f032fd60a75a1438a8580434a3cdc8e4db0776972d63d2380b956e3fcbba7",
+  "returned_model": "qwen3.8-27b-uncensored",
+  "response_id": "cmpl-1mt3sh6anpawnou72yza6",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1317,
+    "completion_tokens": 438,
+    "total_tokens": 1755
+  },
+  "raw_text_sha256": "af3e258952d39bc3e0e214ca82e3a13c9a6d10da436508e50c06f6502e6e7911",
+  "state": "complete_invalid",
+  "contract_valid": false,
+  "valid_records": 0,
+  "elapsed_seconds": 25.766,
+  "request_finished_at": "2026-11-11T10:34:37.481943+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "endpoint": "http://127.0.0.1:1234/v1/completions",
+  "http_status": 200,
+  "requested_model": "qwen3.8-27b-uncensored",
+  "returned_model": "qwen3.8-27b-uncensored",
+  "elapsed_seconds": 90.625,
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 758,
+    "total_tokens": 1208
+  },
+  "response_sha256": "96c86b5406b98cfdd0d892cd099e327242f84a3dc63d4f4fa94559162629cc9a",
+  "request_sha256": "46398c204b464e435ba71417d2c2837dcb58c8016b0ac14d351590aafc9ccd8a",
+  "qualification": "internal_advisory_only",
+  "completed_final_review": true,
+  "generation_note": "Explicit ChatML completion prefix closes the thinking channel to obtain a bounded final answer after chat hit the 1800-token reasoning limit. This advisory run is not scored or added to any benchmark cohort."
+}

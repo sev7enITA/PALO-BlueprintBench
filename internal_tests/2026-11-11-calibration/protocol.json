@@ -1,0 +1,23 @@
+{
+  "version": "internal-calibration-1",
+  "status": "internal_tests",
+  "qualified": false,
+  "independent_source_families": 1,
+  "cases": 3,
+  "rules": 6,
+  "assigned_per_reviewer": 18,
+  "mutations": 6,
+  "faithful_controls": 12,
+  "reviewers": [
+    "fable",
+    "glm",
+    "gemini"
+  ],
+  "repetitions": 1,
+  "blinding": "Expected labels, variant class and other reviewer answers omitted from the common prompt. Reviewer sees source and candidate. This is not human double-blinding.",
+  "reuse": "All six source rules already exposed to PALO development; new candidates are same-family calibration. No independent holdout claim.",
+  "scoring": "Detection is altered calls on six mutations; false alarms are altered calls on twelve faithful controls. Missing, uncertain and invalid answers remain in fixed assigned denominators and have separate counts. No majority vote replaces reference labels.",
+  "uncertainty": "No confidence intervals or model ranking: one authored family and one reviewer pass cannot support population inference.",
+  "pipeline": "Frozen inputs -> model review -> strict response validation -> draft-label comparison -> source-bound review export -> publication. This is the calibration harness, not an application ingestion/performance test.",
+  "cost_policy": "No more than USD 40 cumulative account usage plus unknown reserve; initial Fable request bounded below USD 1; web subscriptions excluded from marginal API accounting."
+}

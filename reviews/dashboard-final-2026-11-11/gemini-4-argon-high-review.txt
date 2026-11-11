@@ -1,0 +1,224 @@
+Advisory review. Gemini 4 Argon with Alta selected in UI.
+Prompt:
+Act as an adversarial methodological and dashboard reviewer for PALO BlueprintBench. Advisory model review only, never independent validation. Public context: https://paloframework.org/PALO_BlueprintBench_Leaderboard.html and https://paloframework.org/PALO_BlueprintBench.html . Current internal cohort: 18 model IDs, 28 configuration/cohort records including ten historical adapter diagnostics. Internal procurement: 3 short synthetic cases, one maintainer-authored source family, 36 rules, 108 seeded statements, 3 repetitions, 2 tasks. 324 assigned requests; 306 dispatched; 299 complete; 7 failed/incomplete; 18 Sakana pre-call-blocked. Expected labels are assistant drafts; one contested invoice label has a separate post-hoc exclusion sensitivity. There is no independent custodian, human adjudicated gold or qualified PBI. Historical diagnostics are separate and not comparable ranks. User wants a standard results-first leaderboard: numeric columns sortable/filterable, compare configurations, export CSV/JSON, inspect source and model outputs, challenge a result via prefilled GitHub issue. Remove marketing questions, the zero-qualified hero panel, all public presentation access (internal document), and raw .md browsing links (use GitHub rendered documents). Keep dark PALO palette. QUESTIONS: (1) Can an adversarial LLM countertest honestly turn independently qualified count above zero? State precise prerequisites for that, and a useful labelled internal adversarial check we can perform now. (2) Give 5 concrete dashboard failure cases and fixes, including denominator, sorting, comparability, export/provenance, and challenge workflow. (3) Recommend JSON-LD types for the real page/datasets/logo, with no implied certification and no public presentation metadata. Distinguish observations from suggestions; if you cannot fetch pages, state that limitation. Be concise, around 700 words, English.
+
+Observed UI response:
+Browser tab: 1454351869, Title: "PALO BlueprintBench Dashboard Review - Google Gemini", URL: "https://gemini.google.com/app/7878e38d0d30171e".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 24-25, 124-126, 137-139
+~0 AXWebArea PALO BlueprintBench Dashboard Review - Google Gemini, URL: gemini.google.com/app/7878e38d0d30171e
++						137 link Description: PALO BlueprintBench Dashboard Review, Value: gemini.google.com/app/7878e38d0d30171e
++						138 button Altre opzioni per PALO BlueprintBench Dashboard Review
+~					119 button Italy
++					139 heading Conversazione con Gemini, Value: 1
++						140 text Conversazione con Gemini
++					141 container d3493538d696ebe0
++						142 container
++							143 heading Value: 5, Hai detto Act as an adversarial methodological and dashboard reviewer for PALO BlueprintBench. Advisory model …
++								144 text Hai detto  Act as an adversarial methodological and dashboard reviewer for PALO BlueprintBench. Advisory model …
++							145 text Act as an adversarial methodological and dashboard reviewer for PALO BlueprintBench. Advisory model review only, never independent validation. Public context: https://paloframework.org/PALO_BlueprintBench_Leaderboard.html and https://paloframework.org/PALO_BlueprintBench.html . Current internal cohort: 18 model IDs, 28 configuration/cohort records including ten historical adapter diagnostics. Internal procurement: 3 short synthetic cases, one maintainer-authored source family, 36 rules, 108 seeded statements, 3 repetitions, 2 tasks. 324 assigned requests; 306 dispatched; 299 complete; 7 failed/incomplete; 18 Sakana pre-call-blocked. Expected labels are assistant drafts; one contested invoice label has a separate post-hoc exclusion sensitivity. There is no independent custodian, human adjudicated gold or qualified PBI. Historical diagnostics are separate and not comparable ranks. User wants a standard results-first leaderboard: numeric columns sortable/filterable, compare configurations, export CSV/JSON, inspect source and model outputs, challenge a result via prefilled GitHub issue. Remove marketing questions, the zero-qualified hero panel, all public presentation access (internal document), and raw .md browsing links (use GitHub rendered documents). Keep dark PALO palette. QUESTIONS: (1) Can an adversarial LLM countertest honestly turn independently qualified count above zero? State precise prerequisites for that, and a useful labelled internal adversarial check we can perform now. (2) Give 5 concrete dashboard failure cases and fixes, including denominator, sorting, comparability, export/provenance, and challenge workflow. (3) Recommend JSON-LD types for the real page/datasets/logo, with no implied certification and no public presentation metadata. Distinguish observations from suggestions; if you cannot fetch pages, state that limitation. Be concise, around 700 words, English.
++							146 button (collapsed) Description: Espandi, Secondary Actions: Expand
++						147 button Copia prompt
++						148 button Modifica
++						149 container
++							150 heading Gemini ha detto, Value: 6
++								151 text Gemini ha detto
++							152 container model-response-message-contentr_d3493538d696ebe0
++								153 container
++									154 text Scope and Retrieval Limitation:  This output constitutes an advisory methodological and UI review only,  never independent validation or PBI qualification.  Live DOM inspection of  PALO_BlueprintBench_Leaderboard.html  and  PALO_BlueprintBench.html  is unavailable via external search index; all  Observations  below derive strictly from your supplied telemetry and  paloframework.org  metadata,  explicitly separated from  Suggestions .
++								155 heading 1. Can an Adversarial LLM Countertest Yield Independently Qualified > 0 ?, Value: 3
++									156 text 1. Can an Adversarial LLM Countertest Yield 
++									157 text Independently Qualified > 0
++									158 text ?
++								159 container
++									160 text Verdict: No.  An adversarial LLM countertest cannot honestly increment the independently qualified count above zero.
++								161 content list
++									162 container
++										163 text Observation:  The benchmark relies on 3 short synthetic cases from a single maintainer-authored source family (36 rules,  108 seeded statements,  3 repetitions,  2 tasks),  where expected labels are assistant-generated drafts and one contested invoice label requires post-hoc exclusion sensitivity.  There is no external custodian and no human-adjudicated gold standard.  Auditing or adjudicating assistant-drafted labels with another LLM measures inter-model consensus or synthetic self-consistency—not independent qualification.
++									164 container
++										165 text Prerequisites for 
++										166 text Independently Qualified > 0
++										167 text :
++										168 content list
++											169 container
++												170 text Custodial Independence:  An external entity independent of the benchmark author and model vendors must freeze prompts/adapters,  execute dispatches,  and sign raw audit logs.
++											171 container
++												172 text Human-Adjudicated Gold Standard:  All 108 seeded statements and 36 rule mappings must undergo dual-blinded human domain adjudication with a reported inter-annotator agreement threshold (e. g.,
++												173 container
++													174 text 𝜅 ≥ 0.85
++												175 text ) and pre-registered exclusion rules locked  before  model inference (eliminating post-hoc invoice sensitivity).
++											176 container
++												177 text Deterministic Execution Accounting:  All 324 assigned requests must resolve under pre-registered retry/timeout rules,  with explicit protocol governance for the 18 pre-call-blocked Sakana runs and 7 failed/incomplete dispatches.
++									178 container
++										179 text Suggestion (Actionable Internal Check Now —  Adversarial Label-Fragility Audit ):  Run a cross-family adversarial LLM prompted specifically to attack the 36 rules and 108 assistant-drafted expected labels for syntactic ambiguity,  multi-rule collision,  and unstated premises (targeting the contested invoice item and its sibling statements).  Surface the output in the internal inspector strictly tagged as  Internal Label-Stability Diagnostic (Unqualified / Non-Gold)  to isolate defective items prior to human adjudication.
++								180 heading 2. Five Concrete Dashboard Failure Cases and Fixes, Value: 3
++									181 text 2. Five Concrete Dashboard Failure Cases and Fixes
++								182 content list
++									183 container
++										184 text Denominator Distortion (Survivorship Bias)
++										185 content list
++											186 container
++												187 text Observation:  Of 324 assigned requests,  306 were dispatched (18 Sakana pre-call-blocked) and 299 completed (7 failed/incomplete),  alongside 1 contested invoice item with post-hoc sensitivity.  Computing headline rates solely over 
++												188 container
++													189 text 𝑛 = 299
++												190 text  artificially inflates configurations that fail or block on edge cases.
++											191 container
++												192 text Suggestion:  Make 
++												193 text Strict Assigned Score (N=324)
++												194 text  (where failed/blocked = incorrect) the default primary column,  paired with 
++												195 text Completed Rate (n/299)
++												196 text  and explicit integer columns for 
++												197 text Assigned
++												198 text ,
++												199 text Dispatched
++												200 text ,
++												201 text Completed
++												202 text ,
++												203 text Failed
++												204 text ,  and 
++												205 text Blocked
++												206 text .  Render the contested invoice exclusion strictly as a secondary delta column (
++												207 container
++													208 text Δ  Excl. Contested Invoice
++												209 text ) rather than overwriting baseline scores.
++									210 container
++										211 text Numeric Sorting Corruption on Incomplete/Blocked States
++										212 content list
++											213 container
++												214 text Observation:  Mixing numeric percentages with string tokens (
++												215 text Blocked
++												216 text ,
++												217 text N/A
++												218 text ,
++												219 text 7 incomplete
++												220 text ) or sensitivity ranges causes standard table sorters to rank zero-completion or blocked cohorts (
++												221 text Sakana
++												222 text ) at the top during ascending/descending flips.
++											223 container
++												224 text Suggestion:  Bind column sorters strictly to typed numeric attributes (
++												225 text data-sort-value
++												226 text ),  enforce 
++												227 text null
++												228 text -last sorting in both 
++												229 text ASC
++												230 text  and 
++												231 text DESC
++												232 text  directions,  and render pre-call-blocked records in a pinned bottom section (
++												233 text Incomplete / Pre-Call-Blocked Runs
++												234 text ) when sorting by performance metrics.
++									235 container
++										236 text Cohort Comparability Contamination
++										237 content list
++											238 container
++												239 text Observation:  The dataset merges 18 model IDs across 28 records,  combining 18 current evaluation configurations with 10 historical adapter diagnostics that are methodologically non-comparable.
++											240 container
++												241 text Suggestion:  Default the leaderboard filter to 
++												242 text Cohort: Active Evaluation (18)
++												243 text  and assign integer ranks (
++												244 text 1..18
++												245 text ) exclusively to comparable active runs.  Isolate the 10 historical records behind an explicit toggle (
++												246 text Show Historical Adapter Diagnostics [Unranked]
++												247 text ),  badge them with 
++												248 text DIAGNOSTIC ONLY
++												249 text ,  and block or display a schema-mismatch warning if selected in the side-by-side configuration comparator.
++									250 container
++										251 text Export Provenance Loss and Raw Markdown Links
++										252 content list
++											253 container
++												254 text Observation:  Exporting filtered UI tables to CSV/JSON strips draft-label caveats and denominator context,  while raw 
++												255 text .md
++												256 text  links expose unformatted source text alongside legacy hero/marketing clutter and public presentation references.
++											257 container
++												258 text Suggestion:  Strip the zero-qualified hero panel,  marketing copy,  and all public presentation access links while retaining the dark PALO palette for a dense,  results-first layout.  Rewrite all documentation/source links to rendered GitHub blob URLs pinned to an immutable commit SHA (
++												259 text [https://github.com/](https://github.com/)<org>/<repo>/blob/<commit-sha>/...
++												260 text ).  Inject a mandatory 
++												261 text _provenance
++												262 text  object into JSON exports (and explicit columns in CSV) recording 
++												263 text label_status: "assistant_draft_unqualified"
++												264 text ,
++												265 text gold_adjudicated: false
++												266 text ,
++												267 text assigned_n: 324
++												268 text ,  and 
++												269 text cohort_class
++												270 text .
++									271 container
++										272 text Unstructured Challenge Workflow
++										273 content list
++											274 container
++												275 text Observation:  Reviewers inspecting the 108 seeded statements,  model outputs,  or the contested invoice label lack a deterministic mechanism to log granular disputes against specific traces.
++											276 container
++												277 text Suggestion:  Add a 
++												278 text Challenge Result / Label
++												279 text  button inside the source-and-output inspection drawer that generates a prefilled GitHub Issue URL (
++												280 text .../issues/new?labels=benchmark-challenge&title=...&body=...
++												281 text ) automatically populating 
++												282 text model_id
++												283 text ,
++												284 text config_id
++												285 text ,
++												286 text case_id
++												287 text ,
++												288 text rule_id
++												289 text ,
++												290 text statement_id
++												291 text ,
++												292 text repetition_id
++												293 text ,
++												294 text assistant_draft_label
++												295 text ,
++												296 text model_output_excerpt
++												297 text ,  and 
++												298 text commit_sha
++												299 text .
++								300 heading 3. JSON-LD Schema Recommendations, Value: 3
++									301 text 3. JSON-LD Schema Recommendations
++								302 content list
++									303 container
++										304 text Observation:  Applying schema types such as  Certification , Rating , AggregateRating , Review ,  or  PresentationDigitalDocument  falsely implies independent accreditation or public presentation status.
++									305 container
++										306 text Suggestion:  Restrict structured data to  WebPage , Dataset ,  and  Organization  +  ImageObject  (for the PALO logo),  explicitly declaring the internal,  uncertified nature of the measurements via  measurementTechnique :
++								307 container
++									308 text JSON
++									309 container
++										310 button Scarica codice
++										311 button Copia codice
++									312 text {
+   "@context" :  "https://schema.org" ,
+   "@type" :  "WebPage" ,
+   "name" :  "PALO BlueprintBench — Internal Results Dashboard" ,
+   "publisher" : {
+     "@type" :  "Organization" ,
+     "name" :  "PALO Framework" ,
+     "url" :  "https://paloframework.org/" ,
+     "logo" : {
+       "@type" :  "ImageObject" ,
+       "url" :  "https://paloframework.org/assets/palo-logo.png" 
+    }
+  },
+   "mainEntity" : {
+     "@type" :  "Dataset" ,
+     "name" :  "PALO BlueprintBench Internal Evaluation Cohort (v0-draft)" ,
+     "description" :  "Internal procurement benchmark telemetry across 18 model IDs and 28 configuration records (including 10 non-comparable historical adapter diagnostics) over 3 synthetic cases, 36 rules, and 108 assistant-drafted statements. Advisory telemetry only; zero independently qualified or human-adjudicated gold records." ,
+     "measurementTechnique" :  "Automated LLM evaluation against maintainer-authored synthetic cases and assistant-drafted expected labels; non-certified internal diagnostic." ,
+     "variableMeasured" : [
+       "Strict Assigned Accuracy (N=324)" ,
+       "Completed Dispatch Accuracy (n=299)" ,
+       "Post-Hoc Contested Invoice Exclusion Delta" 
+    ]
+  }
+}
+
++							313 checkbox Description: La risposta va bene, Value: 0
++							314 checkbox Description: La risposta non va bene, Value: 0
++							315 button Ripeti
++							316 button Copia
++							317 button Mostra altre opzioni
+~								131 text entry area (settable) Description: Inserisci un prompt per Gemini, Value: 
+
++									318 text Chiedi a Gemini
++						319 text Gemini è un'AI e può fare errori, anche in merito a persone. 
++						320 link Description: La tua privacy e Gemini Si apre in una nuova finestra, Value: support.google.com/gemini?p=privacy_notice
++			321 button Apri il menu delle azioni relative alle conversazioni.
++		322 text Assessing the results' reliability
+The focused UI element is 131 text entry area (settable) Description: Inserisci un prompt per Gemini, Value: 

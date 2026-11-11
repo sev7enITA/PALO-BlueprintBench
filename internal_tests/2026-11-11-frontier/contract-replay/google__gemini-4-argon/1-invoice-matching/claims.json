@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: Automatic payment of an invoice requires both an existing purchase order and a receipt record before automatic payment occurs.",
+    "span": [
+      0,
+      133
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: An invoice variance of exactly EUR 10 is within tolerance.",
+    "span": [
+      134,
+      199
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: An invoice variance above EUR 10 blocks automatic payment.",
+    "span": [
+      200,
+      265
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: For a blocked invoice, an Accounts Payable analyst is permitted to ask for a corrected invoice but is not obliged to ask for a corrected invoice.",
+    "span": [
+      266,
+      418
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: Only the receiving team is permitted to record goods receipt, and Accounts Payable is prohibited from recording goods receipt.",
+    "span": [
+      419,
+      552
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The person who changed supplier bank details must not approve payment to those supplier bank details.",
+    "span": [
+      553,
+      661
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+    "span": [
+      662,
+      759
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: Service acceptance does not replace the purchase-order requirement.",
+    "span": [
+      760,
+      834
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: A dispute freezes the payment clock until the dispute is resolved.",
+    "span": [
+      835,
+      908
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: After dispute resolution, the payment clock resumes from its paused value and does not restart at zero.",
+    "span": [
+      909,
+      1019
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: An invoice number must be unique only within a supplier, and different suppliers are permitted to reuse the same invoice number.",
+    "span": [
+      1020,
+      1155
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: The tolerance is assessed per invoice and not against the monthly sum of a supplier's invoices.",
+    "span": [
+      1156,
+      1258
+    ]
+  }
+]

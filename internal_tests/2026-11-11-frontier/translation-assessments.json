@@ -1,0 +1,1362 @@
+{
+  "status": "assistant_draft",
+  "qualified": false,
+  "reviewer": "OpenAI coding assistant, project maintainer workflow",
+  "blind": false,
+  "method": "Read each distinct output line beside its numbered synthetic source rule. Check actor, obligation/permission, negation, exception, threshold, time, scope and uniqueness. Exact repetitions reuse the same textual assessment. This is internal assisted review, not independent annotation.",
+  "reviewed_at": "2026-11-11T05:45:10.298650+00:00",
+  "claims": {
+    "invoice-matching:1b124a8e526dca1782ecb6a771e627a33ba7b5b7276290b87d715c7c111be1c4": {
+      "case": "invoice-matching",
+      "source_id": "R01",
+      "text_sha256": "1b124a8e526dca1782ecb6a771e627a33ba7b5b7276290b87d715c7c111be1c4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:04f62a3d831278a827e10d38fec24794bcf92220c3ba00100fd70fd7bd38aa6c": {
+      "case": "invoice-matching",
+      "source_id": "R02",
+      "text_sha256": "04f62a3d831278a827e10d38fec24794bcf92220c3ba00100fd70fd7bd38aa6c",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:f3646640f7339372f7910d292c81bbbca25c2bd3776f4a09550fa0040b5d63e8": {
+      "case": "invoice-matching",
+      "source_id": "R03",
+      "text_sha256": "f3646640f7339372f7910d292c81bbbca25c2bd3776f4a09550fa0040b5d63e8",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:b97b3c8080a941df4ed397f95daf54508206fb88a79b90b96100c6ca43b9751b": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "b97b3c8080a941df4ed397f95daf54508206fb88a79b90b96100c6ca43b9751b",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:15c92b3ae736b2aeb53ce67ff4743e68aaba6e54ed702657bf66f8ea494cebc5": {
+      "case": "invoice-matching",
+      "source_id": "R05",
+      "text_sha256": "15c92b3ae736b2aeb53ce67ff4743e68aaba6e54ed702657bf66f8ea494cebc5",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:927a9ebb78547889891afc41640bac7ea85fcd982fd4aa420d0dae7753b29aab": {
+      "case": "invoice-matching",
+      "source_id": "R06",
+      "text_sha256": "927a9ebb78547889891afc41640bac7ea85fcd982fd4aa420d0dae7753b29aab",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:ad8fb43d6f69aaa737cf90b2ad8fc13a08bbf6419c9ed4c64b805425dbbbb68d": {
+      "case": "invoice-matching",
+      "source_id": "R07",
+      "text_sha256": "ad8fb43d6f69aaa737cf90b2ad8fc13a08bbf6419c9ed4c64b805425dbbbb68d",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:bff61fe221f37c982833ee2085980248f4a49a3a038a2b4690daa31a39aa003e": {
+      "case": "invoice-matching",
+      "source_id": "R08",
+      "text_sha256": "bff61fe221f37c982833ee2085980248f4a49a3a038a2b4690daa31a39aa003e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:e86194bdc747c417608a449b8b837b93c6ae42ef538f7dc9b07e43f16974fcd1": {
+      "case": "invoice-matching",
+      "source_id": "R09",
+      "text_sha256": "e86194bdc747c417608a449b8b837b93c6ae42ef538f7dc9b07e43f16974fcd1",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:55e38776818e9af0148cb749e70fd899370ba62a071f9c83e4d789fae48b434e": {
+      "case": "invoice-matching",
+      "source_id": "R10",
+      "text_sha256": "55e38776818e9af0148cb749e70fd899370ba62a071f9c83e4d789fae48b434e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:c371f4618215a56bb5caaeb939e8d26923b8dff21c0e1972130003d2ac65ea95": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "c371f4618215a56bb5caaeb939e8d26923b8dff21c0e1972130003d2ac65ea95",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:72d08a6b919a0e5b83541e6302e9b70aed7ced8af26c7ebf358b4eedd7df29d9": {
+      "case": "invoice-matching",
+      "source_id": "R12",
+      "text_sha256": "72d08a6b919a0e5b83541e6302e9b70aed7ced8af26c7ebf358b4eedd7df29d9",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:37f3022aa25fa9e61c0bb291e8f7955a508ead3672bd0020f5366143957bd868": {
+      "case": "invoice-matching",
+      "source_id": "R01",
+      "text_sha256": "37f3022aa25fa9e61c0bb291e8f7955a508ead3672bd0020f5366143957bd868",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:7e7500243648f884e151cc908810631a95a969c3d9825c7f56ed43e90a1417e4": {
+      "case": "invoice-matching",
+      "source_id": "R02",
+      "text_sha256": "7e7500243648f884e151cc908810631a95a969c3d9825c7f56ed43e90a1417e4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:2d48c9c418dadb7e274719ccd483e5b6abf90623ea20fea6dac03bce93b812ca": {
+      "case": "invoice-matching",
+      "source_id": "R03",
+      "text_sha256": "2d48c9c418dadb7e274719ccd483e5b6abf90623ea20fea6dac03bce93b812ca",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:c523a71a4f445f5192e942017bda53e9a582388d91256c7dafcba00702bc5a3b": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "c523a71a4f445f5192e942017bda53e9a582388d91256c7dafcba00702bc5a3b",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:6942e676d09fd08094d905a8d8310933de83d5e40552fe178b060ca75ea222b7": {
+      "case": "invoice-matching",
+      "source_id": "R05",
+      "text_sha256": "6942e676d09fd08094d905a8d8310933de83d5e40552fe178b060ca75ea222b7",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:111c216f9d57868e5b8a39866453e88b62230e4a3c1b810fdbe390279dd439ef": {
+      "case": "invoice-matching",
+      "source_id": "R06",
+      "text_sha256": "111c216f9d57868e5b8a39866453e88b62230e4a3c1b810fdbe390279dd439ef",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:82b561f3ea5ba823bfa6fbcfb812e5d4b92dfe701fa32fe655be4a8c64db4151": {
+      "case": "invoice-matching",
+      "source_id": "R07",
+      "text_sha256": "82b561f3ea5ba823bfa6fbcfb812e5d4b92dfe701fa32fe655be4a8c64db4151",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:e8d8dbd600a63f596a23652cf8ba4d92b5b6afab8b3d158aaeda0c7d15701515": {
+      "case": "invoice-matching",
+      "source_id": "R08",
+      "text_sha256": "e8d8dbd600a63f596a23652cf8ba4d92b5b6afab8b3d158aaeda0c7d15701515",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:db74f6282efe450856cd75626aa920f479ec68813138fefb40a17430df5b7c8f": {
+      "case": "invoice-matching",
+      "source_id": "R09",
+      "text_sha256": "db74f6282efe450856cd75626aa920f479ec68813138fefb40a17430df5b7c8f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:352c56a1ed81043b3e12cc36582d4f5b777f99cd5824e40853b9247659cb79e4": {
+      "case": "invoice-matching",
+      "source_id": "R10",
+      "text_sha256": "352c56a1ed81043b3e12cc36582d4f5b777f99cd5824e40853b9247659cb79e4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:8a93fd2a36519be5ab323fa3b68d11604f841899e14a47f488ec8686cfb01b27": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "8a93fd2a36519be5ab323fa3b68d11604f841899e14a47f488ec8686cfb01b27",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:9916d2874812823591356b083ab2c4b64aade6fd765eb8a5cdb2e6b9f6d7c583": {
+      "case": "invoice-matching",
+      "source_id": "R12",
+      "text_sha256": "9916d2874812823591356b083ab2c4b64aade6fd765eb8a5cdb2e6b9f6d7c583",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:459e36d9fed56a86f6130ffba102f8db332cf32787c4c7c9ffc326c0dd7a7789": {
+      "case": "invoice-matching",
+      "source_id": "R01",
+      "text_sha256": "459e36d9fed56a86f6130ffba102f8db332cf32787c4c7c9ffc326c0dd7a7789",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:badb1a01948964599ac76982e138c25bd384bd39a9ee69cc62da00ca87f80fae": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "badb1a01948964599ac76982e138c25bd384bd39a9ee69cc62da00ca87f80fae",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:bbe4d03a8508863d5fa201bd55f5e9d63bc32db071d2804374608e0a989a3245": {
+      "case": "invoice-matching",
+      "source_id": "R05",
+      "text_sha256": "bbe4d03a8508863d5fa201bd55f5e9d63bc32db071d2804374608e0a989a3245",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:db48634930321e37aa2e3b8d453ba7848b1ccade68e20a39b23f98846376bc8b": {
+      "case": "invoice-matching",
+      "source_id": "R06",
+      "text_sha256": "db48634930321e37aa2e3b8d453ba7848b1ccade68e20a39b23f98846376bc8b",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:0364f60f447875d95e48568769e268f45177b8e76b2728786bc6eaaf09c1e13c": {
+      "case": "invoice-matching",
+      "source_id": "R10",
+      "text_sha256": "0364f60f447875d95e48568769e268f45177b8e76b2728786bc6eaaf09c1e13c",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:56945622b4402bcbb265fecd9b94a3239d0a2c859c991a499656eedd2e5097fd": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "56945622b4402bcbb265fecd9b94a3239d0a2c859c991a499656eedd2e5097fd",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:aca132323729b387414838ee78e48cf42976abb5d2371467eeb20541d319c72b": {
+      "case": "invoice-matching",
+      "source_id": "R12",
+      "text_sha256": "aca132323729b387414838ee78e48cf42976abb5d2371467eeb20541d319c72b",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:e69c162b0321612473d62e05192399ccf43973d2c4f4f9a10b60749cb0783e68": {
+      "case": "purchase-approval",
+      "source_id": "R01",
+      "text_sha256": "e69c162b0321612473d62e05192399ccf43973d2c4f4f9a10b60749cb0783e68",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:76ea751fb77b7f3b32fa417d7297583683084e2f6fb0fdd7751501cbd10e7865": {
+      "case": "purchase-approval",
+      "source_id": "R02",
+      "text_sha256": "76ea751fb77b7f3b32fa417d7297583683084e2f6fb0fdd7751501cbd10e7865",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:7fdcbd040777032254bdcd80c5ca88c29dc0ba06c97b33dd89c1fdc7dd03196d": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "7fdcbd040777032254bdcd80c5ca88c29dc0ba06c97b33dd89c1fdc7dd03196d",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:946bae887ac3d374496f581157955d641667575143aa163dba4dd67543eb231a": {
+      "case": "purchase-approval",
+      "source_id": "R04",
+      "text_sha256": "946bae887ac3d374496f581157955d641667575143aa163dba4dd67543eb231a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:16ca3378ae1bdafeaceb86455de6e607eec0460ee1ec10f5a3140533fcb4d966": {
+      "case": "purchase-approval",
+      "source_id": "R05",
+      "text_sha256": "16ca3378ae1bdafeaceb86455de6e607eec0460ee1ec10f5a3140533fcb4d966",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:fcb3e2a5b494dd781f30c824dda6ebb259504c889ffede1772c41d3d960a1155": {
+      "case": "purchase-approval",
+      "source_id": "R06",
+      "text_sha256": "fcb3e2a5b494dd781f30c824dda6ebb259504c889ffede1772c41d3d960a1155",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:7854418a08afc2b62d18727db42d1dc03480624da6bdfc79e32d7a9cb02bb982": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "7854418a08afc2b62d18727db42d1dc03480624da6bdfc79e32d7a9cb02bb982",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:28299612df13e7470507c86127020a319e1954b759bd0f92357eb001da9ef83b": {
+      "case": "purchase-approval",
+      "source_id": "R08",
+      "text_sha256": "28299612df13e7470507c86127020a319e1954b759bd0f92357eb001da9ef83b",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:2d19869444bf551fed4b9bd4491cc31008031307df341bbb4b5f14694842abf8": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "2d19869444bf551fed4b9bd4491cc31008031307df341bbb4b5f14694842abf8",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:7a3257d63db12566577bf94ba6914292c1174ff4dd564f2a522505c411be7e38": {
+      "case": "purchase-approval",
+      "source_id": "R10",
+      "text_sha256": "7a3257d63db12566577bf94ba6914292c1174ff4dd564f2a522505c411be7e38",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:2205fe269974ec1cca94519a8b5a5301ba42bcae0cb6278a83f12d1c9ade87bb": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "2205fe269974ec1cca94519a8b5a5301ba42bcae0cb6278a83f12d1c9ade87bb",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:08e943a27a0e7e7c097ff9f6029eddb85f7d2c657e3fcbe6c801452fda8d90ce": {
+      "case": "purchase-approval",
+      "source_id": "R12",
+      "text_sha256": "08e943a27a0e7e7c097ff9f6029eddb85f7d2c657e3fcbe6c801452fda8d90ce",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:b4ea8d05d6af710626fc7dd69889085e9b8eed18544a36118e22079d6d48bc6e": {
+      "case": "purchase-approval",
+      "source_id": "R01",
+      "text_sha256": "b4ea8d05d6af710626fc7dd69889085e9b8eed18544a36118e22079d6d48bc6e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:18d00162a95ed950db2499049a05db1445a7e9656d3790f0ba127af9e7446f2f": {
+      "case": "purchase-approval",
+      "source_id": "R02",
+      "text_sha256": "18d00162a95ed950db2499049a05db1445a7e9656d3790f0ba127af9e7446f2f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:2be76c6f381acd790e6b1c6518c201058438af2fbcd74f9628271f4d546593cf": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "2be76c6f381acd790e6b1c6518c201058438af2fbcd74f9628271f4d546593cf",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:dee5958f5df319279f147490c3070627896144d6de9f3230b22de99101c551ae": {
+      "case": "purchase-approval",
+      "source_id": "R04",
+      "text_sha256": "dee5958f5df319279f147490c3070627896144d6de9f3230b22de99101c551ae",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:0a6e075994cc2226ff924d22fc69f2c1dfb1419c8a2402e6ad2f8feb718512c1": {
+      "case": "purchase-approval",
+      "source_id": "R06",
+      "text_sha256": "0a6e075994cc2226ff924d22fc69f2c1dfb1419c8a2402e6ad2f8feb718512c1",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:73d5972594995e90396a47da5615ed06ad059433f3612353343c42fc99c399c4": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "73d5972594995e90396a47da5615ed06ad059433f3612353343c42fc99c399c4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:22c8b4a8b54360ef3921b546947531e03ee6ed9119b32717c7ee5d185d7cd9ae": {
+      "case": "purchase-approval",
+      "source_id": "R08",
+      "text_sha256": "22c8b4a8b54360ef3921b546947531e03ee6ed9119b32717c7ee5d185d7cd9ae",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:6622aa91a6fb5fcacaef3a9b05d03fda12858f7c6ca4f4416b6c531567512780": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "6622aa91a6fb5fcacaef3a9b05d03fda12858f7c6ca4f4416b6c531567512780",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:fc58ceee26f45848be50664f8eb0dec263a78b5ceeeb754cec4cef28205a28ca": {
+      "case": "purchase-approval",
+      "source_id": "R10",
+      "text_sha256": "fc58ceee26f45848be50664f8eb0dec263a78b5ceeeb754cec4cef28205a28ca",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:984679770dc615eb485982a70bd23d08233221de17c28e97de207b09b10994f1": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "984679770dc615eb485982a70bd23d08233221de17c28e97de207b09b10994f1",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:e695784364b8dd4484f1213f2937225cd02573cce47bc906a2f6ec48cde3f185": {
+      "case": "purchase-approval",
+      "source_id": "R12",
+      "text_sha256": "e695784364b8dd4484f1213f2937225cd02573cce47bc906a2f6ec48cde3f185",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:3e77be9883c1d1b9d632cd79ce650e4c9b26aed225adf53cc9cd8ddfda120aec": {
+      "case": "purchase-approval",
+      "source_id": "R01",
+      "text_sha256": "3e77be9883c1d1b9d632cd79ce650e4c9b26aed225adf53cc9cd8ddfda120aec",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:3d4385df886d403eb9c37cfd58af669c04ac05693caacf2cb8d2afc242cfa2ae": {
+      "case": "purchase-approval",
+      "source_id": "R02",
+      "text_sha256": "3d4385df886d403eb9c37cfd58af669c04ac05693caacf2cb8d2afc242cfa2ae",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:9792bb68931adcb16e94b9051d4aa8b77817a1c29934191a2c92bf02a761bf94": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "9792bb68931adcb16e94b9051d4aa8b77817a1c29934191a2c92bf02a761bf94",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:90ddda6404013247118d97e485208ec93254df2d6ee97719e0477e92ee9d5caa": {
+      "case": "purchase-approval",
+      "source_id": "R04",
+      "text_sha256": "90ddda6404013247118d97e485208ec93254df2d6ee97719e0477e92ee9d5caa",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:d0e11c1dfe29b94671cc435abd78f909946e68a97df5d55cae4f2f89ef65af1f": {
+      "case": "purchase-approval",
+      "source_id": "R05",
+      "text_sha256": "d0e11c1dfe29b94671cc435abd78f909946e68a97df5d55cae4f2f89ef65af1f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:1ef6dffed2591de651cd2baae899c53d72cf415fa5f286f0049bd90695bf84e0": {
+      "case": "purchase-approval",
+      "source_id": "R06",
+      "text_sha256": "1ef6dffed2591de651cd2baae899c53d72cf415fa5f286f0049bd90695bf84e0",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:bf6a389fc7a600396d6d944ae112b3313fb87c293623f5c528f57bec18da165e": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "bf6a389fc7a600396d6d944ae112b3313fb87c293623f5c528f57bec18da165e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:b1ffa6fedeeec18fba0074665da10564e902e3bc943737fcde03b9ffca375506": {
+      "case": "purchase-approval",
+      "source_id": "R08",
+      "text_sha256": "b1ffa6fedeeec18fba0074665da10564e902e3bc943737fcde03b9ffca375506",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:839db4c4126da7f4119a96c110df4b70de747c9e2678805e542890d093803287": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "839db4c4126da7f4119a96c110df4b70de747c9e2678805e542890d093803287",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:0ec9223f17b29a05ac282fc19edbfcafa17b9c74973fdb6e1f80c0a24d042ba2": {
+      "case": "purchase-approval",
+      "source_id": "R10",
+      "text_sha256": "0ec9223f17b29a05ac282fc19edbfcafa17b9c74973fdb6e1f80c0a24d042ba2",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:2c31b8970ceb18710e629ed0127fe0b58e310f78ca02214b439a65dc95c00480": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "2c31b8970ceb18710e629ed0127fe0b58e310f78ca02214b439a65dc95c00480",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:65a097b3588972e179b0ed27e64a2932925fcf6555c18484468b746f07990c7e": {
+      "case": "purchase-approval",
+      "source_id": "R12",
+      "text_sha256": "65a097b3588972e179b0ed27e64a2932925fcf6555c18484468b746f07990c7e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:7afbde666661f6e6e3bb7b5600c80de9a9b4a1b9d6e34bf7620c40909f241ca3": {
+      "case": "supplier-onboarding",
+      "source_id": "R01",
+      "text_sha256": "7afbde666661f6e6e3bb7b5600c80de9a9b4a1b9d6e34bf7620c40909f241ca3",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:faf3355a03bb2bc43a5374d43c528582ec3f04cd83e3c2633a780d66ddd9b876": {
+      "case": "supplier-onboarding",
+      "source_id": "R02",
+      "text_sha256": "faf3355a03bb2bc43a5374d43c528582ec3f04cd83e3c2633a780d66ddd9b876",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:f004d04b038da2cefd7fc85a141d78bd34033a34e802734164082f5afdda663b": {
+      "case": "supplier-onboarding",
+      "source_id": "R03",
+      "text_sha256": "f004d04b038da2cefd7fc85a141d78bd34033a34e802734164082f5afdda663b",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:3daa2309978bf7b0843a4570b12322721235e8df17777b2495a245c1362f47d4": {
+      "case": "supplier-onboarding",
+      "source_id": "R04",
+      "text_sha256": "3daa2309978bf7b0843a4570b12322721235e8df17777b2495a245c1362f47d4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:6fcaf4b82faefcbbf33ec4a65527ea080a876cdccea88667f55f1df778c596ad": {
+      "case": "supplier-onboarding",
+      "source_id": "R05",
+      "text_sha256": "6fcaf4b82faefcbbf33ec4a65527ea080a876cdccea88667f55f1df778c596ad",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:1568786c85c2953ede95967758c455b2335f2a07df02d0f976c9b105936f61ad": {
+      "case": "supplier-onboarding",
+      "source_id": "R06",
+      "text_sha256": "1568786c85c2953ede95967758c455b2335f2a07df02d0f976c9b105936f61ad",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:9e8748d81e20df66d5d4ef5c2b593446539e181408c0019fee12edb5a9734076": {
+      "case": "supplier-onboarding",
+      "source_id": "R07",
+      "text_sha256": "9e8748d81e20df66d5d4ef5c2b593446539e181408c0019fee12edb5a9734076",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:e7d18ee870552bb8e754898675139aed9689a5fb2c49cbabb5f0f3f6e19d7254": {
+      "case": "supplier-onboarding",
+      "source_id": "R08",
+      "text_sha256": "e7d18ee870552bb8e754898675139aed9689a5fb2c49cbabb5f0f3f6e19d7254",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:11e343c8b1930923bc0aa664f7a0f790d717a6f55eba9ebe5de0134237ce773a": {
+      "case": "supplier-onboarding",
+      "source_id": "R09",
+      "text_sha256": "11e343c8b1930923bc0aa664f7a0f790d717a6f55eba9ebe5de0134237ce773a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:4afc4f52312f7d4e613ca9353956f134013d6daa8913f245273a62f5a032bc40": {
+      "case": "supplier-onboarding",
+      "source_id": "R10",
+      "text_sha256": "4afc4f52312f7d4e613ca9353956f134013d6daa8913f245273a62f5a032bc40",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:bc4dca61cb3ae0eab679385890914dd91f181d9c6d85963f69b74f21b40b3cf7": {
+      "case": "supplier-onboarding",
+      "source_id": "R11",
+      "text_sha256": "bc4dca61cb3ae0eab679385890914dd91f181d9c6d85963f69b74f21b40b3cf7",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:00fed0ef5df75c1b9ae83daa9004cf1b9f8000aa17e847eda159247452822e57": {
+      "case": "supplier-onboarding",
+      "source_id": "R12",
+      "text_sha256": "00fed0ef5df75c1b9ae83daa9004cf1b9f8000aa17e847eda159247452822e57",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:fadd55a6673f6cfcef307c14c2199420c8fbb8135add5e63912047e8b8f9592a": {
+      "case": "supplier-onboarding",
+      "source_id": "R01",
+      "text_sha256": "fadd55a6673f6cfcef307c14c2199420c8fbb8135add5e63912047e8b8f9592a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:f60b5dc8627147e9e7919ff52b3e7b6b28dc1066b5e60550fdd216ef3e262c65": {
+      "case": "supplier-onboarding",
+      "source_id": "R02",
+      "text_sha256": "f60b5dc8627147e9e7919ff52b3e7b6b28dc1066b5e60550fdd216ef3e262c65",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:8aacaa59a07d6fb4bb363be0750f2a948318990d4105ba772f58f1165be4178c": {
+      "case": "supplier-onboarding",
+      "source_id": "R03",
+      "text_sha256": "8aacaa59a07d6fb4bb363be0750f2a948318990d4105ba772f58f1165be4178c",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:5b190c849a55ec23474e98a29401ce4c52880de37f09328706068dabb61d01ab": {
+      "case": "supplier-onboarding",
+      "source_id": "R04",
+      "text_sha256": "5b190c849a55ec23474e98a29401ce4c52880de37f09328706068dabb61d01ab",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:2af3ffb4c4951406284574f2b0150c85c27cf4e2b301a75e01c457540ed9c5a2": {
+      "case": "supplier-onboarding",
+      "source_id": "R05",
+      "text_sha256": "2af3ffb4c4951406284574f2b0150c85c27cf4e2b301a75e01c457540ed9c5a2",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:93b8db521007379dd0d2721f988c43cb3e30bf825ff8fbb7a65e6a6032b20842": {
+      "case": "supplier-onboarding",
+      "source_id": "R06",
+      "text_sha256": "93b8db521007379dd0d2721f988c43cb3e30bf825ff8fbb7a65e6a6032b20842",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:9cde2201e9c5a2c1a441e54eb6caf319caba939fff844f1efb655e742362bc91": {
+      "case": "supplier-onboarding",
+      "source_id": "R07",
+      "text_sha256": "9cde2201e9c5a2c1a441e54eb6caf319caba939fff844f1efb655e742362bc91",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:fe23f574c6cacaa18a2dc5f07fb3d63701fff201cd87e04f745736da618f6f51": {
+      "case": "supplier-onboarding",
+      "source_id": "R08",
+      "text_sha256": "fe23f574c6cacaa18a2dc5f07fb3d63701fff201cd87e04f745736da618f6f51",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:df2c853f1d7997934f2035715885ccc7dc097113a597a5818ce38343b7b21b9e": {
+      "case": "supplier-onboarding",
+      "source_id": "R09",
+      "text_sha256": "df2c853f1d7997934f2035715885ccc7dc097113a597a5818ce38343b7b21b9e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:e10e24dcd21c4955baf893dcb093ebafe748f626e249430b4a4821c9ce7926fc": {
+      "case": "supplier-onboarding",
+      "source_id": "R10",
+      "text_sha256": "e10e24dcd21c4955baf893dcb093ebafe748f626e249430b4a4821c9ce7926fc",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:417888e93fcc175badce50a03ec4dd6fc4b6bccdd1a5144a1ed2ec085b2214b4": {
+      "case": "supplier-onboarding",
+      "source_id": "R11",
+      "text_sha256": "417888e93fcc175badce50a03ec4dd6fc4b6bccdd1a5144a1ed2ec085b2214b4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:8645cbe21e54b5ffef55ccf065d666660327f4a54e395637788e39e623513b97": {
+      "case": "supplier-onboarding",
+      "source_id": "R12",
+      "text_sha256": "8645cbe21e54b5ffef55ccf065d666660327f4a54e395637788e39e623513b97",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:e85417855ef5c14bae7514dbd6328bd66b6cf5106a0f1885a8cb8736959f6678": {
+      "case": "supplier-onboarding",
+      "source_id": "R02",
+      "text_sha256": "e85417855ef5c14bae7514dbd6328bd66b6cf5106a0f1885a8cb8736959f6678",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:bcc0ceebc1581cd99d2958456602b48a2db9c24dc1399b167a7b5efdf5901859": {
+      "case": "supplier-onboarding",
+      "source_id": "R03",
+      "text_sha256": "bcc0ceebc1581cd99d2958456602b48a2db9c24dc1399b167a7b5efdf5901859",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:efe8df4e4f249d6e5b7ec7e5ac1bae9c4fc99414a7ed68efad300a7f12575667": {
+      "case": "supplier-onboarding",
+      "source_id": "R12",
+      "text_sha256": "efe8df4e4f249d6e5b7ec7e5ac1bae9c4fc99414a7ed68efad300a7f12575667",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:4749355720e774b806cd96a280acda486903b46483eb602393477c7feea89d87": {
+      "case": "purchase-approval",
+      "source_id": "R01",
+      "text_sha256": "4749355720e774b806cd96a280acda486903b46483eb602393477c7feea89d87",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:f5c2c9892656c010f686e505cf1b40ae5c5d2eeadbafe8ce29818e6caa6ce4e4": {
+      "case": "purchase-approval",
+      "source_id": "R02",
+      "text_sha256": "f5c2c9892656c010f686e505cf1b40ae5c5d2eeadbafe8ce29818e6caa6ce4e4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:0522d2c77ca0f7c50fd22d61005163419bdd5bdf15b58a6f141ec627b27a06ec": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "0522d2c77ca0f7c50fd22d61005163419bdd5bdf15b58a6f141ec627b27a06ec",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:851868a2d382418146cc84c2a3f0228594509140bc1894e6c9b9fef738902a55": {
+      "case": "purchase-approval",
+      "source_id": "R04",
+      "text_sha256": "851868a2d382418146cc84c2a3f0228594509140bc1894e6c9b9fef738902a55",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:547d614b683647580f1e8500cfff5dac2aa28bade51cc42a9690bdee2a7e687f": {
+      "case": "purchase-approval",
+      "source_id": "R06",
+      "text_sha256": "547d614b683647580f1e8500cfff5dac2aa28bade51cc42a9690bdee2a7e687f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:68fb14cd65a4c958a57c627efb7a5877a210d9d02e9b8e609205d642d0a09097": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "68fb14cd65a4c958a57c627efb7a5877a210d9d02e9b8e609205d642d0a09097",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:10d1a23dcf6c69586f3dc023b5b56c1077763a46f3cde040179fb852e2c5a732": {
+      "case": "purchase-approval",
+      "source_id": "R08",
+      "text_sha256": "10d1a23dcf6c69586f3dc023b5b56c1077763a46f3cde040179fb852e2c5a732",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:21a4b4591d6bc03959b123f56674216c175cbbaa2fb4991ead65cf1bfe26ca3a": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "21a4b4591d6bc03959b123f56674216c175cbbaa2fb4991ead65cf1bfe26ca3a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:50dbbec9b14e42b139da376a038588d305771efa3e754d1d94185edff95acfd7": {
+      "case": "purchase-approval",
+      "source_id": "R10",
+      "text_sha256": "50dbbec9b14e42b139da376a038588d305771efa3e754d1d94185edff95acfd7",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:eadeb10e1a3564d2583fd6eff9efe2f006c9c46170fd0f6d956de79436dd9531": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "eadeb10e1a3564d2583fd6eff9efe2f006c9c46170fd0f6d956de79436dd9531",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:a5f13feb05849b0953afbc1bb7dd9ddb41d0189b4acaba0b050d18d4bc74e0be": {
+      "case": "purchase-approval",
+      "source_id": "R12",
+      "text_sha256": "a5f13feb05849b0953afbc1bb7dd9ddb41d0189b4acaba0b050d18d4bc74e0be",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:339b475eb464ba11d36110bed68e2dd481f304bebbca3e9915817c611ea7ee22": {
+      "case": "purchase-approval",
+      "source_id": "R01",
+      "text_sha256": "339b475eb464ba11d36110bed68e2dd481f304bebbca3e9915817c611ea7ee22",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:0df8d0e3a2982f5a8775393db70dce67f89adee8c0f665ba3deeac6bdf88a80a": {
+      "case": "purchase-approval",
+      "source_id": "R06",
+      "text_sha256": "0df8d0e3a2982f5a8775393db70dce67f89adee8c0f665ba3deeac6bdf88a80a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:4c287451ed45ea5930873ced861f01eda3d1725c37edac8c4a2e2297bb2683c7": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "4c287451ed45ea5930873ced861f01eda3d1725c37edac8c4a2e2297bb2683c7",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:ea28c12ca7004eda245b135b170f7de04d078247607742fce649b59a36b8ff56": {
+      "case": "purchase-approval",
+      "source_id": "R08",
+      "text_sha256": "ea28c12ca7004eda245b135b170f7de04d078247607742fce649b59a36b8ff56",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:8afbb50acd09921bfed5887a49e0a590dd3c878dc6ae691851b183eb19fb1d58": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "8afbb50acd09921bfed5887a49e0a590dd3c878dc6ae691851b183eb19fb1d58",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:547d0e559492001402746d163002818945fc4a25ef3b3412e5c74cfd54031cc4": {
+      "case": "purchase-approval",
+      "source_id": "R10",
+      "text_sha256": "547d0e559492001402746d163002818945fc4a25ef3b3412e5c74cfd54031cc4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:74b7fcde070b49a7396a158052ebe6e22f68f67e4e7d16c7fb53b39edae1274d": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "74b7fcde070b49a7396a158052ebe6e22f68f67e4e7d16c7fb53b39edae1274d",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:3aec7ca7eb6f46c248e48f8c6ea75dad97bf612ae96d149bab16a9f25c412ed7": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "3aec7ca7eb6f46c248e48f8c6ea75dad97bf612ae96d149bab16a9f25c412ed7",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:0861b5da76db03d24f5f01bf1441f00e6e4ba0836fb0a88b954a106b399dba87": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "0861b5da76db03d24f5f01bf1441f00e6e4ba0836fb0a88b954a106b399dba87",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:32540508cf880504222f1f4ab3e4f7f5073cb0a71cebcfc520c3b95fcb70c238": {
+      "case": "supplier-onboarding",
+      "source_id": "R01",
+      "text_sha256": "32540508cf880504222f1f4ab3e4f7f5073cb0a71cebcfc520c3b95fcb70c238",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:48b371611c022a32fef50f34f911126395fe74d3730d2d591a900f45e7b6ab14": {
+      "case": "supplier-onboarding",
+      "source_id": "R02",
+      "text_sha256": "48b371611c022a32fef50f34f911126395fe74d3730d2d591a900f45e7b6ab14",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:29a781cd4c6ca32f00e097ad77166b914c8989c9fd6bdd9ccbff8b5487e1e40c": {
+      "case": "supplier-onboarding",
+      "source_id": "R04",
+      "text_sha256": "29a781cd4c6ca32f00e097ad77166b914c8989c9fd6bdd9ccbff8b5487e1e40c",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:ef079389fc6945c92faf845ea81ac8c1a527f06cb86f31bb90eb50eceaac8e86": {
+      "case": "supplier-onboarding",
+      "source_id": "R05",
+      "text_sha256": "ef079389fc6945c92faf845ea81ac8c1a527f06cb86f31bb90eb50eceaac8e86",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:5677e71bffd50c2aebcb3bc97ad61a9ed2063869a3c3ce57a3196195494186f6": {
+      "case": "supplier-onboarding",
+      "source_id": "R07",
+      "text_sha256": "5677e71bffd50c2aebcb3bc97ad61a9ed2063869a3c3ce57a3196195494186f6",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:8c60b2d43c5a04d6a4fe4a72a1f08af063c59cf83de51f494b4424a7f7427fbd": {
+      "case": "supplier-onboarding",
+      "source_id": "R08",
+      "text_sha256": "8c60b2d43c5a04d6a4fe4a72a1f08af063c59cf83de51f494b4424a7f7427fbd",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:8b4526e8be2c951c98c9a76f5522341ad475188fc4814014f2b100f4c655d1c5": {
+      "case": "supplier-onboarding",
+      "source_id": "R09",
+      "text_sha256": "8b4526e8be2c951c98c9a76f5522341ad475188fc4814014f2b100f4c655d1c5",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:d92bd743b4f8fc5d81d06897b6f3be47dbb043c6fe15123a558db8c91125211a": {
+      "case": "supplier-onboarding",
+      "source_id": "R11",
+      "text_sha256": "d92bd743b4f8fc5d81d06897b6f3be47dbb043c6fe15123a558db8c91125211a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:d6808d4a8d9148cfab4091aa28b3ea85e3e1a2e86250e6cf122b96c96fd4e4a6": {
+      "case": "supplier-onboarding",
+      "source_id": "R12",
+      "text_sha256": "d6808d4a8d9148cfab4091aa28b3ea85e3e1a2e86250e6cf122b96c96fd4e4a6",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:0d051b0d3a0a005853944c962a8e68d6f62f4da2875f9a4002d6bf93339c9261": {
+      "case": "invoice-matching",
+      "source_id": "R01",
+      "text_sha256": "0d051b0d3a0a005853944c962a8e68d6f62f4da2875f9a4002d6bf93339c9261",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:b177ba58e8a03d4612f450a21d6109908821ecd291c6519c09b3318513888a64": {
+      "case": "invoice-matching",
+      "source_id": "R06",
+      "text_sha256": "b177ba58e8a03d4612f450a21d6109908821ecd291c6519c09b3318513888a64",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:b2daf1c9b998ef3ad24a74618b08f873d0b392a9bc59c89f385a938d7ee5bbf2": {
+      "case": "invoice-matching",
+      "source_id": "R08",
+      "text_sha256": "b2daf1c9b998ef3ad24a74618b08f873d0b392a9bc59c89f385a938d7ee5bbf2",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:a6207db72848812efe905d11cea275a3bba87ca7223f3bfa2ad14eb6a68c26fc": {
+      "case": "invoice-matching",
+      "source_id": "R09",
+      "text_sha256": "a6207db72848812efe905d11cea275a3bba87ca7223f3bfa2ad14eb6a68c26fc",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:e21931cb86a65951c40637e2c7e44ad240b5fc4077d0fc2ea035885051be3042": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "e21931cb86a65951c40637e2c7e44ad240b5fc4077d0fc2ea035885051be3042",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:e734919fe1201bd7b8e481e9ed6ff1ae151ef94e187e41e3ac816badd94ff03e": {
+      "case": "invoice-matching",
+      "source_id": "R12",
+      "text_sha256": "e734919fe1201bd7b8e481e9ed6ff1ae151ef94e187e41e3ac816badd94ff03e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:a8ab817475f98ea857fb89fe5e97f390b9bb2d32d82e990da9f5e1a69c5ac6e5": {
+      "case": "invoice-matching",
+      "source_id": "R01",
+      "text_sha256": "a8ab817475f98ea857fb89fe5e97f390b9bb2d32d82e990da9f5e1a69c5ac6e5",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:8758d6f7f3539e0ad6783c19309d20adef6242fb306ccfcf5b3366ff7b70413f": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "8758d6f7f3539e0ad6783c19309d20adef6242fb306ccfcf5b3366ff7b70413f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:b520a1e0e8a1d452be1f10865fba26e004ca2322aac345c82ea1c3976710ea9e": {
+      "case": "invoice-matching",
+      "source_id": "R05",
+      "text_sha256": "b520a1e0e8a1d452be1f10865fba26e004ca2322aac345c82ea1c3976710ea9e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:c25f8e0c11f46955d6d20b1236aa878aa47ddcd373d3f389031fc6895f4a901e": {
+      "case": "invoice-matching",
+      "source_id": "R06",
+      "text_sha256": "c25f8e0c11f46955d6d20b1236aa878aa47ddcd373d3f389031fc6895f4a901e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:c43e65b2075ef33bf5930a842acb03de0952f23fec53d36b5134b494cdf9831a": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "c43e65b2075ef33bf5930a842acb03de0952f23fec53d36b5134b494cdf9831a",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:3ea93724820aaae33d5b7ed5740c5645fa32eac877167e966ab798372b4ec0c2": {
+      "case": "invoice-matching",
+      "source_id": "R12",
+      "text_sha256": "3ea93724820aaae33d5b7ed5740c5645fa32eac877167e966ab798372b4ec0c2",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:0be0c84c0551ee2c76e41b31a80a3fe7f91e37b6dbb6b497394a35fcc6ac26c4": {
+      "case": "invoice-matching",
+      "source_id": "R01",
+      "text_sha256": "0be0c84c0551ee2c76e41b31a80a3fe7f91e37b6dbb6b497394a35fcc6ac26c4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:2bbb02943cbd8a0a64257b3540fe19c8a150f27598cb96aa0f4810e3b1b395eb": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "2bbb02943cbd8a0a64257b3540fe19c8a150f27598cb96aa0f4810e3b1b395eb",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:2be65979a5b141fd81c4ddb87c168df8320d608d177c47a8a21cdb2dc4aa0230": {
+      "case": "invoice-matching",
+      "source_id": "R05",
+      "text_sha256": "2be65979a5b141fd81c4ddb87c168df8320d608d177c47a8a21cdb2dc4aa0230",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:a5101965a426b7f20a671b480e1bb7b15ef5af56e16211492503a3cfe1c794d3": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "a5101965a426b7f20a671b480e1bb7b15ef5af56e16211492503a3cfe1c794d3",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:48208654c5625dea8aea8608074b30b9c640dce3070c05ad2f40cba31e6fc864": {
+      "case": "supplier-onboarding",
+      "source_id": "R03",
+      "text_sha256": "48208654c5625dea8aea8608074b30b9c640dce3070c05ad2f40cba31e6fc864",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:575db62f41a206c9caa9712b0a27250c78a74cea0d89ade93b213d50f0e6cdab": {
+      "case": "supplier-onboarding",
+      "source_id": "R12",
+      "text_sha256": "575db62f41a206c9caa9712b0a27250c78a74cea0d89ade93b213d50f0e6cdab",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:92e47d6f6a82729f4ceafab7a6da40637411f153b19d5cc6e4d93181b31c543f": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "92e47d6f6a82729f4ceafab7a6da40637411f153b19d5cc6e4d93181b31c543f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:32d17af91fa8ce80daf0dc3455ad369b8855665d3872fa2b48a8bfe241c1f7eb": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "32d17af91fa8ce80daf0dc3455ad369b8855665d3872fa2b48a8bfe241c1f7eb",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:ea9632386fefde9a038e5da2ce2ceb592e7f392ae6aae336d961b7b50c3610f8": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "ea9632386fefde9a038e5da2ce2ceb592e7f392ae6aae336d961b7b50c3610f8",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:6ce5f2c60245a9bda96f7d70ebc19036d8ded75ff37fc5b5d44bca9457905422": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "6ce5f2c60245a9bda96f7d70ebc19036d8ded75ff37fc5b5d44bca9457905422",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:a2b1248d042a4937f2642fb5c183d5eefc57e639213b43efec53285a7a9fd1e2": {
+      "case": "invoice-matching",
+      "source_id": "R05",
+      "text_sha256": "a2b1248d042a4937f2642fb5c183d5eefc57e639213b43efec53285a7a9fd1e2",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:55d2be5970d4eb53f57a39e2b58d2aa37c5f3caf538dd8b71399f846eee12f53": {
+      "case": "invoice-matching",
+      "source_id": "R06",
+      "text_sha256": "55d2be5970d4eb53f57a39e2b58d2aa37c5f3caf538dd8b71399f846eee12f53",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:bdd10eeba549593cc010ef8d3378b03f8641a9a76e765ff9a5874fb0ad7bbcd7": {
+      "case": "invoice-matching",
+      "source_id": "R08",
+      "text_sha256": "bdd10eeba549593cc010ef8d3378b03f8641a9a76e765ff9a5874fb0ad7bbcd7",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:93e11ae2303b2d0d56692af2520fdceb4a736218a4d3af55a5d078ff2485c709": {
+      "case": "invoice-matching",
+      "source_id": "R10",
+      "text_sha256": "93e11ae2303b2d0d56692af2520fdceb4a736218a4d3af55a5d078ff2485c709",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:20c1ddd617a77db7b6e65f881750c744b136ba8c6a75a53a6fd7cdec8a04cbb6": {
+      "case": "invoice-matching",
+      "source_id": "R12",
+      "text_sha256": "20c1ddd617a77db7b6e65f881750c744b136ba8c6a75a53a6fd7cdec8a04cbb6",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:5562540a8971fa2b5fb88ff06e6c58fe360211061d02863dc3c4112bcf3d979f": {
+      "case": "invoice-matching",
+      "source_id": "R04",
+      "text_sha256": "5562540a8971fa2b5fb88ff06e6c58fe360211061d02863dc3c4112bcf3d979f",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "invoice-matching:cb228b1574e4d3a609af269c32ce8cb8c135cdd01d20497eeb3a791503cc704c": {
+      "case": "invoice-matching",
+      "source_id": "R11",
+      "text_sha256": "cb228b1574e4d3a609af269c32ce8cb8c135cdd01d20497eeb3a791503cc704c",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:922b132bdab9f4242d4924ee8b0f73a3c4b32a8719ed23178a2121e0ac212f5d": {
+      "case": "purchase-approval",
+      "source_id": "R01",
+      "text_sha256": "922b132bdab9f4242d4924ee8b0f73a3c4b32a8719ed23178a2121e0ac212f5d",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:0ed9278180f736d305e8dd606c659439fd722530d928b9a4451b9247211669b4": {
+      "case": "purchase-approval",
+      "source_id": "R03",
+      "text_sha256": "0ed9278180f736d305e8dd606c659439fd722530d928b9a4451b9247211669b4",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:8e1e4fea3074b9d43d0c1aad0f17bd89629255ff529f7fe1c9560b3874df4682": {
+      "case": "purchase-approval",
+      "source_id": "R04",
+      "text_sha256": "8e1e4fea3074b9d43d0c1aad0f17bd89629255ff529f7fe1c9560b3874df4682",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:2b6aa4b062ca0f14298672702725992407bd4338f3949b18e08e1c052b132fe5": {
+      "case": "purchase-approval",
+      "source_id": "R06",
+      "text_sha256": "2b6aa4b062ca0f14298672702725992407bd4338f3949b18e08e1c052b132fe5",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:08f24bdadeb0092dac3af286e93102c134a33735c3b9920abdb916aa17a89dd8": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "08f24bdadeb0092dac3af286e93102c134a33735c3b9920abdb916aa17a89dd8",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:d1c94937f9698d65a4e44408d89318dfe864de367fb4b2da211e433e4d5d9240": {
+      "case": "purchase-approval",
+      "source_id": "R08",
+      "text_sha256": "d1c94937f9698d65a4e44408d89318dfe864de367fb4b2da211e433e4d5d9240",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:9c0a77cd3926bde9c301debbe7b34b280c390a3495335582de12e45192f768ca": {
+      "case": "purchase-approval",
+      "source_id": "R09",
+      "text_sha256": "9c0a77cd3926bde9c301debbe7b34b280c390a3495335582de12e45192f768ca",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:5a5eec014cc0d95609e19434548521a9507770d7d38dfca98872b1fa5b54d57d": {
+      "case": "purchase-approval",
+      "source_id": "R10",
+      "text_sha256": "5a5eec014cc0d95609e19434548521a9507770d7d38dfca98872b1fa5b54d57d",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:e97a8c248b7dae9cfcba164efa8af78a61a6681224e5577b1c98588505bc3c39": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "e97a8c248b7dae9cfcba164efa8af78a61a6681224e5577b1c98588505bc3c39",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:59b567ac3c4573b7a7bd623f62ceafd499fc705e4a1a7481314885c17971feb5": {
+      "case": "purchase-approval",
+      "source_id": "R12",
+      "text_sha256": "59b567ac3c4573b7a7bd623f62ceafd499fc705e4a1a7481314885c17971feb5",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:c43828cb504bd14e9fd59290cb0dc6a3cf60b8ee042eebf0980a6ef33a071b60": {
+      "case": "purchase-approval",
+      "source_id": "R07",
+      "text_sha256": "c43828cb504bd14e9fd59290cb0dc6a3cf60b8ee042eebf0980a6ef33a071b60",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "purchase-approval:a3d3aaf6fa48e8d80c2264f1a3c862a1b3fb37e830f68591b0ef68fedaa11dca": {
+      "case": "purchase-approval",
+      "source_id": "R11",
+      "text_sha256": "a3d3aaf6fa48e8d80c2264f1a3c862a1b3fb37e830f68591b0ef68fedaa11dca",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:5de17f7bad10efe8e31a1313a1c7ad26fd9aac9453f7f40d633c1a193bb2293d": {
+      "case": "supplier-onboarding",
+      "source_id": "R01",
+      "text_sha256": "5de17f7bad10efe8e31a1313a1c7ad26fd9aac9453f7f40d633c1a193bb2293d",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:294c3bc530858a8aba8e8fb25dd66c09f5661e296fa3c93d45595c5260a2d957": {
+      "case": "supplier-onboarding",
+      "source_id": "R07",
+      "text_sha256": "294c3bc530858a8aba8e8fb25dd66c09f5661e296fa3c93d45595c5260a2d957",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:d1fa5a174d225fe188c1ef3031fc67b3c8abdeac3c3bb4026b34811bff24b9ac": {
+      "case": "supplier-onboarding",
+      "source_id": "R08",
+      "text_sha256": "d1fa5a174d225fe188c1ef3031fc67b3c8abdeac3c3bb4026b34811bff24b9ac",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:89c3a5470a246102385cddb4834cd2d9d9218b2437836734d03fa064c31ba006": {
+      "case": "supplier-onboarding",
+      "source_id": "R09",
+      "text_sha256": "89c3a5470a246102385cddb4834cd2d9d9218b2437836734d03fa064c31ba006",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:f985ad7df0c95daa11b3bc7ebe0ef2c14a8f206455eefafaaea36923714b3f4e": {
+      "case": "supplier-onboarding",
+      "source_id": "R11",
+      "text_sha256": "f985ad7df0c95daa11b3bc7ebe0ef2c14a8f206455eefafaaea36923714b3f4e",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    },
+    "supplier-onboarding:9d7dac74e5d7c0b5f9f430f26aedcafff5412620224208acc8428d2b640fabaf": {
+      "case": "supplier-onboarding",
+      "source_id": "R12",
+      "text_sha256": "9d7dac74e5d7c0b5f9f430f26aedcafff5412620224208acc8428d2b640fabaf",
+      "verdict": "supported",
+      "critical": false,
+      "note": "Internal reading preserves the source rule and its stated constraints; no conflicting or additional business requirement identified."
+    }
+  }
+}

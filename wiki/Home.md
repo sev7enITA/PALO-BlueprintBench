@@ -1,4 +1,4 @@
-![PALO BlueprintBench](https://raw.githubusercontent.com/sev7enITA/PALO-BlueprintBench/main/assets/readme/blueprintbench-banner.svg)
+![PALO BlueprintBench](https://paloframework.org/assets/blueprintbench/brand/blueprintbench-logo.png)
 
 > **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
 
@@ -31,3 +31,9 @@ The evaluator has an executable JSON Schema, raw-output binding, annotation-cons
 [Live explorer](https://paloframework.org/PALO_BlueprintBench.html) | [Research repository](https://github.com/sev7enITA/PALO-BlueprintBench) | [Release v0.3.0-pilot.1](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/v0.3.0-pilot.1)
 
 The wiki source is versioned in [`wiki/`](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/wiki). The repository's executable schema and versioned protocol remain the authoritative technical references. Wiki edits must be reconciled with that source before the next sync.
+
+## Current internal cohort
+
+The unified catalogue contains 18 model IDs, with 28 cohort/configuration records. The procurement campaigns have 324 assigned slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses and 18 pre-call blocks. These are internal controls with assistant-draft labels, not independent validation.
+
+[Leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [[Identity and testing badge|Brand-and-presentation]]

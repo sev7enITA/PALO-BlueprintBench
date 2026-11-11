@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-11-11T07:16:40.078217+00:00",
+  "authorised_total_usd": "40",
+  "dedicated_key_limit_usd": "40",
+  "dedicated_key_usage_usd": "8.635670137",
+  "dedicated_key_remaining_usd": "31.364329863000002",
+  "account_total_usage_usd": "8.857231002",
+  "key_usage_before_this_iteration_usd": "6.446426254",
+  "iteration_known_inference_usd": "1.4930199008",
+  "iteration_advisory_review_usd": "0.696224",
+  "reconstructed_key_usage_from_known_records_usd": "8.6356701548",
+  "observed_key_minus_reconstructed_usd": "-1.78E-8",
+  "unknown_charge_reservations_usd": "0.481264729000000064",
+  "conservative_budget_bound_usd": "9.338495731000000064",
+  "headroom_against_authorisation_usd": "30.661504268999999936",
+  "within_authorisation": true,
+  "campaigns": [
+    {
+      "id": "2026-11-11-frontier",
+      "assigned_tasks": 54,
+      "records": 54,
+      "dispatched": 54,
+      "known_charge_usd": "0.8305669",
+      "unknown_charge_records": 1,
+      "unknown_reserved_usd": "0.38216420000000006"
+    },
+    {
+      "id": "2026-11-11-expansion",
+      "assigned_tasks": 216,
+      "records": 216,
+      "dispatched": 216,
+      "known_charge_usd": "1.4782494908",
+      "unknown_charge_records": 4,
+      "unknown_reserved_usd": "0.099100529000000004"
+    },
+    {
+      "id": "2026-11-11-legacy-extension",
+      "assigned_tasks": 54,
+      "records": 54,
+      "dispatched": 36,
+      "known_charge_usd": "0.01477041",
+      "unknown_charge_records": 0,
+      "unknown_reserved_usd": "0"
+    }
+  ],
+  "notes": [
+    "Provider usage and response charge records are observations, not invoice reconciliation. Any observed delta is retained explicitly.",
+    "The conservative bound takes the greater of dedicated-key usage, account-wide observed usage and reconstructed known charges, then adds all unresolved reservations. It is not an actual charge total.",
+    "No new account credit or key-limit increase was purchased.",
+    "Fable advisory design evaluations do not enter benchmark scores."
+  ]
+}

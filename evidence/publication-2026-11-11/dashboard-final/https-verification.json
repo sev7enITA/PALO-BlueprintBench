@@ -1,0 +1,285 @@
+{
+  "checked_at": "2026-11-11T10:19:22Z",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "c189c08889b259e22284cc0f9f2bb8d6d29471939d2fc5be7fc0ad1b06719af1",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "PALO_BlueprintBench.html",
+      "status": 200,
+      "sha256": "8e2f8e1acf349b1d2d960825b6697a120674bc1e61d4769bcf85207d18e3f58c",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "CHANGELOG.html",
+      "status": 200,
+      "sha256": "8ba87485762d595f75671f7090583f91222b3c6683f02e37178582dff3954fb9",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "status": 200,
+      "sha256": "26ef8c2fa018dcd3e204fa095eef594a3b1b4ccd5d8269e1a5c0ada6a46643d3",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "PALO_BlueprintBench_Leaderboard.html",
+      "status": 200,
+      "sha256": "fee541415df7abe3b856f982b8303db1a6becb4ab867e201fdcdf38422f093e5",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "sha256": "a354a7114fca392f3b6a89f0d275dd9d581a68bfa3cf5aae78e1f0a6236c5134",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "status": 200,
+      "sha256": "56d54e9a1d5af515ad37711eef4f14b6f5247240a87760b46ca00c76760b48bb",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.css",
+      "status": 200,
+      "sha256": "b70add61e244ac6126327263e5fb4c52a83071026418afa45ddb3ee7596a9f32",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.js",
+      "status": 200,
+      "sha256": "00e76dabb17f97e18eb79fb13f0d125c68a810dc2e2b691757a1e85babe44cc1",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/blueprintbench.css",
+      "status": 200,
+      "sha256": "fe6d3e76d98b3686c928b22fab43c067ac1d21e1293109c31f58685561ce4806",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/blueprintbench.js",
+      "status": 200,
+      "sha256": "016397f10d6646099967160d726acdf735905d83901e1e9d0bd41822e27fd21c",
+      "matches_published_bytes": true
+    }
+  ],
+  "redirects": [
+    {
+      "path": "social-invitation.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/announcement.md?check=1794392351799678000",
+      "correct_target": true
+    },
+    {
+      "path": "versioning.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/versioning.md?check=1794392351940132000",
+      "correct_target": true
+    },
+    {
+      "path": "corrections.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/corrections.md?check=1794392352075869000",
+      "correct_target": true
+    },
+    {
+      "path": "toolkit-readme.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/evaluator/README.md?check=1794392352288179000",
+      "correct_target": true
+    },
+    {
+      "path": "benchmark-references.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/benchmark-references.md?check=1794392352426193000",
+      "correct_target": true
+    },
+    {
+      "path": "specification-fidelity-study.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/specification-fidelity-study.md?check=1794392352565123000",
+      "correct_target": true
+    },
+    {
+      "path": "announcement.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/announcement.md?check=1794392352712954000",
+      "correct_target": true
+    },
+    {
+      "path": "review-decisions.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/review-decisions.md?check=1794392352951222000",
+      "correct_target": true
+    },
+    {
+      "path": "evaluator-0.3-draft.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/evaluator-0.3-draft.md?check=1794392353102255000",
+      "correct_target": true
+    },
+    {
+      "path": "local-review.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/local-review.md?check=1794392353240349000",
+      "correct_target": true
+    },
+    {
+      "path": "audit-response-2026-11-11.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/audit-response-2026-11-11.md?check=1794392353539256000",
+      "correct_target": true
+    },
+    {
+      "path": "readme.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/web/downloads/blueprintbench/readme.md?check=1794392353714469000",
+      "correct_target": true
+    },
+    {
+      "path": "reviewer-kit.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/reviewer-kit.md?check=1794392353989013000",
+      "correct_target": true
+    },
+    {
+      "path": "research.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/research.md?check=1794392354185961000",
+      "correct_target": true
+    },
+    {
+      "path": "launch-readiness.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/launch-readiness.md?check=1794392354437596000",
+      "correct_target": true
+    },
+    {
+      "path": "leaderboard-method.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/leaderboard-method.md?check=1794392354614945000",
+      "correct_target": true
+    },
+    {
+      "path": "internal-cohort-report.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/web/downloads/blueprintbench/internal-cohort-report.md?check=1794392354775922000",
+      "correct_target": true
+    },
+    {
+      "path": "audit-findings-2026-11-11.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/audit-findings-2026-11-11.md?check=1794392355026232000",
+      "correct_target": true
+    },
+    {
+      "path": "brand-usage.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/brand-usage.md?check=1794392355221455000",
+      "correct_target": true
+    },
+    {
+      "path": "evaluator-contract.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/evaluator-contract.md?check=1794392355450247000",
+      "correct_target": true
+    },
+    {
+      "path": "severity-rubric-draft.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/severity-rubric-draft.md?check=1794392355600753000",
+      "correct_target": true
+    },
+    {
+      "path": "proposal.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/proposal.md?check=1794392355795788000",
+      "correct_target": true
+    },
+    {
+      "path": "internal-tests-report.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/web/downloads/blueprintbench/internal-tests-report.md?check=1794392356032067000",
+      "correct_target": true
+    },
+    {
+      "path": "palo-blueprint-index.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/palo-blueprint-index.md?check=1794392356240832000",
+      "correct_target": true
+    },
+    {
+      "path": "structured-data-audit-2026-11-11.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/structured-data-audit-2026-11-11.md?check=1794392356485938000",
+      "correct_target": true
+    },
+    {
+      "path": "cross-review-2026-11-11.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/cross-review-2026-11-11.md?check=1794392356700874000",
+      "correct_target": true
+    },
+    {
+      "path": "protocol.md",
+      "status": 302,
+      "location": "https://github.com/sev7enITA/PALO-BlueprintBench/blob/3effa4c/docs/protocol.md?check=1794392357025601000",
+      "correct_target": true
+    }
+  ],
+  "presentation_withdrawal": [
+    {
+      "path": "index.html",
+      "status": 410,
+      "withdrawn": true,
+      "headers": {
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "x-robots-tag": "noindex, nofollow, noarchive",
+        "Server": "hcdn"
+      }
+    },
+    {
+      "path": "slide-1.jpg",
+      "status": 410,
+      "withdrawn": true,
+      "headers": {
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "x-robots-tag": "noindex, nofollow, noarchive",
+        "Server": "hcdn"
+      }
+    },
+    {
+      "path": "slides.json",
+      "status": 410,
+      "withdrawn": true,
+      "headers": {
+        "Cache-Control": "private, no-cache, no-store, must-revalidate, max-age=0",
+        "x-robots-tag": "noindex, nofollow, noarchive",
+        "Server": "hcdn"
+      }
+    }
+  ],
+  "logos": [
+    {
+      "path": "blueprintbench-logo.png",
+      "status": 200,
+      "image": true
+    },
+    {
+      "path": "palo-framework-logo.png",
+      "status": 200,
+      "image": true
+    },
+    {
+      "path": "internal-testing-badge.png",
+      "status": 200,
+      "image": true
+    }
+  ],
+  "all_passed": true
+}

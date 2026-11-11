@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-11",
+  "python_tests_passed": 24,
+  "generated_artifacts_verified": 25,
+  "schema_property_domain_checks": 684,
+  "shared_entities_match": true,
+  "frozen_results_unchanged": true,
+  "independently_qualified": false,
+  "filtered_export_urls": "No fabricated static endpoint; browser-generated exports described in WebPageElement",
+  "countries": "Separate dated dataset; no countryOfOrigin or test spatialCoverage assertion",
+  "scope": "Semantic structured data; not a promise of search appearance"
+}

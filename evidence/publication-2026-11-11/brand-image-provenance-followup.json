@@ -1,0 +1,38 @@
+{
+  "at": "2026-11-11T08:05:55.019284+00:00",
+  "status": "verified",
+  "files": [
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "sha256": "51e9b9059a0e34285fe1b1a19b62f36c7e3af79a3db70497c41bc6c883898222",
+      "byte_match": true
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/index.html",
+      "sha256": "fd563ae780023a6b919d440873cb9d61a412058d4c17b679909268703796a726",
+      "byte_match": true
+    },
+    {
+      "path": "downloads/blueprintbench/presentation/slides.json",
+      "sha256": "e933aee1e93656568213ed18d7a81f8651fe52106df11efd0e9493c12a3d515b",
+      "byte_match": true
+    }
+  ],
+  "github_main_readme_verified": true,
+  "github_documentation_pr": 4,
+  "github_main_merge": "2c53b8f36b8e0fb54602ec55c519693f1694147b",
+  "wiki_verified": true,
+  "palo_publication_commit": "48ccba6c25062b7f9833f2182c4125929b65056d",
+  "note": "Complements the preceding 34-file receipt. Only the image provenance description, viewer and release manifest changed.",
+  "verified_code_commit": "afa91f10be82e3ca5456fa67263fceee2a305c1f",
+  "ci_runs": [
+    {
+      "id": 42984262092,
+      "conclusion": "success"
+    },
+    {
+      "id": 42984252752,
+      "conclusion": "success"
+    }
+  ]
+}

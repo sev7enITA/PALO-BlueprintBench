@@ -38,3 +38,21 @@ jobs:
         run: python evidence/development-2026-11-10/replay.py
       - name: Verify wiki navigation and README links
         run: python tools/check_wiki.py
+      - name: Verify internal baseline analysis and replay
+        run: |
+          python -m unittest discover -s internal_tests/2026-11-11-frontier -p 'test_*.py'
+          python tools/build_internal_tests.py --check
+          python internal_tests/2026-11-11-frontier/replay_translation.py "$RUNNER_TEMP/internal-baseline-replay"
+      - name: Verify leaderboard data and structured-data contract
+        run: |
+          python tools/build_leaderboard.py --check
+          python -m unittest discover -s tools -p 'test_leaderboard_schema.py'
+          python tools/build_adversarial.py --check
+          python -m unittest discover -s tools -p 'test_adversarial.py'
+      - name: Verify internal calibration and model roster
+        run: |
+          python tools/calibration.py --check
+          python tools/build_calibration.py --check
+          python tools/build_roster.py --check
+          python -m unittest discover -s tools -p 'test_calibration.py'
+          python -m unittest discover -s tools -p 'test_roster.py'

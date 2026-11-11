@@ -1,0 +1,18 @@
+{
+  "target_model": {
+    "id": "qwen3.8-27b-uncensored",
+    "object": "model",
+    "type": "llm",
+    "publisher": "JonathanColetti",
+    "arch": "qwen35",
+    "compatibility_type": "gguf",
+    "quantization": "Q6_K",
+    "state": "loaded",
+    "max_context_length": 262144,
+    "loaded_context_length": 8192,
+    "capabilities": [
+      "tool_use"
+    ]
+  },
+  "error": null
+}

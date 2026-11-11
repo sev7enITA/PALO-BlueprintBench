@@ -1,0 +1,48 @@
+{
+  "id": "2-supplier-onboarding-translation-baidu__ernie-5.5-flash-preview",
+  "model": "baidu/ernie-5.5-flash-preview",
+  "pinned_provider": "baidu",
+  "case": "supplier-onboarding",
+  "track": "translation",
+  "repetition": 2,
+  "started_at": "2026-11-11T06:51:52.715800+00:00",
+  "request_sha256": "547fd52920a8043b919629898e86b2d579ba32097992817c486298ad875aaf10",
+  "reserved_usd": 0.042569692000000006,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.000405578,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "97a466947f69043a6c2f0ef443953845bdb6c33b8cd813466c6855bc09d38834",
+  "provider_request_id": "gen-1794379912-RLJDjpalkaXodmdlwfqC",
+  "returned_model": "baidu/ernie-5.5-flash-preview",
+  "returned_provider": "Baidu",
+  "usage": {
+    "prompt_tokens": 335,
+    "completion_tokens": 333,
+    "total_tokens": 668,
+    "cost": 0.000405578,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.000405578,
+      "upstream_inference_prompt_cost": 2.9288e-05,
+      "upstream_inference_completions_cost": 0.00037629
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "7c34a8a10c74f3bf81452d6350a0ce434367b03c32b762fd5ffbd15791c6781d",
+  "elapsed_seconds": 2.528619749995414,
+  "finished_at": "2026-11-11T06:51:55.244825+00:00"
+}

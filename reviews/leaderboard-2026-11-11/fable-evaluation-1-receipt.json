@@ -1,0 +1,47 @@
+{
+  "status": "advisory_AI_design_evaluation_not_benchmark_validation",
+  "model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "provider_request_id": "gen-1794377455-iFiOFJdQtYgcx9MsDqZv",
+  "cost_usd": 0.383072,
+  "reservation_usd": 2,
+  "elapsed_seconds": 71.28546370800177,
+  "finish_reason": "stop",
+  "request_sha256": "8df7a0203db4b857f652c2b44b0c85236247af8e1857ef4ee3db7bf888224205",
+  "response_sha256": "bd4b163ce5659478c3241bb06c0ce929ee5b07e063aeb8b376baa4aed4a6f0b8",
+  "screenshots": [
+    {
+      "file": "eval-desktop-hero.png",
+      "sha256": "06097da8643b39ee0bf865b158fcbd1effda7867c7c4a1c1370be6dd4e6619a8"
+    },
+    {
+      "file": "eval-desktop-workspace.png",
+      "sha256": "c328df0b07d11e4db9907e48619f7ee77b224fabfa7bf312b57d070095b7ec67"
+    },
+    {
+      "file": "eval-desktop-evidence.png",
+      "sha256": "f486a0b78f740972e277237d758c28e5f309931cf482914c14c7b2b67d081baf"
+    },
+    {
+      "file": "eval-768-workspace.png",
+      "sha256": "f4b21dc7ebdee5274777e6d6534c7be8fc168ebcceffe9547462d5f874d62775"
+    },
+    {
+      "file": "eval-375-hero.png",
+      "sha256": "4e2ac642780c76d58edf6ed25f025e0c2f526920489ace7246df44a99fe2ba3c"
+    },
+    {
+      "file": "eval-375-workspace.png",
+      "sha256": "ec0596b3de0305dd2c88f18332c819855ee83f10324cd6ec0bec928d4b1cbf32"
+    },
+    {
+      "file": "eval-failed-call.png",
+      "sha256": "aab13d9552ca8cf44f7f860765308542dbb271924e304ea663d00251a5c1c510"
+    },
+    {
+      "file": "eval-qualified.png",
+      "sha256": "0d3fa26cc32ca00864c285b90232010b518cc511e39a610abc21f15b8c61e7f8"
+    }
+  ],
+  "created_at": "2026-11-11T06:12:06.784282+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "pages": 2,
+  "datasets_per_page": 4,
+  "shared_entities_match": true,
+  "internal_models": 18,
+  "json_export": true,
+  "qualified": false,
+  "js_errors": []
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: A new supplier is obligated to complete identity verification before its first purchase order.",
+    "span": [
+      0,
+      101
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: Identity verification is performed by the Compliance officer, and the buyer does not perform identity verification.",
+    "span": [
+      102,
+      224
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For a low-risk supplier, Compliance is permitted, but not obligated, to request a site visit.",
+    "span": [
+      225,
+      325
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A high-risk supplier is obligated to undergo an enhanced review.",
+    "span": [
+      326,
+      397
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: A renewal for an existing supplier whose identity data has not changed is exempt from repeating identity verification.",
+    "span": [
+      398,
+      523
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The renewal exemption from repeating identity verification does not apply when the supplier changes its legal name.",
+    "span": [
+      524,
+      646
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: A buyer is prohibited from activating a supplier that is flagged as blocked.",
+    "span": [
+      647,
+      730
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: A supplier with a risk score greater than or equal to 70 is classified as high risk.",
+    "span": [
+      731,
+      822
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: A supplier with a risk score less than 70 is classified as low risk.",
+    "span": [
+      823,
+      898
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: An approval expires 365 calendar days after its approval date.",
+    "span": [
+      899,
+      968
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: If a supplier's bank account is changed, a new independent bank-account check is required before the next payment.",
+    "span": [
+      969,
+      1090
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: Two supplier records are permitted to share the same contact email address, and the contact email address is not required to be unique.",
+    "span": [
+      1091,
+      1233
+    ]
+  }
+]

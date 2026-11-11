@@ -1,0 +1,48 @@
+{
+  "id": "2-purchase-approval-verification-openai__gpt-6.1-sol",
+  "model": "openai/gpt-6.1-sol",
+  "pinned_provider": "openai",
+  "case": "purchase-approval",
+  "track": "verification",
+  "repetition": 2,
+  "started_at": "2026-11-11T05:38:47.770275+00:00",
+  "request_sha256": "37085975af88963e4073d68eedcc9eeb1df74e069a477203a9903499e83b02db",
+  "reserved_usd": 0.3821356000000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0047588,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "961b33851253c1f7f5947c3ec722377c1f55679972eca7a81c918b68a0e2ecd0",
+  "provider_request_id": "gen-1794375527-5dCnUGpYT9wQxi6yX1Hx",
+  "returned_model": "openai/gpt-6.1-sol",
+  "returned_provider": "OpenAI",
+  "usage": {
+    "prompt_tokens": 1231,
+    "completion_tokens": 463,
+    "total_tokens": 1694,
+    "cost": 0.0047588,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1228,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0047588,
+      "upstream_inference_prompt_cost": 0.0001288,
+      "upstream_inference_completions_cost": 0.00463
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 36,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "c443284e76691ffc0378c686d6959cac8663675b21f66c2cceb580f9d7c75154",
+  "elapsed_seconds": 6.140521458000876,
+  "finished_at": "2026-11-11T05:38:53.911076+00:00"
+}

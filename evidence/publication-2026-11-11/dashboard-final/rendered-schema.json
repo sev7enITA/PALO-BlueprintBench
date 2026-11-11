@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "url": "https://paloframework.org/",
+      "graphs": 1,
+      "nodes": 5,
+      "forbiddenAnchors": []
+    },
+    {
+      "url": "https://paloframework.org/CHANGELOG.html",
+      "graphs": 1,
+      "nodes": 3,
+      "forbiddenAnchors": []
+    },
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench.html",
+      "graphs": 1,
+      "nodes": 9,
+      "forbiddenAnchors": []
+    },
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+      "graphs": 1,
+      "nodes": 9,
+      "forbiddenAnchors": []
+    }
+  ]
+}

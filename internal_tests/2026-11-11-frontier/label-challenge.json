@@ -1,0 +1,14 @@
+{
+  "status": "posthoc_internal_review",
+  "qualified": false,
+  "primary_frozen_labels_unchanged": true,
+  "case": "invoice-matching",
+  "probe_id": "P002",
+  "source_id": "R03",
+  "statement": "The tolerance is increased by 5 percent for overseas suppliers.",
+  "frozen_expected": "not_established",
+  "plausible_alternative": "contradicted",
+  "reason": "The source categorically blocks automatic payment above EUR 10. A supplier-specific increase of that tolerance can conflict with the universal threshold rather than merely add an unstated detail. The contradiction/absence boundary was under-specified.",
+  "discovered_after": "repetition 2, Claude verification response",
+  "resolution": "Retain the frozen primary calculation. Also report an explicitly post-hoc sensitivity calculation excluding this one probe for all three models and all three repetitions. No model superiority claim or adjudicated semantic error count."
+}

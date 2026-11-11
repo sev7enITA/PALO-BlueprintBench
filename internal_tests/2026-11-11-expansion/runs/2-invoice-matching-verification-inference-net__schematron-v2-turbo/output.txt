@@ -1,0 +1,76 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "supported"
+    },
+    {
+      "id": "P002",
+      "verdict": "supported"
+    },
+    {
+      "id": "P003",
+      "verdict": "supported"
+    },
+    {
+      "id": "P004",
+      "verdict": "supported"
+    },
+    {
+      "id": "P505",
+      "verdict": "supported"
+    },
+    {
+      "id": "P606",
+      "verdict": "supported"
+    },
+    {
+      "id": "P120",
+      "verdict": "supported"
+    },
+    {
+      "id": "P808",
+      "verdict": "supported"
+    },
+    {
+      "id": "P183",
+      "verdict": "supported"
+    },
+    {
+      "id": "P114",
+      "verdict": "supported"
+    },
+    {
+      "id": "P124",
+      "verdict": "supported"
+    },
+    {
+      "id": "P206",
+      "verdict": "supported"
+    },
+    {
+      "id": "P236",
+      "verdict": "supported"
+    },
+    {
+      "id": "P249",
+      "verdict": "supported"
+    },
+    {
+      "id": "P239",
+      "verdict": "supported"
+    },
+    {
+      "id": "P212",
+      "verdict": "supported"
+    },
+    {
+      "id": "P258",
+      "verdict": "supported"
+    },
+    {
+      "id": "P255",
+      "verdict": "supported"
+    }
+  ]
+}

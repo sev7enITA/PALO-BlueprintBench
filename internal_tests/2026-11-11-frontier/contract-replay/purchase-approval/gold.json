@@ -1,0 +1,136 @@
+{
+  "required_propositions": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "meaning": {
+    "R01": "A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+    "R02": "For a purchase of exactly EUR 5,000, Finance approval is not required.",
+    "R03": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "R04": "A requester must never approve their own purchase request.",
+    "R05": "An emergency purchase is exempt from obtaining competitive quotations.",
+    "R06": "The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.",
+    "R07": "Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+    "R08": "If a requester cancels a request before approval, that requester must record the cancellation reason.",
+    "R09": "Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+    "R10": "The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+    "R11": "Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+    "R12": "The retention period begins on the approval date, not the purchase-order date."
+  },
+  "annotation_status": "assistant_draft",
+  "answerable": true,
+  "allowed_match_groups": [],
+  "allowed_alternatives": {},
+  "forbidden_inferences": [
+    {
+      "id": "P001",
+      "text": "The retention period begins on the purchase-order date.",
+      "violated_gold": [
+        "R12"
+      ]
+    },
+    {
+      "id": "P003",
+      "text": "The department manager must approve every purchase below EUR 5,000.",
+      "violated_gold": [
+        "R03"
+      ]
+    },
+    {
+      "id": "P007",
+      "text": "A requester cancelling before approval need not record a reason.",
+      "violated_gold": [
+        "R08"
+      ]
+    },
+    {
+      "id": "P010",
+      "text": "The buyer can provide Finance approval.",
+      "violated_gold": [
+        "R07"
+      ]
+    },
+    {
+      "id": "P016",
+      "text": "A purchase of exactly EUR 5,000 requires Finance approval.",
+      "violated_gold": [
+        "R02"
+      ]
+    },
+    {
+      "id": "P018",
+      "text": "A requester may approve their own purchase request.",
+      "violated_gold": [
+        "R04"
+      ]
+    },
+    {
+      "id": "P022",
+      "text": "Emergency purchases must obtain competitive quotations.",
+      "violated_gold": [
+        "R05"
+      ]
+    },
+    {
+      "id": "P023",
+      "text": "The threshold applies to a supplier monthly total instead of each request.",
+      "violated_gold": [
+        "R10"
+      ]
+    },
+    {
+      "id": "P024",
+      "text": "Finance approval is optional for purchases above EUR 5,000.",
+      "violated_gold": [
+        "R01"
+      ]
+    },
+    {
+      "id": "P025",
+      "text": "Emergency purchases above EUR 5,000 are exempt from Finance approval.",
+      "violated_gold": [
+        "R06"
+      ]
+    },
+    {
+      "id": "P028",
+      "text": "Approval records may be deleted after 20 calendar days.",
+      "violated_gold": [
+        "R09"
+      ]
+    },
+    {
+      "id": "P030",
+      "text": "Supplier name uniquely identifies every supplier.",
+      "violated_gold": [
+        "R11"
+      ]
+    }
+  ],
+  "critical_rule_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "source_scope": "All 12 explicitly numbered synthetic rules. All are treated as critical controls in this internal replay; not a validated severity rubric.",
+  "source_text": "R01 A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.\nR02 For a purchase of exactly EUR 5,000, Finance approval is not required.\nR03 For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.\nR04 A requester must never approve their own purchase request.\nR05 An emergency purchase is exempt from obtaining competitive quotations.\nR06 The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.\nR07 Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.\nR08 If a requester cancels a request before approval, that requester must record the cancellation reason.\nR09 Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.\nR10 The purchase threshold applies separately to each request, not to the monthly total for a supplier.\nR11 Different suppliers may have the same supplier name; supplier name is not a unique identifier.\nR12 The retention period begins on the approval date, not the purchase-order date."
+}

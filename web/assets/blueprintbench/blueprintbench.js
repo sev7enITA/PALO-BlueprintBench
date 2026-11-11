@@ -160,3 +160,73 @@
   adaptFilters(); mobile.addEventListener('change',adaptFilters);
   load();
 })();
+
+// Independent internal cohort. Historical adapter observations remain separate.
+(async () => {
+  const box = document.getElementById('internal-cards');
+  if (!box) return;
+  const summary = document.getElementById('internal-summary');
+  const caseFilter = document.getElementById('internal-case');
+  const dimensionFilter = document.getElementById('internal-dimension');
+  const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  try {
+    const response = await fetch('downloads/blueprintbench/leaderboard-data.json', {cache:'no-cache'});
+    if (!response.ok) throw new Error('Data request failed');
+    const shared = await response.json();
+    const data = shared.internal;
+    if (data.status !== 'internal_tests' || data.qualified !== false) throw new Error('Unexpected qualification state');
+    const displayName=m=>String(m.name).replace(/^[^:]+:\s*/, '');
+    const allModels = [...data.models.map(m=>({...m,evidenceCohort:'internal'})),...shared.historical.models.map(m=>({...m,evidenceCohort:'historical'}))].sort((a,b)=>displayName(a).localeCompare(displayName(b)));
+    document.getElementById('overview-model-count').textContent=new Set(allModels.map(m=>m.id||m.model)).size;
+    document.getElementById('overview-configuration-count').textContent=allModels.length;
+    document.getElementById('overview-call-count').textContent=data.assigned_calls;document.getElementById('overview-complete-count').textContent=data.completed_calls;
+    const catalogueSearch=document.getElementById('catalogue-search'),catalogueCohort=document.getElementById('catalogue-cohort');
+    const renderCatalogue=()=>{
+      const q=catalogueSearch.value.toLowerCase(),cohort=catalogueCohort.value;
+      const models=allModels.filter(m=>(cohort==='all'||m.evidenceCohort===cohort)&&`${m.name} ${m.id||m.model} ${m.pinned_provider||m.provider}`.toLowerCase().includes(q));
+      document.getElementById('catalogue-summary').textContent=`${models.length} of ${allModels.length} configurations (${new Set(models.map(m=>m.id||m.model)).size} model IDs) · same source as the leaderboard · separate evidence cohorts`;
+      document.getElementById('shared-models').innerHTML=models.map(m=>{const internal=m.evidenceCohort==='internal',id=m.id||m.model,url='PALO_BlueprintBench_Leaderboard.html?cohort='+m.evidenceCohort+'&q='+encodeURIComponent(id)+'#workspace';return `<tr><td><strong>${escape(displayName(m))}</strong><small>${escape(id)}</small></td><td>${escape(m.pinned_provider||m.provider)}</td><td><span class="catalogue-cohort ${internal?'':'historical'}">${internal?'Internal procurement':'Historical diagnostics'}</span></td><td>${internal?m.completed_calls:m.completed} / ${internal?m.assigned_calls:m.assigned}${internal?'<small>'+(data.configurations.find(c=>c.id===m.id)?.precall_blocked?'Pre-call blocked':m.not_run?m.not_run+' not run':m.completed_calls<m.assigned_calls?'Contains failed / incomplete calls':'All assigned calls complete')+'</small>':''}</td><td><a href="${escape(url)}">Open evidence ↗</a></td></tr>`;}).join('')||'<tr><td colspan="5">No models match these filters.</td></tr>';
+    };
+    catalogueSearch.addEventListener('input',renderCatalogue);catalogueCohort.addEventListener('change',renderCatalogue);renderCatalogue();
+    for (const c of data.case_metadata) caseFilter.add(new Option(c.name, c.id));
+    const dimensions = [...new Set(data.case_metadata.flatMap(c => Object.keys(c.dimensions)))].sort();
+    for (const d of dimensions) dimensionFilter.add(new Option(d.replaceAll('_',' '), d));
+    const render = () => {
+      const cases = data.case_metadata.filter(c => caseFilter.value === 'all' || c.id === caseFilter.value);
+      const dimension = dimensionFilter.value;
+      const assigned = cases.reduce((sum,c) => sum + (dimension === 'all' ? Object.values(c.dimensions).reduce((a,b)=>a+b,0) : c.dimensions[dimension] || 0),0) * data.repetitions;
+      summary.textContent = `${data.recorded_calls} of ${data.assigned_calls} assignment records retained. ${data.attempted_calls??data.records.filter(r=>r.state!=='not_run').length} provider requests dispatched; ${data.completed_calls} complete, ${data.failed_calls} failed / incomplete, ${data.not_run} not run. Internal tests; no qualified score. Showing ${assigned} assigned verification statements per model.`;
+      const tableRows = [...data.models].sort((a,b)=>a.name.localeCompare(b.name)).map(m => {
+        const rows = data.verification_rows.filter(r => r.model === m.id && cases.some(c=>c.id===r.case));
+        const judgments = rows.flatMap(r=>r.judgments).filter(j=>dimension==='all'||j.dimension===dimension);
+        const correct = judgments.filter(j=>j.correct).length;
+        const classified = judgments.length, wrong = classified-correct, missing = assigned-classified;
+        const width = value => assigned ? Math.max(0,Math.min(100,100*value/assigned)) : 0;
+        const disputed = data.verification_rows.filter(r => r.model === m.id && r.case === data.label_challenge.case).flatMap(r => r.judgments).filter(j => j.id === data.label_challenge.probe_id && !j.correct).length;
+        const noCall=!data.records.some(r=>r.model===m.id&&r.state!=='not_run');
+        const cost = m.provider_reported_cost_usd.toFixed(4) + (m.unknown_cost_calls ? ' + unknown' : '') + (noCall?' (no provider call)':m.not_run?' (partial coverage)':'');
+        const url='PALO_BlueprintBench_Leaderboard.html?cohort=internal&q='+encodeURIComponent(m.id)+'#workspace';
+        return `<tr><th scope="row"><a href="${escape(url)}">${escape(m.name.replace(/^[^:]+:\s*/,''))}</a><small>${escape(m.pinned_provider)}</small></th><td>${correct} / ${assigned}</td><td class="${wrong?'internal-disputed':''}">${wrong}</td><td>${missing}</td><td>${m.completed_calls} / ${m.assigned_calls}</td><td>${escape(cost)}</td><td>${noCall?'N/A':Number.isFinite(m.latency_median_seconds)?m.latency_median_seconds.toFixed(1)+' s':'Unknown'}</td><td><a href="${escape(url)}">Inspect ↗</a></td></tr>`;
+      }).join('');
+      box.innerHTML='<div class="overview-results-table" role="region" aria-label="Internal procurement results; scroll horizontally for all columns" tabindex="0"><table><caption>Internal tests · Frozen assistant-draft labels</caption><thead><tr><th scope="col">Model / provider</th><th scope="col">Label matches / assigned</th><th scope="col">Disagreements</th><th scope="col">Missing</th><th scope="col">Complete calls</th><th scope="col">Known USD</th><th scope="col">Median time</th><th scope="col">Explore</th></tr></thead><tbody>'+tableRows+'</tbody></table></div>';
+    };
+    caseFilter.addEventListener('change',render); dimensionFilter.addEventListener('change',render);render();
+  } catch (error) {
+    summary.textContent = 'Internal results could not be loaded. Read the report or download the evidence; no placeholder scores are shown.';
+    summary.setAttribute('role','alert');
+    document.getElementById('catalogue-summary').textContent='The shared catalogue could not be loaded. No placeholder models are shown.';
+  }
+})();
+
+(async function adversarialOverview(){
+  const status=document.getElementById('adversarial-overview-status');
+  if(!status)return;
+  try{
+    const response=await fetch('downloads/blueprintbench/adversarial-tests.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('Unavailable');
+    const data=await response.json();
+    if(data.qualified!==false||!Array.isArray(data.items)||!Array.isArray(data.reviewers))throw new Error('Unexpected state');
+    const assigned=data.items.length*data.reviewers.length,completed=data.summary?.valid_review_records??data.items.reduce((n,item)=>n+Object.values(item.reviewers||{}).filter(r=>r.status==='valid').length,0);
+    status.textContent=`${data.items.length} selected items · ${data.reviewers.length} model reviewers · ${completed} of ${assigned} review decisions available.${Number.isInteger(data.summary?.strict_envelope_valid_batches)?' '+data.summary.strict_envelope_valid_batches+' of '+data.summary.expected_batches+' raw batches match the requested JSON envelope.':''}`;
+  }catch{status.textContent='Retained countertest records are not available in this snapshot. No outcomes are substituted.';}
+})();

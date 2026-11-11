@@ -1,0 +1,144 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P002",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P003",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P004",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P005",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P006",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P007",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P08",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P09",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P010",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P011",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P012",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P013",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P014",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P015",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P016",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P017",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P019",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P020",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P021",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P022",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P023",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P024",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P025",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P026",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P027",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P028",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P029",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P030",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P031",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P032",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P033",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P034",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P035",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P036",
+      "verdict": "not_established"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "valid": false,
+  "errors": [
+    "Expected sole top-level items array"
+  ],
+  "assigned": 12,
+  "valid_records": 0,
+  "missing_ids": [
+    "V-invoice-matching-P005",
+    "T03",
+    "T08",
+    "V-invoice-matching-P002",
+    "V-invoice-matching-P004",
+    "T10",
+    "V-invoice-matching-P036",
+    "T13",
+    "V-invoice-matching-P011",
+    "T06",
+    "T18",
+    "V-invoice-matching-P006"
+  ]
+}

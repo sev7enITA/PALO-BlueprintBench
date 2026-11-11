@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "origin": "http://127.0.0.1:58195",
+  "models": 18,
+  "checks": [
+    "competition ties and blocked rank",
+    "country provenance",
+    "filter-stable rank",
+    "country sort both directions",
+    "unknown last",
+    "all 8 ranking metrics",
+    "4 new KPI sorts both directions",
+    "CSV and JSON",
+    "semantic scope and sensitivity",
+    "operations and cohort separation",
+    "metadata outage",
+    "320/375/768/1440 responsive",
+    "temporal URL preserved"
+  ],
+  "screenshots": [
+    "ranking-desktop.png",
+    "ranking-mobile.png"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "model": {
+    "id": "prism-ml/ternary-bonsai-2-9b",
+    "canonical_slug": "prism-ml/ternary-bonsai-2-9b-20261015",
+    "hugging_face_id": "prism-ml/Ternary-Bonsai-2-9B-gguf",
+    "name": "PrismML: Ternary Bonsai 2 9B",
+    "created": 1792130995,
+    "description": "Ternary Bonsai 2 9B is PrismML\u2019s compact, open-weight language model for conversational AI, reasoning, and tool use. Built on Qwen3.5, it uses ternary weights packed into 2 bits for efficient...",
+    "context_length": 262144,
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Qwen",
+      "instruct_type": null
+    },
+    "pricing": {
+      "prompt": "0.00000008",
+      "completion": "0.00000013",
+      "input_cache_read": "0.00000004"
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "per_request_limits": null,
+    "supported_parameters": [
+      "frequency_penalty",
+      "include_reasoning",
+      "logprobs",
+      "max_tokens",
+      "presence_penalty",
+      "reasoning",
+      "repetition_penalty",
+      "response_format",
+      "seed",
+      "stop",
+      "structured_outputs",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_k",
+      "top_logprobs",
+      "top_p"
+    ],
+    "default_parameters": {
+      "temperature": 1,
+      "top_p": 0.95,
+      "top_k": 20
+    },
+    "supported_voices": null,
+    "knowledge_cutoff": null,
+    "expiration_date": null,
+    "links": {
+      "details": "/api/v1/models/prism-ml/ternary-bonsai-2-9b-20261015/endpoints"
+    },
+    "endpoints": [
+      "/api/v1/chat/completions",
+      "/api/v1/completions",
+      "/api/v1/messages",
+      "/api/v1/responses"
+    ],
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true
+    }
+  },
+  "selected_endpoint": {
+    "name": "Darkbloom | prism-ml/ternary-bonsai-2-9b-20261015",
+    "model_id": "prism-ml/ternary-bonsai-2-9b",
+    "model_name": "PrismML: Ternary Bonsai 2 9B",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000008",
+      "completion": "0.00000013",
+      "input_cache_read": "0.00000004",
+      "discount": 0
+    },
+    "provider_name": "Darkbloom",
+    "tag": "darkbloom/int4",
+    "service_tier": null,
+    "quantization": "int4",
+    "max_completion_tokens": 65536,
+    "max_prompt_tokens": null,
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "top_p",
+      "top_k",
+      "frequency_penalty",
+      "presence_penalty",
+      "repetition_penalty",
+      "stop",
+      "seed",
+      "max_tokens",
+      "tools",
+      "tool_choice",
+      "response_format",
+      "structured_outputs",
+      "logprobs",
+      "top_logprobs"
+    ],
+    "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+    },
+    "status": 0,
+    "uptime_last_30m": null,
+    "uptime_last_5m": null,
+    "uptime_last_1d": 99.47089947089947,
+    "supports_implicit_caching": true,
+    "native_tools": {},
+    "supports_voice_cloning": false,
+    "supports_multiple_audio_references": false,
+    "supports_image_reference": false,
+    "supports_diarization": false,
+    "latency_last_30m": null,
+    "throughput_last_30m": null
+  }
+}

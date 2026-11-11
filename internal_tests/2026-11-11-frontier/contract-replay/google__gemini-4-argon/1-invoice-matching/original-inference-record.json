@@ -1,0 +1,48 @@
+{
+  "id": "1-invoice-matching-translation-google__gemini-4-argon",
+  "model": "google/gemini-4-argon",
+  "pinned_provider": "google-ai-studio",
+  "case": "invoice-matching",
+  "track": "translation",
+  "repetition": 1,
+  "started_at": "2026-11-11T05:32:35.745186+00:00",
+  "request_sha256": "9a6d228fae203932ddc98f86b6c20e4ee6af84520d82f6e55cec01ccb2834064",
+  "reserved_usd": 0.3738196000000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.018834,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "9d6bbd6d69a007ba64c604d7a406aa8d8db31885aefb075cd66aa9f7c26d6083",
+  "provider_request_id": "gen-1794375155-zYiqtqcJdgN6WVPoYpQz",
+  "returned_model": "google/gemini-4-argon",
+  "returned_provider": "Google AI Studio",
+  "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 1807,
+    "total_tokens": 2189,
+    "cost": 0.018834,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018834,
+      "upstream_inference_prompt_cost": 0.000764,
+      "upstream_inference_completions_cost": 0.01807
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1534,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "bffc3eb0d57cf84ccff1e8579f569d81c5ef720b9090a3bc6d118368d0e04c67",
+  "elapsed_seconds": 24.83202766699833,
+  "finished_at": "2026-11-11T05:33:00.577546+00:00"
+}

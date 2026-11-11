@@ -1,0 +1,22 @@
+{
+  "valid": false,
+  "errors": [
+    "Expected sole top-level items array"
+  ],
+  "assigned": 12,
+  "valid_records": 0,
+  "missing_ids": [
+    "V-supplier-onboarding-P014",
+    "T12",
+    "T02",
+    "T09",
+    "T17",
+    "V-supplier-onboarding-P020",
+    "T15",
+    "V-supplier-onboarding-P005",
+    "V-supplier-onboarding-P002",
+    "V-supplier-onboarding-P006",
+    "V-supplier-onboarding-P027",
+    "T04"
+  ]
+}

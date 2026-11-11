@@ -1,0 +1,10 @@
+{
+  "status": "ftps_published",
+  "at": "2026-11-11T16:30:32.680829+00:00",
+  "files": {
+    "PALO_BlueprintBench.html": "1865a9ee06ffcdd0f77f58d88ef1517202c4bb51ab61e6d442ba8b4be8b07d88",
+    "PALO_BlueprintBench_Leaderboard.html": "a9d7d98331b031cb18bfe93b899d2a2ddc9dd7858aadfbdf6a703c68ebb8530c",
+    "downloads/blueprintbench/release-manifest.json": "4fd6c3049d7288a817173ef227a6e0832f6661109e12281049e4a1018c9e2b96"
+  },
+  "remote_readback_verified": true
+}

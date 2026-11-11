@@ -1,0 +1,54 @@
+**Advisory only.** I read the pasted source and ran nothing; none of this supports qualifying PBI.
+
+## Release blockers
+
+**1. Response provenance is self-attesting (High).** The manifest loop rejects any path whose parent is not `base`, so `responses/*-raw.txt` and the receipts can never be pinned. The receipt hash is only compared with its mutable neighbour.
+- Counterexample: escape Gemini's quotes, update `raw_text_sha256`, rebuild; the build passes and Gemini becomes "assessed".
+- Fix: pin response and receipt digests in the manifest, allowing exactly `responses/`.
+
+**2. "Scores unchanged" is asserted, not checked (High).** `primary_scores_unchanged: True` is a literal, and the roster's `source_sha256` is computed from whatever file is present.
+- Counterexample: edit `leaderboard-data.json` and rebuild both tools; everything passes.
+- Fix: pin the expected leaderboard digest and fail on mismatch.
+
+**3. Missing data becomes a perfect false-alarm score (High).** An absent reviewer gets `false_alarm_assigned_ratio` 0/12 = 0.0, identical to Fable's, while an invalid one gets `None`.
+- Counterexample: a valid envelope with one item also yields 0.0.
+- Fix: return `None` when any control is unresolved.
+- Related: `false_alarm_rate_interpretable` is vacuously `True` for a `by_dimension` slice with zero controls; require `controls` to be non-empty.
+
+**4. `reuse_key` omits the candidate (High).** The docstring says any context change invalidates reuse, but the key is rule-only and exported per item.
+- Counterexample: a mutant and its control on the same rule share a key, so a cached "faithful" transfers to the mutant.
+- Fix: add the candidate and prompt digests, and test it.
+
+**5. The blind packet ships beside the answers (Medium).** `calibration.json` holds the packet next to `review_export`, with `expected` and all reviewer verdicts.
+- Fix: write the packet to a separate file.
+
+## Non-blocking defects
+
+- **Hard-coded facts (Medium).** `by_family` uses a literal name over the whole key. The roster hard-codes `families`, `repetitions`, 35, and the "18 internal… 10 historical" prose. Both tools print "verified" even after merely writing.
+  - Counterexample: drop a model and it still prints "18 internal".
+  - Fix: derive or assert the counts.
+- **Required inputs not enforced (Medium).** Remove `answer-key.json` from `manifest['files']` and it is read unverified. Fix: assert the required set.
+- **Captures that crash instead of being retained as invalid (Medium).**
+  - Non-UTF-8 bytes raise outside `validate_response`.
+  - Deep nesting raises an uncaught `RecursionError`.
+  - A raw file without a receipt raises `FileNotFoundError`.
+  - A receipt without a raw file silently reads "Response not received".
+- **Roster nulls (Medium).**
+  - `"usage": null` raises `AttributeError`; use `r.get('usage') or {}`.
+  - `{"enabled": false}` renders "not configured".
+  - `"effort": null` renders "None".
+  - `verification_assigned_probes == 0` raises `ZeroDivisionError`.
+- **Encoding (Low).** `read_text()` on the HTML and corpus is locale-dependent; pass `encoding='utf-8'`.
+- **Silent no-op (Low).** If both markers are missing, the roster is not inserted and `--check` still passes.
+- **Test gaps (Low).** Nothing shown checks the 72 roster positions against the UI. The reuse test skips `allowed_alternatives` and `forbidden_inferences`.
+
+## Claims the evidence supports
+
+- Fable's 6/6 and 0/12 are a smoke test on one exposed family against assistant-draft labels. One-sided 95% bounds are roughly ≥61% detection and ≤22% false alarms.
+- With two invalid envelopes, `agreement` is "incomplete" for all 18 items, so there is no inter-reviewer evidence.
+- `agree` means reviewers match each other, not the key.
+
+## Future research (not blockers)
+
+- Unexposed families with human adjudication and verified custody.
+- A preregistered comparator, replacing the post-hoc lexical baseline.

@@ -1,0 +1,48 @@
+{
+  "id": "2-purchase-approval-translation-cohere__command-a-plus",
+  "model": "cohere/command-a-plus",
+  "pinned_provider": "cohere/fp8",
+  "case": "purchase-approval",
+  "track": "translation",
+  "repetition": 2,
+  "started_at": "2026-11-11T06:49:26.221797+00:00",
+  "request_sha256": "da91c2950b6c53a18b191e614f246a9aa87f4e2d61b3b3f19c08593575617ff9",
+  "reserved_usd": 0.056078220000000005,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.003795,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "0577ee88e66cc5ce8caf22879ca9bc80ce74e6c717631b95efc772025e3564bf",
+  "provider_request_id": "gen-1794379766-5rp6hzobehhJ65JJLx9W",
+  "returned_model": "cohere/command-a-plus",
+  "returned_provider": "Cohere",
+  "usage": {
+    "prompt_tokens": 335,
+    "completion_tokens": 2463,
+    "total_tokens": 2798,
+    "cost": 0.003795,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003795,
+      "upstream_inference_prompt_cost": 0.0001005,
+      "upstream_inference_completions_cost": 0.0036945
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "64b3a9700854c87d93583c7cec75991721d08f6057277b443e4048acd7245e19",
+  "elapsed_seconds": 8.283549333005794,
+  "finished_at": "2026-11-11T06:49:34.505866+00:00"
+}

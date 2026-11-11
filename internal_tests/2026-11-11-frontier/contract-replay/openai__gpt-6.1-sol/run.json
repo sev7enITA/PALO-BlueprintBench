@@ -1,0 +1,187 @@
+{
+  "run_id": "openai__gpt-6.1-sol-posthoc-replay",
+  "campaign_sha256": "0bf65a4b8e06fea7dbedc25e98d895526c5ec5b4bae224f2b8513cb7a468b085",
+  "subject_id": "openai__gpt-6.1-sol",
+  "configuration_sha256": "7f0229b6b7b124b0ab4e7f6356d0bbdfcb38861cd9a8050e2d2129ef71ba241b",
+  "started_at": "2026-11-11T05:45:10.448748+00:00",
+  "finished_at": "2026-11-11T05:45:10.458693+00:00",
+  "evidence_status": "self_reported",
+  "attempts": [
+    {
+      "task_id": "purchase-approval",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.0010285000025760382,
+      "cost": {
+        "status": "reported",
+        "usd": 0.0043,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/1-purchase-approval/receipt.json",
+        "sha256": "1b64013d4d214cf9e57f6cd03689281d23501e553eeb523ea10d17e635c1bd37"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/1-purchase-approval/annotation.json",
+        "sha256": "9ce97f1751cd8376cea6be5cadcee791fde3b04eb161c301a062bc11e3fef51c"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.000865792011609301,
+      "cost": {
+        "status": "reported",
+        "usd": 0.003568,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/1-supplier-onboarding/receipt.json",
+        "sha256": "68830be9d9064f8c08b207fe1db19d53db5f7eeb656bc04abb519ebcf7580095"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/1-supplier-onboarding/annotation.json",
+        "sha256": "e9fcd480fcd7c60bad5ed8bf6972b8ea256b6cdab6566451c2eb925ca880c718"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.0008776659960858524,
+      "cost": {
+        "status": "reported",
+        "usd": 0.003734,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/1-invoice-matching/receipt.json",
+        "sha256": "451f5c74b6c7d2c5d5db108c78e0a5021aaacf2e5ca5404e96a39f75636d88a9"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/1-invoice-matching/annotation.json",
+        "sha256": "ef45193964f58a299ff9715ea64ef33c15341d77b94fb10677f8340b3f362cfe"
+      }
+    },
+    {
+      "task_id": "purchase-approval",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0009014170063892379,
+      "cost": {
+        "status": "reported",
+        "usd": 0.00446,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/2-purchase-approval/receipt.json",
+        "sha256": "ba9f6490869a73fd0e57178053ebad361f891622d140641a89b03b8c60cdd8c0"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/2-purchase-approval/annotation.json",
+        "sha256": "38a72e3a4a1c7f8b0608271b2adb04af4650436461c38b482ff0f8e3c206a52e"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.00108020800689701,
+      "cost": {
+        "status": "reported",
+        "usd": 0.003288,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/2-supplier-onboarding/receipt.json",
+        "sha256": "b2fba27699dcebc51ee80815ed2bab0a461c3699369e2b66f0c989937e5e0d47"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/2-supplier-onboarding/annotation.json",
+        "sha256": "6735f0271a588b2e1c1ebfded814a9edb8837ad1416c5865b0abc749a9c4b720"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0011299589968984947,
+      "cost": {
+        "status": "reported",
+        "usd": 0.004344,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/2-invoice-matching/receipt.json",
+        "sha256": "e3deabbac9b4668c189336631828f91fd41de13af39da17c120d43fa56f87641"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/2-invoice-matching/annotation.json",
+        "sha256": "25c7d7bf3eed0f00617f1647063ac093f9b9b36769ddfaee4ac7b99075a98709"
+      }
+    },
+    {
+      "task_id": "purchase-approval",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0009405419987160712,
+      "cost": {
+        "status": "reported",
+        "usd": 0.00456,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/3-purchase-approval/receipt.json",
+        "sha256": "0d0f7d8622cb9b9a2b1bfeb127c447dd1ad46b956376e670b24669f470feee37"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/3-purchase-approval/annotation.json",
+        "sha256": "80b122f3954569b69e862eb864c65ca158ce1093452457c2f7a4961b4cfb91c5"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0008172920061042532,
+      "cost": {
+        "status": "reported",
+        "usd": 0.003568,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/3-supplier-onboarding/receipt.json",
+        "sha256": "db526679d94ea8beb65dcee9497abdd008639e56701dac1ca341a74df2eaf5b7"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/3-supplier-onboarding/annotation.json",
+        "sha256": "7564ae54c487a319c68247c555cbdc707c1972a8569d26fdae69d5e80b269cc2"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0008237500005634502,
+      "cost": {
+        "status": "reported",
+        "usd": 0.003934,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "openai__gpt-6.1-sol/3-invoice-matching/receipt.json",
+        "sha256": "e617c4fcb85bbc238d7928175a11f83ef66f13f61563d0d8ec5f398dd39d8303"
+      },
+      "annotation": {
+        "path": "openai__gpt-6.1-sol/3-invoice-matching/annotation.json",
+        "sha256": "c8ead2949e4ad7de57282dbd804aea15577e177e83513011feb6b0948acef560"
+      }
+    }
+  ],
+  "submitter_id": "palo-maintainer",
+  "execution": {
+    "mode": "serial",
+    "max_concurrency": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "model": "Gemini 4 Argon",
+  "reasoning": "High",
+  "interface": "Gemini web",
+  "observed_completed_at": "2026-11-11T17:04:02.639Z",
+  "prompt_sha256": "673371ec1e08cdceae43daf1d2d0ac9920357a86c3aecee9b9aa6a0fb2b3cf8a",
+  "raw_text_sha256": "c25048c1cd33afdad9b0014631338be06fa7a7a621fe088edcf80ac59333c4f3",
+  "capture": "Response Copy control text; not provider API bytes. Unescaped quotation marks retained without repair.",
+  "attempts": 2,
+  "prior_attempt": "Operator accidentally interrupted first browser generation before visible answer; same prompt resubmitted; no response available for first attempt.",
+  "openrouter_calls": 0
+}

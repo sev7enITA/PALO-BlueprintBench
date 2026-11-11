@@ -1,0 +1,23 @@
+{
+  "type": "advisory_visual_review",
+  "independent_benchmark_validation": false,
+  "model": "anthropic/claude-fable-5.2",
+  "serving_provider": "Anthropic",
+  "reasoning_effort": "high",
+  "completed_review": true,
+  "failed_initial_attempt_cost_usd": 0.247232,
+  "completed_review_cost_usd": 0.530992,
+  "total_advisory_cost_usd": 0.778224,
+  "reserved_max_usd": 1.0,
+  "screenshots_sent": 6,
+  "round1_external_verdict": "NEEDS REVISION",
+  "round2_fix_verification": "PASS by coding evaluator; no second model inference",
+  "files": {
+    "fable-design-receipt-1-retry.json": "3c617c43a0b7895de52e3faf902c6b4f218cf468e7371af4caf54d6627192223",
+    "fable-design-receipt-1.json": "6abea1db3f7748724cbc1c3c2edc29327aefd41b9fbd27cec8200256756c4e9a",
+    "fable-design-request-1-retry.json": "03bc26ce64b0ef5dc0526e40a0be81d8ddf73829aa32561213be4e310e39c560",
+    "fable-design-request-1.json": "80493a9dcedc77542a6748a2d3addbee5893d85754866f8e0f726e89f261e952",
+    "fable-design-response-1-retry.json": "18a56af25abea31e447e235b93f942b725e3b208a24f36883556997d85b4321f",
+    "fable-design-response-1.json": "eb421ee9999a1abc20ea9d1155179d1cf50383dc02330c31ca8f1096b566e198"
+  }
+}

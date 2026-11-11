@@ -1,0 +1,148 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P002",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P003",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P004",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P005",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P006",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P007",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P008",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P009",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P010",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P011",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P012",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P013",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P014",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P015",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P016",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P017",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P018",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P019",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P020",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P021",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P022",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P023",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P024",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P025",
+      "verdict": "not_established"
+    },
+    {
+      "id": "P026",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P027",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P028",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P029",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P030",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P031",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P032",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P033",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P034",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P035",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P036",
+      "verdict": "contradicted"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "supported"
+    },
+    {
+      "id": "P002",
+      "verdict": "supported"
+    },
+    {
+      "id": "P003",
+      "verdict": "supported"
+    },
+    {
+      "id": "P004",
+      "verdict": "supported"
+    },
+    {
+      "id": "P005",
+      "verdict": "supported"
+    },
+    {
+      "id": "P006",
+      "verdict": "supported"
+    },
+    {
+      "id": "P007",
+      "verdict": "supported"
+    },
+    {
+      "id": "P008",
+      "verdict": "supported"
+    },
+    {
+      "id": "P009",
+      "verdict": "supported"
+    },
+    {
+      "id": "P010",
+      "verdict": "supported"
+    },
+    {
+      "id": "P011",
+      "verdict": "supported"
+    },
+    {
+      "id": "P012",
+      "verdict": "supported"
+    },
+    {
+      "id": "P013",
+      "verdict": "supported"
+    },
+    {
+      "id": "P014",
+      "verdict": "supported"
+    },
+    {
+      "id": "P015",
+      "verdict": "supported"
+    },
+    {
+      "id": "P016",
+      "verdict": "supported"
+    },
+    {
+      "id": "P017",
+      "verdict": "supported"
+    },
+    {
+      "id": "P018",
+      "verdict": "supported"
+    },
+    {
+      "id": "P019",
+      "verdict": "supported"
+    },
+    {
+      "id": "P020",
+      "verdict": "supported"
+    },
+    {
+      "id": "P021",
+      "verdict": "supported"
+    },
+    {
+      "id": "P022",
+      "verdict": "supported"
+    },
+    {
+      "id": "P023",
+      "verdict": "supported"
+    },
+    {
+      "id": "P024",
+      "verdict": "supported"
+    },
+    {
+      "id": "P025",
+      "verdict": "supported"
+    },
+    {
+      "id": "P026",
+      "verdict": "supported"
+    },
+    {
+      "id": "P027",
+      "verdict": "supported"
+    },
+    {
+      "id": "P028",
+      "verdict": "supported"
+    },
+    {
+      "id": "P029",
+      "verdict": "supported"
+    },
+    {
+      "id": "P030",
+      "verdict": "supported"
+    },
+    {
+      "id": "P031",
+      "verdict": "supported"
+    },
+    {
+      "id": "P032",
+      "verdict": "supported"
+    },
+    {
+      "id": "P033",
+      "verdict": "supported"
+    },
+    {
+      "id": "P034",
+      "verdict": "supported"
+    },
+    {
+      "id": "P035",
+      "verdict": "supported"
+    },
+    {
+      "id": "P036",
+      "verdict": "supported"
+    },
+    {
+      "id": "P036",
+      "verdict": "supported"
+    }
+  ]
+}

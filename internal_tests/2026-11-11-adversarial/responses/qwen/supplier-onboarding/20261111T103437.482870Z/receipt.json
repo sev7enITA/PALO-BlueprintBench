@@ -1,0 +1,49 @@
+{
+  "case": "supplier-onboarding",
+  "reviewer": "qwen3.8-27b-uncensored-local",
+  "endpoint": "http://127.0.0.1:1234/v1/completions",
+  "requested_model": "qwen3.8-27b-uncensored",
+  "frozen_commit": "80df7dbb33c446239370c000c0649b2aaedee30c",
+  "prompt_sha256": "70724b03edaad17881f2c7dcbf97253904d2d2ac6106bb776b278c9d3e9c6763",
+  "protocol_sha256": "c39b7a6eeb98c86028d23b96a0453d854c09f6c71b31ee7687e150ad2a029a04",
+  "request_sha256": "f6a176d930ba34da20d70784b5e3575d015e64e01aedcba443803a4e8cda6296",
+  "assigned_records": 12,
+  "request_started_at": "2026-11-11T10:34:37.485459+00:00",
+  "loaded_context_tokens": 8192,
+  "quantization": "Q6_K",
+  "completion_template": {
+    "prefix": "<|im_start|>user\n",
+    "suffix": "\n<|im_end|>\n<|im_start|>assistant\n<think>\n</think>\n"
+  },
+  "template_note": "Exact frozen prompt without substantive additions. Explicit closed thinking channel requests a final-only completion; this configuration is disclosed and differs from web reviewer settings.",
+  "settings": {
+    "max_tokens": 3000,
+    "temperature": 0.0,
+    "stream": false,
+    "seed": "not_set",
+    "provider_defaults_otherwise": true
+  },
+  "qualification": "internal_countertest_only",
+  "cloud_calls": 0,
+  "selection_or_author_identity_supplied": false,
+  "http_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Wed, 11 Nov 2026 10:35:01 GMT"
+  },
+  "raw_response_sha256": "509d9f85bf1c9c2628ceb4ad6fea7b9b51e5e693d87f241f38a8302cf5d008a3",
+  "returned_model": "qwen3.8-27b-uncensored",
+  "response_id": "cmpl-63klpmw0f2lavjvgc6m0uq",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 445,
+    "total_tokens": 1694
+  },
+  "raw_text_sha256": "bfeacf4e5665e4b680b9d71abaa329fbd95711cf77677701bf125c2fe8762bf6",
+  "state": "complete_invalid",
+  "contract_valid": false,
+  "valid_records": 0,
+  "elapsed_seconds": 23.568,
+  "request_finished_at": "2026-11-11T10:35:01.054025+00:00"
+}

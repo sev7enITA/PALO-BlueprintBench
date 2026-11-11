@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS",
+  "review_classification": "internal_advisory_design_review",
+  "independent_benchmark_validation": false,
+  "human_adjudication": false,
+  "review_model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "reasoning_effort": "high",
+  "model_advisory_verdict": "PASS",
+  "cost_usd": 0.22984,
+  "screenshot_sizes_reviewed_locally": [
+    1440,
+    768,
+    375
+  ],
+  "model_screenshots": [
+    "workspace-1440.png",
+    "workspace-375.png",
+    "table-375.png",
+    "operations-1440.png"
+  ],
+  "functional_checks": [
+    "Ranks recomputed from raw verification judgments",
+    "Competition ties and blocked-model exclusion",
+    "Country filter preserves global rank",
+    "Case/dimension/post-hoc label sensitivity",
+    "Cost-efficiency completion/accounting eligibility",
+    "JSON values and nulls",
+    "No document overflow or JavaScript errors at1440/768/375"
+  ],
+  "nonblocking_limitations": [
+    "Dense mobile controls require scrolling before reaching table",
+    "Horizontal navigation needed for active metric in some KPI presets; model identity leaves viewport at far-right columns"
+  ],
+  "new_benchmark_calls": 0
+}

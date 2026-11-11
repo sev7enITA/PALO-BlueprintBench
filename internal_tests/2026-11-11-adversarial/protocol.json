@@ -1,0 +1,43 @@
+{
+  "id": "internal-adversarial-2026-11-11-v1",
+  "frozen_at": "2026-11-11T10:31:25.115035+00:00",
+  "base_commit": "17a85edcae21cddaf42daa42c39a49cc1988a6a7",
+  "data_sha256": "7d7554ab2a402b4d8dfd2bbc40d728a725602b8cf4b9fe0bf11a32497712c090",
+  "selection_seed": "PALO-adversarial-2026-11-11-v1",
+  "sampling": "Purposive adversarial sample, not a probability sample or general accuracy estimate. Known disagreements inform selection.",
+  "assigned_reviewers": [
+    "glm-5.3-max-web",
+    "gemini-4-argon-high-web",
+    "qwen3.8-27b-uncensored-local"
+  ],
+  "assigned_items_per_reviewer": 36,
+  "reviewer_batches": 3,
+  "repetitions": 1,
+  "expected_records": 108,
+  "reviewer_identity_masking": "Author model and previous labels withheld in the prompts. Reviewer service memory/training contamination not ruled out.",
+  "family_overlap": "GLM, Gemini and Qwen families also occur in tested cohort; flag corresponding self/family rows. Different endpoints/weights do not establish independence.",
+  "primary_results_unchanged": true,
+  "qualified": false,
+  "no_response_policy": "Absent, incomplete, duplicate or invalid records remain missing/invalid in fixed denominators; no automatic repair of substantive answers.",
+  "analysis": "Pairwise relations and unanimity per item; probe review compared with frozen labels and retained model predictions on the 18 selected probes (54 assignments per model). Translation relations reported separately, no baseline semantic gold assumed. Uncertain is distinct from disagreement and missing.",
+  "translation_scope": {
+    "items": 18,
+    "source_bound_models": 15,
+    "excluded": [
+      {
+        "model": "sakana/fugu-max",
+        "reason": "No dispatched model output"
+      },
+      {
+        "model": "inference-net/schematron-v2-small",
+        "reason": "No source-bound translation in the retained dataset"
+      },
+      {
+        "model": "inference-net/schematron-v2-turbo",
+        "reason": "No source-bound translation in the retained dataset"
+      }
+    ]
+  },
+  "missing_model_outputs": "Sakana has no dispatched output and no fabricated translation item. Retain it as missing in probe replay.",
+  "claims": "Within-sample model agreement only. No PBI, independent validation, confidence intervals or full-repository claim."
+}

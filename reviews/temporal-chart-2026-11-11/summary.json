@@ -1,0 +1,42 @@
+{
+  "review_classification": "internal_advisory_design_review",
+  "independent_benchmark_validation": false,
+  "actual_model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "visual_inputs": 4,
+  "verdict": "PASS",
+  "cost_usd": 0.356536,
+  "authorised_incremental_max_usd": 0.75,
+  "benchmark_inference_calls": 0,
+  "primary_scores_changed": false,
+  "files": {
+    "fable-endpoints.json": "3ea2b3e4443c0281dd18f43f0f7a99807067071a40ca14b66b95f2bb6b80c99a",
+    "fable-receipt.json": "3c4e899280fa4c09ac8bb6ecc3d7e177693256c6c981ccd71c5d62bd421bce3b",
+    "fable-request.json": "df04f558fa37cbe1b7ada5487938c9f01322df49a816e882ea9de38e3d93e0b5",
+    "fable-response.json": "3195550cbf1e50bb0a09be9e97be21785490b2d547fa13dba127314099e2211e"
+  },
+  "known_nonblocking_ui_limitations": [
+    "The mobile plot uses horizontal scrolling; its full time domain requires swipe or keyboard navigation. A visible cue and model-selection autoscroll are present.",
+    "Markers near 100 percent overlap; all plotted models remain individually selectable through the labelled model key.",
+    "Colours encode model makers, while the serving-provider filter is a different property. Explicit maker labels could improve the colour key.",
+    "All current observations were collected on one day across retained campaigns. This is not a longitudinal model-progress study."
+  ],
+  "verification": {
+    "fresh_viewports": [
+      1440,
+      768,
+      375
+    ],
+    "page_overflow": false,
+    "javascript_errors": [],
+    "retained_test_viewports": [
+      320,
+      375,
+      768,
+      1440
+    ],
+    "independent_csv_oracle": "17 invoice-case model rows, three assigned verification calls per model; completion rates, qualification state and timestamp semantics match retained records",
+    "svg_export": "Parsed and rendered standalone with inline styling and evidence-scope text"
+  },
+  "release_note": "Reviewed UI frozen by maintainer after PASS; optional refinements deferred. No numerical or functional blocker observed."
+}

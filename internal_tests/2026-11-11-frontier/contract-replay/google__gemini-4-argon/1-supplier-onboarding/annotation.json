@@ -1,0 +1,189 @@
+{
+  "task_id": "supplier-onboarding",
+  "receipt_sha256": "cd2bc0b767165807d82b29fa0dd55555593ccda8512d8ea2e11e86a93f255085",
+  "scope_complete": true,
+  "atomicity_reviewed": true,
+  "review_type": "assistant_draft",
+  "claims": [
+    {
+      "id": "c1",
+      "equivalence_id": "supplier-onboarding:R01",
+      "verdict": "supported",
+      "matches_gold": [
+        "R01"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "fadd55a6673f6cfcef307c14c2199420c8fbb8135add5e63912047e8b8f9592a"
+    },
+    {
+      "id": "c2",
+      "equivalence_id": "supplier-onboarding:R02",
+      "verdict": "supported",
+      "matches_gold": [
+        "R02"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "f60b5dc8627147e9e7919ff52b3e7b6b28dc1066b5e60550fdd216ef3e262c65"
+    },
+    {
+      "id": "c3",
+      "equivalence_id": "supplier-onboarding:R03",
+      "verdict": "supported",
+      "matches_gold": [
+        "R03"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "8aacaa59a07d6fb4bb363be0750f2a948318990d4105ba772f58f1165be4178c"
+    },
+    {
+      "id": "c4",
+      "equivalence_id": "supplier-onboarding:R04",
+      "verdict": "supported",
+      "matches_gold": [
+        "R04"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "5b190c849a55ec23474e98a29401ce4c52880de37f09328706068dabb61d01ab"
+    },
+    {
+      "id": "c5",
+      "equivalence_id": "supplier-onboarding:R05",
+      "verdict": "supported",
+      "matches_gold": [
+        "R05"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "2af3ffb4c4951406284574f2b0150c85c27cf4e2b301a75e01c457540ed9c5a2"
+    },
+    {
+      "id": "c6",
+      "equivalence_id": "supplier-onboarding:R06",
+      "verdict": "supported",
+      "matches_gold": [
+        "R06"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "93b8db521007379dd0d2721f988c43cb3e30bf825ff8fbb7a65e6a6032b20842"
+    },
+    {
+      "id": "c7",
+      "equivalence_id": "supplier-onboarding:R07",
+      "verdict": "supported",
+      "matches_gold": [
+        "R07"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "9cde2201e9c5a2c1a441e54eb6caf319caba939fff844f1efb655e742362bc91"
+    },
+    {
+      "id": "c8",
+      "equivalence_id": "supplier-onboarding:R08",
+      "verdict": "supported",
+      "matches_gold": [
+        "R08"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "fe23f574c6cacaa18a2dc5f07fb3d63701fff201cd87e04f745736da618f6f51"
+    },
+    {
+      "id": "c9",
+      "equivalence_id": "supplier-onboarding:R09",
+      "verdict": "supported",
+      "matches_gold": [
+        "R09"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "df2c853f1d7997934f2035715885ccc7dc097113a597a5818ce38343b7b21b9e"
+    },
+    {
+      "id": "c10",
+      "equivalence_id": "supplier-onboarding:R10",
+      "verdict": "supported",
+      "matches_gold": [
+        "R10"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "e10e24dcd21c4955baf893dcb093ebafe748f626e249430b4a4821c9ce7926fc"
+    },
+    {
+      "id": "c11",
+      "equivalence_id": "supplier-onboarding:R11",
+      "verdict": "supported",
+      "matches_gold": [
+        "R11"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "417888e93fcc175badce50a03ec4dd6fc4b6bccdd1a5144a1ed2ec085b2214b4"
+    },
+    {
+      "id": "c12",
+      "equivalence_id": "supplier-onboarding:R12",
+      "verdict": "supported",
+      "matches_gold": [
+        "R12"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "8645cbe21e54b5ffef55ccf065d666660327f4a54e395637788e39e623513b97"
+    }
+  ]
+}

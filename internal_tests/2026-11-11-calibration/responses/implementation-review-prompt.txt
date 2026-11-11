@@ -1,0 +1,402 @@
+Read-only adversarial code review of the IMPLEMENTED PALO internal calibration and roster. Do not access files or tools; all source is below. This is advisory, not independent validation. Within 500 words identify only concrete defects, severity, counterexample, minimal fix. Separate release blockers from future research. Do not request speculative features. Current evidence: 18 calibration items, one exposed synthetic family; Fable valid 18/18, six mutations detected, zero of twelve control false alarms; Gemini copied response has unescaped quotes, GLM desktop copied response malformed claims_to_avoid. Both invalid captures retained, no repair, semantics not_assessed. Zero independent qualification. Existing18-model measurement bytes unchanged. Roster72 positions match UI (18 models x four metrics); no mixing new calibration with model scores. 40 local tests pass. Critique the actual code, including fixed denominators, null/missing semantics and provenance. A successful advisory response is not permission to qualify PBI.
+
+FILE tools/calibration.py
+"""Replay internal semantic calibration. No model calls and no qualification path."""
+from pathlib import Path
+from collections import Counter
+import argparse
+import hashlib
+import json
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / 'internal_tests/2026-11-11-calibration'
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def unique_object(pairs):
+    obj = {}
+    for key, value in pairs:
+        if key in obj:
+            raise ValueError('Duplicate JSON key: ' + key)
+        obj[key] = value
+    return obj
+
+
+def parse(raw):
+    return json.loads(raw, object_pairs_hook=unique_object,
+                      parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+
+
+def read(path):
+    return parse(path.read_bytes().decode('utf-8'))
+
+
+def reuse_key(rule):
+    """No fuzzy matching: any context, source or rubric change invalidates reuse."""
+    fields = {k: rule[k] for k in ('id', 'family_id', 'source_sha256', 'scope',
+                                  'rubric_version', 'allowed_alternatives',
+                                  'forbidden_inferences', 'critical', 'answerability')}
+    return digest(json.dumps(fields, sort_keys=True, ensure_ascii=False).encode())
+
+
+def blind_packet(items, seed=20261111):
+    """Preparation aid only: this public exposed material is not an independent study."""
+    import random
+    pairs = [{'id': x['id'], 'source': x['source'], 'candidate': x['candidate']} for x in items]
+    random.Random(seed).shuffle(pairs)
+    return {'status': 'internal_annotation_preparation_only', 'qualified': False,
+            'instructions': 'Annotate without consulting model outputs or public draft labels. This public, engineering-exposed packet cannot establish independent holdout evidence.',
+            'items': pairs}
+
+
+def eligibility(rule):
+    # A local string cannot establish external custody or human independence.
+    reasons = ['independent_identity_and_custody_not_verified']
+    if rule['exposure'] != 'unexposed':
+        reasons.append('source_exposed_to_engineering')
+    if rule['label_status'] != 'human_adjudicated':
+        reasons.append('labels_not_human_adjudicated')
+    return {'qualified': False, 'blockers': reasons}
+
+
+def validate_response(raw, expected_ids):
+    """Invalid envelopes are retained but never silently repaired or partly scored."""
+    try:
+        obj = parse(raw)
+        if not isinstance(obj, dict) or set(obj) != {'items', 'review'}:
+            raise ValueError('Expected items and review envelope')
+        if not isinstance(obj['items'], list) or not isinstance(obj['review'], dict):
+            raise ValueError('Invalid envelope types')
+        review = obj['review']
+        if set(review) != {'verdict', 'blocking_findings', 'recommendations', 'claims_to_avoid'}:
+            raise ValueError('Invalid review fields')
+        if not isinstance(review['verdict'], str) or any(
+            not isinstance(review[k], list) or any(not isinstance(x, str) for x in review[k])
+            for k in ('blocking_findings', 'recommendations', 'claims_to_avoid')
+        ):
+            raise ValueError('Invalid review values')
+        ids = []
+        for row in obj['items']:
+            if not isinstance(row, dict) or set(row) != {'id', 'verdict', 'reason'}:
+                raise ValueError('Invalid item fields')
+            if not isinstance(row['id'], str) or row['id'] not in expected_ids:
+                raise ValueError('Unknown item ID')
+            if row['verdict'] not in ('faithful', 'altered', 'uncertain'):
+                raise ValueError('Invalid verdict')
+            if not isinstance(row['reason'], str) or not row['reason'].strip():
+                raise ValueError('Missing rationale')
+            ids.append(row['id'])
+        if len(set(ids)) != len(ids):
+            raise ValueError('Duplicate item IDs')
+        return obj, None
+    except (ValueError, TypeError, KeyError) as exc:
+        return None, str(exc)
+
+
+def tally(key, judgments, invalid=False):
+    mutants = [r for r in key if r['expected'] == 'altered']
+    controls = [r for r in key if r['expected'] == 'faithful']
+    missing = sum(r['id'] not in judgments for r in key)
+    uncertain = sum(judgments.get(r['id'], {}).get('verdict') == 'uncertain' for r in key)
+    detected = sum(judgments.get(r['id'], {}).get('verdict') == 'altered' for r in mutants)
+    false_alarm = sum(judgments.get(r['id'], {}).get('verdict') == 'altered' for r in controls)
+    return {'assigned': len(key), 'classified': len(key) - missing - uncertain,
+            'missing': 0 if invalid else missing, 'invalid': len(key) if invalid else 0, 'uncertain': uncertain,
+            'mutations': len(mutants), 'detected': detected,
+            'faithful_controls': len(controls), 'false_alarms': false_alarm,
+            'missed_mutations': sum(judgments.get(r['id'], {}).get('verdict') == 'faithful' for r in mutants),
+            'mutations_unresolved': sum(judgments.get(r['id'], {}).get('verdict') in (None, 'uncertain') for r in mutants),
+            'controls_unresolved': sum(judgments.get(r['id'], {}).get('verdict') in (None, 'uncertain') for r in controls),
+            'detection_assigned_ratio': detected / len(mutants) if mutants and not invalid else None,
+            'false_alarm_assigned_ratio': false_alarm / len(controls) if controls and not invalid else None,
+            'false_alarm_rate_interpretable': not any(judgments.get(r['id'], {}).get('verdict') in (None, 'uncertain') for r in controls)}
+
+
+def build(base=BASE):
+    manifest = read(base / 'manifest.json')
+    for name, expected in manifest['files'].items():
+        path = base / name
+        if path.parent != base or path.is_symlink() or digest(path.read_bytes()) != expected:
+            raise ValueError('Frozen input drift or unsafe path: ' + name)
+    bank = read(base / 'proposition-bank.json')
+    items = read(base / 'items.json')
+    key = read(base / 'answer-key.json')
+    protocol = read(base / 'protocol.json')
+    if len({r['id'] for r in bank}) != len(bank):
+        raise ValueError('Duplicate proposition ID')
+    by_rule = {r['id']: r for r in bank}
+    for r in bank:
+        if digest(r['source_text'].encode()) != r['source_sha256']:
+            raise ValueError('Source digest mismatch')
+    by_item = {r['id']: r for r in items}
+    if len(by_item) != len(items) or {r['id'] for r in key} != set(by_item) or len(key) != len(items):
+        raise ValueError('Assignment/key mismatch')
+    for r in key:
+        rule = by_rule[r['rule_id']]
+        if by_item[r['id']]['source'] != rule['source_text']:
+            raise ValueError('Source mapping mismatch')
+        if r['expected'] not in ('faithful', 'altered'):
+            raise ValueError('Invalid draft label')
+    results = []
+    for reviewer in protocol['reviewers']:
+        path = base / 'responses' / (reviewer + '-raw.txt')
+        obj = None
+        error = 'Response not received'
+        receipt = None
+        if path.exists():
+            receipt = read(path.with_name(reviewer + '-receipt.json'))
+            if receipt['raw_text_sha256'] != digest(path.read_bytes()) or receipt['prompt_sha256'] != manifest['files']['review-prompt.txt']:
+                raise ValueError('Response/prompt receipt mismatch: ' + reviewer)
+            obj, error = validate_response(path.read_text(encoding='utf-8'), set(by_item))
+        judgments = {r['id']: r for r in obj['items']} if obj else {}
+        results.append({'reviewer': reviewer, 'strict_envelope_valid': obj is not None,
+                        'structural_error': error, 'semantic_status': 'assessed_against_draft_labels' if obj else 'not_assessed', 'export_complete': len(judgments) == len(items) and not any(r['verdict'] == 'uncertain' for r in judgments.values()),
+                        'counts': tally(key, judgments, invalid=path.exists() and obj is None),
+                        'by_case': {c: tally([r for r in key if r['case'] == c], judgments, invalid=path.exists() and obj is None) for c in sorted({r['case'] for r in key})},
+                        'by_dimension': {d: tally([r for r in key if r['dimension'] == d], judgments, invalid=path.exists() and obj is None) for d in sorted({r['dimension'] for r in key})},
+                        'by_family': {'synthetic-procurement-author-1': tally(key, judgments, invalid=path.exists() and obj is None)},
+                        'review': obj['review'] if obj else None, 'judgments': judgments, 'receipt': receipt})
+    exported = []
+    for item in items:
+        label = next(r for r in key if r['id'] == item['id'])
+        rule = by_rule[label['rule_id']]
+        votes = {r['reviewer']: r['judgments'].get(item['id']) for r in results}
+        values = [v['verdict'] for v in votes.values() if v]
+        exported.append({**item, **label, 'source_sha256': rule['source_sha256'],
+                         'reuse_key': reuse_key(rule), 'label_status': 'assistant_draft',
+                         'reviews': votes, 'agreement': 'incomplete' if len(values) != len(results) else 'uncertain' if 'uncertain' in values else 'agree' if len(set(values)) == 1 else 'diverge'})
+    return {'version': protocol['version'], 'status': 'internal_tests', 'qualified': False,
+            'primary_scores_unchanged': True, 'protocol': protocol,
+            'lexical_baseline': {'name': 'Exact string equality', 'rule': 'faithful iff candidate bytes equal source bytes; otherwise altered. Post-hoc diagnostic suggested by reviewers, not a preregistered comparator.', 'counts': tally(key, {x['id']: {'verdict': 'faithful' if x['candidate'] == x['source'] else 'altered'} for x in items})},
+            'source_eligibility': {r['id']: eligibility(r) for r in bank},
+            'results': results, 'review_export': exported,
+            'agreement': dict(Counter(r['agreement'] for r in exported)),
+            'input_manifest_sha256': digest((base / 'manifest.json').read_bytes()),
+            'draft_status': 'LLM-generated internal diagnostics; not human-validated',
+            'blind_annotation_preparation': blind_packet(items)}
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument('--check', action='store_true')
+    args = p.parse_args()
+    out = ROOT / 'web/downloads/blueprintbench/calibration.json'
+    data = (json.dumps(build(), indent=2, ensure_ascii=False) + '\n').encode()
+    if args.check:
+        if out.read_bytes() != data:
+            raise SystemExit('Calibration export drift')
+    else:
+        out.write_bytes(data)
+    print('Calibration evidence verified')
+
+
+if __name__ == '__main__':
+    main()
+
+FILE tools/build_roster.py
+"""Default-scope roster derived from the frozen leaderboard, never from catalogue scores."""
+from pathlib import Path
+from fractions import Fraction
+import argparse
+import csv
+import hashlib
+import html
+import io
+import json
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT/'web/downloads/blueprintbench'
+
+
+def build():
+    source = (BASE/'leaderboard-data.json').read_bytes()
+    data = json.loads(source)
+    cohort = data['internal']
+    records = cohort['records']
+    configs = {r['id']: r for r in cohort['configurations']}
+    rows = []
+    for m in cohort['models']:
+        own = [r for r in records if r['model'] == m['id'] and r['state'] != 'not_run']
+        complete = len(own) == m['assigned_calls'] == m['completed_calls']
+        known = bool(own) and all(r.get('cost_status') == 'provider_reported' and isinstance(r.get('cost_usd'), (int, float)) for r in own)
+        config = configs[m['id']]
+        tokens = [r['usage']['prompt_tokens'] for r in own if isinstance(r.get('usage', {}).get('prompt_tokens'), (int, float))]
+        reasoning = config.get('configuration', {}).get('reasoning') or {}
+        rows.append({'cohort': 'internal', 'id': m['id'], 'name': m['name'], 'provider': m['pinned_provider'],
+                     'campaign': m['campaign_id'], 'reasoning': reasoning.get('effort', 'enabled' if reasoning.get('enabled') else 'not configured'),
+                     'endpoint_revision': config.get('endpoint_name'), 'output_cap': config.get('configuration', {}).get('max_tokens'),
+                     'advertised_context_tokens': config.get('catalogue_context'),
+                     'observed_prompt_tokens_min': min(tokens) if tokens else None, 'observed_prompt_tokens_max': max(tokens) if tokens else None,
+                     'prompt_usage_records': len(tokens), 'dispatched_calls': len(own),
+                     'label_matches': m['verification_correct'], 'assigned_labels': m['verification_assigned_probes'],
+                     'complete_calls': m['completed_calls'], 'assigned_calls': m['assigned_calls'],
+                     'known_usd': m['provider_reported_cost_usd'], 'median_seconds': m['latency_median_seconds'],
+                     'operational_rank_eligible': complete, 'charge_rank_eligible': complete and known,
+                     'evidence_url': m['evidence_base'],
+                     'values': {'agreement': Fraction(m['verification_correct'], m['verification_assigned_probes']) if own else None,
+                                'completion': Fraction(m['completed_calls'], m['assigned_calls']) if own else None,
+                                'cost': m['provider_reported_cost_usd'] if complete and known else None,
+                                'time': m['latency_median_seconds'] if complete else None}})
+    for metric in ('agreement', 'completion', 'cost', 'time'):
+        eligible = sorted([r for r in rows if r['values'][metric] is not None], key=lambda r: r['values'][metric], reverse=metric in ('agreement','completion'))
+        previous = None
+        rank = None
+        for i, r in enumerate(eligible, 1):
+            if r['values'][metric] != previous: rank = i
+            previous = r['values'][metric]
+            r[metric+'_rank'] = rank
+        for r in rows: r.setdefault(metric+'_rank', None)
+    for r in rows: del r['values']
+    rows.sort(key=lambda r:(r['agreement_rank'] is None, r['agreement_rank'] or 0, r['name']))
+    historical = [{'cohort':'historical_adapter_diagnostics','id':m.get('id'), 'name':m.get('name'), 'rank':None,'reason':'Different task, settings and evidence contract; not ranked with internal procurement tests.'} for m in data['historical']['models']]
+    corpus = json.loads((ROOT/'internal_tests/2026-11-11-adversarial/corpus.json').read_text())
+    context = [{'case':c['id'],'source_rules':len(c['source']), 'source_text_utf8_bytes':sum(len(r['text'].encode('utf-8')) for r in c['source'])} for c in corpus]
+    return {'version':'2026-11-11.roster.1','source_sha256':hashlib.sha256(source).hexdigest(),'qualified':False,
+            'scope':'Default primary labels, all cases and dimensions; competition ranks with exact ties. No qualified PBI.',
+            'context_note':'Each request uses one short synthetic case, not a full repository. Prompt-token range includes instructions and payload and is provider-tokenizer dependent. Source byte counts exclude identifiers and separators. Advertised context is a catalogue ceiling, not tested capacity.',
+            'cases':context,'families':1,'repetitions':3,'rows':rows,'historical_unranked':historical,
+            'external_reference_count':35,'external_suites_executed':0,'calibration_included_in_ranks':False}
+
+
+def outputs():
+    d=build();rows=d['rows'];out={BASE/'model-roster.json':(json.dumps(d,indent=2)+'\n').encode()}
+    stream=io.StringIO(newline='');w=csv.DictWriter(stream,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    out[BASE/'model-roster.csv']=stream.getvalue().encode()
+    display=lambda x:'N/A' if x is None else str(x)
+    body=''.join('<tr>'+''.join('<td>'+html.escape(str(x))+'</td>' for x in [r['name'],r['provider'],display(r['agreement_rank']),display(r['completion_rank']),display(r['cost_rank']),display(r['time_rank']),r['reasoning'],f"{display(r['observed_prompt_tokens_min'])} to {display(r['observed_prompt_tokens_max'])}",f"{r['complete_calls']}/{r['assigned_calls']}"])+'</tr>' for r in rows)
+    block=f'''<!-- ROSTER:START --><section class="wrap calibration-section" id="model-roster"><div class="section-heading"><div><p class="eyebrow">Configurations and evidence scope</p><h2>Model roster</h2></div><p>Four metric positions, one fixed scope: primary draft labels, all three cases. Rank 1 can be shared. N/A means ineligible or unavailable. Change the scope and KPI in the interactive leaderboard above.</p></div><p>18 internal configurations; three short cases from one authored family; three repetitions. Each request sees one case. The 10 historical adapter configurations remain a separate, unranked cohort. The 35 benchmark references are methodological comparisons, not suites run on these models.</p><div class="calibration-toolbar"><a href="downloads/blueprintbench/model-roster.csv" download>Export roster CSV</a><a href="downloads/blueprintbench/model-roster.json" download>Export full configuration JSON</a><a href="#workspace">Change ranking scope ↗</a></div><div class="roster-scroll"><table><caption>Default-scope internal ranks. Charges and time require all assigned calls complete; charges also require reconciled accounting.</caption><thead><tr><th>Model</th><th>Serving provider</th><th>Label agreement rank</th><th>Completion rank</th><th>Charge rank</th><th>Time rank</th><th>Reasoning</th><th>Observed input tokens per call</th><th>Complete calls</th></tr></thead><tbody>{body}</tbody></table></div><p>Observed input tokens include instructions and payload. They are not the advertised context window or evidence of 100 MB processing. Exact configurations, output caps, catalogue ceilings, campaign identities and raw-record links are in the JSON export.</p></section><!-- ROSTER:END -->'''
+    p=ROOT/'web/PALO_BlueprintBench_Leaderboard.html';s=p.read_text()
+    if '<!-- ROSTER:START -->' in s:s=re.sub(r'<!-- ROSTER:START -->.*?<!-- ROSTER:END -->',lambda _:block,s,flags=re.S)
+    else:s=s.replace('<!-- CALIBRATION:START -->',block+'\n<!-- CALIBRATION:START -->')
+    # Make the explanatory roster discoverable without changing ranking semantics.
+    out[p]=s.encode()
+    p=ROOT/'web/PALO_BlueprintBench.html';s=p.read_text()
+    note='<!-- ROSTER:START --><p><a href="PALO_BlueprintBench_Leaderboard.html#model-roster">Model roster: ranks, serving settings and actual tested context ↗</a></p><!-- ROSTER:END -->'
+    if '<!-- ROSTER:START -->' not in s:s=s.replace('<!-- CALIBRATION:START -->',note+'\n<!-- CALIBRATION:START -->')
+    out[p]=s.encode();return out
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');args=p.parse_args()
+    for path,body in outputs().items():
+        if args.check:assert path.read_bytes()==body,str(path)
+        else:path.write_bytes(body)
+    print('Roster verified: 18 internal, 10 historical, 35 external references not executed')
+
+FILE tools/test_calibration.py
+import copy
+import json
+import shutil
+import tempfile
+import unittest
+from pathlib import Path
+import calibration as c
+
+
+class CalibrationTests(unittest.TestCase):
+    def setUp(self):
+        self.key = c.read(c.BASE / 'answer-key.json')
+        self.ids = {x['id'] for x in self.key}
+        self.obj = {'items': [{'id': x['id'], 'verdict': x['expected'], 'reason': 'fixture'} for x in self.key], 'review': {'verdict': 'fixture', 'blocking_findings': [], 'recommendations': [], 'claims_to_avoid': []}}
+
+    def valid(self, obj):
+        return c.validate_response(json.dumps(obj), self.ids)
+
+    def test_seeded_defects_and_controls(self):
+        obj, err = self.valid(self.obj)
+        self.assertIsNone(err)
+        counts = c.tally(self.key, {r['id']: r for r in obj['items']})
+        self.assertEqual((counts['detected'], counts['mutations'], counts['false_alarms'], counts['faithful_controls']), (6, 6, 0, 12))
+
+    def test_all_faithful_cannot_detect_mutations(self):
+        for row in self.obj['items']: row['verdict'] = 'faithful'
+        counts = c.tally(self.key, {r['id']: r for r in self.obj['items']})
+        self.assertEqual(counts['detected'], 0)
+        self.assertEqual(counts['missed_mutations'], 6)
+
+    def test_abstention_and_missing_are_not_success(self):
+        counts = c.tally(self.key, {})
+        self.assertEqual(counts['missing'], 18)
+        self.assertEqual(counts['mutations_unresolved'], 6)
+        self.assertFalse(counts['false_alarm_rate_interpretable'])
+        counts = c.tally(self.key, {r['id']: {'verdict': 'uncertain'} for r in self.key})
+        self.assertEqual(counts['uncertain'], 18)
+        self.assertEqual(counts['classified'], 0)
+
+    def test_duplicate_unknown_ids_and_extra_fields_rejected(self):
+        for mode in ('duplicate', 'unknown', 'extra', 'reason'):
+            obj = copy.deepcopy(self.obj)
+            if mode == 'duplicate': obj['items'].append(obj['items'][0])
+            if mode == 'unknown': obj['items'][0]['id'] = 'HIDDEN'
+            if mode == 'extra': obj['items'][0]['non_claim'] = True
+            if mode == 'reason': obj['items'][0]['reason'] = ''
+            self.assertIsNone(self.valid(obj)[0], mode)
+
+    def test_partial_response_retains_denominator(self):
+        self.obj['items'].pop()
+        obj, err = self.valid(self.obj)
+        self.assertIsNone(err)
+        counts = c.tally(self.key, {r['id']: r for r in obj['items']})
+        self.assertEqual(counts['assigned'], 18)
+        self.assertEqual(counts['missing'], 1)
+
+    def test_duplicate_json_keys_and_fences_rejected(self):
+        self.assertIsNone(c.validate_response('{"items":[],"items":[],"review":{}}', self.ids)[0])
+        self.assertIsNone(c.validate_response('```json\n' + json.dumps(self.obj) + '\n```', self.ids)[0])
+
+    def test_scope_source_and_policy_changes_invalidate_reuse(self):
+        rule = c.read(c.BASE / 'proposition-bank.json')[0]
+        for field in ('scope', 'source_sha256', 'rubric_version', 'critical', 'answerability'):
+            changed = copy.deepcopy(rule)
+            changed[field] = str(changed[field]) + 'changed'
+            self.assertNotEqual(c.reuse_key(rule), c.reuse_key(changed))
+
+    def test_local_identity_strings_cannot_qualify(self):
+        rule = c.read(c.BASE / 'proposition-bank.json')[0]
+        self.assertIn('source_exposed_to_engineering', c.eligibility(rule)['blockers'])
+        rule.update(exposure='unexposed', label_status='human_adjudicated', custodian='a')
+        self.assertFalse(c.eligibility(rule)['qualified'])
+        self.assertIn('independent_identity_and_custody_not_verified', c.eligibility(rule)['blockers'])
+
+    def test_frozen_inputs_detect_drift(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            b = Path(tmp) / 'calibration'
+            shutil.copytree(c.BASE, b)
+            (b / 'items.json').write_text('[]', encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'Frozen input drift'):
+                c.build(b)
+
+    def test_blind_packet_has_no_draft_labels_or_judgments(self):
+        packet = c.blind_packet(c.read(c.BASE / 'items.json'))
+        self.assertFalse(packet['qualified'])
+        for row in packet['items']:
+            self.assertEqual(set(row), {'id', 'source', 'candidate'})
+        self.assertNotEqual([x['id'] for x in packet['items']], [x['id'] for x in c.read(c.BASE / 'items.json')])
+
+    def test_panel_assets_and_invalid_envelopes_are_explicit(self):
+        page = (c.ROOT / 'web/PALO_BlueprintBench_Leaderboard.html').read_text(encoding='utf-8')
+        self.assertIn('src="assets/blueprintbench/calibration.js?', page)
+        self.assertIn('href="assets/blueprintbench/calibration.css?', page)
+        for row in c.build()['results']:
+            if row['structural_error'] and row['receipt']:
+                self.assertEqual(row['counts']['invalid'], 18)
+                self.assertEqual(row['counts']['missing'], 0)
+                self.assertIsNone(row['counts']['false_alarm_assigned_ratio'])
+                self.assertEqual(row['semantic_status'], 'not_assessed')
+
+    def test_result_consistency_and_no_qualification(self):
+        data = c.build()
+        self.assertFalse(data['qualified'])
+        self.assertTrue(data['primary_scores_unchanged'])
+        self.assertEqual(len(data['review_export']), 18)
+        for result in data['results']:
+            counts = result['counts']
+            self.assertEqual(counts['assigned'], counts['classified'] + counts['missing'] + counts['invalid'] + counts['uncertain'])
+            self.assertEqual(counts['mutations'], counts['detected'] + counts['missed_mutations'] + counts['mutations_unresolved'])
+
+
+if __name__ == '__main__': unittest.main()

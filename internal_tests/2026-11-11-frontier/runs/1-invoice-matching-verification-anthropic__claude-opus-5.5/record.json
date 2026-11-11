@@ -1,0 +1,48 @@
+{
+  "id": "1-invoice-matching-verification-anthropic__claude-opus-5.5",
+  "model": "anthropic/claude-opus-5.5",
+  "pinned_provider": "anthropic",
+  "case": "invoice-matching",
+  "track": "verification",
+  "repetition": 1,
+  "started_at": "2026-11-11T05:33:08.552014+00:00",
+  "request_sha256": "e990cd5f3d45b1a72ed04db3b89899f1a97dd6414d6026808212ceea3ca01312",
+  "reserved_usd": 0.7643372,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.02874,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "7129090dcc81384b302b343625db0049778de5f8565022f0ca71d53b439934c2",
+  "provider_request_id": "gen-1794375188-O9e73fziSbfVZxlkhfZ6",
+  "returned_model": "anthropic/claude-opus-5.5",
+  "returned_provider": "Anthropic",
+  "usage": {
+    "prompt_tokens": 2045,
+    "completion_tokens": 1028,
+    "total_tokens": 3073,
+    "cost": 0.02874,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02874,
+      "upstream_inference_prompt_cost": 0.00818,
+      "upstream_inference_completions_cost": 0.02056
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 369,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "7a01ea34a0e2c140cce27a375f42b57fbff96ada0b47377030255d20f2f94e2b",
+  "elapsed_seconds": 9.261696375004249,
+  "finished_at": "2026-11-11T05:33:17.813978+00:00"
+}

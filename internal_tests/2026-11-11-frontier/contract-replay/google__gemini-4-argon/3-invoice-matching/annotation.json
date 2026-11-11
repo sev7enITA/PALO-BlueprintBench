@@ -1,0 +1,189 @@
+{
+  "task_id": "invoice-matching",
+  "receipt_sha256": "c563eaee6715b7a70b4c40f763a69cb08daaf3aa104f540ab40c8c7d4afcfcb8",
+  "scope_complete": true,
+  "atomicity_reviewed": true,
+  "review_type": "assistant_draft",
+  "claims": [
+    {
+      "id": "c1",
+      "equivalence_id": "invoice-matching:R01",
+      "verdict": "supported",
+      "matches_gold": [
+        "R01"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "a8ab817475f98ea857fb89fe5e97f390b9bb2d32d82e990da9f5e1a69c5ac6e5"
+    },
+    {
+      "id": "c2",
+      "equivalence_id": "invoice-matching:R02",
+      "verdict": "supported",
+      "matches_gold": [
+        "R02"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "7e7500243648f884e151cc908810631a95a969c3d9825c7f56ed43e90a1417e4"
+    },
+    {
+      "id": "c3",
+      "equivalence_id": "invoice-matching:R03",
+      "verdict": "supported",
+      "matches_gold": [
+        "R03"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "2d48c9c418dadb7e274719ccd483e5b6abf90623ea20fea6dac03bce93b812ca"
+    },
+    {
+      "id": "c4",
+      "equivalence_id": "invoice-matching:R04",
+      "verdict": "supported",
+      "matches_gold": [
+        "R04"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "5562540a8971fa2b5fb88ff06e6c58fe360211061d02863dc3c4112bcf3d979f"
+    },
+    {
+      "id": "c5",
+      "equivalence_id": "invoice-matching:R05",
+      "verdict": "supported",
+      "matches_gold": [
+        "R05"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "b520a1e0e8a1d452be1f10865fba26e004ca2322aac345c82ea1c3976710ea9e"
+    },
+    {
+      "id": "c6",
+      "equivalence_id": "invoice-matching:R06",
+      "verdict": "supported",
+      "matches_gold": [
+        "R06"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "c25f8e0c11f46955d6d20b1236aa878aa47ddcd373d3f389031fc6895f4a901e"
+    },
+    {
+      "id": "c7",
+      "equivalence_id": "invoice-matching:R07",
+      "verdict": "supported",
+      "matches_gold": [
+        "R07"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "82b561f3ea5ba823bfa6fbcfb812e5d4b92dfe701fa32fe655be4a8c64db4151"
+    },
+    {
+      "id": "c8",
+      "equivalence_id": "invoice-matching:R08",
+      "verdict": "supported",
+      "matches_gold": [
+        "R08"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "e8d8dbd600a63f596a23652cf8ba4d92b5b6afab8b3d158aaeda0c7d15701515"
+    },
+    {
+      "id": "c9",
+      "equivalence_id": "invoice-matching:R09",
+      "verdict": "supported",
+      "matches_gold": [
+        "R09"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "db74f6282efe450856cd75626aa920f479ec68813138fefb40a17430df5b7c8f"
+    },
+    {
+      "id": "c10",
+      "equivalence_id": "invoice-matching:R10",
+      "verdict": "supported",
+      "matches_gold": [
+        "R10"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "0364f60f447875d95e48568769e268f45177b8e76b2728786bc6eaaf09c1e13c"
+    },
+    {
+      "id": "c11",
+      "equivalence_id": "invoice-matching:R11",
+      "verdict": "supported",
+      "matches_gold": [
+        "R11"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "c43e65b2075ef33bf5930a842acb03de0952f23fec53d36b5134b494cdf9831a"
+    },
+    {
+      "id": "c12",
+      "equivalence_id": "invoice-matching:R12",
+      "verdict": "supported",
+      "matches_gold": [
+        "R12"
+      ],
+      "critical": false,
+      "violated_gold": [],
+      "matches_forbidden": [],
+      "matches_alternatives": [],
+      "error_category": "none",
+      "critical_rationale": "No critical error identified in internal assistant review",
+      "text_sha256": "9916d2874812823591356b083ab2c4b64aade6fd765eb8a5cdb2e6b9f6d7c583"
+    }
+  ]
+}

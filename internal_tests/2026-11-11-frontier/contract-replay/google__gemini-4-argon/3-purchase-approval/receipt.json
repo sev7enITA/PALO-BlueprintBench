@@ -1,0 +1,113 @@
+{
+  "task_id": "purchase-approval",
+  "repetition": 3,
+  "state": "pass",
+  "termination_reason": "completed",
+  "all_retry_costs_included": true,
+  "artifacts": [
+    {
+      "path": "google__gemini-4-argon/3-purchase-approval/claims.json",
+      "sha256": "7155385d04974051d852261ecf9441c059376c808a1b71fde31e7ea1e40fbf11"
+    },
+    {
+      "path": "google__gemini-4-argon/3-purchase-approval/raw.txt",
+      "sha256": "b40e610c73bc4ecc1063f029eb78b33d9ae2c21dcd66a0844f82519d85d1a11e"
+    },
+    {
+      "path": "google__gemini-4-argon/3-purchase-approval/original-inference-record.json",
+      "sha256": "a014cf64f6a906bf53876eebcb5fb6f8124117be478532d196bab76fd93b666b"
+    }
+  ],
+  "claims_artifact": {
+    "path": "google__gemini-4-argon/3-purchase-approval/claims.json",
+    "sha256": "7155385d04974051d852261ecf9441c059376c808a1b71fde31e7ea1e40fbf11"
+  },
+  "raw_output": {
+    "path": "google__gemini-4-argon/3-purchase-approval/raw.txt",
+    "sha256": "b40e610c73bc4ecc1063f029eb78b33d9ae2c21dcd66a0844f82519d85d1a11e"
+  },
+  "non_claim_spans": [
+    {
+      "span": [
+        100,
+        101
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        178,
+        179
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        301,
+        302
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        367,
+        368
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        445,
+        446
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        567,
+        568
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        684,
+        685
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        793,
+        794
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        917,
+        918
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        1038,
+        1039
+      ],
+      "reason": "line separator"
+    },
+    {
+      "span": [
+        1148,
+        1149
+      ],
+      "reason": "line separator"
+    }
+  ],
+  "request_identity": {
+    "provider_request_id": "gen-1794375681-Y8Crub0UkCIYNyUmD2NE",
+    "request_sha256": "9bd59b6ee3a849c301d3877187318b021c4461b8cc0a6f52f8a718b0f48df9f0",
+    "unavailable_reason": ""
+  }
+}

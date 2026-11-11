@@ -1,0 +1,33 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "reasoning": {
+    "effort": "high",
+    "exclude": true
+  },
+  "max_tokens": 14000,
+  "provider": {
+    "only": [
+      "anthropic"
+    ],
+    "allow_fallbacks": false
+  },
+  "prompt": "Act as a rigorous advisory visual design reviewer. Inspect these FOUR REAL SCREENSHOTS of the NEW internal adversarial-review panel in PALO BlueprintBench. Previous main dashboard visuals already reviewed/fixed; narrowly review changed panel. Brand: dark navy/cyan PALO, compact evidence UI, no false independent qualification. Actual data:36selecteditems (18verification,18translation),3modelreviewers,108assignedjudgments,96usable,12GLMinvoice judgments capacityblocked;36Qwenrecords projected fromarraytoitemsobject with NOsubstantiveanswerchanges,0/3Qwenrawenvelopes valid,5/9rawbatchesvalid overall.23unanimouscomplete triads,1divergentcomplete triad,12incomplete. Threeitems haveANYobserveddisagreement, including2withGLMmissing. Usability mustdistinguishrecordavailability fromrawformatcompliance, agreementfromcorrectness, modelcountertestsfromindependentvalidation. Primaryscoresunchanged, familyoverlapdisclosed, evidence/exports available. Parentcodeddata isNOThumanvalidatedgold. Freshbrowserchecks at1440/768/375 show nooverflow orJavaScript errors;disagreementfilterreturns3items. Need assess visualhierarchy, mobilelegibility, evidenceinspectors, labels for projections/missing judgments, clarity that3observeddisagreements differs from1completedivergence. Do not infer browserfunctionality fromstills beyondobservation. Avoidrequestingexcessive redesign; identifyonlymaterialreleaseissues. Respond within600words with JSON:verdict PASS/NEEDS_REVISION/MAJOR_REVISION,scores{DesignQuality,Originality,Craft,Functionality}0\u20133,priority_fixes[],strengths[],limitations[]. Numericrule:PASSifDesignQuality>=2,Originality>=2and atmostoneCraft/Functionality<1;any0meansMAJOR_REVISION. Strongvisualclarity2,flawless3. Noarbitrarybenchmarkclaims. Advisoryreviewonly,notindependentbenchmarkvalidation.",
+  "images": [
+    {
+      "filename": "overview-1440.png",
+      "sha256": "8f21f8f3d187d77394002c8408af813843fc9317f81bb99aa7a0bf8175d1a7ec"
+    },
+    {
+      "filename": "overview-375.png",
+      "sha256": "969aeb9df520eb424f49fa2b546ee45e2cd3f236d7719503790006df22faaa5b"
+    },
+    {
+      "filename": "detail-375.png",
+      "sha256": "fe481b8b3fd0e537a8599c060952ceb542b38492e97457a61c38d240ade14816"
+    },
+    {
+      "filename": "disagreements-1440.png",
+      "sha256": "d2bb4c066e28232026010df27c9b0e68431ef899f814c3f82ad14d9620a29959"
+    }
+  ]
+}

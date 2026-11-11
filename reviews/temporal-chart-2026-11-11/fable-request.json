@@ -1,0 +1,33 @@
+{
+  "model": "anthropic/claude-fable-5.2",
+  "provider": {
+    "only": [
+      "anthropic"
+    ],
+    "allow_fallbacks": false
+  },
+  "reasoning": {
+    "effort": "high",
+    "exclude": true
+  },
+  "max_tokens": 14000,
+  "prompt": "You are a rigorous external visual design reviewer of FOUR REAL SCREENSHOTS of a new PALO BlueprintBench temporal scatter chart. Advisory design review only, never independent benchmark validation. Narrow scope: newly added Model results over time section, preserving dark navy/cyan PALO identity. User wants scientific time-scatter like HLE trend charts but datatruth comes first. Actual internal cohort18models,17have datedverificationrequests;SakanaFuguMax blockedwithouttimestampandexcludedexplicitly. Allobservationson11Nov2026. Eachpointone model aggregate: x=last included verification request startUTC, y=draftlabel matches/fixedassignedprobes(default324permodel,108percase) orcompletedverificationcalls/fixedassigned(9permodel,3percase). x isNOTreleasedate,norlongitudinalprogress;no connectingline. These are assistant-draftlabels,notindependentaccuracy. Provider/model/case/metric filters;selectedmodel detail;17modelbuttonsrevealoverlappingdots;mobilehorizontalscroll namedfocusregion withvisiblearrow/swipecue andautoscrollto selectedmodel. CSV/SVGexportshouldcontaincurrentpoints andtimestampsemantics. Freshbrowser1440/768/375 nooverfloworJSerrors;actualstandaloneexport captured, interaction stilltoverify independently. Judgeonlyvisiblelayout andtruthfulframing;don'tclaimstillsprovefunctionality. Examine axislegibility,timestamps,date meaning,pointoverlap/selectedlabels,colors andfallback names, mobileusability,exports discoverability. Need professionalquality,notunboundedredesign. Within500words returnJSON verdictPASS/NEEDS_REVISION/MAJOR_REVISION,scores{DesignQuality,Originality,Craft,Functionality}0\u20133,priority_fixes[],strengths[],limitations[]. Numericrule: highcriteriaDesignQuality/Originalityeach>=2,others>=1toPASS;any0major. Identifyrealreleaseblockingissues separately fromnice-to-have. No fabricateddates/values orbenchmarkcertification.",
+  "images": [
+    {
+      "filename": "chart-1440.png",
+      "sha256": "df853e5fc473a4446945f9a91b2edf52bdb20b261d64734a874c1b6034493bb2"
+    },
+    {
+      "filename": "chart-375.png",
+      "sha256": "e79ff31ca5eb65f59e200a7b99f57bf314ea341df00362e7597e3b000d38a874"
+    },
+    {
+      "filename": "detail-375.png",
+      "sha256": "4432e0735b8b79c9f405434310f2ff8931ee4aea33f33fe65fd0b4bc4fe8e200"
+    },
+    {
+      "filename": "completion-invoice-1440.png",
+      "sha256": "7d4cf6de026706a2b3504c2dbe1f338e25df7d70e5bff0844ee41d38c969f87f"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "2-invoice-matching-translation-sakana__fugu-max",
+  "model": "sakana/fugu-max",
+  "pinned_provider": "sakana",
+  "case": "invoice-matching",
+  "track": "translation",
+  "repetition": 2,
+  "started_at": "2026-11-11T07:13:43.856016+00:00",
+  "request_sha256": "0d2af9d841d633a0f783304625f1bb035c2216aedc739b6cda4a6dc628f33cc2",
+  "reserved_usd": 0.0,
+  "cost_status": "not_incurred",
+  "cost_usd": 0.0,
+  "state": "not_run",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "cost_zero_reason": "No provider request dispatched",
+  "elapsed_seconds": 0.0,
+  "finished_at": "2026-11-11T07:13:43.856406+00:00",
+  "error": "Catalogued endpoint exposes neither max_tokens nor response_format. A bounded, strict-parameter request is unavailable under this protocol; no unbounded inference submitted."
+}

@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "id": "V-purchase-approval-P011",
+      "relation": "supported",
+      "source_ids": [
+        "R10"
+      ],
+      "reason": "Source states threshold applies separately to each request."
+    },
+    {
+      "id": "V-purchase-approval-P020",
+      "relation": "not_established",
+      "source_ids": [],
+      "reason": "No source rule mentions reporting emergency purchases to the board."
+    },
+    {
+      "id": "T14",
+      "relation": "faithful",
+      "source_ids": [
+        "R11"
+      ],
+      "reason": "Preserves meaning that supplier name is not a unique identifier."
+    },
+    {
+      "id": "V-purchase-approval-P015",
+      "relation": "supported",
+      "source_ids": [
+        "R11"
+      ],
+      "reason": "Source states different suppliers may have the same name."
+    },
+    {
+      "id": "V-purchase-approval-P013",
+      "relation": "not_established",
+      "source_ids": [],
+      "reason": "No source rule mentions automatic merging of related requests."
+    },
+    {
+      "id": "T16",
+      "relation": "faithful",
+      "source_ids": [
+        "R12"
+      ],
+      "reason": "Accurately reflects that retention begins on approval date, not PO date."
+    },
+    {
+      "id": "V-purchase-approval-P030",
+      "relation": "contradicted",
+      "source_ids": [
+        "R11"
+      ],
+      "reason": "Source explicitly states supplier name is not a unique identifier."
+    },
+    {
+      "id": "T07",
+      "relation": "faithful",
+      "source_ids": [
+        "R04"
+      ],
+      "reason": "Prohibited from approving own request matches must never approve their own."
+    },
+    {
+      "id": "T01",
+      "relation": "faithful",
+      "source_ids": [
+        "R03"
+      ],
+      "reason": "Preserves modality that manager may approve but is not obliged to."
+    },
+    {
+      "id": "V-purchase-approval-P025",
+      "relation": "contradicted",
+      "source_ids": [
+        "R06"
+      ],
+      "reason": "Source states emergency exemption does not remove Finance approval above EUR 5,000."
+    },
+    {
+      "id": "T05",
+      "relation": "faithful",
+      "source_ids": [
+        "R01"
+      ],
+      "reason": "Preserves requirement for Finance approval before purchase order issuance above threshold."
+    },
+    {
+      "id": "T11",
+      "relation": "faithful",
+      "source_ids": [
+        "R10"
+      ],
+      "reason": "Accurately reflects separate application per request, not monthly total."
+    }
+  ]
+}

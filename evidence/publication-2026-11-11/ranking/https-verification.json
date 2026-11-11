@@ -1,0 +1,55 @@
+{
+  "scope": "Exact HTTPS byte verification of changed ranked-leaderboard payload",
+  "at": "2026-11-11T15:46:23Z",
+  "files": [
+    {
+      "path": "PALO_BlueprintBench.html",
+      "http_status": 200,
+      "sha256": "e1e806b8d89bb20fed06d4d673f9bdfe822eb217f2ffdd1f9c2acb856e009e31",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "CHANGELOG.html",
+      "http_status": 200,
+      "sha256": "760fe960429fdfdaf23dc0224927bc1a6f12344b52e1d92a515d655ac9b3fccf",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "http_status": 200,
+      "sha256": "af73987493e94323586f5ba0c9b1b574fd944f5eb1d671cf97ac736e31e7dac0",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "PALO_BlueprintBench_Leaderboard.html",
+      "http_status": 200,
+      "sha256": "c3a49f4975d09167ba8bc0369f436397713026b9977e6aa5bd6a21adfd1abc49",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "http_status": 200,
+      "sha256": "4f39f59d9198adf92ab96fb0a7c5e7cde38d5524d87970018778e07b6837b316",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/model-origins.json",
+      "http_status": 200,
+      "sha256": "61992c8b3919e42772d451cfe6f1bb37e5891ddd998ffc3cd6c498987d54c9ac",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.css",
+      "http_status": 200,
+      "sha256": "0dbab4c6644e87380af1ea402e40a64a9169e45e2b5becb7a31d161d9c34ff16",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.js",
+      "http_status": 200,
+      "sha256": "a9e44b31067f98952c03e6bc8460919ab62196d2f858b3613ed62985afde8b69",
+      "matches_published_bytes": true
+    }
+  ],
+  "all_passed": true
+}

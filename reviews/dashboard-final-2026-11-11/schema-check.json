@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-11",
+  "pages": [
+    {
+      "page": "index.html",
+      "graphs": 1,
+      "nodes": 5
+    },
+    {
+      "page": "CHANGELOG.html",
+      "graphs": 1,
+      "nodes": 3
+    },
+    {
+      "page": "PALO_BlueprintBench.html",
+      "graphs": 1,
+      "nodes": 9
+    },
+    {
+      "page": "PALO_BlueprintBench_Leaderboard.html",
+      "graphs": 1,
+      "nodes": 9
+    }
+  ],
+  "property_domain_checks": 284,
+  "errors": [],
+  "limits": "Vocabulary checks and internal evidence reconciliation only. No search-indexing guarantee or independent benchmark validation."
+}

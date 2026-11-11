@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: Automatic payment of an invoice requires both an existing purchase order and a receipt record.",
+    "span": [
+      0,
+      101
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: An invoice variance of exactly EUR 10 is within tolerance.",
+    "span": [
+      102,
+      167
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: An invoice variance above EUR 10 blocks automatic payment.",
+    "span": [
+      168,
+      233
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: For a blocked invoice, an Accounts Payable analyst may, but is not obliged to, request a corrected invoice.",
+    "span": [
+      234,
+      348
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: Only the receiving team may record goods receipt; Accounts Payable cannot record goods receipt.",
+    "span": [
+      349,
+      451
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: A person who changed supplier bank details must not approve payment to those details.",
+    "span": [
+      452,
+      544
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+    "span": [
+      545,
+      642
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: Service acceptance does not replace the purchase-order requirement.",
+    "span": [
+      643,
+      717
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: A dispute freezes the payment clock until the dispute is resolved.",
+    "span": [
+      718,
+      791
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.",
+    "span": [
+      792,
+      904
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: An invoice number is unique only within a supplier; different suppliers may reuse the same number.",
+    "span": [
+      905,
+      1010
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: Tolerance is assessed per invoice, not against the monthly sum of a supplier\u2019s invoices.",
+    "span": [
+      1011,
+      1106
+    ]
+  }
+]

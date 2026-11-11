@@ -1,0 +1,49 @@
+{
+  "case": "invoice-matching",
+  "reviewer": "qwen3.8-27b-uncensored-local",
+  "endpoint": "http://127.0.0.1:1234/v1/completions",
+  "requested_model": "qwen3.8-27b-uncensored",
+  "frozen_commit": "80df7dbb33c446239370c000c0649b2aaedee30c",
+  "prompt_sha256": "cba022af3b92aba56104781fc1e8694edd2a038e600081817d9b8304d806e6cd",
+  "protocol_sha256": "c39b7a6eeb98c86028d23b96a0453d854c09f6c71b31ee7687e150ad2a029a04",
+  "request_sha256": "7cee42a46e871b2bfdeeb40c0b177305416b64e8e968e7dda812f684f8f8030c",
+  "assigned_records": 12,
+  "request_started_at": "2026-11-11T10:35:01.063141+00:00",
+  "loaded_context_tokens": 8192,
+  "quantization": "Q6_K",
+  "completion_template": {
+    "prefix": "<|im_start|>user\n",
+    "suffix": "\n<|im_end|>\n<|im_start|>assistant\n<think>\n</think>\n"
+  },
+  "template_note": "Exact frozen prompt without substantive additions. Explicit closed thinking channel requests a final-only completion; this configuration is disclosed and differs from web reviewer settings.",
+  "settings": {
+    "max_tokens": 3000,
+    "temperature": 0.0,
+    "stream": false,
+    "seed": "not_set",
+    "provider_defaults_otherwise": true
+  },
+  "qualification": "internal_countertest_only",
+  "cloud_calls": 0,
+  "selection_or_author_identity_supplied": false,
+  "http_status": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Wed, 11 Nov 2026 10:35:29 GMT"
+  },
+  "raw_response_sha256": "d69c0ac61f221015b656d8236a3de644bb0ec17404ad3d989e17faa2e8ace00d",
+  "returned_model": "qwen3.8-27b-uncensored",
+  "response_id": "cmpl-1e2526rg8lcwlgw7ylfcvi",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1299,
+    "completion_tokens": 475,
+    "total_tokens": 1774
+  },
+  "raw_text_sha256": "8507a3fdaba810db153b38fc237c50cdde93107f1db16e1bcf10a5c6a3c79642",
+  "state": "complete_invalid",
+  "contract_valid": false,
+  "valid_records": 0,
+  "elapsed_seconds": 28.275,
+  "request_finished_at": "2026-11-11T10:35:29.338405+00:00"
+}

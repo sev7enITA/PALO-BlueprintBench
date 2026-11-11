@@ -1,0 +1,12 @@
+{
+  "model_ui": "Gemini 4 Argon",
+  "reasoning_ui": "Alta",
+  "case": "supplier-onboarding",
+  "started_at": "2026-11-11T10:39:10.830Z",
+  "observed_completed_at": "2026-11-11T10:44:04.296Z",
+  "prompt_sha256": "70724b03edaad17881f2c7dcbf97253904d2d2ac6106bb776b278c9d3e9c6763",
+  "raw_text_sha256": "f21c5624db1c601ae16f8280c4d01be03c511bfdb3a0aa49df23e90781af754d",
+  "capture": "Complete JSON extracted without answer edits from visible main response text; not provider API bytes",
+  "items": 12,
+  "openrouter_calls": 0
+}

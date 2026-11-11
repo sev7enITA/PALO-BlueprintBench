@@ -1,0 +1,10 @@
+{
+  "model": "GLM 5.3",
+  "reasoning": "Max",
+  "interface": "ZCode desktop",
+  "capture": "Native Copy button pasted into unsent input, read through accessibility, input cleared without sending. Not original provider bytes.",
+  "prompt_sha256": "f77f237d99a2c269aa3fe1778b568b8a69c269f633d5e3921c29b32507b35fee",
+  "raw_text_sha256": "bf67eb9e2aa13523dea1ca99b7f9001d6e8f43ea614f71a35263056466682124",
+  "captured_at": "2026-11-11T17:22:48.562148+00:00",
+  "status": "internal_advisory_code_review"
+}

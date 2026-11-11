@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+    "span": [
+      0,
+      100
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: Finance approval is not required for a purchase of exactly EUR 5,000.",
+    "span": [
+      101,
+      177
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "span": [
+      178,
+      283
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A requester must never approve their own purchase request.",
+    "span": [
+      284,
+      349
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: An emergency purchase is exempt from obtaining competitive quotations.",
+    "span": [
+      350,
+      427
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The emergency quotation exemption does not remove the Finance approval requirement for purchases above EUR 5,000.",
+    "span": [
+      428,
+      548
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: Only the Head of Finance can provide Finance approval, and the buyer cannot provide it.",
+    "span": [
+      549,
+      643
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: If a requester cancels a request before approval, that requester must record the cancellation reason.",
+    "span": [
+      644,
+      752
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: Approval records must be retained for at least 30 calendar days and must not be deleted earlier.",
+    "span": [
+      753,
+      856
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+    "span": [
+      857,
+      963
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: Different suppliers may have the same supplier name, so supplier name is not a unique identifier.",
+    "span": [
+      964,
+      1068
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: The retention period begins on the approval date, not the purchase-order date.",
+    "span": [
+      1069,
+      1154
+    ]
+  }
+]

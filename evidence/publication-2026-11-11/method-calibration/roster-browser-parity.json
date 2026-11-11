@@ -1,0 +1,22 @@
+[
+  {
+    "metric": "agreement",
+    "checked": 18,
+    "differences": []
+  },
+  {
+    "metric": "completion",
+    "checked": 18,
+    "differences": []
+  },
+  {
+    "metric": "cost",
+    "checked": 18,
+    "differences": []
+  },
+  {
+    "metric": "time",
+    "checked": 18,
+    "differences": []
+  }
+]

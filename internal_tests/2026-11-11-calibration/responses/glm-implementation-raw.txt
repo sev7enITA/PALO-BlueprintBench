@@ -1,0 +1,25 @@
+**Release blockers**
+
+1. **Response provenance is self-referential** (calibration.py:150-152, high). The response file is verified only against a receipt stored *next to it* (`raw_text_sha256`); receipts are not in `manifest['files']`. Counterexample: edit a response, rewrite its receipt, rerun — `build()` passes and the tampered capture is scored as valid. Fix: add every `responses/*.txt` and receipt to the manifest digest map.
+
+2. **Family attribution is a string literal, not data** (calibration.py:160, high). `by_family` hardcodes `'synthetic-procurement-author-1': tally(key, ...)`, attributing *all* items to that family regardless of `rule['family_id']`. Counterexample: add one rule from a second family; its items are silently tallied under the synthetic family, and the "no bootstrap for one family" caveat becomes false while the export still says `families:1`. Fix: build `by_family` from `by_rule[r['rule_id']]['family_id']` and assert the derived set matches the roster's family count.
+
+3. **Silent marker no-op in roster injection** (build_roster.py:274, 279, medium). If `<!-- CALIBRATION:START -->` is absent, `str.replace` no-ops and `--check` still passes. Counterexample: a page copy without the marker ships with no roster section and zero build error. Fix: `assert '<!-- CALIBRATION:START -->' in s` before both inserts.
+
+4. **`false_alarm_assigned_ratio` exports 0.0 when uninterpretable** (calibration.py:114-115, medium). `validate_response` doesn't require all expected IDs, so an envelope containing only the 6 mutant items is "valid"; then `false_alarm/len(controls) = 0/12 = 0.0` — a perfect-looking ratio published next to `false_alarm_rate_interpretable: false`. Consumers reading the ratio alone are misled. Fix: emit `None` unless `false_alarm_rate_interpretable`.
+
+**Non-blocking (future work)**
+
+5. **Agreement output is constant and masking** (calibration.py:166-170). With two invalid captures, every item is `'incomplete'` — all per-item majority information is discarded; and `'uncertain'` precedence reports `['faithful','uncertain','altered']` as `uncertain`, hiding real divergence. Fix: record majority-plus-dissent separately.
+
+6. **Blind packet is co-located with the answer key** (calibration.py:179). `blind_packet` ships inside the same `calibration.json` as draft labels, judgments, and reasons — any annotator receiving the export is unblinded. Fix: write it to a separate, label-free file.
+
+7. **Unbound inputs in roster** (build_roster.py:256-262): `corpus.json` is read without digest binding (unlike calibration inputs); `'families':1,'repetitions':3` are hardcoded; `Fraction(correct, assigned_probes)` crashes if a frozen record ever has `assigned_probes: 0`.
+
+8. **Missing receipt crashes rather than records** (calibration.py:150): absent receipt file raises uncaught `FileNotFoundError` instead of a retained invalid capture — inconsistent with the fail-closed-but-retain policy.
+
+9. **Naming conflation**: `export_complete` means "complete *and* zero uncertain"; `strict_envelope_valid: true` for 17/18-item responses. Rename or split the fields.
+
+10. **Test gaps**: no receipt-mismatch test; `test_blind_packet...` asserts shuffle *order* differs (chance-failing, content-blind).
+
+Denominator arithmetic, mutation/control invariants, and no-qualification gates check out under the supplied tests. Advisory only; not qualification permission. (≈420 words; no files or tools accessed.)

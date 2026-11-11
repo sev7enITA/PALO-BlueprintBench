@@ -1,0 +1,22 @@
+{
+  "endpoint": "http://127.0.0.1:1234/v1/chat/completions",
+  "http_status": 200,
+  "requested_model": "qwen3.8-27b-uncensored",
+  "returned_model": "qwen3.8-27b-uncensored",
+  "elapsed_seconds": 202.129,
+  "finish_reason": "length",
+  "usage": {
+    "prompt_tokens": 1681,
+    "completion_tokens": 1800,
+    "total_tokens": 3481,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1792
+    }
+  },
+  "response_sha256": "56119ffe47e853e4178954cb1552bc61468d7eec763435e6f46d6a92afa96542",
+  "input_characters": 6572,
+  "qualification": "internal_advisory_only",
+  "scope": "Supplied summary and proposed UX; no live page or dataset validation by the reviewer",
+  "completed_final_review": false,
+  "limitation": "Token limit consumed by reasoning; no final review text returned."
+}

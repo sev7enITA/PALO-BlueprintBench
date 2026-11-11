@@ -1,0 +1,14 @@
+{
+  "uv1": "The source order and receipt record are required before automatic payment (R01).",
+  "uv2": "An invoice variance of EUR 10 is considered acceptable (R02).",
+  "uv3": "Any invoice variance above EUR 10 blocks automatic payment (R03).",
+  "uv4": "For a blocked invoice, an Accounts Payable analyst may request a correction but is not required to (R04).",
+  "uv5": "The receiving team records the goods receipt; Accounts Payable does not (R05).",
+  "uv6": "The person who changed supplier bank details must not be asked to approve payment to those new details (R06).",
+  "uv7": "An authorised service acceptance replaces the goods receipt record for service invoices (R07).",
+  "uv8": "Service acceptance does not replace the purchase‑order requirement (R08).",
+  "uv9": "A dispute freezes the payment clock until the dispute is resolved (R09).",
+  "uv10": "After dispute resolution, the payment clock resumes from its paused value rather than resetting to zero (R10).",
+  "uv11": "An invoice number is unique only within a supplier; different suppliers may reuse the same number (R11).",
+  "uv12": "The tolerance is applied to each invoice separately, not against any cumulative supplier invoice (R12)."
+}

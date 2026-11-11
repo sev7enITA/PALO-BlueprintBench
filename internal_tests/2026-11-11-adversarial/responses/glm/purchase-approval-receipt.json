@@ -1,0 +1,12 @@
+{
+  "model_ui": "GLM-5.3",
+  "reasoning_ui": "Effort Max",
+  "case": "purchase-approval",
+  "started_at": "2026-11-11T10:35:53.911Z",
+  "observed_completed_at": "2026-11-11T10:39:01.457Z",
+  "prompt_sha256": "5fa4d7452f4dd41605b9f86c74a95b3b6de6845dab5fcc5e51ff3691749104ab",
+  "raw_text_sha256": "9558d0c7b952ad5efb7e4f60d6d0db01c1884102f8e9d0079509bbab1157998b",
+  "capture": "Complete JSON extracted without answer edits from visible main response text; not provider API bytes",
+  "items": 12,
+  "openrouter_calls": 0
+}

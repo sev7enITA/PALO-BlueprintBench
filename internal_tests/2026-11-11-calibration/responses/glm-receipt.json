@@ -1,0 +1,13 @@
+{
+  "model": "GLM-5.3",
+  "reasoning": "Max",
+  "interface": "ZCode desktop",
+  "observed_completed_at": "2026-11-11T17:09:14.207Z",
+  "prompt_sha256": "673371ec1e08cdceae43daf1d2d0ac9920357a86c3aecee9b9aa6a0fb2b3cf8a",
+  "submitted_prompt_sha256": "e6a6ef019014fb046f7125223c4a20bbd8a74fece1e66c9ec591625a086b5978",
+  "raw_text_sha256": "03f72b80630b588183a19caf3adfd9956966ea82c4dd67974bf3bfc3a2a48db1",
+  "capture": "Native Copy button, pasted into unsent input and read from full accessibility Value. Input then cleared; no answer edits.",
+  "prompt_difference": "Common packet plus read-only/no-tools desktop safety instruction.",
+  "web_attempt": "Blocked by security verification, no usable response captured; desktop used at user request.",
+  "openrouter_calls": 0
+}

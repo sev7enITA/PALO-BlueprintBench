@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-11T06:51:52.940Z",
+  "status": "passed",
+  "catalogue_rows": 28,
+  "internal_models": 18,
+  "checks": [
+    "all catalogue rows",
+    "six metric headers toggle aria-sort",
+    "missing filter",
+    "numeric match filter",
+    "URL restore",
+    "selected filter",
+    "dialog Escape",
+    "no overflow 1440/768/375",
+    "no JavaScript exceptions"
+  ]
+}

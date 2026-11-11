@@ -1,0 +1,12 @@
+R01 :: For any purchase whose amount is above EUR 5,000, Finance approval must be obtained before the purchase order for that purchase is issued.
+R02 :: For any purchase whose amount is exactly EUR 5,000, Finance approval is not required.
+R03 :: For any purchase whose amount is below EUR 5,000, the department manager is permitted, but not obliged, to approve that purchase.
+R04 :: A requester is prohibited, without exception, from approving any purchase request that the same requester submitted.
+R05 :: An emergency purchase is exempt from the requirement to obtain competitive quotations.
+R06 :: The emergency exemption from obtaining competitive quotations does not exempt an emergency purchase above EUR 5,000 from the requirement to obtain Finance approval.
+R07 :: Finance approval can be provided only by the Head of Finance, and the buyer cannot provide Finance approval.
+R08 :: If a requester cancels a request before that request is approved, that same requester must record the reason for the cancellation.
+R09 :: Each approval record must be retained for at least 30 calendar days and cannot be deleted before that minimum retention period has elapsed.
+R10 :: The purchase amount threshold must be evaluated separately for each individual request and not against the monthly total of purchases from a supplier.
+R11 :: Different suppliers are permitted to have the same supplier name, and supplier name must not be treated as a unique supplier identifier.
+R12 :: The retention period for an approval record begins on the approval date and does not begin on the purchase-order date.

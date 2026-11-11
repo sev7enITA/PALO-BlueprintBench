@@ -1,0 +1,48 @@
+{
+  "id": "3-invoice-matching-translation-qwen__qwen3.8-max-prime",
+  "model": "qwen/qwen3.8-max-prime",
+  "pinned_provider": "alibaba",
+  "case": "invoice-matching",
+  "track": "translation",
+  "repetition": 3,
+  "started_at": "2026-11-11T07:05:46.826908+00:00",
+  "request_sha256": "921fd833960863c80de1a9b311c92e072510d3600b55c635e66534e84db67a8d",
+  "reserved_usd": 0.4592456000000001,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.020776,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "bd02bcaf7e4937f450fbe506fc96dbd7f2be93a3ea8b8e126b0626dc8fec4c3f",
+  "provider_request_id": "gen-1794380746-CG8nDu504pSf5luBNhDj",
+  "returned_model": "qwen/qwen3.8-max-prime",
+  "returned_provider": "Alibaba",
+  "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 1598,
+    "total_tokens": 1998,
+    "cost": 0.020776,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020776,
+      "upstream_inference_prompt_cost": 0.0016,
+      "upstream_inference_completions_cost": 0.019176
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1346,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "0c99719c97d6791ec009ba28edecb6e34c0086eb3161783663b57750fc9969b8",
+  "elapsed_seconds": 17.95589395800198,
+  "finished_at": "2026-11-11T07:06:04.783299+00:00"
+}

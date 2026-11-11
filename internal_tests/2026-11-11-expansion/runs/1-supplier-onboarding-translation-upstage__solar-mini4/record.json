@@ -1,0 +1,48 @@
+{
+  "id": "1-supplier-onboarding-translation-upstage__solar-mini4",
+  "model": "upstage/solar-mini4",
+  "pinned_provider": "upstage/zdr",
+  "case": "supplier-onboarding",
+  "track": "translation",
+  "repetition": 1,
+  "started_at": "2026-11-11T06:41:37.926864+00:00",
+  "request_sha256": "40bf4d39763f7c2d237704acf247e6888f13333f89bbc6690772616974cd3276",
+  "reserved_usd": 0.007537145,
+  "cost_status": "provider_reported",
+  "cost_usd": 0.0010383,
+  "state": "completed",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "http_status": 200,
+  "response_sha256": "6f163440c5398bac88fcbe55691b96499171ae65bc7f2454a8b80fe7a5839164",
+  "provider_request_id": "gen-1794379297-QKiXfQWK5WFJPjYf0mjj",
+  "returned_model": "upstage/solar-mini4",
+  "returned_provider": "Upstage",
+  "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 5096,
+    "total_tokens": 5478,
+    "cost": 0.0010383,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0010383,
+      "upstream_inference_prompt_cost": 1.91e-05,
+      "upstream_inference_completions_cost": 0.0010192
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4872,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "output_sha256": "67bf54559c919ffd24d0d61eb65e8c2fef9da9ceb1430f8d10f7e4287960a640",
+  "elapsed_seconds": 65.62447979199351,
+  "finished_at": "2026-11-11T06:42:43.553228+00:00"
+}

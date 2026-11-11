@@ -1,0 +1,12 @@
+{
+  "model_ui": "Gemini 4 Argon",
+  "reasoning_ui": "Alta",
+  "case": "invoice-matching",
+  "started_at": "2026-11-11T10:44:40.066Z",
+  "observed_completed_at": "2026-11-11T10:46:57.662Z",
+  "prompt_sha256": "cba022af3b92aba56104781fc1e8694edd2a038e600081817d9b8304d806e6cd",
+  "raw_text_sha256": "92b26bd6f17069e80981543d708b480d856a6d7f90ff2d75c82dc98668a834d7",
+  "capture": "Complete JSON extracted without answer edits from visible main response text; not provider API bytes",
+  "items": 12,
+  "openrouter_calls": 0
+}

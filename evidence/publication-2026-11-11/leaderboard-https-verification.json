@@ -1,0 +1,214 @@
+{
+  "verified_at": "2026-11-11T06:25:23.919405+00:00",
+  "status": "https_bytes_verified",
+  "qualification": "internal_tests",
+  "qualified": false,
+  "files": [
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench.html",
+      "status": 200,
+      "sha256": "2feea4357f914ab50d171539e36f65cf77947be8b98b38035378a1286c064711",
+      "bytes": 49282,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:24 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:32 GMT",
+        "ETag": "W/\"c082-6af4087c-1ed716c885f00ccc;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+      "status": 200,
+      "sha256": "8a14cc6bf9f752822cafae4db623670e09d5181c6734bacac474d743e58bc526",
+      "bytes": 17348,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:24 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:33 GMT",
+        "ETag": "W/\"43c4-6af4087d-6ddcc36b1bbdc884;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/leaderboard-data.json",
+      "status": 200,
+      "sha256": "f43d73de6daaeb1f5824d59c759b235b0782460625b28c357c709d5c1dc0ccc7",
+      "bytes": 564466,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:24 GMT",
+        "Content-Type": "application/json",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:34 GMT",
+        "ETag": "W/\"89cf2-6af4087e-a75c84cb0651c721;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/leaderboard-method.md",
+      "status": 200,
+      "sha256": "f4eb15b8b6e08d321e6e542245194b7fea67f003a51c178c189458fb8c706aa1",
+      "bytes": 4810,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:25 GMT",
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:35 GMT",
+        "ETag": "W/\"12ca-6af4087f-c568b5327997ef09;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/structured-data-audit-2026-11-11.md",
+      "status": 200,
+      "sha256": "b1f5bf9b2f32f33e382aeac348d4ad16b2641d11047fa8d4c80d5ff76ae8823d",
+      "bytes": 2425,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:25 GMT",
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:36 GMT",
+        "ETag": "W/\"979-6af40880-5c7a3171e39532ba;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/leaderboard.css",
+      "status": 200,
+      "sha256": "a8d3a8db233734eb2784aa74e8a3e7d19f4853e3ba03b74e0b70666cd4ba78e5",
+      "bytes": 25572,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:25 GMT",
+        "Content-Type": "text/css",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:37 GMT",
+        "ETag": "W/\"63e4-6af40881-73b9840753111a72;gz\"",
+        "Cache-Control": "public, max-age=2592000"
+      }
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/leaderboard.js",
+      "status": 200,
+      "sha256": "263c9a758307e9094051951d9e12001425d5b64d3284d0dc0f42b7d76bc404c4",
+      "bytes": 43204,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 06:25:25 GMT",
+        "Content-Type": "application/x-javascript",
+        "Last-Modified": "Wed, 11 Nov 2026 06:17:38 GMT",
+        "ETag": "W/\"a8c4-6af40882-8a4b807fdac6e209;gz\"",
+        "Cache-Control": "public, max-age=2592000"
+      }
+    }
+  ],
+  "source_publication": {
+    "repository": "sev7enITA/PALOframework",
+    "branch": "codex/blueprintbench-publication",
+    "commit": "56ae6521268d2160ebabd9f86760eb814926eed9",
+    "files": [
+      "PALO_BlueprintBench.html",
+      "PALO_BlueprintBench_Leaderboard.html",
+      "downloads/blueprintbench/leaderboard-data.json",
+      "downloads/blueprintbench/leaderboard-method.md",
+      "downloads/blueprintbench/structured-data-audit-2026-11-11.md",
+      "assets/blueprintbench/leaderboard.css",
+      "assets/blueprintbench/leaderboard.js",
+      "scripts/public-files.mjs"
+    ]
+  },
+  "ci": {
+    "conclusion": "success",
+    "headSha": "533f32e0548af1de74e287a11264b73df3b06a25",
+    "jobs": [
+      {
+        "name": "evaluator (windows-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "evaluator (ubuntu-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "evaluator (ubuntu-latest, 3.10)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "evaluator (macos-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/sev7enITA/PALO-BlueprintBench/actions/runs/42971278817"
+  },
+  "live_browser": {
+    "status": "passed",
+    "url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+    "checks": [
+      "generated Dataset nodes",
+      "scoped missing denominator",
+      "posthoc affects only disputed case",
+      "URL restore",
+      "CSV unknown charge reservation and qualification",
+      "empty qualified tab",
+      "cross-cohort selection guard",
+      "query escaping",
+      "responsive screenshot"
+    ],
+    "negative_query_scope": "Live host rejects the XSS-shaped query with HTTP 403. Client query escaping was separately verified locally; the live rejection does not exercise the client path."
+  },
+  "structured_data_validation": {
+    "method": "Observed through the public validators in browser UI; results do not validate the benchmark methodology or guarantee search appearance.",
+    "schema_org": {
+      "validator": "https://validator.schema.org/",
+      "pages": [
+        {
+          "url": "https://paloframework.org/PALO_BlueprintBench.html",
+          "errors": 0,
+          "warnings": 0
+        },
+        {
+          "url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+          "errors": 0,
+          "warnings": 0
+        }
+      ]
+    },
+    "google_rich_results": {
+      "result_url": "https://search.google.com/test/rich-results/result?id=IEgHzB8A9Yth8IR4N-X3Zw",
+      "page": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+      "scan_time_europe_rome": "2026-11-11T07:19:35+01:00",
+      "valid_items": 3,
+      "breadcrumbs": 1,
+      "datasets": 2,
+      "noncritical_warnings": [
+        {
+          "field": "license",
+          "optional": true,
+          "affected_datasets": 2
+        }
+      ],
+      "warning_disposition": "No blanket dataset licence asserted for mixed-rights source excerpts and model responses. This optional warning remains open."
+    }
+  },
+  "advisory_review": {
+    "model": "anthropic/claude-fable-5.2",
+    "purpose": [
+      "design advice",
+      "visual evaluation"
+    ],
+    "cost_usd": "0.622912",
+    "independent_human_validation": false
+  },
+  "limits": [
+    "No independently qualified results.",
+    "No PALO Blueprint Index assigned.",
+    "Internal, historical and qualified cohorts remain separate.",
+    "This receipt records publication integrity and interface checks, not semantic ground-truth validation."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "local_checks_passed",
+  "tool_tests": 46,
+  "evaluator_tests": 76,
+  "historical_replay_attempts": 26,
+  "historical_replay_differences": 0,
+  "roster_browser_positions_checked": 72,
+  "schema_vocabulary_property_checks": 735,
+  "schema_vocabulary_errors": 0,
+  "qualified": false,
+  "independent_validation": false,
+  "scope": "Internal calibration, roster, generated pages and offline replay. No new Workbench end-to-end document test."
+}

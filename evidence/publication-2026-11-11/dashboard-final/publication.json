@@ -1,0 +1,33 @@
+{
+  "status": "ftps_published",
+  "at": "2026-11-11T10:17:47.684219+00:00",
+  "files": {
+    "index.html": "c189c08889b259e22284cc0f9f2bb8d6d29471939d2fc5be7fc0ad1b06719af1",
+    "PALO_BlueprintBench.html": "8e2f8e1acf349b1d2d960825b6697a120674bc1e61d4769bcf85207d18e3f58c",
+    "CHANGELOG.html": "8ba87485762d595f75671f7090583f91222b3c6683f02e37178582dff3954fb9",
+    "CHANGELOG.md": "26ef8c2fa018dcd3e204fa095eef594a3b1b4ccd5d8269e1a5c0ada6a46643d3",
+    "PALO_BlueprintBench_Leaderboard.html": "fee541415df7abe3b856f982b8303db1a6becb4ab867e201fdcdf38422f093e5",
+    "sitemap.xml": "a354a7114fca392f3b6a89f0d275dd9d581a68bfa3cf5aae78e1f0a6236c5134",
+    "downloads/blueprintbench/release-manifest.json": "56d54e9a1d5af515ad37711eef4f14b6f5247240a87760b46ca00c76760b48bb",
+    "downloads/blueprintbench/.htaccess": "2f9efe182ff33b998846001eee08cf8d7f2cbcce2163bf886c8290ae568c6778",
+    "downloads/blueprintbench/presentation/.htaccess": "f88683934e49d9f73a20a32b44f445b88fa6d58f0dab8c2cf006e976be0eb878",
+    "assets/blueprintbench/leaderboard.css": "b70add61e244ac6126327263e5fb4c52a83071026418afa45ddb3ee7596a9f32",
+    "assets/blueprintbench/leaderboard.js": "00e76dabb17f97e18eb79fb13f0d125c68a810dc2e2b691757a1e85babe44cc1",
+    "assets/blueprintbench/blueprintbench.css": "fe6d3e76d98b3686c928b22fab43c067ac1d21e1293109c31f58685561ce4806",
+    "assets/blueprintbench/blueprintbench.js": "016397f10d6646099967160d726acdf735905d83901e1e9d0bd41822e27fd21c"
+  },
+  "remote_readback_verified": true,
+  "benchmark_commit": "4a9bc5a0edca560f11a2a92bbce266e98997b012",
+  "site_source_commit": "1a1a53ce5a05acb76fb4faed197708e1ad162971",
+  "deployment_exclusion_commit": "e9ff06380d20af2834335a008b83b04662a3522b",
+  "main_readme_pr": "https://github.com/sev7enITA/PALO-BlueprintBench/pull/5",
+  "main_readme_merge": "b46f7a9f86a46c278a434c4c95e6071764621669",
+  "wiki_commit": "c2791b3",
+  "validation": "Live checks passed. 11 public payloads exact HTTPS bytes, 27 Markdown redirects, three representative presentation URLs HTTP410, all four rendered schema graphs and desktop/mobile interactions verified.",
+  "limitations": [
+    "Internal tests remain unqualified; no PALO Blueprint Index awarded.",
+    "No new longitudinal observations or verified model release dates were invented.",
+    "Current site presentation access is withdrawn; prior public Git history is not erased.",
+    "Four unrelated dirty PALO workspace files were preserved; reviewed source is committed on the publication branch."
+  ]
+}

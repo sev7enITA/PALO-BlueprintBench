@@ -1,0 +1,20 @@
+{
+  "id": "2-supplier-onboarding-translation-sakana__fugu-max",
+  "model": "sakana/fugu-max",
+  "pinned_provider": "sakana",
+  "case": "supplier-onboarding",
+  "track": "translation",
+  "repetition": 2,
+  "started_at": "2026-11-11T07:13:18.663970+00:00",
+  "request_sha256": "8ea2653e5668b258c77c5a3b560f495ba3b5ae7acd035c2ef0f604630dbc4964",
+  "reserved_usd": 0.0,
+  "cost_status": "not_incurred",
+  "cost_usd": 0.0,
+  "state": "not_run",
+  "qualification": "internal_tests",
+  "response_bytes_original": true,
+  "cost_zero_reason": "No provider request dispatched",
+  "elapsed_seconds": 0.0,
+  "finished_at": "2026-11-11T07:13:18.664709+00:00",
+  "error": "Catalogued endpoint exposes neither max_tokens nor response_format. A bounded, strict-parameter request is unavailable under this protocol; no unbounded inference submitted."
+}

@@ -1,8 +1,9 @@
 <p align="center">
 
-> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. The [0.3 draft repair](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1) passes 76 local tests and awaits human review; the current toolkit is still 0.2. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
+> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. The [0.3 draft repair](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1) passes 76 local tests and awaits human review; the current working toolkit is an unreleased 0.3 development candidate, not an independently reviewed release. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
 
-  <img src="https://paloframework.org/assets/blueprintbench/brand/blueprintbench-logo.png" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
+  <img src="web/assets/logo.webp" alt="Original PALO Framework logo" width="80">
+  <img src="web/assets/blueprintbench/brand/blueprintbench-logo.png" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
 </p>
 
 <p align="center">
@@ -15,7 +16,8 @@
 <h3 align="center">Preserving business meaning when AI turns documents into software specifications.</h3>
 
 <p align="center">
-  <a href="https://paloframework.org/PALO_BlueprintBench.html"><b>Explore the evidence</b></a> |
+  <a href="https://paloframework.org/PALO_BlueprintBench_Leaderboard.html"><b>Open the leaderboard</b></a> |
+  <a href="https://paloframework.org/PALO_BlueprintBench.html"><b>Research overview</b></a> |
   <a href="https://github.com/sev7enITA/PALO-BlueprintBench/wiki"><b>Read the wiki</b></a> |
   <a href="#quick-start"><b>Run the evaluator</b></a> |
   <a href="CONTRIBUTING.md"><b>Contribute</b></a>
@@ -28,7 +30,7 @@ The project is an **open research pilot**. The executable evaluator, historical 
 | Inspect | Reproduce | Participate |
 |---|---|---|
 | [Model explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer) | [Quick start](#quick-start) | [Contributor routes](CONTRIBUTING.md) |
-| [20 benchmark references](docs/benchmark-references.md) | [Historical evidence and replay](evidence/development-2026-11-10/README.md) | [Procurement study](docs/specification-fidelity-study.md) |
+| [35 benchmark references](docs/benchmark-references.md) | [Historical evidence and replay](evidence/development-2026-11-10/README.md) | [Procurement study](docs/specification-fidelity-study.md) |
 | [Metrics and trust boundaries](docs/evaluator-contract.md) | [Release and packages](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/v0.3.0-pilot.1) | [Reviewer kit](docs/reviewer-kit.md) |
 
 ## Current internal tests and dashboard
@@ -60,7 +62,17 @@ PALO's proposed study examines **modality, negation, ownership, conditions and e
 
 ## Explore the project
 
-The current explorer shows fixed-alphabetical adapter records and pooled contract diagnostics. The former latency/acceptance scatter plot has been withdrawn following audit. [Inspect the corrected explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer).
+The shared catalogue contains **18 distinct model IDs and 28 configuration/cohort records**. Internal procurement tests retain **324 assigned slots, 306 dispatched requests, 299 complete responses, 7 incomplete or failed responses and 18 pre-call-blocked assignments**. Historical adapter diagnostics remain separate. Filters, sortable internal-test columns, source inspection and a call ledger expose the evidence without assigning a qualified rank.
+
+[Internal adversarial review](internal_tests/2026-11-11-adversarial/README.md): 96 of 108 assigned reviewer judgments retained; three items with observed disagreement, including two partially reviewed panels. GLM capacity failure and Qwen format projection remain visible. Primary scores are unchanged.
+
+[Model results over time](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#temporal-model-results) plots recorded verification-request timestamps with case, metric and model filters, plus CSV/SVG export. Collection times from 11 November are not model release dates or a longitudinal progress study.
+
+The results table supports metric-specific internal ranks with tied positions, developer-country filters, sortable quality and operational KPIs, and CSV/JSON export of the visible ordered rows. Exports retain the ranking population, eligibility, denominators and metadata sources. Country describes a documented developer-organization business base, not serving location or data residency. See the [country source register](docs/model-origins.json).
+
+[Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Brand assets and testing badge](docs/brand-usage.md)
+
+<img src="web/assets/blueprintbench/brand/internal-testing-badge.png" width="180" alt="BlueprintBench Internal testing badge, evidence linked; not certification">
 
 <details>
 <summary><b>See the document-to-blueprint review context</b></summary>
@@ -192,7 +204,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), browse [issues](https://github.com/sev7
 | [FAQ](https://github.com/sev7enITA/PALO-BlueprintBench/wiki/FAQ) | [Semantic vocabulary, SKOS and OWL](semantic/README.md) |
 | [Contributing](https://github.com/sev7enITA/PALO-BlueprintBench/wiki/Contributing) | [Versioning](docs/versioning.md) and [corrections](docs/corrections.md) |
 
-Repository map: `evaluator/` executable checks; `evidence/` retained diagnostics; `results/` labelled receipts; `docs/` research and contracts; `wiki/` versioned wiki source; `web/` explorer; `semantic/` vocabulary; internal working presentation is not linked from the public site.
+Repository map: `evaluator/` executable checks; `evidence/` retained diagnostics; `results/` labelled receipts; `docs/` research and contracts; `wiki/` versioned wiki source; `web/` explorer; `semantic/` vocabulary; internal presentation assets are excluded from the public website.
 
 ## Citation
 
@@ -219,3 +231,24 @@ PALO and this toolkit are free. Code is [MIT licensed](LICENSE); third-party doc
 **Naming:** PALO BlueprintBench concerns business development specifications. It is unrelated to Andon Labs' [Blueprint-Bench 2](https://andonlabs.com/evals/blueprint-bench-2), which evaluates spatial floor-plan reconstruction.
 
 <p align="center"><b>Join the Human Agency.</b><br>Build with AI. Keep humans in command.</p>
+
+## Internal baseline tests
+
+A separate internal cohort adds OpenAI GPT-6.1 Sol, Anthropic Claude Opus 5.5 and Google Gemini 4 Argon. It records 54 requests on three short synthetic procurement cases, three repetitions and two tasks. There are 53 complete responses, one provider failure, and a contested expected label. These are internal tests, with zero independently qualified results.
+
+[Read the report](internal_tests/2026-11-11-frontier/REPORT.md) · [Inspect the frozen design](internal_tests/2026-11-11-frontier/README.md) · [Explore results](https://paloframework.org/PALO_BlueprintBench.html#internal-tests). The 27 exported blueprints are assistant-reviewed drafts requiring business approval. No PBI score, superiority claim or 100 MB processing claim follows from this cohort.
+
+
+## Shared model catalogue and extensions
+
+The [launch page](https://paloframework.org/PALO_BlueprintBench.html#models) and [leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) now read one generated catalogue. It retains all ten historical model IDs and separates their adapter checks from the procurement measurements. Eighteen distinct model IDs produce 28 configuration rows across the two evidence groups. Schematron Small/Turbo and Bonsai 9B/27B remain distinct models.
+
+The [twelve-model extension](internal_tests/2026-11-11-expansion/README.md) and [legacy-identity supplement](internal_tests/2026-11-11-legacy-extension/README.md) use the same source, prompt and draft-label bytes as the original baseline, with three repetitions and 324 total assigned task slots across all campaigns. Sakana's 18 supplement assignments are pre-call blocked; no provider response or semantic result is fabricated. Counts are always read alongside completion, missing data and configuration details. Sortable columns and filters support inspection, not independently qualified ranking.
+
+New source-indexed translations are unreviewed drafts linked to raw outputs. They do not inherit the original baseline's 27 assistant-reviewed blueprint exports. Limitations, campaign selection timing, configuration differences, budget reservations and further development are documented in the [leaderboard method](docs/leaderboard-method.md). Overall authorised inference and advisory budget: USD40 including prior work.
+
+## Internal calibration and model roster
+
+[Inspect the model roster](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#model-roster) for default-scope metric ranks, serving settings and observed input-token ranges. These are distinct from catalogue context ceilings. The ten historical configurations remain unranked, and the 35 external benchmark references were not executed.
+
+[Internal calibration](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#calibration) separates response structure from draft-label comparisons on 18 elementary pairs. [Review decisions](docs/calibration-review-decisions.md) explain adopted controls and unresolved limits. This does not qualify a PALO Blueprint Index or modify the 18-model cohort.

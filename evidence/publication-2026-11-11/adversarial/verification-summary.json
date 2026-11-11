@@ -1,0 +1,34 @@
+{
+  "status": "published_and_verified",
+  "benchmark_implementation_commit": "cac401e252067753105a66d02fbd3ead3671b86c",
+  "asset_refresh_commit": "98129538b5c8836b041d10f2eac11cbecde8be9c",
+  "site_source_commit": "7e78f92954a968c57bc2a6f52e8e21483c52e30a",
+  "wiki_commit": "fb6f616",
+  "local_regression_tests": 22,
+  "ci_implementation_runs": [
+    43007234393,
+    43007226531
+  ],
+  "ci_asset_refresh_runs": [
+    43007453198,
+    43007444341
+  ],
+  "ci_status": "success",
+  "https_payload_files_verified": 10,
+  "markdown_redirects_verified": 27,
+  "presentation_routes_withdrawn": 3,
+  "schemas_on_benchmark_pages": {
+    "Dataset": 3,
+    "independent_validation_claimed": false
+  },
+  "review_records": {
+    "assigned": 108,
+    "usable": 96,
+    "missing": 12,
+    "items_with_observed_disagreement": 3
+  },
+  "primary_scores_unchanged": true,
+  "original_evidence_preserved": true,
+  "no_visible_em_or_en_dashes_on_updated_benchmark_pages": true,
+  "budget_receipt": "internal_tests/2026-11-11-adversarial/budget-after.json"
+}

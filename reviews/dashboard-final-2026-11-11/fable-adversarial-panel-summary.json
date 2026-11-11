@@ -1,0 +1,22 @@
+{
+  "advisory_only": true,
+  "independent_benchmark_validation": false,
+  "model": "anthropic/claude-fable-5.2",
+  "provider": "Anthropic",
+  "visual_inputs": 4,
+  "verdict": "PASS",
+  "scores": {
+    "design_quality": 2,
+    "originality": 2,
+    "craft": 2,
+    "functionality": 2
+  },
+  "cost_usd": 0.212592,
+  "prior_dashboard_review_cost_usd": 0.778224,
+  "all_visual_review_cost_usd": 0.990816,
+  "files": {
+    "fable-adversarial-panel-receipt.json": "a0dba3bbce3b76e6e82a0a972e8277b0735ea12c21b90ae682c05a567ba1cbe0",
+    "fable-adversarial-panel-request.json": "3854fc6740fc6fffc0222bc727e78b4cbcf05da9f14d3499f950199375024401",
+    "fable-adversarial-panel-response.json": "c365e13cd5f0fccae16eaf4458068b2d3e821d669e0a924c97a76ed4d95c9e26"
+  }
+}

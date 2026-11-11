@@ -1,0 +1,98 @@
+[
+  {
+    "id": "c1",
+    "text": "R01 :: For any purchase whose amount is strictly greater than EUR 5,000, Finance approval must be obtained before the purchase order for that purchase is issued.",
+    "span": [
+      0,
+      161
+    ]
+  },
+  {
+    "id": "c2",
+    "text": "R02 :: For any purchase whose amount is exactly EUR 5,000, Finance approval is not required.",
+    "span": [
+      162,
+      254
+    ]
+  },
+  {
+    "id": "c3",
+    "text": "R03 :: For any purchase whose amount is strictly less than EUR 5,000, the department manager is permitted, but not obligated, to approve that purchase.",
+    "span": [
+      255,
+      406
+    ]
+  },
+  {
+    "id": "c4",
+    "text": "R04 :: A requester is prohibited, without exception, from approving any purchase request that they themselves submitted.",
+    "span": [
+      407,
+      527
+    ]
+  },
+  {
+    "id": "c5",
+    "text": "R05 :: An emergency purchase is exempt from the requirement to obtain competitive quotations.",
+    "span": [
+      528,
+      621
+    ]
+  },
+  {
+    "id": "c6",
+    "text": "R06 :: The exemption of emergency purchases from competitive quotations does not exempt an emergency purchase whose amount is strictly greater than EUR 5,000 from the requirement to obtain Finance approval.",
+    "span": [
+      622,
+      828
+    ]
+  },
+  {
+    "id": "c7",
+    "text": "R07 :: Finance approval may be provided solely by the Head of Finance, and the buyer is not permitted to provide Finance approval.",
+    "span": [
+      829,
+      959
+    ]
+  },
+  {
+    "id": "c8",
+    "text": "R08 :: If a requester cancels a purchase request before that request has been approved, that same requester is obligated to record the reason for the cancellation.",
+    "span": [
+      960,
+      1123
+    ]
+  },
+  {
+    "id": "c9",
+    "text": "R09 :: Each approval record must be retained for a minimum of 30 calendar days, and deletion of an approval record before the end of that minimum period is prohibited.",
+    "span": [
+      1124,
+      1291
+    ]
+  },
+  {
+    "id": "c10",
+    "text": "R10 :: The purchase amount threshold is evaluated individually for each purchase request and is not evaluated against the aggregated monthly total of purchases from a supplier.",
+    "span": [
+      1292,
+      1468
+    ]
+  },
+  {
+    "id": "c11",
+    "text": "R11 :: Distinct suppliers are permitted to share the same supplier name, so supplier name must not be treated as a unique identifier of a supplier.",
+    "span": [
+      1469,
+      1616
+    ]
+  },
+  {
+    "id": "c12",
+    "text": "R12 :: The retention period for an approval record starts on the date of the approval and does not start on the date of the purchase order.",
+    "span": [
+      1617,
+      1756
+    ]
+  }
+]

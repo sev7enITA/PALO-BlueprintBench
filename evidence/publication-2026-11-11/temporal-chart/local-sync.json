@@ -1,0 +1,30 @@
+[
+  {
+    "path": "PALO_BlueprintBench.html",
+    "status": "synced"
+  },
+  {
+    "path": "CHANGELOG.html",
+    "status": "preserved_local_changes"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "status": "preserved_local_changes"
+  },
+  {
+    "path": "PALO_BlueprintBench_Leaderboard.html",
+    "status": "synced"
+  },
+  {
+    "path": "downloads/blueprintbench/release-manifest.json",
+    "status": "synced"
+  },
+  {
+    "path": "assets/blueprintbench/leaderboard.css",
+    "status": "synced"
+  },
+  {
+    "path": "assets/blueprintbench/leaderboard.js",
+    "status": "synced"
+  }
+]

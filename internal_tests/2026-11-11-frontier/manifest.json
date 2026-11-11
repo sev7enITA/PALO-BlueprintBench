@@ -1,0 +1,41 @@
+{
+  "campaign_id": "internal-frontier-2026-11-11",
+  "status": "internal_tests",
+  "qualified": false,
+  "gold_status": "maintainer assistant draft, frozen before model calls; no independent adjudication",
+  "source_families": 1,
+  "cases": 3,
+  "source_propositions": 36,
+  "verification_probes": 108,
+  "models": [
+    "openai/gpt-6.1-sol",
+    "anthropic/claude-opus-5.5",
+    "google/gemini-4-argon"
+  ],
+  "repetitions": 3,
+  "assigned_calls": 54,
+  "tracks": [
+    "source-indexed specification translation",
+    "seeded-statement verification"
+  ],
+  "created_at": "2026-11-11T05:27:36.196290+00:00",
+  "overall_authorised_limit_usd": 40,
+  "key_spend_before_usd": 4.992947354,
+  "new_campaign_ceiling_usd": 30,
+  "max_output_tokens": 32768,
+  "retry_policy": "No automatic inference retries; failures and not-run assignments remain recorded. Unknown spend blocks subsequent calls until reconciled.",
+  "analysis_policy": "No scalar PBI, no ranking, no confidence interval across the one synthetic authoring family. Report per-case and per-repeat outcomes, fixed assigned denominators, raw output and costs. High effort labels do not imply equal compute.",
+  "files": {
+    "corpus.json": "3e123360b5504942e84051c27434ec8ad1e41c7e2e91075123329818f5b10e47",
+    "models.json": "58fa0b73cc6a44c41d65cc9807e380d8ba0da40784f2ff4112d40747eb1c55d5",
+    "prompts/translation-invoice-matching.json": "a34cef130e31cd42d8fe1a72073ca8c64e441aa36c2e1816b08de89d6644e55b",
+    "prompts/translation-purchase-approval.json": "7a52de3497689383c7b07ee914b02d9dcb36ac4797d493c04b4f015585ccecd5",
+    "prompts/translation-supplier-onboarding.json": "dcdf6e07a7b2eed2ecde9e5867e31bd7be88d4e1a1a36f972dbee07a6085ae8d",
+    "prompts/verification-invoice-matching.json": "7288d6462ced3f0959013702a5854e33c5adedd84c5fa0eb33d813de415d1d03",
+    "prompts/verification-purchase-approval.json": "535d1d0941c3d744620e85f4ade65495ead5a6aa6911d7c2ce5de4341d32a32f",
+    "prompts/verification-supplier-onboarding.json": "167320160f1574f167ac75ac364ad2640c5609848cc05ee1d707bc8978e096ac",
+    "verification.schema.json": "85092a26de80cac17558d1a423a0d2661f6d1891f17076f073a108505896bd19",
+    "runner.py": "03bd326ed830f3099338d77db87caee998fd4e7d00a615dd738caa9862779350",
+    "README.md": "546085b14fd1187d7be00afb5297ea1bc3e8a33c75a23216345eb7a4a061eb98"
+  }
+}

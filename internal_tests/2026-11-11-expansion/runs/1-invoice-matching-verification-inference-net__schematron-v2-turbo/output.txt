@@ -1,0 +1,120 @@
+{
+  "judgments": [
+    {
+      "id": "P001",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P002",
+      "verdict": "supported"
+    },
+    {
+      "id": "P003",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P004",
+      "verdict": "supported"
+    },
+    {
+      "id": "P005",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P006",
+      "verdict": "supported"
+    },
+    {
+      "id": "P007",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P008",
+      "verdict": "supported"
+    },
+    {
+      "id": "P009",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P010",
+      "verdict": "supported"
+    },
+    {
+      "id": "P011",
+      "verdict": "supported"
+    },
+    {
+      "id": "P012",
+      "verdict": "supported"
+    },
+    {
+      "id": "P013",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P014",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P015",
+      "verdict": "supported"
+    },
+    {
+      "id": "P021",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P018",
+      "verdict": "supported"
+    },
+    {
+      "id": "P019",
+      "verdict": "supported"
+    },
+    {
+      "id": "P020",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P022",
+      "verdict": "supported"
+    },
+    {
+      "id": "P028",
+      "verdict": "supported"
+    },
+    {
+      "id": "P029",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P030",
+      "verdict": "supported"
+    },
+    {
+      "id": "P031",
+      "verdict": "supported"
+    },
+    {
+      "id": "P032",
+      "verdict": "supported"
+    },
+    {
+      "id": "P033",
+      "verdict": "contradicted"
+    },
+    {
+      "id": "P034",
+      "verdict": "supported"
+    },
+    {
+      "id": "P035",
+      "verdict": "supported"
+    },
+    {
+      "id": "P036",
+      "verdict": "contradicted"
+    }
+  ]
+}

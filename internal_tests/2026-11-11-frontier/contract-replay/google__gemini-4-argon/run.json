@@ -1,0 +1,187 @@
+{
+  "run_id": "google__gemini-4-argon-posthoc-replay",
+  "campaign_sha256": "0bf65a4b8e06fea7dbedc25e98d895526c5ec5b4bae224f2b8513cb7a468b085",
+  "subject_id": "google__gemini-4-argon",
+  "configuration_sha256": "9aedc0d678d9043b487a8de0ba6ef0f33ca48467b652928f43ae51ff35224662",
+  "started_at": "2026-11-11T05:45:10.528756+00:00",
+  "finished_at": "2026-11-11T05:45:10.538511+00:00",
+  "evidence_status": "self_reported",
+  "attempts": [
+    {
+      "task_id": "purchase-approval",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.001065000004018657,
+      "cost": {
+        "status": "reported",
+        "usd": 0.018836,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/1-purchase-approval/receipt.json",
+        "sha256": "3fde05de8af10400176cd71f25ed1c4989844e8cc9bd1c8289794b3a29d2aa1c"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/1-purchase-approval/annotation.json",
+        "sha256": "7a37fadad65a23e7cc9ae16c4b586135551925d535a6eca3a31e4d713220e9ac"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.0008917500090319663,
+      "cost": {
+        "status": "reported",
+        "usd": 0.01606,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/1-supplier-onboarding/receipt.json",
+        "sha256": "cd2bc0b767165807d82b29fa0dd55555593ccda8512d8ea2e11e86a93f255085"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/1-supplier-onboarding/annotation.json",
+        "sha256": "1af8facaa485e029f13521196ec7f9aed1e081219bff5c9dd25b248999730061"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 1,
+      "state": "pass",
+      "elapsed_seconds": 0.0009383329888805747,
+      "cost": {
+        "status": "reported",
+        "usd": 0.018834,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/1-invoice-matching/receipt.json",
+        "sha256": "01b8b5100915acc71012dc625cec134819d8bafe81eada725e7afe0f9339dd79"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/1-invoice-matching/annotation.json",
+        "sha256": "d00c4bbb3fb22b659af817404966acb3705f5247b87b027a13f490b0d399330c"
+      }
+    },
+    {
+      "task_id": "purchase-approval",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0009076249989448115,
+      "cost": {
+        "status": "reported",
+        "usd": 0.017856,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/2-purchase-approval/receipt.json",
+        "sha256": "fef3810b5aed23b0beb4e713956ef1306c37e5a4a483cb19fd171618eaf16501"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/2-purchase-approval/annotation.json",
+        "sha256": "edfc72563fd47f7a496a2e3033ee52f686775a9200382583a9f2795c434615cf"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.000828124990221113,
+      "cost": {
+        "status": "reported",
+        "usd": 0.01743,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/2-supplier-onboarding/receipt.json",
+        "sha256": "377a8a069fded6c852075388c5cf6e06395d179319cc3fd5ab2b82dcd336757d"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/2-supplier-onboarding/annotation.json",
+        "sha256": "669ba93ea796aeeb344ea4d97705e77580a4cd36d19d20227067058dd72c6335"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 2,
+      "state": "pass",
+      "elapsed_seconds": 0.0008657910075271502,
+      "cost": {
+        "status": "reported",
+        "usd": 0.016634,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/2-invoice-matching/receipt.json",
+        "sha256": "ad843d8d22c0d2c72ebb218ed66fc77795c2b029f4aa9c51185d96a0c01c5ac5"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/2-invoice-matching/annotation.json",
+        "sha256": "bb076f6245f2b33cf7c7f2eaec2fd867e2dd99de4142c8ee2bf8b3a6345fce81"
+      }
+    },
+    {
+      "task_id": "purchase-approval",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0008955420053098351,
+      "cost": {
+        "status": "reported",
+        "usd": 0.017836,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/3-purchase-approval/receipt.json",
+        "sha256": "f215af473092ccd60b62622112848f154186535f107fbe52e2433c799b2a3bac"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/3-purchase-approval/annotation.json",
+        "sha256": "9027989f22c7c3568be772b78588b728c948a7699d47bce90dd317fcc16157b8"
+      }
+    },
+    {
+      "task_id": "supplier-onboarding",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0009378749964525923,
+      "cost": {
+        "status": "reported",
+        "usd": 0.01748,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/3-supplier-onboarding/receipt.json",
+        "sha256": "c3aeccbcc60aa13c163cd8cc7b5c0b33dc6e628f7d47729d2a8afe4af966bd87"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/3-supplier-onboarding/annotation.json",
+        "sha256": "2589006c8c6d611bb46cb78baf1d8dd2fe097d646c01a5bc1856ec624cafdc79"
+      }
+    },
+    {
+      "task_id": "invoice-matching",
+      "repetition": 3,
+      "state": "pass",
+      "elapsed_seconds": 0.0009525000059511513,
+      "cost": {
+        "status": "reported",
+        "usd": 0.019814,
+        "reason": "Original inference charge carried into replay accounting; not charged again"
+      },
+      "receipt": {
+        "path": "google__gemini-4-argon/3-invoice-matching/receipt.json",
+        "sha256": "c563eaee6715b7a70b4c40f763a69cb08daaf3aa104f540ab40c8c7d4afcfcb8"
+      },
+      "annotation": {
+        "path": "google__gemini-4-argon/3-invoice-matching/annotation.json",
+        "sha256": "1cec1a82e4808bb947a44c344351d6d66df613d932499af768c3e87dfa906ab1"
+      }
+    }
+  ],
+  "submitter_id": "palo-maintainer",
+  "execution": {
+    "mode": "serial",
+    "max_concurrency": 1
+  }
+}

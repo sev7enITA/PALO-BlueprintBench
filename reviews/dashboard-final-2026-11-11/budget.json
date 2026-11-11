@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-11T10:14:52.391803+00:00",
+  "authorised_total_usd": 40,
+  "dedicated_key_limit_usd": 40,
+  "dedicated_key_usage_usd": 9.413894137,
+  "account_usage_usd": 15.217607958,
+  "unknown_charge_reservations_usd": 0.481264729,
+  "conservative_account_wide_bound_usd": 15.698872687,
+  "within_authorisation": true,
+  "advisory_design_calls": [
+    {
+      "file": "fable-design-response-1.json",
+      "id": "gen-1794391782-LIXNFAvQkMJYfSRsDXCF",
+      "cost_usd": 0.247232
+    },
+    {
+      "file": "fable-design-response-1-retry.json",
+      "id": "gen-1794391874-6kg4jTWHDcZRjCMlfbWr",
+      "cost_usd": 0.530992
+    }
+  ],
+  "new_benchmark_inference_calls": 0,
+  "notes": [
+    "Account-wide usage includes work outside this dashboard. It is an upper bound, not attribution to this task.",
+    "Visual advisory calls are not model benchmark results. Browser Gemini/GLM and local LM Studio are outside OpenRouter accounting.",
+    "No budget increase or credit purchase was made."
+  ]
+}

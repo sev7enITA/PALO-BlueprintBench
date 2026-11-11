@@ -15,19 +15,19 @@ def archive(files):
     return stream.getvalue()
 
 def outputs():
-    mapping={p.relative_to(ROOT).as_posix(): 'web/downloads/blueprintbench/'+p.name for p in (ROOT/'docs').iterdir() if p.is_file()}
-    mapping.update({'evaluator/README.md':'web/downloads/blueprintbench/toolkit-readme.md','evaluator/evidence.schema.json':'web/downloads/blueprintbench/evidence.schema.json','results/synthetic-v0.3-draft/result.json':'web/downloads/blueprintbench/demo-result.json','results/release-v0.3.0-pilot.1/toolkit-verification.json':'web/downloads/blueprintbench/toolkit-verification.json'})
+    mapping={p.relative_to(ROOT).as_posix(): 'web/downloads/blueprintbench/'+p.name for p in (ROOT/'docs').iterdir() if p.is_file() and p.suffix != '.md'}
+    mapping.update({'evaluator/evidence.schema.json':'web/downloads/blueprintbench/evidence.schema.json','results/synthetic-v0.3-draft/result.json':'web/downloads/blueprintbench/demo-result.json','results/release-v0.3.0-pilot.1/toolkit-verification.json':'web/downloads/blueprintbench/toolkit-verification.json'})
     out={ROOT/dest:(ROOT/src).read_bytes() for src,dest in mapping.items()}
     reference_md, reference_csv, reference_html = render(ROOT)
     for suffix, data in [('md',reference_md),('csv',reference_csv)]:
         out[ROOT/'docs'/('benchmark-references.'+suffix)] = data
-        out[DL/('benchmark-references.'+suffix)] = data
+        if suffix != 'md': out[DL/('benchmark-references.'+suffix)] = data
     page = ROOT/'web/PALO_BlueprintBench.html'
     html = page.read_text(encoding='utf-8')
     assert html.count(START) == html.count(END) == 1
     html = html[:html.index(START)] + reference_html + html[html.index(END)+len(END):]
     out[page] = html.encode('utf-8')
-    for src,dest in [('docs/reviewer-kit.md','evaluator/REVIEWER-KIT.md'),('docs/source-registry.json','evaluator/source-registry.json'),('docs/announcement.md','evaluator/SOCIAL-INVITATION.md'),('docs/announcement.md','web/downloads/blueprintbench/social-invitation.md')]:out[ROOT/dest]=(ROOT/src).read_bytes()
+    for src,dest in [('docs/reviewer-kit.md','evaluator/REVIEWER-KIT.md'),('docs/source-registry.json','evaluator/source-registry.json'),('docs/announcement.md','evaluator/SOCIAL-INVITATION.md')]:out[ROOT/dest]=(ROOT/src).read_bytes()
     toolkit={}
     for n in ['blueprintbench.py','demo.py','test_blueprintbench.py','test_audit_regressions.py','test_acquire.py','canonical-vectors.json','acquire.py','README.md','requirements.txt','evidence.schema.json','REVIEWER-KIT.md','source-registry.json','LICENSE']:
         p=ROOT/'evaluator'/n;toolkit['palo-blueprintbench/'+n]=out.get(p,p.read_bytes())
@@ -36,15 +36,17 @@ def outputs():
     out[DL/'toolkit.zip']=archive(toolkit)
     evidence=ROOT/'evidence/development-2026-11-10'
     out[DL/'development-evidence.zip']=archive({'development-evidence/'+p.relative_to(evidence).as_posix():p.read_bytes() for p in evidence.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'})
+    out[DL/'brand-kit.zip']=archive({'blueprintbench-brand/'+p.name:p.read_bytes() for p in (ROOT/'web/assets/blueprintbench/brand').glob('*')} | {'blueprintbench-brand/USAGE.md':(ROOT/'docs/brand-usage.md').read_bytes(), 'blueprintbench-brand/GENERATION.md':(ROOT/'presentation/brand-generation.md').read_bytes(), 'blueprintbench-brand/palo-framework-logo.webp':(ROOT/'web/assets/logo.webp').read_bytes()})
     sources = {}
-    for folder in ['evaluator','docs','semantic','tools','wiki','assets/readme','results/synthetic-v0.3-draft','results/release-v0.3.0-pilot.1']:
+    for folder in ['internal_tests/2026-11-11-calibration','evaluator','docs','semantic','tools','wiki','assets/readme','results/synthetic-v0.3-draft','results/release-v0.3.0-pilot.1','web/assets/blueprintbench/brand']:
         for p in (ROOT/folder).rglob('*'):
             if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc':
                 sources[p.relative_to(ROOT).as_posix()] = out.get(p,p.read_bytes())
-    for name in ['README.md','GOVERNANCE.md','CHANGELOG.md','CITATION.cff','web/PALO_BlueprintBench.html','web/assets/blueprintbench/blueprintbench.js','web/assets/blueprintbench/blueprintbench.css','web/assets/blueprintbench/explorer-data.json']:
+    for name in ['web/assets/blueprintbench/calibration.css','web/assets/blueprintbench/calibration.js','web/downloads/blueprintbench/calibration.json','web/downloads/blueprintbench/model-roster.json','web/downloads/blueprintbench/model-roster.csv','web/downloads/blueprintbench/.htaccess','web/downloads/blueprintbench/presentation/.htaccess','README.md','GOVERNANCE.md','CHANGELOG.md','CITATION.cff','web/PALO_BlueprintBench.html','web/assets/blueprintbench/blueprintbench.js','web/assets/blueprintbench/blueprintbench.css','web/assets/blueprintbench/explorer-data.json','web/PALO_BlueprintBench_Leaderboard.html','web/assets/blueprintbench/leaderboard.css','web/assets/blueprintbench/leaderboard.js','web/downloads/blueprintbench/adversarial-tests.json','web/downloads/blueprintbench/leaderboard-data.json','web/downloads/blueprintbench/internal-tests-results.json','web/downloads/blueprintbench/internal-tests-report.md','web/downloads/blueprintbench/internal-tests-evidence.zip','web/downloads/blueprintbench/internal-expansion-evidence.zip','web/downloads/blueprintbench/internal-cohort-report.md']:
         sources[name] = out.get(ROOT/name,(ROOT/name).read_bytes())
     sources.update({p.relative_to(ROOT).as_posix():data for p,data in out.items()})
-    manifest = {'release_tag':None,'base_release_tag':'v0.3.0-pilot.1','content_revision':'audit-repair-candidate-2026-11-11','scope':'Selected public documentation and toolkit files only; excludes original evidence (covered by its archive manifest), reviews, presentation and historical development results. Not a complete repository manifest. Immutable tags retain their original manifests','evaluator_version':'0.3.0-dev.1','explorer_version':'0.3.0','qualification':'unreleased evaluator review candidate; zero qualified held-out entries','files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
+    sources = {name: data for name, data in sources.items() if '/presentation/' not in name or name.endswith('/.htaccess')}
+    manifest = {'release_tag':None,'base_release_tag':'v0.3.0-pilot.1','content_revision':'results-dashboard-internal-expansion-2026-11-11','leaderboard_revision':'2026-11-11.2','scope':'Selected public documentation and toolkit files only; excludes original evidence (covered by its archive manifest), reviews and historical development results. Not a complete repository manifest. Immutable tags retain their original manifests','evaluator_version':'0.3.0-dev.1','explorer_version':'0.3.0','qualification':'unreleased evaluator review candidate; zero qualified held-out entries','files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
     out[DL/'release-manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')
     return out
 

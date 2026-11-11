@@ -1,0 +1,19 @@
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         
+{"id":"gen-1794381170-3QJGTjUs86qfzmFKrHwi","object":"chat.completion","created":1794381170,"model":"prism-ml/ternary-bonsai-2-9b","provider":"Darkbloom","system_fingerprint":null,"service_tier":null,"choices":[{"index":0,"logprobs":null,"finish_reason":"stop","native_finish_reason":"stop","message":{"role":"assistant","content":"\n\nR01 :: An invoice requires both an existing purchase order and a receipt record before automatic payment.\nR02 :: An invoice variance of exactly EUR 10 is within tolerance.\nR03 :: An invoice variance above EUR 10 blocks automatic payment.\nR04 :: For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.\nR05 :: Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.\nR06 :: The person who changed supplier bank details must not approve payment to those details.\nR07 :: For a service invoice, an authorised service acceptance replaces the goods receipt record.\nR08 :: Service acceptance does not replace the purchase-order requirement.\nR09 :: A dispute freezes the payment clock until the dispute is resolved.\nR10 :: After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.\nR11 :: An invoice number is unique only within a supplier; different suppliers may reuse the same number.\nR12 :: The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.","refusal":null}}],"usage":{"prompt_tokens":362,"completion_tokens":2449,"total_tokens":2811,"cost":0.00034733,"is_byok":false,"prompt_tokens_details":{"cached_tokens":0,"cache_write_tokens":0,"audio_tokens":0,"video_tokens":0},"cost_details":{"upstream_inference_cost":0.00034733,"upstream_inference_prompt_cost":0.00002896,"upstream_inference_completions_cost":0.00031837},"completion_tokens_details":{"reasoning_tokens":2202,"image_tokens":0,"audio_tokens":0}}}

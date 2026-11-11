@@ -1,0 +1,28 @@
+{
+  "status": "published_and_verified",
+  "implementation_commit": "d5d40b7bc692b11126ab2b9ca4ccb503899faebe",
+  "site_source_commit": "63a10510aaea6787331420a011c0fae9bc7f5b4f",
+  "chart_url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#temporal-model-results",
+  "https_files_verified": 7,
+  "python_regression_tests": 22,
+  "browser_suites_passed": [
+    "temporal exact values, UTC, case and completion denominators, URL, CSV/SVG, keyboard and four viewport widths",
+    "existing leaderboard sorting/filtering/comparison/export regression",
+    "existing cohort analytics",
+    "existing adversarial review"
+  ],
+  "live_temporal_browser_test_passed": true,
+  "ci_runs": [
+    43023933832,
+    43023926472
+  ],
+  "ci_status": "success",
+  "plotted_models": 17,
+  "blocked_models_excluded": 1,
+  "timestamp_meaning": "Last included verification request start (UTC), not release date",
+  "primary_scores_unchanged": true,
+  "independent_validation": false,
+  "new_benchmark_model_calls": 0,
+  "review_type": "internal_advisory_design_review",
+  "review_budget_receipt": "reviews/temporal-chart-2026-11-11/budget.json"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "pages": [
+    {
+      "url": "https://paloframework.org/",
+      "schemas": 1,
+      "forbiddenLinks": 0,
+      "badTitle": false
+    },
+    {
+      "url": "https://paloframework.org/CHANGELOG.html",
+      "schemas": 1,
+      "forbiddenLinks": 0,
+      "badTitle": false
+    },
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench.html",
+      "schemas": 1,
+      "forbiddenLinks": 0,
+      "badTitle": false
+    },
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+      "schemas": 1,
+      "forbiddenLinks": 0,
+      "badTitle": false
+    }
+  ],
+  "usableReviews": 96,
+  "assignedReviews": 108,
+  "observedDisagreements": 3,
+  "exportedItems": 3,
+  "qualified": false,
+  "jsErrors": []
+}

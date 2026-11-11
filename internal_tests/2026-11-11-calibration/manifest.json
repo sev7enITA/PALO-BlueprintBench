@@ -1,0 +1,10 @@
+{
+  "files": {
+    "proposition-bank.json": "d79f93c9d00d70eabb80e0feaac5c9067708f7ffb6be8be776cbc26b506d697f",
+    "items.json": "e5878353c040cdb7b60ae514a30394bbfd04352bf5f6f74373ccddb5397d4404",
+    "answer-key.json": "f292a3c286e56c6842284e72f7c535df52fd1401b9c468a6658a569b998ac031",
+    "protocol.json": "6311e01abc33701379e04198a746297697d39078b1e8ba8481db05a7ddd4e2d2",
+    "review-prompt.txt": "673371ec1e08cdceae43daf1d2d0ac9920357a86c3aecee9b9aa6a0fb2b3cf8a"
+  },
+  "note": "Local content commitment only, not externally timestamped preregistration."
+}

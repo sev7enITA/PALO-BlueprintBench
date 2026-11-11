@@ -1,0 +1,67 @@
+{
+  "id": "internal-procurement-posthoc-contract-replay",
+  "benchmark_version": "0.3.0-dev.1",
+  "split": "development",
+  "track": "interpretation",
+  "repetitions": 3,
+  "success_policy": {
+    "minimum_precision": 1,
+    "minimum_recall": 1,
+    "maximum_critical_errors": 0
+  },
+  "subjects": [
+    {
+      "id": "openai__gpt-6.1-sol",
+      "configuration": {
+        "path": "openai__gpt-6.1-sol/configuration.json",
+        "sha256": "7f0229b6b7b124b0ab4e7f6356d0bbdfcb38861cd9a8050e2d2129ef71ba241b"
+      }
+    },
+    {
+      "id": "anthropic__claude-opus-5.5",
+      "configuration": {
+        "path": "anthropic__claude-opus-5.5/configuration.json",
+        "sha256": "4dcc2beda608433fab3ad4f4bd80b40f93b0e8c0bfd9e009e0f720432bc3fe14"
+      }
+    },
+    {
+      "id": "google__gemini-4-argon",
+      "configuration": {
+        "path": "google__gemini-4-argon/configuration.json",
+        "sha256": "9aedc0d678d9043b487a8de0ba6ef0f33ca48467b652928f43ae51ff35224662"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "purchase-approval",
+      "family": "maintainer-authored-synthetic-procurement-v1",
+      "domain": "procurement",
+      "scope": "12 source-indexed rule propositions",
+      "gold": {
+        "path": "purchase-approval/gold.json",
+        "sha256": "4dafdde4359490a5814ad798fbf946d5efa16905adfedb9226d99b64b6f9d87c"
+      }
+    },
+    {
+      "id": "supplier-onboarding",
+      "family": "maintainer-authored-synthetic-procurement-v1",
+      "domain": "procurement",
+      "scope": "12 source-indexed rule propositions",
+      "gold": {
+        "path": "supplier-onboarding/gold.json",
+        "sha256": "17ce7fc75bb4281c8e6a8398d96ebf52e620492db7ce9d181c7b24d04a29f75c"
+      }
+    },
+    {
+      "id": "invoice-matching",
+      "family": "maintainer-authored-synthetic-procurement-v1",
+      "domain": "procurement",
+      "scope": "12 source-indexed rule propositions",
+      "gold": {
+        "path": "invoice-matching/gold.json",
+        "sha256": "4f035b57d4c449677166e76dd4a769fa787a136403db383be7a0fb0ed9603d63"
+      }
+    }
+  ]
+}

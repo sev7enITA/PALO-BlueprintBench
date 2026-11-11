@@ -1,0 +1,115 @@
+Read-only advisory code review for PALO BlueprintBench. The previous long code request disappeared without a captured answer; do not infer that you reviewed it. Review these concrete functions for correctness, propose up to 5 actionable defects with a counterexample. This is internal testing, not independent validation. Existing metrics remain frozen. A post-capture hash manifest detects accidental drift only; no external anchoring is claimed.
+"""Replay internal semantic calibration. No model calls and no qualification path."""
+from pathlib import Path
+from collections import Counter
+import argparse
+import hashlib
+import json
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / 'internal_tests/2026-11-11-calibration'
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def unique_object(pairs):
+    obj = {}
+    for key, value in pairs:
+        if key in obj:
+            raise ValueError('Duplicate JSON key: ' + key)
+        obj[key] = value
+    return obj
+
+
+def parse(raw):
+    return json.loads(raw, object_pairs_hook=unique_object,
+                      parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+
+
+def read(path):
+    return parse(path.read_bytes().decode('utf-8'))
+
+
+def reuse_key(rule, candidate=None, prompt_sha256=None):
+    """No fuzzy matching: any context, source or rubric change invalidates reuse."""
+    fields = {k: rule[k] for k in ('id', 'family_id', 'source_sha256', 'scope',
+                                  'rubric_version', 'allowed_alternatives',
+                                  'forbidden_inferences', 'critical', 'answerability')}
+    fields.update(candidate_sha256=digest(candidate.encode()) if candidate is not None else None, prompt_sha256=prompt_sha256)
+    return digest(json.dumps(fields, sort_keys=True, ensure_ascii=False).encode())
+
+
+def blind_packet(items, seed=20261111):
+    """Preparation aid only: this public exposed material is not an independent study."""
+    import random
+    pairs = [{'id': x['id'], 'source': x['source'], 'candidate': x['candidate']} for x in items]
+    random.Random(seed).shuffle(pairs)
+    return {'status': 'internal_annotation_preparation_only', 'qualified': False,
+            'instructions': 'Annotate without consulting model outputs or public draft labels. This public, engineering-exposed packet cannot establish independent holdout evidence.',
+            'items': pairs}
+
+
+def eligibility(rule):
+    # A local string cannot establish external custody or human independence.
+    reasons = ['independent_identity_and_custody_not_verified']
+    if rule['exposure'] != 'unexposed':
+        reasons.append('source_exposed_to_engineering')
+    if rule['label_status'] != 'human_adjudicated':
+        reasons.append('labels_not_human_adjudicated')
+    return {'qualified': False, 'blockers': reasons}
+
+
+def validate_response(raw, expected_ids):
+    """Invalid envelopes are retained but never silently repaired or partly scored."""
+    try:
+        obj = parse(raw)
+        if not isinstance(obj, dict) or set(obj) != {'items', 'review'}:
+            raise ValueError('Expected items and review envelope')
+        if not isinstance(obj['items'], list) or not isinstance(obj['review'], dict):
+            raise ValueError('Invalid envelope types')
+        review = obj['review']
+        if set(review) != {'verdict', 'blocking_findings', 'recommendations', 'claims_to_avoid'}:
+            raise ValueError('Invalid review fields')
+        if not isinstance(review['verdict'], str) or any(
+            not isinstance(review[k], list) or any(not isinstance(x, str) for x in review[k])
+            for k in ('blocking_findings', 'recommendations', 'claims_to_avoid')
+        ):
+            raise ValueError('Invalid review values')
+        ids = []
+        for row in obj['items']:
+            if not isinstance(row, dict) or set(row) != {'id', 'verdict', 'reason'}:
+                raise ValueError('Invalid item fields')
+            if not isinstance(row['id'], str) or row['id'] not in expected_ids:
+                raise ValueError('Unknown item ID')
+            if row['verdict'] not in ('faithful', 'altered', 'uncertain'):
+                raise ValueError('Invalid verdict')
+            if not isinstance(row['reason'], str) or not row['reason'].strip():
+                raise ValueError('Missing rationale')
+            ids.append(row['id'])
+        if len(set(ids)) != len(ids):
+            raise ValueError('Duplicate item IDs')
+        return obj, None
+    except (ValueError, TypeError, KeyError, RecursionError) as exc:
+        return None, str(exc)
+
+
+def tally(key, judgments, invalid=False):
+    mutants = [r for r in key if r['expected'] == 'altered']
+    controls = [r for r in key if r['expected'] == 'faithful']
+    missing = sum(r['id'] not in judgments for r in key)
+    uncertain = sum(judgments.get(r['id'], {}).get('verdict') == 'uncertain' for r in key)
+    detected = sum(judgments.get(r['id'], {}).get('verdict') == 'altered' for r in mutants)
+    false_alarm = sum(judgments.get(r['id'], {}).get('verdict') == 'altered' for r in controls)
+    return {'assigned': len(key), 'classified': len(key) - missing - uncertain,
+            'missing': 0 if invalid else missing, 'invalid': len(key) if invalid else 0, 'uncertain': uncertain,
+            'mutations': len(mutants), 'detected': detected,
+            'faithful_controls': len(controls), 'false_alarms': false_alarm,
+            'missed_mutations': sum(judgments.get(r['id'], {}).get('verdict') == 'faithful' for r in mutants),
+            'mutations_unresolved': sum(judgments.get(r['id'], {}).get('verdict') in (None, 'uncertain') for r in mutants),
+            'controls_unresolved': sum(judgments.get(r['id'], {}).get('verdict') in (None, 'uncertain') for r in controls),
+            'detection_assigned_ratio': detected / len(mutants) if mutants and not invalid else None,
+            'false_alarm_assigned_ratio': false_alarm / len(controls) if controls and not invalid and all(judgments.get(r['id'], {}).get('verdict') in ('faithful', 'altered') for r in controls) else None,
+            'false_alarm_rate_interpretable': bool(controls) and not invalid and not any(judgments.get(r['id'], {}).get('verdict') in (None, 'uncertain') for r in controls)}
+

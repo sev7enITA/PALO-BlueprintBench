@@ -1,0 +1,31 @@
+{
+  "model": {
+    "id": "openai/gpt-6.1-sol",
+    "revision": "unavailable",
+    "quantisation": "unavailable",
+    "unavailable_reason": "Hosted weights and quantisation not independently exposed; catalogue metadata is in original models.json"
+  },
+  "provider_runtime": {
+    "id": "openai",
+    "revision": "unavailable",
+    "unavailable_reason": "Hosted runtime revision not exposed"
+  },
+  "settings": {
+    "reasoning": "high",
+    "temperature": null,
+    "seed": null,
+    "max_output_tokens": 32768,
+    "unavailable_reason": "Temperature and seed omitted in all original requests; provider defaults"
+  },
+  "pipeline": {
+    "version": "internal-frontier-20261111",
+    "adapter_revision": "bca269c",
+    "prompt_sha256": "b3a6c5fd76af9e3ebe6d48453851250e334171207e10a2c42dc3e46eb82bc3fb",
+    "schema_sha256": "unavailable",
+    "unavailable_reason": "Translation output is plain source-indexed text, not constrained JSON; prompt hash binds concatenation in corpus order"
+  },
+  "environment": {
+    "id": "OpenRouter hosted inference, local post-hoc replay",
+    "runtime_version": "3.14.6"
+  }
+}

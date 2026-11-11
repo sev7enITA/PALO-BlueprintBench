@@ -1,0 +1,10 @@
+{
+  "original_sha256": "d94073da39235fd4b8c9b490d7c874819cd0f813b522ebd51590050bda487d65",
+  "public_sha256": "d4c83952be47c26c277feceea779dc58bab0b347633387aa47e3326673216d5a",
+  "removed_json_pointers": [
+    "/user_id"
+  ],
+  "scope": "Error envelope only; no model output modified",
+  "original_retained": "private",
+  "public_bytes_original": false
+}
