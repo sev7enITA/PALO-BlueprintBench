@@ -1,0 +1,599 @@
+[
+  {
+    "id": "nex-agi/nex-n2.6",
+    "provider": "nex-agi/fp8",
+    "catalogue_name": "Nex AGI: Nex-N2.6",
+    "endpoint_name": "Nex AGI | nex-agi/nex-n2.6-20261110",
+    "catalogue_context": 262144,
+    "quantization": "fp8",
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium"
+      ],
+      "default_effort": "high"
+    },
+    "pricing": {
+      "prompt": "0.00000012",
+      "completion": "0.0000004",
+      "input_cache_read": "0.000000024",
+      "discount": 0.2
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_k",
+      "top_p",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "logprobs",
+      "top_logprobs",
+      "response_format",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "reflection/beam-1.0-501b-a23b",
+    "provider": "nebius/fp4",
+    "catalogue_name": "Reflection: Beam 1.0 501B A23B",
+    "endpoint_name": "Nebius | reflection/beam-1.0-501b-a23b-20261016",
+    "catalogue_context": 1048576,
+    "quantization": "fp4",
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "max"
+    },
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000005",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "stop",
+      "frequency_penalty",
+      "presence_penalty",
+      "seed",
+      "top_k",
+      "logit_bias",
+      "logprobs",
+      "top_logprobs",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "repetition_penalty",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "tencent/hy4",
+    "provider": "tencent/fp4",
+    "catalogue_name": "Tencent: Hy4",
+    "endpoint_name": "Tencent | tencent/hy4-20261104",
+    "catalogue_context": 1048576,
+    "quantization": "fp4",
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "low",
+        "none"
+      ],
+      "default_effort": "high"
+    },
+    "pricing": {
+      "prompt": "0.000000417",
+      "completion": "0.0000012505",
+      "input_cache_read": "0.000000021",
+      "discount": 0.5
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "stop",
+      "max_completion_tokens",
+      "max_tokens",
+      "response_format",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "mistralai/mistral-large-4-0",
+    "provider": "mistral/zdr",
+    "catalogue_name": "Mistral: Mistral Large 4",
+    "endpoint_name": "Mistral | mistralai/mistral-large-4-0-20261006",
+    "catalogue_context": 1048576,
+    "quantization": "unknown",
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high",
+        "none"
+      ],
+      "default_effort": "high"
+    },
+    "pricing": {
+      "prompt": "0.0000007",
+      "completion": "0.0000021",
+      "input_cache_read": "0.00000007",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "stop",
+      "frequency_penalty",
+      "presence_penalty",
+      "seed",
+      "response_format",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "logprobs",
+      "top_logprobs",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "baidu/ernie-5.5-flash-preview",
+    "provider": "baidu",
+    "catalogue_name": "Baidu: ERNIE-5.5-Flash-Preview",
+    "endpoint_name": "Baidu | baidu/ernie-5.5-flash-preview-20261110",
+    "catalogue_context": 1024000,
+    "quantization": "unknown",
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "high"
+      ],
+      "default_effort": "high"
+    },
+    "pricing": {
+      "prompt": "0.00000028",
+      "completion": "0.00000113",
+      "input_cache_read": "0.000000028",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "top_p",
+      "max_tokens",
+      "tools",
+      "response_format",
+      "structured_outputs",
+      "tool_choice",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "upstage/solar-mini4",
+    "provider": "upstage/zdr",
+    "catalogue_name": "Upstage: Solar Mini 4",
+    "endpoint_name": "Upstage | upstage/solar-mini4-20260922",
+    "catalogue_context": 524288,
+    "quantization": "unknown",
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": false,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal",
+        "none"
+      ],
+      "default_effort": "medium"
+    },
+    "pricing": {
+      "prompt": "0.00000005",
+      "completion": "0.0000002",
+      "input_cache_read": "0.000000005",
+      "discount": 0.5
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "max_tokens",
+      "top_p",
+      "frequency_penalty",
+      "presence_penalty",
+      "parallel_tool_calls",
+      "response_format",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "cohere/command-a-plus",
+    "provider": "cohere/fp8",
+    "catalogue_name": "Cohere: Command A+",
+    "endpoint_name": "Cohere | cohere/command-a-plus-05-2026",
+    "catalogue_context": 192000,
+    "quantization": "fp8",
+    "reasoning": {
+      "mandatory": false
+    },
+    "pricing": {
+      "prompt": "0.0000003",
+      "completion": "0.0000015",
+      "input_cache_read": "0.00000015",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "stop",
+      "frequency_penalty",
+      "presence_penalty",
+      "top_k",
+      "seed",
+      "structured_outputs",
+      "response_format",
+      "tools",
+      "tool_choice"
+    ],
+    "configuration": {
+      "reasoning": {
+        "enabled": true,
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "prism-ml/ternary-bonsai-2-27b",
+    "provider": "darkbloom/int4",
+    "catalogue_name": "PrismML: Ternary Bonsai 2 27B",
+    "endpoint_name": "Darkbloom | prism-ml/ternary-bonsai-2-27b-20260918",
+    "catalogue_context": 262144,
+    "quantization": "int4",
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "medium",
+        "none"
+      ],
+      "default_effort": "xhigh"
+    },
+    "pricing": {
+      "prompt": "0.000000075",
+      "completion": "0.0000005",
+      "input_cache_read": "0.0000000375",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "top_p",
+      "top_k",
+      "frequency_penalty",
+      "presence_penalty",
+      "repetition_penalty",
+      "stop",
+      "seed",
+      "max_tokens",
+      "response_format",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "logprobs",
+      "top_logprobs",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "xhigh",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "inference-net/schematron-v2-turbo",
+    "provider": "inference-net/us",
+    "catalogue_name": "Inference.net: Schematron V2 Turbo",
+    "endpoint_name": "InferenceNet | inference-net/schematron-v2-turbo-20260902",
+    "catalogue_context": 128000,
+    "quantization": "bf16",
+    "reasoning": null,
+    "pricing": {
+      "prompt": "0.00000003",
+      "completion": "0.00000015",
+      "input_cache_read": "0.00000003",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "stop",
+      "frequency_penalty",
+      "presence_penalty",
+      "seed",
+      "top_k",
+      "min_p",
+      "logit_bias",
+      "response_format",
+      "structured_outputs",
+      "repetition_penalty"
+    ],
+    "configuration": {
+      "reasoning": null,
+      "max_tokens": 8192,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "qwen/qwen3.8-max-prime",
+    "provider": "alibaba",
+    "catalogue_name": "Qwen: Qwen3.8 Max Prime",
+    "endpoint_name": "Alibaba | qwen/qwen3.8-max-prime-20260923",
+    "catalogue_context": 1000000,
+    "quantization": "unknown",
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "xhigh",
+        "high",
+        "medium",
+        "low",
+        "minimal"
+      ],
+      "default_effort": "xhigh"
+    },
+    "pricing": {
+      "prompt": "0.000004",
+      "completion": "0.000012",
+      "input_cache_read": "0.0000005",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "seed",
+      "presence_penalty",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "logprobs",
+      "top_logprobs",
+      "top_k",
+      "frequency_penalty",
+      "stop",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "z-ai/glm-5.3",
+    "provider": "wafer/us",
+    "catalogue_name": "Z.ai: GLM 5.3",
+    "endpoint_name": "Wafer | z-ai/glm-5.3-20260816",
+    "catalogue_context": 1048576,
+    "quantization": "fp4",
+    "reasoning": {
+      "mandatory": true,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low"
+      ],
+      "default_effort": "max"
+    },
+    "pricing": {
+      "prompt": "0.0000000699",
+      "completion": "0.0000014",
+      "input_cache_read": "0.0000000689",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "top_p",
+      "top_k",
+      "min_p",
+      "frequency_penalty",
+      "presence_penalty",
+      "repetition_penalty",
+      "stop",
+      "seed",
+      "max_tokens",
+      "logit_bias",
+      "response_format",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "logprobs",
+      "top_logprobs",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  },
+  {
+    "id": "deepseek/deepseek-v4.1-flash-1017",
+    "provider": "relace/fp4",
+    "catalogue_name": "DeepSeek: DeepSeek V4.1 Flash 1017",
+    "endpoint_name": "Relace | deepseek/deepseek-v4.1-flash-20261017",
+    "catalogue_context": 1048576,
+    "quantization": "fp4",
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supported_efforts": [
+        "max",
+        "high",
+        "low",
+        "none"
+      ],
+      "default_effort": "high"
+    },
+    "pricing": {
+      "prompt": "0.000000006",
+      "completion": "0.0000005",
+      "input_cache_read": "0.000000005",
+      "discount": 0
+    },
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "temperature",
+      "top_p",
+      "top_k",
+      "min_p",
+      "stop",
+      "max_tokens",
+      "logit_bias",
+      "frequency_penalty",
+      "presence_penalty",
+      "repetition_penalty",
+      "response_format",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "reasoning_effort"
+    ],
+    "configuration": {
+      "reasoning": {
+        "effort": "high",
+        "exclude": true
+      },
+      "max_tokens": 32768,
+      "temperature": "provider default; omitted",
+      "seed": "omitted; hosted runtime not controlled"
+    },
+    "revision_status": "Advertised dated endpoint; exact hosted weights/runtime not independently verified."
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "model": {
+    "id": "nex-agi/nex-n2.6",
+    "canonical_slug": "nex-agi/nex-n2.6-20261110",
+    "hugging_face_id": "nex-agi/Nex-N2.6",
+    "name": "Nex AGI: Nex-N2.6",
+    "created": 1794282379,
+    "description": "Nex-N2.6 is an agentic model from Nex AGI, built on [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash-BF16) with about 321B parameters. It is suited for computer use, coding, and long-horizon tasks that involve tools. Compared with...",
+    "context_length": 262144,
+    "architecture": {
+      "modality": "text+image->text",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "pricing": {
+      "prompt": "0.00000012",
+      "completion": "0.0000004",
+      "input_cache_read": "0.000000024"
+    },
+    "top_provider": {
+      "context_length": 262144,
+      "max_completion_tokens": 235929,
+      "is_moderated": false
+    },
+    "per_request_limits": null,
+    "supported_parameters": [
+      "include_reasoning",
+      "logprobs",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "response_format",
+      "structured_outputs",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_k",
+      "top_logprobs",
+      "top_p"
+    ],
+    "default_parameters": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "top_k": 40
+    },
+    "supported_voices": null,
+    "knowledge_cutoff": null,
+    "expiration_date": null,
+    "links": {
+      "details": "/api/v1/models/nex-agi/nex-n2.6-20261110/endpoints"
+    },
+    "endpoints": [
+      "/api/v1/chat/completions",
+      "/api/v1/completions",
+      "/api/v1/messages",
+      "/api/v1/responses"
+    ],
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "high",
+        "medium"
+      ],
+      "default_effort": "high"
+    }
+  },
+  "selected_endpoint": {
+    "name": "Nex AGI | nex-agi/nex-n2.6-20261110",
+    "model_id": "nex-agi/nex-n2.6",
+    "model_name": "Nex AGI: Nex-N2.6",
+    "context_length": 262144,
+    "pricing": {
+      "prompt": "0.00000012",
+      "completion": "0.0000004",
+      "input_cache_read": "0.000000024",
+      "discount": 0.2
+    },
+    "provider_name": "Nex AGI",
+    "tag": "nex-agi/fp8",
+    "service_tier": null,
+    "quantization": "fp8",
+    "max_completion_tokens": 235929,
+    "max_prompt_tokens": null,
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_k",
+      "top_p",
+      "structured_outputs",
+      "tools",
+      "tool_choice",
+      "logprobs",
+      "top_logprobs",
+      "response_format",
+      "reasoning_effort"
+    ],
+    "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+    },
+    "status": 0,
+    "uptime_last_30m": 100,
+    "uptime_last_5m": 100,
+    "uptime_last_1d": 100,
+    "supports_implicit_caching": true,
+    "native_tools": {},
+    "supports_voice_cloning": false,
+    "supports_multiple_audio_references": false,
+    "supports_image_reference": false,
+    "supports_diarization": false,
+    "latency_last_30m": null,
+    "throughput_last_30m": null
+  }
+}

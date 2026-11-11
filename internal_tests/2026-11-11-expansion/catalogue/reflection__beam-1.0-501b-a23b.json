@@ -1,0 +1,180 @@
+{
+  "model": {
+    "id": "reflection/beam-1.0-501b-a23b",
+    "canonical_slug": "reflection/beam-1.0-501b-a23b-20261016",
+    "hugging_face_id": "reflection/Beam-1.0-501B-A23B",
+    "name": "Reflection: Beam 1.0 501B A23B",
+    "created": 1792160499,
+    "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
+    "context_length": 1048576,
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "pricing": {
+      "prompt": "0.0000003",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000004"
+    },
+    "top_provider": {
+      "context_length": 1048576,
+      "max_completion_tokens": 943718,
+      "is_moderated": false
+    },
+    "per_request_limits": null,
+    "supported_parameters": [
+      "frequency_penalty",
+      "include_reasoning",
+      "logit_bias",
+      "logprobs",
+      "max_tokens",
+      "min_p",
+      "presence_penalty",
+      "reasoning",
+      "reasoning_effort",
+      "repetition_penalty",
+      "response_format",
+      "seed",
+      "stop",
+      "structured_outputs",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_k",
+      "top_logprobs",
+      "top_p"
+    ],
+    "default_parameters": {},
+    "supported_voices": null,
+    "knowledge_cutoff": "2026-06-30",
+    "expiration_date": null,
+    "links": {
+      "details": "/api/v1/models/reflection/beam-1.0-501b-a23b-20261016/endpoints"
+    },
+    "endpoints": [
+      "/api/v1/chat/completions",
+      "/api/v1/completions",
+      "/api/v1/messages",
+      "/api/v1/responses"
+    ],
+    "benchmarks": {
+      "design_arena": [
+        {
+          "arena": "models",
+          "category": "3d",
+          "elo": 1131,
+          "win_rate": 33.9,
+          "rank": 76
+        },
+        {
+          "arena": "models",
+          "category": "codecategories",
+          "elo": 1233,
+          "win_rate": 45,
+          "rank": 49
+        },
+        {
+          "arena": "models",
+          "category": "gamedev",
+          "elo": 1202,
+          "win_rate": 41.8,
+          "rank": 54
+        },
+        {
+          "arena": "models",
+          "category": "uicomponent",
+          "elo": 1278,
+          "win_rate": 51.3,
+          "rank": 26
+        },
+        {
+          "arena": "models",
+          "category": "website",
+          "elo": 1244,
+          "win_rate": 46.7,
+          "rank": 47
+        }
+      ],
+      "artificial_analysis": {
+        "intelligence_index": 17.7,
+        "coding_index": null,
+        "agentic_index": null
+      }
+    },
+    "reasoning": {
+      "mandatory": true,
+      "supported_efforts": [
+        "max",
+        "xhigh",
+        "high",
+        "medium",
+        "low"
+      ],
+      "default_effort": "max"
+    }
+  },
+  "selected_endpoint": {
+    "name": "Nebius | reflection/beam-1.0-501b-a23b-20261016",
+    "model_id": "reflection/beam-1.0-501b-a23b",
+    "model_name": "Reflection: Beam 1.0 501B A23B",
+    "context_length": 1048576,
+    "pricing": {
+      "prompt": "0.00000025",
+      "completion": "0.000001",
+      "input_cache_read": "0.00000005",
+      "discount": 0
+    },
+    "provider_name": "Nebius",
+    "tag": "nebius/fp4",
+    "service_tier": null,
+    "quantization": "fp4",
+    "max_completion_tokens": 131072,
+    "max_prompt_tokens": null,
+    "supported_parameters": [
+      "reasoning",
+      "include_reasoning",
+      "max_tokens",
+      "temperature",
+      "top_p",
+      "stop",
+      "frequency_penalty",
+      "presence_penalty",
+      "seed",
+      "top_k",
+      "logit_bias",
+      "logprobs",
+      "top_logprobs",
+      "response_format",
+      "tools",
+      "tool_choice",
+      "structured_outputs",
+      "repetition_penalty",
+      "reasoning_effort"
+    ],
+    "supports_tool_choice": {
+      "none": true,
+      "auto": true,
+      "required": true,
+      "function": true
+    },
+    "status": 0,
+    "uptime_last_30m": 100,
+    "uptime_last_5m": 100,
+    "uptime_last_1d": 100,
+    "supports_implicit_caching": true,
+    "native_tools": {},
+    "supports_voice_cloning": false,
+    "supports_multiple_audio_references": false,
+    "supports_image_reference": false,
+    "supports_diarization": false,
+    "latency_last_30m": null,
+    "throughput_last_30m": null
+  }
+}

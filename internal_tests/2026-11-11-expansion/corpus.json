@@ -1,0 +1,968 @@
+[
+  {
+    "id": "purchase-approval",
+    "family": "maintainer-authored-synthetic-procurement-v1",
+    "source": [
+      {
+        "id": "R01",
+        "text": "A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R02",
+        "text": "For a purchase of exactly EUR 5,000, Finance approval is not required.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R03",
+        "text": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R04",
+        "text": "A requester must never approve their own purchase request.",
+        "dimension": "negation"
+      },
+      {
+        "id": "R05",
+        "text": "An emergency purchase is exempt from obtaining competitive quotations.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R06",
+        "text": "The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R07",
+        "text": "Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+        "dimension": "ownership"
+      },
+      {
+        "id": "R08",
+        "text": "If a requester cancels a request before approval, that requester must record the cancellation reason.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R09",
+        "text": "Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R10",
+        "text": "The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+        "dimension": "scope"
+      },
+      {
+        "id": "R11",
+        "text": "Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+        "dimension": "uniqueness"
+      },
+      {
+        "id": "R12",
+        "text": "The retention period begins on the approval date, not the purchase-order date.",
+        "dimension": "temporal"
+      }
+    ],
+    "probes": [
+      {
+        "source_id": "R12",
+        "dimension": "temporal",
+        "text": "The retention period begins on the purchase-order date.",
+        "expected": "contradicted",
+        "id": "P001"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "ownership",
+        "text": "The Head of Finance must have ten years of employment.",
+        "expected": "not_established",
+        "id": "P002"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "modality",
+        "text": "The department manager must approve every purchase below EUR 5,000.",
+        "expected": "contradicted",
+        "id": "P003"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "threshold",
+        "text": "A purchase at the EUR 5,000 boundary does not need Finance approval.",
+        "expected": "supported",
+        "id": "P004"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "modality",
+        "text": "Finance approval is required before issuing an order for a purchase above EUR 5,000.",
+        "expected": "supported",
+        "id": "P005"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "exception",
+        "text": "An emergency purchase requires a special red-coloured form.",
+        "expected": "not_established",
+        "id": "P006"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "condition",
+        "text": "A requester cancelling before approval need not record a reason.",
+        "expected": "contradicted",
+        "id": "P007"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "temporal",
+        "text": "Approval records may not be deleted before 30 calendar days have elapsed.",
+        "expected": "supported",
+        "id": "P008"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "ownership",
+        "text": "The Head of Finance is the sole Finance approver.",
+        "expected": "supported",
+        "id": "P009"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "ownership",
+        "text": "The buyer can provide Finance approval.",
+        "expected": "contradicted",
+        "id": "P010"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "scope",
+        "text": "Each request is assessed separately against the threshold.",
+        "expected": "supported",
+        "id": "P011"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "threshold",
+        "text": "The threshold is converted to foreign currencies using the daily ECB rate.",
+        "expected": "not_established",
+        "id": "P012"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "scope",
+        "text": "Multiple related requests are automatically merged into one request.",
+        "expected": "not_established",
+        "id": "P013"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "temporal",
+        "text": "Approval records must be stored in a database hosted in Italy.",
+        "expected": "not_established",
+        "id": "P014"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "uniqueness",
+        "text": "Supplier names can be duplicated across different suppliers.",
+        "expected": "supported",
+        "id": "P015"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "threshold",
+        "text": "A purchase of exactly EUR 5,000 requires Finance approval.",
+        "expected": "contradicted",
+        "id": "P016"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "modality",
+        "text": "Approval below EUR 5,000 is discretionary for the department manager.",
+        "expected": "supported",
+        "id": "P017"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "negation",
+        "text": "A requester may approve their own purchase request.",
+        "expected": "contradicted",
+        "id": "P018"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "uniqueness",
+        "text": "Each supplier has a mandatory nine-digit internal identifier.",
+        "expected": "not_established",
+        "id": "P019"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "exception",
+        "text": "Emergency purchases must be reported to the board every Friday.",
+        "expected": "not_established",
+        "id": "P020"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "exception",
+        "text": "Competitive quotations are not required for emergency purchases.",
+        "expected": "supported",
+        "id": "P021"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "exception",
+        "text": "Emergency purchases must obtain competitive quotations.",
+        "expected": "contradicted",
+        "id": "P022"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "scope",
+        "text": "The threshold applies to a supplier monthly total instead of each request.",
+        "expected": "contradicted",
+        "id": "P023"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "modality",
+        "text": "Finance approval is optional for purchases above EUR 5,000.",
+        "expected": "contradicted",
+        "id": "P024"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "exception",
+        "text": "Emergency purchases above EUR 5,000 are exempt from Finance approval.",
+        "expected": "contradicted",
+        "id": "P025"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "negation",
+        "text": "Self-approval by the requester is prohibited.",
+        "expected": "supported",
+        "id": "P026"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "temporal",
+        "text": "Count retention from the date of approval.",
+        "expected": "supported",
+        "id": "P027"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "temporal",
+        "text": "Approval records may be deleted after 20 calendar days.",
+        "expected": "contradicted",
+        "id": "P028"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "modality",
+        "text": "A deputy manager may approve purchases when the manager is absent.",
+        "expected": "not_established",
+        "id": "P029"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "uniqueness",
+        "text": "Supplier name uniquely identifies every supplier.",
+        "expected": "contradicted",
+        "id": "P030"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "negation",
+        "text": "A requester who self-approves is suspended for five days.",
+        "expected": "not_established",
+        "id": "P031"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "exception",
+        "text": "Emergency purchases above EUR 5,000 still require Finance approval.",
+        "expected": "supported",
+        "id": "P032"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "modality",
+        "text": "Finance must approve purchases within two working days.",
+        "expected": "not_established",
+        "id": "P033"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "temporal",
+        "text": "Approval dates are stored in the Europe/Rome time zone.",
+        "expected": "not_established",
+        "id": "P034"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "condition",
+        "text": "A requester cancelling before approval must document why.",
+        "expected": "supported",
+        "id": "P035"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "condition",
+        "text": "After approval, cancelling a request incurs a EUR 50 fee.",
+        "expected": "not_established",
+        "id": "P036"
+      }
+    ],
+    "annotation_status": "assistant_draft",
+    "rights": "Original synthetic fixture; CC BY 4.0 for this directory corpus. No corporate or personal records."
+  },
+  {
+    "id": "supplier-onboarding",
+    "family": "maintainer-authored-synthetic-procurement-v1",
+    "source": [
+      {
+        "id": "R01",
+        "text": "A new supplier must complete identity verification before its first purchase order.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R02",
+        "text": "The Compliance officer performs identity verification; the buyer does not perform it.",
+        "dimension": "ownership"
+      },
+      {
+        "id": "R03",
+        "text": "For a low-risk supplier, Compliance may request a site visit but is not obliged to request one.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R04",
+        "text": "A high-risk supplier must undergo an enhanced review.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R05",
+        "text": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R06",
+        "text": "The renewal exemption does not apply when the supplier changes its legal name.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R07",
+        "text": "A buyer must not activate a supplier flagged as blocked.",
+        "dimension": "negation"
+      },
+      {
+        "id": "R08",
+        "text": "A risk score of 70 or more is classified as high risk.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R09",
+        "text": "Risk scores below 70 are classified as low risk.",
+        "dimension": "scope"
+      },
+      {
+        "id": "R10",
+        "text": "Approval expires 365 calendar days after its approval date.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R11",
+        "text": "Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R12",
+        "text": "Two supplier records may share a contact email address; the email address is not unique.",
+        "dimension": "uniqueness"
+      }
+    ],
+    "probes": [
+      {
+        "source_id": "R12",
+        "dimension": "uniqueness",
+        "text": "Email addresses must belong to a company-owned domain.",
+        "expected": "not_established",
+        "id": "P001"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "condition",
+        "text": "A changed bank account must be checked independently before the next payment.",
+        "expected": "supported",
+        "id": "P002"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "modality",
+        "text": "Enhanced review is optional for high-risk suppliers.",
+        "expected": "contradicted",
+        "id": "P003"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "condition",
+        "text": "Identity verification must precede the first order with a new supplier.",
+        "expected": "supported",
+        "id": "P004"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "ownership",
+        "text": "The buyer performs identity verification.",
+        "expected": "contradicted",
+        "id": "P005"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "negation",
+        "text": "A buyer may activate a blocked supplier.",
+        "expected": "contradicted",
+        "id": "P006"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "negation",
+        "text": "Blocked supplier records are deleted automatically after one year.",
+        "expected": "not_established",
+        "id": "P007"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "exception",
+        "text": "A changed legal name prevents use of the renewal exemption.",
+        "expected": "supported",
+        "id": "P008"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "modality",
+        "text": "A high-risk enhanced review must include a credit score above 700.",
+        "expected": "not_established",
+        "id": "P009"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "modality",
+        "text": "Site visits are optional for low-risk suppliers.",
+        "expected": "supported",
+        "id": "P010"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "threshold",
+        "text": "A score equal to 70 is high risk.",
+        "expected": "supported",
+        "id": "P011"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "exception",
+        "text": "A trading-name change requires a EUR 100 processing fee.",
+        "expected": "not_established",
+        "id": "P012"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "condition",
+        "text": "The independent check must be performed by the bank using video identification.",
+        "expected": "not_established",
+        "id": "P013"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "uniqueness",
+        "text": "Different supplier records can share the same contact email.",
+        "expected": "supported",
+        "id": "P014"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "modality",
+        "text": "A site visit is mandatory for every low-risk supplier.",
+        "expected": "contradicted",
+        "id": "P015"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "condition",
+        "text": "A changed bank account can be used for the next payment without a new check.",
+        "expected": "contradicted",
+        "id": "P016"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "exception",
+        "text": "Unchanged identity data exempts an existing supplier renewal from repeat verification.",
+        "expected": "supported",
+        "id": "P017"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "scope",
+        "text": "A risk score of 69 is low risk.",
+        "expected": "supported",
+        "id": "P018"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "exception",
+        "text": "A renewal after a legal-name change is exempt from identity verification.",
+        "expected": "contradicted",
+        "id": "P019"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "exception",
+        "text": "Unchanged identity data must be certified by an external notary.",
+        "expected": "not_established",
+        "id": "P020"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "modality",
+        "text": "Enhanced review is required for high-risk suppliers.",
+        "expected": "supported",
+        "id": "P021"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "scope",
+        "text": "A risk score of 69 is high risk.",
+        "expected": "contradicted",
+        "id": "P022"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "uniqueness",
+        "text": "Every supplier contact email is unique.",
+        "expected": "contradicted",
+        "id": "P023"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "negation",
+        "text": "Blocked suppliers cannot be activated by a buyer.",
+        "expected": "supported",
+        "id": "P024"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "temporal",
+        "text": "An expiry reminder must be sent by SMS seven days in advance.",
+        "expected": "not_established",
+        "id": "P025"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "ownership",
+        "text": "A Compliance officer must hold a specific professional certificate.",
+        "expected": "not_established",
+        "id": "P026"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "condition",
+        "text": "Identity verification must use a passport rather than another identity document.",
+        "expected": "not_established",
+        "id": "P027"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "exception",
+        "text": "Every renewal with unchanged identity data requires repeat identity verification.",
+        "expected": "contradicted",
+        "id": "P028"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "ownership",
+        "text": "Identity verification belongs to the Compliance officer.",
+        "expected": "supported",
+        "id": "P029"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "temporal",
+        "text": "Supplier approval expires after 30 calendar days from approval.",
+        "expected": "contradicted",
+        "id": "P030"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "scope",
+        "text": "The scoring formula assigns a 40 percent weight to country risk.",
+        "expected": "not_established",
+        "id": "P031"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "temporal",
+        "text": "Supplier approval expires after 365 calendar days from approval.",
+        "expected": "supported",
+        "id": "P032"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "condition",
+        "text": "A new supplier may receive its first order before identity verification.",
+        "expected": "contradicted",
+        "id": "P033"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "threshold",
+        "text": "Risk scores are rounded to the nearest ten before classification.",
+        "expected": "not_established",
+        "id": "P034"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "modality",
+        "text": "Low-risk supplier site visits are conducted every six months.",
+        "expected": "not_established",
+        "id": "P035"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "threshold",
+        "text": "A score equal to 70 is low risk.",
+        "expected": "contradicted",
+        "id": "P036"
+      }
+    ],
+    "annotation_status": "assistant_draft",
+    "rights": "Original synthetic fixture; CC BY 4.0 for this directory corpus. No corporate or personal records."
+  },
+  {
+    "id": "invoice-matching",
+    "family": "maintainer-authored-synthetic-procurement-v1",
+    "source": [
+      {
+        "id": "R01",
+        "text": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R02",
+        "text": "An invoice variance of exactly EUR 10 is within tolerance.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R03",
+        "text": "An invoice variance above EUR 10 blocks automatic payment.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R04",
+        "text": "For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R05",
+        "text": "Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.",
+        "dimension": "ownership"
+      },
+      {
+        "id": "R06",
+        "text": "The person who changed supplier bank details must not approve payment to those details.",
+        "dimension": "negation"
+      },
+      {
+        "id": "R07",
+        "text": "For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R08",
+        "text": "Service acceptance does not replace the purchase-order requirement.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R09",
+        "text": "A dispute freezes the payment clock until the dispute is resolved.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R10",
+        "text": "After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R11",
+        "text": "An invoice number is unique only within a supplier; different suppliers may reuse the same number.",
+        "dimension": "uniqueness"
+      },
+      {
+        "id": "R12",
+        "text": "The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.",
+        "dimension": "scope"
+      }
+    ],
+    "probes": [
+      {
+        "source_id": "R01",
+        "dimension": "condition",
+        "text": "An invoice requires a qualified electronic signature before automatic payment.",
+        "expected": "not_established",
+        "id": "P001"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "threshold",
+        "text": "The tolerance is increased by 5 percent for overseas suppliers.",
+        "expected": "not_established",
+        "id": "P002"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "exception",
+        "text": "A service invoice still needs a purchase order when service acceptance exists.",
+        "expected": "supported",
+        "id": "P003"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "exception",
+        "text": "A service invoice with service acceptance does not need a purchase order.",
+        "expected": "contradicted",
+        "id": "P004"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "threshold",
+        "text": "A variance greater than EUR 10 prevents automatic payment.",
+        "expected": "supported",
+        "id": "P005"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "condition",
+        "text": "Automatic payment requires a purchase order and a receipt record.",
+        "expected": "supported",
+        "id": "P006"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "uniqueness",
+        "text": "Invoice numbers contain a mandatory four-digit year prefix.",
+        "expected": "not_established",
+        "id": "P007"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "scope",
+        "text": "Multiple invoices for one order are automatically consolidated.",
+        "expected": "not_established",
+        "id": "P008"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "threshold",
+        "text": "A variance at EUR 10 is tolerated.",
+        "expected": "supported",
+        "id": "P009"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "temporal",
+        "text": "The payment clock is calculated in business days.",
+        "expected": "not_established",
+        "id": "P010"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "modality",
+        "text": "An analyst must request a corrected invoice for every blocked invoice.",
+        "expected": "contradicted",
+        "id": "P011"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "modality",
+        "text": "Requesting a corrected invoice is optional for the analyst when an invoice is blocked.",
+        "expected": "supported",
+        "id": "P012"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "temporal",
+        "text": "Resolution restarts the payment clock at zero.",
+        "expected": "contradicted",
+        "id": "P013"
+      },
+      {
+        "source_id": "R01",
+        "dimension": "condition",
+        "text": "An invoice can be paid automatically when no receipt record exists.",
+        "expected": "contradicted",
+        "id": "P014"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "negation",
+        "text": "The bank-details editor may approve payment to the edited details.",
+        "expected": "contradicted",
+        "id": "P015"
+      },
+      {
+        "source_id": "R08",
+        "dimension": "exception",
+        "text": "A service purchase order must be renewed monthly.",
+        "expected": "not_established",
+        "id": "P016"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "ownership",
+        "text": "The receiving team has sole responsibility for recording goods receipt.",
+        "expected": "supported",
+        "id": "P017"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "scope",
+        "text": "Apply tolerance to individual invoices rather than a monthly supplier total.",
+        "expected": "supported",
+        "id": "P018"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "uniqueness",
+        "text": "Invoice numbers are globally unique across all suppliers.",
+        "expected": "contradicted",
+        "id": "P019"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "threshold",
+        "text": "A variance of exactly EUR 10 is outside tolerance.",
+        "expected": "contradicted",
+        "id": "P020"
+      },
+      {
+        "source_id": "R11",
+        "dimension": "uniqueness",
+        "text": "Different suppliers can have identical invoice numbers.",
+        "expected": "supported",
+        "id": "P021"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "ownership",
+        "text": "Accounts Payable may record goods receipt.",
+        "expected": "contradicted",
+        "id": "P022"
+      },
+      {
+        "source_id": "R10",
+        "dimension": "temporal",
+        "text": "Resolution resumes the paused payment clock without resetting it.",
+        "expected": "supported",
+        "id": "P023"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "exception",
+        "text": "A service invoice always needs a goods receipt even with authorised service acceptance.",
+        "expected": "contradicted",
+        "id": "P024"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "negation",
+        "text": "The bank-details editor cannot approve a payment using those details.",
+        "expected": "supported",
+        "id": "P025"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "temporal",
+        "text": "Disputes must be resolved within five business days.",
+        "expected": "not_established",
+        "id": "P026"
+      },
+      {
+        "source_id": "R03",
+        "dimension": "threshold",
+        "text": "A variance of EUR 11 permits automatic payment.",
+        "expected": "contradicted",
+        "id": "P027"
+      },
+      {
+        "source_id": "R06",
+        "dimension": "negation",
+        "text": "A bank-details editor loses system access for 24 hours.",
+        "expected": "not_established",
+        "id": "P028"
+      },
+      {
+        "source_id": "R02",
+        "dimension": "threshold",
+        "text": "The tolerance is converted using the bank exchange rate.",
+        "expected": "not_established",
+        "id": "P029"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "temporal",
+        "text": "The payment clock pauses for the duration of a dispute.",
+        "expected": "supported",
+        "id": "P030"
+      },
+      {
+        "source_id": "R05",
+        "dimension": "ownership",
+        "text": "The receiving team must consist of at least three employees.",
+        "expected": "not_established",
+        "id": "P031"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "exception",
+        "text": "Service acceptance must be signed on paper.",
+        "expected": "not_established",
+        "id": "P032"
+      },
+      {
+        "source_id": "R09",
+        "dimension": "temporal",
+        "text": "The payment clock continues to run during a dispute.",
+        "expected": "contradicted",
+        "id": "P033"
+      },
+      {
+        "source_id": "R12",
+        "dimension": "scope",
+        "text": "Apply tolerance to the monthly sum instead of each invoice.",
+        "expected": "contradicted",
+        "id": "P034"
+      },
+      {
+        "source_id": "R07",
+        "dimension": "exception",
+        "text": "Service acceptance can substitute for goods receipt on a service invoice.",
+        "expected": "supported",
+        "id": "P035"
+      },
+      {
+        "source_id": "R04",
+        "dimension": "modality",
+        "text": "An analyst must request corrections through a supplier portal.",
+        "expected": "not_established",
+        "id": "P036"
+      }
+    ],
+    "annotation_status": "assistant_draft",
+    "rights": "Original synthetic fixture; CC BY 4.0 for this directory corpus. No corporate or personal records."
+  }
+]
