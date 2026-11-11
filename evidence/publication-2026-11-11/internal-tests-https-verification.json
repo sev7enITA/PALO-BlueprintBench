@@ -1,0 +1,130 @@
+{
+  "verified_at": "2026-11-11T05:51:33.509900+00:00",
+  "status": "https_bytes_verified",
+  "qualification": "internal_tests",
+  "qualified": false,
+  "files": [
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench.html",
+      "status": 200,
+      "sha256": "fdbfab480173236e280bacb1b84588dbf8b41df47d0a7b0e003d6b62f3f7e0e0",
+      "bytes": 47633,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 05:51:31 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 05:49:00 GMT",
+        "etag": "W/\"ba11-6af401cc-3def03a7653b79fd;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      },
+      "equals_local": true
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/internal-tests-evidence.zip",
+      "status": 200,
+      "sha256": "750fd480db884f809dbb975619eead8a5812324bee67a8aff0c5ea42afa3f31f",
+      "bytes": 777977,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 05:51:31 GMT",
+        "Content-Type": "application/zip",
+        "Content-Length": "777977",
+        "last-modified": "Wed, 11 Nov 2026 05:50:18 GMT",
+        "etag": "\"bdef9-6af4021a-ce5ba93e17cc208d;;;\""
+      },
+      "equals_local": true
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/internal-tests-results.json",
+      "status": 200,
+      "sha256": "d73080be04c7d8b9968a29bdf89916bd5a9863e26af3bec1b160b88c3725b464",
+      "bytes": 243280,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 05:51:31 GMT",
+        "Content-Type": "application/json",
+        "last-modified": "Wed, 11 Nov 2026 05:49:03 GMT",
+        "etag": "W/\"3b650-6af401cf-e7bbdc9e1160aa96;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      },
+      "equals_local": true
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/internal-tests-report.md",
+      "status": 200,
+      "sha256": "a8880f777844574d56165a7ca4bdd363b0486ceea41ea6ff4ff927957e1729e8",
+      "bytes": 7806,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 05:51:31 GMT",
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "last-modified": "Wed, 11 Nov 2026 05:49:04 GMT",
+        "etag": "W/\"1e7e-6af401d0-209e53879697aef8;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      },
+      "equals_local": true
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/blueprintbench.css",
+      "status": 200,
+      "sha256": "94429da29ace44b3cf74bad8240ad7d5433d72de532602ef95f594afc6aa632e",
+      "bytes": 35270,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 05:51:31 GMT",
+        "Content-Type": "text/css",
+        "Cache-Control": "public, max-age=2592000",
+        "last-modified": "Wed, 11 Nov 2026 05:49:05 GMT",
+        "etag": "W/\"89c6-6af401d1-bc950080f3f9a573;gz\""
+      },
+      "equals_local": true
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/blueprintbench.js",
+      "status": 200,
+      "sha256": "594a1fb9fc7cc9ac2e5d9c1043e2ee967503aa7cb6fdf18a4bfae894ff3b99d7",
+      "bytes": 22658,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 05:51:31 GMT",
+        "Content-Type": "application/x-javascript",
+        "Cache-Control": "public, max-age=2592000",
+        "last-modified": "Wed, 11 Nov 2026 05:49:06 GMT",
+        "etag": "W/\"5882-6af401d2-4df4d03f4988e059;gz\""
+      },
+      "equals_local": true
+    }
+  ],
+  "ci": {
+    "url": "https://github.com/sev7enITA/PALO-BlueprintBench/actions/runs/42968270716",
+    "headSha": "c85624939bde546d67f3869c656cfb8b97b7ae00",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "jobs": [
+    {
+      "name": "evaluator (ubuntu-latest, 3.10)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evaluator (macos-latest, 3.13)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evaluator (windows-latest, 3.13)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "evaluator (ubuntu-latest, 3.13)",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "local_checks": {
+    "evaluator_tests": 76,
+    "analysis_tests": 7,
+    "translation_replays": 27,
+    "exported_draft_blueprints": 27,
+    "browser": "Chromium; desktop and mobile; filters and denominators; live URL; no JS errors"
+  },
+  "source_repository": "sev7enITA/PALOframework",
+  "source_commit": "0056b264c60b4a7f44edfe2facb9dd374e8a574a",
+  "scope": "Six separately published internal-study files. Released evaluator toolkit unchanged; no independent qualification."
+}
