@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: internal adversarial review
+
+Published GLM, Gemini and local Qwen countertests on a frozen 36-item sample: 96 of 108 assigned judgments, 12 missing due to GLM capacity, three items with observed disagreement. Qwen format projection, source references, response receipts and fixed-denominator replay are inspectable and exportable. Added a source-generated Dataset node. Replaced editorial headings and removed visible em/en dashes; original evidence is preserved. Primary scores remain unchanged. This is internal testing, not independent validation.
+
 ## 2026-11-11: research identity and updated presentation
 
 Added an original BlueprintBench logo and an Internal testing badge with evidence-link requirements. Preserved the PALO Framework logo. Updated the existing fifteen-slide deck with current cohort counts and real leaderboard screenshots, and added a public slide viewer. Aligned site resources, repository handbook and wiki. No scoring, qualification or model-run changes.

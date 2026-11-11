@@ -92,7 +92,7 @@ class PublicationContractTests(unittest.TestCase):
     def test_dataset_distributions_exist_and_preserve_states(self):
         g=build.dataset_graph(self.data,build.BOARD)
         datasets=[n for n in g['@graph'] if n['@type']=='Dataset']
-        self.assertEqual(len(datasets),2)
+        self.assertEqual(len(datasets),3)
         for d in datasets:
             self.assertIn('unqualified' if 'historical' in d['@id'] else 'not independently validated',d['creativeWorkStatus'])
             self.assertNotIn('license',d)  # No invented blanket licence over model responses.

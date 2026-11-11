@@ -36,7 +36,7 @@ const output = process.env.PALO_SCREENSHOT_DIR || fs.mkdtempSync(path.join(os.tm
   await page.screenshot({ path: path.join(output, 'leaderboard-desktop.png') });
   for (const cohort of ['internal', 'historical']) {
     await page.locator(`[data-inspect="nex-agi/nex-n2.6"][data-inspect-cohort="${cohort}"]`).click();
-    assert((await page.locator('#dialog-content').innerText()).includes(cohort === 'internal' ? 'The configuration contract' : 'Historical configuration'));
+    assert((await page.locator('#dialog-content').innerText()).includes(cohort === 'internal' ? 'Configuration details' : 'Historical configuration'));
     await page.keyboard.press('Escape');
   }
   await page.click('[data-cohort="internal"]');

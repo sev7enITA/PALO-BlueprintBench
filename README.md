@@ -1,6 +1,6 @@
 <p align="center">
 
-> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. The [0.3 draft repair](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1) passes 76 local tests and awaits human review; the current toolkit is still 0.2. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
+> **11 November audit notice:** This is a research programme with zero qualified results. Evaluator 0.2 has a confirmed non-claim exclusion flaw and must not be used for qualification. Historical model records are adapter smoke tests on 4,994 bytes of document text. The [0.3 draft repair](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1) passes 76 local tests and awaits human review; the current working toolkit is an unreleased 0.3 development candidate, not an independently reviewed release. See the [audit response](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/audit-response-2026-11-11.md).
 
   <img src="web/assets/logo.webp" alt="Original PALO Framework logo" width="80">
   <img src="web/assets/blueprintbench/brand/blueprintbench-logo.png" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
@@ -51,6 +51,8 @@ PALO's proposed study examines **modality, negation, ownership, conditions and e
 ## Explore the project
 
 The shared catalogue contains **18 distinct model IDs and 28 configuration/cohort records**. Internal procurement tests retain **324 assigned slots, 306 dispatched requests, 299 complete responses, 7 incomplete or failed responses and 18 pre-call-blocked assignments**. Historical adapter diagnostics remain separate. Filters, sortable internal-test columns, source inspection and a call ledger expose the evidence without assigning a qualified rank.
+
+[Internal adversarial review](internal_tests/2026-11-11-adversarial/README.md): 96 of 108 assigned reviewer judgments retained; three items with observed disagreement, including two partially reviewed panels. GLM capacity failure and Qwen format projection remain visible. Primary scores are unchanged.
 
 [Interactive leaderboard](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) · [Brand assets and testing badge](docs/brand-usage.md)
 

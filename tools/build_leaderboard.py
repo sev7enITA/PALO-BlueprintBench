@@ -77,7 +77,7 @@ def dataset_graph(data,url):
                  f"{internal['completed_calls']} complete responses, {internal['failed_calls']} failed requests and {internal['not_run']} unrun assignments. "
                  f"{internal['source_rules']} source rules and {internal['verification_probes']} seeded statements. "
                  "Agreement with assistant-draft labels; one contested label; failed assignments remain in the denominator. "
-                 "The original baseline and later extensions retain their campaign identities. No independently qualified results or PALO Blueprint Index. Post-hoc sensitivity is explicitly labelled; new translations are unreviewed drafts.")
+                 "The original baseline and later extensions retain their campaign identities. No independently qualified results or PALO Blueprint Index. Post-hoc sensitivity is explicitly labelled; translations remain assistant-draft outputs; a selected sample has separate internal model reviews.")
     page_description=('Explore internal procurement tests and historical adapter diagnostics in separate cohorts. '
                       'Inspect configurations, source evidence, missing responses and disputed labels. No independently qualified ranking.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
@@ -112,6 +112,19 @@ def dataset_graph(data,url):
             'measurementTechnique':historical['metric_notes']['structural_acceptance'],
             'variableMeasured':['Proposed and structurally accepted candidates by type','Assigned, completed and not-run adapter requests'],
             'distribution':[{'@type':'DataDownload','name':'Historical diagnostic records and limitations','contentUrl':SITE+'assets/blueprintbench/explorer-data.json','encodingFormat':'application/json'}]}]
+    adversarial_path=WEB/'downloads/blueprintbench/adversarial-tests.json'
+    if adversarial_path.exists():
+        review=read(adversarial_path);summary=review['summary'];review_id=OVERVIEW+'#adversarial-dataset'
+        graph[2]['mainEntity'].append({'@id':review_id});graph[2]['hasPart'].append({'@id':review_id})
+        graph.append({'@type':'Dataset','@id':review_id,'name':'BlueprintBench internal adversarial cross-model review',
+            'identifier':review['version'],'version':review['version'],'url':BOARD+'#adversarial-review',
+            'description':f"Internal purposive countertest: {summary['items']} selected items, {summary['assigned_review_records']} assigned judgments, {summary['valid_review_records']} usable record-level judgments and {summary['missing_review_records']} missing. {summary['unanimous']} items with three-way agreement, {summary['divergent']} decisive three-way divergences, {summary['uncertain']} uncertain and {summary['incomplete']} incomplete. GLM, Gemini and local Qwen are automated reviewers with model-family overlap. Qwen requires a disclosed structural projection on 36 records; its raw envelope passes 0 of 3 batches. Primary scores are unchanged. Not independent validation.",
+            'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'isAccessibleForFree':True,
+            'creativeWorkStatus':'Internal tests; not independently validated',
+            'measurementTechnique':'Frozen purposive sample, authors and prior labels withheld from reviewers. One pass per case, missing responses retained. Agreement is not correctness; post-hoc format projection is reported separately.',
+            'variableMeasured':['Reviewer agreement, divergence, uncertainty and missing judgments','Raw response-envelope compliance','Selected-probe replay against each reviewer, with 54 assigned slots per original model'],
+            'isBasedOn':review['protocol_url'],
+            'distribution':[{'@type':'DataDownload','name':'Internal cross-model judgments and evidence links','contentUrl':SITE+'downloads/blueprintbench/adversarial-tests.json','encodingFormat':'application/json'}]})
     graph.extend([
         {'@type':'ImageObject','@id':OVERVIEW+'#benchmark-logo','name':'PALO BlueprintBench identity',
          'contentUrl':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png','encodingFormat':'image/png',
