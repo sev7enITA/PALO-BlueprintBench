@@ -1,0 +1,92 @@
+[
+  {
+    "id": "C01",
+    "source": "A requester must never approve their own purchase request.",
+    "candidate": "No requester is permitted to approve their own purchase request."
+  },
+  {
+    "id": "C02",
+    "source": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "candidate": "Existing suppliers renewing with unchanged identity data need not repeat identity verification."
+  },
+  {
+    "id": "C03",
+    "source": "The Compliance officer performs identity verification; the buyer does not perform it.",
+    "candidate": "The Compliance officer performs identity verification; the buyer does not perform it."
+  },
+  {
+    "id": "C04",
+    "source": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+    "candidate": "Before automatic payment, an invoice needs an existing purchase order as well as a receipt record."
+  },
+  {
+    "id": "C05",
+    "source": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "candidate": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification."
+  },
+  {
+    "id": "C06",
+    "source": "A requester must never approve their own purchase request.",
+    "candidate": "A requester must never approve their own purchase request."
+  },
+  {
+    "id": "C07",
+    "source": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "candidate": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so."
+  },
+  {
+    "id": "C08",
+    "source": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+    "candidate": "An invoice requires both an existing purchase order and a receipt record before automatic payment."
+  },
+  {
+    "id": "C09",
+    "source": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+    "candidate": "Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices."
+  },
+  {
+    "id": "C10",
+    "source": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "candidate": "For purchases below EUR 5,000, approval by the department manager is optional."
+  },
+  {
+    "id": "C11",
+    "source": "A risk score of 70 or more is classified as high risk.",
+    "candidate": "A risk score of 70 or more is classified as high risk."
+  },
+  {
+    "id": "C12",
+    "source": "A risk score of 70 or more is classified as high risk.",
+    "candidate": "A risk score greater than or equal to 70 is high risk."
+  },
+  {
+    "id": "C13",
+    "source": "A requester must never approve their own purchase request.",
+    "candidate": "A requester is permitted to approve their own purchase request."
+  },
+  {
+    "id": "C14",
+    "source": "The Compliance officer performs identity verification; the buyer does not perform it.",
+    "candidate": "Identity verification is carried out by the Compliance officer, not by the buyer."
+  },
+  {
+    "id": "C15",
+    "source": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "candidate": "For purchases below EUR 5,000, the department manager must approve them."
+  },
+  {
+    "id": "C16",
+    "source": "A risk score of 70 or more is classified as high risk.",
+    "candidate": "A risk score greater than 70 is high risk; a score of exactly 70 is low risk."
+  },
+  {
+    "id": "C17",
+    "source": "The Compliance officer performs identity verification; the buyer does not perform it.",
+    "candidate": "Identity verification is carried out by the buyer, not by the Compliance officer."
+  },
+  {
+    "id": "C18",
+    "source": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "candidate": "Existing suppliers renewing with unchanged identity data must repeat identity verification."
+  }
+]

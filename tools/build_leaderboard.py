@@ -193,6 +193,28 @@ def dataset_graph(data,url):
          'caption':'Internal testing badge; requires a linked evidence record. Not a certification or qualified PALO Blueprint Index.'},
         {'@type':'ImageObject','@id':SITE+'#palo-logo','name':'PALO Framework logo',
          'contentUrl':SITE+'assets/blueprintbench/brand/palo-framework-logo.png','encodingFormat':'image/png'}])
+    roster_id = BOARD+'#model-roster'
+    graph[2]['hasPart'].append({'@id':roster_id})
+    graph.append({'@type':'WebPageElement','@id':roster_id,'url':roster_id,
+        'name':'Model roster, metric ranks and tested context',
+        'description':'18 internal configurations in the default primary-label, all-case scope. Separate agreement, completion, charge and time ranks; competition ties. Observed prompt-token ranges are distinct from advertised context ceilings. Ten historical configurations are unranked; 35 external benchmark references were not executed. CSV and JSON exports reproduce this fixed scope.',
+        'associatedMedia':[{'@type':'DataDownload','contentUrl':SITE+'downloads/blueprintbench/model-roster.csv','encodingFormat':'text/csv'},
+                           {'@type':'DataDownload','contentUrl':SITE+'downloads/blueprintbench/model-roster.json','encodingFormat':'application/json'}]})
+    calibration_path = WEB/'downloads/blueprintbench/calibration.json'
+    if calibration_path.exists():
+        calibration = read(calibration_path)
+        calibration_id = OVERVIEW+'#calibration-dataset'
+        graph[2]['hasPart'].append({'@id':calibration_id})
+        graph.append({'@type':'Dataset','@id':calibration_id,
+            'name':'BlueprintBench internal semantic calibration smoke test',
+            'identifier':calibration['version'],'version':calibration['version'],
+            'url':BOARD+'#calibration','dateModified':data['as_of'],
+            'creator':{'@id':person},'isAccessibleForFree':True,
+            'description':'18 pairs from six source rules in one exposed synthetic procurement family: six seeded alterations, six verbatim controls and six paraphrase controls. Assigned Fable 5.2 High, GLM 5.3 Max and Gemini 4 Argon High reviews. Missing and invalid responses are explicit. Expected labels are assistant drafts. No independent validation, model ranking or PALO Blueprint Index; existing scores remain unchanged.',
+            'creativeWorkStatus':'Internal calibration smoke test; assistant-draft labels; not independently validated',
+            'measurementTechnique':'Common prompt with expected labels withheld. Strict response-envelope validation followed by draft-label comparison; fixed assigned denominators, uncertainty and missing records separate. One authored family and one completed pass per reviewer; browser retries and desktop review transport are recorded in receipts. No general accuracy inference.',
+            'variableMeasured':['Detected alterations over six assigned mutations','False alarms over twelve assigned faithful controls','Missing and uncertain responses over eighteen assigned pairs','Structural envelope compliance, separately from semantic assessment'],
+            'distribution':[{'@type':'DataDownload','name':'Source-bound internal calibration judgments and review export','contentUrl':SITE+'downloads/blueprintbench/calibration.json','encodingFormat':'application/json'}]})
     return {'@context':'https://schema.org','@graph':graph}
 
 

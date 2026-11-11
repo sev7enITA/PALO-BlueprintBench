@@ -1,0 +1,5 @@
+{
+  "primary_dataset_sha256": "7d7554ab2a402b4d8dfd2bbc40d728a725602b8cf4b9fe0bf11a32497712c090",
+  "purpose": "Post-hoc regression guard preserving existing cohort bytes; not a preregistration or semantic qualification.",
+  "corpus_sha256": "2a2462c3cbfaf72505a8a6257023e72e6e9c7b1901e826bf25cc4593fafd7c32"
+}

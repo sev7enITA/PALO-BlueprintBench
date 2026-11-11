@@ -1,0 +1,27 @@
+{
+  "status": "post_capture_integrity_manifest",
+  "external_anchor_verified": false,
+  "limitations": "Local hashes detect drift against this versioned snapshot, not malicious rewriting of the lock or independent provenance. This was created after response capture, not preregistration.",
+  "files": {
+    "responses/fable-implementation-raw.txt": "5180685ef3f793c4d28d10c281dd2fe52e6933ec2187d993f24503e113e9af50",
+    "responses/fable-receipt.json": "0cc5100f828137952c4b15c9f87493b657e676cd19df7c5e5e0d7dc7e427981f",
+    "responses/gemini-receipt.json": "e5c91342c0f97b51af20e4a3ecfb4a843a78b00e41ea37d96621a84e521d8c9c",
+    "responses/fable-implementation-request.json": "0641413fa35fe679dab00f8f8e49b017cd02ac9260ade9c26a69bf7246700fd2",
+    "responses/fable-response.json": "3bf45d86b6b74ea338a9c79126ea5a7678a794e1cf5ebec5981860721437cd38",
+    "responses/gemini-endpoints.json": "5dee76fe5212fdb3b9c2f69ace911fbd654440a144b5097914a8d908164ac1be",
+    "responses/glm-endpoints.json": "86b560afaffb124a727ef803157710c799e946968bc90595f7cbb5063027fdbf",
+    "responses/gemini-implementation-prompt.txt": "b1e79963238583f02acc43a7bc336862b9e76e327ea0cc087bd35af2aec9f7be",
+    "responses/fable-raw.txt": "0bb64385bc596d5d05942831482c0bce25cebf00edf36ce46c7e6dbc7e5fe1e9",
+    "responses/glm-implementation-receipt.json": "fb4ea2fecf06edbc1c024aca4dbb79b8a3f05b24b3bdb4037d96b3850878421f",
+    "responses/glm-receipt.json": "39ee57947fc4ef8c0389a46892d19c7536d34100d0b925828e6556ae2c96e5c0",
+    "responses/fable-implementation-response.json": "6b21d7831dc5091e0f0116a15860f29108a275840d96dd6d83ea9ad189167303",
+    "responses/glm-implementation-raw.txt": "bf67eb9e2aa13523dea1ca99b7f9001d6e8f43ea614f71a35263056466682124",
+    "responses/glm-raw.txt": "03f72b80630b588183a19caf3adfd9956966ea82c4dd67974bf3bfc3a2a48db1",
+    "responses/fable-implementation-receipt.json": "6600ec1db5e1634e1ecddcb8c84da64bfefa6b555c497467c35447046cbd8e52",
+    "responses/gemini-raw.txt": "c25048c1cd33afdad9b0014631338be06fa7a7a621fe088edcf80ac59333c4f3",
+    "responses/fable-request.json": "1852d0d3c0ab94da6a9f082bf4a9e478fdf4ddaada545b381df092fb8431f2bf",
+    "responses/glm-submitted-prompt.txt": "e6a6ef019014fb046f7125223c4a20bbd8a74fece1e66c9ec591625a086b5978",
+    "responses/gemini-implementation-status.json": "ee4dfe27bb213b7999fd25086dc8e9cc1d3dccf147ef07adbc1c909946eb48b9",
+    "responses/implementation-review-prompt.txt": "f77f237d99a2c269aa3fe1778b568b8a69c269f633d5e3921c29b32507b35fee"
+  }
+}

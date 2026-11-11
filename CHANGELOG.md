@@ -79,3 +79,10 @@ Published the evaluator 0.2 non-claim flaw warning; replaced model rankings and 
 - The live page passed Schema.org validation with zero errors/warnings and Google's breadcrumb test.
 
 No independently qualified held-out entries or newly qualified Workbench release are announced.
+
+## 2026-11-11 internal calibration and roster
+
+- Added a source-bound draft proposition bank, fixed-denominator calibration replay, strict response validation and tests for missing, invalid, duplicate and uncertain judgments.
+- Recorded Fable, Gemini and GLM advisory review evidence separately from the model-ranking cohort.
+- Added a default-scope 18-model roster with four metric positions, observed input tokens, configuration exports and explicit separation of ten historical diagnostics and 35 unexecuted benchmark references.
+- Preserved primary measurement bytes and independent-qualification gates.

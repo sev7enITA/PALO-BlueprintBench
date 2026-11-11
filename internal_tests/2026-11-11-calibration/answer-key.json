@@ -1,0 +1,146 @@
+[
+  {
+    "id": "C01",
+    "rule_id": "purchase-approval:R04",
+    "expected": "faithful",
+    "variant": "paraphrase",
+    "dimension": "negation",
+    "case": "purchase-approval"
+  },
+  {
+    "id": "C02",
+    "rule_id": "supplier-onboarding:R05",
+    "expected": "faithful",
+    "variant": "paraphrase",
+    "dimension": "exception",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C03",
+    "rule_id": "supplier-onboarding:R02",
+    "expected": "faithful",
+    "variant": "unchanged",
+    "dimension": "ownership",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C04",
+    "rule_id": "invoice-matching:R01",
+    "expected": "faithful",
+    "variant": "paraphrase",
+    "dimension": "condition",
+    "case": "invoice-matching"
+  },
+  {
+    "id": "C05",
+    "rule_id": "supplier-onboarding:R05",
+    "expected": "faithful",
+    "variant": "unchanged",
+    "dimension": "exception",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C06",
+    "rule_id": "purchase-approval:R04",
+    "expected": "faithful",
+    "variant": "unchanged",
+    "dimension": "negation",
+    "case": "purchase-approval"
+  },
+  {
+    "id": "C07",
+    "rule_id": "purchase-approval:R03",
+    "expected": "faithful",
+    "variant": "unchanged",
+    "dimension": "modality",
+    "case": "purchase-approval"
+  },
+  {
+    "id": "C08",
+    "rule_id": "invoice-matching:R01",
+    "expected": "faithful",
+    "variant": "unchanged",
+    "dimension": "condition",
+    "case": "invoice-matching"
+  },
+  {
+    "id": "C09",
+    "rule_id": "invoice-matching:R01",
+    "expected": "altered",
+    "variant": "mutation",
+    "dimension": "condition",
+    "case": "invoice-matching"
+  },
+  {
+    "id": "C10",
+    "rule_id": "purchase-approval:R03",
+    "expected": "faithful",
+    "variant": "paraphrase",
+    "dimension": "modality",
+    "case": "purchase-approval"
+  },
+  {
+    "id": "C11",
+    "rule_id": "supplier-onboarding:R08",
+    "expected": "faithful",
+    "variant": "unchanged",
+    "dimension": "threshold",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C12",
+    "rule_id": "supplier-onboarding:R08",
+    "expected": "faithful",
+    "variant": "paraphrase",
+    "dimension": "threshold",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C13",
+    "rule_id": "purchase-approval:R04",
+    "expected": "altered",
+    "variant": "mutation",
+    "dimension": "negation",
+    "case": "purchase-approval"
+  },
+  {
+    "id": "C14",
+    "rule_id": "supplier-onboarding:R02",
+    "expected": "faithful",
+    "variant": "paraphrase",
+    "dimension": "ownership",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C15",
+    "rule_id": "purchase-approval:R03",
+    "expected": "altered",
+    "variant": "mutation",
+    "dimension": "modality",
+    "case": "purchase-approval"
+  },
+  {
+    "id": "C16",
+    "rule_id": "supplier-onboarding:R08",
+    "expected": "altered",
+    "variant": "mutation",
+    "dimension": "threshold",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C17",
+    "rule_id": "supplier-onboarding:R02",
+    "expected": "altered",
+    "variant": "mutation",
+    "dimension": "ownership",
+    "case": "supplier-onboarding"
+  },
+  {
+    "id": "C18",
+    "rule_id": "supplier-onboarding:R05",
+    "expected": "altered",
+    "variant": "mutation",
+    "dimension": "exception",
+    "case": "supplier-onboarding"
+  }
+]

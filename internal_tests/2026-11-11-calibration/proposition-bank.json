@@ -1,0 +1,176 @@
+[
+  {
+    "id": "purchase-approval:R03",
+    "family_id": "synthetic-procurement-author-1",
+    "case": "purchase-approval",
+    "source_id": "R03",
+    "source_text": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+    "source_sha256": "80161055123d3856982b2e5d5046a8d06544a43759c0c6043667d495ed60818b",
+    "scope": "The supplied rule only; do not infer omitted surrounding policies.",
+    "dimension": "modality",
+    "answerability": "answerable",
+    "critical": true,
+    "critical_basis": "The seeded alteration changes an authorised actor, obligation, prohibition, threshold, exception or prerequisite and could change an implementation decision. Internal draft judgment.",
+    "allowed_alternatives": [
+      {
+        "id": "purchase-approval:R03:alt1",
+        "text": "For purchases below EUR 5,000, approval by the department manager is optional."
+      }
+    ],
+    "forbidden_inferences": [
+      {
+        "id": "purchase-approval:R03:forbidden1",
+        "text": "For purchases below EUR 5,000, the department manager must approve them.",
+        "violated_rule": "purchase-approval:R03"
+      }
+    ],
+    "label_status": "assistant_draft",
+    "rubric_version": "internal-calibration-1",
+    "exposure": "engineering_exposed"
+  },
+  {
+    "id": "purchase-approval:R04",
+    "family_id": "synthetic-procurement-author-1",
+    "case": "purchase-approval",
+    "source_id": "R04",
+    "source_text": "A requester must never approve their own purchase request.",
+    "source_sha256": "15ae2f6e0dc08e6d9118059df20bed6f77828b93386f140d605c623e0fc0398c",
+    "scope": "The supplied rule only; do not infer omitted surrounding policies.",
+    "dimension": "negation",
+    "answerability": "answerable",
+    "critical": true,
+    "critical_basis": "The seeded alteration changes an authorised actor, obligation, prohibition, threshold, exception or prerequisite and could change an implementation decision. Internal draft judgment.",
+    "allowed_alternatives": [
+      {
+        "id": "purchase-approval:R04:alt1",
+        "text": "No requester is permitted to approve their own purchase request."
+      }
+    ],
+    "forbidden_inferences": [
+      {
+        "id": "purchase-approval:R04:forbidden1",
+        "text": "A requester is permitted to approve their own purchase request.",
+        "violated_rule": "purchase-approval:R04"
+      }
+    ],
+    "label_status": "assistant_draft",
+    "rubric_version": "internal-calibration-1",
+    "exposure": "engineering_exposed"
+  },
+  {
+    "id": "supplier-onboarding:R02",
+    "family_id": "synthetic-procurement-author-1",
+    "case": "supplier-onboarding",
+    "source_id": "R02",
+    "source_text": "The Compliance officer performs identity verification; the buyer does not perform it.",
+    "source_sha256": "761b0da40884b9fd03fa50dc39c34fe17515be2e3a49eaddc7e659bab0339aa0",
+    "scope": "The supplied rule only; do not infer omitted surrounding policies.",
+    "dimension": "ownership",
+    "answerability": "answerable",
+    "critical": true,
+    "critical_basis": "The seeded alteration changes an authorised actor, obligation, prohibition, threshold, exception or prerequisite and could change an implementation decision. Internal draft judgment.",
+    "allowed_alternatives": [
+      {
+        "id": "supplier-onboarding:R02:alt1",
+        "text": "Identity verification is carried out by the Compliance officer, not by the buyer."
+      }
+    ],
+    "forbidden_inferences": [
+      {
+        "id": "supplier-onboarding:R02:forbidden1",
+        "text": "Identity verification is carried out by the buyer, not by the Compliance officer.",
+        "violated_rule": "supplier-onboarding:R02"
+      }
+    ],
+    "label_status": "assistant_draft",
+    "rubric_version": "internal-calibration-1",
+    "exposure": "engineering_exposed"
+  },
+  {
+    "id": "supplier-onboarding:R08",
+    "family_id": "synthetic-procurement-author-1",
+    "case": "supplier-onboarding",
+    "source_id": "R08",
+    "source_text": "A risk score of 70 or more is classified as high risk.",
+    "source_sha256": "7d3e73894c971f44248566fa8813056f4bbbf0847c8c7dc468b0243d5a6d4e2f",
+    "scope": "The supplied rule only; do not infer omitted surrounding policies.",
+    "dimension": "threshold",
+    "answerability": "answerable",
+    "critical": true,
+    "critical_basis": "The seeded alteration changes an authorised actor, obligation, prohibition, threshold, exception or prerequisite and could change an implementation decision. Internal draft judgment.",
+    "allowed_alternatives": [
+      {
+        "id": "supplier-onboarding:R08:alt1",
+        "text": "A risk score greater than or equal to 70 is high risk."
+      }
+    ],
+    "forbidden_inferences": [
+      {
+        "id": "supplier-onboarding:R08:forbidden1",
+        "text": "A risk score greater than 70 is high risk; a score of exactly 70 is low risk.",
+        "violated_rule": "supplier-onboarding:R08"
+      }
+    ],
+    "label_status": "assistant_draft",
+    "rubric_version": "internal-calibration-1",
+    "exposure": "engineering_exposed"
+  },
+  {
+    "id": "supplier-onboarding:R05",
+    "family_id": "synthetic-procurement-author-1",
+    "case": "supplier-onboarding",
+    "source_id": "R05",
+    "source_text": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+    "source_sha256": "49040698f59f852ab8ef0d9b19b4ef1a9719886c9c3c8d439ff50a4ad6255ff8",
+    "scope": "The supplied rule only; do not infer omitted surrounding policies.",
+    "dimension": "exception",
+    "answerability": "answerable",
+    "critical": true,
+    "critical_basis": "The seeded alteration changes an authorised actor, obligation, prohibition, threshold, exception or prerequisite and could change an implementation decision. Internal draft judgment.",
+    "allowed_alternatives": [
+      {
+        "id": "supplier-onboarding:R05:alt1",
+        "text": "Existing suppliers renewing with unchanged identity data need not repeat identity verification."
+      }
+    ],
+    "forbidden_inferences": [
+      {
+        "id": "supplier-onboarding:R05:forbidden1",
+        "text": "Existing suppliers renewing with unchanged identity data must repeat identity verification.",
+        "violated_rule": "supplier-onboarding:R05"
+      }
+    ],
+    "label_status": "assistant_draft",
+    "rubric_version": "internal-calibration-1",
+    "exposure": "engineering_exposed"
+  },
+  {
+    "id": "invoice-matching:R01",
+    "family_id": "synthetic-procurement-author-1",
+    "case": "invoice-matching",
+    "source_id": "R01",
+    "source_text": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+    "source_sha256": "51f06c206ba1a94737f9122ba4b3d469aff09d2f7654725be215f52017066caa",
+    "scope": "The supplied rule only; do not infer omitted surrounding policies.",
+    "dimension": "condition",
+    "answerability": "answerable",
+    "critical": true,
+    "critical_basis": "The seeded alteration changes an authorised actor, obligation, prohibition, threshold, exception or prerequisite and could change an implementation decision. Internal draft judgment.",
+    "allowed_alternatives": [
+      {
+        "id": "invoice-matching:R01:alt1",
+        "text": "Before automatic payment, an invoice needs an existing purchase order as well as a receipt record."
+      }
+    ],
+    "forbidden_inferences": [
+      {
+        "id": "invoice-matching:R01:forbidden1",
+        "text": "Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices.",
+        "violated_rule": "invoice-matching:R01"
+      }
+    ],
+    "label_status": "assistant_draft",
+    "rubric_version": "internal-calibration-1",
+    "exposure": "engineering_exposed"
+  }
+]

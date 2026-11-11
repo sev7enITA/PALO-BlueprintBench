@@ -49,3 +49,10 @@ jobs:
           python -m unittest discover -s tools -p 'test_leaderboard_schema.py'
           python tools/build_adversarial.py --check
           python -m unittest discover -s tools -p 'test_adversarial.py'
+      - name: Verify internal calibration and model roster
+        run: |
+          python tools/calibration.py --check
+          python tools/build_calibration.py --check
+          python tools/build_roster.py --check
+          python -m unittest discover -s tools -p 'test_calibration.py'
+          python -m unittest discover -s tools -p 'test_roster.py'

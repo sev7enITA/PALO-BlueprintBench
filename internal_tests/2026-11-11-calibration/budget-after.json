@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-11T17:22:19.739859+00:00",
+  "key": {
+    "usage": 10.998006137,
+    "limit": 40,
+    "limit_remaining": 29.001993863
+  },
+  "credits": {
+    "total_usage": 18.546102922,
+    "total_credits": 60
+  },
+  "unknown_reserve_usd": 0.481264729,
+  "authorised_ceiling_usd": 40,
+  "new_recorded_inference_usd": 0.7851440000000001,
+  "web_desktop_subscription_cost": "not measured; no API charge claimed",
+  "conservative_cumulative_bound_usd": 19.027367651
+}

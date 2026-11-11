@@ -234,3 +234,9 @@ The [launch page](https://paloframework.org/PALO_BlueprintBench.html#models) and
 The [twelve-model extension](internal_tests/2026-11-11-expansion/README.md) and [legacy-identity supplement](internal_tests/2026-11-11-legacy-extension/README.md) use the same source, prompt and draft-label bytes as the original baseline, with three repetitions and 324 total assigned task slots across all campaigns. Sakana's 18 supplement assignments are pre-call blocked; no provider response or semantic result is fabricated. Counts are always read alongside completion, missing data and configuration details. Sortable columns and filters support inspection, not independently qualified ranking.
 
 New source-indexed translations are unreviewed drafts linked to raw outputs. They do not inherit the original baseline's 27 assistant-reviewed blueprint exports. Limitations, campaign selection timing, configuration differences, budget reservations and further development are documented in the [leaderboard method](docs/leaderboard-method.md). Overall authorised inference and advisory budget: USD40 including prior work.
+
+## Internal calibration and model roster
+
+[Inspect the model roster](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#model-roster) for default-scope metric ranks, serving settings and observed input-token ranges. These are distinct from catalogue context ceilings. The ten historical configurations remain unranked, and the 35 external benchmark references were not executed.
+
+[Internal calibration](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#calibration) separates response structure from draft-label comparisons on 18 elementary pairs. [Review decisions](docs/calibration-review-decisions.md) explain adopted controls and unresolved limits. This does not qualify a PALO Blueprint Index or modify the 18-model cohort.
