@@ -58,3 +58,5 @@ Malformed or incomplete capture provenance fails the build. A malformed answer w
 The reviewers read code and did not execute it. The local automated tests and browser parity receipt are separate evidence. They do not constitute a second human review or qualify a PBI result. Fable's suggested binomial bounds are not adopted because siblings within one source family are not independent trials.
 
 Gemini's initial methodological review is retained. Its subsequent long code request produced no captured answer; a shortened retry showed incomplete submitted text and was stopped. No code-review completion or implementation approval is attributed to Gemini. The implementation reviews completed by Fable and GLM remain advisory.
+
+The first GitHub matrix run passed on macOS and Ubuntu but exposed a Windows path-separator mismatch in capture-lock lookup. The lookup now uses POSIX manifest paths on every platform. The page data were unaffected; the replay portability fix is tracked separately.

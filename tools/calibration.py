@@ -162,7 +162,7 @@ def build(base=BASE):
         if path.exists() != receipt_path.exists():
             raise ValueError('Incomplete capture pair: ' + reviewer)
         if path.exists():
-            if not {str(path.relative_to(base)), str(receipt_path.relative_to(base))} <= set(capture_lock['files']):
+            if not {path.relative_to(base).as_posix(), receipt_path.relative_to(base).as_posix()} <= set(capture_lock['files']):
                 raise ValueError('Unpinned capture: ' + reviewer)
             receipt = read(path.with_name(reviewer + '-receipt.json'))
             if receipt['raw_text_sha256'] != digest(path.read_bytes()) or receipt['prompt_sha256'] != manifest['files']['review-prompt.txt']:
