@@ -1,0 +1,279 @@
+{
+  "verified_at": "2026-11-11T07:24:21.330178+00:00",
+  "status": "https_bytes_and_browser_verified",
+  "qualified": false,
+  "source_publication": {
+    "repository": "sev7enITA/PALOframework",
+    "branch": "codex/blueprintbench-publication",
+    "commit": "69be145f208e9a9a90a4a45a67c24ae014554288",
+    "files": [
+      "PALO_BlueprintBench.html",
+      "PALO_BlueprintBench_Leaderboard.html",
+      "downloads/blueprintbench/leaderboard-data.json",
+      "downloads/blueprintbench/leaderboard-method.md",
+      "downloads/blueprintbench/internal-cohort-report.md",
+      "downloads/blueprintbench/release-manifest.json",
+      "downloads/blueprintbench/structured-data-audit-2026-11-11.md",
+      "downloads/blueprintbench/internal-expansion-evidence.zip",
+      "assets/blueprintbench/leaderboard.css",
+      "assets/blueprintbench/leaderboard.js",
+      "assets/blueprintbench/blueprintbench.css",
+      "assets/blueprintbench/blueprintbench.js",
+      "scripts/public-files.mjs"
+    ]
+  },
+  "files": [
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench.html",
+      "status": 200,
+      "sha256": "929a60122888ed4dd95e315709c06fa7f2950145c5b1ef99eb0296c39b20212b",
+      "bytes": 53462,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:16 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:38 GMT",
+        "ETag": "W/\"d0d6-6af417be-3def03a7653b79fd;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/PALO_BlueprintBench_Leaderboard.html",
+      "status": 200,
+      "sha256": "384b23081483bd6625eac50c95292fe2310dc1bb753748db14132e9db8c771d0",
+      "bytes": 22590,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:16 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:39 GMT",
+        "ETag": "W/\"583e-6af417bf-9869887cd5f8022e;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/leaderboard-data.json",
+      "status": 200,
+      "sha256": "7d7554ab2a402b4d8dfd2bbc40d728a725602b8cf4b9fe0bf11a32497712c090",
+      "bytes": 3785838,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:17 GMT",
+        "Content-Type": "application/json",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:42 GMT",
+        "ETag": "W/\"39c46e-6af417c2-148f3e986b6483af;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/leaderboard-method.md",
+      "status": 200,
+      "sha256": "b3192cae624f9a7c8fad7a730538de38386bdd56832acc61e9fed32a81d19255",
+      "bytes": 8676,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:17 GMT",
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:43 GMT",
+        "ETag": "W/\"21e4-6af417c3-3506c435cb09a4e1;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/internal-cohort-report.md",
+      "status": 200,
+      "sha256": "408cf3557679ad2eadd28386e89af8b0c29fdde625b0cb229e322db3a867f879",
+      "bytes": 6624,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:17 GMT",
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:44 GMT",
+        "ETag": "W/\"19e0-6af417c4-bd2a7e8383b752e8;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/release-manifest.json",
+      "status": 200,
+      "sha256": "cb91bfd415252b95c2c1d35559f8b9b2f75aebc7c02125564e395f789968c354",
+      "bytes": 18099,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:18 GMT",
+        "Content-Type": "application/json",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:45 GMT",
+        "ETag": "W/\"46b3-6af417c5-7c34ff9b44ddf329;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/structured-data-audit-2026-11-11.md",
+      "status": 200,
+      "sha256": "4c2c56cc8d039e3d2e7765e62667cc25b2c2be792c6c803b90fbdac5f0aeb964",
+      "bytes": 3137,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:18 GMT",
+        "Content-Type": "text/markdown; charset=UTF-8",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:46 GMT",
+        "ETag": "W/\"c41-6af417c6-2692e2224440ea96;gz\"",
+        "Cache-Control": "no-cache, must-revalidate"
+      }
+    },
+    {
+      "url": "https://paloframework.org/downloads/blueprintbench/internal-expansion-evidence.zip",
+      "status": 200,
+      "sha256": "ebc0556ad4bbd0370310f3efc2ad4630d7ee5bb3b53bb1d89ef2745daa5be8f0",
+      "bytes": 1702789,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:18 GMT",
+        "Content-Type": "application/zip",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:47 GMT",
+        "ETag": "\"19fb85-6af417c7-409ed91d95cda6ab;;;\""
+      }
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/leaderboard.css",
+      "status": 200,
+      "sha256": "c7453a56456c2243fec384668a45fe90f08d1210826a750e2ae340ee4729bfd1",
+      "bytes": 35779,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:19 GMT",
+        "Content-Type": "text/css",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:49 GMT",
+        "ETag": "W/\"8bc3-6af417c9-d659ff66d8565898;gz\"",
+        "Cache-Control": "public, max-age=2592000"
+      }
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/leaderboard.js",
+      "status": 200,
+      "sha256": "7e8dffa85c429875ef170394ec1ff3c71de3031196b8f72a47e18dc304227bf8",
+      "bytes": 55444,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:19 GMT",
+        "Content-Type": "application/x-javascript",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:50 GMT",
+        "ETag": "W/\"d894-6af417ca-fc3c6b25b0f4f9f3;gz\"",
+        "Cache-Control": "public, max-age=2592000"
+      }
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/blueprintbench.css",
+      "status": 200,
+      "sha256": "9f8d3804c558994fb53f81498cde9aee7fb0c8ba9d230eab9a2e765c01ebaaf6",
+      "bytes": 37341,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:19 GMT",
+        "Content-Type": "text/css",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:51 GMT",
+        "ETag": "W/\"91dd-6af417cb-7df551a6d41fbbd6;gz\"",
+        "Cache-Control": "public, max-age=2592000"
+      }
+    },
+    {
+      "url": "https://paloframework.org/assets/blueprintbench/blueprintbench.js",
+      "status": 200,
+      "sha256": "72f3e2987e4a4f0ad1b58cbe5f1d9430e73139c9c46d86193676df48fc31feee",
+      "bytes": 25561,
+      "equals_local": true,
+      "headers": {
+        "Date": "Wed, 11 Nov 2026 07:24:19 GMT",
+        "Content-Type": "application/x-javascript",
+        "Last-Modified": "Wed, 11 Nov 2026 07:22:52 GMT",
+        "ETag": "W/\"63d9-6af417cc-2b13a716d52ae4d7;gz\"",
+        "Cache-Control": "public, max-age=2592000"
+      }
+    }
+  ],
+  "ci": {
+    "conclusion": "success",
+    "headSha": "072aa617c4baccbbae7365776358c5af49a7087f",
+    "jobs": [
+      {
+        "name": "evaluator (ubuntu-latest, 3.10)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "evaluator (windows-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "evaluator (ubuntu-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "evaluator (macos-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/sev7enITA/PALO-BlueprintBench/actions/runs/42978774370"
+  },
+  "local_tests": {
+    "evaluator": 76,
+    "original_baseline": 7,
+    "leaderboard_schema_and_integrity": 12
+  },
+  "live_browser": {
+    "status": "passed",
+    "origin": "https://paloframework.org",
+    "distinct_models": 18,
+    "configuration_rows": 28,
+    "checks": [
+      "same catalogue across pages",
+      "dark PALO palette",
+      "limitations relocation",
+      "model visibility",
+      "cohort-specific dialogs",
+      "six metric sorts both directions",
+      "unknown values last",
+      "numeric and status filters",
+      "selection",
+      "URL restore",
+      "CSV sort and qualification",
+      "actual output cap",
+      "pre-call compatibility disclosure",
+      "empty qualified layer",
+      "responsive widths"
+    ],
+    "screenshots": [
+      "leaderboard-desktop.png",
+      "leaderboard-mobile.png"
+    ]
+  },
+  "dataset": {
+    "distinct_internal_models": 18,
+    "historical_configurations": 10,
+    "assigned_tasks": 324,
+    "dispatched_requests": 306,
+    "complete_responses": 299,
+    "failed_or_incomplete": 7,
+    "not_run": 18,
+    "precall_blocks": 18
+  },
+  "schema_vocabulary_check": {
+    "source": "https://schema.org/version/latest/schemaorg-current-https.jsonld",
+    "source_sha256": "0a4b8c4c910fc831ec8695196510973390906a5ee34dc6b862dfec4d21a12f74",
+    "date": "2026-11-11",
+    "property_domain_checks": 209,
+    "errors": [],
+    "scope": "Property existence and inherited domain validation against Schema.org vocabulary; not independent benchmark validation or Google search eligibility."
+  },
+  "budget_receipt": "expanded-leaderboard-budget.json",
+  "limitations": [
+    "Internal tests remain unqualified; sorting is descriptive and not an independently validated model ranking.",
+    "The same shared dataset supplies both pages. Historical adapter diagnostics remain a separate task scope.",
+    "Public source/response hashes establish byte consistency, not independent custody or semantic ground truth.",
+    "This update uses local Schema.org vocabulary and contract checks; earlier public-validator results are not represented as new scans."
+  ]
+}
