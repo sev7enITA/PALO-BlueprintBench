@@ -1,0 +1,197 @@
+[
+  {
+    "id": "purchase-approval",
+    "source": [
+      {
+        "id": "R01",
+        "text": "A purchase above EUR 5,000 must receive Finance approval before the purchase order is issued.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R02",
+        "text": "For a purchase of exactly EUR 5,000, Finance approval is not required.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R03",
+        "text": "For a purchase below EUR 5,000, the department manager may approve it but is not obliged to do so.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R04",
+        "text": "A requester must never approve their own purchase request.",
+        "dimension": "negation"
+      },
+      {
+        "id": "R05",
+        "text": "An emergency purchase is exempt from obtaining competitive quotations.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R06",
+        "text": "The emergency quotation exemption does not remove the Finance approval requirement above EUR 5,000.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R07",
+        "text": "Only the Head of Finance can provide the Finance approval; the buyer cannot provide it.",
+        "dimension": "ownership"
+      },
+      {
+        "id": "R08",
+        "text": "If a requester cancels a request before approval, that requester must record the cancellation reason.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R09",
+        "text": "Approval records must be retained for at least 30 calendar days and cannot be deleted earlier.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R10",
+        "text": "The purchase threshold applies separately to each request, not to the monthly total for a supplier.",
+        "dimension": "scope"
+      },
+      {
+        "id": "R11",
+        "text": "Different suppliers may have the same supplier name; supplier name is not a unique identifier.",
+        "dimension": "uniqueness"
+      },
+      {
+        "id": "R12",
+        "text": "The retention period begins on the approval date, not the purchase-order date.",
+        "dimension": "temporal"
+      }
+    ]
+  },
+  {
+    "id": "supplier-onboarding",
+    "source": [
+      {
+        "id": "R01",
+        "text": "A new supplier must complete identity verification before its first purchase order.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R02",
+        "text": "The Compliance officer performs identity verification; the buyer does not perform it.",
+        "dimension": "ownership"
+      },
+      {
+        "id": "R03",
+        "text": "For a low-risk supplier, Compliance may request a site visit but is not obliged to request one.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R04",
+        "text": "A high-risk supplier must undergo an enhanced review.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R05",
+        "text": "A renewal for an existing supplier with no changed identity data is exempt from repeating identity verification.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R06",
+        "text": "The renewal exemption does not apply when the supplier changes its legal name.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R07",
+        "text": "A buyer must not activate a supplier flagged as blocked.",
+        "dimension": "negation"
+      },
+      {
+        "id": "R08",
+        "text": "A risk score of 70 or more is classified as high risk.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R09",
+        "text": "Risk scores below 70 are classified as low risk.",
+        "dimension": "scope"
+      },
+      {
+        "id": "R10",
+        "text": "Approval expires 365 calendar days after its approval date.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R11",
+        "text": "Changing a supplier bank account requires a new independent bank-account check before the next payment.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R12",
+        "text": "Two supplier records may share a contact email address; the email address is not unique.",
+        "dimension": "uniqueness"
+      }
+    ]
+  },
+  {
+    "id": "invoice-matching",
+    "source": [
+      {
+        "id": "R01",
+        "text": "An invoice requires both an existing purchase order and a receipt record before automatic payment.",
+        "dimension": "condition"
+      },
+      {
+        "id": "R02",
+        "text": "An invoice variance of exactly EUR 10 is within tolerance.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R03",
+        "text": "An invoice variance above EUR 10 blocks automatic payment.",
+        "dimension": "threshold"
+      },
+      {
+        "id": "R04",
+        "text": "For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.",
+        "dimension": "modality"
+      },
+      {
+        "id": "R05",
+        "text": "Only the receiving team records goods receipt; Accounts Payable cannot record goods receipt.",
+        "dimension": "ownership"
+      },
+      {
+        "id": "R06",
+        "text": "The person who changed supplier bank details must not approve payment to those details.",
+        "dimension": "negation"
+      },
+      {
+        "id": "R07",
+        "text": "For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R08",
+        "text": "Service acceptance does not replace the purchase-order requirement.",
+        "dimension": "exception"
+      },
+      {
+        "id": "R09",
+        "text": "A dispute freezes the payment clock until the dispute is resolved.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R10",
+        "text": "After dispute resolution, the payment clock resumes from its paused value rather than restarting at zero.",
+        "dimension": "temporal"
+      },
+      {
+        "id": "R11",
+        "text": "An invoice number is unique only within a supplier; different suppliers may reuse the same number.",
+        "dimension": "uniqueness"
+      },
+      {
+        "id": "R12",
+        "text": "The tolerance is assessed per invoice, not against the monthly sum of a supplier invoices.",
+        "dimension": "scope"
+      }
+    ]
+  }
+]

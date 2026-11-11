@@ -1,0 +1,236 @@
+[
+  {
+    "id": "V-purchase-approval-P011",
+    "case": "purchase-approval",
+    "task": "verification",
+    "text": "Each request is assessed separately against the threshold."
+  },
+  {
+    "id": "V-purchase-approval-P015",
+    "case": "purchase-approval",
+    "task": "verification",
+    "text": "Supplier names can be duplicated across different suppliers."
+  },
+  {
+    "id": "V-purchase-approval-P025",
+    "case": "purchase-approval",
+    "task": "verification",
+    "text": "Emergency purchases above EUR 5,000 are exempt from Finance approval."
+  },
+  {
+    "id": "V-purchase-approval-P030",
+    "case": "purchase-approval",
+    "task": "verification",
+    "text": "Supplier name uniquely identifies every supplier."
+  },
+  {
+    "id": "V-purchase-approval-P013",
+    "case": "purchase-approval",
+    "task": "verification",
+    "text": "Multiple related requests are automatically merged into one request."
+  },
+  {
+    "id": "V-purchase-approval-P020",
+    "case": "purchase-approval",
+    "task": "verification",
+    "text": "Emergency purchases must be reported to the board every Friday."
+  },
+  {
+    "id": "V-supplier-onboarding-P014",
+    "case": "supplier-onboarding",
+    "task": "verification",
+    "text": "Different supplier records can share the same contact email."
+  },
+  {
+    "id": "V-supplier-onboarding-P002",
+    "case": "supplier-onboarding",
+    "task": "verification",
+    "text": "A changed bank account must be checked independently before the next payment."
+  },
+  {
+    "id": "V-supplier-onboarding-P006",
+    "case": "supplier-onboarding",
+    "task": "verification",
+    "text": "A buyer may activate a blocked supplier."
+  },
+  {
+    "id": "V-supplier-onboarding-P005",
+    "case": "supplier-onboarding",
+    "task": "verification",
+    "text": "The buyer performs identity verification."
+  },
+  {
+    "id": "V-supplier-onboarding-P027",
+    "case": "supplier-onboarding",
+    "task": "verification",
+    "text": "Identity verification must use a passport rather than another identity document."
+  },
+  {
+    "id": "V-supplier-onboarding-P020",
+    "case": "supplier-onboarding",
+    "task": "verification",
+    "text": "Unchanged identity data must be certified by an external notary."
+  },
+  {
+    "id": "V-invoice-matching-P006",
+    "case": "invoice-matching",
+    "task": "verification",
+    "text": "Automatic payment requires a purchase order and a receipt record."
+  },
+  {
+    "id": "V-invoice-matching-P005",
+    "case": "invoice-matching",
+    "task": "verification",
+    "text": "A variance greater than EUR 10 prevents automatic payment."
+  },
+  {
+    "id": "V-invoice-matching-P004",
+    "case": "invoice-matching",
+    "task": "verification",
+    "text": "A service invoice with service acceptance does not need a purchase order."
+  },
+  {
+    "id": "V-invoice-matching-P011",
+    "case": "invoice-matching",
+    "task": "verification",
+    "text": "An analyst must request a corrected invoice for every blocked invoice."
+  },
+  {
+    "id": "V-invoice-matching-P002",
+    "case": "invoice-matching",
+    "task": "verification",
+    "text": "The tolerance is increased by 5 percent for overseas suppliers."
+  },
+  {
+    "id": "V-invoice-matching-P036",
+    "case": "invoice-matching",
+    "task": "verification",
+    "text": "An analyst must request corrections through a supplier portal."
+  },
+  {
+    "id": "T01",
+    "case": "purchase-approval",
+    "task": "translation",
+    "text": "For a purchase below EUR 5,000, the department manager may approve it, but is not obliged to do so.",
+    "source_rule_id": "R03"
+  },
+  {
+    "id": "T02",
+    "case": "supplier-onboarding",
+    "task": "translation",
+    "text": "A risk score below 70 is classified as low risk.",
+    "source_rule_id": "R09"
+  },
+  {
+    "id": "T03",
+    "case": "invoice-matching",
+    "task": "translation",
+    "text": "For a service invoice, an authorised service acceptance replaces the goods receipt record.",
+    "source_rule_id": "R07"
+  },
+  {
+    "id": "T04",
+    "case": "supplier-onboarding",
+    "task": "translation",
+    "text": "The Compliance officer performs identity verification and the buyer does not perform identity verification.",
+    "source_rule_id": "R02"
+  },
+  {
+    "id": "T05",
+    "case": "purchase-approval",
+    "task": "translation",
+    "text": "For any purchase whose amount is above EUR 5,000, Finance approval must be obtained before the purchase order for that purchase is issued.",
+    "source_rule_id": "R01"
+  },
+  {
+    "id": "T06",
+    "case": "invoice-matching",
+    "task": "translation",
+    "text": "An invoice is eligible for automatic payment only if both an existing purchase order and a receipt record are present.",
+    "source_rule_id": "R01"
+  },
+  {
+    "id": "T07",
+    "case": "purchase-approval",
+    "task": "translation",
+    "text": "A requester is prohibited from approving their own purchase request.",
+    "source_rule_id": "R04"
+  },
+  {
+    "id": "T08",
+    "case": "invoice-matching",
+    "task": "translation",
+    "text": "An invoice number must be unique only within a supplier; different suppliers may reuse the same number.",
+    "source_rule_id": "R11"
+  },
+  {
+    "id": "T09",
+    "case": "supplier-onboarding",
+    "task": "translation",
+    "text": "An approval expires 365 calendar days after its approval date.",
+    "source_rule_id": "R10"
+  },
+  {
+    "id": "T10",
+    "case": "invoice-matching",
+    "task": "translation",
+    "text": "For a blocked invoice, an Accounts Payable analyst may request a corrected invoice but is not obliged to request one.",
+    "source_rule_id": "R04"
+  },
+  {
+    "id": "T11",
+    "case": "purchase-approval",
+    "task": "translation",
+    "text": "The purchase threshold applies separately to each request and does not apply to the monthly total for a supplier.",
+    "source_rule_id": "R10"
+  },
+  {
+    "id": "T12",
+    "case": "supplier-onboarding",
+    "task": "translation",
+    "text": "Every new supplier must have identity verification completed before its first purchase order.",
+    "source_rule_id": "R01"
+  },
+  {
+    "id": "T13",
+    "case": "invoice-matching",
+    "task": "translation",
+    "text": "The tolerance is assessed per invoice, not against the monthly sum of a supplier's invoices.",
+    "source_rule_id": "R12"
+  },
+  {
+    "id": "T14",
+    "case": "purchase-approval",
+    "task": "translation",
+    "text": "Different suppliers may share the same supplier name, and supplier name is not a unique identifier.",
+    "source_rule_id": "R11"
+  },
+  {
+    "id": "T15",
+    "case": "supplier-onboarding",
+    "task": "translation",
+    "text": "Any new supplier must complete identity verification before its first purchase order.",
+    "source_rule_id": "R01"
+  },
+  {
+    "id": "T16",
+    "case": "purchase-approval",
+    "task": "translation",
+    "text": "The retention period begins on the approval date, not on the purchase order date.",
+    "source_rule_id": "R12"
+  },
+  {
+    "id": "T17",
+    "case": "supplier-onboarding",
+    "task": "translation",
+    "text": "For a low-risk supplier, Compliance may request a site visit but is not obliged to request a site visit.",
+    "source_rule_id": "R03"
+  },
+  {
+    "id": "T18",
+    "case": "invoice-matching",
+    "task": "translation",
+    "text": "For any blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask for a corrected invoice.",
+    "source_rule_id": "R04"
+  }
+]

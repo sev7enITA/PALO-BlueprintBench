@@ -1,0 +1,14 @@
+{
+  "files": {
+    "corpus.json": "2a2462c3cbfaf72505a8a6257023e72e6e9c7b1901e826bf25cc4593fafd7c32",
+    "invoice-matching-prompt.txt": "cba022af3b92aba56104781fc1e8694edd2a038e600081817d9b8304d806e6cd",
+    "items.json": "c51ec50a2f12d60a23808e0ab528a5cd302d10d942a24d63a8fa535e0fd8b47b",
+    "protocol.json": "c39b7a6eeb98c86028d23b96a0453d854c09f6c71b31ee7687e150ad2a029a04",
+    "purchase-approval-prompt.txt": "5fa4d7452f4dd41605b9f86c74a95b3b6de6845dab5fcc5e51ff3691749104ab",
+    "rubric.txt": "56f0723adc2cb57462a71b19031a6137bb4ec8e931aa1957f50d7d82c1e154b6",
+    "selection.json": "6bd24e004666fa330cb764fef9d9e19cffa6ee7e48c1577a04e83828333e9295",
+    "supplier-onboarding-prompt.txt": "70724b03edaad17881f2c7dcbf97253904d2d2ac6106bb776b278c9d3e9c6763"
+  },
+  "external_timestamp_verified": false,
+  "scope": "Local pre-execution freeze, not independently timestamped preregistration."
+}
