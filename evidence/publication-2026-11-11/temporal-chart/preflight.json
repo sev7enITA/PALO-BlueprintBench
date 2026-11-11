@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "file_count": 7,
+  "tls": "TLSv1.3",
+  "certificate_hostname": "ftp.hstgr.io"
+}

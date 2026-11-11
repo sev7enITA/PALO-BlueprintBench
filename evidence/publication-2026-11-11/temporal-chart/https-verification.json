@@ -1,0 +1,49 @@
+{
+  "scope": "Exact HTTPS byte verification of changed temporal-chart payload",
+  "at": "2026-11-11T12:52:06Z",
+  "files": [
+    {
+      "path": "PALO_BlueprintBench.html",
+      "http_status": 200,
+      "sha256": "bb688c603809af440998c8bf9788909e184ec5db3e4fd99a8cbb80a66f3244b9",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "CHANGELOG.html",
+      "http_status": 200,
+      "sha256": "dad15085d2662f3647951cbfba0c919f9c36a1bcefb3385b106a919743167414",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "http_status": 200,
+      "sha256": "cb2fda972b8e23032ac85a0f9f7d43147329f9a1fb05a7d05aae7eae7c028d36",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "PALO_BlueprintBench_Leaderboard.html",
+      "http_status": 200,
+      "sha256": "371b1e2252084cf3af00250b6e20548d91245e68a11f7ba8481379f5a0fde0ba",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "downloads/blueprintbench/release-manifest.json",
+      "http_status": 200,
+      "sha256": "1d955eb49e2aa1726ee9a2aa2b468aec7c9cdf4f0ef2ffda3dd1ebe6a440ea28",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.css",
+      "http_status": 200,
+      "sha256": "4520b01265a9612639ab21a04e8e5fc9be9b6dada5a36f13dac7cdf3b1b3b127",
+      "matches_published_bytes": true
+    },
+    {
+      "path": "assets/blueprintbench/leaderboard.js",
+      "http_status": 200,
+      "sha256": "83396bf37e171cd4150a44ce5d905011e892ea458c18c0116de731e544a81dc2",
+      "matches_published_bytes": true
+    }
+  ],
+  "all_passed": true
+}
