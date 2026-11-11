@@ -27,3 +27,5 @@ jobs:
         run: python tools/build_public.py --check
       - name: Replay historical structural counts offline
         run: python evidence/development-2026-11-10/replay.py
+      - name: Verify wiki navigation and README links
+        run: python tools/check_wiki.py

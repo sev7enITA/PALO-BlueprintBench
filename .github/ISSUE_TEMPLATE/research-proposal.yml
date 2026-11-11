@@ -1,0 +1,33 @@
+name: Task or methodology proposal
+description: Propose a source family, evaluation task or methodological improvement.
+title: "[Research] "
+body:
+  - type: markdown
+    attributes:
+      value: "Begin with public links and a task description. Do not upload private documents or active answer keys. A proposal is not admission to the benchmark."
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question and task boundary
+      description: What interpretation or failure should the task measure?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources, rights and exposure
+      description: Public URLs, editions, document families, known reuse terms and prior development exposure.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference preparation and acceptance
+      description: Explain blinding, adjudication, valid alternatives, answerability and a falsifiable acceptance condition.
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Relationships and conflicts
+      description: Disclose relevant maintainer, provider, sponsor or evaluation relationships.

@@ -1,0 +1,32 @@
+name: Evidence or evaluator defect
+description: Report a reproducible consistency, scoring or provenance problem.
+title: "[Evidence] "
+body:
+  - type: markdown
+    attributes:
+      value: "Use public or synthetic evidence only. Do not attach company documents, credentials, personal datasets or active held-out references."
+  - type: input
+    id: revision
+    attributes:
+      label: Release or commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps and environment
+      description: Include exact commands and the smallest public or synthetic fixture.
+    validations:
+      required: true
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Expected and observed behaviour
+      description: Name the affected metric, denominator or trust boundary.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Evidence scope and impact
+      description: Explain what claim or result is affected; distinguish measured facts from hypotheses.

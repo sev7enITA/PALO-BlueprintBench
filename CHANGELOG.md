@@ -1,5 +1,11 @@
 # Changelog
 
+## Repository handbook - 2026-11-11
+
+- Added a visual README with original project artwork, real historical screenshots, navigation, a protocol diagram, tested setup instructions and citation guidance.
+- Added eleven wiki guides with sidebar/footer, versioned source and link checks; added evidence-defect and research-proposal issue forms.
+- Corrected the README dependency statement: the evaluator requires pinned jsonschema, not only the Python standard library. No scoring or qualification change.
+
 ## Reference update - 2026-11-11
 
 - Added a primary-source comparison of all 12 entries from terryyz/llm-benchmark and eight applied comparators, including Vals AI and Andon Labs.
