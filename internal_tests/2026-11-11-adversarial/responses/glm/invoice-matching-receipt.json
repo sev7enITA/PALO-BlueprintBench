@@ -1,0 +1,15 @@
+{
+  "model_ui": "GLM-5.3",
+  "reasoning_ui": "Effort Max",
+  "case": "invoice-matching",
+  "started_at": "2026-11-11T10:44:36.058Z",
+  "observed_completed_at": "2026-11-11T10:45:44.264Z",
+  "prompt_sha256": "cba022af3b92aba56104781fc1e8694edd2a038e600081817d9b8304d806e6cd",
+  "status": "provider_capacity_blocked",
+  "message": "Currently in peak hours. GLM-5.3 is intensifying the coordination of resources, please switch to GLM-5.3-Flash for experience or try again later.",
+  "assigned_items": 12,
+  "returned_items": 0,
+  "retries": 0,
+  "model_switched": false,
+  "openrouter_calls": 0
+}

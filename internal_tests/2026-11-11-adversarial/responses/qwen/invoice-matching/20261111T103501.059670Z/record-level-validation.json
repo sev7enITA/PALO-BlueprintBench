@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "assigned": 12,
+  "received_records": 12,
+  "valid_records": 12,
+  "valid_ids": [
+    "V-invoice-matching-P005",
+    "T03",
+    "T08",
+    "V-invoice-matching-P002",
+    "V-invoice-matching-P004",
+    "T10",
+    "V-invoice-matching-P036",
+    "T13",
+    "V-invoice-matching-P011",
+    "T06",
+    "T18",
+    "V-invoice-matching-P006"
+  ],
+  "missing_ids": [],
+  "duplicate_ids": [],
+  "errors": [],
+  "warnings": [
+    "V-invoice-matching-P002: citation_missing",
+    "V-invoice-matching-P036: citation_missing"
+  ],
+  "scope": "Record contract checks after disclosed structural projection; no semantic adjudication",
+  "raw_envelope_valid": false,
+  "strict_contract_valid": false,
+  "projection": "array_to_items_object",
+  "post_hoc_projection": true,
+  "answer_fields_modified": false
+}

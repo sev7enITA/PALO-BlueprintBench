@@ -1,0 +1,12 @@
+{
+  "model_ui": "GLM-5.3",
+  "reasoning_ui": "Effort Max",
+  "case": "supplier-onboarding",
+  "started_at": "2026-11-11T10:40:05.232Z",
+  "observed_completed_at": "2026-11-11T10:44:04.306Z",
+  "prompt_sha256": "70724b03edaad17881f2c7dcbf97253904d2d2ac6106bb776b278c9d3e9c6763",
+  "raw_text_sha256": "4564a445216ff932a1f5e46cadafdfa0e28774e33ab1e5792481b5f56c73084b",
+  "capture": "Complete JSON extracted without answer edits from visible main response text; not provider API bytes",
+  "items": 12,
+  "openrouter_calls": 0
+}

@@ -1,0 +1,30 @@
+{
+  "valid": true,
+  "assigned": 12,
+  "received_records": 12,
+  "valid_records": 12,
+  "valid_ids": [
+    "V-supplier-onboarding-P014",
+    "T12",
+    "T02",
+    "T09",
+    "T17",
+    "V-supplier-onboarding-P020",
+    "T15",
+    "V-supplier-onboarding-P005",
+    "V-supplier-onboarding-P002",
+    "V-supplier-onboarding-P006",
+    "V-supplier-onboarding-P027",
+    "T04"
+  ],
+  "missing_ids": [],
+  "duplicate_ids": [],
+  "errors": [],
+  "warnings": [],
+  "scope": "Record contract checks after disclosed structural projection; no semantic adjudication",
+  "raw_envelope_valid": false,
+  "strict_contract_valid": false,
+  "projection": "array_to_items_object",
+  "post_hoc_projection": true,
+  "answer_fields_modified": false
+}

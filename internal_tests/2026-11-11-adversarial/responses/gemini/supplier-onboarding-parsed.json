@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "id": "V-supplier-onboarding-P014",
+      "relation": "supported",
+      "source_ids": [
+        "R12"
+      ],
+      "reason": "R12 states that two supplier records may share a contact email address."
+    },
+    {
+      "id": "T12",
+      "relation": "faithful",
+      "source_ids": [
+        "R01"
+      ],
+      "reason": "Preserves the mandatory identity verification requirement and timing before the first purchase order for new suppliers."
+    },
+    {
+      "id": "T02",
+      "relation": "faithful",
+      "source_ids": [
+        "R09"
+      ],
+      "reason": "Preserves the exact threshold and low-risk classification for risk scores below 70."
+    },
+    {
+      "id": "T09",
+      "relation": "faithful",
+      "source_ids": [
+        "R10"
+      ],
+      "reason": "Preserves the exact 365-calendar-day expiration period after the approval date."
+    },
+    {
+      "id": "T17",
+      "relation": "faithful",
+      "source_ids": [
+        "R03"
+      ],
+      "reason": "Replacing the pronoun 'one' with 'a site visit' preserves exact meaning and optional modality."
+    },
+    {
+      "id": "V-supplier-onboarding-P020",
+      "relation": "not_established",
+      "source_ids": [
+        "R05"
+      ],
+      "reason": "No rule mentions or requires external notary certification for unchanged identity data."
+    },
+    {
+      "id": "T15",
+      "relation": "faithful",
+      "source_ids": [
+        "R01"
+      ],
+      "reason": "Replacing 'A new supplier' with 'Any new supplier' preserves universal scope, obligation, and timing."
+    },
+    {
+      "id": "V-supplier-onboarding-P005",
+      "relation": "contradicted",
+      "source_ids": [
+        "R02"
+      ],
+      "reason": "R02 explicitly states the Compliance officer performs identity verification and the buyer does not."
+    },
+    {
+      "id": "V-supplier-onboarding-P002",
+      "relation": "supported",
+      "source_ids": [
+        "R11"
+      ],
+      "reason": "R11 requires a new independent bank-account check before the next payment when changing bank accounts."
+    },
+    {
+      "id": "V-supplier-onboarding-P006",
+      "relation": "contradicted",
+      "source_ids": [
+        "R07"
+      ],
+      "reason": "R07 prohibits a buyer from activating a supplier flagged as blocked."
+    },
+    {
+      "id": "V-supplier-onboarding-P027",
+      "relation": "not_established",
+      "source_ids": [
+        "R01",
+        "R02"
+      ],
+      "reason": "The rules do not specify which identity documents must be used for identity verification."
+    },
+    {
+      "id": "T04",
+      "relation": "faithful",
+      "source_ids": [
+        "R02"
+      ],
+      "reason": "Preserves both ownership clauses assigning identity verification to Compliance and excluding the buyer."
+    }
+  ]
+}

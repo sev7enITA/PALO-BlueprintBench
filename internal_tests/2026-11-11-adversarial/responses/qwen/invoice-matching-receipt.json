@@ -1,0 +1,43 @@
+{
+  "case": "invoice-matching",
+  "reviewer": "qwen3.8-27b-uncensored-local",
+  "requested_model": "qwen3.8-27b-uncensored",
+  "returned_model": "qwen3.8-27b-uncensored",
+  "frozen_commit": "80df7dbb33c446239370c000c0649b2aaedee30c",
+  "raw_envelope_valid": false,
+  "strict_contract_valid": false,
+  "projection": "array_to_items_object",
+  "post_hoc_projection": true,
+  "canonical_parsed_preserves_original_array": true,
+  "semantic_records_valid": 12,
+  "semantic_records_valid_definition": "Usable record fields only; not agreement with gold or independent validation",
+  "assigned_records": 12,
+  "answer_fields_modified": false,
+  "primary_scoring_unchanged": true,
+  "qualified": false,
+  "family_overlap": "Same Qwen family as Qwen Max Prime; different local model and weights. Not independent human review.",
+  "receipt_path": "responses/qwen/invoice-matching/20261111T103501.059670Z/receipt.json",
+  "receipt_sha256": "c7339b6d8b12520b8148a50903a90da13cd55a6e62a39f9551552977aefa75f2",
+  "raw_response_path": "responses/qwen/invoice-matching/20261111T103501.059670Z/raw-response.json",
+  "raw_response_sha256": "d69c0ac61f221015b656d8236a3de644bb0ec17404ad3d989e17faa2e8ace00d",
+  "raw_text_path": "responses/qwen/invoice-matching/20261111T103501.059670Z/raw-text.txt",
+  "raw_text_sha256": "8507a3fdaba810db153b38fc237c50cdde93107f1db16e1bcf10a5c6a3c79642",
+  "request_sha256": "7cee42a46e871b2bfdeeb40c0b177305416b64e8e968e7dda812f684f8f8030c",
+  "prompt_sha256": "cba022af3b92aba56104781fc1e8694edd2a038e600081817d9b8304d806e6cd",
+  "parsed_sha256": "a9e86ee1aa63688b472585bd3b926f5efce4054088a5ff82ccf18d424fe378d4",
+  "finish_reason": "stop",
+  "elapsed_seconds": 28.275,
+  "usage": {
+    "prompt_tokens": 1299,
+    "completion_tokens": 475,
+    "total_tokens": 1774
+  },
+  "warnings": [
+    "V-invoice-matching-P002: citation_missing",
+    "V-invoice-matching-P036: citation_missing"
+  ],
+  "record_errors": [],
+  "cloud_calls": 0,
+  "cloud_cost_usd": 0,
+  "local_energy_and_hardware_cost_usd": null
+}
