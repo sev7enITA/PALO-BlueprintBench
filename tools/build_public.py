@@ -10,6 +10,7 @@ def archive(files):
     with zipfile.ZipFile(stream,'w',compression=zipfile.ZIP_DEFLATED) as z:
         for name,data in sorted(files.items()):
             info=zipfile.ZipInfo(name,date_time=(2026,11,11,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+            info.create_system=3  # Fixed Unix metadata; identical ZIP headers on Windows.
             info.external_attr=0o100644 << 16;z.writestr(info,data)
     return stream.getvalue()
 
