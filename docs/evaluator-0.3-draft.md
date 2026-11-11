@@ -1,6 +1,6 @@
 # Evaluator 0.3 draft: November audit repair
 
-Status: review candidate, not a qualified scoring release. Contract `0.3.0-dev.1` deliberately rejects 0.2 records. Immutable release tags and the original historical archive remain unchanged.
+Status: review candidate, not a qualified scoring release. [Review the patch](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1); code changes remain on that branch. Contract `0.3.0-dev.1` deliberately rejects 0.2 records. Immutable release tags and the original historical archive remain unchanged.
 
 ## Exclusion and annotation boundary
 

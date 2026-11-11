@@ -1,5 +1,7 @@
 # November audit finding register
 
+[Evaluator repair pull request](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1). Evidence paths in the JSON register refer to that review branch.
+
 All 63 findings are retained. Status describes maintainer action, not independent closure. The public correction is commit `0aafacc`; evaluator repairs are an unreleased review candidate.
 
 | ID | Severity | Status | Evidence / remaining gate |

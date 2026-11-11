@@ -743,5 +743,7 @@
       ],
       "remaining": "Internal branch reference and repeated end-of-loop write removed; acquisition receipt is written once after processing."
     }
-  ]
+  ],
+  "repair_pull_request": "https://github.com/sev7enITA/PALO-BlueprintBench/pull/1",
+  "evidence_paths_ref": "codex/audit-20261111-evaluator"
 }
