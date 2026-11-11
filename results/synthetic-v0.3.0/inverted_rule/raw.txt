@@ -1,0 +1,2 @@
+Purchases above EUR 500 require owner approval.
+All purchases must have owner approval

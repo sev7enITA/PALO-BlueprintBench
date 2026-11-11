@@ -16,3 +16,9 @@ Version separately:
 Initial repository release: `v0.2.0-pilot.1`, containing explorer v0.2 and evaluator v0.1. This is an archival pilot release, not benchmark qualification. Tags and Git hashes establish artifact identity; they are not independent scientific review or trusted preregistration by themselves.
 
 Research launch release `v0.3.0-pilot.1` contains explorer 0.3.0 and evaluator/evidence contract 0.2.0. Component versions remain separate. The release manifest binds source bytes and public packages; no old tag is moved.
+
+## Internal-test corrective release
+
+`v0.3.0-internal.1` contains evaluator and evidence contract `0.3.0`, public revision `2026-11-11.3`. `release.json` is the shared identity source for the toolkit and public manifest. This is a prerelease for inspection and internal testing; independent review remains pending. It replaces the recommended download, not the bytes or tags of historical releases.
+
+The old `v0.3.0-pilot.1` tag embeds evaluator `0.2.0` with known EV-01. Its release description and separate warning asset must disclose that defect. Never replace the historical ZIP silently or move a tag. A signature, if present, identifies a signer and bytes; it does not assert independent review. Publication receipts and actual tag signature status remain separate evidence.

@@ -56,3 +56,7 @@ jobs:
           python tools/build_roster.py --check
           python -m unittest discover -s tools -p 'test_calibration.py'
           python -m unittest discover -s tools -p 'test_roster.py'
+      - name: Verify next-cycle development cases and adjudication boundaries
+        run: python -m unittest discover -s tools -p 'test_next_cycle.py'
+      - name: Verify release and vulnerable-version notice
+        run: python -m unittest discover -s tools -p 'test_release_contract.py'

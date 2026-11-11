@@ -208,6 +208,10 @@ class AuditRegressionTests(unittest.TestCase):
         return subprocess.run([sys.executable, str(Path(bb.__file__).resolve()), *map(str, args)], capture_output=True, text=True)
 
     def test_ev17_cli_evaluates_bound_fixture(self):
+        version = self.cli('--version')
+        self.assertEqual(version.returncode, 0, version.stderr)
+        self.assertIn(bb.VERSION, version.stdout)
+        self.assertIn('not independently validated', ' '.join(version.stdout.split()))
         output = self.root / 'cli-result.json'
         result = self.cli('evaluate', self.root / 'campaign.lock.json', self.root / 'run.json', '--evidence-root', self.root, '--output', output)
         self.assertEqual(result.returncode, 0, result.stderr)

@@ -1,0 +1,32 @@
+{
+  "source_path": "internal_tests/2026-11-11-frontier/corpus.json",
+  "source_sha256": "3e123360b5504942e84051c27434ec8ad1e41c7e2e91075123329818f5b10e47",
+  "legacy_labels_unchanged": true,
+  "items": [
+    {
+      "review_item": "ITEM-A",
+      "original_case_id": "invoice-matching",
+      "original_probe_id": "P002",
+      "original_expected_label": "not_established",
+      "original_source_id": "R03",
+      "frozen_original_unchanged": true
+    },
+    {
+      "review_item": "ITEM-B",
+      "original_case_id": "purchase-approval",
+      "original_probe_id": "P013",
+      "original_expected_label": "not_established",
+      "original_source_id": "R10",
+      "frozen_original_unchanged": true
+    },
+    {
+      "review_item": "ITEM-C",
+      "original_case_id": "invoice-matching",
+      "original_probe_id": "P036",
+      "original_expected_label": "not_established",
+      "original_source_id": "R04",
+      "frozen_original_unchanged": true
+    }
+  ],
+  "do_not_include_in_first_pass_reviewer_packet": true
+}

@@ -1,0 +1,45 @@
+{
+  "status": "discussion_material_after_first_pass",
+  "not_an_answer_key": true,
+  "items": [
+    {
+      "review_item": "ITEM-A",
+      "competing_interpretations": [
+        {
+          "interpretation": "A universal EUR 10 blocking threshold conflicts with any supplier-specific increase.",
+          "candidate_disposition": "contradicted"
+        },
+        {
+          "interpretation": "The overseas-supplier adjustment is an extra detail not explicitly addressed by the text.",
+          "candidate_disposition": "not_established"
+        }
+      ]
+    },
+    {
+      "review_item": "ITEM-B",
+      "competing_interpretations": [
+        {
+          "interpretation": "Applying a threshold separately to each request does not by itself specify the order-creation or merge mechanism.",
+          "candidate_disposition": "not_established"
+        },
+        {
+          "interpretation": "Automatic merging changes the unit of assessment and conflicts with the separate-request rule.",
+          "candidate_disposition": "contradicted"
+        }
+      ]
+    },
+    {
+      "review_item": "ITEM-C",
+      "competing_interpretations": [
+        {
+          "interpretation": "The mandatory correction request conflicts with an express statement that asking is optional; the unspecified portal is an additional detail.",
+          "candidate_disposition": "contradicted"
+        },
+        {
+          "interpretation": "The compound statement adds a portal-specific duty absent from the source; annotation should first split its obligation and channel components.",
+          "candidate_disposition": "split_required"
+        }
+      ]
+    }
+  ]
+}

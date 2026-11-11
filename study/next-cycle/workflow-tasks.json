@@ -1,0 +1,255 @@
+{
+  "version": "0.1.0-draft",
+  "status": "human_review_required_before_execution",
+  "purpose": "Exercise a document-to-process specification on concrete inputs; copying source sentences alone does not satisfy the output contract. This is development material, not a Workbench end-to-end run.",
+  "output_contract": {
+    "required_sections": [
+      "typed_entities_and_identifiers",
+      "decision_predicates",
+      "process_transitions",
+      "source_citations",
+      "unresolved_questions",
+      "scenario_decisions"
+    ],
+    "constraints": [
+      "Every decision predicate names actor, scope, conditions, units, threshold comparison and source units where applicable.",
+      "Every transition names its source and destination state, triggering event and guard.",
+      "Do not infer unique identifiers, total process completeness or a resolved source priority without support.",
+      "Scenario decisions must use the supplied input and cite the applicable predicates; quotation-only outputs are incomplete.",
+      "Preserve absent-information decisions separately from prohibited actions and unresolved source conflict."
+    ],
+    "assessment_status": "No implemented semantic scoring oracle or qualified blueprint exporter is claimed; experts must approve the task contract and traces."
+  },
+  "tasks": [
+    {
+      "case_id": "emergency-spares",
+      "input": {
+        "declared_outage": true,
+        "amount_eur": 12001,
+        "quotation_count": 1,
+        "director_approval": false
+      },
+      "requested_artifact": "source-linked process specification and scenario decision table",
+      "draft_expected_decisions": [
+        {
+          "decision": "director_approval_before_issue",
+          "disposition": "required",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "three_quotations",
+          "disposition": "not_required",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "requester_self_approval",
+          "disposition": "prohibited",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        }
+      ],
+      "do_not_send_draft_expected_decisions_to_model": true,
+      "scope_note": "Decisions are limited to named rules; an unmentioned prerequisite cannot be inferred satisfied."
+    },
+    {
+      "case_id": "framework-calloffs",
+      "input": {
+        "framework": "FW-A",
+        "quarter": "current",
+        "existing_net_values_eur": [
+          30000,
+          40000
+        ],
+        "request_net_eur": 10000
+      },
+      "requested_artifact": "source-linked process specification and scenario decision table",
+      "draft_expected_decisions": [
+        {
+          "decision": "new_competition_from_amount_threshold",
+          "disposition": "not_required",
+          "source_units": [
+            "F01",
+            "F02",
+            "F04",
+            "F05"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "automatic_order_merge",
+          "disposition": "not_established",
+          "source_units": [
+            "F06"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        }
+      ],
+      "do_not_send_draft_expected_decisions_to_model": true,
+      "scope_note": "Decisions are limited to named rules; an unmentioned prerequisite cannot be inferred satisfied."
+    },
+    {
+      "case_id": "bank-change",
+      "input": {
+        "declared_outage": true,
+        "destination": "new_bank_details",
+        "treasury_verification": false,
+        "independent_approval": true
+      },
+      "requested_artifact": "source-linked process specification and scenario decision table",
+      "draft_expected_decisions": [
+        {
+          "decision": "use_new_destination",
+          "disposition": "prohibited",
+          "source_units": [
+            "B01",
+            "B05"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "payment_to_previously_verified_account_by_treasury_lead",
+          "disposition": "permitted",
+          "source_units": [
+            "B04"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "mandatory_emergency_payment",
+          "disposition": "not_established",
+          "source_units": [
+            "B04"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        }
+      ],
+      "do_not_send_draft_expected_decisions_to_model": true,
+      "scope_note": "Decisions are limited to named rules; an unmentioned prerequisite cannot be inferred satisfied."
+    },
+    {
+      "case_id": "policy-transition",
+      "input": {
+        "requisition_created": "2026-10-01",
+        "amount_eur": 18000,
+        "unit": "North"
+      },
+      "requested_artifact": "source-linked process specification and scenario decision table",
+      "draft_expected_decisions": [
+        {
+          "decision": "finance_approval_from_amount_threshold",
+          "disposition": "required",
+          "source_units": [
+            "T02",
+            "T03"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "receipt_retention_period",
+          "disposition": "unresolved_conflict",
+          "source_units": [
+            "T05",
+            "T06"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        }
+      ],
+      "do_not_send_draft_expected_decisions_to_model": true,
+      "scope_note": "Decisions are limited to named rules; an unmentioned prerequisite cannot be inferred satisfied."
+    },
+    {
+      "case_id": "currency-approval",
+      "input": {
+        "request": "B",
+        "amount_usd": 12501,
+        "shipping_eur": 0,
+        "vat_eur": 0
+      },
+      "requested_artifact": "source-linked process specification and scenario decision table",
+      "draft_expected_decisions": [
+        {
+          "decision": "project_director_approval",
+          "disposition": "required",
+          "source_units": [
+            "C01",
+            "C02",
+            "C04",
+            "C05"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "requester_provides_director_approval",
+          "disposition": "prohibited",
+          "source_units": [
+            "C03"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "live_exchange_rate_substitution",
+          "disposition": "prohibited",
+          "source_units": [
+            "C01"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        }
+      ],
+      "do_not_send_draft_expected_decisions_to_model": true,
+      "scope_note": "Decisions are limited to named rules; an unmentioned prerequisite cannot be inferred satisfied."
+    },
+    {
+      "case_id": "service-acceptance",
+      "input": {
+        "milestone": "M2",
+        "dispute": "resolved",
+        "signed_acceptance": true,
+        "purchase_order": false,
+        "previously_elapsed_payment_days": 7
+      },
+      "requested_artifact": "source-linked process specification and scenario decision table",
+      "draft_expected_decisions": [
+        {
+          "decision": "payment_eligible",
+          "disposition": "prohibited",
+          "source_units": [
+            "S01",
+            "S02",
+            "S06"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "clock_restart_from_zero",
+          "disposition": "prohibited",
+          "source_units": [
+            "S04",
+            "S06"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        },
+        {
+          "decision": "thirty_day_payment_deadline",
+          "disposition": "not_established",
+          "source_units": [
+            "S06"
+          ],
+          "review_status": "assistant_draft_pending_human"
+        }
+      ],
+      "do_not_send_draft_expected_decisions_to_model": true,
+      "scope_note": "Decisions are limited to named rules; an unmentioned prerequisite cannot be inferred satisfied."
+    }
+  ]
+}

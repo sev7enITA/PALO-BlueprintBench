@@ -1,0 +1,35 @@
+{
+  "status": "awaiting_two_annotations",
+  "coordinator_registry_id": null,
+  "annotator_a_sha256": null,
+  "annotator_b_sha256": null,
+  "independence_verified_externally": false,
+  "agreement_before_adjudication": null,
+  "decisions": [
+    {
+      "review_item": "ITEM-A",
+      "final_disposition": null,
+      "accepted_alternatives": [],
+      "rationale": null,
+      "adjudicator_registry_id": null,
+      "status": "pending"
+    },
+    {
+      "review_item": "ITEM-B",
+      "final_disposition": null,
+      "accepted_alternatives": [],
+      "rationale": null,
+      "adjudicator_registry_id": null,
+      "status": "pending"
+    },
+    {
+      "review_item": "ITEM-C",
+      "final_disposition": null,
+      "accepted_alternatives": [],
+      "rationale": null,
+      "adjudicator_registry_id": null,
+      "status": "pending"
+    }
+  ],
+  "qualification": false
+}

@@ -1,12 +1,12 @@
-# Evaluator 0.3 draft: November audit repair
+# Evaluator 0.3.0: November audit repair and migration
 
-Status: review candidate, not a qualified scoring release. [Review the patch](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1); code changes remain on that branch. Contract `0.3.0-dev.1` deliberately rejects 0.2 records. Immutable release tags and the original historical archive remain unchanged.
+Status: internal-test release `v0.3.0-internal.1`, revision `2026-11-11.3`; not an independently reviewed or qualified scoring release. The repair was merged in [PR #1](https://github.com/sev7enITA/PALO-BlueprintBench/pull/1), and the dashboard integration in [PR #3](https://github.com/sev7enITA/PALO-BlueprintBench/pull/3). Contract `0.3.0` deliberately rejects 0.2 and 0.3 development-candidate records. Historical tags, archives and outputs remain unchanged. The document retains its old filename for inbound links.
 
 ## Exclusion and annotation boundary
 
 Non-claim spans may contain only ASCII space, tab, CR or LF, verified against the actual output. Arbitrary formatting, preambles, JSON wrapper keys and prose cannot be excluded by the submitter. This is stricter than moving the same untrusted label into another JSON file. The two EV-01 attacks are regression tests. A warning marks more than 50% excluded whitespace; it is a diagnostic threshold, not an evidence-quality score.
 
-This draft does not yet provide a general structured-output converter. A JSON object cannot be decomposed by silently discarding its keys or uncertainty fields. Real procurement-output ingestion and an annotated neutral second-system example remain open (EV-04, GV-02). Scope remains complete bounded annotation, not probability-sampled precision (EV-18). Atomicity and semantic judgements remain human assertions pending external verification.
+This contract does not yet provide a general structured-output converter. A JSON object cannot be decomposed by silently discarding its keys or uncertainty fields. Real procurement-output ingestion and an annotated neutral second-system example remain open (EV-04, GV-02). Scope remains complete bounded annotation, not probability-sampled precision (EV-18). Atomicity and semantic judgements remain human assertions pending external verification.
 
 Raw bytes are decoded as strict UTF-8, without newline conversion or Unicode normalisation. Offsets count Unicode code points in that exact decoded string. BOM-prefixed output is rejected; a source-preserving conversion would require a separate recorded artifact. No NFC transformation is implied.
 
@@ -45,3 +45,7 @@ The sanitised historical ledger supplement preserves recorded integer micro-USD 
 Run `python -m unittest discover -s evaluator -p 'test_*.py'` with the evaluator and historical replay requirements. New tests cover exclusion attacks, forbidden mappings, panel overlap, configuration identity, impossible times, duplicate requests, equivalence across repeats, trivial policy, CRLF, zero costs, critical categories and CLI failure paths. Acquisition tests use mocked HTTPS responses, not a live network server. Adapter tests run the unchanged historical checker.
 
 A second human reviewer has not reviewed this patch. No merge or scoring release is represented as independently approved. The remaining audit findings are tracked separately, including real-output ingestion, source rights, calibration, external custody, reviewers, signed anchors and reproduction.
+
+## Migration and release identity
+
+The single `release.json` declares component versions and public revision. Downloaded toolkits include the same metadata as `RELEASE.json`, plus an explicit warning for evaluator 0.2. Reconstruct a fresh run and lock from preserved evidence; version substitution is not migration. New annotations must explicitly cover all required fields. Any reused annotation must be justified and labelled as a conversion. The changed version does not change the independent-qualification gate.

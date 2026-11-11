@@ -11,6 +11,7 @@ WEB=ROOT/'web'
 SITE='https://paloframework.org/'
 OVERVIEW=SITE+'PALO_BlueprintBench.html'
 BOARD=SITE+'PALO_BlueprintBench_Leaderboard.html'
+DIAGNOSTICS=SITE+'PALO_BlueprintBench_Diagnostics.html'
 SOURCE_REVISION='c85624939bde546d67f3869c656cfb8b97b7ae00'
 EVIDENCE='https://github.com/sev7enITA/PALO-BlueprintBench/tree/'+SOURCE_REVISION+'/internal_tests/2026-11-11-frontier'
 EXPANSION_REVISION='2b054692baea4ca1a892e3d39453a76097a64f74'
@@ -18,14 +19,16 @@ EXPANSION_REVISION='2b054692baea4ca1a892e3d39453a76097a64f74'
 
 def read(p):return json.loads(p.read_bytes().decode('utf-8'))
 
+def publication():return read(ROOT/'release.json')
+
 
 def internal_report(data):
     d=data['internal']
     report=f'''# Internal procurement tests and model catalogue
 
-Revision {data['version']}. Internal tests; independent qualification pending.
+Publication revision {publication()['content_revision']}; frozen dataset revision {data['version']}. Internal tests; independent qualification pending.
 
-Both the [launch page]({OVERVIEW}) and [leaderboard]({BOARD}) use this evidence dataset. The internal view contains **{len(d['models'])} distinct model IDs**, with the original ten historical identities preserved in a separate adapter-diagnostics view. A model with two evidence cohorts has two configuration rows; they are not two different models.
+Both the [launch page]({OVERVIEW}) and [internal test results]({BOARD}) use this evidence dataset. The internal view contains **{len(d['models'])} distinct model IDs**, with the original ten historical identities preserved in a separate adapter-diagnostics view. A model with two evidence cohorts has two configuration rows; they are not two different models.
 
 ## Execution scope
 
@@ -79,24 +82,24 @@ def dataset_graph(data,url):
                  "Agreement with assistant-draft labels; one contested label; failed assignments remain in the denominator. "
                  "The original baseline and later extensions retain their campaign identities. No independently qualified results or PALO Blueprint Index. Post-hoc sensitivity is explicitly labelled; translations remain assistant-draft outputs; a selected sample has separate internal model reviews.")
     page_description=('Explore internal procurement tests and historical adapter diagnostics in separate cohorts. '
-                      'Explore metric-specific internal-test ranks, developer-country filters and sortable KPIs in the leaderboard, with filtered CSV and JSON exports. Inspect configurations, source evidence, missing responses and disputed labels. No independently qualified ranking.')
+                      'Explore descriptive observations with configuration filters, sortable KPIs and filtered CSV and JSON exports. Inspect source evidence, missing responses and disputed labels. No numerical model ranks or independently qualified results.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
            {'@type':'WebSite','@id':SITE+'#website','name':'PALO Framework','url':SITE,'publisher':{'@id':person}},
-           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'PALO BlueprintBench Leaderboard' if url==BOARD else 'PALO BlueprintBench | Results and Method',
+           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'PALO BlueprintBench Internal Test Results' if url==BOARD else 'PALO BlueprintBench | Results and Method',
             'image':{'@id':OVERVIEW+'#benchmark-logo'},'description':page_description,'inLanguage':'en','dateModified':data['as_of'],'isAccessibleForFree':True,
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
             'hasPart':[{'@id':internal_id},{'@id':historical_id}],
-            'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
+            'version':publication()['content_revision'],'relatedLink':DIAGNOSTICS,'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
            {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([
-               {'@type':'ListItem','position':3,'name':'Leaderboard','item':BOARD}] if url==BOARD else [])},
+               {'@type':'ListItem','position':3,'name':'Internal test results','item':BOARD}] if url==BOARD else [])},
            {'@type':'Dataset','@id':internal_id,'name':'BlueprintBench internal procurement tests and extensions, 11 November 2026',
             'identifier':internal['campaign_id'],'version':data['version'],'url':BOARD+'?cohort=internal','description':description,
             'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'temporalCoverage':data['as_of'],
             'isAccessibleForFree':True,'creativeWorkStatus':'Internal tests; assistant-draft labels; not independently validated',
-            'measurementTechnique':'Source-indexed translation and seeded-statement verification, three repetitions; fixed assigned denominators. Frozen primary labels and separate post-hoc sensitivity analysis. Metric-specific exploratory ranks use unrounded values and competition ties within the eligible internal cohort; visibility filters do not renumber them. No confidence interval or qualified model quality ranking.',
+            'measurementTechnique':'Source-indexed translation and seeded-statement verification, three repetitions; fixed assigned denominators. Frozen primary labels and separate post-hoc sensitivity analysis. Conditional agreement uses received classifications and coverage uses fixed assigned statements. Values are descriptive; no numerical model ranks or confidence intervals.',
             'variableMeasured':['Agreement with assistant-draft labels over assigned statements','Missing and conflicting classifications','Request completion over assigned requests','Provider-reported inference charges, with unknown charges separate','Observed request latency in seconds; not a throughput comparison','Source-indexed draft translation coverage and verbatim-copy counts','Recorded verification-request start times in UTC; collection order, not model release or longitudinal progress'],
             'about':[{'@type':'Thing','name':'Specification fidelity in synthetic procurement'}]+[{'@type':'Thing','name':m['name'],'identifier':m['id']} for m in internal['models']],
             'isBasedOn':[c['evidence_base']+'/manifest.json' for c in internal['campaigns']],
@@ -112,35 +115,22 @@ def dataset_graph(data,url):
             'measurementTechnique':historical['metric_notes']['structural_acceptance'],
             'variableMeasured':['Proposed and structurally accepted candidates by type','Assigned, completed and not-run adapter requests'],
             'distribution':[{'@type':'DataDownload','name':'Historical diagnostic records and limitations','contentUrl':SITE+'assets/blueprintbench/explorer-data.json','encodingFormat':'application/json'}]}]
-    adversarial_path=WEB/'downloads/blueprintbench/adversarial-tests.json'
-    if adversarial_path.exists():
-        review=read(adversarial_path);summary=review['summary'];review_id=OVERVIEW+'#adversarial-dataset'
-        graph[2]['mainEntity'].append({'@id':review_id});graph[2]['hasPart'].append({'@id':review_id})
-        graph.append({'@type':'Dataset','@id':review_id,'name':'BlueprintBench internal adversarial cross-model review',
-            'identifier':review['version'],'version':review['version'],'url':BOARD+'#adversarial-review',
-            'description':f"Internal purposive countertest: {summary['items']} selected items, {summary['assigned_review_records']} assigned judgments, {summary['valid_review_records']} usable record-level judgments and {summary['missing_review_records']} missing. {summary['unanimous']} items with three-way agreement, {summary['divergent']} decisive three-way divergences, {summary['uncertain']} uncertain and {summary['incomplete']} incomplete. GLM, Gemini and local Qwen are automated reviewers with model-family overlap. Qwen requires a disclosed structural projection on 36 records; its raw envelope passes 0 of 3 batches. Primary scores are unchanged. Not independent validation.",
-            'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'isAccessibleForFree':True,
-            'creativeWorkStatus':'Internal tests; not independently validated',
-            'measurementTechnique':'Frozen purposive sample, authors and prior labels withheld from reviewers. One pass per case, missing responses retained. Agreement is not correctness; post-hoc format projection is reported separately.',
-            'variableMeasured':['Reviewer agreement, divergence, uncertainty and missing judgments','Raw response-envelope compliance','Selected-probe replay against each reviewer, with 54 assigned slots per original model'],
-            'isBasedOn':review['protocol_url'],
-            'distribution':[{'@type':'DataDownload','name':'Internal cross-model judgments and evidence links','contentUrl':SITE+'downloads/blueprintbench/adversarial-tests.json','encodingFormat':'application/json'}]})
     # Country provenance is a dated metadata overlay, not a measurement result.
     origins = read(WEB/'downloads/blueprintbench/model-origins.json')
     country_id = OVERVIEW+'#developer-country-metadata'
     workspace_id = BOARD+'#results-workspace'
     kpis = [
-        ('matches', 'Draft-label agreement', 'ratio', 'Matched statements divided by all assigned statements in the selected case, dimension and label lens. Missing assignments remain in the denominator; agreement is not independent semantic accuracy.'),
+        ('matches', 'Matches over assigned statements', 'ratio', 'Matched statements divided by all assigned statements in the selected case, dimension and label lens. Missing assignments remain in the denominator; agreement is not independent semantic accuracy.'),
+        ('agreement', 'Conditional draft-label agreement', 'ratio', 'Matched statements divided by received classifications. Undefined without classifications; coverage and missing counts are reported separately. This is not independent semantic accuracy.'),
         ('coverage', 'Classification coverage', 'ratio', 'Classified statements divided by assigned statements in the selected semantic scope.'),
-        ('disagreements', 'Draft-label disagreements', 'statements', 'Classified statements disagreeing with the draft label. Ranking minimises their assigned-denominator ratio and requires complete classification in the selected scope.'),
-        ('missing', 'Missing classifications', 'statements', 'Assigned statements without a classification, including unrun assignments. Ranking minimises the assigned-denominator ratio.'),
+        ('disagreements', 'Draft-label disagreements', 'statements', 'Classified statements disagreeing with the provisional draft label; missing responses remain separate and labels are not independently adjudicated.'),
+        ('missing', 'Missing classifications', 'statements', 'Assigned statements without a classification, including unrun assignments; these are not classified as semantic errors.'),
         ('calls', 'Call completion', 'ratio', 'Complete calls divided by all assigned calls across both tasks and all cases, independently of semantic filters.'),
-        ('cost', 'Provider-reported charges', 'USD', 'Recorded provider charges across both tasks and all cases. Unknown charges remain separate. Charge ranking requires all assigned calls to complete and complete accounting.'),
-        ('time', 'Median request time', 'seconds', 'Observed median request duration across both tasks and all cases. Time ranking requires all assigned calls to complete; this is not a controlled throughput comparison.'),
+        ('cost', 'Provider-reported charges', 'USD', 'Recorded provider charges across both tasks and all cases. Unknown charges remain separate. Observed charges are descriptive, not a controlled cost ranking or an invoice.'),
+        ('time', 'Median request time', 'seconds', 'Observed median request duration across both tasks and all cases. Collection scheduling and serving settings differ; this is not a controlled throughput comparison.'),
         ('costpercall', 'Cost per complete call', 'USD per call', 'Provider-reported charges divided by completed calls, available only when all assigned calls complete and accounting is complete.'),
         ('input', 'Input tokens', 'tokens', 'Reported prompt-token total across dispatched calls in both tasks and all cases; unavailable if any dispatched call lacks the value.'),
         ('output', 'Completion tokens including reasoning', 'tokens', 'Reported completion-token total, including reasoning where reported in that total, across dispatched calls in both tasks and all cases; unavailable if any value is missing.'),
-        ('rank', 'Exploratory metric rank', 'ordinal position', 'Derived within the eligible internal cohort for the selected metric and semantic scope. Unrounded values and competition ties (1, 1, 3); visibility filters do not renumber positions. Blocked configurations are unranked. No PALO Blueprint Index or independent qualification.')
     ]
     measured = next(n for n in graph if n.get('@id') == internal_id)
     measured['variableMeasured'] = [
@@ -166,14 +156,14 @@ def dataset_graph(data,url):
     })
     graph.append({
         '@type':'WebPageElement','@id':workspace_id,'name':'BlueprintBench results workspace','url':BOARD+'#workspace',
-        'description':'Interactive internal-test ranking with selectable metrics, competition ties, developer-country and serving-provider filters, sortable quality and operational KPIs, and configuration comparison. Export CSV or JSON for the visible ordered rows with rank eligibility, filters, scope, denominators, data revision and country sources. Filtered downloads are generated in the browser, not permanent file endpoints. Historical diagnostics stay separate; no independently validated ranking or PALO Blueprint Index.',
+        'description':'Interactive descriptive internal-test observations with developer-country and serving-provider filters, sortable count and operational KPIs, and configuration comparison. Export CSV or JSON for the visible ordered rows with conditional agreement, coverage, filters, scope, fixed denominators, data revision and country sources. Filtered downloads are generated in the browser, not permanent file endpoints. Historical diagnostics stay separate; no independently validated ranking or PALO Blueprint Index.',
         'about':[{'@id':internal_id},{'@id':historical_id},{'@id':country_id}]
     })
     graph[2]['mentions'] = [{'@id':country_id},{'@id':workspace_id}]
     if url == BOARD:
         graph[2]['hasPart'].append({'@id':workspace_id})
     else:
-        graph[2]['relatedLink'] = BOARD+'#workspace'
+        graph[2]['relatedLink'] = [BOARD+'#workspace', DIAGNOSTICS]
     if url == OVERVIEW:
         references = read(ROOT/'docs/benchmark-references.json')
         selected = [r for r in references['entries'] if r.get('review_group') == 'visibility-expansion-20261111']
@@ -188,33 +178,15 @@ def dataset_graph(data,url):
         {'@type':'ImageObject','@id':OVERVIEW+'#benchmark-logo','name':'PALO BlueprintBench identity',
          'contentUrl':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png','encodingFormat':'image/png',
          'caption':'PALO BlueprintBench identity. A project mark, not certification or independent validation.'},
-        {'@type':'ImageObject','@id':OVERVIEW+'#testing-badge','name':'PALO BlueprintBench internal testing badge',
-         'contentUrl':SITE+'assets/blueprintbench/brand/internal-testing-badge.png','encodingFormat':'image/png',
-         'caption':'Internal testing badge; requires a linked evidence record. Not a certification or qualified PALO Blueprint Index.'},
         {'@type':'ImageObject','@id':SITE+'#palo-logo','name':'PALO Framework logo',
          'contentUrl':SITE+'assets/blueprintbench/brand/palo-framework-logo.png','encodingFormat':'image/png'}])
     roster_id = BOARD+'#model-roster'
     graph[2]['hasPart'].append({'@id':roster_id})
     graph.append({'@type':'WebPageElement','@id':roster_id,'url':roster_id,
-        'name':'Model roster, metric ranks and tested context',
-        'description':'18 internal configurations in the default primary-label, all-case scope. Separate agreement, completion, charge and time ranks; competition ties. Observed prompt-token ranges are distinct from advertised context ceilings. Ten historical configurations are unranked; 35 external benchmark references were not executed. CSV and JSON exports reproduce this fixed scope.',
+        'name':'Model roster, descriptive observations and tested context',
+        'description':'18 internal configurations in the default primary-label, all-case scope. Alphabetical order, conditional draft-label agreement, fixed assignments and missing counts; no model ranks. Observed prompt-token ranges are distinct from advertised context ceilings. Ten historical configurations are unranked; 35 external benchmark references were not executed. CSV and JSON exports reproduce this fixed scope.',
         'associatedMedia':[{'@type':'DataDownload','contentUrl':SITE+'downloads/blueprintbench/model-roster.csv','encodingFormat':'text/csv'},
                            {'@type':'DataDownload','contentUrl':SITE+'downloads/blueprintbench/model-roster.json','encodingFormat':'application/json'}]})
-    calibration_path = WEB/'downloads/blueprintbench/calibration.json'
-    if calibration_path.exists():
-        calibration = read(calibration_path)
-        calibration_id = OVERVIEW+'#calibration-dataset'
-        graph[2]['hasPart'].append({'@id':calibration_id})
-        graph.append({'@type':'Dataset','@id':calibration_id,
-            'name':'BlueprintBench internal semantic calibration smoke test',
-            'identifier':calibration['version'],'version':calibration['version'],
-            'url':BOARD+'#calibration','dateModified':data['as_of'],
-            'creator':{'@id':person},'isAccessibleForFree':True,
-            'description':'18 pairs from six source rules in one exposed synthetic procurement family: six seeded alterations, six verbatim controls and six paraphrase controls. Assigned Fable 5.2 High, GLM 5.3 Max and Gemini 4 Argon High reviews. Missing and invalid responses are explicit. Expected labels are assistant drafts. No independent validation, model ranking or PALO Blueprint Index; existing scores remain unchanged.',
-            'creativeWorkStatus':'Internal calibration smoke test; assistant-draft labels; not independently validated',
-            'measurementTechnique':'Common prompt with expected labels withheld. Strict response-envelope validation followed by draft-label comparison; fixed assigned denominators, uncertainty and missing records separate. One authored family and one completed pass per reviewer; browser retries and desktop review transport are recorded in receipts. No general accuracy inference.',
-            'variableMeasured':['Detected alterations over six assigned mutations','False alarms over twelve assigned faithful controls','Missing and uncertain responses over eighteen assigned pairs','Structural envelope compliance, separately from semantic assessment'],
-            'distribution':[{'@type':'DataDownload','name':'Source-bound internal calibration judgments and review export','contentUrl':SITE+'downloads/blueprintbench/calibration.json','encodingFormat':'application/json'}]})
     return {'@context':'https://schema.org','@graph':graph}
 
 
@@ -277,6 +249,10 @@ def outputs():
         path=WEB/name
         if not path.exists():continue
         html=path.read_text(encoding='utf-8')
+        for key,value in [('palo-publication-revision',publication()['content_revision']),('palo-release-tag',publication()['release_tag'])]:
+            tag=f'<meta name="{key}" content="{value}">'
+            pattern_meta=r'<meta name="'+key+r'"[^>]*>'
+            html=re.sub(pattern_meta,lambda _:tag,html) if re.search(pattern_meta,html) else html.replace('</head>',tag+'\n</head>')
         encoded=json.dumps(dataset_graph(data,url),separators=(',',':'),ensure_ascii=False).replace('<','\\u003c')
         pattern=r'<script[^>]*type="application/ld\+json"[^>]*>.*?</script>'
         assert len(re.findall(pattern,html,re.S))==1,name

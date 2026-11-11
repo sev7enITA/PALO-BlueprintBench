@@ -1,7 +1,7 @@
 {
-  "tool_version": "0.3.0-dev.1",
+  "tool_version": "0.3.0",
   "run_id": "synthetic-example",
-  "campaign_sha256": "ea97c186fb2a197ef9514b4e50c48efff717d419c40423dc1d98f6dbc9fb919f",
+  "campaign_sha256": "c0d42c57fbcefd0d81507cccadd3931992d960cbad02dc073ace89043e2e786d",
   "subject_id": "fixture",
   "split": "synthetic",
   "track": "interpretation",

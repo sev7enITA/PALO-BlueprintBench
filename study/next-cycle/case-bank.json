@@ -1,0 +1,948 @@
+{
+  "version": "0.1.0-draft",
+  "status": "development_material_not_gold",
+  "author": {
+    "agent": "Codex automated drafting",
+    "underlying_model_version": "unavailable_not_inferred",
+    "human_domain_review": "not_performed"
+  },
+  "qualification": false,
+  "synthetic": true,
+  "independent_source_families": 0,
+  "authoring_provenance_groups": 1,
+  "not_real_business_documents": true,
+  "cases": [
+    {
+      "id": "emergency-spares",
+      "title": "Emergency spare-parts purchasing",
+      "authoring_family": "palo-assistant-synthetic-procurement-v2",
+      "scenario_group": "emergency-spares",
+      "split": "development_exposed",
+      "documents": [
+        {
+          "id": "policy",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "E01",
+              "text": "The complete amount-triggered approval rule requires the procurement director to approve before order issuance when a purchase exceeds EUR 12,000. At or below EUR 12,000, this amount rule does not require director approval."
+            },
+            {
+              "id": "E02",
+              "text": "The requester must not approve their own request, including emergency requests."
+            },
+            {
+              "id": "E03",
+              "text": "Ordinary purchases require three quotations before order issuance."
+            }
+          ],
+          "text": "E01: The complete amount-triggered approval rule requires the procurement director to approve before order issuance when a purchase exceeds EUR 12,000. At or below EUR 12,000, this amount rule does not require director approval.\nE02: The requester must not approve their own request, including emergency requests.\nE03: Ordinary purchases require three quotations before order issuance.\n",
+          "sha256": "338bf8139aea93b8e7b875c8d6543f2c1fd64ff7ad863314d111e83c865b601f"
+        },
+        {
+          "id": "emergency-addendum",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "E04",
+              "text": "For a declared plant outage, the buyer may order with one quotation; obtaining further quotations is optional."
+            },
+            {
+              "id": "E05",
+              "text": "The plant-outage quotation exception does not waive director approval above EUR 12,000 or the requester self-approval prohibition."
+            },
+            {
+              "id": "E06",
+              "text": "For a declared outage, the buyer must record the justification within two calendar days after order issuance. The policy does not prescribe the record storage system."
+            }
+          ],
+          "text": "E04: For a declared plant outage, the buyer may order with one quotation; obtaining further quotations is optional.\nE05: The plant-outage quotation exception does not waive director approval above EUR 12,000 or the requester self-approval prohibition.\nE06: For a declared outage, the buyer must record the justification within two calendar days after order issuance. The policy does not prescribe the record storage system.\n",
+          "sha256": "d5fe0b15f70ad7c40f9a0b371baf4ab677fe1a7666d2d90f1f8d547224d1cf58"
+        }
+      ],
+      "probes": [
+        {
+          "id": "emergency-spares-P01",
+          "statement": "An outage order of EUR 12,001 requires director approval before issuance.",
+          "dimension": "exception",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "E-pair"
+        },
+        {
+          "id": "emergency-spares-P02",
+          "statement": "An outage order of EUR 12,001 does not require director approval under the amount rule.",
+          "dimension": "exception",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "E-pair"
+        },
+        {
+          "id": "emergency-spares-P03",
+          "statement": "For a declared outage the buyer is obliged to obtain three quotations.",
+          "dimension": "modality",
+          "source_units": [
+            "E03",
+            "E04"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "emergency-spares-P04",
+          "statement": "An emergency requester may approve their own request.",
+          "dimension": "negation",
+          "source_units": [
+            "E02",
+            "E05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "emergency-spares-P05",
+          "statement": "The buyer must record the outage justification no later than two calendar days after issuance.",
+          "dimension": "temporal",
+          "source_units": [
+            "E06"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "emergency-spares-P06",
+          "statement": "Director approval under E01 is triggered by an amount of exactly EUR 12,000.",
+          "dimension": "threshold",
+          "source_units": [
+            "E01"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "emergency-spares-P07",
+          "statement": "The buyer must store outage justification in the Oracle portal.",
+          "dimension": "unsupported_detail",
+          "source_units": [
+            "E06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "emergency-spares-P08",
+          "statement": "The buyer may substitute their own approval for the procurement director approval above EUR 12,000.",
+          "dimension": "ownership",
+          "source_units": [
+            "E01",
+            "E05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        }
+      ]
+    },
+    {
+      "id": "framework-calloffs",
+      "title": "Framework call-offs and aggregation",
+      "authoring_family": "palo-assistant-synthetic-procurement-v2",
+      "scenario_group": "framework-calloffs",
+      "split": "development_exposed",
+      "documents": [
+        {
+          "id": "framework",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "F01",
+              "text": "Call-offs under framework FW-A require a new competition when the cumulative net value of that framework in the current calendar quarter exceeds EUR 80,000."
+            },
+            {
+              "id": "F02",
+              "text": "Value exactly equal to EUR 80,000 does not trigger a new competition."
+            },
+            {
+              "id": "F03",
+              "text": "Cancelled call-offs count as zero in the cumulative value; a partial cancellation removes only the cancelled net amount."
+            }
+          ],
+          "text": "F01: Call-offs under framework FW-A require a new competition when the cumulative net value of that framework in the current calendar quarter exceeds EUR 80,000.\nF02: Value exactly equal to EUR 80,000 does not trigger a new competition.\nF03: Cancelled call-offs count as zero in the cumulative value; a partial cancellation removes only the cancelled net amount.\n",
+          "sha256": "2e464e915d1954f4fc7bd8c9f2c7fa01011c794c6327c398ee78cc01ed63a6c6"
+        },
+        {
+          "id": "ledger",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "F04",
+              "text": "For FW-A in the current quarter, the recorded uncancelled call-offs before request Q are EUR 30,000 and EUR 40,000."
+            },
+            {
+              "id": "F05",
+              "text": "Request Q adds EUR 10,000 net to FW-A in the same quarter; none of Q is cancelled."
+            },
+            {
+              "id": "F06",
+              "text": "Request Z belongs to framework FW-B. These records do not specify a rule for merging call-offs into a single order."
+            }
+          ],
+          "text": "F04: For FW-A in the current quarter, the recorded uncancelled call-offs before request Q are EUR 30,000 and EUR 40,000.\nF05: Request Q adds EUR 10,000 net to FW-A in the same quarter; none of Q is cancelled.\nF06: Request Z belongs to framework FW-B. These records do not specify a rule for merging call-offs into a single order.\n",
+          "sha256": "4abd01988878b9f02f4da8dd291371ed3b7dcdc50f549836f89ce3f408518509"
+        }
+      ],
+      "probes": [
+        {
+          "id": "framework-calloffs-P01",
+          "statement": "Including Q, the FW-A value is EUR 80,000.",
+          "dimension": "cross_document",
+          "source_units": [
+            "F04",
+            "F05"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "F-pair"
+        },
+        {
+          "id": "framework-calloffs-P02",
+          "statement": "Including Q, the FW-A value is EUR 90,000.",
+          "dimension": "cross_document",
+          "source_units": [
+            "F04",
+            "F05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "F-pair"
+        },
+        {
+          "id": "framework-calloffs-P03",
+          "statement": "Request Q triggers a new competition solely because the cumulative value reaches EUR 80,000.",
+          "dimension": "threshold",
+          "source_units": [
+            "F01",
+            "F02",
+            "F04",
+            "F05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "framework-calloffs-P04",
+          "statement": "The net value of a fully cancelled call-off remains in the total.",
+          "dimension": "negation",
+          "source_units": [
+            "F03"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "framework-calloffs-P05",
+          "statement": "Request Z contributes to the FW-A cumulative value.",
+          "dimension": "scope",
+          "source_units": [
+            "F01",
+            "F06"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "framework-calloffs-P06",
+          "statement": "All FW-A call-offs are automatically merged into one purchase order.",
+          "dimension": "unsupported_detail",
+          "source_units": [
+            "F06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "framework-calloffs-P07",
+          "statement": "For a partially cancelled call-off, only the cancelled net amount is removed.",
+          "dimension": "exception",
+          "source_units": [
+            "F03"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "framework-calloffs-P08",
+          "statement": "A call-off from the previous calendar quarter counts in the current-quarter FW-A total.",
+          "dimension": "temporal",
+          "source_units": [
+            "F01"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        }
+      ]
+    },
+    {
+      "id": "bank-change",
+      "title": "Supplier bank change and emergency payment",
+      "authoring_family": "palo-assistant-synthetic-procurement-v2",
+      "scenario_group": "bank-change",
+      "split": "development_exposed",
+      "documents": [
+        {
+          "id": "bank-control",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "B01",
+              "text": "A supplier bank change becomes usable only after Treasury verification and independent approval by a person who did not enter the change."
+            },
+            {
+              "id": "B02",
+              "text": "The operator who entered a bank change must not approve that change."
+            },
+            {
+              "id": "B03",
+              "text": "Email confirmation alone is insufficient for Treasury verification."
+            }
+          ],
+          "text": "B01: A supplier bank change becomes usable only after Treasury verification and independent approval by a person who did not enter the change.\nB02: The operator who entered a bank change must not approve that change.\nB03: Email confirmation alone is insufficient for Treasury verification.\n",
+          "sha256": "a30759c2c1c3f8eb86346b955c698499bc7a7842c8c3f0aa30c92523368da8cf"
+        },
+        {
+          "id": "incident-procedure",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "B04",
+              "text": "During a declared payment-system outage, the treasury lead may authorise payment to the previously verified bank account."
+            },
+            {
+              "id": "B05",
+              "text": "The outage procedure does not authorise use of new unverified bank details and does not waive separation of entry and approval."
+            },
+            {
+              "id": "B06",
+              "text": "The bank-change log records operator ID and approver ID. The documents do not define a department-tenure requirement for either role."
+            }
+          ],
+          "text": "B04: During a declared payment-system outage, the treasury lead may authorise payment to the previously verified bank account.\nB05: The outage procedure does not authorise use of new unverified bank details and does not waive separation of entry and approval.\nB06: The bank-change log records operator ID and approver ID. The documents do not define a department-tenure requirement for either role.\n",
+          "sha256": "1a372d19ba0440ee8854ff28ec5907a20ea980582ce2c99b35512d9127646c4e"
+        }
+      ],
+      "probes": [
+        {
+          "id": "bank-change-P01",
+          "statement": "An outage permits the treasury lead to authorise payment to the previously verified account.",
+          "dimension": "exception",
+          "source_units": [
+            "B04"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "B-pair"
+        },
+        {
+          "id": "bank-change-P02",
+          "statement": "An outage permits the treasury lead to authorise payment to new unverified details.",
+          "dimension": "exception",
+          "source_units": [
+            "B04",
+            "B05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "B-pair"
+        },
+        {
+          "id": "bank-change-P03",
+          "statement": "The change-entry operator may also approve that same bank change.",
+          "dimension": "ownership",
+          "source_units": [
+            "B01",
+            "B02",
+            "B05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "bank-change-P04",
+          "statement": "Email confirmation alone makes a change usable.",
+          "dimension": "condition",
+          "source_units": [
+            "B01",
+            "B03"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "bank-change-P05",
+          "statement": "A usable change needs Treasury verification as well as independent approval.",
+          "dimension": "condition",
+          "source_units": [
+            "B01"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "bank-change-P06",
+          "statement": "The bank-change approver must have three years of Treasury tenure.",
+          "dimension": "unsupported_detail",
+          "source_units": [
+            "B06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "bank-change-P07",
+          "statement": "The log must contain the operator ID and approver ID.",
+          "dimension": "ownership",
+          "source_units": [
+            "B06"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "bank-change-P08",
+          "statement": "Outage payment to the previously verified account is mandatory.",
+          "dimension": "modality",
+          "source_units": [
+            "B04"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        }
+      ]
+    },
+    {
+      "id": "policy-transition",
+      "title": "Effective dates and unresolved policy conflict",
+      "authoring_family": "palo-assistant-synthetic-procurement-v2",
+      "scenario_group": "policy-transition",
+      "split": "development_exposed",
+      "documents": [
+        {
+          "id": "policy-v1",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "T01",
+              "text": "For requisitions created before 1 October 2026, the complete amount-triggered rule requires Finance approval above EUR 20,000 and does not require it at or below EUR 20,000."
+            },
+            {
+              "id": "T02",
+              "text": "The requisition creation date determines the applicable version, even if order issuance occurs later."
+            }
+          ],
+          "text": "T01: For requisitions created before 1 October 2026, the complete amount-triggered rule requires Finance approval above EUR 20,000 and does not require it at or below EUR 20,000.\nT02: The requisition creation date determines the applicable version, even if order issuance occurs later.\n",
+          "sha256": "0d47b021faf6f8882f9ee78f822855b9f4b66678574c18846fadc333a3d43c6d"
+        },
+        {
+          "id": "policy-v2",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "T03",
+              "text": "For requisitions created on or after 1 October 2026, purchases above EUR 15,000 require Finance approval."
+            },
+            {
+              "id": "T04",
+              "text": "For requisitions created on or after 1 October 2026, an amount of exactly EUR 15,000 does not require Finance approval under this threshold."
+            }
+          ],
+          "text": "T03: For requisitions created on or after 1 October 2026, purchases above EUR 15,000 require Finance approval.\nT04: For requisitions created on or after 1 October 2026, an amount of exactly EUR 15,000 does not require Finance approval under this threshold.\n",
+          "sha256": "4b0e2d0d1825097969b37199443e48ac492a3c9e8c777e517f66a3709ef414a3"
+        },
+        {
+          "id": "local-instruction-a",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "T05",
+              "text": "For the North unit, the receipt retention period is 60 calendar days."
+            }
+          ],
+          "text": "T05: For the North unit, the receipt retention period is 60 calendar days.\n",
+          "sha256": "7610e8dbd7ec0280472080d98ff800ab870d883ea3d9d50b4e76237183b17edb"
+        },
+        {
+          "id": "local-instruction-b",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "T06",
+              "text": "For the North unit, the receipt retention period is 90 calendar days. Neither local instruction provides priority, supersession, issue date or authority information."
+            }
+          ],
+          "text": "T06: For the North unit, the receipt retention period is 90 calendar days. Neither local instruction provides priority, supersession, issue date or authority information.\n",
+          "sha256": "e0736e553f86adf8835d76793d73691b1e6c9a145d7479ea89252010af5ac0f0"
+        }
+      ],
+      "probes": [
+        {
+          "id": "policy-transition-P01",
+          "statement": "A requisition created on 30 September 2026 for EUR 18,000 triggers Finance approval under the amount threshold.",
+          "dimension": "temporal",
+          "source_units": [
+            "T01",
+            "T02"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "T-pair"
+        },
+        {
+          "id": "policy-transition-P02",
+          "statement": "A requisition created on 1 October 2026 for EUR 18,000 triggers Finance approval under the amount threshold.",
+          "dimension": "temporal",
+          "source_units": [
+            "T02",
+            "T03"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "T-pair"
+        },
+        {
+          "id": "policy-transition-P03",
+          "statement": "A requisition created on 1 October 2026 for exactly EUR 15,000 triggers threshold approval.",
+          "dimension": "threshold",
+          "source_units": [
+            "T04"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "policy-transition-P04",
+          "statement": "The order-issuance date selects the policy version.",
+          "dimension": "temporal",
+          "source_units": [
+            "T02"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "policy-transition-P05",
+          "statement": "The applicable North-unit retention period is unambiguously 60 days.",
+          "dimension": "conflict",
+          "source_units": [
+            "T05",
+            "T06"
+          ],
+          "draft_disposition": "unresolved_conflict",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "policy-transition-P06",
+          "statement": "Instruction B overrides instruction A because its identifier is later alphabetically.",
+          "dimension": "precedence",
+          "source_units": [
+            "T05",
+            "T06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "policy-transition-P07",
+          "statement": "The documents contain incompatible North-unit retention periods without a stated resolution rule.",
+          "dimension": "conflict",
+          "source_units": [
+            "T05",
+            "T06"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "policy-transition-P08",
+          "statement": "The two North-unit instructions agree on the retention period.",
+          "dimension": "negation",
+          "source_units": [
+            "T05",
+            "T06"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        }
+      ]
+    },
+    {
+      "id": "currency-approval",
+      "title": "Currency conversion and approval ownership",
+      "authoring_family": "palo-assistant-synthetic-procurement-v2",
+      "scenario_group": "currency-approval",
+      "split": "development_exposed",
+      "documents": [
+        {
+          "id": "currency-policy",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "C01",
+              "text": "For USD requests, convert to EUR using the rate printed in the approval workbook; do not use a live exchange rate."
+            },
+            {
+              "id": "C02",
+              "text": "The project director must approve when the converted amount exceeds EUR 10,000. Exactly EUR 10,000 is below this approval trigger."
+            },
+            {
+              "id": "C03",
+              "text": "The requester may prepare the conversion but cannot give the project-director approval."
+            }
+          ],
+          "text": "C01: For USD requests, convert to EUR using the rate printed in the approval workbook; do not use a live exchange rate.\nC02: The project director must approve when the converted amount exceeds EUR 10,000. Exactly EUR 10,000 is below this approval trigger.\nC03: The requester may prepare the conversion but cannot give the project-director approval.\n",
+          "sha256": "debc3dab741770612eebddf1a6814b8c1317b70013978a09b1eeebcf859586d9"
+        },
+        {
+          "id": "approval-workbook",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "C04",
+              "text": "For this fictional approval batch, one USD equals 0.80 EUR."
+            },
+            {
+              "id": "C05",
+              "text": "Request A is USD 12,500. Request B is USD 12,501."
+            },
+            {
+              "id": "C06",
+              "text": "Approval amounts include shipping and exclude VAT. Request A and B have no shipping charge or VAT. The documents do not state a rounding rule for fractional euro cents."
+            }
+          ],
+          "text": "C04: For this fictional approval batch, one USD equals 0.80 EUR.\nC05: Request A is USD 12,500. Request B is USD 12,501.\nC06: Approval amounts include shipping and exclude VAT. Request A and B have no shipping charge or VAT. The documents do not state a rounding rule for fractional euro cents.\n",
+          "sha256": "af6973d63edcb17c0b3871fc92892c97de5ebe3eb28b3856132365ec94a6a55c"
+        }
+      ],
+      "probes": [
+        {
+          "id": "currency-approval-P01",
+          "statement": "Request A is EUR 10,000 and does not trigger project-director approval under C02.",
+          "dimension": "threshold",
+          "source_units": [
+            "C01",
+            "C02",
+            "C04",
+            "C05"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "C-pair"
+        },
+        {
+          "id": "currency-approval-P02",
+          "statement": "Request A exceeds the EUR 10,000 approval threshold.",
+          "dimension": "threshold",
+          "source_units": [
+            "C02",
+            "C04",
+            "C05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "C-pair"
+        },
+        {
+          "id": "currency-approval-P03",
+          "statement": "Request B converts to EUR 10,000.80 and triggers project-director approval.",
+          "dimension": "cross_document",
+          "source_units": [
+            "C02",
+            "C04",
+            "C05"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "currency-approval-P04",
+          "statement": "The requester may give the project-director approval.",
+          "dimension": "ownership",
+          "source_units": [
+            "C03"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "currency-approval-P05",
+          "statement": "A live market rate must replace the workbook rate.",
+          "dimension": "precedence",
+          "source_units": [
+            "C01",
+            "C04"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "currency-approval-P06",
+          "statement": "Shipping is excluded from the approval amount.",
+          "dimension": "scope",
+          "source_units": [
+            "C06"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "currency-approval-P07",
+          "statement": "Fractional euro cents must be rounded upward.",
+          "dimension": "unsupported_detail",
+          "source_units": [
+            "C06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "currency-approval-P08",
+          "statement": "VAT is excluded from the approval amount.",
+          "dimension": "scope",
+          "source_units": [
+            "C06"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        }
+      ]
+    },
+    {
+      "id": "service-acceptance",
+      "title": "Milestone acceptance, partial completion and clocks",
+      "authoring_family": "palo-assistant-synthetic-procurement-v2",
+      "scenario_group": "service-acceptance",
+      "split": "development_exposed",
+      "documents": [
+        {
+          "id": "service-contract",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "S01",
+              "text": "Payment requires a purchase order and signed acceptance of the billed milestone."
+            },
+            {
+              "id": "S02",
+              "text": "For services, signed milestone acceptance replaces the goods-receipt requirement only; it does not replace the purchase order."
+            },
+            {
+              "id": "S03",
+              "text": "Only the named service owner may sign acceptance; Accounts Payable may register it but may not sign it."
+            }
+          ],
+          "text": "S01: Payment requires a purchase order and signed acceptance of the billed milestone.\nS02: For services, signed milestone acceptance replaces the goods-receipt requirement only; it does not replace the purchase order.\nS03: Only the named service owner may sign acceptance; Accounts Payable may register it but may not sign it.\n",
+          "sha256": "19a6d7daa1028313fc1676d162ca68cb1208cd2570259083dc61e5ffbd29693f"
+        },
+        {
+          "id": "dispute-addendum",
+          "source_type": "fictional_original_text",
+          "units": [
+            {
+              "id": "S04",
+              "text": "A disputed milestone pauses its payment clock. When the dispute resolves, the clock resumes from its prior elapsed value."
+            },
+            {
+              "id": "S05",
+              "text": "Acceptance of milestone M1 does not accept milestone M2. A dispute on M2 does not pause M1."
+            },
+            {
+              "id": "S06",
+              "text": "Before its dispute, M2 had accrued 7 payment days. The dispute has now resolved. M2 has signed acceptance but no purchase order. No payment due-day total or automatic reminder channel is specified."
+            }
+          ],
+          "text": "S04: A disputed milestone pauses its payment clock. When the dispute resolves, the clock resumes from its prior elapsed value.\nS05: Acceptance of milestone M1 does not accept milestone M2. A dispute on M2 does not pause M1.\nS06: Before its dispute, M2 had accrued 7 payment days. The dispute has now resolved. M2 has signed acceptance but no purchase order. No payment due-day total or automatic reminder channel is specified.\n",
+          "sha256": "774c4ea2fd326044c30b40d52b95273b03ad6717f23377e1e65c37e2af75aa48"
+        }
+      ],
+      "probes": [
+        {
+          "id": "service-acceptance-P01",
+          "statement": "After dispute resolution, M2 resumes with 7 accrued payment days.",
+          "dimension": "temporal",
+          "source_units": [
+            "S04",
+            "S06"
+          ],
+          "draft_disposition": "supported",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "S-pair"
+        },
+        {
+          "id": "service-acceptance-P02",
+          "statement": "After dispute resolution, M2 restarts with zero accrued payment days.",
+          "dimension": "temporal",
+          "source_units": [
+            "S04",
+            "S06"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": "S-pair"
+        },
+        {
+          "id": "service-acceptance-P03",
+          "statement": "M2 is now eligible for payment because its dispute is resolved and its acceptance is signed.",
+          "dimension": "exception",
+          "source_units": [
+            "S01",
+            "S02",
+            "S04",
+            "S06"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "service-acceptance-P04",
+          "statement": "Accounts Payable may sign milestone acceptance.",
+          "dimension": "ownership",
+          "source_units": [
+            "S03"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "service-acceptance-P05",
+          "statement": "A dispute on M2 pauses M1.",
+          "dimension": "scope",
+          "source_units": [
+            "S05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "service-acceptance-P06",
+          "statement": "M1 acceptance establishes M2 acceptance.",
+          "dimension": "scope",
+          "source_units": [
+            "S05"
+          ],
+          "draft_disposition": "contradicted",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "service-acceptance-P07",
+          "statement": "The total allowed payment time is 30 days.",
+          "dimension": "unanswerability",
+          "source_units": [
+            "S06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        },
+        {
+          "id": "service-acceptance-P08",
+          "statement": "Automatic reminders must use email.",
+          "dimension": "unsupported_detail",
+          "source_units": [
+            "S06"
+          ],
+          "draft_disposition": "not_established",
+          "label_status": "assistant_draft",
+          "human_adjudication": "pending",
+          "minimal_pair_group": null
+        }
+      ]
+    }
+  ]
+}

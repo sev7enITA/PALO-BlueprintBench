@@ -1,6 +1,6 @@
 # Evidence contract and metrics v0.2
 
-> This document describes historical evaluator 0.2. The incompatible, unreleased 0.3 repair contract and limitations are documented in [evaluator-0.3-draft.md](evaluator-0.3-draft.md). Do not interpret the draft as a qualified scoring release.
+> This document describes historical evaluator 0.2. The incompatible 0.3.0 internal-test repair contract and limitations are documented in [evaluator-0.3-draft.md](evaluator-0.3-draft.md). Do not interpret this internal-test release as independently approved or scientifically qualified.
 
 The executable contract is `evaluator/evidence.schema.json` (JSON Schema Draft 2020-12). The evaluator validates each record against its named definition and applies cross-record invariants. `docs/run-record-fields.json` remains a broader research roadmap, not a competing executable schema. Install the pinned evaluator requirements before use.
 

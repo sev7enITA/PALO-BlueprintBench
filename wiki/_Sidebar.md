@@ -14,4 +14,4 @@
 
 [Explorer](https://paloframework.org/PALO_BlueprintBench.html) | [Source repository](https://github.com/sev7enITA/PALO-BlueprintBench)
 
-- [[Identity and testing badge|Brand-and-presentation]]
+- [[Project identity and release|Brand-and-presentation]]

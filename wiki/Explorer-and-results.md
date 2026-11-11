@@ -28,4 +28,10 @@ The published set contains 26 retained attempts and no qualified held-out result
 
 ## Internal cross-model review
 
-The [review panel](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html#adversarial-review) exposes 96/108 assigned judgments from GLM, Gemini and local Qwen over 36 selected items. Three items have observed disagreements. Missing GLM responses, Qwen array projection, source references and raw responses are retained. This purposive internal test does not change the primary scores or establish independent validation. [Protocol and evidence](https://github.com/sev7enITA/PALO-BlueprintBench/tree/4494d6b/internal_tests/2026-11-11-adversarial).
+The [review panel](https://paloframework.org/PALO_BlueprintBench_Diagnostics.html#adversarial-review) exposes 96/108 assigned judgments from GLM, Gemini and local Qwen over 36 selected items. Three items have observed disagreements. Missing GLM responses, Qwen array projection, source references and raw responses are retained. This purposive internal test does not change the primary scores or establish independent validation. [Protocol and evidence](https://github.com/sev7enITA/PALO-BlueprintBench/tree/4494d6b/internal_tests/2026-11-11-adversarial).
+
+## Revision 2026-11-11.3
+
+Numerical quality, completion, cost and time ranks are suspended. The explorer retains descriptive sorting, configuration filters, charts, comparison and CSV/JSON exports. Agreement on classified responses, coverage and matches across all assigned opportunities are separate measures. The near-ceiling synthetic pilot cannot establish model superiority. Reviewer capture diagnostics are separate from model results.
+
+[Next-cycle case coverage and label adjudication](https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/next-cycle-plan.md) describes draft development cases and human review gates. Coverage completeness is not statistical sufficiency.
