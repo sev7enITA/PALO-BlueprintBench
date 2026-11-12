@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[failed: the response did not finish (Network connection lost.).]\n\n(model: google/gemini-4-argon, generation id: gen-1794435418-QR2NJexoA7e09rRVIIgr, input tokens: 0, output tokens: 0, reasoning tokens: 0)"
+    }
+  ],
+  "isError": true
+}

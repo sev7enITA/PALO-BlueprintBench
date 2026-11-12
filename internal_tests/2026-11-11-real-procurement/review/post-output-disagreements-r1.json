@@ -1,0 +1,463 @@
+{
+  "review_id": "real-procurement-post-output-disagreements-r1",
+  "created_at": "2026-11-11T22:37:17.180757+00:00",
+  "status": "internal_model_assisted_advisory_review",
+  "qualified": false,
+  "independent_human_review": false,
+  "reviewer": "Codex sub-agent next_cycle_semantic_review",
+  "reviewer_model_id": "unavailable_not_inferred",
+  "reviewer_conflict": "This same agent prepared the assistant-draft task design and assessment key. This post-output review is not blind or independent.",
+  "scope": "The first-repetition OpenAI and Anthropic FEMA outputs in the recorded corrected-analysis snapshot; no claims about later repetitions or every other output.",
+  "analysis_snapshot_evidence": {
+    "path": "internal_tests/2026-11-11-real-procurement/analysis-corrected.json",
+    "sha256": "461bd9f5848d80f2ac01a29664591fda4ca8b35b6fd2f4cbf5935f1fb4b601b3"
+  },
+  "analysis_summary_at_review": {
+    "assigned_scenarios": 324,
+    "assessed_scenarios": 72,
+    "matched_scenarios": 66,
+    "disagreed_scenarios": 6,
+    "missing_scenarios": 228,
+    "unassessed_scenarios": 24,
+    "assigned_decisions": 1188,
+    "assessed_decisions": 264,
+    "matched_decisions": 258,
+    "disagreed_decisions": 6,
+    "missing_decisions": 840,
+    "unassessed_decisions": 84,
+    "unknown_predictions": 12,
+    "assigned_calls": 27,
+    "recorded_calls": 9,
+    "completed_calls": 6,
+    "structurally_valid_calls": 6,
+    "source_quote_match_calls": 6,
+    "known_cost_usd": 2.4091394999999998,
+    "unknown_cost_count": 1,
+    "median_elapsed_seconds": 118.105,
+    "cost_complete_for_recorded_calls": false
+  },
+  "frozen_design_evidence": {
+    "path": "internal_tests/2026-11-11-real-procurement/design/task-design.json",
+    "sha256": "f05f9228428b426a7b624cc7466059c72ee6fe3fac169f14e3ba200db883c6e2"
+  },
+  "frozen_key_evidence": {
+    "path": "internal_tests/2026-11-11-real-procurement/design/assessment-key.json",
+    "sha256": "12b75c286922d3bf5e5b8a633d6311e00bd8863e4caa4d370a41e4144df0a13f"
+  },
+  "summary": {
+    "reviewed_assignment_ids": [
+      "fema-m0-r1",
+      "fema-m1-r1"
+    ],
+    "observed_disagreements": 6,
+    "affected_scenario_ids": [
+      "FEMA-01",
+      "FEMA-02",
+      "FEMA-12"
+    ],
+    "affected_output": "davis_bacon_clause_required",
+    "distinct_underlying_semantic_issues": 1,
+    "human_adjudications_completed": 0,
+    "new_paid_calls": 0
+  },
+  "finding": {
+    "id": "REAL-R1-KEY-OTHER-01",
+    "classification": "input_ontology_and_assessment_key_ambiguity_candidate",
+    "affected_contract_field": {
+      "type": "string",
+      "description": "Procurement category. construction means prime construction; other may contain uncharacterised work.",
+      "enum": [
+        "prime_construction",
+        "open_market_supplies",
+        "transportation",
+        "intelligence_transmission",
+        "other"
+      ]
+    },
+    "source_pages": [
+      12
+    ],
+    "source_quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act.",
+    "source_requirement": "Contract classification and program-legislation applicability matter. The source also tells recipients to consult program guidance to determine applicability and expressly excludes PA/HMA.",
+    "key_assumption": "The key sets false whenever contract_category is not prime_construction, including other. This treats other as a positive assertion of known non-prime-construction status.",
+    "alternative_input_reading": "The input description says other may contain uncharacterised work. A category not yet established does not establish that it is nonconstruction. Program-legislation applicability is also unknown in the three affected cases.",
+    "observed_models": "OpenAI reaches default unknown; Anthropic reaches its explicit program-legislation unknown branch. Neither converts the supplied uncertain applicability into a mandatory clause.",
+    "advisory_conclusion": "The six disagreements expose one ambiguity in the authored input ontology/key. Unknown is defensible under the unclassified-work reading. False is defensible only if the enum values are intended as exhaustive mutually exclusive classifications with other guaranteeing nonconstruction, a guarantee the field description does not clearly provide. The observed differences do not establish six model errors.",
+    "evaluator_assessment": "The inspected first-matching-rule traces match the generated JSON conditions. No DSL interpreter defect was identified for these six decisions; this does not audit every evaluator path.",
+    "current_reporting": "Retain all frozen expected values and six recorded disagreements. Add this advisory note beside the descriptive draft-key agreement. Do not change the denominator, add accepted labels or assign an accuracy penalty/credit after observing outputs.",
+    "future_revision": "Before a separately identified future campaign, distinguish known_nonconstruction from unclassified (or provide a tri-state is_prime_construction field). Keep applicability facts separate from source knowledge, freeze the mapping, and add explicit paired cases for classification known/unknown and legislation yes/no/unknown.",
+    "human_adjudication": "pending"
+  },
+  "observations": [
+    {
+      "assignment_id": "fema-m0-r1",
+      "model": "openai/gpt-6.1-sol",
+      "disagreements": [
+        {
+          "scenario_id": "FEMA-01",
+          "inputs": {
+            "contract_amount_usd": 10000,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": false
+          },
+          "output": "davis_bacon_clause_required",
+          "predicted": "unknown",
+          "draft_expected": false,
+          "matches_draft": false,
+          "trace": {
+            "matched_rule_index": null,
+            "used_default": true
+          }
+        },
+        {
+          "scenario_id": "FEMA-02",
+          "inputs": {
+            "contract_amount_usd": 10000.01,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": false
+          },
+          "output": "davis_bacon_clause_required",
+          "predicted": "unknown",
+          "draft_expected": false,
+          "matches_draft": false,
+          "trace": {
+            "matched_rule_index": null,
+            "used_default": true
+          }
+        },
+        {
+          "scenario_id": "FEMA-12",
+          "inputs": {
+            "contract_amount_usd": 150000.01,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "output": "davis_bacon_clause_required",
+          "predicted": "unknown",
+          "draft_expected": false,
+          "matches_draft": false,
+          "trace": {
+            "matched_rule_index": null,
+            "used_default": true
+          }
+        }
+      ],
+      "output_evidence": {
+        "path": "internal_tests/2026-11-11-real-procurement/runs/fema-m0-r1/output.txt",
+        "sha256": "f657bc65222a4ae1e4957088453d2490759a79eccc42331ab66c2e37cde0169f"
+      },
+      "record_evidence": {
+        "path": "internal_tests/2026-11-11-real-procurement/runs/fema-m0-r1/record.json",
+        "sha256": "cbc853ceafa7cad7ceade5e4f8a58d5a5ec0ee4780ffd835fef01034e0b2f270"
+      },
+      "generated_decision_rules": {
+        "rules": [
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "PA"
+                },
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "HMA"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "However, the Davis-Bacon Act clause is not federally required for procurements under FEMA’s Public Assistance (PA) or Hazard Mitigation Assistance (HMA) Programs."
+          },
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "lte",
+              "value": 2000
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "field": "program_legislation_requires_davis_bacon",
+              "op": "eq",
+              "value": "no"
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "open_market_supplies"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "transportation"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "intelligence_transmission"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "other"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "prime_construction"
+                },
+                {
+                  "field": "contract_amount_usd",
+                  "op": "gt",
+                  "value": 2000
+                },
+                {
+                  "field": "program_legislation_requires_davis_bacon",
+                  "op": "eq",
+                  "value": "yes"
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          }
+        ],
+        "default": "unknown"
+      }
+    },
+    {
+      "assignment_id": "fema-m1-r1",
+      "model": "anthropic/claude-opus-5.5",
+      "disagreements": [
+        {
+          "scenario_id": "FEMA-01",
+          "inputs": {
+            "contract_amount_usd": 10000,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": false
+          },
+          "output": "davis_bacon_clause_required",
+          "predicted": "unknown",
+          "draft_expected": false,
+          "matches_draft": false,
+          "trace": {
+            "matched_rule_index": 5,
+            "used_default": false
+          }
+        },
+        {
+          "scenario_id": "FEMA-02",
+          "inputs": {
+            "contract_amount_usd": 10000.01,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": false
+          },
+          "output": "davis_bacon_clause_required",
+          "predicted": "unknown",
+          "draft_expected": false,
+          "matches_draft": false,
+          "trace": {
+            "matched_rule_index": 5,
+            "used_default": false
+          }
+        },
+        {
+          "scenario_id": "FEMA-12",
+          "inputs": {
+            "contract_amount_usd": 150000.01,
+            "contract_category": "other",
+            "fema_program": "other",
+            "program_legislation_requires_davis_bacon": "unknown",
+            "involves_mechanics_or_laborers": true
+          },
+          "output": "davis_bacon_clause_required",
+          "predicted": "unknown",
+          "draft_expected": false,
+          "matches_draft": false,
+          "trace": {
+            "matched_rule_index": 5,
+            "used_default": false
+          }
+        }
+      ],
+      "output_evidence": {
+        "path": "internal_tests/2026-11-11-real-procurement/runs/fema-m1-r1/output.txt",
+        "sha256": "7b93195dc063ce48e7fc86c71984afe1d29b7c31f34e4de633e343eec4f8e5f6"
+      },
+      "record_evidence": {
+        "path": "internal_tests/2026-11-11-real-procurement/runs/fema-m1-r1/record.json",
+        "sha256": "20dce5778fa807f06693cfaed929d954ee67dbf99000b7db7bcafedb3a00f77f"
+      },
+      "generated_decision_rules": {
+        "rules": [
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "PA"
+                },
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "HMA"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "However, the Davis-Bacon Act clause is not federally required for procurements under FEMA’s Public Assistance (PA) or Hazard Mitigation Assistance (HMA) Programs."
+          },
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "open_market_supplies"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "transportation"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "intelligence_transmission"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act"
+          },
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "lte",
+              "value": 2000
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act"
+          },
+          {
+            "when": {
+              "field": "program_legislation_requires_davis_bacon",
+              "op": "eq",
+              "value": "no"
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act"
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "prime_construction"
+                },
+                {
+                  "field": "program_legislation_requires_davis_bacon",
+                  "op": "eq",
+                  "value": "yes"
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act"
+          },
+          {
+            "when": {
+              "field": "program_legislation_requires_davis_bacon",
+              "op": "eq",
+              "value": "unknown"
+            },
+            "value": "unknown",
+            "source_pages": [
+              12
+            ],
+            "quote": "Recipients and subrecipients should refer to applicable NOFO or other program guidance or contact their applicable FEMA grant representative to determine if this provision is required for the procurement."
+          },
+          {
+            "when": {
+              "field": "contract_category",
+              "op": "eq",
+              "value": "other"
+            },
+            "value": "unknown",
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act"
+          }
+        ],
+        "default": "unknown"
+      }
+    }
+  ],
+  "preservation": {
+    "frozen_files_modified": false,
+    "expected_values_modified": false,
+    "analysis_modified": false,
+    "retroactive_exclusions_added": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "fema-m0-r2",
+  "task_id": "fema",
+  "model": "openai/gpt-6.1-sol",
+  "model_index": 0,
+  "repetition": 2,
+  "request_path": "prepared/fema-0.json",
+  "request_sha256": "6fab571ff109061408dbe918cec6d61e16ce506cc690c272ddd32f91a61ad576",
+  "source_packet_sha256": "d8c0afd001b4e8bc5ade474dd4a0023d55b55a270dc51f775d91a9813fbb01aa",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "openai",
+  "started_at": "2026-11-11T22:50:50.819Z",
+  "reserved_usd": 0.7419610000000001,
+  "headroom_before_usd": 11.7872328,
+  "account_usage": 26.262291317,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c"
+}

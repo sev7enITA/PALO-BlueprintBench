@@ -70,3 +70,19 @@ jobs:
 
       - name: Verify shared schema and qualification boundaries
         run: python -m unittest discover -s tools -p 'test_schema_alignment.py'
+
+      - name: Verify research site architecture
+        run: |
+          python tools/build_site_architecture.py --check
+          python -m unittest discover -s tools -p 'test_site_architecture.py'
+
+      - name: Verify real-document generation publication
+        run: |
+          python tools/build_generation.py --check
+          python -m unittest discover -s tools -p 'test_generation_publication.py'
+      - name: Verify real-document frozen contracts and offline corrected replay
+        run: |
+          python -m unittest discover -s internal_tests/2026-11-11-real-procurement -p 'test_contracts.py'
+          python -m unittest discover -s internal_tests/2026-11-11-real-procurement/corrections -p 'test_quote_normalisation_v11.py'
+          python -m unittest discover -s internal_tests/2026-11-11-real-procurement -p 'test_replay.py'
+          python internal_tests/2026-11-11-real-procurement/replay.py --check

@@ -1,0 +1,18 @@
+{
+  "id": "fema-m2-r1",
+  "task_id": "fema",
+  "model": "google/gemini-4-argon",
+  "model_index": 2,
+  "repetition": 1,
+  "request_path": "prepared/fema-2.json",
+  "request_sha256": "7cf5af0ff272e589f18e0243850b586c9717f447e8423805186acc65ec2fe156",
+  "source_packet_sha256": "d8c0afd001b4e8bc5ade474dd4a0023d55b55a270dc51f775d91a9813fbb01aa",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "google-vertex/us",
+  "started_at": "2026-11-11T22:28:22.967Z",
+  "reserved_usd": 0.7322557000000001,
+  "headroom_before_usd": 14.5908605,
+  "account_usage": 23.483343617,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c"
+}

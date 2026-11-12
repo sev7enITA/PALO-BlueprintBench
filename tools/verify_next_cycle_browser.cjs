@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
     assert.equal(await page.locator('#integrity code').first().textContent(),data.case_bank_sha256);
     const graph = await page.locator('#next-cycle-schema').evaluate(el=>JSON.parse(el.textContent));
     assert.deepEqual(graph['@graph'].map(x=>x['@type']),['WebPage','Dataset']);
-    assert.equal(graph['@graph'][0].version,'2026-11-11.5');
+    assert.equal(graph['@graph'][0].version,'2026-11-11.6');
     assert.equal(graph['@graph'][1].version,data.revision);
     for(const node of graph['@graph']) {assert(!('aggregateRating' in node));assert(!('review' in node));assert(!('ratingValue' in node));}
     assert.equal(graph['@graph'][1].distribution[0].contentUrl,'https://paloframework.org/downloads/blueprintbench/next-cycle-results.json');

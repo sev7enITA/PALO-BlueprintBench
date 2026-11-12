@@ -1,0 +1,18 @@
+{
+  "id": "fta-m1-r2",
+  "task_id": "fta",
+  "model": "anthropic/claude-opus-5.5",
+  "model_index": 1,
+  "repetition": 2,
+  "request_path": "prepared/fta-1.json",
+  "request_sha256": "8354f5bc52c98af8cba48d6336fd4c64f497c2bd839fe90c55e4ff6c0f2bd60e",
+  "source_packet_sha256": "ee3acc767f75f806933cea959cf809a224bea8821d1fa1dc367642de87b93de5",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "anthropic",
+  "started_at": "2026-11-11T22:44:50.728Z",
+  "reserved_usd": 3.5919488,
+  "headroom_before_usd": 11.943267720000001,
+  "account_usage": 25.274038217,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c"
+}

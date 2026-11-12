@@ -4,6 +4,10 @@
 
 The code can check bounded evidence consistency and calculate acceptance. It cannot certify independent annotations or infer institutional authority from a JSON declaration. There are **zero qualified held-out entries** and no PBI score.
 
+## Real-document development study
+
+Collection has started on three public procurement documents comprising 200 supplied pages. Three model IDs and three assigned repetitions cover 27 original fixed assignments; the additional Google supplement was cancelled before dispatch. Completion and failed captures are reported separately on the [generation results page](https://paloframework.org/PALO_BlueprintBench_Generation.html). Reference decisions are assistant drafts, and unknown charges remain reserved. This development study does not satisfy the external qualification gates.
+
 ## Gates before a qualified comparison
 
 1. **Independent source families:** scope, rights, exposure and split decisions recorded before evaluation.

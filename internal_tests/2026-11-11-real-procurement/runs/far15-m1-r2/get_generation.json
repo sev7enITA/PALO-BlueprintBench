@@ -1,0 +1,62 @@
+{
+  "data": {
+    "id": "gen-1794436504-RsVDESHjNtMepbSa7Kgn",
+    "model": "anthropic/claude-opus-5.5-20260921",
+    "provider_name": "Anthropic",
+    "total_cost": 0.642048,
+    "tokens_prompt": 65495,
+    "tokens_completion": 9250,
+    "latency": 4299,
+    "generation_time": 120090,
+    "finish_reason": "stop",
+    "created_at": "2026-11-11T22:35:04.256Z",
+    "app_id": null,
+    "streamed": true,
+    "cancelled": false,
+    "moderation_latency": null,
+    "native_tokens_prompt": 80767,
+    "native_tokens_completion": 15949,
+    "native_tokens_completion_images": null,
+    "native_tokens_reasoning": 6809,
+    "native_tokens_cached": 0,
+    "num_media_prompt": null,
+    "num_input_audio_prompt": null,
+    "num_media_completion": 0,
+    "num_search_results": null,
+    "num_fetches": null,
+    "web_search_engine": null,
+    "origin": "",
+    "is_byok": false,
+    "native_finish_reason": "end_turn",
+    "service_tier": "default",
+    "usage": 0.642048,
+    "router": null,
+    "user_agent": null,
+    "http_referer": null,
+    "request_id": "req-1794436504-WYehuCsWv4Nu897eJ6nm",
+    "session_id": null,
+    "preset_id": null,
+    "api_type": "completions",
+    "upstream_id": "msg_011CgwwNyRCX6DGjo7wZ4ZSh",
+    "provider_responses": [
+      {
+        "endpoint_id": "043a453c-8450-4da8-82c1-cf6cc19cba9e",
+        "id": "msg_011CgwwNyRCX6DGjo7wZ4ZSh",
+        "is_byok": false,
+        "latency": 2377,
+        "model_permaslug": "anthropic/claude-opus-5.5-20260921",
+        "provider_name": "Anthropic",
+        "status": 200
+      }
+    ],
+    "cache_discount": null,
+    "upstream_inference_cost": 0,
+    "response_cache_source_id": null,
+    "data_region": "global"
+  },
+  "redacted_fields": [
+    "workspace_id",
+    "external_user"
+  ],
+  "redaction_scope": "account identifiers only; generation accounting unchanged"
+}

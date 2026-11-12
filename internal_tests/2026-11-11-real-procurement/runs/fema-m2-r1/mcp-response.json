@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "tool call error: tool call failed for `openrouter/send-message`\n\nCaused by:\n    timed out awaiting tools/call after 300s"
+    }
+  ],
+  "isError": true
+}

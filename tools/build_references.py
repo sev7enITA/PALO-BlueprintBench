@@ -4,9 +4,10 @@ import io
 import json
 from html import escape
 
+TARGET_PAGE = 'PALO_BlueprintBench_Method.html'
 START = '<!-- benchmark-references:start -->'
 END = '<!-- benchmark-references:end -->'
-REPO = 'https://github.com/sev7enITA/PALO-BlueprintBench/blob/codex/blueprintbench-leaderboard-20261111/'
+REPO = 'https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/'
 
 
 def visibility_html(row):
@@ -58,7 +59,7 @@ def render(root):
     writer.writerows(rows)
     html = f'''{START}
 <section class="section shell references-section" id="references" aria-labelledby="references-title">
-<div class="section-heading"><div><p class="eyebrow">Research context</p><h2 id="references-title">Benchmark references</h2></div><p>{escape(intro)}</p></div>
+<div class="section-heading"><div><p class="eyebrow">Research context</p><h2 id="references-title">Related benchmarks</h2></div><p>{escape(intro)}</p></div>
 <div class="tracks reference-summary"><article><span>{len(rows)}</span><div><h3>Reference catalogue</h3><p>The original 20 references and {len(added)} additional benchmark families selected for documented visibility.</p></div></article><article><span>{len(added)}</span><div><h3>Visibility profiles</h3><p>Model-launch references, public leaderboards, competitions and dated repository signals. No hype or quality score is inferred.</p></div></article><article><span>4</span><div><h3>Transfer priorities</h3><p>Expert rubrics, workflow reliability, separate structural and semantic evidence, and unseen-case custody. Proposed work for PALO.</p></div></article></div>
 <p class="method-note">{escape(selection['method'])} {escape(selection['limits'])}</p>
 <details class="reference-details"><summary>Priorities for PALO</summary>'''
