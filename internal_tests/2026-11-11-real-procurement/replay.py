@@ -74,7 +74,7 @@ def verify_records(root,manifest):
         for key,value in assignment.items():require(record.get(key)==value,'Receipt/schedule mismatch: '+folder.name+'/'+key)
         if record.get('state')=='not_run':
             amendment=load(root/'transport-amendment.json')
-            require(folder.name in amendment['stopped_undispatched_assignments'] or folder.name in load(root/'user-stop.json')['stopped_undispatched_assignments'],'Unjustified administrative stop')
+            require(folder.name in amendment['stopped_undispatched_assignments'] or folder.name in (load(root/'user-stop.json')['stopped_undispatched_assignments'] if (root/'user-stop.json').exists() else []),'Unjustified administrative stop')
             require(record.get('cost_status')=='not_dispatched' and type(record.get('cost_usd')) in (int,float) and record['cost_usd']==0,'Undispatched accounting state invalid')
             require(record.get('cost_zero_reason') and record.get('decision_recorded_at'),'Undispatched zero lacks reason/time')
             require(record.get('reserved_usd')==0 and record.get('provider_request_id') is None,'Undispatched record claims request/charge')
@@ -91,7 +91,7 @@ def verify_records(root,manifest):
         payload=load(request)
         require(payload['provider']['only']==[assignment['pinned_provider']] and payload['provider']['allow_fallbacks'] is False,'Provider pin/fallback changed')
         require(not any(key in json.dumps(payload) for key in ('assessment_key','expected_outputs','"expected":','"cases":')),'Hidden key leaked into request')
-        interrupted=folder.name==load(root/'user-stop.json')['interrupted_inflight_assignment']
+        interrupted=(root/'user-stop.json').exists() and folder.name==load(root/'user-stop.json')['interrupted_inflight_assignment']
         if interrupted:
             require(record.get('cost_status')=='unknown' and record.get('cost_usd') is None and record.get('reserved_usd',0)>0,'Interrupted request lacks reserve')
             require(not (folder/'output.txt').exists() and not (folder/'mcp-response.json').exists(),'Interrupted response unexpectedly present')
