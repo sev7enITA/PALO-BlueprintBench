@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-12: local validation agent
+
+Add an LM Studio review assistant, source quotation checks, local replay and internal calibration support. Independent review, custody, metric validation and reproduction remain open.
+
 ## 2026-11-12: validation preparation
 
 Correct development-study scope metadata and add draft protocols, internal measurement diagnostics, representation-invariance checks and a development-only paired family-cluster bootstrap. External qualification remains pending.
