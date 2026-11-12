@@ -22,9 +22,8 @@ def inspect(root):
         reason = bool(record.get('error') or record.get('stop_reason') or record.get('not_run_reason') or record.get('finish_reason') in ('length', 'error', 'content_filter'))
         if not reason and state == 'incomplete' and (path.parent / 'get_generation.json').exists():
             receipt = json.loads((path.parent / 'get_generation.json').read_text(encoding='utf-8'))['data']
-            reason = bool(receipt.get('finish_reason') is None and receipt.get('upstream_inference_cost') is not None or receipt.get('upstream_requests'))
-            # Some provider error receipts have a nested upstream status.
-            reason = reason or '502' in json.dumps(receipt)
+            reason = any(isinstance(response.get('status'), int) and response['status'] >= 400
+                         for response in receipt.get('provider_responses', []) if isinstance(response, dict))
         rows.append({'id': record['id'], 'state': state, 'reason_documented': state == 'completed' or reason})
     ids = [r['id'] for r in rows]
     if len(ids) != len(set(ids)):
