@@ -41,7 +41,8 @@
       "context_tokens": 8192,
       "mtp": "enabled",
       "suite": "Source-fidelity advisory classification, unconstrained JSON",
-      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "is_replay": false,
+      "reference": "Previous qwen3.8-27b-uncensored output; configuration not fully frozen; not independently adjudicated gold",
       "recorded_date": "2026-11-12",
       "observations": [
         {
@@ -187,7 +188,8 @@
       "context_tokens": 8192,
       "mtp": "disabled",
       "suite": "Source-fidelity advisory classification, unconstrained JSON",
-      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "is_replay": false,
+      "reference": "Previous qwen3.8-27b-uncensored output; configuration not fully frozen; not independently adjudicated gold",
       "recorded_date": "2026-11-12",
       "observations": [
         {
@@ -333,7 +335,8 @@
       "context_tokens": 8192,
       "mtp": "enabled",
       "suite": "Source-fidelity advisory classification, unconstrained JSON",
-      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "is_replay": false,
+      "reference": "Previous qwen3.8-27b-uncensored output; configuration not fully frozen; not independently adjudicated gold",
       "recorded_date": "2026-11-12",
       "observations": [
         {
@@ -536,7 +539,8 @@
       "context_tokens": 8192,
       "mtp": "disabled",
       "suite": "Source-fidelity advisory classification, unconstrained JSON",
-      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "is_replay": false,
+      "reference": "Previous qwen3.8-27b-uncensored output; configuration not fully frozen; not independently adjudicated gold",
       "recorded_date": "2026-11-12",
       "observations": [
         {
@@ -660,7 +664,8 @@
       "context_tokens": 8192,
       "mtp": "disabled",
       "suite": "Source-fidelity advisory classification, JSON-schema constrained",
-      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "is_replay": false,
+      "reference": "Previous qwen3.8-27b-uncensored output; configuration not fully frozen; not independently adjudicated gold",
       "recorded_date": "2026-11-12",
       "observations": [
         {
@@ -740,7 +745,8 @@
       "context_tokens": 8192,
       "mtp": "disabled",
       "suite": "Post-hoc adaptation of existing responses; no new model call",
-      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "is_replay": true,
+      "reference": "Previous qwen3.8-27b-uncensored output; configuration not fully frozen; not independently adjudicated gold",
       "recorded_date": "2026-11-12",
       "observations": [
         {

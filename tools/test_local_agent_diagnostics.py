@@ -71,9 +71,13 @@ class LocalAgentDiagnosticsTest(unittest.TestCase):
   row=next(r for r in self.data['runs'] if r['id']==her['id'])
   b=next(x for x in row['cases'] if x['case_id']=='ITEM-B')
   self.assertEqual((b['assigned'],b['completed'],b['contract_valid']),(1,0,0));self.assertIsNone(b['agreement_count'])
+  self.assertEqual((b['timeout_count'],b['timeout_seconds']),(1,600))
  def test_posthoc_is_not_new_inference(self):
   run=next(r for r in self.data['runs'] if r['id']=='gemma-e4b-posthoc-intel-a5500')
   self.assertIn('no new model call',run['suite'])
+  self.assertIs(run['is_replay'],True)
+  self.assertTrue(all(isinstance(x['is_replay'],bool) for x in self.data['runs']))
+  self.assertEqual(sum(x['is_replay'] is True for x in self.data['runs']),1)
   self.assertTrue(all(x['median_seconds'] is None for x in run['cases']))
   self.assertTrue(all(x['median_completion_tokens'] is None for x in run['cases']))
 if __name__=='__main__':unittest.main()

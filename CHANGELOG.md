@@ -2,6 +2,8 @@
 
 ## 2026-11-12: local advisory agent diagnostics
 
+- Add interactive completion, timing and reference-agreement charts with explicit timeout counts and traceable configuration labels.
+
 - Record local source-fidelity review observations, model configurations, hardware, output limits, incomplete calls and reproducibility artifacts. These development tests do not establish independent validation or a qualified ranking.
 
 ## 2026-11-12: local validation agent
