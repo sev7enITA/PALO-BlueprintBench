@@ -90,6 +90,6 @@ def roadmap_html():
     cards = ''.join('<li><strong>' + html.escape(g['title']) + '</strong><p>' + html.escape(g['requirement']) +
                     '</p><small>Status: ' + html.escape(g['status_label']) + '</small></li>' for g in p['gates'])
     return ('<section class="shell section" id="qualification-plan"><h2>Path to qualified comparison</h2>'
-            '<p>Independent acceptance gates remain open. Specification generation study has started: 3 documents, 200 supplied pages, 27 assigned calls across three serving configurations, including stopped and incomplete requests. Current completion and accounting appear on the specification generation page.</p>'
+            '<p>Independent acceptance gates remain open. Specification generation study is closed incomplete: 3 documents, 200 supplied pages, 27 assigned calls across three serving configurations, including stopped and incomplete requests. Current completion and accounting appear on the specification generation page.</p>'
             '<details><summary>Six acceptance gates and current status</summary><ol>' + cards + '</ol></details><p><a href="https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/qualification-roadmap.md">'
             'Protocol, rubric and acceptance evidence ↗</a></p></section>')
