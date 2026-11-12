@@ -65,4 +65,4 @@ Freeze a discriminating case matrix and annotation rubric before new inference. 
 
 ## Qualification study
 
-The [qualification protocol](qualification-roadmap.md) prioritises open specification generation from real document families, expert gold, external custody, seeded-defect validation and preregistered replicated comparisons. Its [gate register](qualification-roadmap.json) records unmet requirements; it does not grant qualification. The 60–85% development diagnostic is not a target for tuning held-out outcomes. Current internal label agreement must not be read as generated-specification semantic accuracy.
+The [qualification protocol](qualification-roadmap.md) prioritises open specification generation from public procurement document families, expert gold, external custody, seeded-defect validation and preregistered replicated comparisons. Its [gate register](qualification-roadmap.json) records unmet requirements; it does not grant qualification. The 60–85% development diagnostic is not a target for tuning held-out outcomes. Current internal label agreement must not be read as generated-specification semantic accuracy.

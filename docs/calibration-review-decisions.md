@@ -7,7 +7,7 @@
 | Priority | Delivered | Still required |
 |---|---|---|
 | Atomic rubric and reference bank | Six source-bound rules with explicit scope, answerability, criticality basis, alternatives and forbidden inferences; draft labels frozen before review | Independent procurement experts, independently chosen families and adjudication |
-| Workflow reliability | Replay from frozen input through response-envelope checks, draft-label comparison and source-bound review export; missing and uncertain records retained | Repeated order-shuffled model runs, real document ingestion/export qualification and business-user sessions |
+| Workflow reliability | Replay from frozen input through response-envelope checks, draft-label comparison and source-bound review export; missing and uncertain records retained | Repeated order-shuffled model runs, document ingestion and export qualification and business-user sessions |
 | Structure and semantics | Separate envelope status and semantic status; no silent JSON repair; wrong but well-formed answers can fail the semantic comparison | Hard negatives, unanswerable items and a validated semantic measure |
 | Exposure and versioning | Source and rubric reuse keys, response/prompt hashes, explicit engineering-exposed family, fail-closed qualification | External custody, identity verification, signed independent decisions and new unexposed families |
 

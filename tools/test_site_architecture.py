@@ -28,7 +28,7 @@ class SiteArchitectureTests(unittest.TestCase):
         self.assertNotIn('leaderboard.js',text)
         self.assertNotIn('blueprintbench.js',text)
         self.assertNotIn('data-reference=',text)
-        for name in ['3-text synthetic test','6-process synthetic test','Real-document generation','What the research measures','How this supports system selection']:
+        for name in ['Policy Interpretation','Process Interpretation','Specification Generation','What the research measures','How this supports system selection']:
             self.assertIn(name,text)
         self.assertNotIn('Next-cycle',text)
         self.assertFalse(any(n.get('@type')=='Dataset' for n in site.page_graph('overview')['@graph']))
@@ -58,7 +58,7 @@ class SiteArchitectureTests(unittest.TestCase):
 
     def test_inputs_are_not_conflated(self):
         text=(ROOT/'web/PALO_BlueprintBench_Corpus.html').read_text(encoding='utf-8')
-        for label in ['3-text synthetic test','6-process synthetic test','Real-document generation','Adapter diagnostics']:
+        for label in ['Policy Interpretation','Process Interpretation','Specification Generation','Adapter diagnostics']:
             self.assertIn(label,text)
         self.assertIn('200 supplied pages',text)
         self.assertIn('4,994 UTF-8 bytes',text)

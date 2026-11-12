@@ -12,7 +12,7 @@ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+deco
   // Pin the exact retained data snapshot for the duration of this UI regression.
   await page.route('**/downloads/blueprintbench/generation-results.json',route=>route.fulfill({json:snapshot}));
   await page.goto(origin+'/'+filename,{waitUntil:'networkidle'});await page.waitForSelector('#run-table tr');
-  assert.deepEqual(await page.locator('.bench-site-header nav a').allTextContents(),['Overview','3-text synthetic test','6-process synthetic test','Real-document generation','Corpus','Method']);
+  assert.deepEqual(await page.locator('.bench-site-header nav a').allTextContents(),['Overview','Policy Interpretation','Process Interpretation','Specification Generation','Corpus','Method']);
   assert.equal(await page.locator('#run-table tr').count(),snapshot.analysis.summary.assigned_calls);assert.equal(await page.locator('#document-cards article').count(),3);assert.equal(await page.locator('#configuration-cards article').count(),snapshot.models.length);
   assert.equal(await page.locator('.gen-chart-row').count(),snapshot.models.length);
   const chartBefore=await page.locator('#generation-chart').innerHTML();
