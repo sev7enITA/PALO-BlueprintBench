@@ -3,7 +3,7 @@
 > **Internal-test release notice, revision 2026-11-11.3:** Evaluator 0.3.0 repairs the non-claim exclusion defect and is distributed as `v0.3.0-internal.1`. Automated regression checks do not establish independent human review or scientific qualification. The historical `v0.3.0-pilot.1` package contains evaluator 0.2.0 with known EV-01 and must not be used for qualification. See [release identity](release.json), [migration and limits](docs/evaluator-0.3-draft.md) and [the warning](evaluator/EVALUATOR-0.2-WARNING.md).
 
   <img src="web/assets/logo.webp" alt="Original PALO Framework logo" width="80">
-  <img src="web/assets/blueprintbench/brand/blueprintbench-logo.png" alt="PALO BlueprintBench: Does the meaning survive? Open research on specification fidelity." width="100%">
+  <img src="web/assets/blueprintbench/brand/blueprintbench-logo.png" alt="PALO BlueprintBench logo" width="100%">
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <a href="docs/specification-fidelity-study.md"><img src="https://img.shields.io/badge/independent_validation-open-e9bc73" alt="Independent validation is open"></a>
 </p>
 
-<h3 align="center">Preserving business meaning when AI turns documents into software specifications.</h3>
+<h3 align="center">Benchmark for specification fidelity</h3>
 
 <p align="center">
   <a href="https://paloframework.org/PALO_BlueprintBench_Leaderboard.html"><b>Open internal test results</b></a> |
@@ -23,7 +23,7 @@
   <a href="CONTRIBUTING.md"><b>Contribute</b></a>
 </p>
 
-An AI-generated specification can look convincing while changing an obligation, losing an exception or assigning a responsibility to the wrong person. **PALO BlueprintBench studies specification fidelity:** whether the meaning of a business source survives that transformation, and how much human work is needed to repair it.
+**PALO BlueprintBench evaluates specification fidelity:** the preservation of business obligations, permissions, exceptions and responsibilities in AI-generated specifications. Human correction effort is a proposed measure and has not yet been validated.
 
 The project is an **open research pilot**. The executable evaluator, historical diagnostic evidence and contribution process are available now. The first proposed independent study focuses on procurement. **Qualified held-out results: 0. No PALO Blueprint Index score is assigned.**
 
@@ -32,6 +32,16 @@ The project is an **open research pilot**. The executable evaluator, historical 
 | [Model explorer](https://paloframework.org/PALO_BlueprintBench.html#explorer) | [Quick start](#quick-start) | [Contributor routes](CONTRIBUTING.md) |
 | [35 benchmark references](docs/benchmark-references.md) | [Historical evidence and replay](evidence/development-2026-11-10/README.md) | [Procurement study](docs/specification-fidelity-study.md) |
 | [Metrics and trust boundaries](docs/evaluator-contract.md) | [Release and packages](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/v0.3.0-internal.1) | [Reviewer kit](docs/reviewer-kit.md) |
+
+## Evaluation tracks
+
+| Track | Task | Source material |
+| --- | --- | --- |
+| [Policy Interpretation](https://paloframework.org/PALO_BlueprintBench_Leaderboard.html) | Translate rules and classify statements | Three authored procurement texts |
+| [Process Interpretation](https://paloframework.org/PALO_BlueprintBench_NextCycle.html) | Interpret propositions and generate workflows | Six authored process descriptions |
+| [Specification Generation](https://paloframework.org/PALO_BlueprintBench_Generation.html) | Generate source-linked requirements and decision rules | Three public procurement documents, 200 supplied pages |
+
+[Specification Generation evidence release](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-12-real-document.1): 27 assigned calls, 14 complete responses, five incomplete or unavailable and eight not dispatched. Labels are assistant drafts; independent qualification is pending.
 
 ## Current internal tests and dashboard
 
@@ -84,7 +94,7 @@ Actual Workbench pilot capture using synthetic procurement content. The entity g
 
 </details>
 
-## Evaluation tracks
+## Track definitions
 
 ```mermaid
 flowchart LR

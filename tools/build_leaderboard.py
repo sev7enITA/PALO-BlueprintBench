@@ -90,7 +90,7 @@ def dataset_graph(data,url):
                       'Explore descriptive observations with configuration filters, sortable KPIs and filtered CSV and JSON exports. Inspect source evidence, missing responses and disputed labels. No numerical model ranks or independently qualified results.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
            {'@type':'WebSite','@id':SITE+'#website','name':'PALO Framework','url':SITE,'publisher':{'@id':person}},
-           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'Model results | PALO BlueprintBench' if url==BOARD else 'PALO BlueprintBench | Results and Method',
+           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'Policy Interpretation | PALO BlueprintBench' if url==BOARD else 'PALO BlueprintBench | Results and Method',
             'image':{'@id':OVERVIEW+'#benchmark-logo'},'description':page_description,'inLanguage':'en','dateModified':data['as_of'],'isAccessibleForFree':True,
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
@@ -99,7 +99,7 @@ def dataset_graph(data,url):
            {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([
-               {'@type':'ListItem','position':3,'name':'Model results','item':BOARD}] if url==BOARD else [])},
+               {'@type':'ListItem','position':3,'name':'Policy Interpretation','item':BOARD}] if url==BOARD else [])},
            {'@type':'Dataset','@id':internal_id,'name':'BlueprintBench internal procurement tests and extensions, 11 November 2026',
             'identifier':internal['campaign_id'],'version':data['version'],'url':BOARD+'?cohort=internal','description':description,
             'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'temporalCoverage':data['as_of'],

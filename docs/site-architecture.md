@@ -4,10 +4,10 @@ Presentation revision 2026-11-11.6 separates introduction, results, method and s
 
 ```text
 BlueprintBench overview
-├── 3-text synthetic test: Model results
+├── Policy Interpretation: Model results
 │   └── Adapter diagnostics: separate historical tab
-├── 6-process synthetic test
-├── Real-document generation
+├── Process Interpretation
+├── Specification Generation
 ├── Corpus
 └── Method
     ├── Related benchmarks
@@ -19,9 +19,9 @@ Reviewer diagnostics: separate resource linked from method and footer
 | Navigation label | Existing or new URL | Purpose |
 |---|---|---|
 | Overview | PALO_BlueprintBench.html | Definition, intended use and choice of test |
-| 3-text synthetic test | PALO_BlueprintBench_Leaderboard.html | Existing 18-configuration model results, filters and exports |
-| 6-process synthetic test | PALO_BlueprintBench_NextCycle.html | Existing six authored process descriptions and 60 requests |
-| Real-document generation | PALO_BlueprintBench_Generation.html | Separate generation experiment on public procurement documents |
+| Policy Interpretation | PALO_BlueprintBench_Leaderboard.html | Existing 18-configuration model results, filters and exports |
+| Process Interpretation | PALO_BlueprintBench_NextCycle.html | Existing six authored process descriptions and 60 requests |
+| Specification Generation | PALO_BlueprintBench_Generation.html | Separate generation experiment on public procurement documents |
 | Corpus | PALO_BlueprintBench_Corpus.html | Input provenance, document coverage and distinctions between source sets |
 | Method | PALO_BlueprintBench_Method.html | Tasks, evidence rules, qualification requirements and related research |
 

@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http'),os=require('node:os');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'../web'),output=process.env.PALO_SCREENSHOT_DIR||fs.mkdtempSync(path.join(os.tmpdir(),'blueprintbench-architecture-'));
-const nav=['Overview','3-text synthetic test','6-process synthetic test','Real-document generation','Corpus','Method'];
+const nav=['Overview','Policy Interpretation','Process Interpretation','Specification Generation','Corpus','Method'];
 const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);const file=path.resolve(root,'.'+pathname);if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404).end();return;}const types={'.html':'text/html','.css':'text/css','.js':'text/javascript','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp'};res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');res.end(fs.readFileSync(file));});
 (async()=>{
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

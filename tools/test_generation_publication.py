@@ -1,4 +1,4 @@
-"""Publication invariants for real-document generation; no inference or rewrites."""
+"""Publication invariants for specification generation; no inference or rewrites."""
 import hashlib
 import json
 from pathlib import Path
