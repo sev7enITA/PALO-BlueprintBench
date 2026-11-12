@@ -30,7 +30,7 @@ def footer():
 def page_graph(key):
     filename,title,description=PAGES[key];url=SITE+filename
     page={'@type':'WebPage','@id':url+'#webpage','url':url,'name':title+' | BlueprintBench' if key!='overview' else title,'description':description,
-          'inLanguage':'en','version':research_publication.PRESENTATION_REVISION,'dateModified':'2026-11-11',
+          'inLanguage':'en','version':research_publication.PRESENTATION_REVISION,'dateModified':'2026-11-12',
           'isAccessibleForFree':True,'creativeWorkStatus':'Maintainer-led research; provisional labels; independent human validation pending',
           'image':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png',
           'relatedLink':[SITE+path for _,path in NAV if path!=filename]}

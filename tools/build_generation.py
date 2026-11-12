@@ -78,7 +78,7 @@ def data():
     for group in analysis.get('by_configuration',analysis.get('by_model',[])):
         if not group.get('configuration_id'):
             group['configuration_id']=next(m['id'] for m in configurations if m['model_id']==group['model'])
-    return {'revision':'2026-11-11.7','title':'Specification Generation','evidence_status':'Closed incomplete; internal tests; assistant-draft reference outcomes; no independent validation',
+    return {'revision':'2026-11-11.8','title':'Specification Generation','evidence_status':'Closed incomplete; internal tests; assistant-draft reference outcomes; no independent validation',
       'analysis':analysis,'assessment':assessment,
       'transport_amendment':load(STUDY/'transport-amendment.json') if (STUDY/'transport-amendment.json').exists() else None,
       'supplement_manifest':load(supplement/'manifest.json') if analysis_name=='analysis-combined.json' else None,
@@ -99,7 +99,7 @@ def schema(d):
       'distribution':[{'@type':'DataDownload','name':'Generation observations and model drafts','encodingFormat':'application/json','contentUrl':site.SITE+'downloads/blueprintbench/generation-results.json'},{'@type':'DataDownload','name':'Frozen inputs, tool receipts and draft exports','encodingFormat':'application/zip','contentUrl':site.SITE+'downloads/blueprintbench/generation-evidence.zip'}]}
     if d.get('assessment',{}).get('correction_note'):
         dataset['correction']={'@type':'CreativeWork','name':'PDF hyphen-linewrap quote-check correction v1.1','url':site.GIT+'/blob/main/internal_tests/2026-11-11-real-procurement/corrections/correction-note.md'}
-    return {'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':url+'#webpage','url':url,'name':'Specification Generation | BlueprintBench','description':dataset['description'],'version':research_publication.PRESENTATION_REVISION,'dateModified':'2026-11-11','inLanguage':'en','mainEntity':{'@id':url+'#dataset'},'image':site.SITE+'assets/blueprintbench/brand/blueprintbench-logo.png'},dataset]}
+    return {'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':url+'#webpage','url':url,'name':'Specification Generation | BlueprintBench','description':dataset['description'],'version':research_publication.PRESENTATION_REVISION,'dateModified':'2026-11-12','inLanguage':'en','mainEntity':{'@id':url+'#dataset'},'image':site.SITE+'assets/blueprintbench/brand/blueprintbench-logo.png'},dataset]}
 
 def render(d):
     s=d['analysis']['summary'];g=json.dumps(schema(d),ensure_ascii=False,separators=(',',':')).replace('</','<\\/')

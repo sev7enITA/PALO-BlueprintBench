@@ -4,7 +4,7 @@ import html
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
-PRESENTATION_REVISION = '2026-11-11.7'
+PRESENTATION_REVISION = '2026-11-11.8'
 SITE = 'https://paloframework.org/'
 NEXT = SITE + 'PALO_BlueprintBench_NextCycle.html'
 
@@ -33,7 +33,7 @@ def enrich(graph, data):
     page, dataset = graph['@graph']
     r = release()
     immutable = 'https://github.com/sev7enITA/PALO-BlueprintBench/blob/' + r['commit']
-    page.update(version=PRESENTATION_REVISION, dateModified='2026-11-11',
+    page.update(version=PRESENTATION_REVISION, dateModified='2026-11-12',
                 relatedLink=[r['url'], NEXT + '#qualification-plan'],
                 image=SITE + 'assets/blueprintbench/brand/blueprintbench-logo.png')
     dataset['creativeWorkStatus'] = 'Recorded internal observations; not independently validated'
@@ -92,4 +92,4 @@ def roadmap_html():
     return ('<section class="shell section" id="qualification-plan"><h2>Qualification Requirements</h2>'
             '<p>Independent acceptance gates remain open. Specification generation study is closed incomplete: 3 documents, 200 supplied pages, 27 assigned calls across three serving configurations, including stopped and incomplete requests. Current completion and accounting appear on the specification generation page.</p>'
             '<details><summary>Qualification Criteria</summary><ol>' + cards + '</ol></details><p><a href="https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/qualification-roadmap.md">'
-            'Protocol, rubric and acceptance evidence ↗</a></p></section>')
+            'Protocol, rubric and acceptance evidence ↗</a> · <a href="https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/validation-status-2026-11-12.md">Validation status</a> · <a href="https://github.com/sev7enITA/PALO-BlueprintBench/blob/main/docs/measurement-validation-protocol-draft.md">Measurement protocol (draft)</a></p></section>')

@@ -45,7 +45,7 @@ class ReleaseContractTests(unittest.TestCase):
         with zipfile.ZipFile(DL / 'toolkit.zip') as package:
             base = 'palo-blueprintbench/'
             self.assertEqual(json.loads(package.read(base + 'RELEASE.json')), json.loads((ROOT / 'evaluator/RELEASE-v0.3.0-internal.1.json').read_text(encoding='utf-8')))
-            self.assertEqual(self.release['presentation_revision'], '2026-11-11.7')
+            self.assertEqual(self.release['presentation_revision'], '2026-11-11.8')
             self.assertIn(('VERSION = "' + self.release['evaluator_version'] + '"').encode(), package.read(base + 'blueprintbench.py'))
             warning = package.read(base + 'EVALUATOR-0.2-WARNING.md').decode('utf-8')
             self.assertIn('EV-01', warning)
