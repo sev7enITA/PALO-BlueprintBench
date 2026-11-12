@@ -1,8 +1,10 @@
 # Qualification protocol and next study
 
-Presentation revision 2026-11-11.5. **Planned protocol, not completed validation.**
+Presentation revision 2026-11-11.6. **Development collection has started; independent qualification remains pending.**
 
 The current [six-scenario release](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-11-six-scenario.1) is development-exposed internal engineering evidence: six fictional scenarios, 48 provisional propositions, one authoring group, one repetition and 60 requests. Seventeen of eighteen workflow drafts pass structural checks. This is not a measurement of generated-specification semantic accuracy. All historical labels, source bytes and outcomes remain frozen.
+
+The [real-document generation study](https://paloframework.org/PALO_BlueprintBench_Generation.html) has started with three public procurement documents, 200 supplied pages, three model IDs and three assigned repetitions. The original 27 assignments are retained; the Google supplement was cancelled before dispatch. Models generate requirements, process steps and executable decision rules without receiving the assessment situations. Reference outcomes are pre-output assistant drafts. The results page reports the current completion, upstream failures, unknown costs and retained reserves; assigned work is not presented as completed. The v1.1 mechanical quote-check correction joins a PDF hyphen and line break while retaining the hyphen, with original v1.0 analysis and the correction record preserved. It does not change source content or semantic labels.
 
 ## 1. Documents and difficulty
 

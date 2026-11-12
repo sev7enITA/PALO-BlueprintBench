@@ -1,0 +1,32 @@
+{
+  "reconciled_at": "2026-11-11T22:50:24.419581+00:00",
+  "inference_retries": 0,
+  "entries": [
+    {
+      "assignment_id": "far15-m2-r2",
+      "generation_id": "gen-1794436639-K81KLRdVXvoL47Ryv6Qd",
+      "request_started_at": "2026-11-11T22:37:18.801Z",
+      "provider_created_at": "2026-11-11T22:37:19.022Z",
+      "association_basis": "Single serial request at matching timestamp, model and pinned provider; generation ID read from authenticated OpenRouter Logs UI, accounting confirmed with get_generation. Original prompt/response logging unavailable.",
+      "provider_reported_finish_reason": "stop",
+      "provider_generation_time_ms": 327036,
+      "client_elapsed_seconds": 300.015,
+      "cost_usd": 0.3983716,
+      "model_output_recovered": false
+    },
+    {
+      "assignment_id": "fema-m2-r1",
+      "generation_id": "gen-1794436103-xO7s4a9jQdN2UP9jRWjl",
+      "request_started_at": "2026-11-11T22:28:22.967Z",
+      "provider_created_at": "2026-11-11T22:28:23.132Z",
+      "association_basis": "Single serial request at matching timestamp, model and pinned provider; generation ID read from authenticated OpenRouter Logs UI, accounting confirmed with get_generation. Original prompt/response logging unavailable.",
+      "provider_reported_finish_reason": "stop",
+      "provider_generation_time_ms": 309689,
+      "client_elapsed_seconds": 300.016,
+      "cost_usd": 0.338899,
+      "model_output_recovered": false
+    }
+  ],
+  "original_records_retained": true,
+  "qualification": "internal_tests"
+}

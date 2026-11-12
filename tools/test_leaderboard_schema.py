@@ -110,11 +110,11 @@ class PublicationContractTests(unittest.TestCase):
 
 
     def test_descriptive_kpis_exports_and_country_overlay_match_both_pages(self):
-        graphs = [build.dataset_graph(self.data, url)['@graph'] for url in (build.OVERVIEW, build.BOARD)]
+        graphs = [build.dataset_graph(self.data, build.BOARD)['@graph']]
         shared = [build.OVERVIEW+'#internal-procurement-dataset', build.OVERVIEW+'#developer-country-metadata', build.BOARD+'#results-workspace']
-        for identifier in shared:
-            self.assertEqual(next(n for n in graphs[0] if n.get('@id') == identifier),
-                             next(n for n in graphs[1] if n.get('@id') == identifier))
+        overview=build.dataset_graph(self.data,build.OVERVIEW)['@graph']
+        self.assertFalse(any(n.get('@type')=='Dataset' for n in overview))
+        self.assertIn(build.BOARD,overview[0]['relatedLink'])
         internal = next(n for n in graphs[0] if n.get('@id') == shared[0])
         kpis = {x['propertyID']: x for x in internal['variableMeasured'] if isinstance(x, dict)}
         self.assertEqual(set(kpis), {'matches','coverage','calls','disagreements','missing','cost','time','costpercall','input','output','agreement'})

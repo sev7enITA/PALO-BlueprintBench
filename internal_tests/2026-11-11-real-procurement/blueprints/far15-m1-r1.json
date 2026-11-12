@@ -1,0 +1,703 @@
+{
+  "id": "far15-m1-r1",
+  "model": "anthropic/claude-opus-5.5",
+  "task_id": "far15",
+  "repetition": 1,
+  "artifact_type": "generated_source_linked_blueprint_draft",
+  "business_approval_required": true,
+  "business_approved": false,
+  "qualified": false,
+  "export_status": "structurally_usable_model_draft",
+  "source_quote_match": true,
+  "issues": [],
+  "content": {
+    "requirements": [
+      {
+        "id": "R01",
+        "actor": "offeror",
+        "modality": "obligation",
+        "statement": "Offerors must submit proposals, revisions and modifications so that they reach the Government office designated in the solicitation by the time the solicitation specifies.",
+        "source_pages": [
+          440
+        ],
+        "quote": "Offerors are responsible for submitting proposals, and any revisions, and modifications, so as to reach the Government office designated in the solicitation by the time specified in the solicitation."
+      },
+      {
+        "id": "R02",
+        "actor": "offeror",
+        "modality": "permission",
+        "statement": "Offerors may use any transmission method the solicitation authorises, such as regular mail, electronic commerce or facsimile.",
+        "source_pages": [
+          440
+        ],
+        "quote": "Offerors may use any transmission method authorized by the solicitation (i.e., regular mail, electronic commerce, or facsimile)."
+      },
+      {
+        "id": "R03",
+        "actor": "Government",
+        "modality": "condition",
+        "statement": "If the solicitation specifies no time, the time for receipt is 4:30 p.m. local time at the designated Government office on the proposal due date.",
+        "source_pages": [
+          440
+        ],
+        "quote": "If no time is specified in the solicitation, the time for receipt is 4:30 p.m., local time, for the designated Government office on the date that proposals are due."
+      },
+      {
+        "id": "R04",
+        "actor": "Government",
+        "modality": "definition",
+        "statement": "A proposal, modification or revision received at the designated Government office after the exact time specified for receipt of proposals is late.",
+        "source_pages": [
+          440
+        ],
+        "quote": "Any proposal, modification, or revision, that is received at the designated Government office after the exact time specified for receipt of proposals is"
+      },
+      {
+        "id": "R05",
+        "actor": "contracting officer",
+        "modality": "prohibition",
+        "statement": "Under 15.208(b)(1), a late item will not be considered unless all of the following are true: (a) it is received before award; (b) the contracting officer determines that accepting it would not unduly delay the acquisition; and (c) one of the exceptions in (b)(1)(i) through (iii) applies.",
+        "source_pages": [
+          440
+        ],
+        "quote": "will not be considered unless it is received before award is made, the contracting officer determines that accepting the late proposal would not unduly delay the acquisition"
+      },
+      {
+        "id": "R06",
+        "actor": "Government",
+        "modality": "condition",
+        "statement": "Exception (b)(1)(i): the item was sent through an electronic commerce method the solicitation authorises, and it reached the initial point of entry to the Government infrastructure no later than 5:00 p.m. one working day before the date specified for receipt.",
+        "source_pages": [
+          440
+        ],
+        "quote": "If it was transmitted through an electronic commerce method authorized by the solicitation, it was received at the initial point of entry to the Government infrastructure not later than 5:00 p.m. one working day prior to the date specified for receipt of proposals"
+      },
+      {
+        "id": "R07",
+        "actor": "Government",
+        "modality": "condition",
+        "statement": "Exception (b)(1)(ii): acceptable evidence establishes two facts. First, the item was received at the Government installation designated for receipt. Second, it was under the Government's control before the time set for receipt.",
+        "source_pages": [
+          440
+        ],
+        "quote": "There is acceptable evidence to establish that it was received at the Government installation designated for receipt of proposals and was under the Government’s control prior to the time set for receipt of proposals"
+      },
+      {
+        "id": "R08",
+        "actor": "Government",
+        "modality": "condition",
+        "statement": "Exception (b)(1)(iii): the item was the only proposal received.",
+        "source_pages": [
+          440
+        ],
+        "quote": "It was the only proposal received."
+      },
+      {
+        "id": "R09",
+        "actor": "contracting officer",
+        "modality": "condition",
+        "statement": "Notwithstanding (b)(1), a late modification of an otherwise successful proposal that makes its terms more favourable to the Government will be considered whenever it is received. This rule takes precedence over the (b)(1) conditions.",
+        "source_pages": [
+          440
+        ],
+        "quote": "However, a late modification of an otherwise successful proposal, that makes its terms more favorable to the Government, will be considered at any time it is received"
+      },
+      {
+        "id": "R10",
+        "actor": "contracting officer",
+        "modality": "permission",
+        "statement": "Such a late, more-favourable modification of an otherwise successful proposal may be accepted. Acceptance is permitted, not required.",
+        "source_pages": [
+          440
+        ],
+        "quote": "will be considered at any time it is received and may be accepted"
+      },
+      {
+        "id": "R11",
+        "actor": "Government",
+        "modality": "definition",
+        "statement": "Acceptable evidence of the time of receipt at the Government installation includes any of the following: (a) the installation's time/date stamp on the proposal wrapper; (b) other documentary evidence of receipt kept by the installation; or (c) oral testimony or statements of Government personnel.",
+        "source_pages": [
+          440
+        ],
+        "quote": "Acceptable evidence to establish the time of receipt at the Government installation includes the time/date stamp of that installation on the proposal wrapper, other documentary evidence of receipt maintained by the installation, or oral testimony or statements of Government personnel."
+      },
+      {
+        "id": "R12",
+        "actor": "Government",
+        "modality": "condition",
+        "statement": "The 15.208(d) extension triggers only when both of the following are true: (a) an emergency or unanticipated event interrupts normal Government processes so that proposals cannot be received at the designated office by the exact specified time; and (b) urgent Government requirements preclude amending the solicitation closing date.",
+        "source_pages": [
+          440
+        ],
+        "quote": "If an emergency or unanticipated event interrupts normal Government processes so that proposals cannot be received at the Government office designated for receipt of proposals by the exact time specified in the solicitation, and urgent Government requirements preclude amendment of the solicitation closing date"
+      },
+      {
+        "id": "R13",
+        "actor": "Government",
+        "modality": "definition",
+        "statement": "When the extension triggers, the time for receipt is deemed extended to the same time of day specified in the solicitation, on the first work day on which normal Government processes resume. The source gives no calendar date.",
+        "source_pages": [
+          440
+        ],
+        "quote": "the time specified for receipt of proposals will be deemed to be extended to the same time of day specified in the solicitation on the first work day on which normal Government processes resume."
+      },
+      {
+        "id": "R14",
+        "actor": "offeror",
+        "modality": "permission",
+        "statement": "Proposals may be withdrawn by written notice at any time before award.",
+        "source_pages": [
+          440
+        ],
+        "quote": "Proposals may be withdrawn by written notice at any time before award."
+      },
+      {
+        "id": "R15",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "The contracting officer must document the contract file when oral withdrawals are made.",
+        "source_pages": [
+          440
+        ],
+        "quote": "The contracting officer must document the contract file when oral withdrawals are made."
+      },
+      {
+        "id": "R16",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "The contracting officer must promptly notify any offeror whose proposal, modification or revision was received late. The notice must say whether the proposal will be considered.",
+        "source_pages": [
+          440
+        ],
+        "quote": "The contracting officer must promptly notify any offeror if its proposal, modification, or revision was received late, and must inform the offeror whether its proposal will be considered"
+      },
+      {
+        "id": "R17",
+        "actor": "contracting officer",
+        "modality": "condition",
+        "statement": "Exception to the 15.208(f) late-notice duty: the duty does not apply when both (a) contract award is imminent and (b) the 15.503(b) notice would suffice.",
+        "source_pages": [
+          440
+        ],
+        "quote": "unless contract award is imminent and the notice prescribed in 15.503(b) would suffice."
+      },
+      {
+        "id": "R18",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "Late proposals and modifications that are not considered must be held unopened, unless opened for identification, until after award. They are then retained with the other unsuccessful proposals.",
+        "source_pages": [
+          440
+        ],
+        "quote": "Late proposals and modifications that are not considered must be held unopened, unless opened for identification, until after award and then retained with other unsuccessful proposals."
+      },
+      {
+        "id": "R19",
+        "actor": "contracting office",
+        "modality": "obligation",
+        "statement": "If available, the contracting office files for each late proposal, modification, revision or withdrawal must include the date and hour of receipt.",
+        "source_pages": [
+          440
+        ],
+        "quote": "If available, the following must be included in the contracting office files for each late proposal, modification, revision, or withdrawal:"
+      },
+      {
+        "id": "R20",
+        "actor": "contracting office",
+        "modality": "obligation",
+        "statement": "The file must include a statement of whether the proposal was considered for award, with supporting rationale.",
+        "source_pages": [
+          440
+        ],
+        "quote": "A statement regarding whether the proposal was considered for award, with supporting rationale."
+      },
+      {
+        "id": "R21",
+        "actor": "contracting office",
+        "modality": "obligation",
+        "statement": "The file must include the envelope, wrapper or other evidence of the date of receipt.",
+        "source_pages": [
+          440
+        ],
+        "quote": "The envelope, wrapper, or other evidence of date of receipt."
+      },
+      {
+        "id": "R22",
+        "actor": "Government",
+        "modality": "definition",
+        "statement": "A proposal modification is a change to a proposal made in any of three ways: (a) before the solicitation closing date and time; (b) in response to an amendment; or (c) to correct a mistake at any time before award.",
+        "source_pages": [
+          431
+        ],
+        "quote": "Proposal modification is a change made to a proposal before the solicitation closing date and time, or made in response to an amendment, or made to correct a mistake at any time before award."
+      },
+      {
+        "id": "R23",
+        "actor": "Government",
+        "modality": "definition",
+        "statement": "A proposal revision is a change to a proposal made after the solicitation closing date, as the result of negotiations, at the request of or as allowed by the contracting officer.",
+        "source_pages": [
+          431
+        ],
+        "quote": "Proposal revision is a change to a proposal made after the solicitation closing date, at the request of or as allowed by a contracting officer, as the result of negotiations."
+      },
+      {
+        "id": "R24",
+        "actor": "Government",
+        "modality": "obligation",
+        "statement": "On receipt at the location specified in the solicitation, proposals must be marked with the date and time of receipt and transmitted to the designated officials.",
+        "source_pages": [
+          439
+        ],
+        "quote": "Upon receipt at the location specified in the solicitation, proposals and information received in response to a request for information (RFI) shall be marked with the date and time of receipt and shall be transmitted to the designated officials."
+      },
+      {
+        "id": "R25",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "When electronic commerce is used to receive proposals, modifications and revisions, the RFP must specify the electronic commerce methods offerors may use.",
+        "source_pages": [
+          436
+        ],
+        "quote": "Electronic commerce may be used to issue RFPs and to receive proposals, modifications, and revisions. In this case, the RFP shall specify the electronic commerce method(s) that offerors may use (see subpart 4.5)."
+      },
+      {
+        "id": "R26",
+        "actor": "contracting officer",
+        "modality": "permission",
+        "statement": "Contracting officers may authorise receipt of proposals, modifications or revisions by facsimile.",
+        "source_pages": [
+          436
+        ],
+        "quote": "Contracting officers may issue RFPs and/or authorize receipt of proposals, modifications, or revisions by facsimile."
+      },
+      {
+        "id": "R27",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "If any portion of a proposal received electronically or by facsimile is unreadable, the contracting officer must immediately notify the offeror and permit resubmission of that portion.",
+        "source_pages": [
+          440
+        ],
+        "quote": "If any portion of a proposal received by the contracting officer electronically or by facsimile is unreadable, the contracting officer immediately shall notify the offeror and permit the offeror to resubmit the unreadable portion of the proposal."
+      },
+      {
+        "id": "R28",
+        "actor": "contracting officer",
+        "modality": "condition",
+        "statement": "For 15.208(a) timeliness, a compliant resubmission of an unreadable portion is treated as received at the date and time of the original unreadable submission.",
+        "source_pages": [
+          440
+        ],
+        "quote": "The resubmission shall be considered as if it were received at the date and time of the original unreadable submission for the purpose of determining timeliness under 15.208(a), provided the offeror complies with the time and format requirements for resubmission prescribed by the contracting officer."
+      },
+      {
+        "id": "R29",
+        "actor": "Government",
+        "modality": "condition",
+        "statement": "Oral presentations are subject to the same timing restrictions as written information under 15.208.",
+        "source_pages": [
+          432
+        ],
+        "quote": "are subject to the same restrictions as written information, regarding timing (see 15.208) and content (see 15.306)."
+      },
+      {
+        "id": "R30",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "A common cut-off date is required only for receipt of final proposal revisions.",
+        "source_pages": [
+          447
+        ],
+        "quote": "The contracting officer is required to establish a common cut-off date only for receipt of final proposal revisions."
+      },
+      {
+        "id": "R31",
+        "actor": "contracting officer",
+        "modality": "obligation",
+        "statement": "Context for the 15.208(f) exception: under 15.503(b)(1), the contracting officer must give written postaward notice within 3 days after award to certain unsuccessful offerors. Whether that notice would suffice is supplied as an input fact.",
+        "source_pages": [
+          477
+        ],
+        "quote": "Within 3 days after the date of contract award, the contracting officer shall provide written notification to each offeror whose proposal was in the competitive range but was not selected for award"
+      }
+    ],
+    "process": [
+      {
+        "id": "P01",
+        "action": "Identify the receipt deadline specified in the solicitation. If none is specified, apply 4:30 p.m. local time at the designated office on the due date.",
+        "requires": [],
+        "source_pages": [
+          440
+        ],
+        "quote": "If no time is specified in the solicitation, the time for receipt is 4:30 p.m., local time, for the designated Government office on the date that proposals are due."
+      },
+      {
+        "id": "P02",
+        "action": "Assess the 15.208(d) emergency extension. It applies only if an emergency or unanticipated event interrupts normal processes, that interruption prevents timely receipt at the designated office, and urgent requirements preclude amending the closing date.",
+        "requires": [
+          "P01"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "If an emergency or unanticipated event interrupts normal Government processes so that proposals cannot be received at the Government office designated for receipt of proposals by the exact time specified in the solicitation, and urgent Government requirements preclude amendment of the solicitation closing date"
+      },
+      {
+        "id": "P03",
+        "action": "If the extension triggers, set the effective deadline to the same time of day specified in the solicitation, on the first work day normal Government processes resume. Do not invent a calendar date; that day is determined when processes resume.",
+        "requires": [
+          "P02"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "the time specified for receipt of proposals will be deemed to be extended to the same time of day specified in the solicitation on the first work day on which normal Government processes resume."
+      },
+      {
+        "id": "P04",
+        "action": "Mark each item received at the specified location with its date and time of receipt and transmit it to the designated officials.",
+        "requires": [],
+        "source_pages": [
+          439
+        ],
+        "quote": "Upon receipt at the location specified in the solicitation, proposals and information received in response to a request for information (RFI) shall be marked with the date and time of receipt and shall be transmitted to the designated officials."
+      },
+      {
+        "id": "P05",
+        "action": "Compare receipt at the designated Government office against the effective deadline and classify the item as on time or late. The input received_late already reflects any extension.",
+        "requires": [
+          "P03",
+          "P04"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "Any proposal, modification, or revision, that is received at the designated Government office after the exact time specified for receipt of proposals is"
+      },
+      {
+        "id": "P06",
+        "action": "Apply the precedence rule first for late items. If the item is a late modification of an otherwise successful proposal that makes its terms more favourable to the Government, it is considered whenever received, without the (b)(1) conditions. It may be accepted.",
+        "requires": [
+          "P05"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "However, a late modification of an otherwise successful proposal, that makes its terms more favorable to the Government, will be considered at any time it is received and may be accepted."
+      },
+      {
+        "id": "P07",
+        "action": "For other late items, check both threshold (b)(1) conditions: the item was received before award, and the contracting officer has determined that accepting it would not unduly delay the acquisition. If either fails, the item is not considered.",
+        "requires": [
+          "P06"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "will not be considered unless it is received before award is made, the contracting officer determines that accepting the late proposal would not unduly delay the acquisition"
+      },
+      {
+        "id": "P08",
+        "action": "Check exception (b)(1)(i): an authorised electronic commerce method was used and the initial Government gateway received the item no later than 5:00 p.m. one working day before the due date. Implementation choice, not source text: this is encoded as 2 or more working days before, or 1 working day before at minute 1020 (17:00) or earlier.",
+        "requires": [
+          "P07"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "If it was transmitted through an electronic commerce method authorized by the solicitation, it was received at the initial point of entry to the Government infrastructure not later than 5:00 p.m. one working day prior to the date specified for receipt of proposals"
+      },
+      {
+        "id": "P09",
+        "action": "Check exception (b)(1)(ii). Acceptable evidence (time/date stamp, other installation documentary evidence, or Government personnel testimony or statements) must establish both receipt at the designated installation and Government control before the deadline.",
+        "requires": [
+          "P07"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "Acceptable evidence to establish the time of receipt at the Government installation includes the time/date stamp of that installation on the proposal wrapper, other documentary evidence of receipt maintained by the installation, or oral testimony or statements of Government personnel."
+      },
+      {
+        "id": "P10",
+        "action": "Check exception (b)(1)(iii): the item was the only proposal received.",
+        "requires": [
+          "P07"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "It was the only proposal received."
+      },
+      {
+        "id": "P11",
+        "action": "Decide whether the late item may be considered. It may be considered if the special modification rule applies, or if both threshold conditions are met and at least one exception applies. Otherwise it is not considered. Consideration is not award or acceptance.",
+        "requires": [
+          "P06",
+          "P07",
+          "P08",
+          "P09",
+          "P10"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "will not be considered unless it is received before award is made, the contracting officer determines that accepting the late proposal would not unduly delay the acquisition"
+      },
+      {
+        "id": "P12",
+        "action": "Promptly notify the offeror of a late item and state whether it will be considered. This notice is not required when award is imminent and the 15.503(b) notice would suffice.",
+        "requires": [
+          "P11"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "The contracting officer must promptly notify any offeror if its proposal, modification, or revision was received late, and must inform the offeror whether its proposal will be considered, unless contract award is imminent and the notice prescribed in 15.503(b) would suffice."
+      },
+      {
+        "id": "P13",
+        "action": "Hold late proposals and modifications that are not considered unopened (unless opened for identification) until after award. Then retain them with the other unsuccessful proposals.",
+        "requires": [
+          "P11"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "Late proposals and modifications that are not considered must be held unopened, unless opened for identification, until after award and then retained with other unsuccessful proposals."
+      },
+      {
+        "id": "P14",
+        "action": "Place in the contracting office file, if available: the date and hour of receipt; a statement of whether the item was considered, with rationale; and the envelope, wrapper or other evidence of the receipt date.",
+        "requires": [
+          "P11"
+        ],
+        "source_pages": [
+          440
+        ],
+        "quote": "If available, the following must be included in the contracting office files for each late proposal, modification, revision, or withdrawal:"
+      }
+    ],
+    "outputs": {
+      "late_submission_considerable": {
+        "rules": [
+          {
+            "when": {
+              "field": "received_late",
+              "op": "eq",
+              "value": false
+            },
+            "value": "unknown",
+            "source_pages": [
+              440
+            ],
+            "quote": "Any proposal, modification, or revision, that is received at the designated Government office after the exact time specified for receipt of proposals is"
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "item_kind",
+                  "op": "eq",
+                  "value": "modification"
+                },
+                {
+                  "field": "otherwise_successful_proposal",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "modified_terms_more_favourable",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              440
+            ],
+            "quote": "However, a late modification of an otherwise successful proposal, that makes its terms more favorable to the Government, will be considered at any time it is received"
+          },
+          {
+            "when": {
+              "field": "received_before_award",
+              "op": "eq",
+              "value": false
+            },
+            "value": false,
+            "source_pages": [
+              440
+            ],
+            "quote": "will not be considered unless it is received before award is made"
+          },
+          {
+            "when": {
+              "field": "acceptance_would_unduly_delay",
+              "op": "eq",
+              "value": true
+            },
+            "value": false,
+            "source_pages": [
+              440
+            ],
+            "quote": "the contracting officer determines that accepting the late proposal would not unduly delay the acquisition"
+          },
+          {
+            "when": {
+              "any": [
+                {
+                  "all": [
+                    {
+                      "field": "electronic_method_authorised",
+                      "op": "eq",
+                      "value": true
+                    },
+                    {
+                      "any": [
+                        {
+                          "field": "gateway_workdays_before_due_date",
+                          "op": "gt",
+                          "value": 1
+                        },
+                        {
+                          "all": [
+                            {
+                              "field": "gateway_workdays_before_due_date",
+                              "op": "eq",
+                              "value": 1
+                            },
+                            {
+                              "field": "gateway_minute_of_day",
+                              "op": "lte",
+                              "value": 1020
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "field": "acceptable_receipt_evidence",
+                      "op": "eq",
+                      "value": true
+                    },
+                    {
+                      "field": "designated_installation_received_before_deadline",
+                      "op": "eq",
+                      "value": true
+                    },
+                    {
+                      "field": "government_control_before_deadline",
+                      "op": "eq",
+                      "value": true
+                    }
+                  ]
+                },
+                {
+                  "field": "only_proposal_received",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              440
+            ],
+            "quote": "If it was transmitted through an electronic commerce method authorized by the solicitation, it was received at the initial point of entry to the Government infrastructure not later than 5:00 p.m. one working day prior to the date specified for receipt of proposals"
+          }
+        ],
+        "default": false
+      },
+      "late_notice_required": {
+        "rules": [
+          {
+            "when": {
+              "field": "received_late",
+              "op": "eq",
+              "value": false
+            },
+            "value": false,
+            "source_pages": [
+              440
+            ],
+            "quote": "The contracting officer must promptly notify any offeror if its proposal, modification, or revision was received late"
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "contract_award_imminent",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "award_notice_would_suffice",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              440
+            ],
+            "quote": "unless contract award is imminent and the notice prescribed in 15.503(b) would suffice."
+          },
+          {
+            "when": {
+              "field": "received_late",
+              "op": "eq",
+              "value": true
+            },
+            "value": true,
+            "source_pages": [
+              440
+            ],
+            "quote": "The contracting officer must promptly notify any offeror if its proposal, modification, or revision was received late, and must inform the offeror whether its proposal will be considered"
+          }
+        ],
+        "default": false
+      },
+      "emergency_deadline_extension": {
+        "rules": [
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "process_interrupted",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "interruption_prevents_timely_receipt",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "urgent_needs_preclude_amendment",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              440
+            ],
+            "quote": "If an emergency or unanticipated event interrupts normal Government processes so that proposals cannot be received at the Government office designated for receipt of proposals by the exact time specified in the solicitation, and urgent Government requirements preclude amendment of the solicitation closing date, the time specified for receipt of proposals will be deemed to be extended"
+          }
+        ],
+        "default": false
+      }
+    }
+  },
+  "output_sha256": "1131e8a7202d0143b50829993745695e2da8ab6b5412d1f41d69f25011c68659",
+  "assessment": "hidden_assistant_draft_test_vectors_not_independent_gold"
+}

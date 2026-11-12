@@ -1,0 +1,20 @@
+{
+  "id": "fta-m2-r1",
+  "model": "google/gemini-4-argon",
+  "task_id": "fta",
+  "repetition": 1,
+  "artifact_type": "generated_source_linked_blueprint_draft",
+  "business_approval_required": true,
+  "business_approved": false,
+  "qualified": false,
+  "export_status": "unusable_model_draft",
+  "source_quote_match": null,
+  "issues": [
+    "json_parse: Expecting value: line 1 column 2 (char 1)"
+  ],
+  "content": null,
+  "output_sha256": "018e026a3289edc3bf0f6eb67964a6e914b9418599883ad02bc26f40218d3061",
+  "assessment": "hidden_assistant_draft_test_vectors_not_independent_gold",
+  "checker_revision": "quote-normalisation-v1.1",
+  "correction_status": "postcollection_mechanical_quote_check_correction"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "stopped_by_user",
+  "account_usage_after_usd": 27.576444117,
+  "account_usage_before_usd": 21.477736117,
+  "known_campaign_cost_usd": 6.090864,
+  "previous_unknown_cost_reserve_usd": 0.481264729,
+  "current_unknown_cost_reserve_usd": 2.335025,
+  "conservative_cumulative_committed_usd": 30.392733846,
+  "cumulative_ceiling_usd": 40,
+  "campaign_ceiling_usd": 17,
+  "recorded_calls": 19,
+  "assigned_calls": 27,
+  "remaining_authorised_headroom_usd": 9.607266154000001,
+  "qualified": false,
+  "updated_at": "2026-11-12T02:45:46.212Z",
+  "archived_record_files": 27,
+  "stopped_undispatched_calls": 8,
+  "qualification": "internal_tests"
+}

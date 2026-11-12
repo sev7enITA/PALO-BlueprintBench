@@ -1,0 +1,10 @@
+{
+  "status": "user_cancelled_before_dispatch",
+  "at": "2026-11-11T22:57:12.404232+00:00",
+  "dispatched_calls": 0,
+  "cost_usd": 0,
+  "cost_reason": "No batch submitted and no inference call dispatched",
+  "exclude_from_primary_analysis": true,
+  "reason": "User instructed to stop Google benchmark attempts and extend previously catalogued models instead",
+  "frozen_preparation_retained": true
+}

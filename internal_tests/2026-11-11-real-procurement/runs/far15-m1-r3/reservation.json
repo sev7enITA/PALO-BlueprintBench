@@ -1,0 +1,18 @@
+{
+  "id": "far15-m1-r3",
+  "task_id": "far15",
+  "model": "anthropic/claude-opus-5.5",
+  "model_index": 1,
+  "repetition": 3,
+  "request_path": "prepared/far15-1.json",
+  "request_sha256": "6a5d385a59d84eed377a08c72f22c22850491a2a1b774bd5d5dce48f9d2e28bd",
+  "source_packet_sha256": "94463ccb63ce5b831a69bd698413b2f9c2621ff978aba08829cede25786e4e37",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "anthropic",
+  "started_at": "2026-11-11T22:56:58.386Z",
+  "reserved_usd": 3.1006888,
+  "headroom_before_usd": 11.562244,
+  "account_usage": 26.923336117,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c"
+}

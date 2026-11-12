@@ -1,0 +1,934 @@
+{
+  "id": "anthropic/claude-opus-5.5",
+  "name": "Anthropic: Claude Opus 5.5",
+  "created": 1790094732,
+  "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code...",
+  "architecture": {
+    "tokenizer": "Claude",
+    "instruct_type": null,
+    "modality": "text+image+file->text",
+    "input_modalities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  "endpoints": [
+    {
+      "name": "Amazon Bedrock | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4/M tokens",
+        "completion": "$20/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.2/M tokens",
+        "input_cache_write": "$5/M tokens",
+        "input_cache_write_1h": "$8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Amazon Bedrock",
+      "tag": "amazon-bedrock",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 2901,
+        "p75": 4726,
+        "p90": 6513,
+        "p99": 24825.010000000028
+      },
+      "throughput_last_30m": {
+        "p50": 66,
+        "p75": 47,
+        "p90": 32,
+        "p99": 13
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 2901,
+            "p75": 4726,
+            "p90": 6513,
+            "p99": 24825.010000000028
+          },
+          "throughput": {
+            "p50": 66,
+            "p75": 47,
+            "p90": 32,
+            "p99": 13
+          },
+          "request_count": 66371
+        }
+      }
+    },
+    {
+      "name": "Azure | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4/M tokens",
+        "completion": "$20/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.2/M tokens",
+        "input_cache_write": "$5/M tokens",
+        "input_cache_write_1h": "$8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Azure",
+      "tag": "azure/global",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "structured_outputs",
+        "max_tokens",
+        "max_completion_tokens",
+        "tools",
+        "tool_choice",
+        "response_format",
+        "verbosity",
+        "stop",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 1563.5,
+        "p75": 2673.75,
+        "p90": 3102.5,
+        "p99": 3838
+      },
+      "throughput_last_30m": {
+        "p50": 93,
+        "p75": 78,
+        "p90": 66.1,
+        "p99": 30.05
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 1563.5,
+            "p75": 2673.75,
+            "p90": 3102.5,
+            "p99": 3838
+          },
+          "throughput": {
+            "p50": 93,
+            "p75": 78,
+            "p90": 66.1,
+            "p99": 30.05
+          },
+          "request_count": 1376
+        }
+      }
+    },
+    {
+      "name": "Google | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4/M tokens",
+        "completion": "$20/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.2/M tokens",
+        "input_cache_write": "$5/M tokens",
+        "input_cache_write_1h": "$8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Google",
+      "tag": "google-vertex/global",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "response_format",
+        "tool_choice",
+        "tools",
+        "verbosity",
+        "structured_outputs",
+        "stop",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 2937,
+        "p75": 4109.5,
+        "p90": 7246,
+        "p99": 20967.960000000036
+      },
+      "throughput_last_30m": {
+        "p50": 80,
+        "p75": 63,
+        "p90": 47,
+        "p99": 21
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 2937,
+            "p75": 4109.5,
+            "p90": 7246,
+            "p99": 20967.960000000036
+          },
+          "throughput": {
+            "p50": 80,
+            "p75": 63,
+            "p90": 47,
+            "p99": 21
+          },
+          "request_count": 8298
+        }
+      }
+    },
+    {
+      "name": "Claude Platform on AWS | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4/M tokens",
+        "completion": "$20/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.2/M tokens",
+        "input_cache_write": "$5/M tokens",
+        "input_cache_write_1h": "$8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Claude Platform on AWS",
+      "tag": "claude-on-aws",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search_20260209"
+        },
+        "openrouter:web_fetch": {
+          "type": "web_fetch_20260209"
+        },
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        },
+        "openrouter:advisor": {
+          "type": "advisor_20260301"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 3146.5,
+        "p75": 3800,
+        "p90": 4661.800000000001,
+        "p99": 14644.730000000014
+      },
+      "throughput_last_30m": {
+        "p50": 82,
+        "p75": 63,
+        "p90": 44,
+        "p99": 23
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 3146.5,
+            "p75": 3800,
+            "p90": 4661.800000000001,
+            "p99": 14644.730000000014
+          },
+          "throughput": {
+            "p50": 82,
+            "p75": 63,
+            "p90": 44,
+            "p99": 23
+          },
+          "request_count": 58878
+        }
+      }
+    },
+    {
+      "name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4/M tokens",
+        "completion": "$20/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.2/M tokens",
+        "input_cache_write": "$5/M tokens",
+        "input_cache_write_1h": "$8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Anthropic",
+      "tag": "anthropic",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search_20260209"
+        },
+        "openrouter:web_fetch": {
+          "type": "web_fetch_20260209"
+        },
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        },
+        "openrouter:advisor": {
+          "type": "advisor_20260301"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 2630,
+        "p75": 3657.25,
+        "p90": 5261.300000000004,
+        "p99": 13866.280000000013
+      },
+      "throughput_last_30m": {
+        "p50": 86,
+        "p75": 64,
+        "p90": 45,
+        "p99": 20
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 2630,
+            "p75": 3657.25,
+            "p90": 5261.300000000004,
+            "p99": 13866.280000000013
+          },
+          "throughput": {
+            "p50": 86,
+            "p75": 64,
+            "p90": 45,
+            "p99": 20
+          },
+          "request_count": 47984
+        }
+      }
+    },
+    {
+      "name": "Amazon Bedrock | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4.4/M tokens",
+        "completion": "$22/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.22/M tokens",
+        "input_cache_write": "$5.5/M tokens",
+        "input_cache_write_1h": "$8.8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Amazon Bedrock",
+      "tag": "amazon-bedrock/eu-west-1",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 4264,
+        "p75": 5519,
+        "p90": 6833.200000000001,
+        "p99": 12568.080000000004
+      },
+      "throughput_last_30m": {
+        "p50": 81,
+        "p75": 64,
+        "p90": 48,
+        "p99": 23.84
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 4264,
+            "p75": 5519,
+            "p90": 6833.200000000001,
+            "p99": 12568.080000000004
+          },
+          "throughput": {
+            "p50": 81,
+            "p75": 64,
+            "p90": 48,
+            "p99": 23.84
+          },
+          "request_count": 693
+        }
+      }
+    },
+    {
+      "name": "Amazon Bedrock | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4.4/M tokens",
+        "completion": "$22/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.22/M tokens",
+        "input_cache_write": "$5.5/M tokens",
+        "input_cache_write_1h": "$8.8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Amazon Bedrock",
+      "tag": "amazon-bedrock/us-east-1",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 3594,
+        "p75": 4767,
+        "p90": 6343,
+        "p99": 14473.899999999978
+      },
+      "throughput_last_30m": {
+        "p50": 64.5,
+        "p75": 48,
+        "p90": 37,
+        "p99": 17.369999999999997
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 3594,
+            "p75": 4767,
+            "p90": 6343,
+            "p99": 14473.899999999978
+          },
+          "throughput": {
+            "p50": 64.5,
+            "p75": 48,
+            "p90": 37,
+            "p99": 17.369999999999997
+          },
+          "request_count": 671
+        }
+      }
+    },
+    {
+      "name": "Azure | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4.4/M tokens",
+        "completion": "$22/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.22/M tokens",
+        "input_cache_write": "$5.5/M tokens",
+        "input_cache_write_1h": "$8.8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Azure",
+      "tag": "azure/us",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "structured_outputs",
+        "max_tokens",
+        "max_completion_tokens",
+        "tools",
+        "tool_choice",
+        "response_format",
+        "verbosity",
+        "stop",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": null,
+      "uptime_last_5m": null,
+      "uptime_last_1d": null,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": null,
+      "throughput_last_30m": null,
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 926,
+            "p75": 926,
+            "p90": 926,
+            "p99": 926
+          },
+          "throughput": null,
+          "request_count": 1
+        }
+      }
+    },
+    {
+      "name": "Google | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4.4/M tokens",
+        "completion": "$22/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.22/M tokens",
+        "input_cache_write": "$5.5/M tokens",
+        "input_cache_write_1h": "$8.8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Google",
+      "tag": "google-vertex/us",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "response_format",
+        "tool_choice",
+        "tools",
+        "verbosity",
+        "structured_outputs",
+        "stop",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": null,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 2329,
+        "p75": 2963,
+        "p90": 4508.199999999997,
+        "p99": 11330.359999999977
+      },
+      "throughput_last_30m": {
+        "p50": 80,
+        "p75": 62,
+        "p90": 46.2,
+        "p99": 17.439999999999998
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 2329,
+            "p75": 2963,
+            "p90": 4508.199999999997,
+            "p99": 11330.359999999977
+          },
+          "throughput": {
+            "p50": 80,
+            "p75": 62,
+            "p90": 46.2,
+            "p99": 17.439999999999998
+          },
+          "request_count": 369
+        }
+      }
+    },
+    {
+      "name": "Google | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$4.4/M tokens",
+        "completion": "$22/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.22/M tokens",
+        "input_cache_write": "$5.5/M tokens",
+        "input_cache_write_1h": "$8.8/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Google",
+      "tag": "google-vertex/europe",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "response_format",
+        "tool_choice",
+        "tools",
+        "verbosity",
+        "structured_outputs",
+        "stop",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 3460,
+        "p75": 4150.5,
+        "p90": 5122.7,
+        "p99": 9641.519999999975
+      },
+      "throughput_last_30m": {
+        "p50": 73,
+        "p75": 50,
+        "p90": 33,
+        "p99": 18
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 3460,
+            "p75": 4150.5,
+            "p90": 5122.7,
+            "p99": 9641.519999999975
+          },
+          "throughput": {
+            "p50": 73,
+            "p75": 50,
+            "p90": 33,
+            "p99": 18
+          },
+          "request_count": 1188
+        }
+      }
+    },
+    {
+      "name": "Anthropic | anthropic/claude-opus-5.5-20260921",
+      "model_id": "anthropic/claude-opus-5.5",
+      "model_name": "Anthropic: Claude Opus 5.5",
+      "context_length": 1000000,
+      "pricing": {
+        "prompt": "$8/M tokens",
+        "completion": "$40/M tokens",
+        "web_search": "$0.01/web search",
+        "input_cache_read": "$0.4/M tokens",
+        "input_cache_write": "$10/M tokens",
+        "input_cache_write_1h": "$16/M tokens",
+        "discount": 0
+      },
+      "provider_name": "Anthropic",
+      "tag": "anthropic/fast",
+      "service_tier": "priority",
+      "quantization": "unknown",
+      "max_completion_tokens": 128000,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "stop",
+        "tool_choice",
+        "tools",
+        "structured_outputs",
+        "response_format",
+        "verbosity",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": false,
+        "function": false
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 100,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "web_search_20260209"
+        },
+        "openrouter:web_fetch": {
+          "type": "web_fetch_20260209"
+        },
+        "openrouter:bash": {
+          "type": "bash_20250124"
+        },
+        "openrouter:advisor": {
+          "type": "advisor_20260301"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 1651,
+        "p75": 2181.5,
+        "p90": 3042.0000000000005,
+        "p99": 9663.540000000028
+      },
+      "throughput_last_30m": {
+        "p50": 204,
+        "p75": 148,
+        "p90": 100.10000000000002,
+        "p99": 41
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 1651,
+            "p75": 2181.5,
+            "p90": 3042.0000000000005,
+            "p99": 9663.540000000028
+          },
+          "throughput": {
+            "p50": 204,
+            "p75": 148,
+            "p90": 100.10000000000002,
+            "p99": 41
+          },
+          "request_count": 2159
+        }
+      }
+    }
+  ]
+}

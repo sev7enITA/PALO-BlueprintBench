@@ -21,11 +21,14 @@ def graph(filename):
 class SchemaAlignmentTests(unittest.TestCase):
     def test_shared_dataset_preserves_observation_version(self):
         expected = build_next_cycle.schema(build_next_cycle.build())['@graph'][1]
-        for name in ('PALO_BlueprintBench.html', 'PALO_BlueprintBench_Leaderboard.html', 'PALO_BlueprintBench_NextCycle.html'):
+        for name in ('PALO_BlueprintBench_Leaderboard.html', 'PALO_BlueprintBench_NextCycle.html'):
             nodes = graph(name)
             self.assertEqual(next(n for n in nodes if n.get('@id') == expected['@id']), expected)
             page = next(n for n in nodes if n.get('@type') in ('WebPage', 'CollectionPage'))
             self.assertEqual(page['version'], publication.PRESENTATION_REVISION)
+        landing=graph('PALO_BlueprintBench.html')
+        self.assertFalse(any(n.get('@type')=='Dataset' for n in landing))
+        self.assertIn('https://paloframework.org/PALO_BlueprintBench_NextCycle.html',landing[0]['relatedLink'])
         self.assertEqual(expected['version'], '2026-11-11.4')
         self.assertIn('not independently validated', expected['creativeWorkStatus'])
 
@@ -62,7 +65,9 @@ class SchemaAlignmentTests(unittest.TestCase):
         self.assertEqual(len(plan['gates']), 6)
         self.assertFalse(plan['independently_qualified'])
         self.assertFalse(plan['numerical_ranks_enabled'])
-        self.assertEqual(plan['new_paid_calls'], 0)
+        self.assertEqual(plan['current_development_study']['assigned_calls'], 36)
+        self.assertEqual(plan['current_development_study']['assigned_repetitions'], 3)
+        self.assertEqual(plan['current_development_study']['qualification'], 'not_independently_validated')
         self.assertTrue(all(g['acceptance_evidence_received'] is False for g in plan['gates']))
         self.assertIn('not a single-variable causal test', build_next_cycle.schema(build_next_cycle.build())['@graph'][1]['measurementTechnique'])
         manifest = json.loads((ROOT/'web/downloads/blueprintbench/next-cycle-manifest.json').read_text(encoding='utf-8'))

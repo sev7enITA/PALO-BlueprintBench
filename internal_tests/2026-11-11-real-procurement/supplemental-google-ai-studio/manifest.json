@@ -1,0 +1,40 @@
+{
+  "frozen_at": "2026-11-11T22:45:33.177636+00:00",
+  "status": "supplemental_internal_transport_configuration",
+  "qualified": false,
+  "original_manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c",
+  "assignment_count": 9,
+  "documents": 3,
+  "repetitions": 3,
+  "provider": "google-ai-studio",
+  "transport": "OpenRouter MCP Batch API",
+  "changes_from_original": [
+    "Serving provider",
+    "Asynchronous batch transport; queue duration not model latency",
+    "Native API request shape with identical message/system contents"
+  ],
+  "unchanged": [
+    "Source bytes",
+    "Task instructions",
+    "Expected reference decisions",
+    "Reasoning effort high",
+    "Output ceiling 32768",
+    "No temperature/seed specified",
+    "No model-specific schema repair"
+  ],
+  "files": {
+    "batch-request.json": "dac2d1127714f6872876f4f36c1c4d13918eeec850febe13cf2a8a0a97edfe8b",
+    "endpoint.json": "e9cb8705c52b37a79c2f8d6cb04fe697393aec75090c63f2b7cdfb5c4e117970",
+    "models.json": "812c3e34ccd2ccff427947b0f6a0da14a574caca3175db9c8264e64aa1954a83",
+    "prepared/far15-google-ai-studio-r1.json": "988a0767f95f32152a780a2ae93a343c53c8bd6f7f205af6a715ae09328a74ac",
+    "prepared/far15-google-ai-studio-r2.json": "988a0767f95f32152a780a2ae93a343c53c8bd6f7f205af6a715ae09328a74ac",
+    "prepared/far15-google-ai-studio-r3.json": "988a0767f95f32152a780a2ae93a343c53c8bd6f7f205af6a715ae09328a74ac",
+    "prepared/fema-google-ai-studio-r1.json": "8c3431d6e29fb09a88bba55ff020c281fabfeb1f6c69eda9ad4e830ceee7130b",
+    "prepared/fema-google-ai-studio-r2.json": "8c3431d6e29fb09a88bba55ff020c281fabfeb1f6c69eda9ad4e830ceee7130b",
+    "prepared/fema-google-ai-studio-r3.json": "8c3431d6e29fb09a88bba55ff020c281fabfeb1f6c69eda9ad4e830ceee7130b",
+    "prepared/fta-google-ai-studio-r1.json": "a0223cded40496612c3691051e3284e8a03d0bbf271a4b91c5b8533797970e76",
+    "prepared/fta-google-ai-studio-r2.json": "a0223cded40496612c3691051e3284e8a03d0bbf271a4b91c5b8533797970e76",
+    "prepared/fta-google-ai-studio-r3.json": "a0223cded40496612c3691051e3284e8a03d0bbf271a4b91c5b8533797970e76",
+    "schedule.json": "f9ed9cadbf26abf54a534a4ea71d911d8476ad0e68f727fe9e175200253c1509"
+  }
+}

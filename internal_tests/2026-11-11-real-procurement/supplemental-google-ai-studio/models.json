@@ -1,0 +1,93 @@
+[
+  {
+    "id": "google/gemini-4-argon",
+    "name": "Google: Gemini 4 Argon",
+    "provider": "google-ai-studio",
+    "endpoint": {
+      "name": "Google AI Studio | google/gemini-4-argon-20261013",
+      "model_id": "google/gemini-4-argon",
+      "model_name": "Google: Gemini 4 Argon",
+      "context_length": 1048576,
+      "pricing": {
+        "prompt": "$2/M tokens",
+        "completion": "$10/M tokens",
+        "image": "$0.000002/image",
+        "audio": "$2/M tokens",
+        "input_audio_cache": "$0.1/M tokens",
+        "web_search": "$0.014/web search",
+        "internal_reasoning": "$10/M tokens",
+        "input_cache_read": "$0.1/M tokens",
+        "input_cache_write": "$0.1875/M tokens",
+        "discount": 0.5
+      },
+      "provider_name": "Google AI Studio",
+      "tag": "google-ai-studio",
+      "service_tier": null,
+      "quantization": "unknown",
+      "max_completion_tokens": 943718,
+      "max_prompt_tokens": null,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "seed",
+        "response_format",
+        "tools",
+        "tool_choice",
+        "structured_outputs",
+        "reasoning_effort"
+      ],
+      "supports_tool_choice": {
+        "none": true,
+        "auto": true,
+        "required": true,
+        "function": true
+      },
+      "status": 0,
+      "uptime_last_30m": 100,
+      "uptime_last_5m": 100,
+      "uptime_last_1d": 99.93055555555556,
+      "supports_implicit_caching": false,
+      "native_tools": {
+        "openrouter:web_search": {
+          "type": "google_search"
+        }
+      },
+      "supports_voice_cloning": false,
+      "supports_multiple_audio_references": false,
+      "supports_image_reference": false,
+      "supports_diarization": false,
+      "latency_last_30m": {
+        "p50": 7030.5,
+        "p75": 8591,
+        "p90": 10719.600000000002,
+        "p99": 43626.9
+      },
+      "throughput_last_30m": {
+        "p50": 21,
+        "p75": 14,
+        "p90": 11,
+        "p99": 4
+      },
+      "perf_last_30m_by_workload": {
+        "text_generation": {
+          "latency": {
+            "p50": 7030.5,
+            "p75": 8591,
+            "p90": 10719.600000000002,
+            "p99": 43626.9
+          },
+          "throughput": {
+            "p50": 21,
+            "p75": 14,
+            "p90": 11,
+            "p99": 4
+          },
+          "request_count": 16219
+        }
+      }
+    }
+  }
+]

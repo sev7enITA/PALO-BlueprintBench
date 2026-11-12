@@ -153,18 +153,18 @@ def build():
 
 def schema(data):
     observed = bool(data['analysis'] and data['analysis']['recorded_requests'] > 0)
-    description = ('Recorded internal engineering feasibility on six fictional procurement scenarios and 48 draft propositions, with workflow outputs, metamorphic checks and advisory legacy-label reviews.' if observed else 'Prepared development cases and a pending internal feasibility campaign; no execution outcomes are published yet.')
+    description = ('Observed results from the 6-process synthetic test: 48 provisional propositions, workflow outputs, paired input variations and advisory label reviews.' if observed else 'Prepared fictional process descriptions; no execution outcomes are published yet.')
     observed_tokens = [{'@type': 'PropertyValue', 'propertyID': key, 'name': label, 'unitText': 'tokens'}
         for key, label in [('prompt_tokens', 'Observed provider-reported prompt tokens'), ('completion_tokens', 'Observed provider-reported completion tokens'), ('total_tokens', 'Observed provider-reported total tokens'), ('reasoning_tokens', 'Observed provider-reported reasoning tokens'), ('cached_tokens', 'Observed provider-reported cached prompt tokens'), ('cache_write_tokens', 'Observed provider-reported cache-write tokens')]
         if any(row.get(key) is not None for row in (data['analysis'] or {}).get('attempts', []))]
     graph = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'WebPage', '@id': URL + '#webpage', 'url': URL,
-         'name': 'BlueprintBench next-cycle internal feasibility', 'description': description,
+         'name': '6-process synthetic test | PALO BlueprintBench', 'description': description,
          'version': REVISION, 'inLanguage': 'en', 'isAccessibleForFree': True,
          'isPartOf': {'@id': 'https://paloframework.org/#website'},
          'mainEntity': {'@id': URL + '#dataset'},
          'creativeWorkStatus': 'Internal engineering feasibility; assistant-draft expectations; independent human adjudication pending'},
-        {'@type': 'Dataset', '@id': URL + '#dataset', 'name': 'BlueprintBench next-cycle development feasibility records',
+        {'@type': 'Dataset', '@id': URL + '#dataset', 'name': 'BlueprintBench 6-process synthetic test records',
          'url': URL, 'version': REVISION, 'description': description + ' One authoring group and zero independently sourced families. No ranking or qualified accuracy claim.',
          'creator': {'@type': 'Person', 'name': 'Fabrizio Degni', '@id': 'https://paloframework.org/PALO_Community.html#creator'},
          'isAccessibleForFree': True, 'creativeWorkStatus': 'Recorded internal observations' if observed else 'Prepared development material; not executed',
@@ -176,7 +176,7 @@ def schema(data):
              {'@type': 'PropertyValue', 'propertyID': 'matches_draft', 'name': 'Matches to provisional draft expectations', 'unitText': 'judgments'},
              {'@type': 'PropertyValue', 'propertyID': 'known_cost_usd', 'name': 'Known provider-reported charge', 'unitText': 'USD'},
          ] + observed_tokens,
-         'distribution': {'@type': 'DataDownload', 'name': 'Next-cycle internal observations JSON', 'encodingFormat': 'application/json', 'contentUrl': 'https://paloframework.org/downloads/blueprintbench/next-cycle-results.json'}},
+         'distribution': {'@type': 'DataDownload', 'name': 'Six-process observations JSON', 'encodingFormat': 'application/json', 'contentUrl': 'https://paloframework.org/downloads/blueprintbench/next-cycle-results.json'}},
     ]}
     return research_publication.enrich(graph, data)
 

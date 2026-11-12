@@ -1,0 +1,479 @@
+{
+  "id": "quote-normalisation-v1.1",
+  "status": "postcollection_mechanical_checker_correction",
+  "qualified": false,
+  "first_observed_on": "2026-11-11",
+  "first_documented_at": "2026-11-11T22:35:18.362345+00:00",
+  "updated_at": "2026-11-12T02:46:42.812024+00:00",
+  "trigger": "fta-m0-r1 requirement R25: source micro-hyphen-newline-purchase versus quoted micro-purchase.",
+  "scope": "Join ASCII-letter hyphen followed by exactly one CRLF/LF/CR line ending and optional horizontal spaces before an ASCII letter; retain the hyphen; then original whitespace normalization.",
+  "excluded_transformations": [
+    "hyphen removal",
+    "multiple-newline joining",
+    "space-only joining",
+    "Unicode dash folding",
+    "case folding",
+    "paraphrase",
+    "word deletion",
+    "semantic label changes"
+  ],
+  "source_output_or_gold_edits": false,
+  "prompts_changed": false,
+  "additional_model_calls": 0,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c",
+  "frozen_hashes_unchanged": true,
+  "original_analysis_sha256_at_snapshot": "1e023edf223a5c64986b80ecb423f937d23f27f8a84b5201fa55dc0231f96574",
+  "original_blueprints_sha256_at_snapshot": {
+    "fta-m0-r1.json": "25d934c488549f69e5a98b5fb41e438e6501d9d912422bfcf3ab0d7589987bb9",
+    "far15-m1-r3.json": "3859a64170d29e3dc1fd22e7d5489028f4b8de03906e548e0cbbce3b371aef7b",
+    "far15-m0-r2.json": "1156f85686ca75824756385362689d52f4a83c6d18857c6c3e3991cb2038ea26",
+    "fema-m1-r2.json": "610cf5bca15ebe8f068e785e76687b5a5ad71e2f3ff8cde0bf3d99c0039f2008",
+    "fema-m0-r2.json": "e6711a49eafb56f746c66e56eef0a997bb0b1917551c9c5ddcfb214bea245abb",
+    "fta-m1-r1.json": "745c00b7a243a298578b070d621a8b2c34233235af871de78e38c90fd54c0725",
+    "far15-m0-r3.json": "2c8af048af41862725b2e881eaa66323c5b2411e915a1ad9f0752c95b95b3912",
+    "far15-m1-r2.json": "e98a531f3118d9482787ea42ee01784ca690268dcbbe4c0208b5643141f50c15",
+    "fta-m2-r1.json": "02ec33c5698e234163dda1f9d9d9f31a22636bdfa6ae6ca2c6f2e4cba7a891ba",
+    "far15-m2-r1.json": "688eeedfccde5fb6c200fc98b1d5653de63d3479be1e8c42d596c2c0018b171f",
+    "fta-m1-r2.json": "c2755f3ba41d3a3f6b6910aca9e35e4edca04c1f1d2cad37088365a1943a7fed",
+    "far15-m1-r1.json": "683c66bd2f3f346261f7408784a0d324f1837bb482057c3f5be1d381fd619003",
+    "fema-m0-r1.json": "a763d8c392a0d49e7a924f7f0830630d702b7b41630ed28d5e757824c8750076",
+    "fema-m1-r1.json": "815e4611a4b9e38aa20b6308264679a840390a713972afc6916f59d7833313d0",
+    "fta-m0-r2.json": "d20d417dd49ac1c31117e93a1dd29494cf91f9478da8bf44e19a2d4d3d99aa63",
+    "far15-m0-r1.json": "dc18bc8b8f85fa7a50cef155404b8657b450a4d5f3bbda0c2ea6a45cc141667d"
+  },
+  "baseline_replay_path": "corrections/analysis-v1.0-replayed.json",
+  "baseline_replay_sha256": "8abe323bdd315bea3b8c736ee2dd84b6f0290af8aa0e9862555fd04b457d3c46",
+  "corrected_analysis_path": "analysis-corrected.json",
+  "corrected_analysis_sha256": "7e83a18e904a316ee5655d34b807b9f46695442e4f89f649d31a2b7874df0673",
+  "comparison_scope": {
+    "assigned_calls": 27,
+    "snapshot_record_files": 27,
+    "recorded_snapshot_calls": 19,
+    "dispatched_calls": 19,
+    "administrative_not_run_records": 8,
+    "missing_record_files": 0,
+    "not_dispatched_assignments": 8,
+    "missing_assignments_retained": 8,
+    "uniform_all_assignments": true
+  },
+  "summary_before": {
+    "assigned_scenarios": 324,
+    "assessed_scenarios": 132,
+    "matched_scenarios": 129,
+    "disagreed_scenarios": 3,
+    "missing_scenarios": 132,
+    "unassessed_scenarios": 60,
+    "assigned_decisions": 1188,
+    "assessed_decisions": 456,
+    "matched_decisions": 453,
+    "disagreed_decisions": 3,
+    "missing_decisions": 504,
+    "unassessed_decisions": 228,
+    "unknown_predictions": 13,
+    "assigned_calls": 27,
+    "recorded_calls": 19,
+    "completed_calls": 14,
+    "structurally_valid_calls": 11,
+    "source_quote_match_calls": 11,
+    "known_cost_usd": 6.090864,
+    "unknown_cost_count": 1,
+    "median_elapsed_seconds": 121.91749999999999,
+    "cost_complete_for_recorded_calls": false
+  },
+  "summary_after": {
+    "assigned_scenarios": 324,
+    "assessed_scenarios": 168,
+    "matched_scenarios": 159,
+    "disagreed_scenarios": 9,
+    "missing_scenarios": 132,
+    "unassessed_scenarios": 24,
+    "assigned_decisions": 1188,
+    "assessed_decisions": 600,
+    "matched_decisions": 591,
+    "disagreed_decisions": 9,
+    "missing_decisions": 504,
+    "unassessed_decisions": 84,
+    "unknown_predictions": 23,
+    "assigned_calls": 27,
+    "recorded_calls": 19,
+    "completed_calls": 14,
+    "structurally_valid_calls": 14,
+    "source_quote_match_calls": 14,
+    "known_cost_usd": 6.090864,
+    "unknown_cost_count": 1,
+    "median_elapsed_seconds": 121.91749999999999,
+    "cost_complete_for_recorded_calls": false
+  },
+  "affected_rows": [
+    {
+      "id": "fta-m0-r1",
+      "task_id": "fta",
+      "output_sha256": "b42196d6de315729312fbe61febd0ec392ab6d8877d59e92bb7d0f44260f9eb3",
+      "differences": {
+        "structural_valid": {
+          "v1_0": false,
+          "v1_1": true
+        },
+        "source_quote_match": {
+          "v1_0": false,
+          "v1_1": true
+        },
+        "issues": {
+          "v1_0": [
+            "quote: exact normalized quote absent from cited pages"
+          ],
+          "v1_1": []
+        },
+        "assessed_scenarios": {
+          "v1_0": 0,
+          "v1_1": 12
+        },
+        "unassessed_scenarios": {
+          "v1_0": 12,
+          "v1_1": 0
+        },
+        "assessed_decisions": {
+          "v1_0": 0,
+          "v1_1": 48
+        },
+        "matched_decisions": {
+          "v1_0": 0,
+          "v1_1": 48
+        },
+        "unassessed_decisions": {
+          "v1_0": 48,
+          "v1_1": 0
+        }
+      },
+      "quote_changes": [
+        {
+          "path": "/requirements/24",
+          "source_pages": [
+            74
+          ],
+          "quote": "Unlike the micro-purchase threshold, 2 CFR 200.320 does not permit a recipient to set a simplified acquisition threshold higher than the Federal threshold.",
+          "v1_0_source_quote_match": false,
+          "v1_1_source_quote_match": true
+        }
+      ]
+    },
+    {
+      "id": "fema-m0-r1",
+      "task_id": "fema",
+      "output_sha256": "f657bc65222a4ae1e4957088453d2490759a79eccc42331ab66c2e37cde0169f",
+      "differences": {
+        "structural_valid": {
+          "v1_0": false,
+          "v1_1": true
+        },
+        "source_quote_match": {
+          "v1_0": false,
+          "v1_1": true
+        },
+        "issues": {
+          "v1_0": [
+            "quote: exact normalized quote absent from cited pages"
+          ],
+          "v1_1": []
+        },
+        "assessed_scenarios": {
+          "v1_0": 0,
+          "v1_1": 12
+        },
+        "unassessed_scenarios": {
+          "v1_0": 12,
+          "v1_1": 0
+        },
+        "assessed_decisions": {
+          "v1_0": 0,
+          "v1_1": 48
+        },
+        "matched_decisions": {
+          "v1_0": 0,
+          "v1_1": 45
+        },
+        "disagreed_decisions": {
+          "v1_0": 0,
+          "v1_1": 3
+        },
+        "unassessed_decisions": {
+          "v1_0": 48,
+          "v1_1": 0
+        }
+      },
+      "quote_changes": [
+        {
+          "path": "/requirements/17",
+          "source_pages": [
+            13
+          ],
+          "quote": "However, the recipient or subrecipient may include a separate contract provision specific to the Copeland “Anti-Kickback” Act.",
+          "v1_0_source_quote_match": false,
+          "v1_1_source_quote_match": true
+        }
+      ]
+    },
+    {
+      "id": "fema-m0-r2",
+      "task_id": "fema",
+      "output_sha256": "ea4fe0d1fa32a3aa27a9c2a9ad230e3519690c3d13f436087e2d6ab42f5a706a",
+      "differences": {
+        "structural_valid": {
+          "v1_0": false,
+          "v1_1": true
+        },
+        "source_quote_match": {
+          "v1_0": false,
+          "v1_1": true
+        },
+        "issues": {
+          "v1_0": [
+            "quote: exact normalized quote absent from cited pages"
+          ],
+          "v1_1": []
+        },
+        "assessed_scenarios": {
+          "v1_0": 0,
+          "v1_1": 12
+        },
+        "unassessed_scenarios": {
+          "v1_0": 12,
+          "v1_1": 0
+        },
+        "assessed_decisions": {
+          "v1_0": 0,
+          "v1_1": 48
+        },
+        "matched_decisions": {
+          "v1_0": 0,
+          "v1_1": 45
+        },
+        "disagreed_decisions": {
+          "v1_0": 0,
+          "v1_1": 3
+        },
+        "unassessed_decisions": {
+          "v1_0": 48,
+          "v1_1": 0
+        }
+      },
+      "quote_changes": [
+        {
+          "path": "/requirements/16",
+          "source_pages": [
+            13
+          ],
+          "quote": "However, the recipient or subrecipient may include a separate contract provision specific to the Copeland “Anti-Kickback” Act.",
+          "v1_0_source_quote_match": false,
+          "v1_1_source_quote_match": true
+        }
+      ]
+    }
+  ],
+  "receipts": [
+    {
+      "id": "far15-m0-r1",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "8c8e01465af355121e60032c6373b275c2c1c329916646f224f6c5710fad818a",
+      "output_sha256": "485101921fd1e0fc3addf3f2b081c267ef9bfffd22d42ddda509ded3a2440ba1"
+    },
+    {
+      "id": "far15-m0-r2",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "ccdfc69d778a5e716ede05d8389ade0d2629ff7f4d1942dfe1f15eff38c7fed3",
+      "output_sha256": "77309616948e953259bdbe61acb0364be1658309c82b57a5d42fdb98ee3d85f4"
+    },
+    {
+      "id": "far15-m0-r3",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "50888c68875ba2ab87eaf53b53b84f661419d8e4f41cbf294122e6850f3db2cf",
+      "output_sha256": "58f7b2a474d4cecabb81c9bd50a93af59a3a9e250d1f806dac9c92ac1418fde9"
+    },
+    {
+      "id": "far15-m1-r1",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "615b59c489762842fc6ebfdbddab03d25512587342820cd19e332dc16da1b4e4",
+      "output_sha256": "1131e8a7202d0143b50829993745695e2da8ab6b5412d1f41d69f25011c68659"
+    },
+    {
+      "id": "far15-m1-r2",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "5a4fcd252a90a8443d5e6db5c80def31dbfd3d47871aa55072db57bc98fc6e14",
+      "output_sha256": "22334d4300d03d92fd3960b7ba294b806f14d8fea39df91a853a58afade83301"
+    },
+    {
+      "id": "far15-m1-r3",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "9738d8959313866b87c99c5523e5bc77d333981e7fc0655802ae4ff78407903d",
+      "output_sha256": "b290509698d53452fad9ca76e70972d6b96899e33a47815bdc6bf66481dfa319"
+    },
+    {
+      "id": "far15-m2-r1",
+      "state": "incomplete",
+      "cost_status": "provider_reported",
+      "record_sha256": "7a0c9d83c02204fb895b2528f88b15c43ad6cbb28791f3b19e30b512d9875f19",
+      "output_sha256": "018e026a3289edc3bf0f6eb67964a6e914b9418599883ad02bc26f40218d3061"
+    },
+    {
+      "id": "far15-m2-r2",
+      "state": "fail",
+      "cost_status": "provider_reported_reconciled",
+      "record_sha256": "264ff75a9dbd072877d391d188ff14fa0d0ee696a310a49581b3adf9f224ed99",
+      "output_sha256": null
+    },
+    {
+      "id": "far15-m2-r3",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "36c227cc3ed4e5bedb58348a050aa908451f24f613d65d3f00bb4aa45dd7b274",
+      "output_sha256": null
+    },
+    {
+      "id": "fema-m0-r1",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "cbc853ceafa7cad7ceade5e4f8a58d5a5ec0ee4780ffd835fef01034e0b2f270",
+      "output_sha256": "f657bc65222a4ae1e4957088453d2490759a79eccc42331ab66c2e37cde0169f"
+    },
+    {
+      "id": "fema-m0-r2",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "62fda34d9f385912d18cef45bfb6ea1560d0539650a82607745b8699fbcbcb34",
+      "output_sha256": "ea4fe0d1fa32a3aa27a9c2a9ad230e3519690c3d13f436087e2d6ab42f5a706a"
+    },
+    {
+      "id": "fema-m0-r3",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "ce9e373b3514fe0fbdfb42f26162ae4f369a7743bd80afaef4699de8f9d25e40",
+      "output_sha256": null
+    },
+    {
+      "id": "fema-m1-r1",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "20dce5778fa807f06693cfaed929d954ee67dbf99000b7db7bcafedb3a00f77f",
+      "output_sha256": "7b93195dc063ce48e7fc86c71984afe1d29b7c31f34e4de633e343eec4f8e5f6"
+    },
+    {
+      "id": "fema-m1-r2",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "0af5a8ed4031f05aef5560401bfc8436a6d3c4ee96e9f80b99ced9324b62edc0",
+      "output_sha256": "c1c9bc73d3f3cec71e1dc0a42558e955d2d836a29d10eaa54a8e79bab6f53345"
+    },
+    {
+      "id": "fema-m1-r3",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "b1f4e01c9084a49de2374a2456ef450c23271e30a2dce2755dc3ae1c18bfe0ec",
+      "output_sha256": null
+    },
+    {
+      "id": "fema-m2-r1",
+      "state": "fail",
+      "cost_status": "provider_reported_reconciled",
+      "record_sha256": "994aa8ca0592780d27db2dd2753828b379fa193cd663a76765028722d93636cd",
+      "output_sha256": null
+    },
+    {
+      "id": "fema-m2-r2",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "ddcea4a67e602cc9664bd59a61800d8fcdcab7351c1bc69dd0afaab0ef65bb27",
+      "output_sha256": null
+    },
+    {
+      "id": "fema-m2-r3",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "114a1b67626b53e7099bb17d8b0b78c7c977f246271d310f512f3d9d42c25e60",
+      "output_sha256": null
+    },
+    {
+      "id": "fta-m0-r1",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "485f1dc03f03ab0d2888053cd63c17d7b69330a3b5c50e7b9b458309594ac0cb",
+      "output_sha256": "b42196d6de315729312fbe61febd0ec392ab6d8877d59e92bb7d0f44260f9eb3"
+    },
+    {
+      "id": "fta-m0-r2",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "9551d602bf693c040aeccbbeff6d8f840e4288a5198ab2b7ff753e722848a091",
+      "output_sha256": "ed9e679836a105d2e68c957e231f26510afdb92c5c949c1ef336991972cabd64"
+    },
+    {
+      "id": "fta-m0-r3",
+      "state": "fail",
+      "cost_status": "unknown",
+      "record_sha256": "c412961f4539734a8381d30b2a767971bb438910d18c11f38c2a5ebd862e0090",
+      "output_sha256": null
+    },
+    {
+      "id": "fta-m1-r1",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "eb9649422c9791ee5c2019ce0ed2bd144418009af70dac63f5919ac71974a850",
+      "output_sha256": "4c40943310e32f3e6086a9b7f39da5445aed552385c6c49f49e7558ebb816705"
+    },
+    {
+      "id": "fta-m1-r2",
+      "state": "completed",
+      "cost_status": "provider_reported",
+      "record_sha256": "2c3b08a7a1231b605aaf029660380d000cf6eb53e9cf09734c57a1b0734d7123",
+      "output_sha256": "09f1cc1f1099742a4bb175ba7a9aa7201d9e79ea1025d8392f5cfb6a0c1f3211"
+    },
+    {
+      "id": "fta-m1-r3",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "84a910c04e1ca41112157f7dedf708c9bbd9ff327c8cbdae0cd9af887e9c9b5e",
+      "output_sha256": null
+    },
+    {
+      "id": "fta-m2-r1",
+      "state": "incomplete",
+      "cost_status": "provider_reported",
+      "record_sha256": "34adad2983ab9af5e79d4f931a415ec4c704985856335245c1fc2b5ea674dfad",
+      "output_sha256": "018e026a3289edc3bf0f6eb67964a6e914b9418599883ad02bc26f40218d3061"
+    },
+    {
+      "id": "fta-m2-r2",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "f28a2f9d37f2e7d6b021ca38be0e8055f18536e549e250cbaf8d47969427b767",
+      "output_sha256": null
+    },
+    {
+      "id": "fta-m2-r3",
+      "state": "not_run",
+      "cost_status": "not_dispatched",
+      "record_sha256": "60d053e04b2fcb4e13783e322e3da9834c3e2930e2c532a7642216b0c7f097ce",
+      "output_sha256": null
+    }
+  ],
+  "remaining_contract_failures": [
+    {
+      "id": "far15-m2-r1",
+      "issues": [
+        "json_parse: Expecting value: line 1 column 2 (char 1)"
+      ]
+    },
+    {
+      "id": "fta-m2-r1",
+      "issues": [
+        "json_parse: Expecting value: line 1 column 2 (char 1)"
+      ]
+    }
+  ],
+  "interpretation": "Mechanical source-quote presence correction only. No semantic entailment, draft-key correctness or independent validation is established."
+}

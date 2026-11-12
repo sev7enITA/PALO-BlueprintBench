@@ -1,0 +1,22 @@
+[
+  {
+    "attempt": 1,
+    "at": "2026-11-11T22:44:24.682Z",
+    "lookup": "not_yet_available"
+  },
+  {
+    "attempt": 2,
+    "at": "2026-11-11T22:44:31.126Z",
+    "lookup": "not_yet_available"
+  },
+  {
+    "attempt": 3,
+    "at": "2026-11-11T22:44:37.350Z",
+    "lookup": "not_yet_available"
+  },
+  {
+    "attempt": 4,
+    "at": "2026-11-11T22:44:43.563Z",
+    "lookup": "not_yet_available"
+  }
+]

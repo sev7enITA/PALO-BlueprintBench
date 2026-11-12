@@ -1,0 +1,21 @@
+{
+  "status": "poststart_transport_amendment",
+  "at": "2026-11-11T22:43:29.952134+00:00",
+  "trigger": "Four consecutive google-vertex/us failures: two upstream 502 and two MCP 300s timeouts; no complete response.",
+  "original_assigned_calls": 27,
+  "stopped_undispatched_assignments": [
+    "fta-m2-r2",
+    "fema-m2-r2",
+    "far15-m2-r3",
+    "fta-m2-r3",
+    "fema-m2-r3"
+  ],
+  "original_assignments_and_failures_retained": true,
+  "prompts_sources_reasoning_output_limit_gold_unchanged": true,
+  "supplemental_provider": "google-ai-studio",
+  "supplemental_assignments_planned": 9,
+  "separate_configuration": true,
+  "budget_ceiling_usd": 40,
+  "unknown_costs_fully_reserved": true,
+  "qualified": false
+}

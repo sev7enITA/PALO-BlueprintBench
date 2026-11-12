@@ -1,0 +1,23 @@
+{
+  "id": "fema-m0-r3",
+  "task_id": "fema",
+  "model": "openai/gpt-6.1-sol",
+  "model_index": 0,
+  "repetition": 3,
+  "request_path": "prepared/fema-0.json",
+  "request_sha256": "6fab571ff109061408dbe918cec6d61e16ce506cc690c272ddd32f91a61ad576",
+  "source_packet_sha256": "d8c0afd001b4e8bc5ade474dd4a0023d55b55a270dc51f775d91a9813fbb01aa",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "openai",
+  "state": "not_run",
+  "cost_usd": 0,
+  "cost_status": "not_dispatched",
+  "cost_zero_reason": "No request dispatched: user stopped paid inference",
+  "elapsed_seconds": null,
+  "reserved_usd": 0,
+  "qualification": "internal_tests",
+  "qualified": false,
+  "stop_reason": "user_stopped_paid_inference",
+  "decision_recorded_at": "2026-11-12T02:46:29.930319+00:00"
+}

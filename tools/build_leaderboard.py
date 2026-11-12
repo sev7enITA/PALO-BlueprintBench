@@ -73,6 +73,9 @@ Run `python tools/build_leaderboard.py --check` and `python -m unittest discover
 
 
 def dataset_graph(data,url):
+    if url == OVERVIEW:
+        from build_site_architecture import page_graph
+        return page_graph('overview')
     internal=data['internal'];historical=data['historical']
     person=SITE+'PALO_Community.html#creator'
     internal_id=OVERVIEW+'#internal-procurement-dataset'
@@ -87,7 +90,7 @@ def dataset_graph(data,url):
                       'Explore descriptive observations with configuration filters, sortable KPIs and filtered CSV and JSON exports. Inspect source evidence, missing responses and disputed labels. No numerical model ranks or independently qualified results.')
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
            {'@type':'WebSite','@id':SITE+'#website','name':'PALO Framework','url':SITE,'publisher':{'@id':person}},
-           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'PALO BlueprintBench Internal Test Results' if url==BOARD else 'PALO BlueprintBench | Results and Method',
+           {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'Model results | PALO BlueprintBench' if url==BOARD else 'PALO BlueprintBench | Results and Method',
             'image':{'@id':OVERVIEW+'#benchmark-logo'},'description':page_description,'inLanguage':'en','dateModified':data['as_of'],'isAccessibleForFree':True,
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
@@ -96,7 +99,7 @@ def dataset_graph(data,url):
            {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([
-               {'@type':'ListItem','position':3,'name':'Internal test results','item':BOARD}] if url==BOARD else [])},
+               {'@type':'ListItem','position':3,'name':'Model results','item':BOARD}] if url==BOARD else [])},
            {'@type':'Dataset','@id':internal_id,'name':'BlueprintBench internal procurement tests and extensions, 11 November 2026',
             'identifier':internal['campaign_id'],'version':data['version'],'url':BOARD+'?cohort=internal','description':description,
             'creator':{'@id':person},'datePublished':data['as_of'],'dateModified':data['as_of'],'temporalCoverage':data['as_of'],
@@ -110,7 +113,7 @@ def dataset_graph(data,url):
                             {'@type':'DataDownload','name':'Original baseline evidence and post-hoc replay','contentUrl':SITE+'downloads/blueprintbench/internal-tests-evidence.zip','encodingFormat':'application/zip'},
                             {'@type':'DataDownload','name':'Additional model campaign evidence','contentUrl':SITE+'downloads/blueprintbench/internal-expansion-evidence.zip','encodingFormat':'application/zip'}]},
            {'@type':'Dataset','@id':historical_id,'name':'BlueprintBench historical adapter smoke tests, 10 November 2026',
-            'identifier':'challenger-expanded-adapter-smoke-tests-20261110','version':historical['content_revision'],'url':OVERVIEW+'#explorer',
+            'identifier':'challenger-expanded-adapter-smoke-tests-20261110','version':historical['content_revision'],'url':BOARD+'?cohort=historical',
             'description':f"{len(historical['models'])} historical configurations assigned to three passages containing 4,994 UTF-8 bytes of document text. Structural PALO-contract diagnostics only, differing reasoning and quantisation, no repetitions or independent semantic gold. All 43 proposed relations failed checks; these observations are not a model capability ranking. Cost totals remain unreconciled.",
             'creator':{'@id':person},'dateModified':data['as_of'],'temporalCoverage':historical['measurement_date'],'isAccessibleForFree':True,
             'creativeWorkStatus':'Historical development diagnostics; unqualified',
@@ -265,6 +268,9 @@ def outputs():
         metadata=(f"Explore {len(internal['models'])} model configurations in internal procurement tests, "
                   f"{internal['assigned_calls']} assigned tasks and separate historical diagnostics. "
                   "Inspect sources, settings and missing results. Independent validation pending.")
+        if url == OVERVIEW:
+            from build_site_architecture import PAGES
+            metadata = PAGES['overview'][2]
         for attribute in ['name="description"','property="og:description"','name="twitter:description"']:
             html=re.sub(r'<meta '+attribute+r' content="[^"]*">',lambda _: '<meta '+attribute+' content="'+metadata+'">',html)
         out[path]=html.encode()

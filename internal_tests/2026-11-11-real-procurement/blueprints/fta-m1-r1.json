@@ -1,0 +1,773 @@
+{
+  "id": "fta-m1-r1",
+  "model": "anthropic/claude-opus-5.5",
+  "task_id": "fta",
+  "repetition": 1,
+  "artifact_type": "generated_source_linked_blueprint_draft",
+  "business_approval_required": true,
+  "business_approved": false,
+  "qualified": false,
+  "export_status": "structurally_usable_model_draft",
+  "source_quote_match": true,
+  "issues": [],
+  "content": {
+    "requirements": [
+      {
+        "id": "R01",
+        "actor": "FTA / statute and regulation",
+        "modality": "definition",
+        "statement": "Precedence: where this circular is inconsistent with changes in any statute or regulation, the statute or regulation supersedes the circular. Implementation note: the decision rules use only this supplied edition and the supplied effective-threshold inputs.",
+        "source_pages": [
+          1
+        ],
+        "quote": "In cases where this circular is inconsistent with changes in any statute or regulation, the statute or regulation will supersede this circular."
+      },
+      {
+        "id": "R02",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "The date of an award, or of an amendment adding funds, may determine which specific regulatory requirements apply. Source date: the circular is applicable as of January 17, 2025.",
+        "source_pages": [
+          1
+        ],
+        "quote": "The date of an award or amendment adding funds may determine the application of the specific regulatory requirements."
+      },
+      {
+        "id": "R03",
+        "actor": "FTA (interpretive convention)",
+        "modality": "definition",
+        "statement": "Mandatory terms such as must or shall describe requirements that are binding by law or by operation of the financial assistance agreement.",
+        "source_pages": [
+          15
+        ],
+        "quote": "or similarly mandatory terms when describing a requirement that is binding by law or by operation of a financial assistance agreement with FTA."
+      },
+      {
+        "id": "R04",
+        "actor": "FTA (interpretive convention)",
+        "modality": "definition",
+        "statement": "Permissive terms such as may or should are non-binding guidance, recommendations or best practices, and they permit discretion.",
+        "source_pages": [
+          15
+        ],
+        "quote": "should be interpreted only as non-binding guidance, recommendations, or best practices, and permit discretion."
+      },
+      {
+        "id": "R05",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "The circular's guidance applies whenever a recipient uses FTA financial assistance for its procurement activities, unless FTA specifies otherwise in writing.",
+        "source_pages": [
+          15
+        ],
+        "quote": "applies whenever a recipient uses FTA financial assistance for its procurement activities."
+      },
+      {
+        "id": "R06",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "The recipient shall conduct all procurement transactions under an FTA award in a manner that provides full and open competition.",
+        "source_pages": [
+          67
+        ],
+        "quote": "The recipient shall conduct all procurement transactions under an FTA award in a manner that provides full and open competition."
+      },
+      {
+        "id": "R07",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "The recipient must use competitive procedures appropriate for the acquisition undertaken.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient must use competitive procedures appropriate for the acquisition undertaken."
+      },
+      {
+        "id": "R08",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "The procedures used must comply with State and local law as well as with Federal requirements.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The procedures used must comply with State and local law as well as with Federal requirements."
+      },
+      {
+        "id": "R09",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "Under the VI.3.a(1) micro-purchase route, the recipient may acquire property and services without obtaining competitive quotations when all of the following conditions are met: State and local law permits it; the value is at or below the current micro-purchase threshold; the recipient considers the price reasonable; and the recipient maintains supporting documents.",
+        "source_pages": [
+          73
+        ],
+        "quote": "If permitted by State and local law, the recipient may acquire property and services valued at or below the current micro-purchase threshold without obtaining competitive quotations if the recipient considers the price reasonable based on research, experience, purchase history, or other information, and maintains documents to support its conclusion."
+      },
+      {
+        "id": "R10",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "Condition of the micro-purchase route: State and local law must permit it.",
+        "source_pages": [
+          73
+        ],
+        "quote": "If permitted by State and local law"
+      },
+      {
+        "id": "R11",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "Condition of the micro-purchase route: the acquisition must be valued at or below the current micro-purchase threshold. Implementation choice: compare aggregate_amount_usd to the supplied effective_micro_threshold_usd using lte, with no hardcoded dollar value.",
+        "source_pages": [
+          73
+        ],
+        "quote": "valued at or below the current micro-purchase threshold"
+      },
+      {
+        "id": "R12",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "Condition of the micro-purchase route: the recipient considers the price reasonable based on research, experience, purchase history, or other information.",
+        "source_pages": [
+          73
+        ],
+        "quote": "if the recipient considers the price reasonable based on research, experience, purchase history, or other information"
+      },
+      {
+        "id": "R13",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "Condition of the micro-purchase route: the recipient maintains documents supporting its price-reasonableness conclusion.",
+        "source_pages": [
+          73
+        ],
+        "quote": "and maintains documents to support its conclusion."
+      },
+      {
+        "id": "R14",
+        "actor": "Federal regulation",
+        "modality": "definition",
+        "statement": "The Federal micro-purchase threshold is established in 2 CFR 200.1 and 48 CFR 2.101. Implementation note: the applicable effective value is a supplied case input and is not inferred.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The Federal micro-purchase threshold is established in 2 CFR 200.1; 48 CFR 2.101."
+      },
+      {
+        "id": "R15",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "The recipient may set for itself a micro-purchase threshold lower or higher than the Federal threshold.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient may set for itself a lower or higher micro-purchase threshold."
+      },
+      {
+        "id": "R16",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "The recipient may self-certify a micro-purchase threshold up to $50,000.",
+        "source_pages": [
+          73
+        ],
+        "quote": "Pursuant to 2 CFR 200.320(a)(1), the recipient may self-certify a micro-purchase threshold up to $50,000."
+      },
+      {
+        "id": "R17",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "Self-certification is done on an annual basis, and documentation must be maintained and made available to FTA and auditors under 2 CFR 200.334. The source sentence is grammatically incomplete; it is preserved as written and not repaired.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient must on an annual basis and must maintain documentation to be made available to FTA and auditors in accordance with 2 CFR 200.334."
+      },
+      {
+        "id": "R18",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "The self-certification must include three elements: a justification, clear identification of the threshold, and supporting documentation of at least one listed basis.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The self-certification must include a justification, clear identification of the threshold, and supporting documentation of any of the following:"
+      },
+      {
+        "id": "R19",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "Acceptable bases for self-certification (any one is sufficient):\n- qualification as a low-risk auditee under 2 CFR 200.520 for the most recent audit;\n- an annual internal institutional risk assessment;\n- for public institutions, a higher threshold consistent with State law.",
+        "source_pages": [
+          73
+        ],
+        "quote": "a qualification as a low-risk auditee, in accordance with the criteria in 2 CFR 200.520 for the most recent audit; an annual internal institutional risk assessment to identify, mitigate, and manage financial risks; or, for public institutions, a higher threshold is consistent with State law."
+      },
+      {
+        "id": "R20",
+        "actor": "Recipient; cognizant agency for indirect costs",
+        "modality": "obligation",
+        "statement": "A micro-purchase threshold higher than $50,000 must be approved by the recipient's cognizant agency for indirect costs. A threshold of exactly $50,000 falls within the self-certification limit.",
+        "source_pages": [
+          73
+        ],
+        "quote": "A micro-purchase threshold higher than $50,000 must be approved by the recipient’s cognizant agency for indirect costs."
+      },
+      {
+        "id": "R21",
+        "actor": "Recipient",
+        "modality": "unspecified",
+        "statement": "Non-binding recommendation (should): to the extent practicable, the recipient should distribute micro-purchases equitably among qualified suppliers. This is not used as a condition of the micro-purchase route.",
+        "source_pages": [
+          73
+        ],
+        "quote": "to the extent practicable, the recipient should distribute micro-purchases equitably among qualified suppliers."
+      },
+      {
+        "id": "R22",
+        "actor": "Recipient",
+        "modality": "prohibition",
+        "statement": "The recipient may not divide or reduce the size of its procurement merely to come within the micro-purchase limit.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient may not divide or reduce the size of its procurement merely to come within the micro-purchase limit."
+      },
+      {
+        "id": "R23",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "The recipient must maintain documents supporting its consideration that the micro-purchase price is reasonable.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient must maintain documents to support its consideration that the micro-purchase price is reasonable based on research, experience, purchase history, or other information, as required under 2 CFR 200.320(a)(1)(ii)."
+      },
+      {
+        "id": "R24",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "Exception for micro-purchases: the recipient need not justify the procurement method used, the selection of contract type, or reasons for contractor selection or rejection. This narrows the general procurement-history documentation duty in R25 for micro-purchases.",
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient need not justify the procurement method used, selection of contract type, or reasons for contractor selection or rejection."
+      },
+      {
+        "id": "R25",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "General rule: the recipient must document the rationale for the procurement method used for each contract. For micro-purchases, the specific exception in R24 applies.",
+        "source_pages": [
+          26
+        ],
+        "quote": "Recipients must document the rationale for the procurement method used for each contract."
+      },
+      {
+        "id": "R26",
+        "actor": "Recipient",
+        "modality": "definition",
+        "statement": "Documentation should be commensurate with the size of the procurement. The source gives this illustration: a receipt for a $100 credit card purchase might contain all the required information.",
+        "source_pages": [
+          26
+        ],
+        "quote": "For example, a receipt or bill accompanying a $100 credit card purchase might contain all the required information to support that procurement."
+      },
+      {
+        "id": "R27",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "Simplified acquisition procedures are authorized when the aggregate dollar amount is higher than the micro-purchase threshold and does not exceed the simplified acquisition threshold. Implementation choice: aggregate_amount_usd gt effective_micro_threshold_usd AND lte effective_simplified_threshold_usd.",
+        "source_pages": [
+          74
+        ],
+        "quote": "2 CFR 200.320(a)(2) authorizes simplified acquisition procedures when the aggregate dollar amount of the procurement transaction is higher than the micro-purchase threshold but does not exceed the simplified acquisition threshold as defined in 2 CFR 200.1; 48 CFR 2.101."
+      },
+      {
+        "id": "R28",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "The recipient may set a lower threshold for simplified acquisition procedures.",
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient may set a lower threshold for simplified acquisition procedures."
+      },
+      {
+        "id": "R29",
+        "actor": "Recipient",
+        "modality": "prohibition",
+        "statement": "Unlike the micro-purchase threshold, the recipient may not set a simplified acquisition threshold higher than the Federal threshold.",
+        "source_pages": [
+          74
+        ],
+        "quote": "2 CFR 200.320 does not permit a recipient to set a simplified acquisition threshold higher than the Federal threshold."
+      },
+      {
+        "id": "R30",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "When using simplified acquisition procedures, the recipient must obtain price or rate quotations from an adequate number of qualified sources.",
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient must obtain price or rate quotations from an adequate number of qualified sources."
+      },
+      {
+        "id": "R31",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "The recipient may exercise judgment in determining what number of sources is adequate.",
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient may exercise judgment in determining what number is adequate."
+      },
+      {
+        "id": "R32",
+        "actor": "Recipient",
+        "modality": "prohibition",
+        "statement": "The recipient may not divide or reduce the size of its procurement to avoid the additional procurement requirements applicable to larger acquisitions.",
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient may not divide or reduce the size of its procurement to avoid the additional procurement requirements applicable to larger acquisitions."
+      },
+      {
+        "id": "R33",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "For simplified acquisitions, the recipient must maintain records supporting four items: the decision to use the procedure, the contract type, the sources solicited, and the reasons for contractor selection or rejection.",
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient must maintain records to support its decision to use the simplified acquisition procedure, the selection of contract type, the sources solicited, and the reasons for contractor selection or rejection."
+      },
+      {
+        "id": "R34",
+        "actor": "Recipient",
+        "modality": "permission",
+        "statement": "Micro-purchase is a circumstance authorizing procurement without full and open competition when the aggregate amount does not exceed the micro-purchase threshold.",
+        "source_pages": [
+          80
+        ],
+        "quote": "When the aggregate amount of the procurement transaction does not exceed the micro-purchase threshold"
+      },
+      {
+        "id": "R35",
+        "actor": "Recipient",
+        "modality": "prohibition",
+        "statement": "A recipient must not divide a known requirement into smaller purchases for the purpose of avoiding competition requirements.",
+        "source_pages": [
+          80
+        ],
+        "quote": "A recipient must not divide a known requirement into smaller purchases for the purpose of avoiding competition requirements."
+      },
+      {
+        "id": "R36",
+        "actor": "Recipient",
+        "modality": "unspecified",
+        "statement": "Non-binding guidance (should not): a recipient should not split a large procurement merely to take advantage of informal methods available below the simplified acquisition or micro-purchase threshold.",
+        "source_pages": [
+          32
+        ],
+        "quote": "recipient should not split a large procurement merely to take advantage of the informal procurement methods available for procurements below the simplified acquisition threshold or micro-purchase threshold."
+      },
+      {
+        "id": "R37",
+        "actor": "Recipient",
+        "modality": "unspecified",
+        "statement": "Context and exception: breaking out procurements may be legitimate, for example to provide greater opportunities for DBEs and small or minority firms. Division alone is therefore not treated as prohibited; the prohibition turns on the avoidance purpose.",
+        "source_pages": [
+          32
+        ],
+        "quote": "breaking out procurements may provide greater opportunities for Disadvantaged Business Enterprises (DBEs)"
+      },
+      {
+        "id": "R38",
+        "actor": "Federal regulation",
+        "modality": "definition",
+        "statement": "2 CFR Part 200 incorporates the simplified acquisition and micro-purchase thresholds established in the FAR, which may be updated at 48 CFR Part 2.",
+        "source_pages": [
+          20
+        ],
+        "quote": "also incorporate the simplified acquisition threshold and micro-purchase threshold established in the FAR. This threshold may be updated at 48 CFR Part 2."
+      },
+      {
+        "id": "R39",
+        "actor": "Federal regulation",
+        "modality": "definition",
+        "statement": "The circular states the simplified acquisition threshold as $250,000 as of October 1, 2024. Implementation note: this figure is not hardcoded in the rules; the supplied effective_simplified_threshold_usd is used instead.",
+        "source_pages": [
+          38
+        ],
+        "quote": "Contracts for more than the simplified acquisition threshold ($250,000, as of October 1, 2024)"
+      },
+      {
+        "id": "R40",
+        "actor": "Recipient",
+        "modality": "condition",
+        "statement": "For procurements above the simplified acquisition threshold, formal procurement methods under 2 CFR 200.320(b) apply: sealed bids or requests for proposals.",
+        "source_pages": [
+          27
+        ],
+        "quote": "For procurements above the simplified acquisition threshold, requirements for formal procurement methods are outlined under 2 CFR 200.320(b) which specify the use of sealed bids or requests for proposals."
+      },
+      {
+        "id": "R41",
+        "actor": "Recipient",
+        "modality": "obligation",
+        "statement": "A cost or price analysis is required for every procurement action in excess of the simplified acquisition threshold, including modifications and option exercises.",
+        "source_pages": [
+          84
+        ],
+        "quote": "2 CFR 200.324 requires the recipient to perform a cost analysis or price analysis in connection with every procurement action, including contract modifications and options exercises, in excess of the simplified acquisition threshold."
+      }
+    ],
+    "process": [
+      {
+        "id": "P01",
+        "action": "Confirm the procurement uses FTA financial assistance, so the circular's guidance applies.",
+        "requires": [],
+        "source_pages": [
+          15
+        ],
+        "quote": "applies whenever a recipient uses FTA financial assistance for its procurement activities."
+      },
+      {
+        "id": "P02",
+        "action": "Determine the aggregate amount of the procurement transaction, and identify the supplied effective micro-purchase and simplified acquisition thresholds for this recipient and date.",
+        "requires": [
+          "P01"
+        ],
+        "source_pages": [
+          74,
+          20
+        ],
+        "quote": "also incorporate the simplified acquisition threshold and micro-purchase threshold established in the FAR. This threshold may be updated at 48 CFR Part 2."
+      },
+      {
+        "id": "P03",
+        "action": "Screen for prohibited division or reduction. If the procurement was divided or reduced, check whether the purpose was merely to come within the micro-purchase limit or to avoid requirements for larger acquisitions; if so, the prohibition applies and the micro-purchase route is not satisfied.",
+        "requires": [
+          "P02"
+        ],
+        "source_pages": [
+          73,
+          74,
+          80
+        ],
+        "quote": "The recipient may not divide or reduce the size of its procurement merely to come within the micro-purchase limit."
+      },
+      {
+        "id": "P04",
+        "action": "If the recipient proposes to establish its own micro-purchase threshold, it may self-certify up to $50,000. The self-certification is annual and includes a justification, clear identification of the threshold, and supporting documentation of a qualifying basis.",
+        "requires": [
+          "P01"
+        ],
+        "source_pages": [
+          73
+        ],
+        "quote": "The self-certification must include a justification, clear identification of the threshold, and supporting documentation of any of the following:"
+      },
+      {
+        "id": "P05",
+        "action": "If the proposed micro-purchase threshold is higher than $50,000, obtain approval from the recipient's cognizant agency for indirect costs.",
+        "requires": [
+          "P04"
+        ],
+        "source_pages": [
+          73
+        ],
+        "quote": "A micro-purchase threshold higher than $50,000 must be approved by the recipient’s cognizant agency for indirect costs."
+      },
+      {
+        "id": "P06",
+        "action": "Micro-purchase route: confirm State and local law permits the micro-purchase procedure.",
+        "requires": [
+          "P03"
+        ],
+        "source_pages": [
+          73
+        ],
+        "quote": "If permitted by State and local law"
+      },
+      {
+        "id": "P07",
+        "action": "Micro-purchase route: confirm the amount is at or below the effective micro-purchase threshold.",
+        "requires": [
+          "P06"
+        ],
+        "source_pages": [
+          73
+        ],
+        "quote": "valued at or below the current micro-purchase threshold"
+      },
+      {
+        "id": "P08",
+        "action": "Micro-purchase route: the recipient considers the price reasonable based on research, experience, purchase history, or other information, and maintains supporting documents.",
+        "requires": [
+          "P07"
+        ],
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient must maintain documents to support its consideration that the micro-purchase price is reasonable based on research, experience, purchase history, or other information, as required under 2 CFR 200.320(a)(1)(ii)."
+      },
+      {
+        "id": "P09",
+        "action": "Acquire without competitive quotations. To the extent practicable, distribute micro-purchases equitably among qualified suppliers. No justification of method, contract type or contractor selection is needed.",
+        "requires": [
+          "P08"
+        ],
+        "source_pages": [
+          73
+        ],
+        "quote": "The recipient need not justify the procurement method used, selection of contract type, or reasons for contractor selection or rejection."
+      },
+      {
+        "id": "P10",
+        "action": "Simplified acquisition band check: is the amount higher than the effective micro-purchase threshold and not above the effective simplified acquisition threshold?",
+        "requires": [
+          "P03"
+        ],
+        "source_pages": [
+          74
+        ],
+        "quote": "2 CFR 200.320(a)(2) authorizes simplified acquisition procedures when the aggregate dollar amount of the procurement transaction is higher than the micro-purchase threshold but does not exceed the simplified acquisition threshold as defined in 2 CFR 200.1; 48 CFR 2.101."
+      },
+      {
+        "id": "P11",
+        "action": "If using simplified acquisition procedures, obtain price or rate quotations from an adequate number of qualified sources, using judgment on what number is adequate.",
+        "requires": [
+          "P10"
+        ],
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient must obtain price or rate quotations from an adequate number of qualified sources."
+      },
+      {
+        "id": "P12",
+        "action": "Maintain simplified acquisition records: the decision to use the procedure, the contract type, the sources solicited, and the reasons for contractor selection or rejection.",
+        "requires": [
+          "P11"
+        ],
+        "source_pages": [
+          74
+        ],
+        "quote": "The recipient must maintain records to support its decision to use the simplified acquisition procedure, the selection of contract type, the sources solicited, and the reasons for contractor selection or rejection."
+      },
+      {
+        "id": "P13",
+        "action": "If the amount exceeds the simplified acquisition threshold, use formal methods (sealed bids or requests for proposals) and perform a cost or price analysis.",
+        "requires": [
+          "P10"
+        ],
+        "source_pages": [
+          27,
+          84
+        ],
+        "quote": "For procurements above the simplified acquisition threshold, requirements for formal procurement methods are outlined under 2 CFR 200.320(b) which specify the use of sealed bids or requests for proposals."
+      }
+    ],
+    "outputs": {
+      "micro_without_quotes_allowed": {
+        "rules": [
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "procurement_divided_or_reduced",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "purpose_avoid_larger_requirements",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              73
+            ],
+            "quote": "The recipient may not divide or reduce the size of its procurement merely to come within the micro-purchase limit."
+          },
+          {
+            "when": {
+              "field": "state_local_law_permits_micro",
+              "op": "eq",
+              "value": false
+            },
+            "value": false,
+            "source_pages": [
+              73
+            ],
+            "quote": "If permitted by State and local law"
+          },
+          {
+            "when": {
+              "field": "aggregate_amount_usd",
+              "op": "gt",
+              "value": {
+                "field": "effective_micro_threshold_usd"
+              }
+            },
+            "value": false,
+            "source_pages": [
+              73
+            ],
+            "quote": "valued at or below the current micro-purchase threshold"
+          },
+          {
+            "when": {
+              "field": "price_considered_reasonable",
+              "op": "eq",
+              "value": false
+            },
+            "value": false,
+            "source_pages": [
+              73
+            ],
+            "quote": "if the recipient considers the price reasonable based on research, experience, purchase history, or other information"
+          },
+          {
+            "when": {
+              "field": "price_reasonableness_documented",
+              "op": "eq",
+              "value": false
+            },
+            "value": false,
+            "source_pages": [
+              73
+            ],
+            "quote": "and maintains documents to support its conclusion."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "state_local_law_permits_micro",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "aggregate_amount_usd",
+                  "op": "lte",
+                  "value": {
+                    "field": "effective_micro_threshold_usd"
+                  }
+                },
+                {
+                  "field": "price_considered_reasonable",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "price_reasonableness_documented",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              73
+            ],
+            "quote": "If permitted by State and local law, the recipient may acquire property and services valued at or below the current micro-purchase threshold without obtaining competitive quotations if the recipient considers the price reasonable based on research, experience, purchase history, or other information, and maintains documents to support its conclusion."
+          }
+        ],
+        "default": false
+      },
+      "cognizant_approval_required": {
+        "rules": [
+          {
+            "when": {
+              "field": "proposed_micro_threshold_usd",
+              "op": "gt",
+              "value": 50000
+            },
+            "value": true,
+            "source_pages": [
+              73
+            ],
+            "quote": "A micro-purchase threshold higher than $50,000 must be approved by the recipient’s cognizant agency for indirect costs."
+          },
+          {
+            "when": {
+              "field": "proposed_micro_threshold_usd",
+              "op": "lte",
+              "value": 50000
+            },
+            "value": false,
+            "source_pages": [
+              73
+            ],
+            "quote": "Pursuant to 2 CFR 200.320(a)(1), the recipient may self-certify a micro-purchase threshold up to $50,000."
+          }
+        ],
+        "default": false
+      },
+      "simplified_amount_band_eligible": {
+        "rules": [
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "aggregate_amount_usd",
+                  "op": "gt",
+                  "value": {
+                    "field": "effective_micro_threshold_usd"
+                  }
+                },
+                {
+                  "field": "aggregate_amount_usd",
+                  "op": "lte",
+                  "value": {
+                    "field": "effective_simplified_threshold_usd"
+                  }
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              74
+            ],
+            "quote": "2 CFR 200.320(a)(2) authorizes simplified acquisition procedures when the aggregate dollar amount of the procurement transaction is higher than the micro-purchase threshold but does not exceed the simplified acquisition threshold as defined in 2 CFR 200.1; 48 CFR 2.101."
+          }
+        ],
+        "default": false
+      },
+      "artificial_split_prohibited": {
+        "rules": [
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "procurement_divided_or_reduced",
+                  "op": "eq",
+                  "value": true
+                },
+                {
+                  "field": "purpose_avoid_larger_requirements",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              73,
+              74
+            ],
+            "quote": "The recipient may not divide or reduce the size of its procurement to avoid the additional procurement requirements applicable to larger acquisitions."
+          }
+        ],
+        "default": false
+      }
+    }
+  },
+  "output_sha256": "4c40943310e32f3e6086a9b7f39da5445aed552385c6c49f49e7558ebb816705",
+  "assessment": "hidden_assistant_draft_test_vectors_not_independent_gold"
+}

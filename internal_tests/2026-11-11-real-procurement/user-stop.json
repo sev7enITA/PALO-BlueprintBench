@@ -1,0 +1,10 @@
+{
+  "reason": "User requested stop on credit exhaustion",
+  "stopped_undispatched_assignments": [
+    "fta-m1-r3",
+    "fema-m0-r3",
+    "fema-m1-r3"
+  ],
+  "interrupted_inflight_assignment": "fta-m0-r3",
+  "qualified": false
+}

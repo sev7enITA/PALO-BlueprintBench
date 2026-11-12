@@ -1,0 +1,8 @@
+{
+  "data": {},
+  "redacted_fields": [
+    "workspace_id",
+    "external_user"
+  ],
+  "redaction_scope": "account identifiers only; generation accounting unchanged"
+}

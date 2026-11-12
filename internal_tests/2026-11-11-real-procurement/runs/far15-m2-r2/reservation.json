@@ -1,0 +1,18 @@
+{
+  "id": "far15-m2-r2",
+  "task_id": "far15",
+  "model": "google/gemini-4-argon",
+  "model_index": 2,
+  "repetition": 2,
+  "request_path": "prepared/far15-2.json",
+  "request_sha256": "7a0b48da02c040703352ec4640c27f99e8a93d2743061d694e01b2e9220d006a",
+  "source_packet_sha256": "94463ccb63ce5b831a69bd698413b2f9c2621ff978aba08829cede25786e4e37",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "google-vertex/us",
+  "started_at": "2026-11-11T22:37:18.801Z",
+  "reserved_usd": 1.0509430800000001,
+  "headroom_before_usd": 13.216556800000001,
+  "account_usage": 24.233618617,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c"
+}

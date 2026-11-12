@@ -1,0 +1,825 @@
+{
+  "id": "fema-m0-r2",
+  "model": "openai/gpt-6.1-sol",
+  "task_id": "fema",
+  "repetition": 2,
+  "artifact_type": "generated_source_linked_blueprint_draft",
+  "business_approval_required": true,
+  "business_approved": false,
+  "qualified": false,
+  "export_status": "structurally_usable_model_draft",
+  "source_quote_match": true,
+  "issues": [],
+  "content": {
+    "requirements": [
+      {
+        "id": "R01",
+        "actor": "Recipients and subrecipients",
+        "modality": "condition",
+        "statement": "The supplied edition applies to FEMA awards made or disasters declared on or after October 1, 2024. This blueprint interprets that fixed edition and does not determine award-date eligibility from the supplied inputs.",
+        "source_pages": [
+          3
+        ],
+        "quote": "This document applies to all FEMA awards made or disasters declared on or after October 1, 2024"
+      },
+      {
+        "id": "R02",
+        "actor": "Recipients and subrecipients",
+        "modality": "definition",
+        "statement": "A contract is the instrument used to purchase property or services needed to carry out a project or program under a federal award; it is not the federal award or subaward itself.",
+        "source_pages": [
+          43
+        ],
+        "quote": "A contract, for the purposes of this Guide, does not mean a federal award or subaward."
+      },
+      {
+        "id": "R03",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "Contracts must contain the applicable Appendix II provisions.",
+        "source_pages": [
+          3
+        ],
+        "quote": "recipient’s or subrecipient’s contracts must contain the applicable provisions described in Appendix II of this part"
+      },
+      {
+        "id": "R04",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "The recipient or subrecipient remains responsible for ensuring that included contract language satisfies the applicable requirements; this blueprint does not approve contract language.",
+        "source_pages": [
+          4
+        ],
+        "quote": "The recipient or subrecipient is solely responsible for ensuring that all language included in its contracts meets the requirements of 2 C.F.R. Part 200, including 2 C.F.R. § 200.327 and Appendix II."
+      },
+      {
+        "id": "R05",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "Include the section 2 termination provision in contracts and purchase orders exceeding $10,000.",
+        "source_pages": [
+          9
+        ],
+        "quote": "This contract provision is required for contracts and purchase orders exceeding $10,000."
+      },
+      {
+        "id": "R06",
+        "actor": "Recipients and subrecipients",
+        "modality": "condition",
+        "statement": "At or below $10,000, the section 2.1 termination provision is not required. This is non-requirement, not a prohibition on including a provision.",
+        "source_pages": [
+          9
+        ],
+        "quote": "For contracts at or below $10,000, FEMA suggests including a termination for cause provision, but this is not required."
+      },
+      {
+        "id": "R07",
+        "actor": "FEMA",
+        "modality": "unspecified",
+        "statement": "FEMA suggests a termination-for-cause provision at or below $10,000; that suggestion is not a mandatory cause-and-convenience provision.",
+        "source_pages": [
+          9
+        ],
+        "quote": "For contracts at or below $10,000, FEMA suggests including a termination for cause provision, but this is not required."
+      },
+      {
+        "id": "R08",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "When required, the termination provision must address termination for cause and convenience by the recipient or subrecipient, the manner of termination, and the basis for settlement.",
+        "source_pages": [
+          8
+        ],
+        "quote": "Contracts must address termination for cause and for convenience by the recipient or subrecipient, including the manner by which it will be carried out and the basis for settlement."
+      },
+      {
+        "id": "R09",
+        "actor": "FEMA",
+        "modality": "unspecified",
+        "statement": "FEMA recommends actionable and specific termination clauses; this recommendation does not change the section 2.1 amount threshold.",
+        "source_pages": [
+          9
+        ],
+        "quote": "FEMA recommends that termination clauses be actionable and specific."
+      },
+      {
+        "id": "R10",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "When required by federal program legislation, include a Davis-Bacon compliance provision in prime construction contracts over $2,000.",
+        "source_pages": [
+          12
+        ],
+        "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+      },
+      {
+        "id": "R11",
+        "actor": "Recipients and subrecipients",
+        "modality": "condition",
+        "statement": "The Davis-Bacon clause is not federally required for procurements under PA or HMA. This exclusion controls the scoped federal-requirement decision even if the supplied program-legislation field says yes.",
+        "source_pages": [
+          12
+        ],
+        "quote": "However, the Davis-Bacon Act clause is not federally required for procurements under FEMA’s Public Assistance (PA) or Hazard Mitigation Assistance (HMA) Programs."
+      },
+      {
+        "id": "R12",
+        "actor": "Recipients and subrecipients",
+        "modality": "unspecified",
+        "statement": "For programs not resolved by the express exclusion, the guide directs recipients and subrecipients to program guidance or their FEMA grant representative to determine applicability. Unknown program-legislation applicability is not an affirmative finding of applicability.",
+        "source_pages": [
+          12
+        ],
+        "quote": "Recipients and subrecipients should refer to applicable NOFO or other program guidance or contact their applicable FEMA grant representative to determine if this provision is required for the procurement."
+      },
+      {
+        "id": "R13",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "If Davis-Bacon applies, place the Department of Labor's current prevailing wage determination in each solicitation.",
+        "source_pages": [
+          13
+        ],
+        "quote": "The recipient or subrecipient must place a copy of the Department of Labor’s current prevailing wage determination in each solicitation."
+      },
+      {
+        "id": "R14",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "If Davis-Bacon applies, award contracts or subcontracts on the condition that the prevailing wage determination is accepted.",
+        "source_pages": [
+          13
+        ],
+        "quote": "Contracts or subcontracts must be awarded on the condition that the prevailing wage determination is accepted."
+      },
+      {
+        "id": "R15",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "If Davis-Bacon applies, report all suspected or reported violations to the federal agency.",
+        "source_pages": [
+          13
+        ],
+        "quote": "The recipient or subrecipient must report all suspected or reported violations to the federal agency."
+      },
+      {
+        "id": "R16",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "Contracts subject to Davis-Bacon must also include compliance with the Copeland Anti-Kickback Act; the guide explains that this is incorporated into the required Davis-Bacon provision, so a separate provision is unnecessary.",
+        "source_pages": [
+          13
+        ],
+        "quote": "Contracts subject to the Davis-Bacon Act, must also include a provision for compliance with the Copeland “Anti-Kickback” Act."
+      },
+      {
+        "id": "R17",
+        "actor": "Recipients and subrecipients",
+        "modality": "permission",
+        "statement": "A separate Copeland Anti-Kickback provision may be included even though the required Davis-Bacon provision incorporates its regulatory requirements.",
+        "source_pages": [
+          13
+        ],
+        "quote": "However, the recipient or subrecipient may include a separate contract provision specific to the Copeland “Anti-Kickback” Act."
+      },
+      {
+        "id": "R18",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "If Davis-Bacon applies, include the provisions at 29 C.F.R. § 5.5(a)(1)-(11) in full in applicable contracts.",
+        "source_pages": [
+          13
+        ],
+        "quote": "If applicable per the standard described above, the recipient or subrecipient must include the provisions at 29 C.F.R. § 5.5(a)(1)-(11) in full into all applicable contracts, and all applicable contractors must include these provisions in full in any subcontracts."
+      },
+      {
+        "id": "R19",
+        "actor": "Applicable contractors",
+        "modality": "obligation",
+        "statement": "Section 4.3 requires applicable contractors to include the Davis-Bacon provisions in full in subcontracts. For drafting under this guide, follow this express full-text requirement rather than treating section 4.2's general incorporation-by-reference description as sufficient.",
+        "source_pages": [
+          13
+        ],
+        "quote": "If applicable per the standard described above, the recipient or subrecipient must include the provisions at 29 C.F.R. § 5.5(a)(1)-(11) in full into all applicable contracts, and all applicable contractors must include these provisions in full in any subcontracts."
+      },
+      {
+        "id": "R20",
+        "actor": "Contractors and subcontractors",
+        "modality": "unspecified",
+        "statement": "Section 4.2 describes inserting or incorporating the Davis-Bacon clauses by reference into subcontracts; section 4.3 separately specifies full inclusion. Preserve that distinction when preparing the contract.",
+        "source_pages": [
+          13
+        ],
+        "quote": "the recipient’s or subrecipient’s contractor and any subcontractors are required to insert, or incorporate by reference, the clauses contained at 29 C.F.R. § 5.5(a)(1)-(11)"
+      },
+      {
+        "id": "R21",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "Section 6.1 requires the work-hours/safety provision for procurements over $100,000 involving the described employment and construction work. Prime construction with mechanics or laborers is expressly covered unless an express exclusion applies.",
+        "source_pages": [
+          15
+        ],
+        "quote": "This required contract provision applies to all procurements over $100,000 that involve the employment of mechanics, laborers, and construction work."
+      },
+      {
+        "id": "R22",
+        "actor": "Recipients and subrecipients",
+        "modality": "condition",
+        "statement": "Purchases of supplies, materials, or articles ordinarily available on the open market are excluded from section 6.1.",
+        "source_pages": [
+          15
+        ],
+        "quote": "These requirements do not apply to the purchase of supplies, materials, or articles ordinarily available on the open market, contracts for transportation or transmission of intelligence."
+      },
+      {
+        "id": "R23",
+        "actor": "Recipients and subrecipients",
+        "modality": "condition",
+        "statement": "Contracts for transportation are excluded from section 6.1.",
+        "source_pages": [
+          15
+        ],
+        "quote": "These requirements do not apply to the purchase of supplies, materials, or articles ordinarily available on the open market, contracts for transportation or transmission of intelligence."
+      },
+      {
+        "id": "R24",
+        "actor": "Recipients and subrecipients",
+        "modality": "condition",
+        "statement": "Contracts for transmission of intelligence are excluded from section 6.1.",
+        "source_pages": [
+          15
+        ],
+        "quote": "These requirements do not apply to the purchase of supplies, materials, or articles ordinarily available on the open market, contracts for transportation or transmission of intelligence."
+      },
+      {
+        "id": "R25",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "If section 6 applies, include 29 C.F.R. § 5.5(b)(1)-(5) verbatim in applicable contracts.",
+        "source_pages": [
+          16
+        ],
+        "quote": "If applicable per the standard described above, the recipient or subrecipient must include the provisions at 29 C.F.R. § 5.5(b)(1)-(5), verbatim, into all applicable contracts, and all applicable contractors must include these provisions, in full, into any subcontracts."
+      },
+      {
+        "id": "R26",
+        "actor": "Applicable contractors",
+        "modality": "obligation",
+        "statement": "If section 6 applies, include its required provisions in full in subcontracts.",
+        "source_pages": [
+          16
+        ],
+        "quote": "all applicable contractors must include these provisions, in full, into any subcontracts."
+      },
+      {
+        "id": "R27",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "For a contract subject only to the Contract Work Hours and Safety Standards Act and not to any other statutes cited in 29 C.F.R. § 5.1, additionally insert a clause meeting 29 C.F.R. § 5.5(c).",
+        "source_pages": [
+          16
+        ],
+        "quote": "In addition to the required language from 29 C.F.R. § 5.5(b)(1)-(5), in any contract subject only to the Contract Work Hours and Safety Standards Act and not to any other statutes cited in 29 C.F.R. § 5.1, the recipient or subrecipient must also insert a clause meeting the requirements of 29 C.F.R. § 5.5(c)."
+      },
+      {
+        "id": "R28",
+        "actor": "FEMA",
+        "modality": "unspecified",
+        "statement": "The additional section 6.2 clause has no mandated specific wording in the guide; FEMA supplies suggested wording. This does not relax the separate verbatim requirement for § 5.5(b)(1)-(5).",
+        "source_pages": [
+          16
+        ],
+        "quote": "Specific language is not required, but FEMA has provided suggested language below."
+      },
+      {
+        "id": "R29",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "Include the section 8 Clean Air/Water provision for all procurements over $150,000. The scoped amount condition is not met at exactly $150,000.",
+        "source_pages": [
+          19
+        ],
+        "quote": "This contract provision is required for all procurements over $150,000."
+      },
+      {
+        "id": "R30",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "When section 8 applies, the contract provision must require contractor compliance with both the Clean Air Act and the Federal Water Pollution Control Act.",
+        "source_pages": [
+          19
+        ],
+        "quote": "Contracts must contain a provision requiring contractors to comply with the Clean Air Act"
+      },
+      {
+        "id": "R31",
+        "actor": "Recipients and subrecipients",
+        "modality": "obligation",
+        "statement": "For the applicable Clean Air/Water requirements, violations must be reported to FEMA and the EPA Regional Office.",
+        "source_pages": [
+          19
+        ],
+        "quote": "Violations must be reported to FEMA and the Regional Office of the Environmental Protection Agency."
+      },
+      {
+        "id": "R32",
+        "actor": "FEMA",
+        "modality": "unspecified",
+        "statement": "Section 8.2 supplies sample language, not an additional amount-applicability condition or a mandate to use that exact sample wording.",
+        "source_pages": [
+          19
+        ],
+        "quote": "The following provides a sample contract clause:"
+      }
+    ],
+    "process": [
+      {
+        "id": "P01",
+        "action": "UNAPPROVED MODEL DRAFT. Implementation scope: interpret only the supplied Version 2, effective October 1, 2024. Treat edition applicability as the task's fixed scope, because no award-date input is declared. Do not substitute current law or retrieve replacement regulatory text.",
+        "requires": [],
+        "source_pages": [
+          1
+        ],
+        "quote": "Version 2, Effective October 1, 2024"
+      },
+      {
+        "id": "P02",
+        "action": "Establish the bounded contract-provision review. Use the five declared inputs as supplied facts. Implementation conventions: rules are evaluated in order with first-match semantics; unmatched cases use the stated default. A false result means only that the named, scoped requirement condition is not met, not that inclusion is prohibited or that other legal duties are absent.",
+        "requires": [
+          "P01"
+        ],
+        "source_pages": [
+          4
+        ],
+        "quote": "Many of the provisions described in this document only apply when certain circumstances are present, such as the type of work being procured, the dollar amount, or the date when it is procured."
+      },
+      {
+        "id": "P03",
+        "action": "Determine termination_clause_required using the strict greater-than-$10,000 threshold. If true, prepare a cause-and-convenience provision covering the manner of termination and settlement basis. If false, retain the distinction between FEMA's optional suggestion and a federal requirement; actionable and specific wording is a recommendation.",
+        "requires": [
+          "P02"
+        ],
+        "source_pages": [
+          8,
+          9
+        ],
+        "quote": "This contract provision is required for contracts and purchase orders exceeding $10,000."
+      },
+      {
+        "id": "P04",
+        "action": "Evaluate the express PA/HMA Davis-Bacon exclusion first. Return false for either program regardless of the program-legislation input. This precedence implements the section 4.1 exclusion, not an inference about state-law duties.",
+        "requires": [
+          "P02"
+        ],
+        "source_pages": [
+          12
+        ],
+        "quote": "However, the Davis-Bacon Act clause is not federally required for procurements under FEMA’s Public Assistance (PA) or Hazard Mitigation Assistance (HMA) Programs."
+      },
+      {
+        "id": "P05",
+        "action": "For cases not excluded by P04, evaluate the over-$2,000 amount condition, prime-construction classification, and program-legislation requirement. Amounts at or below $2,000, a known no legislation finding, or an expressly non-prime listed procurement category resolve false. Express prime construction over $2,000 with a yes legislation finding resolves true. Implementation choice for incomplete facts: do not equate contract_category other with a proven nonconstruction contract; retain unknown where that uncharacterised work or unknown legislation could affect applicability. Do not add involves_mechanics_or_laborers as a separate section 4.1 prerequisite.",
+        "requires": [
+          "P04"
+        ],
+        "source_pages": [
+          12
+        ],
+        "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+      },
+      {
+        "id": "P06",
+        "action": "If Davis-Bacon applicability is unknown, identify the unresolved program or contract classification rather than treating missing information as a prohibition. The source identifies the applicable NOFO, other program guidance, or FEMA grant representative as the route for resolving program applicability; this blueprint does not invent the missing finding.",
+        "requires": [
+          "P05"
+        ],
+        "source_pages": [
+          12
+        ],
+        "quote": "Recipients and subrecipients should refer to applicable NOFO or other program guidance or contact their applicable FEMA grant representative to determine if this provision is required for the procurement."
+      },
+      {
+        "id": "P07",
+        "action": "If Davis-Bacon is required, place the prevailing wage determination in each solicitation, condition award on acceptance, and include § 5.5(a)(1)-(11) in full in contracts and applicable subcontracts. For drafting, follow section 4.3's explicit full-text requirement notwithstanding section 4.2's general incorporation-by-reference description. Include Copeland compliance through the required provision; a separate Copeland clause is optional. Preserve the source duty to report suspected or reported violations.",
+        "requires": [
+          "P05"
+        ],
+        "source_pages": [
+          13
+        ],
+        "quote": "If applicable per the standard described above, the recipient or subrecipient must include the provisions at 29 C.F.R. § 5.5(a)(1)-(11) in full into all applicable contracts, and all applicable contractors must include these provisions in full in any subcontracts."
+      },
+      {
+        "id": "P08",
+        "action": "For work_hours_clause_required, apply the express open-market-supplies, transportation, and intelligence-transmission exclusions before the positive coverage rule. These exclusions remain controlling even when the amount exceeds $100,000 and the employment input is true.",
+        "requires": [
+          "P02"
+        ],
+        "source_pages": [
+          15
+        ],
+        "quote": "These requirements do not apply to the purchase of supplies, materials, or articles ordinarily available on the open market, contracts for transportation or transmission of intelligence."
+      },
+      {
+        "id": "P09",
+        "action": "For work not excluded by P08, resolve false at or below $100,000 or when mechanics/laborers are not involved. Resolve true for expressly covered prime construction over $100,000 involving mechanics/laborers. Implementation choice preserving source uncertainty: for contract_category other above the threshold with employment present, retain unknown rather than import external-law coverage or infer that all other work is excluded.",
+        "requires": [
+          "P08"
+        ],
+        "source_pages": [
+          15
+        ],
+        "quote": "This required contract provision applies to all procurements over $100,000 that involve the employment of mechanics, laborers, and construction work."
+      },
+      {
+        "id": "P10",
+        "action": "If the work-hours/safety provision is required, include § 5.5(b)(1)-(5) verbatim in applicable contracts and in full in applicable subcontracts. The guide's suggested additional wording does not replace this required language.",
+        "requires": [
+          "P09"
+        ],
+        "source_pages": [
+          16
+        ],
+        "quote": "If applicable per the standard described above, the recipient or subrecipient must include the provisions at 29 C.F.R. § 5.5(b)(1)-(5), verbatim, into all applicable contracts, and all applicable contractors must include these provisions, in full, into any subcontracts."
+      },
+      {
+        "id": "P11",
+        "action": "For an applicable work-hours/safety contract, identify whether the separate § 5.5(c) clause is also required because the contract is subject only to that Act and not the other statutes cited in § 5.1. The declared inputs do not establish the applicability of every such statute, so do not infer this additional condition merely from a false Davis-Bacon output. Preserve the conditional drafting task for human resolution without changing the section 6.1 output.",
+        "requires": [
+          "P10"
+        ],
+        "source_pages": [
+          16
+        ],
+        "quote": "In addition to the required language from 29 C.F.R. § 5.5(b)(1)-(5), in any contract subject only to the Contract Work Hours and Safety Standards Act and not to any other statutes cited in 29 C.F.R. § 5.1, the recipient or subrecipient must also insert a clause meeting the requirements of 29 C.F.R. § 5.5(c)."
+      },
+      {
+        "id": "P12",
+        "action": "Determine clean_air_water_clause_required solely from whether the amount exceeds $150,000. If true, prepare a provision requiring compliance with both named Acts and preserve reporting to FEMA and the EPA Regional Office. Section 8.2's sample wording does not create another applicability gate.",
+        "requires": [
+          "P02"
+        ],
+        "source_pages": [
+          19
+        ],
+        "quote": "This contract provision is required for all procurements over $150,000."
+      },
+      {
+        "id": "P13",
+        "action": "Assemble the four scoped determinations and their source-linked drafting actions. Keep unresolved facts marked unknown and conditional downstream duties unresolved where the interface lacks necessary facts. Submit this unapproved model draft for recipient/subrecipient review; do not represent the blueprint as legal approval or a determination of requirements outside the named sections.",
+        "requires": [
+          "P03",
+          "P06",
+          "P07",
+          "P11",
+          "P12"
+        ],
+        "source_pages": [
+          4
+        ],
+        "quote": "The recipient or subrecipient is solely responsible for ensuring that all language included in its contracts meets the requirements of 2 C.F.R. Part 200, including 2 C.F.R. § 200.327 and Appendix II."
+      }
+    ],
+    "outputs": {
+      "termination_clause_required": {
+        "rules": [
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "gt",
+              "value": 10000
+            },
+            "value": true,
+            "source_pages": [
+              9
+            ],
+            "quote": "This contract provision is required for contracts and purchase orders exceeding $10,000."
+          },
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "lte",
+              "value": 10000
+            },
+            "value": false,
+            "source_pages": [
+              9
+            ],
+            "quote": "For contracts at or below $10,000, FEMA suggests including a termination for cause provision, but this is not required."
+          }
+        ],
+        "default": "unknown"
+      },
+      "davis_bacon_clause_required": {
+        "rules": [
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "PA"
+                },
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "HMA"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "However, the Davis-Bacon Act clause is not federally required for procurements under FEMA’s Public Assistance (PA) or Hazard Mitigation Assistance (HMA) Programs."
+          },
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "lte",
+              "value": 2000
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "field": "program_legislation_requires_davis_bacon",
+              "op": "eq",
+              "value": "no"
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "open_market_supplies"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "transportation"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "intelligence_transmission"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "other"
+                },
+                {
+                  "field": "contract_amount_usd",
+                  "op": "gt",
+                  "value": 2000
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "prime_construction"
+                },
+                {
+                  "field": "program_legislation_requires_davis_bacon",
+                  "op": "eq",
+                  "value": "yes"
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "other"
+                },
+                {
+                  "field": "contract_amount_usd",
+                  "op": "gt",
+                  "value": 2000
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "prime_construction"
+                },
+                {
+                  "field": "program_legislation_requires_davis_bacon",
+                  "op": "eq",
+                  "value": "unknown"
+                }
+              ]
+            },
+            "value": "unknown",
+            "source_pages": [
+              12
+            ],
+            "quote": "Recipients and subrecipients should refer to applicable NOFO or other program guidance or contact their applicable FEMA grant representative to determine if this provision is required for the procurement."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "fema_program",
+                  "op": "eq",
+                  "value": "other"
+                },
+                {
+                  "field": "contract_amount_usd",
+                  "op": "gt",
+                  "value": 2000
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "other"
+                },
+                {
+                  "field": "program_legislation_requires_davis_bacon",
+                  "op": "ne",
+                  "value": "no"
+                }
+              ]
+            },
+            "value": "unknown",
+            "source_pages": [
+              12
+            ],
+            "quote": "When required by the federal program legislation, all prime construction contracts over $2,000 awarded by recipients or subrecipients must include a provision for compliance with the Davis-Bacon Act."
+          }
+        ],
+        "default": "unknown"
+      },
+      "work_hours_clause_required": {
+        "rules": [
+          {
+            "when": {
+              "any": [
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "open_market_supplies"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "transportation"
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "intelligence_transmission"
+                }
+              ]
+            },
+            "value": false,
+            "source_pages": [
+              15
+            ],
+            "quote": "These requirements do not apply to the purchase of supplies, materials, or articles ordinarily available on the open market, contracts for transportation or transmission of intelligence."
+          },
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "lte",
+              "value": 100000
+            },
+            "value": false,
+            "source_pages": [
+              15
+            ],
+            "quote": "This required contract provision applies to all procurements over $100,000 that involve the employment of mechanics, laborers, and construction work."
+          },
+          {
+            "when": {
+              "field": "involves_mechanics_or_laborers",
+              "op": "eq",
+              "value": false
+            },
+            "value": false,
+            "source_pages": [
+              15
+            ],
+            "quote": "This required contract provision applies to all procurements over $100,000 that involve the employment of mechanics, laborers, and construction work."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "contract_amount_usd",
+                  "op": "gt",
+                  "value": 100000
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "prime_construction"
+                },
+                {
+                  "field": "involves_mechanics_or_laborers",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": true,
+            "source_pages": [
+              15
+            ],
+            "quote": "This required contract provision applies to all procurements over $100,000 that involve the employment of mechanics, laborers, and construction work."
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "field": "contract_amount_usd",
+                  "op": "gt",
+                  "value": 100000
+                },
+                {
+                  "field": "contract_category",
+                  "op": "eq",
+                  "value": "other"
+                },
+                {
+                  "field": "involves_mechanics_or_laborers",
+                  "op": "eq",
+                  "value": true
+                }
+              ]
+            },
+            "value": "unknown",
+            "source_pages": [
+              15
+            ],
+            "quote": "This required contract provision applies to all procurements over $100,000 that involve the employment of mechanics, laborers, and construction work."
+          }
+        ],
+        "default": "unknown"
+      },
+      "clean_air_water_clause_required": {
+        "rules": [
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "gt",
+              "value": 150000
+            },
+            "value": true,
+            "source_pages": [
+              19
+            ],
+            "quote": "This contract provision is required for all procurements over $150,000."
+          },
+          {
+            "when": {
+              "field": "contract_amount_usd",
+              "op": "lte",
+              "value": 150000
+            },
+            "value": false,
+            "source_pages": [
+              19
+            ],
+            "quote": "This contract provision is required for all procurements over $150,000."
+          }
+        ],
+        "default": "unknown"
+      }
+    }
+  },
+  "output_sha256": "ea4fe0d1fa32a3aa27a9c2a9ad230e3519690c3d13f436087e2d6ab42f5a706a",
+  "assessment": "hidden_assistant_draft_test_vectors_not_independent_gold",
+  "checker_revision": "quote-normalisation-v1.1",
+  "correction_status": "postcollection_mechanical_quote_check_correction"
+}

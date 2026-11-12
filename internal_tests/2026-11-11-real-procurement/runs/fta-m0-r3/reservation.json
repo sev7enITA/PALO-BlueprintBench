@@ -1,0 +1,18 @@
+{
+  "id": "fta-m0-r3",
+  "task_id": "fta",
+  "model": "openai/gpt-6.1-sol",
+  "model_index": 0,
+  "repetition": 3,
+  "request_path": "prepared/fta-0.json",
+  "request_sha256": "e1edeb4b2c8fc861eb2b632b6aac2228a418061f1006cfc8a87f8c2d10857a9b",
+  "source_packet_sha256": "ee3acc767f75f806933cea959cf809a224bea8821d1fa1dc367642de87b93de5",
+  "access_channel": "OpenRouter MCP",
+  "execution_mode": "remote cloud inference",
+  "pinned_provider": "openai",
+  "started_at": "2026-11-12T02:45:46.638Z",
+  "reserved_usd": 2.335025000000001,
+  "headroom_before_usd": 10.909136,
+  "account_usage": 27.576444117,
+  "manifest_sha256": "262c5820780f909f414c73477ab581ece4462832a89585f93bf0ef7377de327c"
+}
