@@ -8,7 +8,7 @@ Status: **design proposal, 11 November 2026**. No validated formula, score, thre
 
 The unit of evaluation is a complete configuration and corpus cohort: model revision, provider/runtime, quantisation, reasoning, context, pipeline, adapter, prompts, retrieval and recovery settings. A bare model name must never receive an apparently universal score.
 
-## Publish a profile before a composite
+## Evaluation Profile
 
 The eight dimensions remain visible: document fidelity; semantic faithfulness; coverage and uncertainty; ER/dictionary/ontology consistency; process fidelity; governance controls; reliability/recovery; human effort and FinOps.
 
@@ -16,7 +16,7 @@ An eventual 0–100 display is a candidate presentation choice, not an implement
 
 Cheap or fast answers must not compensate for an inverted permission, invented authority, unsupported ownership, data-disclosure violation or missing required output. Required control and critical-error gates need an explicit non-compensatory rule. Costs and human effort should remain companion measures; whether any efficiency term belongs in the headline index is an open methodological question.
 
-## Eligibility before scoring
+## Scoring Eligibility
 
 1. Rights-cleared document families, split by related source family rather than arbitrary files.
 2. Reference answers independently annotated without viewing system outputs, with adjudication and documented disagreement.

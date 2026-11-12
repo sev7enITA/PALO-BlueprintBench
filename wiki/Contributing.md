@@ -1,6 +1,6 @@
 # Contributing
 
-## Choose a role
+## Reviewer Roles
 
 | Role | First useful contribution |
 |---|---|

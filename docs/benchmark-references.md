@@ -38,7 +38,7 @@ Test document import, interpretation, human correction and blueprint export with
 
 References: tau2-bench, OSWorld, Terminal-Bench. These are proposed actions, not completed qualification.
 
-### Separate structural and semantic evidence
+### Structural and Semantic Assessment
 
 Report schema/tool validity, source support, semantic violations and downstream executable checks as separate outcomes.
 

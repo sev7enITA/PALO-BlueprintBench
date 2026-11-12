@@ -2,7 +2,7 @@
 
 Status: recruitment and calibration, version 0.1. No participant has been approved or represented as an independent validator by this document.
 
-## Choose a role
+## Reviewer Roles
 
 * **Domain annotator:** understands procurement, traceability or transport workflows. Creates source-backed reference propositions without seeing model answers.
 * **Business-user participant:** tries the document-to-blueprint workflow and helps measure comprehension, correction effort and task completion. This is distinct from writing the gold answers.

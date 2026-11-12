@@ -2,7 +2,7 @@
 
 **Research proposal v0.1, 10 November 2026. Not a validated benchmark or a published ranking.**
 
-## The decision this benchmark should support
+## Evaluation Scope
 
 Which model and system configuration can turn a business document collection into a faithful, traceable development blueprint, with an acceptable amount of human correction, time and expenditure?
 
@@ -12,7 +12,7 @@ The three existing repositories remain valuable regression tests. They are now d
 
 See [RESEARCH.md](research.md) for the primary-source comparison, and [REVIEW-DECISIONS.md](review-decisions.md) for the model reviewers' challenges and our adjudication.
 
-## What is ranked
+## Ranking Criteria
 
 A result belongs to a **configuration**, not just a model name:
 
@@ -53,7 +53,7 @@ Keep all documents, revisions, translations and derived tasks from a source fami
 
 Publish source manifests, licences/permissions, downloader versions, hashes and expired-link handling. Redistribute files only when permitted. Use public calibration tasks, sealed evaluation tasks with submission limits, and a later retired-test release for reproducibility. Once a test is used to tune the product, move that family to development and version the benchmark. Use new time-based cohorts and carefully audited counterfactual variants to test reliance on supplied evidence; never present synthetic variants as real business records.
 
-## What the scores mean
+## Metric Definitions
 
 Freeze each task's required output scope before testing. The gold specification is a set of source-backed propositions, allowed alternative models and forbidden inferences, not one preferred ER diagram. Preserve unresolved ambiguities. Include entity aliases, relation direction, actor, owner, temporal scope, negation, modality, units, conditions and exceptions in the rubric.
 

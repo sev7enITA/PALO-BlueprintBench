@@ -48,7 +48,7 @@ def outputs():
     for src,dest in [('docs/reviewer-kit.md','evaluator/REVIEWER-KIT.md'),('docs/source-registry.json','evaluator/source-registry.json'),('docs/announcement.md','evaluator/SOCIAL-INVITATION.md')]:out[ROOT/dest]=(ROOT/src).read_bytes()
     toolkit={}
     for n in ['blueprintbench.py','demo.py','test_blueprintbench.py','test_audit_regressions.py','test_acquire.py','canonical-vectors.json','acquire.py','README.md','requirements.txt','evidence.schema.json','REVIEWER-KIT.md','source-registry.json','LICENSE','EVALUATOR-0.2-WARNING.md']:
-        p=ROOT/'evaluator'/n;toolkit['palo-blueprintbench/'+n]=out.get(p,p.read_bytes())
+        p=ROOT/'evaluator'/n;toolkit['palo-blueprintbench/'+n]=(ROOT/'evaluator/REVIEWER-KIT-v0.3.0-internal.1.md').read_bytes() if n=='REVIEWER-KIT.md' else out.get(p,p.read_bytes())
     toolkit['palo-blueprintbench/evaluator-contract.md']=(ROOT/'docs/evaluator-contract.md').read_bytes()
     toolkit['palo-blueprintbench/evaluator-0.3-draft.md']=(ROOT/'docs/evaluator-0.3-draft.md').read_bytes()
     toolkit['palo-blueprintbench/RELEASE.json']=(ROOT/'evaluator/RELEASE-v0.3.0-internal.1.json').read_bytes()

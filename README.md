@@ -43,7 +43,7 @@ The project is an **open research pilot**. The executable evaluator, historical 
 
 [Specification Generation evidence release](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-12-real-document.1): 27 assigned calls, 14 complete responses, five incomplete or unavailable and eight not dispatched. Labels are assistant drafts; independent qualification is pending.
 
-The [Specification Generation study](docs/study-closure-2026-11-12.md) is closed incomplete. Its [workflow connectivity diagnostic](docs/workflow-connectivity-diagnostic.json) is advisory; the [source-silence rubric](docs/source-silence-rubric-draft.md) awaits external approval.
+The [Specification Generation study](docs/study-closure-2026-11-12.md) is closed incomplete. Its [workflow connectivity diagnostic](docs/workflow-connectivity-diagnostic.json) is advisory; the [annotation guidelines](docs/annotation-guidelines-draft.md) awaits external approval.
 
 ## Current internal tests and dashboard
 
@@ -59,9 +59,9 @@ The earlier evaluator and dashboard PRs have merged. The current release is an i
 
 ## Contents
 
-[Why specification fidelity](#why-specification-fidelity) · [Explore the project](#explore-the-project) · [Evaluation tracks](#evaluation-tracks) · [Quick start](#quick-start) · [Evidence and results](#evidence-and-results) · [Research roadmap](#research-roadmap) · [Contribute](#contribute) · [Documentation](#documentation) · [Citation](#citation) · [Governance](#governance-and-licensing)
+[Specification Fidelity](#specification-fidelity) · [Explore the project](#explore-the-project) · [Evaluation tracks](#evaluation-tracks) · [Quick start](#quick-start) · [Evidence and results](#evidence-and-results) · [Research roadmap](#research-roadmap) · [Contribute](#contribute) · [Documentation](#documentation) · [Citation](#citation) · [Governance](#governance-and-licensing)
 
-## Why specification fidelity
+## Specification Fidelity
 
 | Source | Candidate specification | What needs review |
 |---|---|---|
