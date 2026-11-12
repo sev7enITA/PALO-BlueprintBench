@@ -1,0 +1,29 @@
+{
+  "id": "chatcmpl-576v3gegu94vkfcohu5pp",
+  "object": "chat.completion",
+  "created": 1794508242,
+  "model": "palo-qwen-server-q6-nomtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"label\": \"contradicted\",\n  \"atomic\": true,\n  \"propositions\": [\n    {\n      \"text\": \"A requester is permitted to approve their own purchase request.\",\n      \"label\": \"contradicted\",\n      \"explanation\": \"The source states that a requester must never approve their own purchase request, which directly negates permission.\",\n      \"citations\": [\n        {\n          \"source_id\": \"source\",\n          \"quote\": \"A requester must never approve their own purchase request.\"\n        }\n      ]\n    }\n  ],\n  \"limitations\": \"None\"\n}",
+        "reasoning_content": "We need answer user's JSON. Need think in English? User says /think maybe just prompt. We can analyze.\n\nStatement: \"A requester is permitted to approve their own purchase request.\" Source: \"A requester must never approve their own purchase request.\" This directly contradicts if same scope. Label contradicted. Atomic true? The statement is atomic proposition. Propositions one with text statement, label contradicted, explanation source says must never approve, so not permitted. Citation exact substring: \"A requester must never approve their own purchase request.\" Limitations maybe none or string \"None\". Need single JSON no markdown. Ensure keys label, atomic, propositions, limitations. Atomic likely boolean? Could be true. If one proposition overall matches. Use label contradicted.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 297,
+    "total_tokens": 666,
+    "completion_tokens_details": {
+      "reasoning_tokens": 154
+    }
+  },
+  "stats": {},
+  "system_fingerprint": "palo-qwen-server-q6-nomtp"
+}

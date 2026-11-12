@@ -34,6 +34,8 @@ def page_graph(key):
           'isAccessibleForFree':True,'creativeWorkStatus':'Maintainer-led research; provisional labels; independent human validation pending',
           'image':SITE+'assets/blueprintbench/brand/blueprintbench-logo.png',
           'relatedLink':[SITE+path for _,path in NAV if path!=filename]}
+    if key == 'overview':
+        page['relatedLink'].append(SITE+'PALO_BlueprintBench_AgentDiagnostics.html')
     graph=[page,{'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
         {'@type':'ListItem','position':1,'name':'PALO BlueprintBench','item':SITE+PAGES['overview'][0]}]+([] if key=='overview' else [{'@type':'ListItem','position':2,'name':title,'item':url}])}]
     page['breadcrumb']={'@id':url+'#breadcrumb'}
@@ -62,7 +64,7 @@ def overview():
     start = markup.index('<section class="bench-section" aria-labelledby="purpose">')
     middle = markup.index('<section class="bench-section" aria-labelledby="tests">', start)
     end = markup.index('<section class="bench-section"><h2>Applications', middle)
-    return markup[:start] + markup[middle:end] + markup[start:middle] + markup[end:]
+    return markup[:start] + markup[middle:end] + markup[start:middle] + markup[end:] + '<section class="bench-section" id="local-agent-diagnostics"><h2>Local advisory agent diagnostics</h2><p>Explore source-fidelity review observations for local model configurations, including hardware, prompts, incomplete calls and evidence. These development tests use provisional model references and are not independently validated.</p><a href="PALO_BlueprintBench_AgentDiagnostics.html">Explore local agent diagnostics</a></section>'
 
 
 def method():

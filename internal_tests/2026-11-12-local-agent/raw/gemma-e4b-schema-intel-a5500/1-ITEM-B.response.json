@@ -1,0 +1,29 @@
+{
+  "id": "chatcmpl-gryjnuobyewm40jtj11ry8",
+  "object": "chat.completion",
+  "created": 1794499482,
+  "model": "google/gemma-4-e4b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"label\": \"unknown\",\n  \"atomic\": true,\n  \"propositions\": [\n    {\n      \"text\": \"Multiple related requests are automatically merged into one request.\",\n      \"label\": \"unknown\",\n      \"explanation\": \"The provided source units do not contain information regarding the automatic merging of multiple related requests.\",\n      \"citations\": []\n    }\n  ],\n  \"limitations\": \"No limitations apply.\"\n}",
+        "reasoning_content": "Thinking Process:\n\n1.  **Analyze the Request:** The user wants me to evaluate a `statement` (\"Multiple related requests are automatically merged into one request.\") against a set of `source_units`. I must determine if the statement is supported, contradicted, or neither (unknown/mixed/compound).\n2.  **Analyze the Statement:** \"Multiple related requests are automatically merged into one request.\" This describes an automatic system function regarding merging multiple requests.\n3.  **Examine Source Units:** I will read through all source units (R01 to R12) to see if any mention:\n    *   Merging requests.\n    *   Automatic actions on related requests.\n    *   Grouping of requests.\n\n    *   R01: Purchase approval threshold (> EUR 5,000).\n    *   R02: Purchase approval threshold (= EUR 5,000).\n    *   R03: Purchase approval threshold (< EUR 5,000).\n    *   R04: Requester cannot approve own request.\n    *   R05: Emergency purchase exemption (quotations).\n    *   R06: Emergency purchase and Finance approval (> EUR 5,000).\n    *   R07: Who can provide Finance approval (Head of Finance only).\n    *   R08: Cancellation procedure.\n    *   R09: Retention period for approval records (30 days).\n    *   R10: Purchase threshold scope (per request, not monthly total).\n    *   R11: Supplier name uniqueness (not unique identifier).\n    *   R12: Retention period start date (approval date).\n\n4.  **Compare Statement to Sources:** None of the source units R01 through R12 mention merging requests or automatically combining related requests.\n\n5.  **Determine Fidelity:** Since no source unit addresses this topic, the decision is 'unknown'.\n\n6.  **Construct JSON Output:** Format the findings according to the required structure.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 580,
+    "completion_tokens": 540,
+    "total_tokens": 1120,
+    "completion_tokens_details": {
+      "reasoning_tokens": 432
+    }
+  },
+  "stats": {},
+  "system_fingerprint": "google/gemma-4-e4b"
+}

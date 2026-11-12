@@ -273,3 +273,7 @@ The separate [next-cycle view](https://paloframework.org/PALO_BlueprintBench_Nex
 ### Qualification study
 
 The [planned qualification protocol](docs/qualification-roadmap.md) defines generation tasks, the contradiction rubric, external roles and acceptance evidence. Its six gates remain open. [Archived six-scenario observations](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-11-six-scenario.1) are internal engineering evidence; presentation revision 2026-11-11.5 does not change those records.
+
+## Local advisory agent diagnostics
+
+The [local agent diagnostics](https://paloframework.org/PALO_BlueprintBench_AgentDiagnostics.html) report source-fidelity review observations by model, prompt, hardware and case. The [evidence package](internal_tests/2026-11-12-local-agent/) retains assigned calls, timeouts, requests and responses. These are development tests with model-generated references, not independent validation or a qualified ranking.

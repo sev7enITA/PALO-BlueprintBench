@@ -1,0 +1,793 @@
+{
+  "format": "palo-local-agent-diagnostics-1",
+  "date": "2026-11-12",
+  "status": "internal_development",
+  "qualification": false,
+  "description": "Source-fidelity advisory classification experiments with local model configurations. Rows include one post-hoc adaptation with no new calls.",
+  "limitations": [
+    "Previously exposed development examples; no independent adjudicated gold, qualified ranking or PALO Blueprint Index.",
+    "Agreement is against previous Qwen outputs, not accuracy against expert gold. Output contract checks and exact quotation substrings do not establish entailment.",
+    "Medians use complete responses only; failed and unrun assignments stay in the denominator and are recorded individually.",
+    "Saved request objects are retained as JSON; exact HTTP wire serialization was not preserved for every run. Response bytes are retained and hashed.",
+    "Model variants, output caps, response-format settings, prompt versions and hardware differ. The post-hoc schema adaptation reuses existing outputs and does not add calls.",
+    "Only endpoint and local-catalog metadata were inspected; file hashes on the server, hardware offload, energy, and per-call costs were not independently measured.",
+    "The three process cases use synthetic and public materials. FEMA source provenance was recorded but not independently verified.",
+    "The individual runs called the model endpoint with the advisory-agent prompt and validator; they do not demonstrate end-to-end execution of the agent application."
+  ],
+  "deferred_assignment_history": [
+    {
+      "case_id": "ITEM-C",
+      "status": "not_run",
+      "reason": "Not dispatched after previous transport or identity error"
+    },
+    {
+      "case_id": "DAVIS_BACON",
+      "status": "not_run",
+      "reason": "Not dispatched after previous transport or identity error"
+    },
+    {
+      "case_id": "DAVIS_BACON",
+      "status": "not_run",
+      "reason": "Not dispatched after previous transport or identity error"
+    }
+  ],
+  "runs": [
+    {
+      "id": "q6-mtp-apple-m3-max",
+      "model": "Qwen3.8 27B Uncensored",
+      "variant": "Q6_K; MTP",
+      "runtime": "LM Studio; llama.cpp runtime version and per-attempt offload not independently verified",
+      "hardware": "Apple M3 Max (40-core GPU, 64 GB unified memory; LM Studio server)",
+      "context_tokens": 8192,
+      "mtp": "enabled",
+      "suite": "Source-fidelity advisory classification, unconstrained JSON",
+      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "recorded_date": "2026-11-12",
+      "observations": [
+        {
+          "trial": 1,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 36.838,
+          "request": {
+            "path": "raw/q6-mtp-apple-m3-max/1-C01.request.json",
+            "sha256": "eb9200d049c1d57f50b3643cb844a66e9ca0dd3089a5f18a087f6226f11f9525"
+          },
+          "response": {
+            "path": "raw/q6-mtp-apple-m3-max/1-C01.response.json",
+            "sha256": "12ef49c3436cf8dd5813bc843e4d35890ecef63fd137b2e9964e9d57b7591cad"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 308,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 4,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 33.342,
+          "request": {
+            "path": "raw/q6-mtp-apple-m3-max/4-C01.request.json",
+            "sha256": "eb9200d049c1d57f50b3643cb844a66e9ca0dd3089a5f18a087f6226f11f9525"
+          },
+          "response": {
+            "path": "raw/q6-mtp-apple-m3-max/4-C01.response.json",
+            "sha256": "16da7b4c6bdf84bbf2db5fbcb864cc318f0cfff58fc218809fb0c6c56eef49ab"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 308,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 5,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 31.924,
+          "request": {
+            "path": "raw/q6-mtp-apple-m3-max/5-C01.request.json",
+            "sha256": "eb9200d049c1d57f50b3643cb844a66e9ca0dd3089a5f18a087f6226f11f9525"
+          },
+          "response": {
+            "path": "raw/q6-mtp-apple-m3-max/5-C01.response.json",
+            "sha256": "3bb8206d28017b4601ab8dddd069b1b93e44f2d553020d6da852c9c037249f57"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 308,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 7,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 28.966,
+          "request": {
+            "path": "raw/q6-mtp-apple-m3-max/7-C13.request.json",
+            "sha256": "af0e4060fd84a3511943fc4a05981c7b5374d25e87ab9b1c884fd652465d9a3c"
+          },
+          "response": {
+            "path": "raw/q6-mtp-apple-m3-max/7-C13.response.json",
+            "sha256": "3f5fee5d939083ac2e8c3ef2fcf344805dfdc89c1275feba58b45950d55d2a21"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 266,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 10,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 27.434,
+          "request": {
+            "path": "raw/q6-mtp-apple-m3-max/10-C13.request.json",
+            "sha256": "af0e4060fd84a3511943fc4a05981c7b5374d25e87ab9b1c884fd652465d9a3c"
+          },
+          "response": {
+            "path": "raw/q6-mtp-apple-m3-max/10-C13.response.json",
+            "sha256": "c5b69210e8828366bef1b7ca1f3e7b346290cc2d56165d840dc1612863204a76"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 266,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 11,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 28.394,
+          "request": {
+            "path": "raw/q6-mtp-apple-m3-max/11-C13.request.json",
+            "sha256": "af0e4060fd84a3511943fc4a05981c7b5374d25e87ab9b1c884fd652465d9a3c"
+          },
+          "response": {
+            "path": "raw/q6-mtp-apple-m3-max/11-C13.response.json",
+            "sha256": "a4dbb544ac234eded705ac42d4f3bdac1dbf599888b8310719b55b36f2c31d72"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 266,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "id": "q6-nomtp-intel-a5500",
+      "model": "Qwen3.8 27B Uncensored",
+      "variant": "Q6_K; noMTP",
+      "runtime": "LM Studio; llama.cpp runtime version and per-attempt offload not independently verified",
+      "hardware": "Intel Core i7-12850HX + NVIDIA RTX A5500 Laptop GPU (16 GiB VRAM, 64 GB RAM; LM Studio server)",
+      "context_tokens": 8192,
+      "mtp": "disabled",
+      "suite": "Source-fidelity advisory classification, unconstrained JSON",
+      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "recorded_date": "2026-11-12",
+      "observations": [
+        {
+          "trial": 2,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 168.313,
+          "request": {
+            "path": "raw/q6-nomtp-intel-a5500/2-C01.request.json",
+            "sha256": "4ee118d3c2cfe153198cdbeb5978673573dd0af804760ad5cb5f0f35a2785380"
+          },
+          "response": {
+            "path": "raw/q6-nomtp-intel-a5500/2-C01.response.json",
+            "sha256": "4e2bfd3ff642c5026113aa2b8a6013dc1218804bc0b7bc755abd2413363bfab8"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 502,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 3,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 174.326,
+          "request": {
+            "path": "raw/q6-nomtp-intel-a5500/3-C01.request.json",
+            "sha256": "4ee118d3c2cfe153198cdbeb5978673573dd0af804760ad5cb5f0f35a2785380"
+          },
+          "response": {
+            "path": "raw/q6-nomtp-intel-a5500/3-C01.response.json",
+            "sha256": "6c16ab9f2f64d4863caa9d46708f083a94fa4dd972dd3cf2bed7992937faad9d"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 502,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 6,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 171.674,
+          "request": {
+            "path": "raw/q6-nomtp-intel-a5500/6-C01.request.json",
+            "sha256": "4ee118d3c2cfe153198cdbeb5978673573dd0af804760ad5cb5f0f35a2785380"
+          },
+          "response": {
+            "path": "raw/q6-nomtp-intel-a5500/6-C01.response.json",
+            "sha256": "07b533a1a02a9565b5d2213e74f0ceea1f274a1ba10814a88299a5d4ffbddd12"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 502,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 8,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 102.473,
+          "request": {
+            "path": "raw/q6-nomtp-intel-a5500/8-C13.request.json",
+            "sha256": "b249062d2882cc9758e38162fe5214dba73bd8c236d0d068cc2deecb074ac338"
+          },
+          "response": {
+            "path": "raw/q6-nomtp-intel-a5500/8-C13.response.json",
+            "sha256": "d1c071392b429f084cfa83c62751c0c997fca9e276c97581fd3c188e53104de1"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 297,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 9,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 103.754,
+          "request": {
+            "path": "raw/q6-nomtp-intel-a5500/9-C13.request.json",
+            "sha256": "b249062d2882cc9758e38162fe5214dba73bd8c236d0d068cc2deecb074ac338"
+          },
+          "response": {
+            "path": "raw/q6-nomtp-intel-a5500/9-C13.response.json",
+            "sha256": "2e35d986968f763f57654f475394e1611d53c54d0a9cb19cd1a21ff06e22731e"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 297,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 12,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 101.03,
+          "request": {
+            "path": "raw/q6-nomtp-intel-a5500/12-C13.request.json",
+            "sha256": "b249062d2882cc9758e38162fe5214dba73bd8c236d0d068cc2deecb074ac338"
+          },
+          "response": {
+            "path": "raw/q6-nomtp-intel-a5500/12-C13.response.json",
+            "sha256": "6b7751afb83ef27b2a8c3d6e07aa6d6e5f596f864b61425246e69c95f0b47c84"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 297,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "id": "qwen-heretic-mtp-intel-a5500",
+      "model": "Qwen3.8 27B Ultimate Heretic Turbo Brilliance 50x AGI NEO MTP VERY LOW",
+      "variant": "MTP; filename states NVFP4, not verified",
+      "runtime": "LM Studio; llama.cpp runtime version and per-attempt offload not independently verified",
+      "hardware": "Intel Core i7-12850HX + NVIDIA RTX A5500 Laptop GPU (16 GiB VRAM, 64 GB RAM; LM Studio server)",
+      "context_tokens": 8192,
+      "mtp": "enabled",
+      "suite": "Source-fidelity advisory classification, unconstrained JSON",
+      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "recorded_date": "2026-11-12",
+      "observations": [
+        {
+          "trial": 1,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 130.795,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/1-C01.request.json",
+            "sha256": "3ac4c6867ab3fb233bff6a8b08ddf61c41eb29383c6b80be82362edef1ae164e"
+          },
+          "response": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/1-C01.response.json",
+            "sha256": "9ea8813eac194ee18b336633e5957dca329f7ea5ec505c515d5f5e337fc1f8a9"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 208,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 2,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 113.674,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/2-C13.request.json",
+            "sha256": "63a4edd52f4de31cacdfcf2a1a5257d5d1c0ad9e31be665bd8ace83867c64675"
+          },
+          "response": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/2-C13.response.json",
+            "sha256": "6b7b7277e58bc2ba683b75fa1c228a342e03ac21c3bca112d74c588f19522b34"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 162,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 3,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 161.972,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/3-C01.request.json",
+            "sha256": "3ac4c6867ab3fb233bff6a8b08ddf61c41eb29383c6b80be82362edef1ae164e"
+          },
+          "response": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/3-C01.response.json",
+            "sha256": "f73a53f6ed777bbad070a15f86671a933cdfd6d31f690bd20e64f939d3fe64bc"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 208,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 4,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 111.822,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/4-C13.request.json",
+            "sha256": "63a4edd52f4de31cacdfcf2a1a5257d5d1c0ad9e31be665bd8ace83867c64675"
+          },
+          "response": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/4-C13.response.json",
+            "sha256": "267371919e6974f47683467f06b33182c41edfdf771b86e3ca9108a5dc9ee002"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 162,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 5,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 160.411,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/5-C01.request.json",
+            "sha256": "3ac4c6867ab3fb233bff6a8b08ddf61c41eb29383c6b80be82362edef1ae164e"
+          },
+          "response": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/5-C01.response.json",
+            "sha256": "175c81ebaf15cdf3aa590bee89834b1b0fd3d5d983b7aba4c7021c8d703a310d"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 208,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 6,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 111.711,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/6-C13.request.json",
+            "sha256": "63a4edd52f4de31cacdfcf2a1a5257d5d1c0ad9e31be665bd8ace83867c64675"
+          },
+          "response": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/6-C13.response.json",
+            "sha256": "73561761a5186f8a882340a3feda3697626fc5b96ddad176bc3857348dbd2b60"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 162,
+          "output_cap_tokens": 512,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        },
+        {
+          "trial": 7,
+          "case_id": "ITEM-B",
+          "case_name": "P013: request aggregation",
+          "status": "stopped",
+          "elapsed_seconds": 600.01,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/7-ITEM-B.request.json",
+            "sha256": "4349691a0bf26c4f4a75ad08e4f61598e4851d38f46d7e787b31e67ca5aacb5b"
+          },
+          "response": null,
+          "finish_reason": null,
+          "completion_tokens": null,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:01eb6bee051f44a4f6e599be08a65c0086fafb07a85d46e1c602cd43a000d309",
+          "label": null,
+          "reference_label": "not_established",
+          "reason": "timeout: timed out"
+        },
+        {
+          "trial": 8,
+          "case_id": "ITEM-C",
+          "case_name": "P036: correction and portal",
+          "status": "stopped",
+          "elapsed_seconds": 600.014,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/8-ITEM-C.request.json",
+            "sha256": "5c8e01c726752494375d21892c8e11b6128202b199bbf503bf827b137185254f"
+          },
+          "response": null,
+          "finish_reason": null,
+          "completion_tokens": null,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:01eb6bee051f44a4f6e599be08a65c0086fafb07a85d46e1c602cd43a000d309",
+          "label": null,
+          "reference_label": "mixed_or_compound",
+          "reason": "timeout: timed out"
+        },
+        {
+          "trial": 9,
+          "case_id": "DAVIS_BACON",
+          "case_name": "Davis-Bacon applicability",
+          "status": "stopped",
+          "elapsed_seconds": 600.01,
+          "request": {
+            "path": "raw/qwen-heretic-mtp-intel-a5500/9-DAVIS_BACON.request.json",
+            "sha256": "ce530e5229a36f6d9c2af3fb4c435d21d1d386b07d0ca22411994ffbd342ebb5"
+          },
+          "response": null,
+          "finish_reason": null,
+          "completion_tokens": null,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": null,
+          "reference_label": "unknown",
+          "reason": "timeout: timed out"
+        }
+      ]
+    },
+    {
+      "id": "gemma-e4b-raw-intel-a5500",
+      "model": "Gemma 4 E4B",
+      "variant": "Q4_K_M; raw unconstrained response",
+      "runtime": "LM Studio; llama.cpp runtime version and per-attempt offload not independently verified",
+      "hardware": "Intel Core i7-12850HX + NVIDIA RTX A5500 Laptop GPU (16 GiB VRAM, 64 GB RAM; LM Studio server)",
+      "context_tokens": 8192,
+      "mtp": "disabled",
+      "suite": "Source-fidelity advisory classification, unconstrained JSON",
+      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "recorded_date": "2026-11-12",
+      "observations": [
+        {
+          "trial": 1,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "unassessed",
+          "elapsed_seconds": 54.141,
+          "request": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/1-C01.request.json",
+            "sha256": "095d2fbc674a8e868e697a8b92163cbf6ea5569ebf1a7cc5dbb1ede73f2e209f"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/1-C01.response.json",
+            "sha256": "7817af5a96396b99d48ca63c79d93b9c47110ec0c4e2eea91b8969cc249243b5"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 586,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": null,
+          "reference_label": "supported",
+          "reason": "Invalid classification or atomicity"
+        },
+        {
+          "trial": 2,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "unassessed",
+          "elapsed_seconds": 40.171,
+          "request": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/2-C13.request.json",
+            "sha256": "2a511e1577346c6313b17a19c17fd1705a3de0ddbc3f7344073a17f6c7a9da02"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/2-C13.response.json",
+            "sha256": "26080adae4588a87367d3c1f9cec1b79431d2bb2d83e26cf021e4248aa4daff2"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 450,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": null,
+          "reference_label": "contradicted",
+          "reason": "Unexpected output fields"
+        },
+        {
+          "trial": 3,
+          "case_id": "ITEM-B",
+          "case_name": "P013: request aggregation",
+          "status": "unassessed",
+          "elapsed_seconds": 62.239,
+          "request": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/3-ITEM-B.request.json",
+            "sha256": "ba7013d394e574ed76fa36eda88b977ca3524eb5b56eed065708c0415976b0f6"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/3-ITEM-B.response.json",
+            "sha256": "77bfab7bace9b305114bc66f5f932bedf7c716993bdee6da02c0912f9d47dff3"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 620,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:01eb6bee051f44a4f6e599be08a65c0086fafb07a85d46e1c602cd43a000d309",
+          "label": null,
+          "reference_label": "not_established",
+          "reason": "Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "trial": 4,
+          "case_id": "ITEM-C",
+          "case_name": "P036: correction and portal",
+          "status": "unassessed",
+          "elapsed_seconds": 131.669,
+          "request": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/4-ITEM-C.request.json",
+            "sha256": "ebb416929b0f88ff78db06d5c0dd2aefb99db8e97bab7a314f49c028e9789beb"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/4-ITEM-C.response.json",
+            "sha256": "00307423d44b9a10dc2cded45715628e70008a98aaa4c2271e6dbe7f2500c11b"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 910,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:01eb6bee051f44a4f6e599be08a65c0086fafb07a85d46e1c602cd43a000d309",
+          "label": null,
+          "reference_label": "mixed_or_compound",
+          "reason": "Invalid proposition label"
+        },
+        {
+          "trial": 5,
+          "case_id": "DAVIS_BACON",
+          "case_name": "Davis-Bacon applicability",
+          "status": "unassessed",
+          "elapsed_seconds": 169.048,
+          "request": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/5-DAVIS_BACON.request.json",
+            "sha256": "6d5b4d2211158dc7cf3b74d5928b7b01580e115d04c0d24ee5e266d891bf67a2"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-raw-intel-a5500/5-DAVIS_BACON.response.json",
+            "sha256": "9d020732eb36e43ecd8f5cb6e1d3de0af88a3c6f9016b1498667564f9a90e72e"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 875,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": null,
+          "reference_label": "unknown",
+          "reason": "Unexpected output fields"
+        }
+      ]
+    },
+    {
+      "id": "gemma-e4b-schema-intel-a5500",
+      "model": "Gemma 4 E4B",
+      "variant": "Q4_K_M; JSON-schema constrained",
+      "runtime": "LM Studio; llama.cpp runtime version and per-attempt offload not independently verified",
+      "hardware": "Intel Core i7-12850HX + NVIDIA RTX A5500 Laptop GPU (16 GiB VRAM, 64 GB RAM; LM Studio server)",
+      "context_tokens": 8192,
+      "mtp": "disabled",
+      "suite": "Source-fidelity advisory classification, JSON-schema constrained",
+      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "recorded_date": "2026-11-12",
+      "observations": [
+        {
+          "trial": 1,
+          "case_id": "ITEM-B",
+          "case_name": "P013: request aggregation",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 116.043,
+          "request": {
+            "path": "raw/gemma-e4b-schema-intel-a5500/1-ITEM-B.request.json",
+            "sha256": "c2018dd8f3b72b0b77b337d4a90ccd84dafe8f87f057117e531df0e16396bf37"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-schema-intel-a5500/1-ITEM-B.response.json",
+            "sha256": "ede0796d027d082287540871b8bd36c1b9d865b6c58c374f58540b8328f0c373"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 540,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:01eb6bee051f44a4f6e599be08a65c0086fafb07a85d46e1c602cd43a000d309",
+          "label": "unknown",
+          "reference_label": "not_established",
+          "reason": null
+        },
+        {
+          "trial": 2,
+          "case_id": "ITEM-C",
+          "case_name": "P036: correction and portal",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 161.28,
+          "request": {
+            "path": "raw/gemma-e4b-schema-intel-a5500/2-ITEM-C.request.json",
+            "sha256": "38f9b3c9517e886860523e989f91151f878524247be7866d78ccb599af109fdc"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-schema-intel-a5500/2-ITEM-C.response.json",
+            "sha256": "79c988e551ce97079eb132140dc5c38f6989b107a586b18214f3d89878d6442b"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 900,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:01eb6bee051f44a4f6e599be08a65c0086fafb07a85d46e1c602cd43a000d309",
+          "label": "contradicted",
+          "reference_label": "mixed_or_compound",
+          "reason": null
+        },
+        {
+          "trial": 3,
+          "case_id": "DAVIS_BACON",
+          "case_name": "Davis-Bacon applicability",
+          "status": "advisory_contract_valid",
+          "elapsed_seconds": 159.328,
+          "request": {
+            "path": "raw/gemma-e4b-schema-intel-a5500/3-DAVIS_BACON.request.json",
+            "sha256": "3bddff678bc9bf6e0f6c424c0e147f23dcdb050f0fbc2ea01f4049027aa7b07e"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-schema-intel-a5500/3-DAVIS_BACON.response.json",
+            "sha256": "71ec9c3695ca9775fe3ef6629940c2e65ae9a812463639d3e5c108454dd485d4"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 923,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "unresolved_conflict",
+          "reference_label": "unknown",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "id": "gemma-e4b-posthoc-intel-a5500",
+      "model": "Gemma 4 E4B",
+      "variant": "Q4_K_M; post-hoc schema adaptation",
+      "runtime": "LM Studio; llama.cpp runtime version and per-attempt offload not independently verified",
+      "hardware": "Intel Core i7-12850HX + NVIDIA RTX A5500 Laptop GPU (16 GiB VRAM, 64 GB RAM; LM Studio server)",
+      "context_tokens": 8192,
+      "mtp": "disabled",
+      "suite": "Post-hoc adaptation of existing responses; no new model call",
+      "reference": "Previous Qwen output, not independently adjudicated gold",
+      "recorded_date": "2026-11-12",
+      "observations": [
+        {
+          "trial": 1,
+          "case_id": "C01",
+          "case_name": "Self-approval prohibition",
+          "status": "posthoc_contract_valid",
+          "elapsed_seconds": null,
+          "request": {
+            "path": "raw/gemma-e4b-posthoc-intel-a5500/1-C01.request.json",
+            "sha256": "095d2fbc674a8e868e697a8b92163cbf6ea5569ebf1a7cc5dbb1ede73f2e209f"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-posthoc-intel-a5500/1-C01.response.json",
+            "sha256": "7817af5a96396b99d48ca63c79d93b9c47110ec0c4e2eea91b8969cc249243b5"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 586,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "supported",
+          "reference_label": "supported",
+          "reason": null
+        },
+        {
+          "trial": 2,
+          "case_id": "C13",
+          "case_name": "Self-approval prohibition reversal",
+          "status": "posthoc_contract_valid",
+          "elapsed_seconds": null,
+          "request": {
+            "path": "raw/gemma-e4b-posthoc-intel-a5500/2-C13.request.json",
+            "sha256": "2a511e1577346c6313b17a19c17fd1705a3de0ddbc3f7344073a17f6c7a9da02"
+          },
+          "response": {
+            "path": "raw/gemma-e4b-posthoc-intel-a5500/2-C13.response.json",
+            "sha256": "26080adae4588a87367d3c1f9cec1b79431d2bb2d83e26cf021e4248aa4daff2"
+          },
+          "finish_reason": "stop",
+          "completion_tokens": 450,
+          "output_cap_tokens": 4096,
+          "prompt_version": "sha256:a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+          "label": "contradicted",
+          "reference_label": "contradicted",
+          "reason": null
+        }
+      ]
+    }
+  ]
+}

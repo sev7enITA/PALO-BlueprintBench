@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-n1vwgwp21zfna9aykcyx3",
+  "object": "chat.completion",
+  "created": 1794507473,
+  "model": "qwen3.8-27b-uncensored",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"label\": \"supported\",\n  \"atomic\": true,\n  \"propositions\": [\n    {\n      \"text\": \"No requester is permitted to approve their own purchase request.\",\n      \"label\": \"supported\",\n      \"explanation\": \"The source states that a requester must never approve their own purchase request, which entails the statement.\",\n      \"citations\": [\n        {\n          \"source_id\": \"source\",\n          \"quote\": \"A requester must never approve their own purchase request.\"\n        }\n      ]\n    }\n  ],\n  \"limitations\": \"The source is a single normative statement and does not specify exceptions or scope beyond the stated rule.\"\n}",
+        "reasoning_content": "We need answer user's JSON. Need think in English? User says /think maybe just prompt. We need produce single JSON object no markdown. Statement: \"No requester is permitted to approve their own purchase request.\" Source: \"A requester must never approve their own purchase request.\" This entails supported. Atomic proposition likely same. Overall label supported. citations exact substring. limitations maybe none or source only one sentence? Need keys label, atomic, propositions, limitations. atomic boolean true? Probably yes. Propositions element text, label, explanation, citations. citation source_id \"source\", quote exact. Limitations string or array. Could be \"None\" or [\"The source is a single normative statement; no exceptions are specified.\"]. Keep concise. Ensure JSON only.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 308,
+    "total_tokens": 677,
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 330,
+    "accepted_draft_tokens_count": 197,
+    "rejected_draft_tokens_count": 133
+  },
+  "system_fingerprint": "qwen3.8-27b-uncensored"
+}

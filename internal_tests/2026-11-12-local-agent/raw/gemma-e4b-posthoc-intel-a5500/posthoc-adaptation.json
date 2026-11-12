@@ -1,0 +1,98 @@
+{
+  "scope": "Post-hoc deterministic schema normalization of two public development examples. Not a benchmark score, independent validation or model ranking.",
+  "model_a": "qwen3.8-27b-uncensored",
+  "model_b": "google/gemma-4-e4b",
+  "rules": {
+    "Entailed": "supported",
+    "Contradicted": "contradicted",
+    "review_item": "Removed only if exactly equal to the assigned ID."
+  },
+  "limitations": [
+    "The adapter was designed after inspecting the two outputs; it was not preregistered.",
+    "Identical requests were served on different hardware and runtimes; latency is not a controlled model comparison.",
+    "Model agreement and exact citations do not establish factual or semantic correctness.",
+    "Two simple examples from one synthetic source family cannot establish general reliability."
+  ],
+  "qualified": false,
+  "items": [
+    {
+      "id": "C01",
+      "raw_status": "unassessed",
+      "qwen_label": "supported",
+      "source_response_sha256": "7817af5a96396b99d48ca63c79d93b9c47110ec0c4e2eea91b8969cc249243b5",
+      "adapted_status": "posthoc_contract_valid",
+      "label": "supported",
+      "changes": [
+        {
+          "field": "label",
+          "before": "Entailed",
+          "after": "supported"
+        },
+        {
+          "field": "propositions[0].label",
+          "before": "Entailed",
+          "after": "supported"
+        }
+      ],
+      "agrees_with_qwen": true,
+      "result": {
+        "label": "supported",
+        "atomic": true,
+        "propositions": [
+          {
+            "text": "No requester is permitted to approve their own purchase request.",
+            "label": "supported",
+            "explanation": "The source states that a requester \"must never\" perform this action, which confirms the statement that they are not permitted to do so.",
+            "citations": [
+              {
+                "source_id": "source",
+                "quote": "A requester must never approve their own purchase request."
+              }
+            ]
+          }
+        ],
+        "limitations": []
+      }
+    },
+    {
+      "id": "C13",
+      "raw_status": "unassessed",
+      "qwen_label": "contradicted",
+      "source_response_sha256": "26080adae4588a87367d3c1f9cec1b79431d2bb2d83e26cf021e4248aa4daff2",
+      "adapted_status": "posthoc_contract_valid",
+      "removed_matching_review_item": true,
+      "label": "contradicted",
+      "changes": [
+        {
+          "field": "label",
+          "before": "Contradicted",
+          "after": "contradicted"
+        },
+        {
+          "field": "propositions[0].label",
+          "before": "Contradicted",
+          "after": "contradicted"
+        }
+      ],
+      "agrees_with_qwen": true,
+      "result": {
+        "label": "contradicted",
+        "atomic": true,
+        "propositions": [
+          {
+            "text": "A requester is permitted to approve their own purchase request.",
+            "label": "contradicted",
+            "explanation": "The source explicitly states that a requester must never approve their own purchase request, which contradicts the statement that they are permitted to do so.",
+            "citations": [
+              {
+                "source_id": "source",
+                "quote": "A requester must never approve their own purchase request."
+              }
+            ]
+          }
+        ],
+        "limitations": ""
+      }
+    }
+  ]
+}

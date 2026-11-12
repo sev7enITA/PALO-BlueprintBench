@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-xf74xnfvk3dp6tu1skc0q",
+  "object": "chat.completion",
+  "created": 1794508380,
+  "model": "qwen3.8-27b-uncensored",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"label\": \"contradicted\",\n  \"atomic\": true,\n  \"propositions\": [\n    {\n      \"text\": \"A requester is permitted to approve their own purchase request.\",\n      \"label\": \"contradicted\",\n      \"explanation\": \"The source states the opposite: a requester must never approve their own purchase request.\",\n      \"citations\": [\n        {\n          \"source_id\": \"source\",\n          \"quote\": \"A requester must never approve their own purchase request.\"\n        }\n      ]\n    }\n  ],\n  \"limitations\": \"The supplied source unit is treated as the applicable scope for this assessment.\"\n}",
+        "reasoning_content": "We need answer user's JSON. Need think in English? User prompt mostly English with /think. We need produce single JSON no markdown. Statement: \"A requester is permitted to approve their own purchase request.\" Source: \"A requester must never approve their own purchase request.\" This directly contradicts if same scope. Label contradicted. Atomic true? likely one proposition. Need citations exact substring. limitations maybe none or source excerpt may not cover complete document but supplied says must never. Could say no limitation? Need key limitations string or array. Use concise. Ensure JSON only.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 266,
+    "total_tokens": 635,
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 288,
+    "accepted_draft_tokens_count": 169,
+    "rejected_draft_tokens_count": 119
+  },
+  "system_fingerprint": "qwen3.8-27b-uncensored"
+}

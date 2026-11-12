@@ -106,3 +106,8 @@ jobs:
 
       - name: Test local validation agent without model calls
         run: python -m unittest discover -s validation_agent -p 'test*.py'
+
+      - name: Verify local advisory agent diagnostics
+        run: |
+          python tools/build_local_agent_diagnostics.py --check
+          python -m unittest discover -s tools -p 'test_local_agent_diagnostics.py'

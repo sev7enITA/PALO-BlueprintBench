@@ -1,0 +1,29 @@
+{
+  "id": "chatcmpl-5c3ejo8eozyqoo6zkbkix9",
+  "object": "chat.completion",
+  "created": 1794507683,
+  "model": "palo-qwen-server-q6-nomtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"label\": \"supported\",\n  \"atomic\": true,\n  \"propositions\": [\n    {\n      \"text\": \"No requester is permitted to approve their own purchase request.\",\n      \"label\": \"supported\",\n      \"explanation\": \"The source states that a requester must never approve their own purchase request, which entails that they are not permitted to do so.\",\n      \"citations\": [\n        {\n          \"source_id\": \"source\",\n          \"quote\": \"A requester must never approve their own purchase request.\"\n        }\n      ]\n    }\n  ],\n  \"limitations\": [\n    \"The source uses a prohibition ('must never') rather than the explicit permission wording 'permitted', but this entails non-permission.\"\n  ]\n}",
+        "reasoning_content": "We need answer user's JSON. Need think in English? User says /think maybe just prompt. We need produce single JSON object no Markdown. Statement: \"No requester is permitted to approve their own purchase request.\" Source: \"A requester must never approve their own purchase request.\"\n\nNeed assess source fidelity. Supported requires entailment. The statement says no requester permitted; source says must never approve. Must never entails not permitted? In normative language, yes likely supported. Need atomic proposition maybe one. Overall label supported. Citations exact substring. Limitations maybe \"Source uses 'must never' rather than explicit 'permitted', but equivalent prohibition.\" Or empty string/array. Need keys: label, atomic, propositions, limitations. atomic boolean? Probably true if single atomic proposition. Propositions element text, label, explanation, citations. Citation source_id and quote exact substring of supplied source units. Quote can be full sentence. Ensure no Markdown.\n\nNeed consider \"No requester is permitted\" vs \"A requester must never approve\". If a requester must never approve their own purchase request, then they are not permitted to do so (assuming obligation implies permission? In deontic logic, O p does not entail P p? Actually prohibition: F p entails not P p if standard. Must never = forbidden. So supported). Could be \"supported\".\n\nNeed final JSON only. Ensure exact quote: \"A requester must never approve their own purchase request.\" source_id \"source\". limitations maybe [\"The source states a prohibition ('must never') rather than the explicit permission wording 'permitted', but this entails non-permission.\"] Keep concise.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 502,
+    "total_tokens": 871,
+    "completion_tokens_details": {
+      "reasoning_tokens": 328
+    }
+  },
+  "stats": {},
+  "system_fingerprint": "palo-qwen-server-q6-nomtp"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-q66le4u9lyr8cw9ld5wv",
+  "object": "chat.completion",
+  "created": 1794509502,
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"contradicted\",\"atomic\":true,\"propositions\":[{\"text\":\"A requester is permitted to approve their own purchase request.\",\"label\":\"contradicted\",\"explanation\":\"The source states the opposite within the same scope: a requester must never approve their own purchase request.\",\"citations\":[{\"source_id\":\"source\",\"quote\":\"A requester must never approve their own purchase request.\"}]}],\"limitations\":\"Assessment is limited to the supplied excerpt and may not reflect other policies or exceptions outside it.\"}",
+        "reasoning_content": "The statement says a requester is permitted to approve their own purchase request. The source says a requester must never approve their own purchase request. This directly contradicts the statement within the same scope. So label: contradicted, atomic true, one proposition matching overall label. Citation exact substring.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 162,
+    "total_tokens": 531,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 177,
+    "accepted_draft_tokens_count": 103,
+    "rejected_draft_tokens_count": 74
+  },
+  "system_fingerprint": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp"
+}

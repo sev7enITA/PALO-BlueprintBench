@@ -95,7 +95,7 @@ def dataset_graph(data,url):
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
             'hasPart':[{'@id':internal_id},{'@id':historical_id}],
-            'version':research_publication.PRESENTATION_REVISION,'relatedLink':[DIAGNOSTICS,SITE+'PALO_BlueprintBench_NextCycle.html'],'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
+            'version':research_publication.PRESENTATION_REVISION,'relatedLink':[DIAGNOSTICS,SITE+'PALO_BlueprintBench_NextCycle.html',SITE+'PALO_BlueprintBench_AgentDiagnostics.html'],'creativeWorkStatus':'Research programme; internal tests; independent validation pending'},
            {'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[
                {'@type':'ListItem','position':1,'name':'PALO Framework','item':SITE+'index.html'},
                {'@type':'ListItem','position':2,'name':'PALO BlueprintBench','item':OVERVIEW}]+([

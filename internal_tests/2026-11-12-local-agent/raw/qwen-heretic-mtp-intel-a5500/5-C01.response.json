@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-43p26k3ohgl9pew011cgh6",
+  "object": "chat.completion",
+  "created": 1794509336,
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"supported\",\"atomic\":true,\"propositions\":[{\"text\":\"No requester is permitted to approve their own purchase request.\",\"label\":\"supported\",\"explanation\":\"The source states the same prohibition in equivalent terms, so the statement is entailed within its scope.\",\"citations\":[{\"source_id\":\"source\",\"quote\":\"A requester must never approve their own purchase request.\"}]}],\"limitations\":\"Assessment is based only on the supplied excerpt and does not establish facts outside it.\"}",
+        "reasoning_content": "The statement says no requester may approve their own purchase request. The source says a requester must never approve their own purchase request. These are equivalent in meaning and scope. So the proposition is supported.\n\nI need to output JSON with label, atomic, propositions, limitations. One proposition, so overall label matches it: \"supported\". Atomic true. Citation exact substring from source unit id \"source\": \"A requester must never approve their own purchase request.\" Limitations can note that only supplied excerpt was used and scope is limited to the provided text.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 208,
+    "total_tokens": 577,
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 255,
+    "accepted_draft_tokens_count": 123,
+    "rejected_draft_tokens_count": 132
+  },
+  "system_fingerprint": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp"
+}

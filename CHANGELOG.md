@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-12: local advisory agent diagnostics
+
+- Record local source-fidelity review observations, model configurations, hardware, output limits, incomplete calls and reproducibility artifacts. These development tests do not establish independent validation or a qualified ranking.
+
 ## 2026-11-12: local validation agent
 
 Add an LM Studio review assistant, source quotation checks, local replay and internal calibration support. Independent review, custody, metric validation and reproduction remain open.

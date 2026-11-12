@@ -1,0 +1,13 @@
+# Local source-fidelity review diagnostics
+
+This development study evaluates model responses to the source-fidelity advisory-agent prompt. It covers two short synthetic prohibition cases and three previously exposed process cases. The process material includes synthetic procurement text and a FEMA excerpt with synthetic case inputs. The FEMA source provenance was recorded by the project but has not been independently verified.
+
+Each configuration records its model, execution device, context, output limit, request, raw response when available, duration and validation status. The validator checks the response shape, labels and whether quoted text occurs in the supplied source. These checks do not establish semantic entailment, independent expert approval, adjudication, external custody, metric validation or independent reproduction. Labels from a previous Qwen response are descriptive references, not expert gold.
+
+The Q6_K Apple M3 Max and Q6_K noMTP Intel / NVIDIA runs contain three observations per control case. The new Heretic MTP run has three per control and one assignment per process case. A 600-second timeout is recorded as a timeout, not a semantic error. Subsequent process cases were submitted separately after the server reported idle. Distinct runs retain their own configurations and must not be treated as paired hardware benchmarks or a qualified leaderboard.
+
+The Gemma raw and schema-guided runs are separate configurations. The post-hoc adaptation reuses two existing Gemma outputs and is not an additional inference call. Adapter rules were designed after seeing those outputs. Cases have different output caps and response-format settings. Record counts do not represent unique calls across the post-hoc replay.
+
+`records.json` records individual observations, counts, original response hashes and paths. The `raw/` directory contains the retained request objects and response bytes where available. Request objects preserve content but exact HTTP wire serialization was not saved for every run. Runtime version, on-device model hashes and GPU offload are not independently verified. Connection addresses and device identifiers have been omitted from the public dataset. No per-call energy, electricity price or local-inference cost has been measured.
+
+Run `python3 tools/build_local_agent_diagnostics.py --check` to verify artifact hashes and reproducibility of the public aggregates. This detects accidental changes; it is not a trusted timestamp or independent custody. The experiment scripts invoked the advisory agent's prompt and validation functions through direct local inference; these results do not demonstrate the full application workflow.
