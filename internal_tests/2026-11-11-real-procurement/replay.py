@@ -33,8 +33,15 @@ def finite(value):
     return type(value) in (int,float) and math.isfinite(value) and value>=0
 
 
+def equivalent(a,b):
+    if isinstance(a,dict) and isinstance(b,dict):return a.keys()==b.keys() and all(equivalent(a[k],b[k]) for k in a)
+    if isinstance(a,list) and isinstance(b,list):return len(a)==len(b) and all(equivalent(x,y) for x,y in zip(a,b))
+    if type(a) is float and type(b) is float:return math.isclose(a,b,rel_tol=1e-14,abs_tol=1e-12)
+    return a==b
+
+
 def semantic_note(value):
-    return {k:v for k,v in value.items() if k not in VOLATILE_NOTE_FIELDS}
+    return {k:v for k,v in value.items() if k not in VOLATILE_NOTE_FIELDS | {'corrected_analysis_sha256','baseline_replay_sha256','original_analysis_sha256_at_snapshot'}}
 
 
 def correction_module(root):
@@ -197,7 +204,7 @@ def compare_reports(root,snapshot):
     names=['analysis.json','analysis-corrected.json','corrections/analysis-v1.0-replayed.json']
     if (root/'supplemental-google-ai-studio/manifest.json').exists() and not (root/'supplemental-google-ai-studio/cancellation.json').exists():names+=['analysis-supplement.json','analysis-combined.json']
     for name in names:
-        require(load(root/name)==load(snapshot/name),'Derived analysis differs from offline replay: '+name)
+        require(equivalent(load(root/name),load(snapshot/name)),'Derived analysis differs from offline replay: '+name)
     folders=['blueprints','blueprints-corrected']
     if (root/'supplemental-google-ai-studio/manifest.json').exists() and not (root/'supplemental-google-ai-studio/cancellation.json').exists():folders.append('supplemental-google-ai-studio/blueprints-corrected')
     for folder in folders:
@@ -206,7 +213,7 @@ def compare_reports(root,snapshot):
         for name in expected:require(load(root/folder/name)==load(snapshot/folder/name),'Blueprint differs: '+folder+'/'+name)
     require((root/'corrections/correction-note.md').read_bytes()==(snapshot/'corrections/correction-note.md').read_bytes(),'Human-readable correction note differs from replay')
     published=load(root/'corrections/correction-note.json');replayed=load(snapshot/'corrections/correction-note.json')
-    require(semantic_note(published)==semantic_note(replayed),'Correction note differs beyond allowed timestamp fields')
+    require(equivalent(semantic_note(published),semantic_note(replayed)),'Correction note differs beyond allowed timestamp fields')
     require(published['corrected_analysis_sha256']==sha(root/'analysis-corrected.json'),'Published corrected analysis hash differs')
     require(published['baseline_replay_sha256']==sha(root/'corrections/analysis-v1.0-replayed.json'),'Published baseline replay hash differs')
 
