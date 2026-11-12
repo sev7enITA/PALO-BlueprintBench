@@ -50,7 +50,7 @@ class ReviewAgentTests(unittest.TestCase):
         out = self.root/'run'
         with mock.patch.object(a, 'doctor', return_value={'model_available': True}), mock.patch.object(a, 'local_request', side_effect=local):
             report = a.run(self.path, out, 512, 10)
-        self.assertEqual([r['status'] for r in report['items']], ['advisory_output_validated']*2)
+        self.assertEqual([r['status'] for r in report['items']], ['advisory_contract_valid']*2)
         self.assertFalse(report['qualified'])
         self.assertEqual(report['human_adjudication'], 'not_observed')
         self.assertNotIn('secret from prompt', json.dumps(requests))
@@ -58,7 +58,7 @@ class ReviewAgentTests(unittest.TestCase):
         self.assertEqual(a.replay(out)['status'], 'local_replay_passed')
         progress = json.loads((out/'progress.json').read_text(encoding='utf-8'))
         self.assertEqual(progress['state'], 'finished')
-        self.assertTrue(all(x['status'] == 'advisory_output_validated' for x in progress['items']))
+        self.assertTrue(all(x['status'] == 'advisory_contract_valid' for x in progress['items']))
         with self.assertRaises(FileExistsError):
             with mock.patch.object(a, 'doctor', return_value={'model_available': True}):
                 a.run(self.path, out, 512, 10)
@@ -80,6 +80,13 @@ class ReviewAgentTests(unittest.TestCase):
         result = json.loads(response['choices'][0]['message']['content'])
         result['limitations'] = 'The full source is unavailable.'
         self.assertEqual(a.validate_output(json.dumps(result), items[0]), result)
+
+    def test_inconsistent_overall_and_proposition_labels_are_rejected(self):
+        _, items = a.load_packet(self.path)
+        result = json.loads(json.loads(envelope(items[0]))['choices'][0]['message']['content'])
+        result['label'] = 'contradicted'
+        with self.assertRaisesRegex(ValueError, 'labels differ'):
+            a.validate_output(json.dumps(result), items[0])
 
     def test_truncated_response_is_retained_as_unassessed(self):
         out = self.root/'truncated'

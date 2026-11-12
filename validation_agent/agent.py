@@ -131,6 +131,13 @@ def validate_output(content, item):
                 raise ValueError('Citation does not match source')
         if claim['label'] in ('supported', 'contradicted') and not citations:
             raise ValueError('Supported or contradicted propositions require a citation')
+    labels = {claim['label'] for claim in propositions}
+    if obj['atomic'] and len(propositions) != 1:
+        raise ValueError('Atomic claim must have exactly one proposition')
+    if len(propositions) == 1 and obj['label'] != propositions[0]['label']:
+        raise ValueError('Overall and proposition labels differ')
+    if len(labels) > 1 and obj['label'] != 'mixed_or_compound':
+        raise ValueError('Differing proposition labels require mixed_or_compound')
     return obj
 
 
@@ -232,7 +239,7 @@ def run(packet, output, max_tokens=4096, timeout=300):
             if not isinstance(content, str):
                 raise ValueError('No message content')
             record['result'] = validate_output(content, item)
-            record['status'] = 'advisory_output_validated'
+            record['status'] = 'advisory_contract_valid'
             record['usage'] = envelope.get('usage')
             record['response_sha256'] = sha(raw_response)
         except (urllib.error.URLError, TimeoutError, socket.timeout, OSError) as exc:
@@ -270,7 +277,7 @@ def run(packet, output, max_tokens=4096, timeout=300):
 
 
 def replay(directory):
-    """Check local captured bytes and recalculate valid results; not independent reproduction."""
+    """Check local bytes and recalculate conforming results; not independent reproduction."""
     directory = Path(directory)
     report = parse((directory/'report.json').read_bytes())
     if report.get('qualified') is not False or report.get('model') != MODEL:
@@ -290,9 +297,9 @@ def replay(directory):
         name = item['review_item']
         if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,79}', name) or name != record['review_item']:
             raise ValueError('Assignment identity mismatch')
-        if record.get('statement') != item['statement'] or record.get('status') not in ('not_run', 'transport_failed', 'invalid_or_incomplete', 'advisory_output_validated'):
+        if record.get('statement') != item['statement'] or record.get('status') not in ('not_run', 'transport_failed', 'invalid_or_incomplete', 'advisory_contract_valid'):
             raise ValueError('Assignment content or status mismatch')
-        if record['status'] != 'advisory_output_validated' and record.get('result') is not None:
+        if record['status'] != 'advisory_contract_valid' and record.get('result') is not None:
             raise ValueError('Unassessed item has a result')
         request_path = directory/(name+'.request.json')
         if record['status'] == 'not_run':
@@ -312,7 +319,7 @@ def replay(directory):
                 raise ValueError('Response digest mismatch')
         elif response_path.exists():
             raise ValueError('Unexpected response file')
-        if record['status'] == 'advisory_output_validated':
+        if record['status'] == 'advisory_contract_valid':
             if not record.get('response_sha256'):
                 raise ValueError('Missing response digest')
             envelope = parse(response)
@@ -399,7 +406,7 @@ def main():
             print(json.dumps(result, indent=2))
             return 2 if result['counts']['unassessed_altered'] or result['counts']['unassessed_faithful'] else 0
         result = run(args.packet, args.out, args.max_tokens, args.timeout)
-        count = sum(item['status'] == 'advisory_output_validated' for item in result['items'])
+        count = sum(item['status'] == 'advisory_contract_valid' for item in result['items'])
         print(json.dumps({'report': str(args.out/'report.html'), 'valid_outputs': count, 'assigned': len(result['items']), 'qualified': False}))
         return 0 if count == len(result['items']) else 2
     except (ValueError, OSError, urllib.error.URLError, KeyError, TypeError, IndexError) as exc:

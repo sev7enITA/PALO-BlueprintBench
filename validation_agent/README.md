@@ -26,7 +26,7 @@ The `--packet` JSON format is illustrated by `demo-packet.json`. Each item has `
 
 `calibrate` runs the 18 existing seeded examples. To run an explicitly selected internal subset, use `--ids C01,C09,C13`. The draft answer key is read only after inference. The comparison reports detected changes, misses, false alarms, correct controls and unresolved items. Rates use determinate items only and expose unassessed counts. These synthetic examples have one exposed family and assistant-draft labels; neither these rates nor their replay validate the benchmark metric.
 
-`replay` checks captured request and response digests and recalculates the structural checks without model calls. It detects accidental changes in the local files; the same person can alter both files and hashes. It is not independent reproduction or a trusted timestamp. Keep the original packet separately if later proof of its contents is required; the agent records only its hash and a filtered visible copy.
+`replay` checks captured request and response digests and reapplies the structural checks to conforming results without model calls. Other captured responses remain unassessed. It detects accidental changes in the local files; the same person can alter both files and hashes. It is not independent reproduction or a trusted timestamp. Keep the original packet separately if later proof of its contents is required; the agent records only its hash and a filtered visible copy.
 
 ## Governance and limits
 
