@@ -88,3 +88,11 @@ jobs:
       - name: Verify real-document replay on Linux and macOS
         if: runner.os != 'Windows'
         run: python internal_tests/2026-11-11-real-procurement/replay.py --check
+
+      - name: Verify workflow connectivity diagnostics
+        run: |
+          python -m unittest discover -s tools/workflow_connectivity -p 'test*.py'
+          python tools/workflow_connectivity/check.py --check
+
+      - name: Verify assigned study calls
+        run: python tools/study_accountability.py --check

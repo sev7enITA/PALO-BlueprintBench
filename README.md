@@ -43,6 +43,8 @@ The project is an **open research pilot**. The executable evaluator, historical 
 
 [Specification Generation evidence release](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-12-real-document.1): 27 assigned calls, 14 complete responses, five incomplete or unavailable and eight not dispatched. Labels are assistant drafts; independent qualification is pending.
 
+The [Specification Generation study](docs/study-closure-2026-11-12.md) is closed incomplete. Its [workflow connectivity diagnostic](docs/workflow-connectivity-diagnostic.json) is advisory; the [source-silence rubric](docs/source-silence-rubric-draft.md) awaits external approval.
+
 ## Current internal tests and dashboard
 
 The published catalogue contains **18 distinct model IDs and 28 cohort/configuration records**. Internal procurement tests have **324 assigned slots, 306 dispatched requests, 299 complete responses, 7 failed or incomplete responses and 18 pre-call-blocked assignments**. These are short synthetic tests with assistant-draft labels. Historical adapter diagnostics remain separate. No independent qualification or PALO Blueprint Index is assigned.

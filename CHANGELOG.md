@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-12: study closure and workflow diagnostics
+
+Declare Specification Generation closed incomplete and preserve the 27 assigned-call outcomes. Add a post-hoc connectivity diagnostic, a draft source-silence rubric for external review, and explicit presentation revision metadata. Existing evaluator release bytes and historic scores remain unchanged.
+
 ## 2026-11-11: presentation and schema revision 2026-11-11.5
 
 - Align overview, dashboard and six-scenario JSON-LD with the frozen internal observations and immutable GitHub evidence release.

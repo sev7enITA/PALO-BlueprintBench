@@ -24,7 +24,7 @@ def outputs():
     verified=json.loads((RELEASE_RESULTS/'toolkit-verification.json').read_text(encoding='utf-8'))
     current_status={
         'presentation_revision':PRESENTATION_REVISION, 'observation_revision':'2026-11-11.4',
-        'current_evidence_release':'study-2026-11-11-six-scenario.1',
+        'current_evidence_release':'study-2026-11-12-real-document.1', 'current_studies': RELEASE['current_studies'],
         'as_of':RELEASE['release_date'], 'release':RELEASE['release_tag'],
         'content_revision':RELEASE['content_revision'], 'tool_version':RELEASE['evaluator_version'],
         'evidence_contract':RELEASE['evidence_contract'], 'test_count':verified['tests_passed'],
@@ -51,7 +51,7 @@ def outputs():
         p=ROOT/'evaluator'/n;toolkit['palo-blueprintbench/'+n]=out.get(p,p.read_bytes())
     toolkit['palo-blueprintbench/evaluator-contract.md']=(ROOT/'docs/evaluator-contract.md').read_bytes()
     toolkit['palo-blueprintbench/evaluator-0.3-draft.md']=(ROOT/'docs/evaluator-0.3-draft.md').read_bytes()
-    toolkit['palo-blueprintbench/RELEASE.json']=(ROOT/'release.json').read_bytes()
+    toolkit['palo-blueprintbench/RELEASE.json']=(ROOT/'evaluator/RELEASE-v0.3.0-internal.1.json').read_bytes()
     out[DL/'toolkit.zip']=archive(toolkit)
     evidence=ROOT/'evidence/development-2026-11-10'
     out[DL/'development-evidence.zip']=archive({'development-evidence/'+p.relative_to(evidence).as_posix():p.read_bytes() for p in evidence.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'})
@@ -65,7 +65,7 @@ def outputs():
         sources[name] = out.get(ROOT/name,(ROOT/name).read_bytes())
     sources.update({p.relative_to(ROOT).as_posix():data for p,data in out.items()})
     sources = {name: data for name, data in sources.items() if '/presentation/' not in name or name.endswith('/.htaccess')}
-    manifest = {'presentation_revision':PRESENTATION_REVISION,'observation_revision':'2026-11-11.4','current_evidence_release':'study-2026-11-11-six-scenario.1','release_tag':RELEASE['release_tag'],'base_release_tag':'v0.3.0-pilot.1','content_revision':RELEASE['content_revision'],'leaderboard_revision':RELEASE['leaderboard_revision'],'scope':'Selected public documentation and toolkit files only; original evidence is covered by archive manifests. Historical tags and packages retain their original bytes. Internal presentation and withdrawn testing badges are excluded. Not a complete repository manifest.','evaluator_version':RELEASE['evaluator_version'],'source_dataset_revision':RELEASE['frozen_dataset_revision'],'source_dataset_sha256':RELEASE['source_dataset_sha256'],'explorer_version':'0.3.0','qualification':'internal tests only; no independent human approval or qualified held-out entries','known_vulnerable_release':RELEASE['known_vulnerable_release'],'files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
+    manifest = {'presentation_revision':PRESENTATION_REVISION,'observation_revision':'2026-11-11.4','current_evidence_release':'study-2026-11-12-real-document.1', 'current_studies': RELEASE['current_studies'],'release_tag':RELEASE['release_tag'],'base_release_tag':'v0.3.0-pilot.1','content_revision':RELEASE['content_revision'],'leaderboard_revision':RELEASE['leaderboard_revision'],'scope':'Selected public documentation and toolkit files only; original evidence is covered by archive manifests. Historical tags and packages retain their original bytes. Internal presentation and withdrawn testing badges are excluded. Not a complete repository manifest.','evaluator_version':RELEASE['evaluator_version'],'source_dataset_revision':RELEASE['frozen_dataset_revision'],'source_dataset_sha256':RELEASE['source_dataset_sha256'],'explorer_version':'0.3.0','qualification':'internal tests only; no independent human approval or qualified held-out entries','known_vulnerable_release':RELEASE['known_vulnerable_release'],'files':{n:hashlib.sha256(data).hexdigest() for n,data in sorted(sources.items())}}
     out[DL/'release-manifest.json']=(json.dumps(manifest,indent=2)+'\n').encode('utf-8')
     return out
 
