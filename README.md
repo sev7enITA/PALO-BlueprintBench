@@ -25,6 +25,8 @@
 
 **PALO BlueprintBench evaluates specification fidelity:** the preservation of business obligations, permissions, exceptions and responsibilities in AI-generated specifications. Human correction effort is a proposed measure and has not yet been validated.
 
+The [local validation agent](validation_agent/README.md) prepares model-assisted reviews and calibration diagnostics with LM Studio. Its outputs are advisory and do not establish independent expert approval or benchmark qualification.
+
 The project is an **open research pilot**. The executable evaluator, historical diagnostic evidence and contribution process are available now. The first proposed independent study focuses on procurement. **Qualified held-out results: 0. No PALO Blueprint Index score is assigned.**
 
 | Inspect | Reproduce | Participate |
