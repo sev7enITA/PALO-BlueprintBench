@@ -38,7 +38,7 @@ class ReplayTests(unittest.TestCase):
             folder=Path(directory)
             footer='\n\n(model: fixture/model, generation id: gen-fixture, input tokens: 3, output tokens: 2, reasoning tokens: 1)'
             write(folder/'mcp-response.json',{'content':[{'type':'text','text':'{}'+footer}]})
-            (folder/'output.txt').write_text('{}',encoding='utf-8');(folder/'mcp-accounting-footer.txt').write_text(footer,encoding='utf-8')
+            (folder/'output.txt').write_text('{}',encoding='utf-8');(folder/'mcp-accounting-footer.txt').write_bytes(footer.encode('utf-8'))
             record={'model':'fixture/model','provider_request_id':'gen-fixture','output_sha256':replay.sha(folder/'output.txt'),'mcp_response_sha256':replay.sha(folder/'mcp-response.json')}
             replay.verify_footer(folder,record)
             (folder/'output.txt').write_text('{ }',encoding='utf-8');record['output_sha256']=replay.sha(folder/'output.txt')
