@@ -10,7 +10,7 @@ The included packet contains P002, P013, P036 and a Davis-Bacon scenario. The fi
 2. Double-click **Start Review.command**. A Terminal window shows progress; the report opens when the run finishes. Results are stored in `Documents/PALO-BlueprintBench-Agent/reviews`.
 3. Inspect `report.html`, `report.json`, the visible packet and retained request and response files. A format-checked response is still an advisory model interpretation.
 
-A normal run requests reasoning and permits up to 4,096 output tokens per item. Duration depends on the hardware and model; multiple minutes per item are possible. The agent does not retry a timeout because the server may still be processing the request. `progress.json` identifies the last in-flight request if a process is interrupted. The user can choose a new output directory to start another run; it does not resume an interrupted run automatically.
+A normal run requests reasoning, asks the model to keep deliberation focused and brief, and permits up to 4,096 output tokens per item. In one internal Davis-Bacon test this instruction yielded a complete response after an earlier truncation; it does not establish improved accuracy or eliminate truncation. Duration depends on hardware and model; multiple minutes per item are possible. The agent does not retry a timeout because the server may still be processing the request. `progress.json` identifies the last in-flight request if a process is interrupted. The user can choose a new output directory to start another run; it does not resume an interrupted run automatically.
 
 ## Commands
 

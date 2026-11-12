@@ -55,7 +55,9 @@ class ReviewAgentTests(unittest.TestCase):
         self.assertEqual(report['human_adjudication'], 'not_observed')
         self.assertNotIn('secret from prompt', json.dumps(requests))
         self.assertNotIn('expected_label', json.dumps(requests))
-        self.assertEqual(a.replay(out)['status'], 'local_replay_passed')
+        replay = a.replay(out)
+        self.assertEqual(replay['status'], 'local_replay_passed')
+        self.assertEqual(replay['unassessed'], 0)
         progress = json.loads((out/'progress.json').read_text(encoding='utf-8'))
         self.assertEqual(progress['state'], 'finished')
         self.assertTrue(all(x['status'] == 'advisory_contract_valid' for x in progress['items']))
@@ -104,7 +106,7 @@ class ReviewAgentTests(unittest.TestCase):
             result = a.run(self.path, out, 512, 10)
         self.assertEqual(call.call_count, 1)
         self.assertEqual([r['status'] for r in result['items']], ['transport_failed', 'not_run'])
-        self.assertEqual(a.replay(out)['status'], 'local_replay_passed')
+        self.assertEqual(a.replay(out)['unassessed'], 2)
 
     def test_invalid_model_identity_never_counts_as_success(self):
         out = self.root/'wrong-model'
