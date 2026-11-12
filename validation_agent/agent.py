@@ -339,6 +339,15 @@ def replay(directory):
             'limitation': 'Local hashes are editable and do not establish an external timestamp or independent custody.'}
 
 
+def calibration_page(result):
+    """Render internal diagnostic counts without presenting them as validated scores."""
+    c = result['counts']
+    def rate(value):
+        return 'Unavailable' if value is None else f'{value:.0%}'
+    esc = lambda value: html.escape(str(value))
+    return ('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Calibration diagnostics</title><style>body{font:16px system-ui;background:#101b2c;color:#edf3f9;margin:auto;max-width:900px;padding:24px;line-height:1.55}section{border:1px solid #506784;border-radius:10px;padding:20px;margin:16px 0}table{border-collapse:collapse;width:100%}td,th{text-align:left;border-bottom:1px solid #506784;padding:10px}a{color:#90d9ef}strong{color:#9ce4d4}</style><h1>Calibration diagnostics</h1><p>Internal development test against assistant-draft labels. This is not independent validation or a model ranking.</p><section><h2>Assigned items</h2><p>''' + esc(result['items_assigned']) + ''' items: ''' + esc(', '.join(result['ids'])) + '''</p><table><thead><tr><th>Outcome</th><th>Count</th></tr></thead><tbody>''' + ''.join('<tr><td>' + esc(label) + '</td><td>' + esc(c[key]) + '</td></tr>' for key,label in [('true_positive','Seeded defects detected'),('false_negative','Seeded defects missed'),('false_positive','False alarms on faithful controls'),('true_negative','Faithful controls accepted'),('unassessed_altered','Unassessed seeded defects'),('unassessed_faithful','Unassessed faithful controls')]) + '''</tbody></table><p>Detection among determinate defects: <strong>''' + rate(result['detection_rate_determinate']) + '''</strong>. False alarms among determinate controls: <strong>''' + rate(result['false_alarm_rate_determinate']) + '''</strong>.</p></section><section><h2>Scope</h2><ul>''' + ''.join('<li>' + esc(x) + '</li>' for x in result['limits']) + '''</ul><p><a href="report.html">Review each item</a> · <a href="calibration.json">Diagnostic data</a></p></section></html>''').encode('utf-8')
+
+
 def calibration(output, ids, max_tokens, timeout):
     base = ROOT/'internal_tests/2026-11-11-calibration'
     source = parse((base/'items.json').read_bytes())
@@ -381,6 +390,7 @@ def calibration(output, ids, max_tokens, timeout):
                          'Unknown, unsupported and compound labels remain unassessed, not converted into successes or failures.',
                          'A model review compared with assistant-draft labels does not validate a benchmark metric.']}
     write(Path(output)/'calibration.json', jsonbytes(result))
+    write(Path(output)/'calibration.html', calibration_page(result))
     return result
 
 
