@@ -165,6 +165,9 @@ class ReviewAgentTests(unittest.TestCase):
         self.assertEqual(result['counts']['true_positive'], 1)
         self.assertEqual(result['counts']['unassessed_altered'], 1)
         self.assertFalse(result['qualified'])
+        page = (self.root/'cal'/'calibration.html').read_text(encoding='utf-8')
+        self.assertIn('Unassessed seeded defects', page)
+        self.assertIn('not independent validation', page)
 
 if __name__ == '__main__':
     unittest.main()
