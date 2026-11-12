@@ -67,7 +67,7 @@ def render(root):
         names = ', '.join(next(r['name'] for r in rows if r['id'] == key) for key in item['references'])
         html += f'<h3>{escape(item["title"])}</h3><p>{escape(item["action"])}</p><p class="method-note">References: {escape(names)}. Proposed work; not completed qualification.</p>'
     html += '</details>'
-    for group, label in [(added, f'Explore {len(added)} added benchmark families'), ([r for r in rows if r not in added], 'Review the original 20 references')]:
+    for group, label in [(added, 'Additional Benchmark Families'), ([r for r in rows if r not in added], 'Original Reference Set')]:
         html += f'<details class="reference-details"><summary>{label}</summary><div class="table-scroll" role="region" aria-label="{label}" tabindex="0"><table class="reference-table"><caption>Documented scope, visibility signals and PALO transfer assessment. Checked {checked}.</caption><thead><tr><th scope="col">Reference and version</th><th scope="col">Target and evidence</th><th scope="col">Visibility signal</th><th scope="col">PALO difference and caution</th><th scope="col">Practice to adopt</th></tr></thead><tbody>'
         for r in group:
             html += f'<tr data-reference="{escape(r["id"], quote=True)}"><th scope="row"><a href="{escape(r["source_url"], quote=True)}">{escape(r["name"])}</a><small>{escape(r["kind"])}</small><p>{escape(r["version_scope"])}</p></th><td>{escape(r["focus"])}<p>{escape(r["evidence"])}</p><small>{escape(r["source_status"])}</small></td><td>{visibility_html(r)}</td><td>{escape(r["palo_difference"])}<p>{escape(r["caution"])}</p></td><td>{escape(r["lesson"])}<small>Transfer: {escape(r["palo_transfer"])}</small></td></tr>'

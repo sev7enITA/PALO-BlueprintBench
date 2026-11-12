@@ -12,7 +12,7 @@ The historical adapter cohort contains ten configurations on three passages, 4,9
 
 The qualified-results view remains empty until external custody, independent domain annotations, measure validation and independent reproduction are established. A model consultation does not satisfy those gates.
 
-## Read the counts
+## Result Counts
 
 The all-model catalogue is alphabetical by default and exposes internal and historical configurations together with their cohort. It shows distinct model counts separately from configuration counts. Within the procurement view, users can sort either direction by name, provider, label agreement, disagreements, missing statements, completed calls, known charges and median observed time. This is descriptive sorting, not a qualified rank or a claim of model superiority. No position numbers or winner badges are assigned. Unknown costs and unavailable timing remain last in either direction. Numeric and status filters, selected-only comparison and URL state are retained in CSV exports. For verification, match counts, disagreement counts and missing classifications sum to the fixed assigned denominator. Conditional agreement is matches divided by classified statements; coverage is classified divided by assigned statements. An end-to-end match share uses matches divided by assigned statements and must not be labelled semantic accuracy. Missing data never disappear from the evidence table or exports. An HTTP failure is an availability observation, not a semantic error. Case and dimension filters preserve the assigned opportunities; observations are not pooled across cohorts.
 
@@ -22,7 +22,7 @@ Costs distinguish known provider charges, unknown charges and conservative reser
 
 Latency is descriptive. The internal cohort uses all dispatched requests, including failures, but excludes pre-call blocks with no measured duration; the historical median includes successful calls only. The original baseline ran serially; extension calls use up to four concurrent workers. Different definitions, scheduling, settings, tasks and unseeded provider defaults prevent a controlled latency ranking. Supported reasoning and output caps are disclosed per configuration, including non-reasoning Schematron endpoints with an 8,192-token ceiling. The same high label is not equal compute.
 
-## Inspect the evidence
+## Evidence Records
 
 Source-indexed translations are shown beside their source rules, with verbatim-copy flags. This task permits close restatement, and its many exact copies limit what it measures. The original baseline has 27 draft blueprint exports requiring business approval; its draft evaluator replay was performed after inference and is not Workbench application end-to-end validation. Extension translations link to raw source-indexed outputs and remain unreviewed model drafts. They do not inherit baseline assistant reviews, draft exports or semantic acceptance.
 

@@ -20,12 +20,12 @@ const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new
    await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(output,filename.replace('.html','-desktop.png'))});
    if(filename==='PALO_BlueprintBench.html'){
     assert.equal(await page.locator('table').count(),0);assert.equal(await page.locator('.bench-test-cards article').count(),3);
-    assert((await page.locator('main').innerText()).includes('What the research measures'));
+    assert((await page.locator('main').innerText()).includes('Evaluation Dimensions'));
     await page.setViewportSize({width:375,height:1000});await page.screenshot({path:path.join(output,'overview-mobile.png')});
    }
    if(filename==='PALO_BlueprintBench_Method.html'){
     assert.equal(await page.locator('[data-reference]').count(),35);
-    await page.locator('#references summary').filter({hasText:'Explore 15'}).click();
+    await page.locator('#references summary').filter({hasText:'Additional Benchmark Families'}).click();
     assert.equal(await page.locator('[data-reference]:visible').count(),15);
     await page.setViewportSize({width:375,height:1000});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Open reference table causes overflow');
    }
@@ -42,12 +42,12 @@ const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new
    }
    if(filename==='PALO_BlueprintBench_NextCycle.html'){
     await page.waitForSelector('#request-table tbody tr');assert.equal(await page.locator('#request-table tbody tr').count(),60);
-    assert((await page.locator('h1').innerText()).includes('synthetic test'));
+    assert((await page.locator('h1').innerText()).includes('Process Interpretation'));
     assert((await page.locator('.bench-study-scope').innerText()).includes('OpenRouter API'));
    }
   }
   assert.deepEqual(errors,[]);
-  const receipt={status:'passed',presentation_revision:'2026-11-11.6',pages,real_document_page_present:pages.some(x=>x.includes('Generation')),widths:[320,375,768,1440],navigation:nav,source_checks:['3fictionaltexts separate from3adapterexcerpts','6fictionalprocesses','3publicdocuments with200pages'],frozen_data_rewritten:false,js_errors:errors,screenshots:output};
+  const receipt={status:'passed',presentation_revision:'2026-11-11.7',pages,real_document_page_present:pages.some(x=>x.includes('Generation')),widths:[320,375,768,1440],navigation:nav,source_checks:['3fictionaltexts separate from3adapterexcerpts','6fictionalprocesses','3publicdocuments with200pages'],frozen_data_rewritten:false,js_errors:errors,screenshots:output};
   fs.writeFileSync(path.join(output,'verification.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
  }finally{await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});

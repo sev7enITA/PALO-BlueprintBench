@@ -13,6 +13,6 @@ All 13 missing complete responses remain visible. Google produced no complete ca
 
 The corrective quote checker v1.1 joins an ASCII hyphenated PDF line wrap without deleting the hyphen. The original checker and analyses remain available. The assistant-draft key remains frozen despite the Davis-Bacon ambiguity and the P002/P013/P036 adjudication packets. None of these observations establishes independent validation, ranking or a PALO Blueprint Index.
 
-[Published evidence release](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-12-real-document.1) · [Recorded schedule and receipts](../internal_tests/2026-11-11-real-procurement/) · [Connectivity diagnostic](workflow-connectivity-diagnostic.json) · [Draft source-silence rubric](source-silence-rubric-draft.md)
+[Published evidence release](https://github.com/sev7enITA/PALO-BlueprintBench/releases/tag/study-2026-11-12-real-document.1) · [Recorded schedule and receipts](../internal_tests/2026-11-11-real-procurement/) · [Connectivity diagnostic](workflow-connectivity-diagnostic.json) · [Draft annotation guidelines](annotation-guidelines-draft.md)
 
 The [assignment accountability register](study-accountability.json) checks the five current internal study schedules: 411 assigned records are present and each exception has a recorded reason. This verifies record accounting, not the accuracy of the reason or successful completion. The historical adapter archive is reported separately; its original HTTP bytes and complete ledger are unavailable.

@@ -28,7 +28,7 @@ class SiteArchitectureTests(unittest.TestCase):
         self.assertNotIn('leaderboard.js',text)
         self.assertNotIn('blueprintbench.js',text)
         self.assertNotIn('data-reference=',text)
-        for name in ['Policy Interpretation','Process Interpretation','Specification Generation','What the research measures','How this supports system selection']:
+        for name in ['Policy Interpretation','Process Interpretation','Specification Generation','Evaluation Dimensions','Applications']:
             self.assertIn(name,text)
         self.assertNotIn('Next-cycle',text)
         self.assertFalse(any(n.get('@type')=='Dataset' for n in site.page_graph('overview')['@graph']))

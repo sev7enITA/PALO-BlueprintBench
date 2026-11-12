@@ -41,8 +41,8 @@ class ReferenceCatalogueTests(unittest.TestCase):
         rows = list(csv.DictReader(io.StringIO(exported.decode('utf-8'))))
         self.assertEqual(len(rows), 35)
         self.assertEqual(html.count('data-reference='), 35)
-        self.assertIn('Explore 15 added benchmark families', html)
-        self.assertIn('Review the original 20 references', html)
+        self.assertIn('Additional Benchmark Families', html)
+        self.assertIn('Original Reference Set', html)
         self.assertNotIn('href="downloads/blueprintbench/benchmark-references.md"', html)
         self.assertTrue(all(row['repo_stars'] == '' for row in rows if not row['repo_url']))
         for text in (md.decode('utf-8'), html):

@@ -1,8 +1,12 @@
 # Changelog
 
+## 2026-11-12: terminology and annotation guidelines
+
+Standardise benchmark section headings and annotation terminology. Retain the existing evidence, outcomes, review status and evaluator release.
+
 ## 2026-11-12: study closure and workflow diagnostics
 
-Declare Specification Generation closed incomplete and preserve the 27 assigned-call outcomes. Add a post-hoc connectivity diagnostic, a draft source-silence rubric for external review, and explicit presentation revision metadata. Existing evaluator release bytes and historic scores remain unchanged.
+Declare Specification Generation closed incomplete and preserve the 27 assigned-call outcomes. Add a post-hoc connectivity diagnostic, a draft annotation guidelines for external review, and explicit presentation revision metadata. Existing evaluator release bytes and historic scores remain unchanged.
 
 ## 2026-11-11: presentation and schema revision 2026-11-11.5
 

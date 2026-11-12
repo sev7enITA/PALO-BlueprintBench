@@ -23,7 +23,7 @@ Use two blinded domain annotators and adjudication before inspecting evaluated o
 
 Use a non-compensatory accepted-outcome contract: zero defined critical violations, required coverage/quality thresholds and evidence gates, fixed before the evaluation. Preserve reported transport/completion separately. No composite PBI formula or thresholds are adopted here.
 
-## Validate the measurement
+## Measurement Validation
 
 Construct a separately labelled calibration set containing source-verified semantic mutations: may/must, negation, owner, threshold, exception and condition changes. Include unchanged and valid-alternative controls. Keep mutation labels hidden from annotators. Estimate detection, false alarms and disagreement by defect type and source family. Do not use the same mutations to tune and then independently validate the scorer. Publicly release rights-cleared calibration or retired material; retain live evaluation keys under agreed external custody.
 
