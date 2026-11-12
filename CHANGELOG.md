@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-12: validation preparation
+
+Correct development-study scope metadata and add draft protocols, internal measurement diagnostics, representation-invariance checks and a development-only paired family-cluster bootstrap. External qualification remains pending.
+
 ## 2026-11-12: terminology and annotation guidelines
 
 Standardise benchmark section headings and annotation terminology. Retain the existing evidence, outcomes, review status and evaluator release.

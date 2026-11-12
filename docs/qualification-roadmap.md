@@ -58,3 +58,5 @@ Publish descriptive bands only when their assumptions and coverage are supportab
 The evidence and reproducibility emphasis is informed by [BetterBench](https://arxiv.org/abs/2411.12990). Dataset markup follows [Schema.org Dataset](https://schema.org/Dataset) and [Google's dataset guidance](https://developers.google.com/search/docs/appearance/structured-data/dataset). These references do not endorse PALO, validate its metric or guarantee search visibility.
 
 The [closure record](study-closure-2026-11-12.md) preserves all assigned calls and missingness. The [annotation guidelines](annotation-guidelines-draft.md) is a draft pending external panel approval; existing gold has not been relabelled.
+
+The [validation status](validation-status-2026-11-12.md), [external review requirements](external-review-requirements.md) and [measurement validation protocol](measurement-validation-protocol-draft.md) document outstanding gates and development-only tooling.

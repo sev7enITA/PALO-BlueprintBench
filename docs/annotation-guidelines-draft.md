@@ -17,7 +17,7 @@ The review must record evidence references, supporting and opposing readings, wh
 
 - **P002:** review whether the stated EUR 10 rule is exhaustive over supplier categories and whether the claimed increase creates an incompatible threshold in the same scope.
 - **P013:** review whether a rule about threshold aggregation entails an automatic merge of requests, or leaves the operational mechanism unspecified.
-- **P036:** evaluate the exact proposition and source scope from the reviewer packet; cite the basis for any asserted opposite rather than inferring it from missing evidence.
+- **P036:** the candidate asserts that an analyst must request corrections through a supplier portal. The supplied source permits a request without obliging it and does not specify a portal. Review the obligation and the channel as separate propositions; decide how any compound statement is classified only after the panel approves a compound-statement rule.
 - **Davis-Bacon:** the post-output review identified ambiguity in `contract_category=other`. An uncharacterised category cannot be treated as known non-construction without an explicit domain definition. Applicability also depends on the supplied facts and programme scope.
 
 These are questions for adjudication, not replacement labels. See [the first-pass blinded-format packet](../study/next-cycle/adjudication/reviewer-packet.json) and [the scoped internal Davis-Bacon review](../internal_tests/2026-11-11-real-procurement/review/post-output-disagreements-r1.md). Public exposure prevents a guarantee of blinding.

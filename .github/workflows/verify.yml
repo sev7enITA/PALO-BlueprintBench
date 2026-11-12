@@ -96,3 +96,10 @@ jobs:
 
       - name: Verify assigned study calls
         run: python tools/study_accountability.py --check
+
+      - name: Verify measurement diagnostics and paired bootstrap
+        run: |
+          python tools/build_measurement_diagnostics.py --check
+          python -m unittest discover -s tools -p 'test_measurement_diagnostics.py'
+          python -m unittest discover -s tools -p 'test_paired_cluster_bootstrap.py'
+          python -m unittest discover -s tools -p 'test_qualification_consistency.py'

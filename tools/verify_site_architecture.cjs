@@ -47,7 +47,7 @@ const server=http.createServer((req,res)=>{const pathname=decodeURIComponent(new
    }
   }
   assert.deepEqual(errors,[]);
-  const receipt={status:'passed',presentation_revision:'2026-11-11.7',pages,real_document_page_present:pages.some(x=>x.includes('Generation')),widths:[320,375,768,1440],navigation:nav,source_checks:['3fictionaltexts separate from3adapterexcerpts','6fictionalprocesses','3publicdocuments with200pages'],frozen_data_rewritten:false,js_errors:errors,screenshots:output};
+  const receipt={status:'passed',presentation_revision:'2026-11-11.8',pages,real_document_page_present:pages.some(x=>x.includes('Generation')),widths:[320,375,768,1440],navigation:nav,source_checks:['3fictionaltexts separate from3adapterexcerpts','6fictionalprocesses','3publicdocuments with200pages'],frozen_data_rewritten:false,js_errors:errors,screenshots:output};
   fs.writeFileSync(path.join(output,'verification.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
  }finally{await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});

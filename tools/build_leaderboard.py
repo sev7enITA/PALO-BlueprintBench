@@ -91,7 +91,7 @@ def dataset_graph(data,url):
     graph=[{'@type':'Person','@id':person,'name':'Fabrizio Degni','url':person},
            {'@type':'WebSite','@id':SITE+'#website','name':'PALO Framework','url':SITE,'publisher':{'@id':person}},
            {'@type':'CollectionPage','@id':url+'#webpage','url':url,'name':'Policy Interpretation | PALO BlueprintBench' if url==BOARD else 'PALO BlueprintBench | Results and Method',
-            'image':{'@id':OVERVIEW+'#benchmark-logo'},'description':page_description,'inLanguage':'en','dateModified':data['as_of'],'isAccessibleForFree':True,
+            'image':{'@id':OVERVIEW+'#benchmark-logo'},'description':page_description,'inLanguage':'en','dateModified':'2026-11-12','isAccessibleForFree':True,
             'isPartOf':{'@id':SITE+'#website'},'author':{'@id':person},'breadcrumb':{'@id':url+'#breadcrumb'},
             'mainEntity':[{'@id':internal_id},{'@id':historical_id}],
             'hasPart':[{'@id':internal_id},{'@id':historical_id}],
