@@ -67,3 +67,5 @@ Only `first_documented_at` and `updated_at` in the correction-note JSON are excl
 ## Stopped collection
 
 The Google AI Studio supplement was cancelled before dispatch. Its nine prepared requests were not sent and are excluded from the 27-assignment results. Collection of the original schedule was stopped at the user's request. One in-flight request has unknown final cost and no captured response; its full pre-call reserve is retained. Eight assignments were not dispatched.
+
+The complete offline replay is verified on Linux and macOS. Windows replay is not yet supported: cross-platform derived analysis differs, although the isolated contract and replay unit tests run on Windows.

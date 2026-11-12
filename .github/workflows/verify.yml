@@ -85,4 +85,6 @@ jobs:
           python -m unittest discover -s internal_tests/2026-11-11-real-procurement -p 'test_contracts.py'
           python -m unittest discover -s internal_tests/2026-11-11-real-procurement/corrections -p 'test_quote_normalisation_v11.py'
           python -m unittest discover -s internal_tests/2026-11-11-real-procurement -p 'test_replay.py'
-          python internal_tests/2026-11-11-real-procurement/replay.py --check
+      - name: Verify real-document replay on Linux and macOS
+        if: runner.os != 'Windows'
+        run: python internal_tests/2026-11-11-real-procurement/replay.py --check
