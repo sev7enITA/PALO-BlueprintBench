@@ -1,6 +1,6 @@
 # Local Validation Agent
 
-The agent prepares advisory reviews for PALO BlueprintBench using LM Studio at `http://127.0.0.1:1234` and `qwen3.8-27b-uncensored`. It processes each assigned item separately, retains requests and response bytes, checks the output format and verifies that cited excerpts occur in the supplied source. It cannot assess the truth of a citation, authenticate a human reviewer or establish source completeness.
+The agent prepares advisory reviews for PALO BlueprintBench using LM Studio. The default is `http://127.0.0.1:1234` with `qwen3.8-27b-uncensored`; an explicitly enabled private LAN endpoint and an exact model identifier can also be selected. It processes each assigned item separately, retains requests and response bytes, checks the output format and verifies that cited excerpts occur in the supplied source. It cannot assess the truth of a citation, authenticate a human reviewer or establish source completeness.
 
 The included packet contains P002, P013, P036 and a Davis-Bacon scenario. The first three are synthetic, publicly exposed development cases. The fourth uses a recorded FEMA excerpt and a synthetic scenario input; `CASE_INPUT` is an assumption for the scenario, not a FEMA quotation. Each is a review question, not a new answer key. The packet does not include the existing expected labels or model identities. Source provenance is recorded but not independently verified.
 
@@ -21,7 +21,11 @@ python3 validation_agent/agent.py review --out /path/to/new-directory
 python3 validation_agent/agent.py review --packet /path/to/packet.json --out /path/to/new-directory
 python3 validation_agent/agent.py replay /path/to/run-directory
 python3 validation_agent/agent.py calibrate --out /path/to/new-directory
+python3 validation_agent/agent.py doctor --endpoint http://192.168.1.10:1234 --model model-id --allow-lan
+python3 validation_agent/agent.py calibrate --endpoint http://192.168.1.10:1234 --model model-id --allow-lan --ids C01,C13 --out /path/to/new-directory
 ```
+
+LAN mode sends the packet text over HTTP to the specified server. Use it only on a trusted network with an authorised server and materials. Only numeric IPv4 loopback and, with `--allow-lan`, RFC 1918 addresses are accepted; proxies and redirects are disabled. LM Studio may route to a linked device or load an unpinned revision: the reported model name and server address do not prove the execution device, quantisation or offload. Verify placement separately before comparing hardware. Reports contain the endpoint address and must be reviewed before publication. `doctor` checks the model listing, not successful loading or inference.
 
 The `--packet` JSON format is illustrated by `demo-packet.json`. Each item has `review_item`, `statement` and a list of source units containing `id` and `text`. Only these fields are sent for inference; expected labels, source provenance and other fields are not passed to the model. The source hash and any `source_provenance` mapping are recorded locally. Supply the complete relevant source scope and version; the agent cannot establish that excerpts are complete. One item is limited to 18,000 characters, but this is not a token count or a guarantee that a particular LM Studio context is sufficient. Incomplete responses remain invalid.
 
@@ -32,7 +36,7 @@ The `--packet` JSON format is illustrated by `demo-packet.json`. Each item has `
 ## Governance and limits
 
 - **Mandate:** examine user-supplied local text and create review artifacts in a new local directory. No credentials, model outputs from evaluated systems or private data are needed for the included examples.
-- **Scope:** the code contacts only the fixed loopback endpoint and does not invoke tools, send messages, publish, change evidence, assign ranks or amend reference labels. LM Studio's own configuration, logging, data retention and network behaviour are outside this agent's control.
+- **Scope:** the code contacts the configured numeric loopback endpoint or an explicitly enabled private LAN endpoint. It does not invoke tools, send messages, publish, change evidence, assign ranks or amend reference labels. LM Studio's own configuration, linked devices, logging, data retention and network behaviour are outside this agent's control.
 - **Expert approval and adjudication:** outputs are model suggestions. No human identity, expertise, independent review or acceptance is inferred.
 - **Custody:** local SHA-256 hashes support consistency checks. They do not establish an independent custodian, secrecy, authenticity or external timestamp.
 - **Metric and reproduction:** internal seeded examples and local replay are diagnostic only. Independent experts, separate custody, a preregistered study and a third-party rerun remain required for qualification.

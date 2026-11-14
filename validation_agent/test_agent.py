@@ -1,8 +1,12 @@
 """Tests use synthetic fixtures and a fake server; no inference or qualification."""
 import importlib.util
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
+import threading
 import unittest
 from unittest import mock
 import urllib.error
@@ -150,6 +154,48 @@ class ReviewAgentTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Endpoint not allowed'):
             a.local_request('/v1/other')
         self.assertEqual(a.BASE, 'http://127.0.0.1:1234')
+
+    def test_endpoint_requires_explicit_private_lan_opt_in(self):
+        self.addCleanup(a.configure_endpoint, 'http://127.0.0.1:1234', 'qwen3.8-27b-uncensored')
+        for url, allow in [('http://192.168.1.10:1234', False), ('http://8.8.8.8:1234', True),
+                           ('http://localhost:1234', True), ('http://192.168.1.3:1234/path', True),
+                           ('http://user@192.168.1.3:1234', True)]:
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                a.configure_endpoint(url, 'model', allow)
+        a.configure_endpoint('http://192.168.1.10:1234', 'local/model', True)
+        self.assertEqual(a.BASE, 'http://192.168.1.10:1234')
+
+    def test_replay_uses_recorded_model_after_configuration_changes(self):
+        self.addCleanup(a.configure_endpoint, 'http://127.0.0.1:1234', 'qwen3.8-27b-uncensored')
+        def local(path, body=None, timeout=180):
+            return envelope(json.loads(body['messages'][1]['content'].rsplit('\n/', 1)[0]))
+        out = self.root/'portable-replay'
+        with mock.patch.object(a, 'doctor', return_value={'model_available': True}), mock.patch.object(a, 'local_request', side_effect=local):
+            a.run(self.path, out, 512, 10)
+        a.configure_endpoint('http://127.0.0.1:1234', 'another-model')
+        self.assertEqual(a.replay(out)['contract_valid'], 2)
+
+    def test_cli_uses_configured_server_and_replays(self):
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_GET(self):
+                payload = json.dumps({'data': [{'id': a.MODEL}]}).encode()
+                self.send_response(200); self.end_headers(); self.wfile.write(payload)
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                item = json.loads(body['messages'][1]['content'].rsplit('\n/', 1)[0])
+                payload = envelope(item)
+                self.send_response(200); self.end_headers(); self.wfile.write(payload)
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        worker = threading.Thread(target=server.serve_forever, daemon=True); worker.start()
+        self.addCleanup(server.server_close); self.addCleanup(server.shutdown)
+        out = self.root/'http-run'
+        result = subprocess.run([sys.executable, str(HERE/'agent.py'), 'review', '--packet', str(self.path),
+            '--out', str(out), '--endpoint', f'http://127.0.0.1:{server.server_port}', '--timeout', '10'],
+            capture_output=True, text=True, timeout=15)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(a.replay(out)['contract_valid'], 2)
 
     def test_calibration_never_counts_unknown_as_correct(self):
         def pretend_run(path, output, max_tokens, timeout):
