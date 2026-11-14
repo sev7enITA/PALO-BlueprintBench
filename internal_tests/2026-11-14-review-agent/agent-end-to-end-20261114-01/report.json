@@ -1,0 +1,136 @@
+{
+  "format": "blueprintbench-local-review-1",
+  "created_at_local_clock": "2026-11-14T05:25:07.923272+00:00",
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "endpoint": "private LAN endpoint (redacted for publication)",
+  "source_packet_sha256": "df20be77f7d52cb88405dcaf19d0e4509504f1e0afda586c6b5f370613164ffe",
+  "prompt_sha256": "a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+  "model_revision": "unavailable",
+  "quantisation": "unavailable",
+  "runtime_version": "unavailable",
+  "context_window": "unavailable",
+  "temperature": 0,
+  "visible_packet_sha256": "df20be77f7d52cb88405dcaf19d0e4509504f1e0afda586c6b5f370613164ffe",
+  "agent_source_sha256": "ffd82411226b512338a2164dab9f4deda9f67e4fc4bdd3000d7894790adaa01d",
+  "source_provenance_status": "not_provided",
+  "reasoning_requested": "enabled",
+  "reasoning_instruction": "focused and brief",
+  "max_output_tokens": 2048,
+  "qualified": false,
+  "independent_expert_approval": "not_observed",
+  "human_adjudication": "not_observed",
+  "external_custody": "not_observed",
+  "metric_validation": "not_established",
+  "independent_reproduction": "not_observed",
+  "limitations": [
+    "Model-generated, internal advisory review.",
+    "Citation substring and JSON checks do not prove semantic accuracy.",
+    "The requested reasoning mode and actual model revision, quantisation and server configuration are not independently verified.",
+    "Hash and local clock do not establish independent custody or a trusted timestamp.",
+    "The packet may already be public and exposed; no independent holdout is inferred."
+  ],
+  "items": [
+    {
+      "review_item": "C01",
+      "statement": "No requester is permitted to approve their own purchase request.",
+      "status": "advisory_contract_valid",
+      "result": {
+        "label": "supported",
+        "atomic": true,
+        "propositions": [
+          {
+            "text": "No requester is permitted to approve their own purchase request.",
+            "label": "supported",
+            "explanation": "The source states the same prohibition in equivalent terms, so the statement is entailed within its scope.",
+            "citations": [
+              {
+                "source_id": "source",
+                "quote": "A requester must never approve their own purchase request."
+              }
+            ]
+          }
+        ],
+        "limitations": "Assessment is based only on the supplied excerpt and does not establish facts outside it."
+      },
+      "response_sha256": "8111f3590b668bd5a685b532ebfa718d950da8f51ba1ddb2a6a76c16de600267",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 208,
+        "total_tokens": 577,
+        "completion_tokens_details": {
+          "reasoning_tokens": 109
+        }
+      },
+      "elapsed_seconds": 131.516,
+      "request_sha256": "366400fd6fcf71097e49dcb9c7939462b614327963e301e1951d21e6e0516db5"
+    },
+    {
+      "review_item": "C09",
+      "statement": "Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices.",
+      "status": "advisory_contract_valid",
+      "result": {
+        "label": "contradicted",
+        "atomic": true,
+        "propositions": [
+          {
+            "text": "Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices.",
+            "label": "contradicted",
+            "explanation": "The source requires both an existing purchase order and a receipt record before automatic payment, whereas the statement claims either one alone is sufficient.",
+            "citations": [
+              {
+                "source_id": "source",
+                "quote": "An invoice requires both an existing purchase order and a receipt record before automatic payment."
+              }
+            ]
+          }
+        ],
+        "limitations": "Assessment is based only on the supplied excerpt and may not reflect other parts of the document."
+      },
+      "response_sha256": "702174956cb526528fa96ad1a581e7f2da95b2580dba89a9e11113c6f345715b",
+      "usage": {
+        "prompt_tokens": 386,
+        "completion_tokens": 316,
+        "total_tokens": 702,
+        "completion_tokens_details": {
+          "reasoning_tokens": 184
+        }
+      },
+      "elapsed_seconds": 44.391,
+      "request_sha256": "6483ed7ab32ba5dc9863c99b99c92742375a623f69574e4aa821ba3d776d582c"
+    },
+    {
+      "review_item": "C13",
+      "statement": "A requester is permitted to approve their own purchase request.",
+      "status": "advisory_contract_valid",
+      "result": {
+        "label": "contradicted",
+        "atomic": true,
+        "propositions": [
+          {
+            "text": "A requester is permitted to approve their own purchase request.",
+            "label": "contradicted",
+            "explanation": "The source states that a requester must never approve their own purchase request, which establishes the opposite in the same scope.",
+            "citations": [
+              {
+                "source_id": "source",
+                "quote": "A requester must never approve their own purchase request."
+              }
+            ]
+          }
+        ],
+        "limitations": "Assessment is limited to the supplied excerpt and may not reflect other policies or exceptions outside it."
+      },
+      "response_sha256": "0abd804551be3a359d2cc341ad6c090d99b79a732075540844aaec48b995a210",
+      "usage": {
+        "prompt_tokens": 369,
+        "completion_tokens": 158,
+        "total_tokens": 527,
+        "completion_tokens_details": {
+          "reasoning_tokens": 50
+        }
+      },
+      "elapsed_seconds": 22.026,
+      "request_sha256": "75c6bc53f8083e2bb18965a0f6782eced93b0d45530ca38762737d371921b724"
+    }
+  ]
+}

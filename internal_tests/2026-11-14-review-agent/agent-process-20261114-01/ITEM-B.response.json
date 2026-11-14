@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-ib5k63jf38ncq0dzk60ghr",
+  "object": "chat.completion",
+  "created": 1794633938,
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"not_established\",\"atomic\":true,\"propositions\":[{\"text\":\"Multiple related requests are automatically merged into one request.\",\"label\":\"not_established\",\"explanation\":\"No source unit states that multiple related requests are merged, automatically or otherwise; R10 only says the threshold applies separately to each request and does not establish merging behavior.\",\"citations\":[]}],\"limitations\":\"The supplied units do not address automatic merging of related requests.\"}",
+        "reasoning_content": "The statement claims automatic merging of multiple related requests into one request. None of the source units mention merging or combining requests. R10 says thresholds apply separately to each request, which suggests requests remain separate, but does not explicitly state they are never merged. The claim is not established by the sources and not directly contradicted (no explicit \"requests are never merged\"). Therefore label: not_established. Single proposition matches overall label.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 712,
+    "completion_tokens": 182,
+    "total_tokens": 894,
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 213,
+    "accepted_draft_tokens_count": 110,
+    "rejected_draft_tokens_count": 103
+  },
+  "system_fingerprint": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp"
+}

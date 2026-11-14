@@ -1,0 +1,83 @@
+{
+  "format": "blueprintbench-local-review-1",
+  "created_at_local_clock": "2026-11-14T05:30:48.905391+00:00",
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "endpoint": "private LAN endpoint (redacted for publication)",
+  "source_packet_sha256": "dae92fd1acbe2838b688e3c0ad80213825ef4f161135241210d38e3e27df4c28",
+  "prompt_sha256": "a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+  "model_revision": "unavailable",
+  "quantisation": "unavailable",
+  "runtime_version": "unavailable",
+  "context_window": "unavailable",
+  "temperature": 0,
+  "visible_packet_sha256": "d0d7fee76caefec57d60d5d2e7c70933a4f139d76007efdd7b04b7802aa0b058",
+  "agent_source_sha256": "ffd82411226b512338a2164dab9f4deda9f67e4fc4bdd3000d7894790adaa01d",
+  "source_provenance_status": "not_provided",
+  "reasoning_requested": "enabled",
+  "reasoning_instruction": "focused and brief",
+  "max_output_tokens": 2048,
+  "qualified": false,
+  "independent_expert_approval": "not_observed",
+  "human_adjudication": "not_observed",
+  "external_custody": "not_observed",
+  "metric_validation": "not_established",
+  "independent_reproduction": "not_observed",
+  "limitations": [
+    "Model-generated, internal advisory review.",
+    "Citation substring and JSON checks do not prove semantic accuracy.",
+    "The requested reasoning mode and actual model revision, quantisation and server configuration are not independently verified.",
+    "Hash and local clock do not establish independent custody or a trusted timestamp.",
+    "The packet may already be public and exposed; no independent holdout is inferred."
+  ],
+  "items": [
+    {
+      "review_item": "ITEM-C",
+      "statement": "An analyst must request corrections through a supplier portal.",
+      "status": "advisory_contract_valid",
+      "result": {
+        "label": "mixed_or_compound",
+        "atomic": false,
+        "propositions": [
+          {
+            "text": "An analyst must request corrections.",
+            "label": "contradicted",
+            "explanation": "R04 states the analyst is not obliged to ask for a corrected invoice, contradicting the mandatory 'must'.",
+            "citations": [
+              {
+                "source_id": "R04",
+                "quote": "an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask"
+              }
+            ]
+          },
+          {
+            "text": "Corrections are requested through a supplier portal.",
+            "label": "not_established",
+            "explanation": "No source unit mentions a supplier portal or specifies the channel for requesting corrections.",
+            "citations": []
+          }
+        ],
+        "limitations": "Source units do not describe any correction-request mechanism, so the portal claim cannot be confirmed or refuted."
+      },
+      "response_sha256": "714a6405281c6e4677842f67408015e102525ee61740d89c9fc15af09a1ef3bb",
+      "usage": {
+        "prompt_tokens": 687,
+        "completion_tokens": 486,
+        "total_tokens": 1173,
+        "completion_tokens_details": {
+          "reasoning_tokens": 325
+        }
+      },
+      "elapsed_seconds": 89.981,
+      "request_sha256": "dddf038303a7360bea3a0e7071f49925672a95e6d4d69c71dd31eb02276cd021"
+    },
+    {
+      "review_item": "DAVIS_BACON",
+      "statement": "For this case the Davis-Bacon clause is definitely not required.",
+      "status": "transport_failed",
+      "result": null,
+      "reason": "Local request failed or timed out; no automatic retry.",
+      "elapsed_seconds": 180.019,
+      "request_sha256": "5fe15c93cbc3fc9b24c7895136b9ad0081041b2114a97a8721accce573af6dfa"
+    }
+  ]
+}

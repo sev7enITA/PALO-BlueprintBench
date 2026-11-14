@@ -1,0 +1,26 @@
+{
+  "status": "internal_development_diagnostic",
+  "qualified": false,
+  "reference": "assistant-draft labels",
+  "items_assigned": 3,
+  "ids": [
+    "C01",
+    "C09",
+    "C13"
+  ],
+  "counts": {
+    "true_positive": 2,
+    "false_negative": 0,
+    "false_positive": 0,
+    "true_negative": 1,
+    "unassessed_altered": 0,
+    "unassessed_faithful": 0
+  },
+  "detection_rate_determinate": 1.0,
+  "false_alarm_rate_determinate": 0.0,
+  "limits": [
+    "One exposed synthetic family; selected cases are not an independent or representative sample.",
+    "Unknown, unsupported and compound labels remain unassessed, not converted into successes or failures.",
+    "A model review compared with assistant-draft labels does not validate a benchmark metric."
+  ]
+}

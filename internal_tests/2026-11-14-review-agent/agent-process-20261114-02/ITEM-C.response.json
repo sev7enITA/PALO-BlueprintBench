@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-ae9mw9usjcjwul2m3nzjrd",
+  "object": "chat.completion",
+  "created": 1794633978,
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"mixed_or_compound\",\"atomic\":false,\"propositions\":[{\"text\":\"An analyst must request corrections.\",\"label\":\"contradicted\",\"explanation\":\"R04 states the analyst is not obliged to ask for a corrected invoice, contradicting the mandatory 'must'.\",\"citations\":[{\"source_id\":\"R04\",\"quote\":\"an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask\"}]},{\"text\":\"Corrections are requested through a supplier portal.\",\"label\":\"not_established\",\"explanation\":\"No source unit mentions a supplier portal or specifies the channel for requesting corrections.\",\"citations\":[]}],\"limitations\":\"Source units do not describe any correction-request mechanism, so the portal claim cannot be confirmed or refuted.\"}",
+        "reasoning_content": "The statement says an analyst must request corrections through a supplier portal.\n\nLooking at R04: \"For a blocked invoice, an Accounts Payable analyst may ask for a corrected invoice but is not obliged to ask.\" This directly contradicts the \"must\" in the statement. The source says they are not obliged to ask (may ask), while the statement says they must request corrections.\n\nAlso, none of the sources mention a \"supplier portal\" as the mechanism for requesting corrections. So that part is not established either.\n\nThe key contradiction: statement says \"must request corrections\", R04 says analyst \"is not obliged to ask\". This is a direct contradiction on the obligation aspect.\n\nLet me check if there's any source about supplier portal - none of R01-R12 mention it. So the \"through a supplier portal\" part is not_established, but the \"must request corrections\" part is contradicted by R04.\n\nSince this is a compound statement with different dispositions (contradicted + not_established), the overall label should be mixed_or_compound.\n\nWait, let me reconsider. The statement has two claims:\n1. An analyst must request corrections - contradicted by R04 (\"is not obliged to ask\")\n2. Through a supplier portal - not established (no source mentions this)\n\nSo atomic propositions:\n- \"An analyst must request corrections\" -> contradicted (R04 says not obliged)\n- \"Corrections are requested through a supplier portal\" -> not_established\n\nOverall: mixed_or_compound since labels differ.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 687,
+    "completion_tokens": 486,
+    "total_tokens": 1173,
+    "completion_tokens_details": {
+      "reasoning_tokens": 325
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 534,
+    "accepted_draft_tokens_count": 307,
+    "rejected_draft_tokens_count": 227
+  },
+  "system_fingerprint": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp"
+}

@@ -1,0 +1,10 @@
+{
+  "state": "finished",
+  "items": [
+    {
+      "id": "ITEM-B",
+      "status": "advisory_contract_valid"
+    }
+  ],
+  "note": "An in-flight request may have continued after interruption; no automatic retry."
+}

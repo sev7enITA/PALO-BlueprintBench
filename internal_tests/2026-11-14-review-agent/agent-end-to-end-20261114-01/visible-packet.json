@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "review_item": "C01",
+      "statement": "No requester is permitted to approve their own purchase request.",
+      "source_units": [
+        {
+          "id": "source",
+          "text": "A requester must never approve their own purchase request."
+        }
+      ]
+    },
+    {
+      "review_item": "C09",
+      "statement": "Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices.",
+      "source_units": [
+        {
+          "id": "source",
+          "text": "An invoice requires both an existing purchase order and a receipt record before automatic payment."
+        }
+      ]
+    },
+    {
+      "review_item": "C13",
+      "statement": "A requester is permitted to approve their own purchase request.",
+      "source_units": [
+        {
+          "id": "source",
+          "text": "A requester must never approve their own purchase request."
+        }
+      ]
+    }
+  ]
+}

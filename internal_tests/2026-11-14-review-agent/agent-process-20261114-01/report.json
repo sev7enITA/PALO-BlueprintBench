@@ -1,0 +1,63 @@
+{
+  "format": "blueprintbench-local-review-1",
+  "created_at_local_clock": "2026-11-14T05:26:09.778696+00:00",
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "endpoint": "private LAN endpoint (redacted for publication)",
+  "source_packet_sha256": "e5fc6d09625ab02e8d6131ac1bd2ff48cce0fe7f4d3162dbd2ca1d875a24caf2",
+  "prompt_sha256": "a71533c3fe0ff8c1f468839cc3ef1aaf03d6ec6ce083b0d4dca5a2aed1c32ada",
+  "model_revision": "unavailable",
+  "quantisation": "unavailable",
+  "runtime_version": "unavailable",
+  "context_window": "unavailable",
+  "temperature": 0,
+  "visible_packet_sha256": "f06c541037c6559c8deb9687deec09b8bee4737db2d8b5ddd4fad64b6ed082ec",
+  "agent_source_sha256": "ffd82411226b512338a2164dab9f4deda9f67e4fc4bdd3000d7894790adaa01d",
+  "source_provenance_status": "not_provided",
+  "reasoning_requested": "enabled",
+  "reasoning_instruction": "focused and brief",
+  "max_output_tokens": 2048,
+  "qualified": false,
+  "independent_expert_approval": "not_observed",
+  "human_adjudication": "not_observed",
+  "external_custody": "not_observed",
+  "metric_validation": "not_established",
+  "independent_reproduction": "not_observed",
+  "limitations": [
+    "Model-generated, internal advisory review.",
+    "Citation substring and JSON checks do not prove semantic accuracy.",
+    "The requested reasoning mode and actual model revision, quantisation and server configuration are not independently verified.",
+    "Hash and local clock do not establish independent custody or a trusted timestamp.",
+    "The packet may already be public and exposed; no independent holdout is inferred."
+  ],
+  "items": [
+    {
+      "review_item": "ITEM-B",
+      "statement": "Multiple related requests are automatically merged into one request.",
+      "status": "advisory_contract_valid",
+      "result": {
+        "label": "not_established",
+        "atomic": true,
+        "propositions": [
+          {
+            "text": "Multiple related requests are automatically merged into one request.",
+            "label": "not_established",
+            "explanation": "No source unit states that multiple related requests are merged, automatically or otherwise; R10 only says the threshold applies separately to each request and does not establish merging behavior.",
+            "citations": []
+          }
+        ],
+        "limitations": "The supplied units do not address automatic merging of related requests."
+      },
+      "response_sha256": "89388fc0771c1d6567a30aad5284534db067842a6c839dbf43a3968efd16adb3",
+      "usage": {
+        "prompt_tokens": 712,
+        "completion_tokens": 182,
+        "total_tokens": 894,
+        "completion_tokens_details": {
+          "reasoning_tokens": 87
+        }
+      },
+      "elapsed_seconds": 31.732,
+      "request_sha256": "47c61dfe639d248ac62630312dcccd0635430ffda4d240ae7bafc68e2a0286ae"
+    }
+  ]
+}

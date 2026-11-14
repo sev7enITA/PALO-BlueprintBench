@@ -1,0 +1,18 @@
+{
+  "state": "finished",
+  "items": [
+    {
+      "id": "C01",
+      "status": "advisory_contract_valid"
+    },
+    {
+      "id": "C09",
+      "status": "advisory_contract_valid"
+    },
+    {
+      "id": "C13",
+      "status": "advisory_contract_valid"
+    }
+  ],
+  "note": "An in-flight request may have continued after interruption; no automatic retry."
+}

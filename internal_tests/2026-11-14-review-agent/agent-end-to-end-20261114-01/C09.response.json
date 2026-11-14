@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-to9pxi64loil2so6xqats",
+  "object": "chat.completion",
+  "created": 1794633841,
+  "model": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"contradicted\",\"atomic\":true,\"propositions\":[{\"text\":\"Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices.\",\"label\":\"contradicted\",\"explanation\":\"The source requires both an existing purchase order and a receipt record before automatic payment, whereas the statement claims either one alone is sufficient.\",\"citations\":[{\"source_id\":\"source\",\"quote\":\"An invoice requires both an existing purchase order and a receipt record before automatic payment.\"}]}],\"limitations\":\"Assessment is based only on the supplied excerpt and may not reflect other parts of the document.\"}",
+        "reasoning_content": "The user statement says: \"Before automatic payment, an invoice needs either an existing purchase order or a receipt record; either alone suffices.\"\n\nThe source says: \"An invoice requires both an existing purchase order and a receipt record before automatic payment.\"\n\nThe statement claims \"either ... or\" (disjunction), while the source claims \"both ... and\" (conjunction). These are incompatible. The source establishes that both are required, which contradicts the claim that either alone suffices.\n\nSo the label is \"contradicted\".\n\nLet me construct the JSON:\n- label: \"contradicted\"\n- atomic: true (single proposition)\n- propositions: one element with text matching the statement, label \"contradicted\", explanation noting source requires both while statement says either alone suffices, citation to source.\n- limitations: maybe note that excerpts may not cover complete document.\n\nKeep it concise.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 386,
+    "completion_tokens": 316,
+    "total_tokens": 702,
+    "completion_tokens_details": {
+      "reasoning_tokens": 184
+    }
+  },
+  "stats": {
+    "total_draft_tokens_count": 330,
+    "accepted_draft_tokens_count": 206,
+    "rejected_draft_tokens_count": 124
+  },
+  "system_fingerprint": "qwen3.8-27b-ultimate-heretic-uncensored-turbo-brilliance-50x-agi-neo-mtp"
+}
